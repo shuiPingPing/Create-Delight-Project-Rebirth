@@ -1,0 +1,9 @@
+name = "ServerWarashi"
+filename = "serverwarashi-1.21.1-2.0.4.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8683/881/serverwarashi-1.21.1-2.0.4.jar"
+hash-format = "sha256"
+hash = "468c26e7f61c87fde78b4f3986228a8804d12dc07dc37e37eaf6fe9cfaf59f6d"
+mode = "url"

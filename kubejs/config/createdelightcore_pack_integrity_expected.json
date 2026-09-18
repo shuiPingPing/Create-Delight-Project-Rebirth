@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T09:43:41Z",
+  "generatedAt": "2026-09-18T10:04:48Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -320,6 +320,7 @@
       "schematicanon_processing_pattern",
       "searchables",
       "servercore",
+      "serverwarashi",
       "silentsdelight",
       "simplebackups",
       "simplehats",
@@ -2791,6 +2792,14 @@
       "filename": "servercore-neoforge-1.5.19+1.21.1.jar",
       "modIds": [
         "servercore"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/serverwarashi.pw.toml",
+      "filename": "serverwarashi-1.21.1-2.0.4.jar",
+      "modIds": [
+        "serverwarashi"
       ]
     },
     {
