@@ -18,7 +18,7 @@ if (global.hasMod('cosmopolitan')) {
 
     event.add(
       'cosmopolitan:carotene_sources',
-      existingItems(['createdelight:enchanted_golden_carrot', 'create_bic_bit:stamppot_bowl'])
+      existingItems(['createdelightcore:enchanted_golden_carrot', 'create_bic_bit:stamppot_bowl'])
     );
   });
 }

@@ -8,16 +8,16 @@
   const JavaRuntimeSystemReport = Java.loadClass('net.minecraft.SystemReport');
 
   const PACK_INTEGRITY_CONFIG_PATH = PackIntegrityKubeJSPaths.GAMEDIR.resolve(
-    'kubejs/config/createdelight_pack_integrity.json'
+    'kubejs/config/createdelightcore_pack_integrity.json'
   );
   const PACK_INTEGRITY_EXPECTED_PATH = PackIntegrityKubeJSPaths.GAMEDIR.resolve(
-    'kubejs/config/createdelight_pack_integrity_expected.json'
+    'kubejs/config/createdelightcore_pack_integrity_expected.json'
   );
   const PACK_INTEGRITY_REPORT_PATH = PackIntegrityKubeJSPaths.GAMEDIR.resolve(
-    'logs/createdelight_pack_integrity.json'
+    'logs/createdelightcore_pack_integrity.json'
   );
   const PACK_INTEGRITY_STATE_PATH = PackIntegrityKubeJSPaths.GAMEDIR.resolve(
-    'local/createdelight_pack_integrity_state.json'
+    'local/createdelightcore_pack_integrity_state.json'
   );
   const RECOMMENDED_JAVA_MAJOR_VERSION = 21;
   const PACK_INTEGRITY_WARNING_TEXT = '检测到整合包模组列表与发布版本不一致。\n请知悉：';
@@ -297,7 +297,7 @@
 
     if (result.status === 'missing_manifest') {
       console.warn(
-        '[Create Delight Pack Integrity] Missing expected manifest: kubejs/config/createdelight_pack_integrity_expected.json'
+        '[Create Delight Pack Integrity] Missing expected manifest: kubejs/config/createdelightcore_pack_integrity_expected.json'
       );
     } else if (result.hasDifferences) {
       console.warn('[Create Delight Pack Integrity] Mod list differs from the published manifest.');

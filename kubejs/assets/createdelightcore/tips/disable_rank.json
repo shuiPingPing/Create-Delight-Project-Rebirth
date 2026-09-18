@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.disable_rank"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.disable_rank"
+    }
 }

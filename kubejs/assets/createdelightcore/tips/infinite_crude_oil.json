@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.infinite_crude_oil"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.infinite_crude_oil"
+    }
 }

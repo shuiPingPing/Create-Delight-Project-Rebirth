@@ -1,0 +1,6 @@
+{
+    "fluid": "createdelightcore:lubricating_oil",
+    "burnTime": 10,
+    "superHeat": false,
+    "amountConsumedPerTick": 1
+}

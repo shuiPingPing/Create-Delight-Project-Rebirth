@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.head_obtain"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.head_obtain"
+    }
 }

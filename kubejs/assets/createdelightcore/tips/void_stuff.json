@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.void_stuff"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.void_stuff"
+    }
 }

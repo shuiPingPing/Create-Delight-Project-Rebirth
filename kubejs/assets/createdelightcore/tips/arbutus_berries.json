@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
+  "tip": {
     "translate": "createdelightcore.tip.arbutus_berries"
   }
 }

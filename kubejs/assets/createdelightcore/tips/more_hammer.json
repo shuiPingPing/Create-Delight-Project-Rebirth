@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.more_hammer"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.more_hammer"
+    }
 }

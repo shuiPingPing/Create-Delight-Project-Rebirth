@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.ore_cluster"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.ore_cluster"
+    }
 }

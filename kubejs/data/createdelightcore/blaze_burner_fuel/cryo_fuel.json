@@ -1,0 +1,6 @@
+{
+    "fluid": "createdelightcore:cryo_fuel",
+    "burnTime": 30,
+    "superHeat": true,
+    "amountConsumedPerTick": 1
+}

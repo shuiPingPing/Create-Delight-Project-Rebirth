@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.fasten_letios_compost"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.fasten_letios_compost"
+    }
 }

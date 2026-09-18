@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.cheese_making"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.cheese_making"
+    }
 }

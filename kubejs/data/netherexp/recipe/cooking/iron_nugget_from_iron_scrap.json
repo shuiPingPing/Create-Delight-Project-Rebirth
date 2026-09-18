@@ -2,7 +2,7 @@
   "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
-      "modid": "createdelight_disabled_recipe_gate"
+      "modid": "createdelightcore_disabled_recipe_gate"
     }
   ],
   "type": "minecraft:crafting_shapeless",

@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.socket_pure_darkness"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.socket_pure_darkness"
+    }
 }

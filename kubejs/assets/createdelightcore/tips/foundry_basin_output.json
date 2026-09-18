@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.foundry_basin_output"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.foundry_basin_output"
+    }
 }

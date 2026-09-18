@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.stress_generator_efficiency"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.stress_generator_efficiency"
+    }
 }

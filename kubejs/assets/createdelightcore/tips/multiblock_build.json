@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.multiblock_build"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.multiblock_build"
+    }
 }

@@ -1,6 +1,5 @@
 {
-  "type": "tipsmod:simple",
-  "text": {
-    "translate": "createdelightcore.tip.molten_metal_fluid_interaction"
-  }
+    "tip": {
+        "translate": "createdelightcore.tip.molten_metal_fluid_interaction"
+    }
 }

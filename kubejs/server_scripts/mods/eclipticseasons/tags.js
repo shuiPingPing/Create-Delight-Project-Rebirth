@@ -66,7 +66,7 @@ if (global.hasMod('eclipticseasons')) {
       'oceanic_delight:sea_grape',
       'vinery:dark_cherry_sapling',
       'createcafe:coffee_beans',
-      'miners_delight:cave_carrot',
+      'minersdelight:cave_carrot',
       'alexscavesup:fiddlehead',
     ]);
 
@@ -100,7 +100,7 @@ if (global.hasMod('eclipticseasons')) {
 
     addExisting('eclipticseasons:crops/all_seasons', [
       'neapolitan:vanilla_pods',
-      'miners_delight:cave_carrot',
+      'minersdelight:cave_carrot',
       'alexscavesup:fiddlehead',
     ]);
     addExisting('eclipticseasons:crops/spring_autumn', [

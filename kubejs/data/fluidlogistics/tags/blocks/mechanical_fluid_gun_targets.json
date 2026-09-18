@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "create_enchantment_industry:blaze_forger",
+      "required": false
+    },
+    {
+      "id": "create_enchantment_industry:blaze_enchanter",
+      "required": false
+    }
+  ]
+}
