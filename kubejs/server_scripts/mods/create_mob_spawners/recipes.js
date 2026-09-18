@@ -62,10 +62,10 @@ ServerEvents.recipes((e) => {
   seedUpgrades.forEach(([inputTier, outputTier, lifeMatter, chance, ectoplasm]) => {
     create
       .mixing(
-        [Item.of(`createdelightcore:${outputTier}_genetic_seed`).withChance(chance)],
+        [CreateItem.of(Item.of(`createdelightcore:${outputTier}_genetic_seed`), chance)],
         [
           `createdelightcore:${inputTier}_genetic_seed`,
-          `${lifeMatter}x #createdelightcore:life_matter`,
+          `${lifeMatter}x createdelightcore:life_matter`,
           Fluid.of('netherexp:ectoplasm', ectoplasm),
         ]
       )
@@ -76,7 +76,7 @@ ServerEvents.recipes((e) => {
   create
     .mixing('createdelightcore:flawless_genetic_seed', [
       'createdelightcore:pure_genetic_seed',
-      '12x #createdelightcore:life_matter',
+      '12x createdelightcore:life_matter',
       Fluid.of('create_dragons_plus:dragon_breath', 250),
       Fluid.of('netherexp:ectoplasm', 500),
     ])

@@ -1,5 +1,5 @@
 ServerEvents.recipes((e) => {
-  const { createmetallurgy, create, minecraft, vintageimprovements, kubejs } = e.recipes;
+  const { kubejs } = e.recipes;
 
   remove_recipes_id(e, [
     'fluidlogistics:multi_fluid_tank',
@@ -11,7 +11,6 @@ ServerEvents.recipes((e) => {
     'fluidlogistics:multi_fluid_access_port',
     'fluidlogistics:fluid_packager',
     'fluidlogistics:cooling/snow_block_to_powder_snow',
-    'fluidlogistics:cooling/frost_cake',
   ]);
 
   e.replaceInput(
@@ -95,24 +94,4 @@ ServerEvents.recipes((e) => {
       B: 'create:schematicannon',
     })
     .id('createdelightcore:copper_schematicannon');
-
-  create
-    .mixing(Fluid.of('createdelightcore:frost_cake_batter', 1000), [
-      Fluid.of('createdelightcore:cake_batter', 1000),
-      '2x minecraft:snowball',
-    ])
-    .id('createdelightcore:mixing/frost_cake_batter');
-
-  create
-    .compacting('4x createdelightcore:frost_cake_base', [
-      Fluid.of('createdelightcore:frost_cake_batter', 1000),
-    ])
-    .id('createdelightcore:compacting/frost_cake_base');
-
-  create
-    .filling('fluidlogistics:frost_cake', [
-      'createdelightcore:frost_cake_base',
-      Fluid.of('netherexp:ectoplasm', 250),
-    ])
-    .id('createdelightcore:filling/frost_cake');
 });

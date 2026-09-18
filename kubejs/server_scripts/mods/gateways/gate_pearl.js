@@ -1,7 +1,7 @@
 ServerEvents.recipes((e) => {
   //增加配方：冰龙试炼珍珠合成
   e.shaped(
-    Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:ice_dragon"}'),
+    Item.of('gateways:gate_pearl', 1, { 'gateways:gateway': 'createdelightcore:ice_dragon' }),
     ['ABA', 'CDC', 'ABA'],
     {
       A: 'iceandfire:ice_dragon_blood',
@@ -12,7 +12,7 @@ ServerEvents.recipes((e) => {
   );
   //增加配方：火龙试炼珍珠合成
   e.shaped(
-    Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:fire_dragon_eyes"}'),
+    Item.of('gateways:gate_pearl', 1, { 'gateways:gateway': 'createdelightcore:fire_dragon_eyes' }),
     ['ABA', 'CDC', 'ABA'],
     {
       A: 'iceandfire:fire_dragon_blood',
@@ -23,7 +23,7 @@ ServerEvents.recipes((e) => {
   );
   //增加配方：雷龙试炼珍珠合成
   e.shaped(
-    Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:lightning_dragon"}'),
+    Item.of('gateways:gate_pearl', 1, { 'gateways:gateway': 'createdelightcore:lightning_dragon' }),
     ['ABA', 'CDC', 'ABA'],
     {
       A: 'iceandfire:lightning_dragon_blood',
@@ -40,7 +40,9 @@ ServerEvents.recipes((e) => {
     .sequenced_assembly(
       [
         Item.of(
-          Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:the_gate_of_eternal_cold"}')
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:the_gate_of_eternal_cold',
+          })
         ),
       ],
       'minecraft:ender_pearl',
@@ -63,7 +65,9 @@ ServerEvents.recipes((e) => {
     .sequenced_assembly(
       [
         Item.of(
-          Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:piercing_withering_trial"}')
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:piercing_withering_trial',
+          })
         ),
       ],
       'minecraft:ender_pearl',
@@ -82,7 +86,7 @@ ServerEvents.recipes((e) => {
     .id('createdelightcore:sequenced_assembly/piercing_withering_trial');
   //添加恶魂试炼
   e.shaped(
-    Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:ghast_trial"}'),
+    Item.of('gateways:gate_pearl', 1, { 'gateways:gateway': 'createdelightcore:ghast_trial' }),
     ['AAA', 'ABA', 'AAA'],
     {
       A: 'minecraft:ghast_tear',
@@ -94,7 +98,9 @@ ServerEvents.recipes((e) => {
     .sequenced_assembly(
       [
         Item.of(
-          Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:sweettide_brokenpoint"}')
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:sweettide_brokenpoint',
+          })
         ),
       ],
       'minecraft:ender_pearl',
@@ -115,7 +121,9 @@ ServerEvents.recipes((e) => {
     .sequenced_assembly(
       [
         Item.of(
-          Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:infinite_and_dark_trials"}')
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:infinite_and_dark_trials',
+          })
         ),
       ],
       'minecraft:ender_pearl',
@@ -136,7 +144,9 @@ ServerEvents.recipes((e) => {
     .sequenced_assembly(
       [
         Item.of(
-          Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:magnetic_storm_field"}')
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:magnetic_storm_field',
+          })
         ),
       ],
       'minecraft:ender_pearl',
@@ -155,7 +165,13 @@ ServerEvents.recipes((e) => {
   ////添加配方：熔蚀之地合成
   create
     .sequenced_assembly(
-      [Item.of(Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:a_place_of_melting"}'))],
+      [
+        Item.of(
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:a_place_of_melting',
+          })
+        ),
+      ],
       'minecraft:ender_pearl',
       [
         create.deploying(incomplete, [incomplete, 'alexscavesup:uranium']),
@@ -172,7 +188,13 @@ ServerEvents.recipes((e) => {
   ////添加配方：远古终焉合成
   create
     .sequenced_assembly(
-      [Item.of(Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:the_ancient_end"}'))],
+      [
+        Item.of(
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:the_ancient_end',
+          })
+        ),
+      ],
       'minecraft:ender_pearl',
       [
         create.deploying(incomplete, [incomplete, 'alexscavesup:heavy_bone']),
@@ -191,7 +213,9 @@ ServerEvents.recipes((e) => {
     .sequenced_assembly(
       [
         Item.of(
-          Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:the_legacy_of_the_abyss"}')
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:the_legacy_of_the_abyss',
+          })
         ),
       ],
       'minecraft:ender_pearl',
@@ -210,7 +234,13 @@ ServerEvents.recipes((e) => {
   ////添加配方：不再有梦合成
   create
     .sequenced_assembly(
-      [Item.of(Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:dream_no_more"}'))],
+      [
+        Item.of(
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:dream_no_more',
+          })
+        ),
+      ],
       'minecraft:ender_pearl',
       [
         create.deploying(incomplete, [incomplete, 'alexscavesup:sweet_tooth']),
@@ -228,7 +258,11 @@ ServerEvents.recipes((e) => {
   if (global.hasAllMods(['more_mod_tetra', 'blackknightarmor', 'cataclysm'])) {
     create
       .sequenced_assembly(
-        [Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:oath_of_fierce_blade_ouel"}')],
+        [
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:oath_of_fierce_blade_ouel',
+          }),
+        ],
         'minecraft:fire_charge',
         [
           create.deploying(incomplete, [incomplete, 'iceandfire:dragonsteel_fire_ingot']),
@@ -247,7 +281,11 @@ ServerEvents.recipes((e) => {
   if (global.hasMod('cataclysm')) {
     create
       .sequenced_assembly(
-        [Item.of('gateways:gate_pearl', '{gateway:"createdelightcore:shattered_past"}')],
+        [
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:shattered_past',
+          }),
+        ],
         'alexsmobsup:void_worm_eye',
         [
           create.deploying(incomplete, [incomplete, 'cataclysm:witherite_ingot']),
@@ -269,10 +307,9 @@ ServerEvents.recipes((e) => {
     create
       .sequenced_assembly(
         [
-          Item.of(
-            'gateways:gate_pearl',
-            '{gateway:"createdelightcore:wind_mist_and_thunder_strike"}'
-          ),
+          Item.of('gateways:gate_pearl', 1, {
+            'gateways:gateway': 'createdelightcore:wind_mist_and_thunder_strike',
+          }),
         ],
         'alexscavesup:pearl',
         [
