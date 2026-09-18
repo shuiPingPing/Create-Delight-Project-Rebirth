@@ -1,0 +1,8 @@
+name = "Create Aeronautics: Compatibility"
+filename = "thick_air-1.21.1-NeoForge-1.1.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/YCdc6cKo/versions/XZ93w1xP/thick_air-1.21.1-NeoForge-1.1.2.jar"
+hash-format = "sha1"
+hash = "7301c9805ead2132592a235c94c96888b50b0b1d"
