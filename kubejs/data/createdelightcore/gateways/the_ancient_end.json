@@ -12,22 +12,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 2.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 10
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 1.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				}
 			],
@@ -35,28 +35,28 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:dinosaur_nugget", 
+                        "id": "alexscavesup:dinosaur_nugget", 
                         "count": 12
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:serene_salad", 
+                        "id": "alexscavesup:serene_salad", 
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:seething_stew", 
+                        "id": "alexscavesup:seething_stew", 
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:vallumraptor_egg", 
+                        "id": "alexscavesup:vallumraptor_egg", 
                         "count": 1
 					    }
 				}
@@ -74,22 +74,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 10
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 2.5
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				}
 			],
@@ -97,28 +97,28 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "minecraft:cod", 
+                        "id": "minecraft:cod", 
                         "count": 12
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:trilocaris_tail", 
+                        "id": "alexscavesup:trilocaris_tail", 
                         "count": 12
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:primordial_soup", 
+                        "id": "alexscavesup:primordial_soup", 
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:subterranodon_egg", 
+                        "id": "alexscavesup:subterranodon_egg", 
                         "count": 1
 					    }
 				}
@@ -136,17 +136,17 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 2.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 10
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				}
 			],
@@ -159,21 +159,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:cooked_dinosaur_chop", 
+                        "id": "alexscavesup:cooked_dinosaur_chop", 
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:primitive_club", 
+                        "id": "alexscavesup:primitive_club", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:relicheirus_egg", 
+                        "id": "alexscavesup:relicheirus_egg", 
                         "count": 1
 					    }
 				}
@@ -191,17 +191,17 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 5.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 10
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				}
 			],
@@ -214,21 +214,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:primordial_tunic", 
+                        "id": "alexscavesup:primordial_tunic", 
                         "count": 1
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-						"item":"alexscavesup:fern_thatch", 
+						"id":"alexscavesup:fern_thatch", 
                         "count": 4
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:grottoceratops_egg", 
+                        "id": "alexscavesup:grottoceratops_egg", 
                         "count": 1
                     }
 				}
@@ -246,17 +246,17 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.0
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 10
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				}
 			],
@@ -269,21 +269,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:primordial_helmet", 
+                        "id": "alexscavesup:primordial_helmet", 
                         "count": 1
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:limestone_spear", 
+                        "id": "alexscavesup:limestone_spear", 
                         "count": 1
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:tremorsaurus_egg", 
+                        "id": "alexscavesup:tremorsaurus_egg", 
                         "count": 1
                     }
 				}
@@ -302,17 +302,17 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 7.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.8
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.1 
 				}
 			],
@@ -325,28 +325,28 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:tree_star", 
+                        "id": "alexscavesup:tree_star", 
                         "count": 12
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:amber_curiosity", 
+                        "id": "alexscavesup:amber_curiosity", 
                         "count": 4
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:primordial_pants", 
+                        "id": "alexscavesup:primordial_pants", 
                         "count": 1
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:atlatitan_egg", 
+                        "id": "alexscavesup:atlatitan_egg", 
                         "count": 1
                     }
 				}
@@ -365,32 +365,32 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 6.5
 				},
                 {
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 16
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.1
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.8
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.1 
 				},
 								{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.5
 				}
 			],
@@ -403,28 +403,28 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:amber_monolith", 
+                        "id": "alexscavesup:amber_monolith", 
                         "count": 4
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "gateways:gate_pearl", 
+                        "id": "gateways:gate_pearl", 
                         "count": 1,
                         "nbt" : {"gateway":"createdelightcore:the_ancient_end"}}
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:extinction_spear", 
+                        "id": "alexscavesup:extinction_spear", 
                         "count": 1
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:volcanic_core", 
+                        "id": "alexscavesup:volcanic_core", 
                         "count": 1
                     }
 				}

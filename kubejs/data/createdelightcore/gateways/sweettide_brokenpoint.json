@@ -12,22 +12,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 1.5
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.5
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.2 
 				}
 			],
@@ -40,14 +40,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:gingerbread_crumbs", 
+                        "id": "alexscavesup:gingerbread_crumbs", 
                         "count": 18
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:music_disc_tasty", 
+                        "id": "alexscavesup:music_disc_tasty", 
                         "count": 1
 					    }
 				}
@@ -65,27 +65,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 1.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 10
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": -0.2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.4
 				}
 			],
@@ -98,14 +98,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:shot_gum", 
+                        "id": "alexscavesup:shot_gum", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:frostmint_spear", 
+                        "id": "alexscavesup:frostmint_spear", 
                         "count": 1
 					    }
 				}
@@ -123,22 +123,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 1.5
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.5
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.2 
 				}
 			],
@@ -151,7 +151,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:sack_of_sating", 
+                        "id": "alexscavesup:sack_of_sating", 
                         "count": 1
 					    }
 				}
@@ -169,22 +169,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 2.0
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.5
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.2 
 				}
 			],
@@ -197,7 +197,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:sugar_staff", 
+                        "id": "alexscavesup:sugar_staff", 
                         "count": 1
                     }
 				}
@@ -216,27 +216,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 24.0
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.8
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.1 
 				},
 								{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 1.5
 				}
 			],
@@ -244,14 +244,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "gateways:gate_pearl", 
+                        "id": "gateways:gate_pearl", 
                         "count": 2,
                         "nbt" : {"gateway":"createdelightcore:sweettide_brokenpoint"}}
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:biome_treat", 
+                        "id": "alexscavesup:biome_treat", 
                         "count": 4
                     }
 				}

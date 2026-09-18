@@ -12,22 +12,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 2.4
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.4
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.6
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.4 
 				}
 			],
@@ -40,21 +40,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:slam",
+                        "id": "alexscavesup:slam",
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:radon_bottle",
+                        "id": "alexscavesup:radon_bottle",
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:waste_drum",
+                        "id": "alexscavesup:waste_drum",
                         "count": 1
 					    }
 				}
@@ -76,22 +76,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 3.0
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 10
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.4
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.4
 				}
 			],
@@ -109,21 +109,21 @@
 								{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:polymer_plate", 
+                        "id": "alexscavesup:polymer_plate", 
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:spelunkie", 
+                        "id": "alexscavesup:spelunkie", 
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "gateways:gate_pearl", 
+                        "id": "gateways:gate_pearl", 
                         "count": 2,
                         "nbt" : {"gateway":"createdelightcore:a_place_of_melting"}}
 				}
@@ -141,22 +141,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 6.5
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 100.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.8
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.4 
 				}
 			],
@@ -169,21 +169,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:nuclear_bomb", 
+                        "id": "alexscavesup:nuclear_bomb", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:raygun", 
+                        "id": "alexscavesup:raygun", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:music_disc_fusion", 
+                        "id": "alexscavesup:music_disc_fusion", 
                         "count": 1
 							 }
 				}
@@ -202,22 +202,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 36.0
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 10.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 6.0
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.8
 				}
 			],
@@ -230,14 +230,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:block_of_uranium", 
+                        "id": "alexscavesup:block_of_uranium", 
                         "count": 4
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:tremorzilla_egg", 
+                        "id": "alexscavesup:tremorzilla_egg", 
                         "count": 1
                     }
 				}

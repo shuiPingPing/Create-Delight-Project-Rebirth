@@ -12,27 +12,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.0
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 5
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.80
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.20
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.20
 		     	}
             ],
@@ -45,14 +45,14 @@
                 {
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:hood_of_darkness", 
+                        "id": "alexscavesup:hood_of_darkness", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:cloak_of_darkness", 
+                        "id": "alexscavesup:cloak_of_darkness", 
                         "count": 1
 					    }
 				}
@@ -74,27 +74,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.0
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 6
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.60
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.20
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.20
 		     	}
             ],
@@ -107,14 +107,14 @@
 								{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:darkened_apple", 
+                        "id": "alexscavesup:darkened_apple", 
                         "count": 8
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:desolate_dagger", 
+                        "id": "alexscavesup:desolate_dagger", 
                         "count": 1
 					    }
 				}
@@ -133,27 +133,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 3.0
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 5
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.50
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.20
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.20
 		     	}
             ],
@@ -166,14 +166,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:vesper_stew", 
+                        "id": "alexscavesup:vesper_stew", 
                         "count": 4
 					    }
 				},
                 {
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:totem_of_possession", 
+                        "id": "alexscavesup:totem_of_possession", 
                         "count": 1
 					    }
 				}
@@ -191,27 +191,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 2.0
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 7
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.60
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.20
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.20
 		     	}
             ],
@@ -224,14 +224,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:occult_gem", 
+                        "id": "alexscavesup:occult_gem", 
                         "count": 4
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:dreadbow", 
+                        "id": "alexscavesup:dreadbow", 
                         "count": 1
 					    }
 				}
@@ -249,27 +249,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 10.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 6
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.8
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.20
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.20
 		     	}
             ],
@@ -277,7 +277,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:pure_darkness", 
+                        "id": "alexscavesup:pure_darkness", 
                         "count": 12
 					    }
 				},
@@ -289,7 +289,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "gateways:gate_pearl", 
+                        "id": "gateways:gate_pearl", 
                         "count": 2,
                         "nbt" : {"gateway":"createdelightcore:infinite_and_dark_trials"}}
 				}

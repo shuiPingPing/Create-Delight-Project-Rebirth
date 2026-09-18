@@ -29,12 +29,12 @@
 			"modifiers": [
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 1
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value":-0.2
 				}
 			],
@@ -42,7 +42,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "iceandfire:lightning_dragon_blood", 
+                        "id": "iceandfire:lightning_dragon_blood", 
                         "count": 8
 					}
 				}
@@ -77,12 +77,12 @@
 			"modifiers": [
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.2
 				}
 			],
@@ -90,7 +90,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "iceandfire:dragonscales_amythest", 
+                        "id": "iceandfire:dragonscales_amethyst", 
                         "count": 18
 					}
 				}
@@ -125,12 +125,12 @@
 			"modifiers": [
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.2
 				}
 			],
@@ -138,14 +138,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "iceandfire:dragonforge_lightning_brick", 
+                        "id": "iceandfire:dragonforge_lightning_brick", 
                         "count": 8
 					}
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "createdelightcore:lightning_lily_cluster", 
+                        "id": "createdelightcore:lightning_lily_cluster", 
                         "count": 2
 					}
 				}

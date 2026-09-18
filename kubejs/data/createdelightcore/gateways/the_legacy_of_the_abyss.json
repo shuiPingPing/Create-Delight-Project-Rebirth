@@ -12,22 +12,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 5.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 12
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 8.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				}
 			],
@@ -40,21 +40,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "minecraft:experience_bottle", 
+                        "id": "minecraft:experience_bottle", 
                         "count": 12
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "minecraft:conduit", 
+                        "id": "minecraft:conduit", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:drain", 
+                        "id": "alexscavesup:drain", 
                         "count": 1
 					    }
 				}
@@ -72,22 +72,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 4
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.2
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.4
 				}
 			],
@@ -95,35 +95,35 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:glow_ink_bomb", 
+                        "id": "alexscavesup:glow_ink_bomb", 
                         "count": 12
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:ink_bomb", 
+                        "id": "alexscavesup:ink_bomb", 
                         "count": 12
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:sea_staff", 
+                        "id": "alexscavesup:sea_staff", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:ortholance", 
+                        "id": "alexscavesup:ortholance", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "minecraft:trident", 
+                        "id": "minecraft:trident", 
                         "count": 1
 					    }
 				}
@@ -142,27 +142,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 14.0
 				},
                 {
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 12
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.8
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.4
 				},			
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.2
 				}
 			],
@@ -175,21 +175,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "gateways:gate_pearl", 
+                        "id": "gateways:gate_pearl", 
                         "count": 2,
                         "nbt" : {"gateway":"createdelightcore:the_legacy_of_the_abyss"}}
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:submarine", 
+                        "id": "alexscavesup:submarine", 
                         "count": 1
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:magic_conch", 
+                        "id": "alexscavesup:magic_conch", 
                         "count": 1
                     }
 				}
@@ -219,22 +219,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 6.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 12
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.5
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				}
 			],
@@ -262,35 +262,35 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:sea_glass_shards", 
+                        "id": "alexscavesup:sea_glass_shards", 
                         "count": 12
 					    }
 				},
 								{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:marine_snow", 
+                        "id": "alexscavesup:marine_snow", 
                         "count": 12
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:deep_sea_sushi_roll", 
+                        "id": "alexscavesup:deep_sea_sushi_roll", 
                         "count": 4
 					    }
 				},
                 {
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:submarine", 
+                        "id": "alexscavesup:submarine", 
                         "count": 1
 					    }
 				},
                 {
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:floater", 
+                        "id": "alexscavesup:floater", 
                         "count": 1
 					    }
 				}

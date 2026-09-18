@@ -23,12 +23,12 @@
 			"modifiers": [
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 1
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.1
 				}
 			],
@@ -36,7 +36,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-						"item": "iceandfire:fire_dragon_blood",
+						"id": "iceandfire:fire_dragon_blood",
 						"count": 8
 					}
 				}
@@ -65,17 +65,17 @@
 			"modifiers": [
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.5
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.4
 				}
 			],
@@ -83,7 +83,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-						"item": "iceandfire:dragonscales_red",
+						"id": "iceandfire:dragonscales_red",
 						"count": 18
 					}
 				}
@@ -112,17 +112,17 @@
 			"modifiers": [
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 1
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.5
 				}
 			],
@@ -130,14 +130,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-						"item": "iceandfire:dragonforge_fire_brick",
+						"id": "iceandfire:dragonforge_fire_brick",
 						"count": 8
 					}
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-						"item": "createdelightcore:fire_lily_cluster",
+						"id": "createdelightcore:fire_lily_cluster",
 						"count": 2
 					}
 				}

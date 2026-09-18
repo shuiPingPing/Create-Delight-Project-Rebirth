@@ -12,22 +12,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.0
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 1.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.4
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.1 
 				}
 			],
@@ -40,7 +40,7 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:telecore", 
+                        "id": "alexscavesup:telecore", 
                         "count": 1
 					    }
 				}
@@ -58,27 +58,27 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 3.5
 				},
 				{
 					"attribute": "generic.armor",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 10
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.5
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.1
 				}
 			],
@@ -91,14 +91,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "gateways:gate_pearl", 
+                        "id": "gateways:gate_pearl", 
                         "count": 1,
                         "nbt" : {"gateway":"createdelightcore:magnetic_storm_field"}}
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:galena_gauntlet", 
+                        "id": "alexscavesup:galena_gauntlet", 
                         "count": 1
 					    }
 				}
@@ -120,22 +120,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.0
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.8
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": -0.6 
 				}
 			],
@@ -153,14 +153,14 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:holocoder", 
+                        "id": "alexscavesup:holocoder", 
                         "count": 1
 					    }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:quarry_smasher", 
+                        "id": "alexscavesup:quarry_smasher", 
                         "count": 1
 					    }
 				}
@@ -178,22 +178,22 @@
 			"modifiers": [
                 {
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 4.5
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.5
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 0.2
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.2 
 				}
 			],
@@ -201,21 +201,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:heart_of_iron", 
+                        "id": "alexscavesup:heart_of_iron", 
                         "count": 2
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:quarry", 
+                        "id": "alexscavesup:quarry", 
                         "count": 1
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "gateways:gate_pearl", 
+                        "id": "gateways:gate_pearl", 
                         "count": 1,
                         "nbt" : {"gateway":"createdelightcore:magnetic_storm_field"}}
 				}
@@ -234,22 +234,22 @@
 			"modifiers": [
 				{
 					"attribute": "generic.max_health",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value":36.0
 				},
 				{
 					"attribute": "generic.attack_damage",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 6.0
 				},
 				{
 					"attribute": "generic.knockback_resistance",
-					"operation": "ADDITION",
+					"operation": "ADD_VALUE",
 					"value": 1.0
 				},
 				{
 					"attribute": "generic.movement_speed",
-					"operation": "MULTIPLY_TOTAL",
+					"operation": "ADD_MULTIPLIED_TOTAL",
 					"value": 0.2 
 				}
 			],
@@ -257,21 +257,21 @@
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:block_of_scarlet_neodymium", 
+                        "id": "alexscavesup:block_of_scarlet_neodymium", 
                         "count": 4
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:block_of_azure_neodymium", 
+                        "id": "alexscavesup:block_of_azure_neodymium", 
                         "count": 4
                     }
 				},
 				{
 					"type": "gateways:stack",
 					"stack": {
-                        "item": "alexscavesup:resistor_shield", 
+                        "id": "alexscavesup:resistor_shield", 
                         "count": 1
                     }
 				}
