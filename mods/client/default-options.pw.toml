@@ -1,0 +1,8 @@
+name = "Default Options"
+filename = "defaultoptions-neoforge-1.21.1-21.1.8.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/WEg59z5b/versions/1zt17WsC/defaultoptions-neoforge-1.21.1-21.1.8.jar"
+hash-format = "sha256"
+hash = "d12790dc1f0857778d282c00ad5be56882ac6fce44769c1f012be09b5604874a"
