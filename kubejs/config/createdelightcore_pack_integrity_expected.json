@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T09:24:59Z",
+  "generatedAt": "2026-09-18T07:18:17Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -16,6 +16,7 @@
       "alexscavesup",
       "alexsdelight",
       "alexsmobsup",
+      "alloyed",
       "always_eat",
       "amendments",
       "anvilcore",
@@ -64,6 +65,7 @@
       "caelus",
       "carryon",
       "casualnessdelight",
+      "cataclysm",
       "cerulean",
       "charmofundying",
       "chefsdelight",
@@ -100,6 +102,7 @@
       "create_jetpack",
       "create_jetpack_curios",
       "create_mechanical_spawner",
+      "create_mob_spawners",
       "create_new_age",
       "create_pattern_schematics",
       "create_rustic_structures",
@@ -195,6 +198,7 @@
       "fast_projectile_api",
       "ferritecore",
       "flightlib",
+      "fluidlogistics",
       "flywheel",
       "fragmentum",
       "framework",
@@ -235,6 +239,7 @@
       "justenoughbreeding",
       "kaleidoscope_doll",
       "kambrik",
+      "kiwi",
       "konkrete",
       "kotlinforforge",
       "kubejs",
@@ -250,12 +255,14 @@
       "lctech",
       "ldlib2",
       "lightmanscurrency",
+      "lionfishapi",
       "lithostitched",
       "lmft",
       "lodestone",
       "lootjs",
       "lootr",
       "luncheonmeatsdelight",
+      "lychee",
       "man_of_many_planes",
       "mbd2",
       "mechanicals",
@@ -294,6 +301,7 @@
       "quality_food",
       "quark",
       "quarkoddities",
+      "railways",
       "ratatouille",
       "rcg_lib",
       "refurbished_furniture",
@@ -363,7 +371,7 @@
       "create_cyber_goggles",
       "createbetterfps",
       "customskinloader",
-      "drippyloadingscreen",
+      "defaultoptions",
       "dynamic_fps",
       "dynamiccrosshair",
       "dynamiccrosshairapi",
@@ -530,17 +538,10 @@
     },
     {
       "side": "client",
-      "metadata": "mods/client/drippy-early-loading-module.pw.toml",
-      "filename": "drippy_early_loading_module_neoforge_3.1.2_MC_1.21.1.jar",
-      "modIds": [],
-      "nonModFile": true
-    },
-    {
-      "side": "client",
-      "metadata": "mods/client/drippy-loading-screen.pw.toml",
-      "filename": "drippyloadingscreen_neoforge_3.1.2_MC_1.21.1.jar",
+      "metadata": "mods/client/default-options.pw.toml",
+      "filename": "defaultoptions-neoforge-1.21.1-21.1.8.jar",
       "modIds": [
-        "drippyloadingscreen"
+        "defaultoptions"
       ]
     },
     {
@@ -1018,6 +1019,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/create-alloyed.pw.toml",
+      "filename": "alloyed-3.0.11+1.21.1-neoforge.jar",
+      "modIds": [
+        "alloyed"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/always-eat.pw.toml",
       "filename": "AlwaysEat-neoforge-1.0.0.jar",
       "modIds": [
@@ -1243,6 +1252,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/l_enders-cataclysm.pw.toml",
+      "filename": "cataclysm-1.21.1-3.33.jar",
+      "modIds": [
+        "cataclysm"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/cerulean.pw.toml",
       "filename": "cerulean-neoforge-1.0.0-1.21.1.jar",
       "modIds": [
@@ -1459,6 +1476,14 @@
       "filename": "create_mechanical_spawner-1.21.1-1.3.0-6.0.8.jar",
       "modIds": [
         "create_mechanical_spawner"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-mob-spawners.pw.toml",
+      "filename": "create_mob_spawners-1.1.0.jar",
+      "modIds": [
+        "create_mob_spawners"
       ]
     },
     {
@@ -1903,6 +1928,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/fluidlogistics.pw.toml",
+      "filename": "fluidlogistics-1.3.0-mc1.21.1.jar",
+      "modIds": [
+        "fluidlogistics"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/fragmentum-neoforge.pw.toml",
       "filename": "fragmentum-neoforge-1.21.1-2.1.1.jar",
       "modIds": [
@@ -2206,6 +2239,15 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/kiwi.pw.toml",
+      "filename": "Kiwi-1.21.1-NeoForge-15.8.7.jar",
+      "modIds": [
+        "fabric_api_base",
+        "kiwi"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/konkrete.pw.toml",
       "filename": "konkrete_neoforge_1.9.9_MC_1.21.jar",
       "modIds": [
@@ -2279,6 +2321,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/lionfish-api.pw.toml",
+      "filename": "lionfishapi-3.1.jar",
+      "modIds": [
+        "lionfishapi"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/lithostitched.pw.toml",
       "filename": "lithostitched-1.7.2-neoforge-21.1.jar",
       "modIds": [
@@ -2323,6 +2373,15 @@
       "filename": "luncheon-meat-s-delight-1.0.6-neoforge-1.21.1.jar",
       "modIds": [
         "luncheonmeatsdelight"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/lychee.pw.toml",
+      "filename": "Lychee-1.21.1-NeoForge-6.7.0.jar",
+      "modIds": [
+        "fabric_particles_v1",
+        "lychee"
       ]
     },
     {
@@ -2613,6 +2672,14 @@
       "filename": "QuarkOddities-1.21.1.jar",
       "modIds": [
         "quarkoddities"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-steam-n-rails.pw.toml",
+      "filename": "railways-0.3.0-beta.2+neoforge-mc1.21.1.jar",
+      "modIds": [
+        "railways"
       ]
     },
     {

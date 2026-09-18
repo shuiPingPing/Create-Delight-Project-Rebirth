@@ -323,7 +323,7 @@ export function generateIntegrityManifest({
       const existingManifest = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
       if (comparableManifest(existingManifest) === comparableManifest(manifest)) {
         writeSuccess(
-          '完整性清单内容未变化，保留现有 kubejs/config/createdelight_pack_integrity_expected.json'
+          '完整性清单内容未变化，保留现有 kubejs/config/createdelightcore_pack_integrity_expected.json'
         );
         writeInfo(
           `common=${manifest.expectedModIds.common.length}, client=${manifest.expectedModIds.client.length}, server=${manifest.expectedModIds.server.length}`
@@ -337,7 +337,7 @@ export function generateIntegrityManifest({
 
   fs.mkdirSync(path.dirname(targetPath), { recursive: true });
   fs.writeFileSync(targetPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
-  writeSuccess('已生成 kubejs/config/createdelight_pack_integrity_expected.json');
+  writeSuccess('已生成 kubejs/config/createdelightcore_pack_integrity_expected.json');
   writeInfo(
     `common=${manifest.expectedModIds.common.length}, client=${manifest.expectedModIds.client.length}, server=${manifest.expectedModIds.server.length}`
   );

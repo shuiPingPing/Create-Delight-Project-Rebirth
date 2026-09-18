@@ -15,7 +15,7 @@ const integrityManifestPath = path.join(
   repoRoot,
   'kubejs',
   'config',
-  'createdelight_pack_integrity_expected.json'
+  'createdelightcore_pack_integrity_expected.json'
 );
 const globalPackageName = '@bro-know-my/packwiz';
 
