@@ -1,0 +1,8 @@
+name = "L_Ender's Cataclysm"
+filename = "cataclysm-1.21.1-3.33.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/46KJle7n/versions/mYBUDZWl/L_Ender%27s%20Cataclysm%201.21.1-3.33.jar"
+hash-format = "sha1"
+hash = "5ff39c0eddfa08ea0e921bdcb17da7f32f0b00ce"

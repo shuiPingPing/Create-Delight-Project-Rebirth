@@ -1,0 +1,8 @@
+name = "Create: Alloyed"
+filename = "alloyed-3.0.11+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/KUInlTFo/versions/BTj8TkEP/alloyed-3.0.11%2B1.21.1-neoforge.jar"
+hash-format = "sha1"
+hash = "0df5867a85f596b91774a15db763c061e423ada0"
