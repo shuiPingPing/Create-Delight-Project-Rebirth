@@ -29,5 +29,5 @@ Shared repository skills live under `.agents/skills/`.
 ## Current Unknowns
 
 - Final 1.21.1 mod list.
-- First playable milestone scope.
+- First playable milestone scope — **已定（2026-09-16）**：能进游戏 + 跑通一条 Create×农夫乐事基础生产链 + 零脚本报错。
 - Replacement mapping for removed or loader-changed mods.

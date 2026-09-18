@@ -1,6 +1,6 @@
 # require_list_clean
 
-> 来源：`docs/modpack-analysis-report.md`。  
+> 来源：`docs/modpack-analysis-report.md`（该报告文件已删除，本清单现独立维护）。  
 > 这里只保留升级到 `1.21.1 NeoForge` 时需要继续关注的项目；已确认可直接升级的模组不列入。
 
 ## 状态
