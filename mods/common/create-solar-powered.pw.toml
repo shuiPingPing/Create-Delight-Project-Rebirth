@@ -1,0 +1,8 @@
+name = "Create: Solar Powered"
+filename = "createsolar-1.2.7.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/X6JWoJ2m/versions/mvAuvXi9/createsolar-1.2.7.jar"
+hash-format = "sha1"
+hash = "9fc6214441b7294a127e3d9a3817f7f2e3ffaa24"
