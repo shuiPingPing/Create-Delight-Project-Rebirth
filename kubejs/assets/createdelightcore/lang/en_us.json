@@ -384,5 +384,7 @@
   "emi_group.createdelightcore.waystones": "Waystones",
   "emi_group.createdelightcore.covered_cables": "Covered Cables",
   "emi_group.createdelightcore.covered_dense_cables": "Covered Dense Cables",
-  "emi_group.createdelightcore.citadelup": "Citadel Up"
+  "emi_group.createdelightcore.citadelup": "Citadel Up",
+  "item.createdelightcore.life_matter": "Life Matter",
+  "fluid.createdelightcore.genetic_culture": "Genetic Culture"
 }
