@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T06:30:27Z",
+  "generatedAt": "2026-09-20T06:32:54Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -669,7 +669,7 @@
     {
       "side": "client",
       "metadata": "mods/client/fancymenu.pw.toml",
-      "filename": "fancymenu_neoforge_3.9.0_MC_1.21.1.jar",
+      "filename": "fancymenu_neoforge_3.9.12_MC_1.21.1.jar",
       "modIds": [
         "fancymenu"
       ]
