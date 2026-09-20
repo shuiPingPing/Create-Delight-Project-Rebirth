@@ -1,0 +1,8 @@
+name = "Aeronautics:Addition"
+filename = "aero_addition-1.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/uCWxfksC/versions/7d3bWEWk/aero_addition-1.0.2.jar"
+hash-format = "sha1"
+hash = "446577102ad03017014c662079a927779f1e0f77"

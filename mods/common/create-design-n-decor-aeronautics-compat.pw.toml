@@ -1,0 +1,8 @@
+name = "Create: Design n' Decor - Aeronautics Compat"
+filename = "dnd_aero_compat-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/KhnOEVjA/versions/Jhg0FhSv/dnd_aero_compat-1.0.0.jar"
+hash-format = "sha1"
+hash = "6013c41135d21bee109006e4abaa52452b680e5d"

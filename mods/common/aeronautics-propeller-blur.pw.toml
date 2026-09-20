@@ -1,0 +1,8 @@
+name = "Aeronautics Propeller Blur"
+filename = "AeroPropBlur-1.21.1-1.0a.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/uKFK3MBp/versions/27nROiTP/AeroPropBlur-1.21.1-1.0a.jar"
+hash-format = "sha1"
+hash = "5081bcd2b2d32b239983d0bfaa83c2e3669b1a5a"

@@ -1,0 +1,8 @@
+name = "Presence Footsteps x Sable (Aeronautics Compat)"
+filename = "pfsable-1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/ZAhKrMSS/versions/Mnm18kQK/pfsable-1.0.jar"
+hash-format = "sha1"
+hash = "a216dfce15550c50436012283e49606c67a87e29"

@@ -1,0 +1,8 @@
+name = "Create: Northstar-Aeronautics Compatibility"
+filename = "cnbridge-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Mit4b2tJ/versions/Y91G3nhq/cnbridge-1.0.0.jar"
+hash-format = "sha1"
+hash = "50e829c2a91c38fa046f772f057e797756d346ce"

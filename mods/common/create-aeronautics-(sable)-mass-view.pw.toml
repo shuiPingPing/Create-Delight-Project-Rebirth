@@ -1,0 +1,8 @@
+name = "Sable: Mass view (Create Aeronautics)"
+filename = "sablemassview-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/f5uobnkD/versions/Dc1FsCO5/sablemassview-1.0.0.jar"
+hash-format = "sha1"
+hash = "e568ce1389bcb259483766cf35542dbc8cefb2b1"

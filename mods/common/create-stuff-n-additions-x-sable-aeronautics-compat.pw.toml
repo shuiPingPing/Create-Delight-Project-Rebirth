@@ -1,0 +1,8 @@
+name = "Create Stuff 'N Additions x Sable & Aeronautics Compat"
+filename = "SableStuffAdditionsCompat v1.0.3-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/gsAqDfOu/versions/oOYLBz7M/SableStuffAdditionsCompat%20v1.0.3-1.21.1.jar"
+hash-format = "sha1"
+hash = "4fc9e4d44986cd08884dc5b170753ec40dc54287"

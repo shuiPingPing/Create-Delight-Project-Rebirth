@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T10:04:48Z",
+  "generatedAt": "2026-09-20T03:24:52Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -13,8 +13,17 @@
       "ae2omnicells",
       "ae2wtlib",
       "ae2wtlib_api",
+      "aero_addition",
+      "aero_cam_sync",
+      "aerocali",
+      "aeroclaims",
+      "aerocopycats",
+      "aeroencasedpipe",
       "aeronautics",
       "aeronautics_bundled",
+      "aeronautics_dyeable_components",
+      "aeronautics_utility_objects",
+      "aeronautics_windsound",
       "alexscavesup",
       "alexsdelight",
       "alexsmobsup",
@@ -66,15 +75,18 @@
       "c2me_threading_lighting",
       "caelus",
       "carryon",
+      "carryonaerocompat",
       "casualnessdelight",
       "cataclysm",
       "cerulean",
       "charmofundying",
       "chefsdelight",
       "citadelup",
+      "climbable_ropes",
       "cloth_config",
       "clumps",
       "cmr",
+      "cnbridge",
       "cobweb",
       "collectorsreap",
       "comforts",
@@ -89,6 +101,9 @@
       "crabbersdelight",
       "cratedelight",
       "create",
+      "create_aeronautics_automated_logistics",
+      "create_aeronautics_throwable_rope_connector",
+      "create_aeronautics_toolgun",
       "create_bic_bit",
       "create_bs",
       "create_central_kitchen",
@@ -104,6 +119,7 @@
       "create_integrated_farming",
       "create_jetpack",
       "create_jetpack_curios",
+      "create_lnl",
       "create_mechanical_spawner",
       "create_mob_spawners",
       "create_new_age",
@@ -113,6 +129,7 @@
       "create_structures_arise",
       "createaddition",
       "createadditionallogistics",
+      "createaerophysicsgantry",
       "createcafe",
       "createcobblestone",
       "createdeco",
@@ -129,6 +146,8 @@
       "createredstonelinkgui",
       "createsolar",
       "createstockbridge",
+      "createthrusters",
+      "createthrusters_bundled",
       "createtransmission",
       "createultimine",
       "createutilities",
@@ -142,6 +161,7 @@
       "deployer",
       "dg_js",
       "displaydelight",
+      "dnd_aero_compat",
       "dndecor",
       "dramaticdoors",
       "dsbg",
@@ -219,6 +239,7 @@
       "ftbxmodcompat",
       "functionalstorage",
       "fzzy_config",
+      "gadgetsngizmos",
       "gateways",
       "geckolib",
       "glodium",
@@ -226,6 +247,7 @@
       "greenhouseconfig_night_config",
       "greenhouseconfig_toml",
       "guideme",
+      "gyro",
       "iceandfire",
       "iceberg",
       "idas",
@@ -258,6 +280,7 @@
       "l2library",
       "l2menustacker",
       "lctech",
+      "ldfix",
       "ldlib2",
       "lightmanscurrency",
       "lionfishapi",
@@ -277,6 +300,7 @@
       "modernfix",
       "moonlight",
       "morejs",
+      "mr_create_hangars",
       "mutil",
       "mynethersdelight",
       "mysterious_mountain_lib",
@@ -294,15 +318,18 @@
       "oworld2create",
       "packetfixer",
       "percale",
+      "pfsable",
       "placebo",
       "playeranimator",
       "polyeng",
       "polymorph",
       "ponder",
+      "portable_engine_liquid_fuel",
       "prickle",
       "prism",
       "probejs",
       "prometheus",
+      "prop_blur",
       "puzzleslib",
       "quality_food",
       "quark",
@@ -316,12 +343,15 @@
       "rhino",
       "runiclib",
       "sable",
+      "sable_sa_compat",
       "sablecompanion",
+      "sablemassview",
       "schematicanon_processing_pattern",
       "searchables",
       "servercore",
       "serverwarashi",
       "silentsdelight",
+      "sim_copycats",
       "simplebackups",
       "simplehats",
       "simulated",
@@ -333,11 +363,14 @@
       "soul_fire_d",
       "spark",
       "spectrelib",
+      "ssrd",
+      "stickywheels",
       "supermartijn642configlib",
       "supermartijn642corelib",
       "supplementaries",
       "t_and_t",
       "tacz",
+      "tacz_aero_compat",
       "tectonic",
       "tenshilib",
       "terralith",
@@ -361,6 +394,8 @@
       "vintageimprovements",
       "watut",
       "waystones",
+      "waystonessable",
+      "windtunnel",
       "yet_another_config_lib_v3",
       "youkaishomecoming",
       "yungsapi",
@@ -1006,6 +1041,62 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/aeronautics-addition.pw.toml",
+      "filename": "aero_addition-1.0.2.jar",
+      "modIds": [
+        "aero_addition"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/aero_cam_sync.pw.toml",
+      "filename": "aero_cam_sync-1.4.0.jar",
+      "modIds": [
+        "aero_cam_sync"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/aeronautics-claims.pw.toml",
+      "filename": "aeroclaims-0.9.4.jar",
+      "modIds": [
+        "aeroclaims"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/copycats-aeronautics-weight.pw.toml",
+      "filename": "aerocopycats-1.1.1.jar",
+      "modIds": [
+        "aerocopycats"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-encased-fluid-pipes.pw.toml",
+      "filename": "aeroencasedpipe-1.0.7.jar",
+      "modIds": [
+        "aeroencasedpipe"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/aeronautics-wind-sound.pw.toml",
+      "filename": "aeronautics_windsound-1.0.1.jar",
+      "modIds": [
+        "aeronautics_windsound"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/aeronautics-propeller-blur.pw.toml",
+      "filename": "AeroPropBlur-1.21.1-1.0a.jar",
+      "modIds": [
+        "prop_blur"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/alexs-caves-up.pw.toml",
       "filename": "alexscavesup-0.1.1.jar",
       "modIds": [
@@ -1255,6 +1346,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/carryon-aeronautics-compat.pw.toml",
+      "filename": "CarryOnAeroCompat-1.21.1-1.1.1.jar",
+      "modIds": [
+        "carryonaerocompat"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/casualness-delight.pw.toml",
       "filename": "casualnessdelight-0.6.jar",
       "modIds": [
@@ -1304,6 +1403,15 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/create-aeronautics-climbable-rope.pw.toml",
+      "filename": "climbable_ropes-2.1.3.jar",
+      "modIds": [
+        "climbable_ropes",
+        "playeranimator"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/cloth-config.pw.toml",
       "filename": "cloth-config-15.0.140-neoforge.jar",
       "modIds": [
@@ -1316,6 +1424,14 @@
       "filename": "Clumps-neoforge-1.21.1-19.0.0.1.jar",
       "modIds": [
         "clumps"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-northstar-aeronautics-compatibility.pw.toml",
+      "filename": "cnbridge-1.0.0.jar",
+      "modIds": [
+        "cnbridge"
       ]
     },
     {
@@ -1409,10 +1525,50 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/create-aeronautics-gyroscope-stabilizers.pw.toml",
+      "filename": "Create Aeronautics Gyroscope Stabilizers.jar",
+      "modIds": [
+        "gyro"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/create-morerecipes.pw.toml",
       "filename": "Create More Recipes-1.21.1-1.2.1-fix1.jar",
       "modIds": [
         "cmr"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-automated-logistics.pw.toml",
+      "filename": "create_aeronautics_automated_logistics-0.6.2.jar",
+      "modIds": [
+        "create_aeronautics_automated_logistics"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-throwable-rope-connector.pw.toml",
+      "filename": "create_aeronautics_throwable_rope_connector-0.4.3.jar",
+      "modIds": [
+        "create_aeronautics_throwable_rope_connector"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-toolgun.pw.toml",
+      "filename": "create_aeronautics_toolgun-0.3.6.jar",
+      "modIds": [
+        "create_aeronautics_toolgun"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-transmission-linkage.pw.toml",
+      "filename": "create_aeronautics_transmission_linkage-0.2.8.jar",
+      "modIds": [
+        "aeronautics_utility_objects"
       ]
     },
     {
@@ -1560,6 +1716,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/create-aeronautics-lift-patch.pw.toml",
+      "filename": "create-aeronautics-lift-patch-1.1.0.jar",
+      "modIds": [
+        "ldfix"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/create-central-kitchen.pw.toml",
       "filename": "create-central-kitchen-2.5.0.jar",
       "modIds": [
@@ -1580,6 +1744,14 @@
       "filename": "create-enchantment-industry-2.3.1.jar",
       "modIds": [
         "create_enchantment_industry"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-hangars.pw.toml",
+      "filename": "create-hangars-V1.0.0.jar",
+      "modIds": [
+        "mr_create_hangars"
       ]
     },
     {
@@ -1629,6 +1801,14 @@
       "filename": "createadditionallogistics-1.21.1-1.4.5.jar",
       "modIds": [
         "createadditionallogistics"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-physics-gantry.pw.toml",
+      "filename": "createaerophysicsgantry-1.0.3.jar",
+      "modIds": [
+        "createaerophysicsgantry"
       ]
     },
     {
@@ -1868,6 +2048,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/create-design-n-decor-aeronautics-compat.pw.toml",
+      "filename": "dnd_aero_compat-1.0.0.jar",
+      "modIds": [
+        "dnd_aero_compat"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/dramatic-doors.pw.toml",
       "filename": "DramaticDoors-NeoQuiFab-1.21.1-3.3.2.jar",
       "modIds": [
@@ -1896,6 +2084,14 @@
       "filename": "DumplingsDelightRewrapped-1.21.1-1.4.1.jar",
       "modIds": [
         "dumplings_delight"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/aeronautics-dyeable-components.pw.toml",
+      "filename": "dyeable-components-1.0.4+mc1.21.1.jar",
+      "modIds": [
+        "aeronautics_dyeable_components"
       ]
     },
     {
@@ -2092,6 +2288,16 @@
       "filename": "fzzy_config-0.7.6+1.21+neoforge.jar",
       "modIds": [
         "fzzy_config"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-gadgets-and-gizmos.pw.toml",
+      "filename": "gadgets-and-gizmos-bundled-V1.2.4.jar",
+      "modIds": [
+        "createthrusters",
+        "createthrusters_bundled",
+        "gadgetsngizmos"
       ]
     },
     {
@@ -2359,6 +2565,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/create-lift-n-load.pw.toml",
+      "filename": "Lift-n-Load-1.21.1-1.0c.jar",
+      "modIds": [
+        "create_lnl"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/lightmans-currency.pw.toml",
       "filename": "lightmanscurrency-1.21-2.3.0.4e.jar",
       "modIds": [
@@ -2552,6 +2766,15 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/aeronautics-calibrated.pw.toml",
+      "filename": "Neoforge-Aeronautics-Calibrated-1.4.0.jar",
+      "modIds": [
+        "aerocali",
+        "sablecompanion"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/dungeons-delight.pw.toml",
       "filename": "neoforge-dungeonsdelight-1.21.1-1.4.6.jar",
       "modIds": [
@@ -2625,6 +2848,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/presence-footsteps-x-sable.pw.toml",
+      "filename": "pfsable-1.0.jar",
+      "modIds": [
+        "pfsable"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/placebo.pw.toml",
       "filename": "Placebo-1.21.1-9.9.1.jar",
       "modIds": [
@@ -2653,6 +2884,14 @@
       "filename": "polymorph-neoforge-1.1.0+1.21.1.jar",
       "modIds": [
         "polymorph"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-portable-engine-liquid-fuel.pw.toml",
+      "filename": "portable_engine_liquid_fuel-2.0.0-neoforge-1.21.1.jar",
+      "modIds": [
+        "portable_engine_liquid_fuel"
       ]
     },
     {
@@ -2772,6 +3011,22 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/create-aeronautics-(sable)-mass-view.pw.toml",
+      "filename": "sablemassview-1.0.0.jar",
+      "modIds": [
+        "sablemassview"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-stuff-n-additions-x-sable-aeronautics-compat.pw.toml",
+      "filename": "SableStuffAdditionsCompat v1.0.3-1.21.1.jar",
+      "modIds": [
+        "sable_sa_compat"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/schematicannon-processing-pattern.pw.toml",
       "filename": "schematicanon_processing_pattern-1.0-neoforge-1.21.1.jar",
       "modIds": [
@@ -2808,6 +3063,14 @@
       "filename": "silentsdelight-1.21.1-1.0.1.jar",
       "modIds": [
         "silentsdelight"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/simulated-copycats.pw.toml",
+      "filename": "sim_copycats-1.3.2.jar",
+      "modIds": [
+        "sim_copycats"
       ]
     },
     {
@@ -2876,6 +3139,22 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/ssrd.pw.toml",
+      "filename": "SSRD-1.8.6-1.21.1.jar",
+      "modIds": [
+        "ssrd"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/create-aeronautics-offroad-addon-stickywheels.pw.toml",
+      "filename": "stickywheels-1.21.1-0.0.3.jar",
+      "modIds": [
+        "stickywheels"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/supermartijn642s-config-lib.pw.toml",
       "filename": "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
       "modIds": [
@@ -2905,6 +3184,14 @@
       "filename": "t_and_t-neoforge-fabric-1.13.7+1.21.1.jar",
       "modIds": [
         "t_and_t"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/tacz-aeronautics-compat.pw.toml",
+      "filename": "tacz_aero_compat-1.8.0.jar",
+      "modIds": [
+        "tacz_aero_compat"
       ]
     },
     {
@@ -3119,6 +3406,22 @@
       "filename": "waystones-neoforge-1.21.1-21.1.30.jar",
       "modIds": [
         "waystones"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/waystones-sable.pw.toml",
+      "filename": "waystonessable-1.0.7.jar",
+      "modIds": [
+        "waystonessable"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/aeronauticswind-tunnel.pw.toml",
+      "filename": "windtunnel-1.1.8.jar",
+      "modIds": [
+        "windtunnel"
       ]
     },
     {

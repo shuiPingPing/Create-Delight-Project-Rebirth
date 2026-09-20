@@ -1,0 +1,8 @@
+name = "Create Aeronautics: Gadgets & Gizmos"
+filename = "gadgets-and-gizmos-bundled-V1.2.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Sza3GgEL/versions/VY2Sg3qY/gadgets-and-gizmos-bundled-V1.2.4.jar"
+hash-format = "sha1"
+hash = "0b63f12dfef20803d8b85b2b387b037da34c86ce"

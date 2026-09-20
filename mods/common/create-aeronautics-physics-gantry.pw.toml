@@ -1,0 +1,8 @@
+name = "Create Aeronautics Physics Gantry"
+filename = "createaerophysicsgantry-1.0.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/tptzZZl3/versions/QoeKSEzn/createaerophysicsgantry-1.0.3.jar"
+hash-format = "sha1"
+hash = "05e572497baa32df3e2240c026b6e2f45110a733"
