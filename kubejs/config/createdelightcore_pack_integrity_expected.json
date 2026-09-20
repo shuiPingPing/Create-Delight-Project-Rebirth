@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T03:24:52Z",
+  "generatedAt": "2026-09-20T05:53:38Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -418,6 +418,7 @@
       "createbetterfps",
       "customskinloader",
       "defaultoptions",
+      "drippyloadingscreen",
       "dynamic_fps",
       "dynamiccrosshair",
       "dynamiccrosshairapi",
@@ -588,6 +589,21 @@
       "filename": "defaultoptions-neoforge-1.21.1-21.1.8.jar",
       "modIds": [
         "defaultoptions"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/drippy-early-loading-module.pw.toml",
+      "filename": "drippy_early_loading_module_neoforge_3.1.2_MC_1.21.1.jar",
+      "modIds": [],
+      "nonModFile": true
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/drippy-loading-screen.pw.toml",
+      "filename": "drippyloadingscreen_neoforge_3.1.2_MC_1.21.1.jar",
+      "modIds": [
+        "drippyloadingscreen"
       ]
     },
     {
