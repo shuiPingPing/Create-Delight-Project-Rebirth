@@ -139,10 +139,18 @@ function findEndOfCentralDirectory(buffer) {
 
 function getModIdsFromTomlText(text) {
   const ids = [];
+  // 旧式 NeoForge mods.toml：[[mods]] 表数组（双引号/单引号）
   const blocks = text.matchAll(/(?:^|\n)\s*\[\[mods\]\]\s*([\s\S]*?)(?=\n\s*\[\[|$)/g);
   for (const block of blocks) {
-    const match = block[1].match(/^\s*modId\s*=\s*"([^"]+)"/m);
+    const match = block[1].match(/^\s*modId\s*=\s*["']([^"']+)["']/m);
     if (match) addUnique(ids, match[1].trim().toLowerCase());
+  }
+  // 新式 NeoForge mods.toml：mods = [ { modId = '...' } ]（TOML 数组）
+  const array = text.match(/mods\s*=\s*\[\s*([\s\S]*?)\s*\]/);
+  if (array) {
+    for (const m of array[1].matchAll(/modId\s*=\s*["']([^"']+)["']/g)) {
+      addUnique(ids, m[1].trim().toLowerCase());
+    }
   }
   return ids;
 }
