@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T06:46:23Z",
+  "generatedAt": "2026-09-20T06:50:28Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -395,7 +395,6 @@
       "watut",
       "waystones",
       "waystonessable",
-      "windtunnel",
       "yet_another_config_lib_v3",
       "youkaishomecoming",
       "yungsapi",
@@ -3414,14 +3413,6 @@
       "filename": "waystonessable-1.0.7.jar",
       "modIds": [
         "waystonessable"
-      ]
-    },
-    {
-      "side": "common",
-      "metadata": "mods/common/aeronauticswind-tunnel.pw.toml",
-      "filename": "windtunnel-1.1.8.jar",
-      "modIds": [
-        "windtunnel"
       ]
     },
     {
