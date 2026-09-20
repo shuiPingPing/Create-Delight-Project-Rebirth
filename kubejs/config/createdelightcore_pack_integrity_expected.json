@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T06:50:28Z",
+  "generatedAt": "2026-09-20T06:57:04Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -1210,7 +1210,7 @@
     {
       "side": "common",
       "metadata": "mods/common/balm.pw.toml",
-      "filename": "balm-neoforge-1.21.1-21.0.56.jar",
+      "filename": "balm-neoforge-1.21.1-21.0.65.jar",
       "modIds": [
         "balm",
         "kuma_api"
