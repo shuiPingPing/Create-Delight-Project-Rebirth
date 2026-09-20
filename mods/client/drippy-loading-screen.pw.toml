@@ -1,9 +1,0 @@
-name = "Drippy Loading Screen"
-filename = "drippyloadingscreen_neoforge_3.1.5_MC_1.21.1.jar"
-side = "client"
-
-[download]
-url = "https://cdn.modrinth.com/data/v3CYg2V9/versions/MVgsDsSB/drippyloadingscreen_neoforge_3.1.5_MC_1.21.1.jar"
-hash-format = "sha1"
-hash = "9d27991a7f5a551265692abf8ed40ece10ea1958"
-mode = "url"
