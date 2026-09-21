@@ -57,11 +57,11 @@ Mechanical Spawner 配方同步使用新的 `spawn_fluid_piglin` 流体 ID。
 > JEI 就不能升到 19.32+。解除这一组的前提同样是先解决 `simulated` 的 JEI 集成。
 >
 > 另：`mods/common/ssrd.pw.toml`（Separate Sable Render Distance）**已于同日装回并实测通过**。
-> 上游模组更新后 Drippy 的早期窗口曾再次报 `[DRIPPY LOADING SCREEN] Custom loading overlay
-> class missing`（死在模组加载前，因此不产生 crash 报告，HMCL 报 “Crash reason unknown”），
-> 当时先移除 SSRD 复测通过；随后在一整轮修复（JEI 锁 19.27、CDC 升 2.0.0.6、Carry On 回退
-> 2.2.4.4、6 个 JEI 关联模组回退）之后重装 SSRD，2026-09-21 17:00 实机确认
-> **Drippy 3.1.5 + SSRD 1.8.6 共存、加载屏正常**
+> 上游模组更新后 Drippy 的早期窗口曾再次报 `Custom loading overlay class missing`
+> （完整报文为 `[DRIPPY LOADING SCREEN] Custom loading overlay class missing`，死在模组加载前，
+> 因此不产生 crash 报告，HMCL 报 “Crash reason unknown”）；当时先移除 SSRD 复测通过；
+> 随后在一整轮修复（JEI 锁 19.27、CDC 升 2.0.0.6、Carry On 回退 2.2.4.4、6 个 JEI 关联模组回退）
+> 之后重装 SSRD，2026-09-21 17:00 实机确认 **Drippy 3.1.5 + SSRD 1.8.6 共存、加载屏正常**
 > （日志：`Loading ImmediateWindowProvider drippy_early_window` + `SSRD: Initialized v1.8.6`）。
 >
 > **结论订正**：SSRD×Drippy 的崩溃是**环境相关**的（与该会话早先「SSRD 是触发条件之一、
