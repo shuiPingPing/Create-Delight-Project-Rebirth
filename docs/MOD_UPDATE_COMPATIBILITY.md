@@ -45,6 +45,13 @@ Mechanical Spawner 配方同步使用新的 `spawn_fluid_piglin` 流体 ID。
 | `mods/common/sophisticated-core.pw.toml` | 随 JEI 锁定：新版要求 JEI ≥ 19.32.0.359，保留 1.4.36.1833 |
 | `mods/common/sophisticated-backpacks.pw.toml` | 随 Sophisticated Core 保留配对版本 3.25.44.1736 |
 | `mods/common/sophisticated-backpacks-create-integration.pw.toml` | 随 JEI 锁定：新版要求 JEI ≥ 19.32.0.359，保留 0.1.5.29 |
+| `mods/common/carry-on.pw.toml` | **本 fork 特有**：Carry On 2.2.6.13 改动了 `PickupHandler` 内部结构，aeronautics 兼容层 `carryonaerocompat 1.1.1`（Modrinth 项目 `MpnDZ1Lx`）的 `PickupHandlerMixin` redirect 注入失败（`CarryOnAeroCompat$distanceTo … 0/1 succeeded. Scanned 0 target(s)`），右键方块即崩；锁回 2.2.4.4 |
+
+> 同类风险（aeronautics 兼容层 × 被本批升级的宿主模组）：兼容层是围绕当时的宿主版本写的，
+> 而本批升级了 145 个模组。已核实：`aerocopycats`（copycats 3.0.4 → 3.0.9）**不含 mixin**，不受影响；
+> `tacz_aero_compat`（tacz 1.1.7-hotfix-r5 → 1.1.8-hotfix-r6）含 mixin 但目标为原版类，风险待实机确认。
+> 其余兼容层的宿主（waystones / create-stuff-additions / northstar / create-aeronautics 本体 /
+> ldlib2 / sable）本批未变。
 
 > 上述「随 JEI 锁定」的 6 个描述符与 JEI 是一组：只要 aeronautics 仍内嵌 `simulated 1.3.0`，
 > JEI 就不能升到 19.32+。解除这一组的前提同样是先解决 `simulated` 的 JEI 集成。

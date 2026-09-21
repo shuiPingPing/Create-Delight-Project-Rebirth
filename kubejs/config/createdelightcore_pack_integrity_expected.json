@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T08:12:42Z",
+  "generatedAt": "2026-09-21T08:20:11Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -1365,7 +1365,7 @@
     {
       "side": "common",
       "metadata": "mods/common/carry-on.pw.toml",
-      "filename": "carryon-neoforge-1.21.1-2.2.6.13.jar",
+      "filename": "carryon-neoforge-1.21.1-2.2.4.4.jar",
       "modIds": [
         "carryon"
       ]
