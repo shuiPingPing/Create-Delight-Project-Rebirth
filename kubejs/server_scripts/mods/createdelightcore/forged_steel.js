@@ -14,7 +14,9 @@ ServerEvents.recipes((event) => {
       .alloying(Fluid.of(molten, 360), [
         Fluid.of('createmetallurgy:molten_netherite', 30),
         Fluid.of('createdelightcore:spent_liquor', 250),
-        '4x tetra:metal_scrap',
+        // 注意：'4x tetra:metal_scrap' 会被 KubeJS 展开成 4 个独立 ingredient，
+        // 超过 createmetallurgy:alloying 的 3 个输入上限；用 Item.of 才序列化成带 count 的单个输入。
+        Item.of('tetra:metal_scrap', 4),
       ])
       .heatRequirement('superheated')
       .id(id('alloying/forged_steel'));

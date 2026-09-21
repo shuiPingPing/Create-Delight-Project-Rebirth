@@ -193,6 +193,9 @@ ServerEvents.recipes((event) => {
     );
   });
   withMods(['createaddition', 'alexscavesup'], () => {
+    // createdelightcore:rolled_polymer_sheet 在 1.20.1 源包与 Core 2.0.0.6 里都不存在
+    // （上游新造的 id），物品缺失时下面两条配方必然失败；等 Core 注册该物品后自动启用。
+    if (!global.itemExists('createdelightcore:rolled_polymer_sheet')) return;
     // Create Addition 1.21 rolling is no longer an assembly step. Keep both machines.
     event.recipes.createaddition
       .rolling('createdelightcore:rolled_polymer_sheet', 'alexscavesup:polymer_plate')
@@ -254,7 +257,7 @@ ServerEvents.recipes((event) => {
           CreateItem.of('4x create:asurine', 0.5),
           CreateItem.of('4x create:crimsite', 0.5),
           CreateItem.of('4x create:scoria', 0.25),
-          CreateItem.of('4x create:ochrum', 0.2),
+          // vintageimprovements:vacuumizing 最多 4 个产物，源配方第 5 项 ochrum 在此裁剪。
         ],
         ['createdelightcore:overworld_metal_ore_cluster', 'ae2:matter_ball']
       )

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T08:27:44Z",
+  "generatedAt": "2026-09-21T08:37:13Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -3403,7 +3403,7 @@
     {
       "side": "common",
       "metadata": "mods/common/vintage-improvenents-ssw-edition.pw.toml",
-      "filename": "vintageimprovements-1.21.1-0.0.0.5.jar",
+      "filename": "vintageimprovements-1.21.1-0.0.0.7.jar",
       "modIds": [
         "vintageimprovements"
       ]

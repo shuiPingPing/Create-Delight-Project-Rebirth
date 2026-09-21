@@ -20,9 +20,11 @@ if (global.hasAllMods(['createoreexcavation', 'createdelightcore'])) {
       if (!outputs.every((output) => global.itemExists(output.item))) return;
       let recipeOutputs = processingOutputs(outputs);
 
-      // Core lifts Vintage's validation to match its nine-slot inventory.
+      // 2026-09-21 实测：Core 2.0.0.6 并未放宽 Vintage 的产物上限（报错来自 Create 的
+      // ProcessingRecipe，vibrating 最多 4 个产物），故恢复此前的跳过策略。
       if (
         recipeOutputs.length === 0 ||
+        (path.startsWith('vibrating/') && recipeOutputs.length > 4) ||
         (path.startsWith('vibrating/') && !global.hasMod('vintageimprovements'))
       ) {
         return;

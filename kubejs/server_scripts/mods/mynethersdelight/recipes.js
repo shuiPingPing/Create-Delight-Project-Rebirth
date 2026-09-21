@@ -248,11 +248,8 @@ if (global.hasAllMods(['mynethersdelight', 'create', 'farmersdelight'])) {
         .custom({
           type: 'create:emptying',
           ingredients: [{ item: 'mynethersdelight:plate_of_ghasta_with_cream' }],
-          results: [
-            { id: 'minecraft:bowl' },
-            { id: 'mynethersdelight:ghasta' },
-            { id: 'netherexp:ectoplasm', amount: 250 },
-          ],
+          // Create 的 emptying 只支持 1 个物品产物（源包时代就为此注释掉了 bowl）。
+          results: [{ id: 'mynethersdelight:ghasta' }, { id: 'netherexp:ectoplasm', amount: 250 }],
         })
         .id(id('emptying/ghasta'));
     }
