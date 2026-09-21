@@ -1,0 +1,27 @@
+##[general]
+
+B:early_fade_out_elements = 'true';
+B:allow_universal_layouts = 'false';
+B:fade_out_loading_screen = 'true';
+B:wait_for_textures_in_loading = 'true';
+
+
+##[early_loading]
+
+B:early_loading_hide_logger = 'false';
+I:early_loading_bar_width = '836';
+I:early_loading_bar_position_offset_y = '-187';
+I:early_loading_bar_position_offset_x = '3';
+S:early_loading_background_texture_path = '/config/fancymenu/assets/loading_bg.png';
+B:early_loading_background_preserve_aspect_ratio = 'false';
+B:early_loading_hide_logo = 'false';
+S:early_loading_logo_texture_path = '/config/fancymenu/assets/title.png';
+I:early_loading_logo_width = '500';
+I:early_loading_logo_height = '86';
+I:early_loading_logo_position_offset_y = '78';
+I:early_loading_logo_position_offset_x = '0';
+I:early_loading_bar_height = '20';
+I:early_loading_window_height = '-1';
+I:early_loading_window_width = '-1';
+S:early_loading_window_title = 'CDPR 劲爆加载中...';
+B:early_loading_hide_bar = 'false';
