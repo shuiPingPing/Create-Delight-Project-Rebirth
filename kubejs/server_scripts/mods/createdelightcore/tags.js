@@ -21,6 +21,13 @@ if (global.hasMod('createdelightcore')) {
       event.add('c:plates', 'createdelightcore:forged_steel_sheet');
     }
 
+    // forged_steel_ingot 由 startup_scripts/mods/createdelightcore/content_restore.js 补回，
+    // 这里按 1.20.1 源包的注册补上当时的两个标签（1.21 用 c: 命名空间）。
+    if (global.itemExists('createdelightcore:forged_steel_ingot')) {
+      event.add('c:ingots/forged_steel', 'createdelightcore:forged_steel_ingot');
+      event.add('c:ingots', '#c:ingots/forged_steel');
+    }
+
     event.add(
       'createdelightcore:leather_ingredient',
       [
