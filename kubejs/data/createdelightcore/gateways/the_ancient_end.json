@@ -1,443 +1,466 @@
 {
-	"size": "large",
-	"color": "#006400",
-	"waves": [
-		{
-			"entities": [
-				{
-					"entity": "alexscavesup:vallumraptor",
-					"count": 12
-				}
-			],
-			"modifiers": [
-				{
-					"attribute": "generic.max_health",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 2.5
-				},
-				{
-					"attribute": "generic.armor",
-					"operation": "ADD_VALUE",
-					"value": 10
-				},
-				{
-					"attribute": "generic.attack_damage",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 1.0
-				},
-				{
-					"attribute": "generic.knockback_resistance",
-					"operation": "ADD_VALUE",
-					"value": 0.2
-				}
-			],
-			"rewards": [
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:dinosaur_nugget", 
-                        "count": 12
-					    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:serene_salad", 
-                        "count": 4
-					    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:seething_stew", 
-                        "count": 4
-					    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:vallumraptor_egg", 
-                        "count": 1
-					    }
-				}
-			],
-			"max_wave_time": 1200,
-			"setup_time": 100
-		},
-		{
-			"entities": [
-				{
-					"entity": "alexscavesup:subterranodon",
-					"count": 8
-				}
-			],
-			"modifiers": [
-				{
-					"attribute": "generic.max_health",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 4.5
-				},
-				{
-					"attribute": "generic.armor",
-					"operation": "ADD_VALUE",
-					"value": 10
-				},
-				{
-					"attribute": "generic.attack_damage",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 2.5
-				},
-				{
-					"attribute": "generic.knockback_resistance",
-					"operation": "ADD_VALUE",
-					"value": 0.2
-				}
-			],
-			"rewards": [
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "minecraft:cod", 
-                        "count": 12
-					    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:trilocaris_tail", 
-                        "count": 12
-					    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:primordial_soup", 
-                        "count": 4
-					    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:subterranodon_egg", 
-                        "count": 1
-					    }
-				}
-			],
-			"max_wave_time": 1200,
-			"setup_time": 150
-		},
-		{
-			"entities": [
-				{
-					"entity": "alexscavesup:relicheirus",
-					"count": 4
-				}
-			],
-			"modifiers": [
-				{
-					"attribute": "generic.max_health",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 2.5
-				},
-				{
-					"attribute": "generic.armor",
-					"operation": "ADD_VALUE",
-					"value": 10
-				},
-				{
-					"attribute": "generic.knockback_resistance",
-					"operation": "ADD_VALUE",
-					"value": 0.2
-				}
-			],
-			"rewards": [
-				{
-					"type": "gateways:entity_loot",
-					"entity": "alexscavesup:relicheirus",
-					"rolls": 12
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:cooked_dinosaur_chop", 
-                        "count": 4
-					    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:primitive_club", 
-                        "count": 1
-					    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:relicheirus_egg", 
-                        "count": 1
-					    }
-				}
-			],
-			"max_wave_time": 1200,
-			"setup_time": 100
-		},
-		{
-			"entities": [
-				{
-					"entity": "alexscavesup:grottoceratops",
-					"count": 4
-				}
-			],
-			"modifiers": [
-				{
-					"attribute": "generic.max_health",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 5.5
-				},
-				{
-					"attribute": "generic.armor",
-					"operation": "ADD_VALUE",
-					"value": 10
-				},
-				{
-					"attribute": "generic.knockback_resistance",
-					"operation": "ADD_VALUE",
-					"value": 0.2
-				}
-			],
-			"rewards": [
-				{
-					"type": "gateways:entity_loot",
-					"entity": "alexscavesup:grottoceratops",
-					"rolls": 12
-                },
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:primordial_tunic", 
-                        "count": 1
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-						"id":"alexscavesup:fern_thatch", 
-                        "count": 4
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:grottoceratops_egg", 
-                        "count": 1
-                    }
-				}
-			],
-			"max_wave_time": 1200,
-			"setup_time": 100
-		},
-		{
-			"entities": [
-				{
-					"entity": "alexscavesup:tremorsaurus",
-					"count": 4
-				}
-			],
-			"modifiers": [
-				{
-					"attribute": "generic.max_health",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 4.0
-				},
-				{
-					"attribute": "generic.armor",
-					"operation": "ADD_VALUE",
-					"value": 10
-				},
-				{
-					"attribute": "generic.knockback_resistance",
-					"operation": "ADD_VALUE",
-					"value": 0.2
-				}
-			],
-			"rewards": [
-				{
-					"type": "gateways:entity_loot",
-					"entity": "alexscavesup:tremorsaurus",
-					"rolls": 12
-                },
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:primordial_helmet", 
-                        "count": 1
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:limestone_spear", 
-                        "count": 1
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:tremorsaurus_egg", 
-                        "count": 1
-                    }
-				}
-			],
-			"max_wave_time": 1200,
-			"setup_time": 100
-		},
-		{
-			"entities": [
-				{
-					"entity": "alexscavesup:atlatitan",
-					"count": 2
-				}
-			],
-       
-			"modifiers": [
-				{
-					"attribute": "generic.max_health",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 7.0
-				},
-				{
-					"attribute": "generic.knockback_resistance",
-					"operation": "ADD_VALUE",
-					"value": 0.8
-				},
-				{
-					"attribute": "generic.movement_speed",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 0.1 
-				}
-			],
-			"rewards": [
-				{
-					"type": "gateways:entity_loot",
-					"entity": "alexscavesup:atlatitan",
-					"rolls": 12
-                },
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:tree_star", 
-                        "count": 12
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:amber_curiosity", 
-                        "count": 4
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:primordial_pants", 
-                        "count": 1
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:atlatitan_egg", 
-                        "count": 1
-                    }
-				}
-			],
-			"max_wave_time": 1600,
-			"setup_time": 100
-		},
-		{
-			"entities": [
-				{
-					"entity": "alexscavesup:luxtructosaurus",
-					"count": 1
-				}
-			],
-       
-			"modifiers": [
-				{
-					"attribute": "generic.max_health",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 6.5
-				},
-                {
-					"attribute": "generic.armor",
-					"operation": "ADD_VALUE",
-					"value": 16
-				},
-				{
-					"attribute": "generic.attack_damage",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": -0.1
-				},
-				{
-					"attribute": "generic.knockback_resistance",
-					"operation": "ADD_VALUE",
-					"value": 0.8
-				},
-				{
-					"attribute": "generic.movement_speed",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 0.1 
-				},
-								{
-					"attribute": "generic.attack_damage",
-					"operation": "ADD_MULTIPLIED_TOTAL",
-					"value": 0.5
-				}
-			],
-			"rewards": [
-				{
-					"type": "gateways:entity_loot",
-					"entity": "alexscavesup:luxtructosaurus",
-					"rolls": 8
-                },
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:amber_monolith", 
-                        "count": 4
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "gateways:gate_pearl", 
-                        "count": 1,
-                        "nbt" : {"gateway":"createdelightcore:the_ancient_end"}}
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:extinction_spear", 
-                        "count": 1
-                    }
-				},
-				{
-					"type": "gateways:stack",
-					"stack": {
-                        "id": "alexscavesup:volcanic_core", 
-                        "count": 1
-                    }
-				}
-			],
-			"max_wave_time": 3600,
-			"setup_time": 100
-		}
-    ],
-	"failures": [
+  "type": "gateways:normal",
+  "size": "large",
+  "color": "#006400",
+  "waves": [
+    {
+      "entities": [
         {
-        "type": "gateways:explosion",
-        "strength": 5,
-        "fire": true,
-        "block_damage": false
-    }]
+          "entity": "alexscavesup:vallumraptor",
+          "count": 12
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 2.0
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
+          "value": 10
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 1.0
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
+          "value": 0.2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 12,
+            "id": "alexscavesup:dinosaur_nugget"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 4,
+            "id": "alexscavesup:serene_salad"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 4,
+            "id": "alexscavesup:seething_stew"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:vallumraptor_egg"
+          }
+        }
+      ],
+      "max_wave_time": 1200,
+      "setup_time": 100
+    },
+    {
+      "entities": [
+        {
+          "entity": "alexscavesup:subterranodon",
+          "count": 8
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 4.0
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
+          "value": 10
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 2.5
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
+          "value": 0.2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 12,
+            "id": "minecraft:cod"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 12,
+            "id": "alexscavesup:trilocaris_tail"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 4,
+            "id": "alexscavesup:primordial_soup"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:subterranodon_egg"
+          }
+        }
+      ],
+      "max_wave_time": 1200,
+      "setup_time": 150
+    },
+    {
+      "entities": [
+        {
+          "entity": "alexscavesup:relicheirus",
+          "count": 4
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 1.5
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
+          "value": 10
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 0.4
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
+          "value": 0.2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "gateways:entity_loot",
+          "entity": "alexscavesup:relicheirus",
+          "rolls": 12
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 4,
+            "id": "alexscavesup:cooked_dinosaur_chop"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:primitive_club"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:relicheirus_egg"
+          }
+        }
+      ],
+      "max_wave_time": 1200,
+      "setup_time": 100
+    },
+    {
+      "entities": [
+        {
+          "entity": "alexscavesup:grottoceratops",
+          "count": 4
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 5.0
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
+          "value": 10
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 0.5
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
+          "value": 0.2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "gateways:entity_loot",
+          "entity": "alexscavesup:grottoceratops",
+          "rolls": 12
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:primordial_tunic"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 4,
+            "id": "alexscavesup:fern_thatch"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:grottoceratops_egg"
+          }
+        }
+      ],
+      "max_wave_time": 1200,
+      "setup_time": 100
+    },
+    {
+      "entities": [
+        {
+          "entity": "alexscavesup:tremorsaurus",
+          "count": 4
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 3.5
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
+          "value": 10
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 1.2
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
+          "value": 0.2
+        }
+      ],
+      "rewards": [
+        {
+          "type": "gateways:entity_loot",
+          "entity": "alexscavesup:tremorsaurus",
+          "rolls": 12
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:primordial_helmet"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:limestone_spear"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:tremorsaurus_egg"
+          }
+        }
+      ],
+      "max_wave_time": 1200,
+      "setup_time": 100
+    },
+    {
+      "entities": [
+        {
+          "entity": "alexscavesup:atlatitan",
+          "count": 2
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 6.5
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 1.5
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
+          "value": 0.8
+        },
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
+          "value": 0.1
+        }
+      ],
+      "rewards": [
+        {
+          "type": "gateways:entity_loot",
+          "entity": "alexscavesup:atlatitan",
+          "rolls": 12
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 12,
+            "id": "alexscavesup:tree_star"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 4,
+            "id": "alexscavesup:amber_curiosity"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:primordial_pants"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:atlatitan_egg"
+          }
+        }
+      ],
+      "max_wave_time": 1200,
+      "setup_time": 100
+    },
+    {
+      "entities": [
+        {
+          "entity": "alexscavesup:luxtructosaurus",
+          "count": 1
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 8.5
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
+          "value": 16
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 0.8
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
+          "value": 0.8
+        },
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
+          "value": 0.1
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 0.5
+        }
+      ],
+      "rewards": [
+        {
+          "type": "gateways:entity_loot",
+          "entity": "alexscavesup:luxtructosaurus",
+          "rolls": 8
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 4,
+            "id": "alexscavesup:amber_monolith"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "gateways:gate_pearl",
+            "components": {
+              "gateways:gateway": "createdelightcore:the_ancient_end"
+            }
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:extinction_spear"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "alexscavesup:volcanic_core"
+          }
+        }
+      ],
+      "max_wave_time": 1200,
+      "setup_time": 100
+    }
+  ],
+  "failures": [
+    {
+      "type": "gateways:explosion",
+      "strength": 5,
+      "fire": true,
+      "block_damage": false
+    }
+  ]
 }

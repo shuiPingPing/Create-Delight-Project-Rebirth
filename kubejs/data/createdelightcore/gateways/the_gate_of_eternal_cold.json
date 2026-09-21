@@ -1,4 +1,5 @@
 {
+  "type": "gateways:normal",
   "size": "large",
   "color": "#2F4F4F",
   "waves": [
@@ -27,28 +28,28 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 2
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 2.0
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 8
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
           "value": 0.4
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.2
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.15
         }
       ],
@@ -56,17 +57,17 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "createdelightcore:dread_heart",
-            "count": 4
+            "count": 4,
+            "id": "createdelightcore:dread_heart"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "gateways:gate_pearl",
             "count": 2,
-            "nbt": {
-              "gateway": "createdelightcore:the_gate_of_eternal_cold"
+            "id": "gateways:gate_pearl",
+            "components": {
+              "gateways:gateway": "createdelightcore:the_gate_of_eternal_cold"
             }
           }
         }
@@ -78,7 +79,10 @@
       "entities": [
         {
           "entity": "iceandfire:ice_dragon",
-          "count": 1
+          "count": 1,
+          "nbt": {
+            "Items": []
+          }
         },
         {
           "entity": "iceandfire:dread_knight",
@@ -103,28 +107,28 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 2
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 2.0
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 5
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
           "value": 0.5
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.2
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.15
         }
       ],
@@ -132,22 +136,22 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:dragonscales_blue",
-            "count": 12
+            "count": 12,
+            "id": "iceandfire:dragonscales_blue"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:ice_dragon_blood",
-            "count": 8
+            "count": 8,
+            "id": "iceandfire:ice_dragon_blood"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:dragonsteel_ice_ingot",
-            "count": 2
+            "count": 2,
+            "id": "iceandfire:dragonsteel_ice_ingot"
           }
         }
       ],
@@ -158,7 +162,10 @@
       "entities": [
         {
           "entity": "iceandfire:ice_dragon",
-          "count": 2
+          "count": 2,
+          "nbt": {
+            "Items": []
+          }
         },
         {
           "entity": "iceandfire:dread_knight",
@@ -183,28 +190,28 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 2
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 2.0
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 5
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
           "value": 0.5
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.2
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.15
         }
       ],
@@ -212,22 +219,22 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:banner_pattern_dread",
-            "count": 1
+            "count": 1,
+            "id": "iceandfire:banner_pattern_dread"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:dread_sword",
-            "count": 1
+            "count": 1,
+            "id": "iceandfire:dread_sword"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:dread_knight_sword",
-            "count": 1
+            "count": 1,
+            "id": "iceandfire:dread_knight_sword"
           }
         }
       ],
@@ -238,15 +245,24 @@
       "entities": [
         {
           "entity": "iceandfire:ice_dragon",
-          "count": 2
+          "count": 2,
+          "nbt": {
+            "Items": []
+          }
         },
         {
           "entity": "iceandfire:lightning_dragon",
-          "count": 1
+          "count": 1,
+          "nbt": {
+            "Items": []
+          }
         },
         {
           "entity": "iceandfire:fire_dragon",
-          "count": 1
+          "count": 1,
+          "nbt": {
+            "Items": []
+          }
         },
         {
           "entity": "iceandfire:dread_knight",
@@ -271,28 +287,28 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 2
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 2.0
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 5
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
           "value": 0.6
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.2
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.15
         }
       ],
@@ -300,29 +316,29 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:frost_stew",
-            "count": 4
+            "count": 4,
+            "id": "iceandfire:frost_stew"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "createdelightcore:emerald_coin",
-            "count": 2
+            "count": 2,
+            "id": "createdelightcore:emerald_coin"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:banner_pattern_ice",
-            "count": 1
+            "count": 1,
+            "id": "iceandfire:banner_pattern_ice"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:banner_pattern_ice_head",
-            "count": 1
+            "count": 1,
+            "id": "iceandfire:banner_pattern_ice_head"
           }
         }
       ],
@@ -333,15 +349,24 @@
       "entities": [
         {
           "entity": "iceandfire:ice_dragon",
-          "count": 2
+          "count": 2,
+          "nbt": {
+            "Items": []
+          }
         },
         {
           "entity": "iceandfire:lightning_dragon",
-          "count": 1
+          "count": 1,
+          "nbt": {
+            "Items": []
+          }
         },
         {
           "entity": "iceandfire:fire_dragon",
-          "count": 1
+          "count": 1,
+          "nbt": {
+            "Items": []
+          }
         },
         {
           "entity": "iceandfire:dread_knight",
@@ -366,28 +391,28 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
           "value": 2.4
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 6
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
           "value": 0.5
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.2
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.15
         }
       ],
@@ -395,15 +420,22 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:dread_queen_sword",
-            "count": 1
+            "count": 2,
+            "id": "dreadsteel:dreadsteel_ingot"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "createdelightcore:dread_upgrade_smithing_template",
-            "count": 1
+            "count": 1,
+            "id": "iceandfire:dread_queen_sword"
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "createdelightcore:dread_upgrade_smithing_template"
           }
         }
       ],

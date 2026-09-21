@@ -3,10 +3,6 @@
   "textures": {
     "layer0": "iceandfire:item/lich_staff"
   },
-	"overrides" :[
-		{"predicate":{"custom_model_data":1},"model":"iceandfire:item/sans"},
-                                {"predicate":{"custom_model_data":2},"model":"iceandfire:item/skeleton_skull"}
-	],
   "display": {
     "thirdperson_righthand": {
       "rotation": [
@@ -93,5 +89,19 @@
         1
       ]
     }
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "iceandfire:item/sans"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "iceandfire:item/skeleton_skull"
+    }
+  ]
 }

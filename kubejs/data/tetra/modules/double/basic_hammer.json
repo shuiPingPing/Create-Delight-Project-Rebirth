@@ -382,9 +382,9 @@
     },
     {
       "materials": [
-        "tetra:metal/iceandfire_fire_dragonsteel",
-        "tetra:metal/iceandfire_ice_dragonsteel",
-        "tetra:metal/iceandfire_lightning_dragonsteel"
+        "tetra:metal/dragonsteel_fire_ingot",
+        "tetra:metal/dragonsteel_ice_ingot",
+        "tetra:metal/dragonsteel_lightning_ingot"
       ],
       "key": "basic_hammer/",
       "attributes": {
@@ -397,54 +397,6 @@
       },
       "tools": {
         "hammer_dig": 6
-      },
-      "integrity": -1,
-      "extract": {
-        "primaryAttributes": {
-          "generic.attack_damage": 0.5
-        },
-        "secondaryAttributes": {
-          "generic.attack_damage": 1,
-          "generic.attack_speed": -0.08
-        },
-        "tools": {
-          "hammer_dig": [
-            0,
-            0.8333
-          ]
-        },
-        "durability": 0.55,
-        "integrity": -1,
-        "magicCapacity": 1,
-        "glyph": {
-          "textureX": 64
-        },
-        "availableTextures": [
-          "metal"
-        ],
-        "models": [
-          {
-            "location": "tetra:item/module/double/head/basic_hammer/"
-          }
-        ]
-      }
-    },
-    {
-      "materials": [
-        "tetra:metal/end_dragon_ingot",
-        "tetra:metal/dreadsteel_ingot"
-      ],
-      "key": "basic_hammer/",
-      "attributes": {
-        "generic.attack_speed": -1.1
-      },
-      "aspects": {
-        "block_breaker": 2,
-        "breakable": 2,
-        "blunt_weapon": 1
-      },
-      "tools": {
-        "hammer_dig": 7
       },
       "integrity": -1,
       "extract": {

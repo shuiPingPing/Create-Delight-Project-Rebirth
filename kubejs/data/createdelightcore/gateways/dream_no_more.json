@@ -1,4 +1,5 @@
 {
+  "type": "gateways:normal",
   "size": "large",
   "color": "#FFA500",
   "waves": [
@@ -15,18 +16,18 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 6
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 5.5
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 12
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.2
         }
       ],
@@ -39,22 +40,22 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "ends_delight:raw_ender_mite_meat",
-            "count": 24
+            "count": 24,
+            "id": "ends_delight:raw_ender_mite_meat"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "dungeonsdelight:silverfish_and_chips_block",
-            "count": 1
+            "count": 1,
+            "id": "dungeonsdelight:silverfish_and_chips_block"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "dungeonsdelight:silverfish_fried_rice",
-            "count": 1
+            "count": 1,
+            "id": "dungeonsdelight:silverfish_fried_rice"
           }
         }
       ],
@@ -74,28 +75,28 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 6.5
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 5.5
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 12
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.8
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.4
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
           "value": -1.2
         }
       ],
@@ -113,15 +114,15 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "alexsmobsup:mosquito_repellent_stew",
-            "count": 4
+            "count": 4,
+            "id": "alexsmobsup:mosquito_repellent_stew"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "alexsmobsup:hemolymph_blaster",
-            "count": 1
+            "count": 1,
+            "id": "alexsmobsup:hemolymph_blaster"
           }
         }
       ],
@@ -141,28 +142,28 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 8
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 6.5
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 12
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.8
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.4
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
           "value": 1.5
         }
       ],
@@ -175,22 +176,22 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "dungeonsdelight:monster_cake",
-            "count": 1
+            "count": 1,
+            "id": "dungeonsdelight:monster_cake"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "dungeonsdelight:spider_salmagundi",
-            "count": 1
+            "count": 1,
+            "id": "dungeonsdelight:spider_salmagundi"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "dungeonsdelight:spider_tanghulu",
-            "count": 1
+            "count": 1,
+            "id": "dungeonsdelight:spider_tanghulu"
           }
         }
       ],
@@ -210,29 +211,29 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 6.6
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 5.5
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 12
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.8
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.4
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 0.5
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": -0.5
         }
       ],
       "rewards": [
@@ -254,15 +255,15 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "alexsmobsup:centipede_leggings",
-            "count": 1
+            "count": 1,
+            "id": "alexsmobsup:centipede_leggings"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "iceandfire:deathworm_gauntlet_yellow",
-            "count": 1
+            "count": 1,
+            "id": "iceandfire:deathworm_gauntlet_yellow"
           }
         }
       ],
@@ -278,29 +279,29 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
           "value": 9.5
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 12
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.8
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": 0.4
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 3
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": 3.0
         }
       ],
       "rewards": [
@@ -312,22 +313,22 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "minecraft:honey_bottle",
-            "count": 6
+            "count": 6,
+            "id": "minecraft:honey_bottle"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "vinery:mead",
-            "count": 4
+            "count": 4,
+            "id": "vinery:mead"
           }
         },
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "create_deepfried:glow_berry_honey_glazed_donut",
-            "count": 1
+            "count": 1,
+            "id": "create_deepfried:glow_berry_honey_glazed_donut"
           }
         }
       ],
@@ -343,29 +344,29 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.max_health",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 14
+          "attribute": "minecraft:generic.max_health",
+          "operation": "add_multiplied_total",
+          "value": 14.0
         },
         {
-          "attribute": "generic.armor",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.armor",
+          "operation": "add_value",
           "value": 12
         },
         {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADD_VALUE",
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "add_value",
           "value": 0.8
         },
         {
-          "attribute": "generic.movement_speed",
-          "operation": "ADD_MULTIPLIED_TOTAL",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
           "value": -0.4
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "ADD_MULTIPLIED_TOTAL",
-          "value": 0.1
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "add_multiplied_total",
+          "value": -1.0
         }
       ],
       "rewards": [
@@ -377,11 +378,18 @@
         {
           "type": "gateways:stack",
           "stack": {
-            "id": "gateways:gate_pearl",
             "count": 2,
-            "nbt": {
-              "gateway": "createdelightcore:dream_no_more"
+            "id": "gateways:gate_pearl",
+            "components": {
+              "gateways:gateway": "createdelightcore:dream_no_more"
             }
+          }
+        },
+        {
+          "type": "gateways:stack",
+          "stack": {
+            "count": 1,
+            "id": "createdelightcore:pale_steel_needle"
           }
         }
       ],
