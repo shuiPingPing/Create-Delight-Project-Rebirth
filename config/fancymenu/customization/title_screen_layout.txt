@@ -13,10 +13,10 @@ layout-meta {
 }
 
 menu_background {
+  slideshow_name = create_delight
   instance_identifier = 165cb135-8c62-4aa0-9a19-2fc247d2772e-1779076907130
-  background_type = color_fancymenu
+  background_type = slideshow
   show_background = true
-  color = #FF14141E
 }
 
 customization {
