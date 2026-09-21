@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T07:22:42Z",
+  "generatedAt": "2026-09-21T07:37:19Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -453,7 +453,6 @@
       "jei",
       "libbamboo",
       "mcwifipnp",
-      "mezz_config",
       "minemenu",
       "mousetweaks",
       "obscure_tooltips",
@@ -795,10 +794,9 @@
     {
       "side": "client",
       "metadata": "mods/client/jei.pw.toml",
-      "filename": "jei-1.21.1-neoforge-19.57.0.444.jar",
+      "filename": "jei-1.21.1-neoforge-19.27.0.336.jar",
       "modIds": [
-        "jei",
-        "mezz_config"
+        "jei"
       ]
     },
     {

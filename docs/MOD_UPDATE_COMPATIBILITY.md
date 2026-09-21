@@ -38,6 +38,13 @@ Mechanical Spawner 配方同步使用新的 `spawn_fluid_piglin` 流体 ID。
 | `mods/common/farmers-delight.pw.toml` | 新版战利品 codec 将 lootTable 改为 table，导致 Miners Delight / My Nethers Delight 三个战利品扩展失效。 |
 | `mods/common/abnormals-delight.pw.toml` | 新版要求 Farmer’s Delight 1.3.4，随其兼容性锁定保留原版。 |
 | `mods/common/dungeons-delight.pw.toml` | 新版两个战利品扩展使用新的 table 字段，随 Farmer’s Delight 保留原版。 |
+| `mods/client/jei.pw.toml` | **本 fork 特有**：新版 JEI（19.57.0.444）令 aeronautics bundled 内嵌的 `simulated 1.3.0` 的 `silence_jei.ItemStackListFactoryMixin` 注入失败（`InjectionError … 0/1 succeeded. Scanned 0 target(s)`），进游戏后按 E 开背包即崩；锁回 19.27.0.336 |
+
+> 本仓库比上游 main 额外包含 Create Aeronautics 体系（本体 + 33 附属 + Sable/SSRD），
+> 其中 `create-aeronautics-bundled-1.21.1-1.3.0.jar` 以 jarinjar 内嵌 `simulated 1.3.0`。
+> `simulated` 已停止维护（Modrinth 404，功能被 Sable 取代），它与 JEI 的集成 mixin 会随
+> JEI 升级失效且为硬失败，因此 JEI 在 fork 侧一并锁定。解除锁定前需先确认新版
+> aeronautics 是否仍内嵌 `simulated`、或其 JEI 集成方式是否已更换。
 
 Collectors Reap、Mutil、Silent’s Delight、Tetra、Vintage Delight 使用 URL 描述符，没有自动更新源，本次保留原版本。
 
