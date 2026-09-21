@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T09:05:37Z",
+  "generatedAt": "2026-09-21T09:51:24Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -416,6 +416,7 @@
       "certain_questing_additions",
       "chat_heads",
       "colorfulhearts",
+      "colorwheel",
       "commonnetworking",
       "configured",
       "controlling",
@@ -445,7 +446,6 @@
       "imblocker",
       "iris",
       "iris_shader_folder",
-      "irisflw",
       "itemborders",
       "itemphysiclite",
       "jecharacters",
@@ -553,6 +553,14 @@
       "filename": "colorfulhearts-neoforge-1.21.1-10.5.9.jar",
       "modIds": [
         "colorfulhearts"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/colorwheel.pw.toml",
+      "filename": "colorwheel-neoforge-1.2.9+mc1.21.1.jar",
+      "modIds": [
+        "colorwheel"
       ]
     },
     {
@@ -736,15 +744,6 @@
       "filename": "iris_shader_folder-1.4.2-neoforge.jar",
       "modIds": [
         "iris_shader_folder"
-      ]
-    },
-    {
-      "side": "client",
-      "metadata": "mods/client/iris-flywheel-compat.pw.toml",
-      "filename": "iris-flywheel-compat-NeoForge-2.4.0.jar",
-      "modIds": [
-        "flywheel",
-        "irisflw"
       ]
     },
     {

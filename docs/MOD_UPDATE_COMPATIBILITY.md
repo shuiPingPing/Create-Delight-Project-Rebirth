@@ -87,3 +87,23 @@ Collectors Reap、Mutil、Silent’s Delight、Tetra、Vintage Delight 使用 UR
 4 个启动脚本、180 个服务端脚本无加载错误，KubeJS 配方生成无失败；
 与更新前 main 对照，没有新增 ERROR 项或战利品修饰器解码失败。
 已有上游日志问题仍存在；此检查不覆盖客户端完整游玩、旧存档迁移或启用光影后的画面。
+
+## 2026-09-21 客户端光影栈调整（Colorwheel 取代 Iris Flywheel Compat）
+
+按 1.20.1 原包的组合重建光影栈（1.20.1 = Oculus + Colorwheel + Colorwheel Patcher + Euphoria Patcher，
+光影有 Complementary Unbound r5.8.1 / Solas V3.6 / Glimmer v1.5.2 / I Like Vanilla v1.4.1 / Spooklementary / Steadfast）。
+
+| 动作 | 描述符/文件 | 说明 |
+| --- | --- | --- |
+| 新增 | `mods/client/colorwheel.pw.toml` | Colorwheel **1.2.9+mc1.21.1**（Modrinth 项目 `BzHgFoGz`、版本 `Uhs2KYar`，sha1 `33f3f4976755d0b315d3853f2e2aad38e11825c2`）。**URL 描述符、无自动更新源**：bkmpw 0.1.1 未实现 `mode = "metadata:modrinth"`（`install-files` 报 `missing source file for Colorwheel`），而 `add-curseforge` 按 slug 解析需要 CurseForge API key（报 `add-curseforge by slug/url needs [curseforge] api-key or CURSEFORGE_API_KEY`）。写入 `mods/*.pw.toml` 后按仓库约定手工挪到 `mods/client/`。 |
+| 移除 | `mods/client/iris-flywheel-compat.pw.toml` + `iris-flywheel-compat-NeoForge-2.4.0.jar` | Colorwheel 自 0.1.0 起与其 **mixin 冲突**，作者声明 "This won't be fixed"（Colorwheel 项目页 Compatibility 节）。jar 备份于 `_dsh_tmp/removed-mods/`。 |
+| 启用 | `shaderpacks/ComplementaryUnbound_r5.9.3.zip` | `config/iris.properties` 的 `shaderPack=` 指向它（该文件属本地运行状态，不入库）。zip 的 sha1 `2ee08300e1d6f039e63eae8484dddf57b3aaaf67` 与 Modrinth 官方版本一致，与描述符里指向的 CurseForge 文件是同一份。 |
+
+依据：Colorwheel 项目页的“官方支持”名单包含 Complementary Unbound/Reimagined（自 r5.7）、
+Euphoria Patches（自 1.7.0）、Solas（自 v3.2）、Glimmer（v1.5+）、I Like Vanilla（v1.0.3+）、
+Spooklementary（v2.0.3+）、Steadfast —— 1.20.1 原包那一整套都可在 1.21.1 直接复用。
+装上 Colorwheel 后 Create 6 的机械/飞船才会真正接受光影照明与投影；作者另外提示
+Entity Shadows / Block Entity Shadows 在光影里默认常关，需手动打开。
+
+未采纳：Colorwheel `1.3.0-beta3`（新增 `colorwheel:indirect` 后端，Create 密集区约 +30% FPS）——beta 通道，本次不进包，
+待 1.3.0 转正后再评估。
