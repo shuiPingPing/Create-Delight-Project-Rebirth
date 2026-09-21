@@ -121,6 +121,37 @@ devtool.bat
 - 本地改动已经提交或备份。
 - 清理范围只包含可再生成的运行文件。
 
+## 上游同步
+
+本仓库是 `Jasons-impart/Create-Delight-Project-Rebirth` 的 fork。上游会陆续加入新 mod 和内容，需要定期取回：
+
+```powershell
+# 取回上游 main（不要直接 merge 上游的 open PR，见下）
+git -c http.sslBackend=openssl -c http.proxy=http://127.0.0.1:7897 fetch `
+  https://github.com/Jasons-impart/Create-Delight-Project-Rebirth.git main:refs/remotes/upstream/main
+
+git log --oneline origin/main..upstream/main   # 上游有、我们还没有的提交
+git merge upstream/main                        # 冲突通常集中在 mods/**/*.pw.toml 和索引清单
+
+# 合并后必须重跑同步与校验
+devtool.bat install-files
+devtool.bat generate-integrity-manifest
+devtool.bat refresh
+devtool.bat check
+```
+
+上游长期挂着大量他人提交的 open PR（含 `codex/*` 自动分支），多为 WIP、可合并状态为 false。评估单个 PR 时不要直接 merge，按需把其中的 mod 元数据单独挑出来加进本仓库。
+
+推送本仓库：
+
+```powershell
+git -c http.sslBackend=openssl -c http.proxy=http://127.0.0.1:7897 push origin main
+```
+
+> 这两条命令里的 `http.sslBackend=openssl` + `http.proxy=http://127.0.0.1:7897` 是开发机直连 github 不稳定时的实测可用组合；代理地址属于本机环境，换机器需按实际情况调整。首次推送可能需要在真实终端完成一次凭据登录。
+
+游戏运行会重写 `config/` 下部分由 mod 自己维护的配置（新键、新默认值、新分类排序等），这些改动不是人工编辑，确认无手工修改后用 `git restore config/` 清掉再提交，避免把运行时噪音混进提交。
+
 ## KubeJS 开发规范
 
 当前阶段不要直接批量搬运旧仓库 KubeJS。旧仓库是 Forge 1.20.1，新仓库目标是 NeoForge 1.21.1，模组 ID、标签、配方类型、KubeJS API 和配置结构都可能变化。

@@ -9,11 +9,13 @@
 
 ## 未安装模组汇总
 
+> 本表收录旧包（1.20.1）有、1.21.1 需要重新确认的模组；「1.21.1状态」列记录当前结论，写成 `✅ 已装 x.y.z（1.21.1）` 表示该版本已经落地本仓库。
+
 | 序号 | 模组名称 | 文件名 | 版本 | 分类 | 功能说明 | 1.21.1状态 |
 |------|---------|--------|------|------|---------|-----------|
-| 58 | **Create: Metallurgy** | createmetallurgy-1.0.1-1.20.1.jar | 1.0.1 | Create 附属 | 冶金/金属冶炼扩展 | 🔴 等作者更新 |
-| 59 | **Create-Delight-Core** | Create-Delight-Core-1.20.1-2.2.14.jar | 2.2.14 | Create 附属 | 本整合包核心！Create与Farmer's Delight的桥接模组 | ✅ 官方持续更新 |
-| 80 | **Create: Utilities-J** | Create-Utilities-J-1.20.1-0.3.3.jar | 0.3.3 | Create 附属 | 实用工具合集 | ✅ 作者是开发组成员，可向上移植 |
+| 58 | **Create: Metallurgy** | createmetallurgy-1.0.1-1.20.1.jar | 1.0.1 | Create 附属 | 冶金/金属冶炼扩展 | ✅ 已装 1.0.3（1.21.1） |
+| 59 | **Create-Delight-Core** | Create-Delight-Core-1.20.1-2.2.14.jar | 2.2.14 | Create 附属 | 本整合包核心！Create与Farmer's Delight的桥接模组 | ✅ 已装 2.0.0.5（1.21.1，消费上游 release） |
+| 80 | **Create: Utilities-J** | Create-Utilities-J-1.20.1-0.3.3.jar | 0.3.3 | Create 附属 | 实用工具合集 | ✅ 已装 0.3.4（1.21.1） |
 | 88 | **Create: Oppenheimered** | create_oppenheimered-1.0.5.jar | 1.0.5 | Create 附属 | 核弹/爆炸物，致敬奥本海默 | 🔴 仅提供配方，可KubeJS实现 |
 | 90 | **Create: Railways Navigator** | createrailwaysnavigator-forge-1.20.1-alpha-0.9.0-C6+2.jar | 0.9.0 | Create 附属 | 铁路导航系统 | ✅ 有1.21.1 ⚠️可能有性能问题 |
 | 100 | **Cave Delight** | Cave-Delight-1.20.1-2.0.1.jar | 2.0.1 | 农夫乐事 | 洞穴/地下主题食材与食物 | 🔴 确认无1.21.1 |
@@ -26,7 +28,7 @@
 | 126 | **Nether Vinery** | letsdo-nethervinery-forge-1.2.19.jar | 1.2.19 | 农夫乐事 | 下界葡萄酒/葡萄园 (Let's Do系列) | 🔴 确认无1.21.1版本 |
 | 134 | **Extended AE Plus** | extendedae_plus-1.5.3-fix.jar | 1.5.3-fix | AE2/存储 | ExtendedAE的进一步增强 | ✅ 有1.21.1 | 
 | 163 | **Alex's Cave Addon** | alex_cave_addon-5.1.0-1.20.1.jar | 5.1.0 | 生物 | Alex's Caves的附加内容 | 🔴 等待Alex's Caves移植 |
-| 166 | **Youkai's Homecoming** | youkaishomecoming-2.4.16.jar | 2.4.16 | 生物/魔法 | 东方Project主题，妖怪/幻想乡 | ✅ 已添加1.21.1非官方移植版 |
+| 166 | **Youkai's Homecoming** | youkaishomecoming-2.4.16.jar | 2.4.16 | 生物/魔法 | 东方Project主题，妖怪/幻想乡 | ✅ 已装 4.2.1（1.21.1 非官方移植） |
 | 167 | **Youkai's Homecoming Curios** | youkaishomecoming_curios-0.03.jar | 0.03 | 生物/魔法 | 妖怪归宅的Curios兼容 | ✅ 1.21.1非官方移植版含有此功能 |
 | 172 | **Endergetic** | endergetic-1.20.1-5.0.1.jar | 5.0.1 | 生物 | 末地生物群系/生物扩展 (TeamAbnormals) | 🔴 确认无1.21.1版本 |
 | 173 | **Endertrigon** | endertrigon-1.20.1-1.1-all.jar | 1.1 | 生物 | 末影龙战斗改进 | 🔴 确认无1.21.1 |
