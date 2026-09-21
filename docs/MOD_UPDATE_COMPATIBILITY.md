@@ -39,6 +39,21 @@ Mechanical Spawner 配方同步使用新的 `spawn_fluid_piglin` 流体 ID。
 | `mods/common/abnormals-delight.pw.toml` | 新版要求 Farmer’s Delight 1.3.4，随其兼容性锁定保留原版。 |
 | `mods/common/dungeons-delight.pw.toml` | 新版两个战利品扩展使用新的 table 字段，随 Farmer’s Delight 保留原版。 |
 | `mods/client/jei.pw.toml` | **本 fork 特有**：新版 JEI（19.57.0.444）令 aeronautics bundled 内嵌的 `simulated 1.3.0` 的 `silence_jei.ItemStackListFactoryMixin` 注入失败（`InjectionError … 0/1 succeeded. Scanned 0 target(s)`），进游戏后按 E 开背包即崩；锁回 19.27.0.336 |
+| `mods/common/ldlib.pw.toml` | **随 JEI 锁定**：新版 LDlib2 2.2.40 要求 JEI ≥ 19.51.0.417，而本仓库必须锁 JEI 19.27；保留 2.2.27 |
+| `mods/common/polymorph.pw.toml` | 随 JEI 锁定：新版要求 JEI ≥ 19.52.0.421，保留 1.1.0 |
+| `mods/common/ftb-xmod-compat.pw.toml` | 随 JEI 锁定：新版要求 JEI ≥ 19.53.0.425，保留 21.1.8 |
+| `mods/common/sophisticated-core.pw.toml` | 随 JEI 锁定：新版要求 JEI ≥ 19.32.0.359，保留 1.4.36.1833 |
+| `mods/common/sophisticated-backpacks.pw.toml` | 随 Sophisticated Core 保留配对版本 3.25.44.1736 |
+| `mods/common/sophisticated-backpacks-create-integration.pw.toml` | 随 JEI 锁定：新版要求 JEI ≥ 19.32.0.359，保留 0.1.5.29 |
+
+> 上述「随 JEI 锁定」的 6 个描述符与 JEI 是一组：只要 aeronautics 仍内嵌 `simulated 1.3.0`，
+> JEI 就不能升到 19.32+。解除这一组的前提同样是先解决 `simulated` 的 JEI 集成。
+>
+> 另：`mods/common/ssrd.pw.toml`（Separate Sable Render Distance）已移除。上游模组更新后，
+> Drippy 的早期窗口 `DrippyEarlyWindowProvider.updateModuleReads` 再次报
+> `[DRIPPY LOADING SCREEN] Custom loading overlay class missing`（死在模组加载前，
+> 因此不产生 crash 报告，HMCL 报 “Crash reason unknown”）。SSRD 的 “rewrite Sable”
+> 是该崩溃的历史触发条件，故先移除 SSRD 复测；若仍复现，则按 2026-09-20 的办法移除 Drippy。
 
 > 本仓库比上游 main 额外包含 Create Aeronautics 体系（本体 + 33 附属 + Sable/SSRD），
 > 其中 `create-aeronautics-bundled-1.21.1-1.3.0.jar` 以 jarinjar 内嵌 `simulated 1.3.0`。

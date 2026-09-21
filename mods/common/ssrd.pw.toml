@@ -1,8 +1,0 @@
-name = "Separate Sable Render Distance (Create Aeronautics Addon)"
-filename = "SSRD-1.8.6-1.21.1.jar"
-side = "both"
-
-[download]
-url = "https://cdn.modrinth.com/data/fJ183v3D/versions/hZfIK5Wl/SSRD-1.8.6-1.21.1.jar"
-hash-format = "sha1"
-hash = "7823e9f1b6c7c75aaa4d85eafd63f0bbabc86268"
