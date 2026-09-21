@@ -14,7 +14,7 @@ Mechanical Spawner 配方同步使用新的 `spawn_fluid_piglin` 流体 ID。
 | `mods/common/alexs-mobs-up.pw.toml` | 新版 mod ID 从 alexsmobsup 改为 alexsmobs，当前配方/数据未作命名空间迁移 |
 | `mods/common/alexs-caves-up.pw.toml` | 与 Citadel Up 命名空间迁移绑定，当前 Core 强依赖 alexscavesup |
 | `mods/common/citadel-up.pw.toml` | 新版 mod ID 从 citadelup 改为 citadel，当前 Core 强依赖 citadelup |
-| `mods/common/create-delight-core.pw.toml` | 保留 2.0.0.5；Core 升级应与其脚本/API 迁移单独验证。 |
+| `mods/common/create-delight-core.pw.toml` | **2026-09-21 升到 2.0.0.6 后重新锁定**：2.0.0.6 补齐了 mbd2 机器物品（`andesite_import_bus`/`andesite_export_bus`/`butchery_room`/`copper_coil`/`create_in`/`mechanic_grinding_wheel`/`centrifuge_rotor`/`forge_steel_fan`）与 `compat/mbd2` 机器集成，上游 09-20 批次里 12 处配方失败随之消失；仍缺 `forged_steel_ingot`（由 `kubejs/startup_scripts/mods/createdelightcore/content_restore.js` 补回）与 `rolled_polymer_sheet`（源包也没有该 id）。升级后 Core API 仍需单独验证。 |
 | `mods/common/createaddition.pw.toml` | 最新版要求 NeoForge 21.1.248，仓库基线固定 21.1.242；先保留已验证版 |
 | `mods/common/cultural-delights.pw.toml` | 最新版要求 NeoForge 21.1.247，仓库基线固定 21.1.242；先保留已验证版 |
 | `mods/common/uranus.pw.toml` | 最新版要求 NeoForge 21.1.248，仓库基线固定 21.1.242；先保留已验证版 |
