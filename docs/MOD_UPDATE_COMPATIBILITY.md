@@ -56,11 +56,16 @@ Mechanical Spawner 配方同步使用新的 `spawn_fluid_piglin` 流体 ID。
 > 上述「随 JEI 锁定」的 6 个描述符与 JEI 是一组：只要 aeronautics 仍内嵌 `simulated 1.3.0`，
 > JEI 就不能升到 19.32+。解除这一组的前提同样是先解决 `simulated` 的 JEI 集成。
 >
-> 另：`mods/common/ssrd.pw.toml`（Separate Sable Render Distance）已移除。上游模组更新后，
-> Drippy 的早期窗口 `DrippyEarlyWindowProvider.updateModuleReads` 再次报
-> `[DRIPPY LOADING SCREEN] Custom loading overlay class missing`（死在模组加载前，
-> 因此不产生 crash 报告，HMCL 报 “Crash reason unknown”）。SSRD 的 “rewrite Sable”
-> 是该崩溃的历史触发条件，故先移除 SSRD 复测；若仍复现，则按 2026-09-20 的办法移除 Drippy。
+> 另：`mods/common/ssrd.pw.toml`（Separate Sable Render Distance）**已于同日装回并实测通过**。
+> 上游模组更新后 Drippy 的早期窗口曾再次报 `[DRIPPY LOADING SCREEN] Custom loading overlay
+> class missing`（死在模组加载前，因此不产生 crash 报告，HMCL 报 “Crash reason unknown”），
+> 当时先移除 SSRD 复测通过；随后在一整轮修复（JEI 锁 19.27、CDC 升 2.0.0.6、Carry On 回退
+> 2.2.4.4、6 个 JEI 关联模组回退）之后重装 SSRD，2026-09-21 17:00 实机确认
+> **Drippy 3.1.5 + SSRD 1.8.6 共存、加载屏正常**
+> （日志：`Loading ImmediateWindowProvider drippy_early_window` + `SSRD: Initialized v1.8.6`）。
+>
+> **结论订正**：SSRD×Drippy 的崩溃是**环境相关**的（与该会话早先「SSRD 是触发条件之一、
+> 非充分条件」的判断一致），**不是稳定的二选一**。将来若再复现，按「先撤 SSRD 复测」的顺序排查。
 
 > 本仓库比上游 main 额外包含 Create Aeronautics 体系（本体 + 33 附属 + Sable/SSRD），
 > 其中 `create-aeronautics-bundled-1.21.1-1.3.0.jar` 以 jarinjar 内嵌 `simulated 1.3.0`。

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T08:37:13Z",
+  "generatedAt": "2026-09-21T09:05:37Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -367,6 +367,7 @@
       "soul_fire_d",
       "spark",
       "spectrelib",
+      "ssrd",
       "stickywheels",
       "supermartijn642configlib",
       "supermartijn642corelib",
@@ -3165,6 +3166,14 @@
       "filename": "spark-1.10.124-neoforge.jar",
       "modIds": [
         "spark"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/ssrd.pw.toml",
+      "filename": "SSRD-1.8.6-1.21.1.jar",
+      "modIds": [
+        "ssrd"
       ]
     },
     {
