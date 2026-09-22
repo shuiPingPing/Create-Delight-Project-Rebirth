@@ -1,27 +1,64 @@
-* text=auto
+# 统一换行策略：文本文件一律 LF 入库、LF 检出，不依赖本机 core.autocrlf 设置。
+# 避免游戏/工具重写配置文件、或跨平台协作时产生"纯换行符"的假改动。
+# 说明：游戏（FTB Quests、各 mod）在 Windows 上会用 CRLF 重写 config/*.toml、*.snbt，
+# 这属于工作区状态；git 比较时按本文件的规则归一化，因此不会产生 diff，也不会污染提交。
+* text=auto eol=lf
 
+# Windows 脚本保持 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# 显式声明常见文本类型（便于审阅，行为与上面的通配一致）
 .gitattributes text eol=lf
 .gitignore text eol=lf
 .prettierignore text eol=lf
+.prettierrc text eol=lf
 .packwizignore text eol=lf
+LICENSE text eol=lf
+.husky/* text eol=lf
 *.sh text eol=lf
-*.bat text eol=crlf
-*.ps1 text eol=crlf
 *.toml text eol=lf
 *.json text eol=lf
 *.json5 text eol=lf
+*.mcmeta text eol=lf
 *.cfg text eol=lf
 *.cfg.txt text eol=lf
 *.snbt text eol=lf
 *.js text eol=lf
+*.mjs text eol=lf
+*.ts text eol=lf
 *.md text eol=lf
-.husky/* text eol=lf
+*.txt text eol=lf
+*.ini text eol=lf
+*.properties text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.lewidget text eol=lf
+*.db text eol=lf
+version text eol=lf
+.packwizignore text eol=lf
 
+# 二进制文件不做任何换行转换
 *.png binary
+*.apng binary
+*.gif binary
 *.jpg binary
 *.jpeg binary
+*.webp binary
+*.icns binary
+*.ico binary
 *.ogg binary
+*.mp3 binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
 *.nbt binary
+*.dat binary
 *.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
 *.jar binary
 *.zip binary

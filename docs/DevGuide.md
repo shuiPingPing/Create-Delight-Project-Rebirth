@@ -333,6 +333,16 @@ ServerEvents.recipes((event) => {
 - 客户端或通用配置放 `config/`，但要确认是否适合团队共享。
 - FancyMenu 的窗口标题、窗口图标等全局显示项在 `config/fancymenu/options.txt` 中维护；主菜单布局和图片资源分别在 `config/fancymenu/customization/` 与 `config/fancymenu/assets/` 中维护。
 
+## 换行策略（.gitattributes）
+
+- 统一策略：**文本文件一律 LF 入库、LF 检出**，由根 `.gitattributes` 的 `* text=auto eol=lf` 决定，**不依赖本机 `core.autocrlf`**。
+- 例外：`*.bat` / `*.cmd` / `*.ps1` 保持 CRLF；图片、压缩包、NBT、字体等二进制类型显式声明 `binary`，不做任何转换。
+- 在 Windows 上运行游戏时，FTB Quests 与各 mod 会用 CRLF 重写 `config/*.toml`、`config/ftbquests/**/*.snbt` 等文件。
+  **这是工作区状态，不是改动**：git 比较时按上面的属性归一化，因此不会出现在 `git status` / `git diff` 里，也不会污染提交。
+- `git add` 时出现 `CRLF will be replaced by LF the next time Git touches it` 属**预期提示**（工作区 CRLF、入库 LF），无需处理。
+- 若 `git status` 突然出现整片"只改换行"的 `M`，先 `git add -u` 刷新索引 stat 缓存再判断，不要直接提交。
+- 新增文本类型时在 `.gitattributes` 补 `*.ext text eol=lf`；二进制类型补 `*.ext binary`。
+
 ## 启动脚本
 
 服务端启动模板：
