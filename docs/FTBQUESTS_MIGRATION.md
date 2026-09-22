@@ -120,3 +120,27 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
   → 已统一替换为 FTB Quests 自带的占位物品 **`ftbquests:missing_item`**（显示为明确的"缺失"图标，而不是破图）。
 > **2026-09-22 更新**：不只是本地停用——已**从整合包移除其描述符**（`mods/client/certain-questing-additions.pw.toml` 删除，完整性清单重生成：client 73→72），
 > 否则新装玩家仍会加载到它、一开任务书即崩，与"任务书可打开游玩"的目标直接冲突。移除理由与恢复方式见 `docs/MOD_UPDATE_COMPATIBILITY.md` 同名小节。
+## 十、迁移后置修正（重要：脚本一次跑完 ≠ 最终结果）
+
+`scripts/migrate-ftbquests.mjs` 是**第一遍**（复制 + 改名 + 类型转换 + 缺失清理）。以下三项是其后的人工复核修正，**如果将来重跑脚本，需要按本节再补一遍**：
+
+| # | 修正 | 数量 | 做法 |
+|---|---|---|---|
+| 1 | `data.snbt` 合并 1.21.1 新增顶层键 | 3 个键 | 从游戏在 1.21.1 下重写过的 shell 版（`_dsh_tmp/ftbquests-pre-migration/data.snbt`）取 `fallback_locale` / `presets` / `verify_on_load` 插入（见 §八） |
+| 2 | 失效物品图标兜底 | 8 处 | 保留 quest 里 `icon:` 指向 1.21.1 不存在物品的 → 统一改 `ftbquests:missing_item`（见 §九） |
+| 3 | **advancement 路径前缀修正** | **28 处** | 见下 |
+
+### 第 3 项细节（本次最容易被忽略的错误）
+
+`alexsmobsup-0.2.8.jar` 里的 advancement 实际 id 是 **`alexsmobsup:alexsmobsup/<名字>`**
+（jar 内 106 个 `data/alexsmobsup/advancement/alexsmobsup/*.json` ✓），而 1.20.1 任务书里写的是 `alexsmobs:alexsmobs/<名字>`——
+即**命名空间和路径前缀都要改**。只做命名空间改名会得到 `alexsmobsup:alexsmobs/root`（不存在）→ 这些任务将**永远无法完成**。
+修正后：`alexsmobsup:alexsmobsup/root` 等 28 处全部能在 jar 的 advancement 集合里解析到 ✓（`Animal_Companions.snbt`）。
+
+**校验 advancement 的正确姿势**（本次实现）：
+1. 扫所有 `mods/*.jar` **以及原版 `1.21.1.jar`** 的 `data/<ns>/advancement(s)/**/*.json` 建集合（本次共 15772 条；**漏掉原版 jar 会把 `minecraft:adventure/kill_a_mob` 之类误判为缺失**）；
+2. 逐条比对任务书里的 `advancement:`；不在集合里时，尝试候选 `NS:NS/<path 去掉首段>`、`NS:NS/<path>`；
+3. 命中则改写；仍不命中则记录为"未验证、保守保留"。
+
+**剩余 5 处未验证**（保留不删）：`northstar:one_small_step`×2 / `northstar:one_giant_leap`×1、`create_enchantment_industry:additional_order` / `first_order` 各 1
+——这些 mod 的 advancement 未随 jar 提供（运行时生成或已被移除）；若实机发现任务无法完成，再按具体情况处理。

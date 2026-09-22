@@ -16,7 +16,7 @@
 			size: 3.0d
 			subtitle: " Alex mob's最受欢迎的生物模组之一"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/root"
+				advancement: "alexsmobsup:alexsmobsup/root"
 				criterion: ""
 				icon: "alexsmobsup:animal_dictionary"
 				id: "443BF498DB0DC050"
@@ -239,7 +239,7 @@
 			subtitle: "我为什么要繁殖这玩意!因为可以开迪厅!"
 			tasks: [
 				{
-					advancement: "alexsmobsup:alexsmobs/la_cucaracha"
+					advancement: "alexsmobsup:alexsmobsup/la_cucaracha"
 					criterion: ""
 					id: "6097DF291FDF50D7"
 					title: "一群蟑螂开的迪厅"
@@ -277,7 +277,7 @@
 			}]
 			subtitle: "“挥拳挥到极致，摩擦升温到燃点，这就是我的致胜法宝。”  一一螳螂虾如是说道"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/tame_mantis_shrimp"
+				advancement: "alexsmobsup:alexsmobsup/tame_mantis_shrimp"
 				criterion: ""
 				id: "1EE8325CF046A4A1"
 				title: "驯服一只螳螂虾"
@@ -298,7 +298,7 @@
 			}]
 			subtitle: "“想要在陆地上饲养它们也不难，找个水桶给它就行。”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/mantis_shrimp_bucket"
+				advancement: "alexsmobsup:alexsmobsup/mantis_shrimp_bucket"
 				criterion: ""
 				id: "3022698C57543B0A"
 				title: "一把水"
@@ -356,7 +356,7 @@
 			id: "495DDB24D781F836"
 			subtitle: "“当时有个家伙一脚踩蚂蚁窝上面去了，导致整个队伍遭遇了大群蚂蚁的围攻。”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/stomp_leafcutter_anthill"
+				advancement: "alexsmobsup:alexsmobsup/stomp_leafcutter_anthill"
 				criterion: ""
 				id: "251DBB51F083D318"
 				title: "蚂蚁终结者"
@@ -378,7 +378,7 @@
 			id: "279AA1CC6987C65C"
 			subtitle: "“特别是从蚂蚁洞中掏出来的这种真菌类食物，味道鲜美无比，同时有丰富的营养价值，不过狩猎野外切叶蚁是一件比较麻烦的事情。“"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/gongylidia"
+				advancement: "alexsmobsup:alexsmobsup/gongylidia"
 				criterion: ""
 				id: "5EC34C6B01FF8506"
 				title: "就像一块沾了蚂蚁的松露"
@@ -397,7 +397,7 @@
 			id: "1BB0B8F4B9E12E13"
 			subtitle: "蛹，应该就是孵育这种特殊蚂蚁的关键。”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/leafcutter_ant_pupa"
+				advancement: "alexsmobsup:alexsmobsup/leafcutter_ant_pupa"
 				criterion: ""
 				id: "3CBC9DF85276CBEE"
 				title: "蚁场"
@@ -424,7 +424,7 @@
 			id: "1D36D13A35180A3E"
 			subtitle: "“这个生物是中立生物，所以平常只要不惹他就不必太怕他”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/tarantula_hawk"
+				advancement: "alexsmobsup:alexsmobsup/tarantula_hawk"
 				criterion: ""
 				id: "38CA26DA01C088D7"
 				title: "遇见一只沙漠蛛蜂"
@@ -449,7 +449,7 @@
 			id: "1DE8606EE07B72B2"
 			subtitle: "“没想到它居然可以驯服”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/tame_tarantula_hawk"
+				advancement: "alexsmobsup:alexsmobsup/tame_tarantula_hawk"
 				criterion: ""
 				id: "7E51741312EAB0AF"
 				title: "驯服一只沙漠蛛蜂"
@@ -727,7 +727,7 @@
 			id: "252F78F22BBA6748"
 			subtitle: "吼！！！"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/tame_gorilla"
+				advancement: "alexsmobsup:alexsmobsup/tame_gorilla"
 				criterion: ""
 				id: "465ECE066E6F6AE0"
 				title: "驯服一只大猩猩"
@@ -776,7 +776,7 @@
 			invisible_until_tasks: 1
 			subtitle: "“国服ADC”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/tame_capuchin"
+				advancement: "alexsmobsup:alexsmobsup/tame_capuchin"
 				criterion: ""
 				id: "031595708F4164FB"
 				title: "驯服一只卷尾猴"
@@ -911,14 +911,14 @@
 			subtitle: "“大象尤其喜欢金合欢花，如果你能给它们吃这种珍馐的话它们或许愿意和你成为朋友。”“长着长牙的大象似乎很有个性的样子，即便是金合欢花也不能讨他们的欢心。”"
 			tasks: [
 				{
-					advancement: "alexsmobsup:alexsmobs/tame_elephant"
+					advancement: "alexsmobsup:alexsmobsup/tame_elephant"
 					criterion: ""
 					id: "12C6E4FB4E52A36E"
 					title: "驯服无牙大象"
 					type: "advancement"
 				}
 				{
-					advancement: "alexsmobsup:alexsmobs/tame_elephant_tusked"
+					advancement: "alexsmobsup:alexsmobsup/tame_elephant_tusked"
 					criterion: ""
 					id: "30A25B597D5CB5BE"
 					title: "驯服长着象牙的大象"
@@ -939,7 +939,7 @@
 			id: "0FC8BFDE2C473840"
 			subtitle: "“在古时候，分布于热带草原地区的聚落和国度会驯养大象作为坐骑或驮兽”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/elephant_swag"
+				advancement: "alexsmobsup:alexsmobsup/elephant_swag"
 				criterion: ""
 				id: "492A5ABFBB7523BE"
 				title: "盛装打扮"
@@ -1036,7 +1036,7 @@
 			]
 			id: "4638A0A6517DD591"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/kangaroo"
+				advancement: "alexsmobsup:alexsmobsup/kangaroo"
 				criterion: ""
 				id: "2699D27E3ADD295B"
 				title: "攻击小袋鼠"
@@ -1142,7 +1142,7 @@
 			id: "2038EA092FA0866A"
 			subtitle: "“真正的丛林之王，大自然在陆地上的杰作。”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/tigers_blessing"
+				advancement: "alexsmobsup:alexsmobsup/tigers_blessing"
 				criterion: ""
 				id: "272CCF7459FCB77D"
 				title: "虎视眈眈"
@@ -1193,7 +1193,7 @@
 			id: "570C5C561EF72C08"
 			subtitle: "“食蚁兽阿姨”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/breed_anteater"
+				advancement: "alexsmobsup:alexsmobsup/breed_anteater"
 				criterion: ""
 				id: "2C9C3E14102D8117"
 				title: "繁殖食蚁兽"
@@ -1220,7 +1220,7 @@
 			id: "391BB239A590E550"
 			subtitle: "“唯一可惜就是不能驯服”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/maned_wolf_apple"
+				advancement: "alexsmobsup:alexsmobsup/maned_wolf_apple"
 				criterion: ""
 				id: "5FF5CD05849D7050"
 				title: "驯服一只鬃狼"
@@ -1361,7 +1361,7 @@
 			id: "4FF63C846511501E"
 			subtitle: "“平原上的霉景”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/bison_spyglass"
+				advancement: "alexsmobsup:alexsmobsup/bison_spyglass"
 				criterion: ""
 				id: "334118673EF20472"
 				title: "平原上的美景"
@@ -1433,7 +1433,7 @@
 			id: "7454F22C77A7885B"
 			subtitle: "“这个屁威力无穷”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/skunk"
+				advancement: "alexsmobsup:alexsmobsup/skunk"
 				criterion: ""
 				id: "411B491992EA9948"
 				title: "嬉皮士的气味"
@@ -1453,7 +1453,7 @@
 			}]
 			subtitle: "“也许我应该给探索森林的先遣队配给一些祛邪肥皂。”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/stink_bottle"
+				advancement: "alexsmobsup:alexsmobsup/stink_bottle"
 				criterion: ""
 				id: "1059EE3CF5FC3FC7"
 				title: "臭鼬牌沐浴露"
@@ -1480,7 +1480,7 @@
 			id: "0761CA25B3C69985"
 			subtitle: "“它们和海豚一样是你在海洋旅行时最好的伙伴。”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/orcas_might"
+				advancement: "alexsmobsup:alexsmobsup/orcas_might"
 				criterion: ""
 				id: "0F842D80E3F7C09E"
 				title: "发现一群虎鲸"
@@ -1579,7 +1579,7 @@
 			]
 			id: "7B65475E3465CD6D"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/save_cachalot_whale"
+				advancement: "alexsmobsup:alexsmobsup/save_cachalot_whale"
 				criterion: ""
 				id: "32DFF334920BEFF8"
 				title: "拯救鲸鱼！"
@@ -2228,7 +2228,7 @@
 			}]
 			subtitle: "当玩家操控白头海雕击杀了100个方块以外的任何生物，会完成进度[致命一击]。（渲染距离需要调高到16个区块以上）"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/bald_eagle_challenge"
+				advancement: "alexsmobsup:alexsmobsup/bald_eagle_challenge"
 				criterion: ""
 				id: "21AEB1C2D9472EE1"
 				title: "致命一击"
@@ -2442,7 +2442,7 @@
 			}]
 			subtitle: "“不过鳄鱼是很亲母的生物，如果它在出生时第一眼看见的家伙是你，那么这只小鳄鱼崽就会‘认贼做母’。”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/breed_crocodile"
+				advancement: "alexsmobsup:alexsmobsup/breed_crocodile"
 				criterion: ""
 				id: "652579936E361641"
 				title: "繁殖鳄鱼"
@@ -2754,7 +2754,7 @@
 			}]
 			subtitle: "“如果想要杀死它来获得力量的话，简直是自掘焚墓！”“何尝不友好相处呢？”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/sunbird_blessing"
+				advancement: "alexsmobsup:alexsmobsup/sunbird_blessing"
 				criterion: ""
 				id: "34196DA460416746"
 				title: "耀阳之力"
@@ -3321,7 +3321,7 @@
 			id: "3E540298ED0A5EF7"
 			subtitle: "“鬼鬼，旷工旷工”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/ghostly_pickaxe"
+				advancement: "alexsmobsup:alexsmobsup/ghostly_pickaxe"
 				criterion: ""
 				id: "1A3A0D8706FD209D"
 				title: "有鬼？"
@@ -3843,7 +3843,7 @@
 			}]
 			subtitle: "“望远镜下的巨兽”"
 			tasks: [{
-				advancement: "alexsmobsup:alexsmobs/laviathan_spyglass"
+				advancement: "alexsmobsup:alexsmobsup/laviathan_spyglass"
 				criterion: ""
 				id: "38CEB8B62BFBF56C"
 				title: "熔岩湖巨兽"
