@@ -144,3 +144,14 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 
 **剩余 5 处未验证**（保留不删）：`northstar:one_small_step`×2 / `northstar:one_giant_leap`×1、`create_enchantment_industry:additional_order` / `first_order` 各 1
 ——这些 mod 的 advancement 未随 jar 提供（运行时生成或已被移除）；若实机发现任务无法完成，再按具体情况处理。
+## 十一、验收对照（2026-09-22）
+
+- **quest 数精确对上**：源包（CDR1201）按 `tasks:` 数组计 **2509** 个 quest，迁移删除 **124** → 迁移后 **2385**（2509 − 124 = 2385 ✓）。
+  这同时反证了"删除 124 个 quest"的口径正确。章节分布（前 5）：Mouse_Chef 242、Animal_Companions 183、Tetra_Armor_Curios 172、
+  Difficulty_System 109、Tetra_Weapons 100；**空章节 0**。
+- **客户端崩溃面已清空**：全库扫描 363 个 jar，确认**除 ftb-quests 本体外没有任何 mod 注入 `dev/ftb/mods/ftbquests`** →
+  移除 `certain_questing_additions` 之后，打开任务书不存在"mixin 硬失败"来源。
+- **实机验收基准**（启动后日志应为）：
+  `[FTB Quests/]: Loaded 6 chapter groups, 41 chapters, 2385 quests, 32 reward tables`（迁移前为 `1 / 1 / 0 / 0`），且不得出现
+  `Failed to parse` / `Unknown task type` / `Missing quest dependency` 之类报错。
+- 验收通过后收尾动作：把 `data.snbt` 的 `verify_on_load` 改回 `false`。
