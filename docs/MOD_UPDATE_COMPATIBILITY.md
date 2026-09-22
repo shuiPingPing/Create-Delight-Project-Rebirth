@@ -118,3 +118,15 @@ Entity Shadows / Block Entity Shadows 在光影里默认常关，需手动打开
 
 另：同日已**合并上游 `7c577d3`**（`chore(config): 同步 c2me 生成的默认值注释`，只动 `config/c2me.toml` 3 行注释），
 合并提交 `f833a26`；上游自 `2709bc7` 之后仅此一条提交。`euphoria-patcher.pw.toml` 与 `colorwheel.pw.toml` 一样是**本 fork 独有**（上游无 Colorwheel、无 Euphoria Patcher）。
+
+## 2026-09-22 Northstar 本地补丁：修「开光影后两个太阳」
+
+**现象**：Iris 1.8.14-beta.1 + `ComplementaryUnbound_r5.9.3`（含 EuphoriaPatches_1.10.5）+ Northstar 0.6.1 时天空同时出现两个太阳——圆盘＝光影自绘，方块＝原版 `sun.png`（可被方块正常遮挡、下界没有、跑远 8000 格依旧）。光影包已声明 `sun=false` / `moon=false`（用户选项文件 `shaderpacks/ComplementaryUnbound_r5.9.3 + EuphoriaPatches_1.10.5.txt` 里 `SUN_MOON_STYLE_DEFINE=2`，条件成立），**Iris 本该关掉原版太阳却失效**。
+
+**根因**：`Northstar-0.6.1+1.21.1.jar :: com/lightning/northstar/mixin/client/LevelRendererMixin` 用 `@ModifyExpressionValue` 包住 `LevelRenderer.renderSky` 里的 `SUN_LOCATION` / `MOON_LOCATION`（`northstar$disableVanillaSunAndMoon` 等），与 Iris 的 `MixinLevelRenderer_SunMoonToggle`（同一 `renderSky`、同一对常量）**抢同一注入点**，使 Iris 的取消失效。与 Sable / Colorwheel / Flywheel / Euphoria Patches / EclipticSeasons / 子结构**均无关**（各自已单独排除）。
+
+**处置（本 fork 有意改动上游 mod jar）**：`scripts/patch-northstar-sun.ps1` —— 从 jar 内 `northstar.mixins.json` 删除 `"client.LevelRendererMixin"` 一项（jar 条目数 4869 不变、文件名不变 → mod 集合不变，避免触发已知的 Drippy 早窗崩溃）。原版 jar 存于 `mods/.northstar-original/`。
+
+- ⚠️ **`devtool install-files` / `check` 会按描述符 hash 把原版 jar 覆盖回来**，之后需重跑脚本（脚本幂等，已打过补丁会直接退出）。
+- 已验证：对 `Northstar-0.6.1+1.21.1.jar` 打补丁成功、二次运行识别为已打补丁。
+- 该 mixin **无配置开关**，Northstar 也**不能升级**（新版 `TelescopeScreen` 与 Core 客户端 mixin 不兼容）→ 只能靠补丁，故本项需在下次合并/升级 Northstar 时保留。
