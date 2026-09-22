@@ -267,5 +267,8 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 ### 13.3 任务数据已被游戏回写（工作区 vs HEAD）
 - FTB Quests 加载后会把所有章节文件按自己的序列化规则重写：字段按字母序、省略默认值、`filename` 用小写（文件名随之从
   `Mouse_Chef.snbt` 变为 `mouse_chef.snbt`，Windows 下 git 视作同一路径的 M）、无效图标转 `missing_item`、并新生成 `lang/en_us.snbt`。
-- 因此 `git status` 里 80 个任务书文件全是 `M` —— **这是运行期状态，不是迁移产物**；提交与否由人工决定（提交 = 采纳游戏口径）。
-- 重跑复现测试（§十一 Round 6）比的是 **HEAD 版本之间**，不受工作区回写影响。
+- 因此 `git status` 里 80 个任务书文件全是 `M` —— **这是运行期状态，不是迁移产物**。
+  **2026-09-22 晚决定：提交采纳**（`a17626f chore(quests): 采纳 FTB Quests 2101 的序列化结果` 75 个 snbt + `lang/en_us.snbt`；
+  `3143d9d chore(config): 同步各 mod 运行期归一化后的配置` 35 个文件）→ 工作区归零，之后启动的回写即幂等。
+- 重跑复现测试（§十一 Round 6）比的是 **HEAD 版本之间**，不受工作区回写影响；本次提交后 HEAD 已含游戏口径，
+  若要重跑该测试须以迁移产物那批提交（`91fdd5b`/`b369490`）为基准。
