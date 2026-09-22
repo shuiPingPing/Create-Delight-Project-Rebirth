@@ -155,3 +155,12 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
   `[FTB Quests/]: Loaded 6 chapter groups, 41 chapters, 2385 quests, 32 reward tables`（迁移前为 `1 / 1 / 0 / 0`），且不得出现
   `Failed to parse` / `Unknown task type` / `Missing quest dependency` 之类报错。
 - 验收通过后收尾动作：把 `data.snbt` 的 `verify_on_load` 改回 `false`。
+### 复现测试结论（2026-09-22，Round 6）
+
+把"已验收状态"整目录做 SHA256 快照 → 重跑 `migrate-ftbquests.mjs` → 按 §八/§九/§十 重放后置修正 → 与快照逐文件比对：
+
+- 首轮差 **1 个文件**（`chapters/Settings.snbt`）：原因是我重放时把"② 缺失物品图标 → `ftbquests:missing_item`"做在了"① `itemfilters:*` 图标 → `ftbfiltersystem:smart_filter`"**之前**，
+  于是那两个 `itemfilters:` 图标被通用规则一起吞成 `missing_item`。
+- **顺序修正后：80 个文件 SHA256 全部一致** ✓ —— 证明"脚本 + §八/§九/§十"可完整复现该迁移。
+
+> 因此 §十 第 2 项的正确顺序是：**先**把 `icon:` 里的 `itemfilters:*` 改成 `ftbfiltersystem:smart_filter`（§二），**再**把其余指向不存在物品的图标改成 `ftbquests:missing_item`。
