@@ -12,8 +12,6 @@
 	EnableInform = true
 	#Include a custom icon in the change notification for better visibility.
 	EnableInformIcon = true
-	#Synchronize the in-game calendar and seasonal data with the server/client local time.
-	EnableLocalInfoAndCalendar = true
 	#Show a tooltip or message if a calendar item cannot be placed in the current location.
 	CalendarItemHint = false
 	#Adjust daylight duration based on the time of year (longer in Summer, shorter in Winter).
@@ -43,6 +41,8 @@
 	# Default: 2
 	# Range: -64 ~ 64
 	DayOffset = 2
+	#Displays local seasonal and calendar information based on the agricultural climate zone of the current biome. Different regions may show different seasonal progress.
+	BiomeBasedLocalCalendar = false
 
 [Weather]
 	#Enable localized weather patterns where rain or sun is determined per-biome.
@@ -96,10 +96,6 @@
 	BoneMealFailureMessage = true
 	#Consume the bone meal item even if the growth attempt fails.
 	BoneMealConsumeOnFailure = true
-	#The horizontal detection radius for the Greenhouse.
-	# Default: 32
-	# Range: 5 ~ 256
-	GreenHouseMaxDiameter = 32
 	#The vertical detection height for the Greenhouse.
 	# Default: 10
 	# Range: 3 ~ 128
@@ -116,16 +112,10 @@
 	# Default: 15
 	# Range: 4 ~ 31
 	SeasonCoreRange = 15
-	#Enables more precise shape detection for greenhouse structures.
-	ComplexGreenHouseCheck = true
-	#Use Manhattan distance (square) instead of Euclidean (circle) for greenhouse range.
-	UseBoxDistance = true
 	#[Deprecated] Use default seasonal/humidity values for unregistered crops.
 	RegisterCropDefaultValue = false
 	#Force all plants to follow growth rules, even those without specific mod tags.
 	ForceCompatMode = false
-	#Apply patch withering code for crop leave blocks if tick failed.
-	CropLeavesPatch = true
 	#Saves local humidity data to chunk files for persistent tracking.
 	SaveChunkEnvironmentalHumidity = true
 	#Adjusts the power of the Seasonal Prayer Ritual. Higher values result in lower bonuses.
@@ -146,6 +136,17 @@
 	# Default: 4.5
 	# Range: 2.0 ~ 16.0
 	HumidityTankRange = 4.5
+	#The horizontal detection radius for the Greenhouse.
+	# Default: 32
+	# Range: 5 ~ 256
+	GreenHouseMaxRadius = 32
+	#Adjusts the greenhouse structure detection mode. Higher accuracy modes check more directions, while top-only mode only requires overhead coverage.
+	#Allowed Values: FULL, BASIC, TOP_ONLY
+	GreenHouseCheckMode = "FULL"
+	#Use Manhattan distance (square) instead of Euclidean (circle) for greenhouse range.
+	UseSquareGreenHouseRange = true
+	#Apply patch withering code for crop leave blocks if tick failed.
+	ForceCompatCropLeafWithering = true
 
 [Animal]
 	#Limit animal breeding to their natural, compatible seasons.
@@ -237,11 +238,16 @@
 	DisableIceOrSnowCauldron = false
 
 [Resource]
-	#Synchronizes the snowfall schedule for all Overworld biomes.
-	SnowTogether = false
-	#Aligns snowfall schedules based on three broad climate zones (Warm, Temperate, and Cold) instead of per-biome.
-	RegionalSnowTime = true
 	#Enforces original Vanilla temperature and precipitation settings to prevent other mods from creating extreme environmental values.
 	VanillaBiomeClimateSettings = true
 	#When enabled, rivers are no longer treated as ignored climate zones. This reduces performance overhead but may result in less natural weather transitions near riverbanks.
 	IndependentRiverWeather = true
+	#Synchronizes the snowfall schedule for all Overworld biomes.
+	SynchronizedBiomeSnowfall = false
+	#Aligns snowfall schedules based on three broad climate zones (Warm, Temperate, and Cold) instead of per-biome.
+	ClimateZoneSnowfallTiming = true
+
+[Core]
+	#Controls the intensity of seasonal simulation.
+	#Allowed Values: ENVIRONMENT, ECOLOGY, AGRICULTURE, SURVIVAL, CUSTOM
+	SeasonalSimulationLevel = "AGRICULTURE"
