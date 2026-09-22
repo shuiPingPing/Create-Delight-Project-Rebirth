@@ -96,6 +96,7 @@ Collectors Reap、Mutil、Silent’s Delight、Tetra、Vintage Delight 使用 UR
 | 动作 | 描述符/文件 | 说明 |
 | --- | --- | --- |
 | 新增 | `mods/client/colorwheel.pw.toml` | Colorwheel **1.2.9+mc1.21.1**（Modrinth 项目 `BzHgFoGz`、版本 `Uhs2KYar`，sha1 `33f3f4976755d0b315d3853f2e2aad38e11825c2`）。**URL 描述符、无自动更新源**：bkmpw 0.1.1 未实现 `mode = "metadata:modrinth"`（`install-files` 报 `missing source file for Colorwheel`），而 `add-curseforge` 按 slug 解析需要 CurseForge API key（报 `add-curseforge by slug/url needs [curseforge] api-key or CURSEFORGE_API_KEY`）。写入 `mods/*.pw.toml` 后按仓库约定手工挪到 `mods/client/`。 |
+| 新增 | `mods/client/euphoria-patcher.pw.toml` | **Euphoria Patches 1.10.5-r5.9.3**（Modrinth 项目 `4H6sumDB`、版本 `QMsRXtSJ`，sha1 `2b3f92878d6867fa0199937da25ba882b9db7902`，URL 描述符）。**版本号里的 `-r5.9.3` 必须与 `shaderpacks/ComplementaryUnbound_r5.9.3.zip` 对齐**：Euphoria Patcher 会把 Complementary 打成 `ComplementaryUnbound_r5.9.3 + EuphoriaPatches_1.10.5` 的文件夹版（1.20.1 当时用的是 `r5.8.1 + EuphoriaPatches_1.9.3`），机械吃光影的 `clrwl_*` 集成文件在打补丁后依然在内。 |
 | 移除 | `mods/client/iris-flywheel-compat.pw.toml` + `iris-flywheel-compat-NeoForge-2.4.0.jar` | Colorwheel 自 0.1.0 起与其 **mixin 冲突**，作者声明 "This won't be fixed"（Colorwheel 项目页 Compatibility 节）。jar 备份于 `_dsh_tmp/removed-mods/`。 |
 | 启用 | `shaderpacks/ComplementaryUnbound_r5.9.3.zip` | `config/iris.properties` 的 `shaderPack=` 指向它（该文件属本地运行状态，不入库）。zip 的 sha1 `2ee08300e1d6f039e63eae8484dddf57b3aaaf67` 与 Modrinth 官方版本一致，与描述符里指向的 CurseForge 文件是同一份。 |
 
@@ -114,3 +115,6 @@ Entity Shadows / Block Entity Shadows 在光影里默认常关，需手动打开
 - 上游**未改动**该文件时，合并会保留我们的删除，无冲突；
 - 上游**改动/升级**了它时会出现 **modify/delete 冲突** —— 处置为**保留删除**（与 Colorwheel 的 mixin 冲突无解）；
 - `mods/client/colorwheel.pw.toml` 是**本 fork 独有**，合并时不会被上游覆盖。
+
+另：同日已**合并上游 `7c577d3`**（`chore(config): 同步 c2me 生成的默认值注释`，只动 `config/c2me.toml` 3 行注释），
+合并提交 `f833a26`；上游自 `2709bc7` 之后仅此一条提交。`euphoria-patcher.pw.toml` 与 `colorwheel.pw.toml` 一样是**本 fork 独有**（上游无 Colorwheel、无 Euphoria Patcher）。

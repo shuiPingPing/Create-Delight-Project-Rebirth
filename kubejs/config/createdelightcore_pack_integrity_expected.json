@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T09:51:24Z",
+  "generatedAt": "2026-09-22T02:21:23Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -433,6 +433,7 @@
       "enchdesc",
       "enhancedbossbars",
       "entityculling",
+      "euphoria_patcher",
       "fabric_api_base",
       "fabric_block_view_api_v2",
       "fabric_renderer_api_v1",
@@ -684,6 +685,14 @@
         "entityculling",
         "transition",
         "trender"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/euphoria-patcher.pw.toml",
+      "filename": "EuphoriaPatcher-1.10.5-r5.9.3-neoforge.jar",
+      "modIds": [
+        "euphoria_patcher"
       ]
     },
     {
