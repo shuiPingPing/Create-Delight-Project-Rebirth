@@ -131,7 +131,7 @@
 		"1.自制了一个探矿仪器，无cd且可以直接显示探矿仪的方位。"
 		"2.将单独的矿脉整合为某类型的矿簇，玩家不再需要再找很多的矿脉。"
 	]
-	quest.00AF35D832509CB8.quest_subtitle: "{ \"text\": \"在小小的矿脉上挖呀挖呀挖\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"00AF35D832509CB8\" } }"
+	quest.00AF35D832509CB8.quest_subtitle: "{\"text\":\"在小小的矿脉上挖呀挖呀挖\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"00AF35D832509CB8\"}}"
 	quest.00AF35D832509CB8.title: "虚空采矿"
 	quest.00C0C609FD96A90D.quest_desc: ["对准远处方块右键即可立体机动（&4心脏撒撒给哟&r）！强烈建议配合黄铜喷气背包体验飞一般的感觉（&e这玩意甚至比鞘翅还要好用&r）"]
 	quest.00C0C609FD96A90D.quest_subtitle: "哎嘿，&e走位~走位~"
@@ -1303,7 +1303,7 @@
 	quest.1628F4D511006B43.quest_subtitle: "&e分流！"
 	quest.166274B13799B8F0.quest_desc: ["理包器可以将同一请求的所有包裹整合成一个大包裹"]
 	quest.166274B13799B8F0.quest_subtitle: "那一天的货物整合起来"
-	quest.168836201ED24533.quest_subtitle: "{ \"text\": \"打枪biubiu！\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"168836201ED24533\" } }"
+	quest.168836201ED24533.quest_subtitle: "{\"text\":\"打枪biubiu！\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"168836201ED24533\"}}"
 	quest.168836201ED24533.title: "枪械制作！"
 	quest.168963EBE8235BEA.quest_desc: [
 		"&e用途：短靴鞋面。"
@@ -1337,7 +1337,7 @@
 		"你可以用紫水晶或末影之眼升级你的&e全息球&r来古法寻找&e锻造遗迹"
 		"也可以向二级&e制图师&r购买&e锻造遗迹&r的地图"
 		"当然你也可以试试万能的 "
-		"{ \"text\": \"探险家指南针\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"1CB33EA048068637\" } }"
+		"{\"text\":\"探险家指南针\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1CB33EA048068637\"}}"
 	]
 	quest.16D02C3A2328C706.quest_subtitle: "锻造遗迹"
 	quest.16D02C3A2328C706.title: "寻找遗迹"
@@ -1778,7 +1778,7 @@
 	quest.1DAA7B2A273EF5C1.quest_subtitle: "品尝一下这里的糖果吧！"
 	quest.1DAA7B2A273EF5C1.title: "甜蜜的负担"
 	quest.1DAD17F55E0D4B85.quest_desc: ["最最最最经典的列车轨道，是我童年的记忆！"]
-	quest.1DAD17F55E0D4B85.quest_subtitle: "{ \"text\": \"汽笛轰鸣\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7DED9A87C6CB80F0\" } }"
+	quest.1DAD17F55E0D4B85.quest_subtitle: "{\"text\":\"汽笛轰鸣\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7DED9A87C6CB80F0\"}}"
 	quest.1DAD17F55E0D4B85.title: "轨道交通！"
 	quest.1DC437E50E6AC1FC.quest_desc: [
 		"本整合包使用FTB chunks模组来认领区块并实现区块强加载。"
@@ -2481,7 +2481,7 @@
 		"另外需要注意的一点：&e目前同一ftb队伍下的玩家除了死亡，难度是同升降的。&r"
 		"&etips:如果要查看难度可以使用/improvedmob指令"
 	]
-	quest.28A38E3B4EE9EFEC.quest_subtitle: "{ \"text\": \"难度索引\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"1D6981F32D6C7E04\" } }"
+	quest.28A38E3B4EE9EFEC.quest_subtitle: "{\"text\":\"难度索引\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1D6981F32D6C7E04\"}}"
 	quest.28A38E3B4EE9EFEC.title: "难度系统"
 	quest.28A5AF919EA1D256.quest_desc: ["由伽马蟑螂掉落。"]
 	quest.28A5AF919EA1D256.quest_subtitle: "黏糊糊恶心心"
@@ -2531,8 +2531,8 @@
 	quest.299E2462A3710039.quest_desc: [
 		"在使用工具的过程中，我发现了一种提升性能的方式：当&e双头工具&r的&e其中一个&r头部打磨&e五次&r后，&e下一次打磨&r可以&4直接提升工具的&e等级&r。此外，笔记中还提到为工具镶嵌&4下界之星&r可以进一步增强它的性能。通过这一系列操作，最终可以获得锻造等级高达八级的锻造锤。"
 		"在后续解锁更高级的材料后可以打造更加强大的锻造锤。"
-		"{ \"text\": \"龙钢锤\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2832C4A43B0CF7A7\" } }"
-		"{ \"text\": \"终结龙/悚怖钢锤\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"79CF36DF5E276A20\" } }"
+		"{\"text\":\"龙钢锤\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2832C4A43B0CF7A7\"}}"
+		"{\"text\":\"终结龙/悚怖钢锤\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"79CF36DF5E276A20\"}}"
 	]
 	quest.299E2462A3710039.quest_subtitle: "在打磨完全或是镶嵌下界之星中两种方法中达成一个即可打造出七级锤"
 	quest.299E2462A3710039.title: "七级锤"
@@ -2631,7 +2631,7 @@
 		"&a改进：在工作台中查看可用打磨、附层或镶嵌。"
 	]
 	quest.2AB7E20A739D7D5F.title: "长弓弓材"
-	quest.2B0BD06F1DA084FF.quest_subtitle: "{ \"text\": \"进入 仓储如此简单章节\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"34EC8C9716956C8E\"} }"
+	quest.2B0BD06F1DA084FF.quest_subtitle: "{\"text\":\"进入 仓储如此简单章节\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"34EC8C9716956C8E\"}}"
 	quest.2B0BD06F1DA084FF.title: "也许我能够搭建更复杂的仓库？"
 	quest.2B1610516DEADDB3.quest_desc: [
 		"&e用途：汇总“纯白”槽位的当前可用模块。"
@@ -2687,7 +2687,7 @@
 	quest.2C45BF71BECF6F56.quest_desc: [
 		"&e黑石锤&r已经远远无法满足加工的需求了，我们现在需要去寻找失落的&e锻造遗迹&r，"
 		"锻造遗迹中的锻造锤拥有更高的锤等级"
-		"{ \"text\": \"点击此处寻找遗迹\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"16D02C3A2328C706\" } }"
+		"{\"text\":\"点击此处寻找遗迹\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"16D02C3A2328C706\"}}"
 	]
 	quest.2C45BF71BECF6F56.quest_subtitle: "（跑龙套的）"
 	quest.2C45BF71BECF6F56.title: "黑曜石锤"
@@ -2715,7 +2715,7 @@
 		"受到伤害时，会留下几滩熔融焦糖，不同体型的焦糖怪留下的熔融焦糖数量不同。这些熔融焦糖会黏住玩家，使在其上面行走的玩家移动跳跃受阻类似蜘蛛网。熔融焦糖在2秒后会自己消失。"
 		"击杀掉落焦糖"
 	]
-	quest.2CC8B87D086B3275.quest_subtitle: "{ \"text\": \"跳转石油电力\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"54356C1067ECB809\"} }"
+	quest.2CC8B87D086B3275.quest_subtitle: "{\"text\":\"跳转石油电力\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"54356C1067ECB809\"}}"
 	quest.2CC8B87D086B3275.title: "步入&5石油电力&r！"
 	quest.2CDF4533AC252825.quest_desc: [
 		"&e用途：拥有较远的攻击距离和较大的横扫范围。"
@@ -3010,7 +3010,7 @@
 	quest.300372C7A93BD7C5.quest_subtitle: "等价于消耗0.25个石英玻璃"
 	quest.300372C7A93BD7C5.title: "使用石英玻璃部件"
 	quest.3027E5E07BE0B171.quest_desc: ["每条&e处理方式&r的增产数量&4不同&r，请&e自行计算&r"]
-	quest.3027E5E07BE0B171.quest_subtitle: "{ \"text\": \"矿物处理\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"37C42029C3527BCD\" } }"
+	quest.3027E5E07BE0B171.quest_subtitle: "{\"text\":\"矿物处理\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"37C42029C3527BCD\"}}"
 	quest.3027E5E07BE0B171.title: "矿物处理流程"
 	quest.304303BF98E147F9.quest_desc: ["可以在原始洞穴的顶端和地面找到它，包裹着日光琥珀。用镐即可破坏。"]
 	quest.3055619851D1FEE2.quest_desc: ["将未发酵的纸浆放到&2发酵罐&r里将会得到纸浆"]
@@ -3510,10 +3510,10 @@
 	quest.38D93D6E4F62BE49.quest_desc: ["直接制作福鲁伊克斯色ME包层线缆即可完成任务。"]
 	quest.38D93D6E4F62BE49.quest_subtitle: "传递8个频道，可以在线缆的单格方块内放置小元件"
 	quest.38D93D6E4F62BE49.title: "ME包层线缆"
-	quest.38E346D9F782E7BC.quest_subtitle: "{ \"text\": \"跳转石油电力\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"54356C1067ECB809\"} }"
+	quest.38E346D9F782E7BC.quest_subtitle: "{\"text\":\"跳转石油电力\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"54356C1067ECB809\"}}"
 	quest.38E346D9F782E7BC.title: "步入&5石油电力&r！"
 	quest.38FEB46E9F16E159.quest_subtitle: "可丢出"
-	quest.3911F2778F70E4B9.quest_subtitle: "{ \"text\": \"磨刀霍霍\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2A0C295CDBE6C743\" } }"
+	quest.3911F2778F70E4B9.quest_subtitle: "{\"text\":\"磨刀霍霍\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2A0C295CDBE6C743\"}}"
 	quest.3914C78F40176BB3.quest_subtitle: "烈焰人使用超越经验可增加一级附魔，&e突破极限！"
 	quest.3914C78F40176BB3.title: "这是...&1超越附魔？"
 	quest.391BA5D92F977F17.quest_subtitle: "1陨石粉碎得到n陨石粉，1陨石粉烧炼得到1陨石"
@@ -3578,7 +3578,7 @@
 		"本整合包的武器系统主要由tetra的工具和武器模板提供，详细的玩法流程可以参考任务书相关章节&4昔人已逝"
 		"Tetra 模组的内容围绕着模块化物品展开，并致力于将之与冒险、科技等其它概念融合在一起。"
 	]
-	quest.398AE54EB6F55F0D.quest_subtitle: "{ \"text\": \"锻造之艺，就在其中\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"214BED3560F53D72\" } }"
+	quest.398AE54EB6F55F0D.quest_subtitle: "{\"text\":\"锻造之艺，就在其中\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"214BED3560F53D72\"}}"
 	quest.39AF291933E03F4C.quest_desc: [
 		"整合包地形模组调整了安山岩的生成群系，请寻找 安山岩洞穴 群系。"
 		"可使用&4自然罗盘&r，或在有权限的情况下直接使用locate指令搜索terralith:cave/andesite_caves"
@@ -3678,7 +3678,7 @@
 		"1.自制了一个探矿仪器，无cd且可以直接显示探矿仪的方位。"
 		"2.将单独的矿脉整合为某类型的矿簇，玩家不再需要再找很多的矿脉。"
 	]
-	quest.3BBBADC1B0766B77.quest_subtitle: "{ \"text\": \"在小小的矿脉上挖呀挖呀挖\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"00AF35D832509CB8\" } }"
+	quest.3BBBADC1B0766B77.quest_subtitle: "{\"text\":\"在小小的矿脉上挖呀挖呀挖\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"00AF35D832509CB8\"}}"
 	quest.3BBBADC1B0766B77.title: "虚空采矿"
 	quest.3BC1BB77B76F6873.quest_subtitle: "直接用普通&e搅拌器&r融合"
 	quest.3BC1BB77B76F6873.title: "或者你也可以先跳过&4熔融搅拌器"
@@ -4221,7 +4221,7 @@
 		""
 		"可以使用糖渍圆石或糖渍石头进行修理"
 	]
-	quest.44751C952966AE58.quest_subtitle: "{ \"text\": \"打枪biubiu！\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"168836201ED24533\" } }"
+	quest.44751C952966AE58.quest_subtitle: "{\"text\":\"打枪biubiu！\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"168836201ED24533\"}}"
 	quest.44751C952966AE58.title: "枪械制作！"
 	quest.44843C213D06BCDF.quest_subtitle: "没啥特殊的,没烤糊都能吃"
 	quest.4492593A688BA447.quest_subtitle: "用于制作弹簧"
@@ -4352,7 +4352,7 @@
 	]
 	quest.46EAAF318C57196E.quest_subtitle: "“在我们组织探险队伍横跨森林地区的时候，除了其它资源之外，我们还发现了这种特别的蚂蚁。”"
 	quest.46F1F92929FC8F9F.quest_desc: ["整合包修改了作物的生长机制，且相较于原版有一定差距，种植前请阅读相关章节！"]
-	quest.46F1F92929FC8F9F.quest_subtitle: "{ \"text\": \"季节系统\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"1E7A476EE0C13AD1\" } }"
+	quest.46F1F92929FC8F9F.quest_subtitle: "{\"text\":\"季节系统\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1E7A476EE0C13AD1\"}}"
 	quest.46F1F92929FC8F9F.title: "种植相关"
 	quest.46F22198F00A2AFB.quest_desc: ["击杀夜行蝠概率掉落"]
 	quest.46F22198F00A2AFB.quest_subtitle: "可投掷🤨"
@@ -4485,7 +4485,7 @@
 	]
 	quest.48E6F54DA1D7073A.title: "&a手镯"
 	quest.48EC662CDE792B76.quest_desc: ["本整合包增加了一系列来自alex的生物，如有不了解的问题可以查看&4任务书内相关章节&r"]
-	quest.48EC662CDE792B76.quest_subtitle: "{ \"text\": \"来自Alex的生物\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"329597CAA8B8D983\" } }"
+	quest.48EC662CDE792B76.quest_subtitle: "{\"text\":\"来自Alex的生物\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"329597CAA8B8D983\"}}"
 	quest.48EC662CDE792B76.title: "各式各样的生物"
 	quest.48F3DF24DC2E2149.quest_desc: ["模块化腰带"]
 	quest.4917A71C63856986.title: "风溟雷殛"
@@ -5035,7 +5035,7 @@
 		"AE可以通过“&2自动合成&r”（即通过AE的“&2下单&r”）请求物品，此时由机动仓储网络发出的包裹的地址是&2仓储桥接器内所记录的地址&r。这个功能需保证AE网络中有CPU才能运作。对于未登上太空而无法造出样板供应器者，可以考虑使用这个机制来实现物品的下单。"
 		"同样的，机械动力&2可以请求AE系统&r中的物品。"
 	]
-	quest.53525848D094C800.quest_subtitle: "{ \"text\": \"是的，我们之间有个孩子（）\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"3066F516B382ED92\" } }"
+	quest.53525848D094C800.quest_subtitle: "{\"text\":\"是的，我们之间有个孩子（）\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"3066F516B382ED92\"}}"
 	quest.538044C6ED9D30BC.quest_desc: [
 		"首先，使用染料和纸（或者金锭）在售票机处制作一个总票（总票是唯一的，千万不要搞丢了！！！）。"
 		"然后，使用纸（或者金锭）来制作普通的票，或者通行证。二者区别是前者对检票口使用会消耗，而后者不会。"
@@ -5348,7 +5348,7 @@
 	quest.591CA06C6483B19B.title: "破损空间站"
 	quest.592B86772585084E.quest_subtitle: "哎哟我，给烈焰人冻成⑨了"
 	quest.59350A53C2738BD9.quest_desc: ["机械动力（Create）是一个围绕着建筑、装饰和机械的新兴模组，所添加的元素旨在为玩家提供全新的建筑与自动化体验，并尽可能多地为玩家预留自定义空间。在机器与能源方面，模组做出了极大的创新。机器不再由传统科技模组中乏味的电线供能，而是需要玩家搭建机械传动系统驱动。&4任务书中的相关内容&f会引导大家制造一个实用的机器。"]
-	quest.59350A53C2738BD9.quest_subtitle: "{ \"text\": \"欢迎来到机械动力！世界就在你的手中！\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"510B2EE25982FD73\" } }"
+	quest.59350A53C2738BD9.quest_subtitle: "{\"text\":\"欢迎来到机械动力！世界就在你的手中！\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"510B2EE25982FD73\"}}"
 	quest.59350A53C2738BD9.title: "欢迎来到机械动力"
 	quest.59507034A0DD6BBB.quest_desc: [
 		"&e用途：【需要月相奥术卷轴】自带暴击伤害。"
@@ -5984,7 +5984,7 @@
 	]
 	quest.637B9EC227C75DD9.title: "&b弓材"
 	quest.638505D6DDD35EF8.quest_desc: ["使用机械动力的合成方式能获得越多收益！对于多种合成方式，越复杂的成本越低！"]
-	quest.638505D6DDD35EF8.quest_subtitle: "{ \"text\": \"转入下一章节\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2CAE49FE48790F23\" } }"
+	quest.638505D6DDD35EF8.quest_subtitle: "{\"text\":\"转入下一章节\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2CAE49FE48790F23\"}}"
 	quest.638505D6DDD35EF8.title: "使用机械动力"
 	quest.63A790DCF73C76AC.quest_desc: [
 		"&e用途：【需要雷鸣战技卷轴】自带攻击速度。"
@@ -6056,7 +6056,7 @@
 	]
 	quest.64AE37050534D9E8.title: "镶嵌"
 	quest.64B9CFE4337A3EAA.quest_desc: ["注意！包内大部分合金的合成都需要使用&4熔融金属&r进行合成，具体合成方式请&e查询JEI&r！"]
-	quest.64B9CFE4337A3EAA.quest_subtitle: "{ \"text\": \"更高效的合金方式\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7DDE0F8620589E02\" } }"
+	quest.64B9CFE4337A3EAA.quest_subtitle: "{\"text\":\"更高效的合金方式\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7DDE0F8620589E02\"}}"
 	quest.64B9CFE4337A3EAA.title: "熔炼相关"
 	quest.64BDB4FEDC5142AF.quest_subtitle: "一个格子，能存2048个物品"
 	quest.64D7AAD13401AB7E.quest_desc: [
@@ -6886,7 +6886,7 @@
 		""
 		"（具体内容可以查看&e玩转经济&r章节）"
 	]
-	quest.7429D7F92D04A8BB.quest_subtitle: "{ \"text\": \"玩转货币！\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"34C9A7E928820147\" } }"
+	quest.7429D7F92D04A8BB.quest_subtitle: "{\"text\":\"玩转货币！\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"34C9A7E928820147\"}}"
 	quest.74305D1EA38FBFCD.quest_desc: [
 		"&e用途：一个装饰性的剑格，它纯粹是装饰性的，仅影响物品的外观。"
 		"&b适合：安装在“护手”槽位。"
@@ -7430,7 +7430,7 @@
 	]
 	quest.7DD494295398C5F3.title: "复仇者徽章"
 	quest.7DD6AE3D040FB1AE.quest_subtitle: "上传你的大作！"
-	quest.7DED9A87C6CB80F0.quest_subtitle: "{ \"text\": \"启动飞行模式！\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7DED9A87C6CB80F0\" } }"
+	quest.7DED9A87C6CB80F0.quest_subtitle: "{\"text\":\"启动飞行模式！\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7DED9A87C6CB80F0\"}}"
 	quest.7E1B33C0877F38CF.quest_desc: [
 		"&e用途：具有一定弧度的利刃，可以在战斗中不断削减敌人的最大生命值。"
 		"&b适合：安装在“剑刃”槽位。"

@@ -272,3 +272,48 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
   `3143d9d chore(config): 同步各 mod 运行期归一化后的配置` 35 个文件）→ 工作区归零，之后启动的回写即幂等。
 - 重跑复现测试（§十一 Round 6）比的是 **HEAD 版本之间**，不受工作区回写影响；本次提交后 HEAD 已含游戏口径，
   若要重跑该测试须以迁移产物那批提交（`91fdd5b`/`b369490`）为基准。
+
+## 十四、任务文本红字 `Invalid formatting! Can't nest multiple substitutes!`（2026-09-22 晚，已修）
+
+**现象**：打开部分任务详情，描述/副标题位置显示红字 `Invalid formatting! Can't nest multiple substitutes!`（例：`quest.2CC8B87D086B3275`「步入石油电力！」）。
+
+**根因（读 `ftb-quests-2101.1.36` 的 `dev.ftb.mods.ftbquests.util.TextUtils#parseRawText` 字节码得出）**：
+
+```java
+String s = raw.trim();
+if ((s.startsWith("[") && s.endsWith("]")) || (s.startsWith("{") && s.endsWith("}"))) {
+    try { return Component.Serializer.fromJson(UNESCAPER.translate(s), lookup); }   // ① JSON 组件分支
+    catch (JsonParseException ignored) { }
+}
+return ClientTextComponentUtils.parse(UNESCAPER.translate(raw));                    // ② {…} 标记分支
+```
+
+任务文本里那些"可点击跳转"的组件，1.20.1 时代写作**宽松 JSON 字符串**（`"underlined": "true"` —— 布尔写成了字符串），
+1.21 的严格 codec 判定非法 → ①失败 → 落到②标记解析器 → 字符串里有嵌套花括号 → 报错并显示红字。
+（`{@pagebreak}` / `{image:…}` 这类**没有嵌套**的标记走②是正常设计，不是问题。）
+
+**修复**：`scripts/fix-quests-text-components.mjs` —— 扫描 `lang/*.snbt` 里以 `{`/`[` 开头结尾的字符串值，
+对合法 JSON 递归规范化（样式布尔字符串→布尔，并校验 `color`/`text`/`extra`/`clickEvent`/`hoverEvent`），
+写回紧凑 JSON 与正确的 SNBT 转义。**保留可点击跳转语义**，不是简单删文本。
+
+| 指标 | 数 |
+|---|---|
+| 以 `{` 开头且 `}` 结尾的字符串值 | 178 |
+| 非 JSON 的合法标记（`{@pagebreak}` 37 处、`{image:…}` 等） | 37 |
+| 合法 JSON 组件 | 141 |
+| **需规范化（字符串布尔）** | **24** |
+| 规范化后仍失败的 | 0 |
+
+- 备份：`_dsh_tmp/quests-lang-backup/en_us.snbt.bak`。
+- 用法：`node scripts/fix-quests-text-components.mjs --dry-run` / 无参写回。
+- **生效方式**：文本是服务端下发的翻译表（日志 `received translation table en_us`），改完要**重进世界或重启游戏**才会重新读取。
+
+### 14.1 同批确认：任务类型现状与「对号」图标
+| 任务类型 | 数量 | 说明 |
+|---|---|---|
+| `item` | 2432 | 原生物品任务（有物品图标） |
+| `checkmark` | **681** | 其中 **84 个是本迁移把 `itemfilters:*`（62）与 `questsadditions:*`（22）转来的**，其余 597 个源包本来就是 checkmark |
+| `xp` / `kill` / `observation` / `custom` / `advancement` … | 其余 | 源包原生类型 |
+
+- 2101 **没有** `itemfilters` 的等价任务类型；`ftb-quests` 与 `ftb-filter-system` 的 jar 里都搜不到任何 `ftbfiltersystem` 任务类型集成（0 命中）→ 那 84 个只能保持 checkmark（显示 ✔、无物品图标）。
+- 若要把其中"过滤器其实只锁定了一个具体物品"的恢复成 `item` 任务（拿回物品图标与"持有该物品"语义），属于可选精修，见报告 `_dsh_tmp/quests-migration-report.md` 的 itemfilters 明细。
