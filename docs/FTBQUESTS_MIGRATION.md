@@ -66,13 +66,30 @@ advancement / dimension / stat / biome / structure / loot / fluid`（+ FTB 附�
    `solcarrot` / `solapplepie` / `ulterlands` / `ncc` / `centralvintage` 等）。若这些 mod 里有的存在 1.21.1 版本并补进整合包，
    可从 `_dsh_tmp/ftbquests-pre-migration/` 备份重新跑迁移脚本恢复对应任务。
 
-## 五、验证前必须先处理：`certain_questing_additions`
+## 五、`certain_questing_additions`：mixin 确实失败，但**不影响正常游玩**（2026-09-22 二次核实后更正）
 
-`certain_questing_additions 1.2.0.4` 的 `ChapterImageConfigGroupMixin` 用 `@Shadow` 抓 `val$name`（编译器生成的 lambda 捕获字段名），
-在 `ftb-quests 2101.1.36` 上定位不到 → 该 mixin **硬失败**；一旦打开任务书界面（加载目标类）就会崩。
-因此验证/游玩前请先停用它：`mods/certain_questing_additions-neoforge-1.2.0.4+mc1.21.1.jar` → 改名加 `.disabled`
-（代价：任务书失去 APNG 动画增强；包自检会报 `Missing mods: certain_questing_additions`，属预期）。
-恢复＝去掉 `.disabled` 后缀（届时请先确认上游是否已适配新版 FTB Quests）。
+> ⚠️ 本节结论在 **2026-09-22 14:30 已更正**。此前写的"打开任务书即崩"是**误判**——把 ProbeJS 启动期 dump 的 FATAL 当成了开书证据。
+
+事实链（全部有据可查）：
+
+1. `ChapterImageConfigGroupMixin` 用 `@Shadow` 抓 `val$name`，在 `ftb-quests 2101.1.36` 上定位不到 → **mixin 应用失败**，这是真的；
+   它注入的目标是 `dev.ftb.mods.ftbquests.client.gui.quests.ChapterImageButton$3`。
+2. `ChapterImageButton$3` 不是"打开任务书"就会加载的类。对 `ftb-quests-2101.1.36.jar` 反编译核实：
+   `$3` 是 javac 为 `ChapterImage.TextAlign` 的 `switch` 生成的 **switch-map 持有类**，全库**只有** `ChapterImageButton.maybeRenderText()` 引用它；
+   而 `maybeRenderText()` 第一句就是 `if (!chapterImage.shouldDrawTextOnImage()) return;`（`ChapterImage.textOnImage` 字段）。
+3. 本包 41 个章节文件里 **`text_on_image` / `text:` 出现 0 次** → `maybeRenderText()` 永远早退 → `$3` 在正常游玩中**永不加载** → **不会崩**。
+4. FATAL 日志的真正来源是 **ProbeJS 7.7.2**：启动时 `ProbeDumpingThread` 用 `Class.forName` 强扫 FTB Quests 客户端类，
+   撞上 `ChapterImageButton$3` 时抛错，被 ProbeJS 自己 catch 并打成
+   `[probejs] Error while loading class ... consider add it to excluded classpaths`。
+   每次启动都会出现这 1 条 FATAL（纯噪音）。11:08 与 14:26 两次会话的日志形态完全一致，都在 `ProbeDumpingThread` 上。
+
+**结论与处置**（2026-09-22 14:35 起）：该 mod **保留在包里，jar 正常启用**。
+- 它的动画类 mixin（`ChapterPanelChapterButtonMixin` / `ChapterImageButtonMixin` / `ChapterImageMixin` …）**都应用成功**，功能有效；
+  只有 `ChapterImageConfigGroupMixin` 失效。
+- 唯一会踩雷的操作：**给章节图片设置"图上文字"**（`text_on_image: true`）→ 绘制时进入 `TextAlign` switch → 加载 `$3` → mixin 失败 → 崩。
+  即：**别给章节图片加文字**。若将来必须加，先把该 mod 停用，或等作者适配新版 FTB Quests。
+- 想消掉启动期那条 FATAL 噪音，可把 `dev.ftb.mods.ftbquests.client.gui.quests.ChapterImageButton$3` 加进 ProbeJS 的
+  excluded classpaths（可选，不影响功能）。
 
 ## 六、复跑方式
 
@@ -112,14 +129,21 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 
 1.20.1 遗留的 `icon` / `title`（书本图标与标题）保留在文件里——2101 会忽略不认识的键，无害；
 `version` 两边都是 `13`，无需迁移。章节文件的字段无漂移（`order_index` / `quest_links` 等 1.21.1 字段本来就有）。
-## 九、图标兜底（2026-09-22）
+## 九、图标兜底（2026-09-22；⚠️ 本节做法已被实机推翻，见下）
 
 - 书本图标 `createdelightcore:textures/gui/packicon64.png` 在 **`kubejs/assets/createdelightcore/textures/gui/packicon64.png`** ✓ 存在（KubeJS 资源作为内置资源包生效，`ftbquests:custom_icon` 物品也在注册表里 ✓）。
 - 保留下来的 quest 里共有 395 处 `icon:` 引用，其中 **8 处指向 1.21.1 已不存在的物品**
   （`farmersrespite` 3、`bakeries`/`youkaishomecoming`/`cosmopolitan`/`oceanic_delight`/`blackknightarmor` 各 1，加上 reward table 里的 1 处）
-  → 已统一替换为 FTB Quests 自带的占位物品 **`ftbquests:missing_item`**（显示为明确的"缺失"图标，而不是破图）。
-> **2026-09-22 更新**：不只是本地停用——已**从整合包移除其描述符**（`mods/client/certain-questing-additions.pw.toml` 删除，完整性清单重生成：client 73→72），
-> 否则新装玩家仍会加载到它、一开任务书即崩，与"任务书可打开游玩"的目标直接冲突。移除理由与恢复方式见 `docs/MOD_UPDATE_COMPATIBILITY.md` 同名小节。
+  → 当时统一替换成字符串形式 `icon: "ftbquests:missing_item"`。
+
+> **⚠️ 2026-09-22 14:40 实机复核：这个做法无效且不稳定，已放弃。**
+> 游戏（FTB Quests 2101.1.36）在加载/回写任务数据时：
+> 1. 把上面 8 处**字符串形式**的 `ftbquests:missing_item` **直接丢掉**（例如 `Mouse_Chef` 章节级 icon 在回写后的文件里整条消失）；
+> 2. 而对**我没动过**的、指向不存在物品的图标（`tetrawear:*` / `more_mod_tetra:*` / `kinetic_pixel:*` / `nethervinery:*`），
+>    它自己转成 `icon: { id: "ftbquests:missing_item" components: { "ftbquests:missing_item": "<原 id>" } }` —— **把原 id 存在 components 里**。
+>
+> 结论：**不要手工替换图标**。保留原始 id，让 FTB Quests 自己转成带原始 id 的缺失占位；手工写死的占位既丢原 id，又会被下一次回写抹掉。
+> 因此 §十 第 2 项在"重跑脚本"时应**跳过**。
 ## 十、迁移后置修正（重要：脚本一次跑完 ≠ 最终结果）
 
 `scripts/migrate-ftbquests.mjs` 是**第一遍**（复制 + 改名 + 类型转换 + 缺失清理）。以下三项是其后的人工复核修正，**如果将来重跑脚本，需要按本节再补一遍**：
@@ -127,7 +151,7 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 | # | 修正 | 数量 | 做法 |
 |---|---|---|---|
 | 1 | `data.snbt` 合并 1.21.1 新增顶层键 | 3 个键 | 从游戏在 1.21.1 下重写过的 shell 版（`_dsh_tmp/ftbquests-pre-migration/data.snbt`）取 `fallback_locale` / `presets` / `verify_on_load` 插入（见 §八） |
-| 2 | 失效物品图标兜底 | 8 处 | 保留 quest 里 `icon:` 指向 1.21.1 不存在物品的 → 统一改 `ftbquests:missing_item`（见 §九） |
+| 2 | ~~失效物品图标兜底~~ **已作废（2026-09-22）** | **0 处** | **不要做**：手工写死的 `ftbquests:missing_item` 会被游戏回写抹掉、且丢失原 id；保留原 id 交给 FTB Quests 自己转换即可（见 §九） |
 | 3 | **advancement 路径前缀修正** | **28 处** | 见下 |
 
 ### 第 3 项细节（本次最容易被忽略的错误）
@@ -149,8 +173,9 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 - **quest 数精确对上**：源包（CDR1201）按 `tasks:` 数组计 **2509** 个 quest，迁移删除 **124** → 迁移后 **2385**（2509 − 124 = 2385 ✓）。
   这同时反证了"删除 124 个 quest"的口径正确。章节分布（前 5）：Mouse_Chef 242、Animal_Companions 183、Tetra_Armor_Curios 172、
   Difficulty_System 109、Tetra_Weapons 100；**空章节 0**。
-- **客户端崩溃面已清空**：全库扫描 363 个 jar，确认**除 ftb-quests 本体外没有任何 mod 注入 `dev/ftb/mods/ftbquests`** →
-  移除 `certain_questing_additions` 之后，打开任务书不存在"mixin 硬失败"来源。
+- **客户端崩溃面已清空**：全库扫描 363 个 jar，确认**除 ftb-quests 本体外没有任何 mod 注入 `dev/ftb/mods/ftbquests`**。
+  注意这条**不构成**"`certain_questing_additions` 会让任务书崩"的理由——它确实注入 FTB Quests（23 个 mixin），但其中只有
+  `ChapterImageConfigGroupMixin` 失败，且触发条件是章节图片开"图上文字"，正常开书不受影响，详见 §五。
 - **实机验收基准**（启动后日志应为）：
   `[FTB Quests/]: Loaded 6 chapter groups, 41 chapters, 2385 quests, 32 reward tables`（迁移前为 `1 / 1 / 0 / 0`），且不得出现
   `Failed to parse` / `Unknown task type` / `Missing quest dependency` 之类报错。
@@ -184,10 +209,45 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 `received translation table en_us (with 3819 entries) from server`。
 
 **健康检查（同一会话）**：
-- FTB Quests 相关报错 **0**；`/FATAL]` 1 条（既有噪音，与任务书无关）；`/ERROR]` 1572 条为既有噪音（loot 解析 549、ProbeJS 109、Veil 54、Sable tag 48 等）。
-- 包自检：`Missing mods: (none)`、`Extra mods: mcpmod`（移除 `certain_questing_additions` 后清单已同步，无缺失告警）。
+- FTB Quests 相关报错 **0**；`/FATAL]` 1 条（= ProbeJS dump `ChapterImageButton$3` 撞上 `ChapterImageConfigGroupMixin`，见 §五；与开书无关）；`/ERROR]` 1572 条为既有噪音（loot 解析 549、ProbeJS 109、Veil 54、Sable tag 48 等）。
+- 包自检：`Missing mods: (none)`、`Extra mods: mcpmod`（清单含 `certain_questing_additions`，client=73）。
 - KubeJS：startup 7/7、client 2/2、server 205/205，**0 errors**。
 
-**结论**：任务书在 1.21.1 **正常加载**；客户端已收到完整数据，且全库已无任何 mod 注入 `dev/ftb/mods/ftbquests`（无 mixin 崩溃来源），打开界面的前提满足。
+**结论**：任务书在 1.21.1 **正常加载**；客户端已收到完整数据，打开界面的前提满足。
+（"全库无 mod 注入 `dev/ftb/mods/ftbquests`"这条旧论据已作废——见 §五、§十一。）
 
 **收尾待办**：`data.snbt` 的 `verify_on_load` 由本次验收临时打开的 `true` 改回 `false`（游戏运行中会被其重写，需在退出后改）。
+
+## 十三、2026-09-22 下午二次核实（MCP 实机 + 反编译）
+
+本节记录用 MCP（`mcpmod` 的 HTTP 接口）实机复核 + 反编译核对后的**最终结论**，与前文冲突处以本节为准。
+
+### 13.1 任务书界面：**带 `certain_questing_additions` 打开正常**
+- 实机：14:26 玩家按 E 打开任务书 → 左侧 15 个章节、右上书本图标、右侧任务面板全部正常渲染（截图存 `_dsh_tmp/shots/mcp-now-142751.png`），无语料崩溃。
+- 反编译定位见 §五：失败 mixin 的目标类 `ChapterImageButton$3` 只在"章节图片画图上文字"时加载。
+- 因此 §五 的结论是：**保留该 mod**，唯一禁忌是"给章节图片加文字"。
+
+### 13.2 深灰占位图标 = 1.21.1 缺 4 个 mod，不是迁移误伤
+实机打开"介绍"章节看到若干深灰占位图标，逐项查证：
+
+| 项 | 值 |
+|---|---|
+| 我迁移脚本对图标/贴图的策略 | **一律不修改**（`icon` 955 条、`image` 770 条；报告：`_dsh_tmp/quests-migration-report.md` §3.3） |
+| 提交版（HEAD）里 `ftbquests:missing_item` | 8 处（= §九 那次手工替换） |
+| 当前工作区里 `ftbquests:missing_item` | **430 处**，全部由**游戏回写**产生（tetra_armor_curios 346 / tetra_weapons 36 / tetra_ranged_defense 34 / masterful_machinery 12 / 1 张奖励表 2） |
+
+430 处对应的原始 id 只有 23 个，集中在 4 个 **1.21.1 包里不存在的命名空间**：
+
+- `more_mod_tetra:*`（15 个 id，约 150 处）
+- `tetrawear:*`（4 个 id，约 44 处）
+- `kinetic_pixel:*`（2 个 id，6 处）
+- `nethervinery:nether_fizz`（1 处）
+
+→ **这是源包内容缺口，不是迁移 bug**：这 4 个 mod 在 1.20.1 有、1.21.1 没有（§四第 4 条同一批）。
+若将来补进 1.21.1 版本，图标会自动恢复正常（游戏回写保留了原 id 在 `components` 里）。
+
+### 13.3 任务数据已被游戏回写（工作区 vs HEAD）
+- FTB Quests 加载后会把所有章节文件按自己的序列化规则重写：字段按字母序、省略默认值、`filename` 用小写（文件名随之从
+  `Mouse_Chef.snbt` 变为 `mouse_chef.snbt`，Windows 下 git 视作同一路径的 M）、无效图标转 `missing_item`、并新生成 `lang/en_us.snbt`。
+- 因此 `git status` 里 80 个任务书文件全是 `M` —— **这是运行期状态，不是迁移产物**；提交与否由人工决定（提交 = 采纳游戏口径）。
+- 重跑复现测试（§十一 Round 6）比的是 **HEAD 版本之间**，不受工作区回写影响。

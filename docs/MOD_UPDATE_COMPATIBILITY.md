@@ -149,17 +149,33 @@ CDR1201 的 **75 个 snbt**（41 章节 + 32 奖励表 + `data.snbt` + `chapter_
 **离线自洽性校验（2026-09-22，全部通过）**：41 章 / 6 章节组；悬空 `group` 引用 0；2531 条 `dependencies` 悬空 0；
 95 处 `table_id` 引用（22 个不同表）全部能解析到 32 个奖励表文件；奖励表内部物品与任务奖励物品缺失均为 0。
 
-**验证前置**：`certain_questing_additions` 的 `ChapterImageConfigGroupMixin` 在 `ftb-quests 2101.1.36` 上 `@Shadow val$name` 硬失败（**打开任务书即崩**），
-已停用（`mods/certain_questing_additions-*.jar` → `.disabled`；包自检会报 `Missing mods: certain_questing_additions`，属预期）。
+**验证前置（2026-09-22 14:40 更正）**：`certain_questing_additions` 的 `ChapterImageConfigGroupMixin` 在 `ftb-quests 2101.1.36` 上 `@Shadow val$name` 确实失败，
+但**不影响正常开书**——失败目标 `ChapterImageButton$3` 只在"章节图片画图上文字"时加载。**该 mod 已恢复启用**（描述符 + jar 回到正常状态，完整性清单 client=73）。
+详见 `docs/FTBQUESTS_MIGRATION.md` §五 / §十三.1。
 
 **待实机确认**：进游戏后日志应出现 `[FTB Quests/]: Loaded 6 chapter groups, 41 chapters, N quests, 32 reward tables` 且无报错（迁移前是 `1/1/0/0`）。
-## 2026-09-22 移除 `certain_questing_additions`（与任务书迁移同批）
+## 2026-09-22 `certain_questing_additions`：先移除、后**恢复**（结论更正）
 
-**动作**：删除 `mods/client/certain-questing-additions.pw.toml`（模组 `certain_questing_additions` 1.2.0.4，CF project `1372051`）。
-**原因**：它的 `ChapterImageConfigGroupMixin` 用 `@Shadow` 抓编译器生成的 lambda 捕获字段 `val$name`，在 `ftb-quests 2101.1.36` 上定位不到 →
-该 mixin **硬失败**，**一打开任务书界面就崩**（`InvalidMixinException: @Shadow field val$name was not located in the target class dev.ftb.mods.ftbquests.client.gui.quests…`，
-见 2026-09-22 日志的 mixin FATAL）。这与任务书迁移直接冲突：迁移后的任务书在带该模组的包里无法游玩。
-**影响**：失去该模组提供的任务书 APNG 动画增强（纯客户端装饰），其余无影响。
-**处置**：与 `iris-flywheel-compat` 同类，属**本 fork 有意移除的上游文件**；等上游适配新版 FTB Quests 后可加回。
-**注意**：本地 jar 已同时改名为 `certain_questing_additions-neoforge-1.2.0.4+mc1.21.1.jar.disabled`（不再加载）；
-本地 jar 备份/恢复＝去掉 `.disabled` 后缀并恢复上述描述符。
+**当前状态**：**保留在包内、正常启用**（`mods/client/certain-questing-additions.pw.toml` 存在；jar 无 `.disabled` 后缀；完整性清单 `client=73`）。
+
+**时间线**：
+1. 2026-09-22 上午：因为看到启动日志里 `Mixin apply for mod certain_questing_additions failed ... @Shadow field val$name`，
+   判定它"一打开任务书就崩"，于是删除描述符（提交 `6899385`，清单 73→72）并停用 jar。
+2. 2026-09-22 14:26：实机按 E 打开任务书 —— **正常渲染，没有崩**。
+3. 2026-09-22 14:35：反编译 `ftb-quests-2101.1.36.jar` 核实：失败 mixin 的目标 `ChapterImageButton$3` 是 javac 为
+   `ChapterImage.TextAlign` 生成的 switch-map 持有类，全库只有 `ChapterImageButton.maybeRenderText()` 引用，
+   而该方法首句是 `if (!chapterImage.shouldDrawTextOnImage()) return;`。
+   本包 41 个章节里 `text_on_image` **0 次** → 该路径永不执行 → **不会崩**。
+   那条 FATAL 的真实来源是 **ProbeJS 7.7.2 启动期 dump**（`ProbeDumpingThread` 用 `Class.forName` 强扫 FTB Quests 客户端类），
+   被 ProbeJS 自己 catch 成 `Error while loading class ... consider add it to excluded classpaths`。
+4. 2026-09-22 14:40：撤销移除（`git checkout 6899385^ -- mods/client/certain-questing-additions.pw.toml`、jar 去掉 `.disabled`、
+   `devtool.bat generate-integrity-manifest` 重生成）。
+
+**保留的理由**：它的其余 22 个 mixin（`ChapterPanelChapterButtonMixin` / `ChapterImageButtonMixin` / `ChapterImageMixin` / 动画类等）**全部应用成功**，
+动画/实体图标等功能有效；只有"章节图片文字对齐配置"这一项失效。
+
+**唯一禁忌**：给章节图片开"图上文字"（`text_on_image: true`）→ 绘制时进入 `TextAlign` switch → 加载 `ChapterImageButton$3` → mixin 失败 → 崩。
+要加文字时请先停用该 mod，或等作者适配新版 FTB Quests（上游 HEAD 目前仍是 0.3.0 / 提交 `98e7656`，无修复版）。
+可选降噪：把 `dev.ftb.mods.ftbquests.client.gui.quests.ChapterImageButton$3` 加进 ProbeJS excluded classpaths。
+
+**与 `iris-flywheel-compat` 的区别**：那个是真的硬冲突（Colorwheel 二选一、上游明确不修）→ 保持移除；这个只是单条 mixin 失效 → 保留。
