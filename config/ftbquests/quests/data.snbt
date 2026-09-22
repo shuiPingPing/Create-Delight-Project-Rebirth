@@ -29,4 +29,20 @@
 	show_lock_icons: true
 	title: "机械动力：齿轮盛宴"
 	version: 13
+	fallback_locale: "en_us"
+	presets: {
+		goal: {
+			shape: "hexagon"
+			size: 2.0d
+		}
+		info: {
+			shape: "gear"
+			size: 1.0d
+		}
+		normal: {
+			shape: "square"
+			size: 1.0d
+		}
+	}
+	verify_on_load: true
 }

@@ -99,3 +99,16 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 
 > 注：`table_id` 是**数字**（如 `367842927525151968L`），不是文件名的十六进制字面量；用文件名推断会误报悬空（本次踩过）。
 > 实机确认（对比日志）：迁移前 `Loaded 1 chapter groups, 1 chapters, 0 quests, 0 reward tables` → 迁移后应为 `6 / 41 / N / 32`。
+## 八、1.21.1 原生 `data.snbt` 字段合并（2026-09-22）
+
+对比"游戏在 1.21.1 下重写过的 shell `data.snbt`"（备份在 `_dsh_tmp/ftbquests-pre-migration/`）发现，2101 版新增了三个顶层键，
+而迁移版（来自 1.20.1）没有 → 已从 shell 版合并进来：
+
+| 键 | 值 | 说明 |
+|---|---|---|
+| `fallback_locale` | `"en_us"` | 找不到翻译时的回退语言 |
+| `presets` | `{ goal: {hexagon,2.0d} info: {gear,1.0d} normal: {square,1.0d} }` | 任务形状预设 |
+| `verify_on_load` | **`true`（本次临时打开）** | 加载时校验任务数据；用于本次迁移验收，**确认无误后建议改回 `false`** |
+
+1.20.1 遗留的 `icon` / `title`（书本图标与标题）保留在文件里——2101 会忽略不认识的键，无害；
+`version` 两边都是 `13`，无需迁移。章节文件的字段无漂移（`order_index` / `quest_links` 等 1.21.1 字段本来就有）。
