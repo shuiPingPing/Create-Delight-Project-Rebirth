@@ -3,31 +3,50 @@
 	loot_size: 1
 	order_index: 29
 	rewards: [
-		{ count: 4, item: "minecraft:enchanted_golden_apple", random_bonus: 8 }
-		{ count: 4, item: "youkaishomecoming:con_panna", random_bonus: 8 }
-		{ count: 2, item: "ends_delight:fried_dragon_egg", random_bonus: 2 }
 		{
 			count: 4
+			id: "5DAE099866AF5A79"
 			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:long_night_vision"
-				}
+				count: 1
+				id: "minecraft:enchanted_golden_apple"
 			}
 			random_bonus: 8
 		}
 		{
 			count: 4
+			id: "0EE792387EABA21C"
 			item: {
-				Count: 1
+				count: 1
+				id: "youkaishomecoming:con_panna"
+			}
+			random_bonus: 8
+		}
+		{
+			count: 2
+			id: "6C70E1F8D588209A"
+			item: {
+				count: 1
+				id: "ends_delight:fried_dragon_egg"
+			}
+			random_bonus: 2
+		}
+		{
+			count: 4
+			id: "61E1FD0E25BF5D46"
+			item: {
+				count: 1
 				id: "minecraft:potion"
-				tag: {
-					Potion: "alexsmobsup:strong_knockback_resistance"
-				}
+			}
+			random_bonus: 8
+		}
+		{
+			count: 4
+			id: "0C38638C95F4692B"
+			item: {
+				count: 1
+				id: "minecraft:potion"
 			}
 			random_bonus: 8
 		}
 	]
-	title: "战斗补给"
 }

@@ -3,15 +3,14 @@
 	loot_size: 1
 	order_index: 28
 	rewards: [
-		{ item: "youkaishomecoming:kiku" }
-		{ item: "youkaishomecoming:hakutsuru" }
-		{ item: "youkaishomecoming:kappa_village" }
-		{ item: "youkaishomecoming:suigei" }
-		{ item: "youkaishomecoming:daiginjo" }
-		{ item: "youkaishomecoming:dassai" }
-		{ item: "youkaishomecoming:tengu_tango" }
-		{ item: "youkaishomecoming:full_moons_eve" }
-		{ item: "youkaishomecoming:sparrow_sake" }
+		{ id: "42A3A84D97E3C63E", item: { count: 1, id: "youkaishomecoming:kiku" } }
+		{ id: "6C7BC712DAF9541B", item: { count: 1, id: "youkaishomecoming:hakutsuru" } }
+		{ id: "221AEA6286617C4D", item: { count: 1, id: "youkaishomecoming:kappa_village" } }
+		{ id: "70033C10718404D7", item: { count: 1, id: "youkaishomecoming:suigei" } }
+		{ id: "417D54CF4855FB0E", item: { count: 1, id: "youkaishomecoming:daiginjo" } }
+		{ id: "6318D827FCAD0335", item: { count: 1, id: "youkaishomecoming:dassai" } }
+		{ id: "0D26282315BCA573", item: { count: 1, id: "youkaishomecoming:tengu_tango" } }
+		{ id: "45E74D931F0B56CB", item: { count: 1, id: "youkaishomecoming:full_moons_eve" } }
+		{ id: "4E3CA83BCA2B41EB", item: { count: 1, id: "youkaishomecoming:sparrow_sake" } }
 	]
-	title: "妖怪们的归家酒饮"
 }

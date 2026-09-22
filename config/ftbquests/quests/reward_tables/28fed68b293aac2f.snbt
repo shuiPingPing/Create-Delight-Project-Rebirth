@@ -12,114 +12,17 @@
 	loot_size: 1
 	order_index: 23
 	rewards: [
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:a_place_of_melting"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:dream_no_more"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:infinite_and_dark_trials"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:magnetic_storm_field"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:oath_of_fierce_blade_ouel"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:piercing_withering_trial"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:shattered_past"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:sweettide_brokenpoint"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_ancient_end"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_gate_of_eternal_cold"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_legacy_of_the_abyss"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:wind_mist_and_thunder_strike"
-				}
-			}
-		}
+		{ id: "238595067C6DCC20", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "1374538F27E48627", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "23A5847D84E369EA", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "426C83DF930EB9FE", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "3C4C025FC2F43E40", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "723415887765BF19", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "71AA977D438DC250", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "5BC3CBC6ACBBEB51", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "6A3BCC50F2309F8D", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "6B0DF0A73A04541A", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "348F02570D79C2FE", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "6E2E9E058828B34B", item: { count: 1, id: "gateways:gate_pearl" } }
 	]
-	title: "定向提取"
 }

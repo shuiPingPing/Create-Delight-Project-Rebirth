@@ -3,11 +3,50 @@
 	loot_size: 1
 	order_index: 25
 	rewards: [
-		{ count: 16, item: "minecraft:mud", random_bonus: 16 }
-		{ count: 16, item: "minecraft:coarse_dirt", random_bonus: 16 }
-		{ count: 16, item: "minecraft:soul_soil", random_bonus: 16 }
-		{ count: 16, item: "minecraft:podzol", random_bonus: 16 }
-		{ count: 16, item: "minecraft:clay", random_bonus: 16 }
+		{
+			count: 16
+			id: "45E0EFFB6751B297"
+			item: {
+				count: 1
+				id: "minecraft:mud"
+			}
+			random_bonus: 16
+		}
+		{
+			count: 16
+			id: "007BF9D4F1AE8156"
+			item: {
+				count: 1
+				id: "minecraft:coarse_dirt"
+			}
+			random_bonus: 16
+		}
+		{
+			count: 16
+			id: "75FA2E216D77EC23"
+			item: {
+				count: 1
+				id: "minecraft:soul_soil"
+			}
+			random_bonus: 16
+		}
+		{
+			count: 16
+			id: "493BDF35ECA35172"
+			item: {
+				count: 1
+				id: "minecraft:podzol"
+			}
+			random_bonus: 16
+		}
+		{
+			count: 16
+			id: "37ADD650052B520D"
+			item: {
+				count: 1
+				id: "minecraft:clay"
+			}
+			random_bonus: 16
+		}
 	]
-	title: "妖怪们的归家作物要求土壤"
 }

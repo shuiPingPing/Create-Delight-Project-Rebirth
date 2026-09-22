@@ -3,10 +3,41 @@
 	loot_size: 1
 	order_index: 26
 	rewards: [
-		{ count: 2, item: "youkaishomecoming:green_tea", random_bonus: 2 }
-		{ count: 2, item: "youkaishomecoming:white_tea", random_bonus: 2 }
-		{ count: 2, item: "youkaishomecoming:black_tea", random_bonus: 2 }
-		{ count: 2, item: "youkaishomecoming:oolong_tea", random_bonus: 2 }
+		{
+			count: 2
+			id: "7A2C27AEB9C2402B"
+			item: {
+				count: 1
+				id: "youkaishomecoming:green_tea"
+			}
+			random_bonus: 2
+		}
+		{
+			count: 2
+			id: "3A7B43F1FA4436B4"
+			item: {
+				count: 1
+				id: "youkaishomecoming:white_tea"
+			}
+			random_bonus: 2
+		}
+		{
+			count: 2
+			id: "7458FABC3A3F2F75"
+			item: {
+				count: 1
+				id: "youkaishomecoming:black_tea"
+			}
+			random_bonus: 2
+		}
+		{
+			count: 2
+			id: "23A88FAA1AD82E6E"
+			item: {
+				count: 1
+				id: "youkaishomecoming:oolong_tea"
+			}
+			random_bonus: 2
+		}
 	]
-	title: "妖怪们的归家基础茶饮"
 }

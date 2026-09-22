@@ -1,13 +1,39 @@
 {
-	icon: "vinery:white_grape_seeds"
 	id: "3C9B3FC1B9184FBC"
 	loot_size: 1
 	order_index: 10
 	rewards: [
-		{ count: 3, item: "vinery:white_grape_seeds" }
-		{ count: 3, item: "vinery:savanna_grape_seeds_white" }
-		{ count: 3, item: "vinery:taiga_grape_seeds_white" }
-		{ count: 3, item: "vinery:jungle_grape_seeds_white" }
+		{
+			count: 3
+			id: "272E6C18995F53DD"
+			item: {
+				count: 1
+				id: "vinery:white_grape_seeds"
+			}
+		}
+		{
+			count: 3
+			id: "5C7FBFCDC32CDE58"
+			item: {
+				count: 1
+				id: "vinery:savanna_grape_seeds_white"
+			}
+		}
+		{
+			count: 3
+			id: "096CC94413D6D03F"
+			item: {
+				count: 1
+				id: "vinery:taiga_grape_seeds_white"
+			}
+		}
+		{
+			count: 3
+			id: "07C41C0F95836BE0"
+			item: {
+				count: 1
+				id: "vinery:jungle_grape_seeds_white"
+			}
+		}
 	]
-	title: "白葡萄种"
 }

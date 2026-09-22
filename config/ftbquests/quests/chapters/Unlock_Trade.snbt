@@ -3,10 +3,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	default_repeatable_quest: true
-	filename: "Unlock_Trade"
+	filename: "unlock_trade"
 	group: "445171CC29E98940"
-	icon: "createdelightcore:netherite_coin"
 	id: "00F7CEC38A8C570C"
+	images: [ ]
 	order_index: 2
 	quest_links: [ ]
 	quests: [
@@ -21,7 +21,7 @@
 			tasks: [{
 				count: 64L
 				id: "17418DAEEA91BD2E"
-				item: { Count: 64, id: "create:andesite_alloy" }
+				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
 			x: -8.0d
@@ -38,7 +38,7 @@
 			tasks: [{
 				count: 64L
 				id: "02E3F757C7A0B05A"
-				item: { Count: 64, id: "create:brass_ingot" }
+				item: { count: 1, id: "create:brass_ingot" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -55,7 +55,7 @@
 			tasks: [{
 				count: 16L
 				id: "6FD81D14D36A11B2"
-				item: "create:electron_tube"
+				item: { count: 1, id: "create:electron_tube" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -72,7 +72,7 @@
 			tasks: [{
 				count: 16L
 				id: "0332AD0CBF0A5718"
-				item: "create:precision_mechanism"
+				item: { count: 1, id: "create:precision_mechanism" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -89,7 +89,7 @@
 			tasks: [{
 				count: 64L
 				id: "0688348A64449814"
-				item: "createmetallurgy:steel_ingot"
+				item: { count: 1, id: "createmetallurgy:steel_ingot" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -106,7 +106,7 @@
 			tasks: [{
 				count: 64L
 				id: "0A4EEBE474158827"
-				item: { Count: 64, id: "createdelightcore:bronze_ingot" }
+				item: { count: 1, id: "createdelightcore:bronze_ingot" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -123,7 +123,7 @@
 			tasks: [{
 				count: 64L
 				id: "5EB0E9EE15FAB25A"
-				item: { Count: 64, id: "createaddition:electrum_ingot" }
+				item: { count: 1, id: "createaddition:electrum_ingot" }
 				type: "item"
 			}]
 			x: 8.0d
@@ -140,7 +140,7 @@
 			tasks: [{
 				count: 64L
 				id: "70B8769F799B25FE"
-				item: "ae2:logic_processor"
+				item: { count: 1, id: "ae2:logic_processor" }
 				type: "item"
 			}]
 			x: -8.0d
@@ -157,7 +157,7 @@
 			tasks: [{
 				count: 64L
 				id: "5C585492B1EC7D39"
-				item: { Count: 64, id: "ae2:calculation_processor" }
+				item: { count: 1, id: "ae2:calculation_processor" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -174,7 +174,7 @@
 			tasks: [{
 				count: 64L
 				id: "1C6219D413B09470"
-				item: { Count: 64, id: "ae2:engineering_processor" }
+				item: { count: 1, id: "ae2:engineering_processor" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -191,7 +191,7 @@
 			tasks: [{
 				count: 64L
 				id: "3466BE6753EB4F9B"
-				item: "megacells:accumulation_processor"
+				item: { count: 1, id: "megacells:accumulation_processor" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -208,7 +208,7 @@
 			tasks: [{
 				count: 64L
 				id: "1EA3AE785C233920"
-				item: { Count: 64, id: "ae2:fluix_crystal" }
+				item: { count: 1, id: "ae2:fluix_crystal" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -225,7 +225,7 @@
 			tasks: [{
 				count: 64L
 				id: "5092344F051C7D74"
-				item: { Count: 64, id: "ae2:certus_quartz_crystal" }
+				item: { count: 1, id: "ae2:certus_quartz_crystal" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -242,7 +242,7 @@
 			tasks: [{
 				count: 16L
 				id: "180E01E7F67EF1BA"
-				item: "ae2:formation_core"
+				item: { count: 1, id: "ae2:formation_core" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -259,7 +259,7 @@
 			tasks: [{
 				count: 16L
 				id: "0863767B88380B86"
-				item: "ae2:annihilation_core"
+				item: { count: 1, id: "ae2:annihilation_core" }
 				type: "item"
 			}]
 			x: 6.0d
@@ -273,11 +273,10 @@
 				table_id: 8248062892074393121L
 				type: "random"
 			}]
-			subtitle: "于商店解锁其产物"
 			tasks: [{
 				count: 16L
 				id: "1179F1528EE3C8DA"
-				item: "createdelightcore:overworld_metal_ore_cluster"
+				item: { count: 1, id: "createdelightcore:overworld_metal_ore_cluster" }
 				type: "item"
 			}]
 			x: -8.0d
@@ -291,11 +290,10 @@
 				table_id: 8248062892074393121L
 				type: "random"
 			}]
-			subtitle: "于商店解锁其产物"
 			tasks: [{
 				count: 16L
 				id: "03203E12099BD581"
-				item: "createdelightcore:overworld_noble_metal_ore_cluster"
+				item: { count: 1, id: "createdelightcore:overworld_noble_metal_ore_cluster" }
 				type: "item"
 			}]
 			x: -6.0d
@@ -309,11 +307,10 @@
 				table_id: 8248062892074393121L
 				type: "random"
 			}]
-			subtitle: "于商店解锁其产物"
 			tasks: [{
 				count: 16L
 				id: "2C26C76470E8A96A"
-				item: "createdelightcore:nether_ore_cluster"
+				item: { count: 1, id: "createdelightcore:nether_ore_cluster" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -321,13 +318,10 @@
 		}
 		{
 			can_repeat: false
-			description: ["你可能发现了，系统中的一些交易为“你不在其白名单”的状态。想要解除这一状态，需要你在这里交付物品解锁。除非特殊说明，交付的物品即为在商店会解锁的物品。"]
 			id: "4F6ECCDD7821B95F"
 			size: 2.0d
-			subtitle: "解锁系统商店中的一些交易"
 			tasks: [{
 				id: "203652284EACF73E"
-				title: "请读我"
 				type: "checkmark"
 			}]
 			x: -1.0d
@@ -344,7 +338,7 @@
 			tasks: [{
 				count: 64L
 				id: "4C0BB2845A4E927D"
-				item: { Count: 64, id: "createmetallurgy:obdurium_ingot" }
+				item: { count: 1, id: "createmetallurgy:obdurium_ingot" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -361,12 +355,11 @@
 			tasks: [{
 				count: 64L
 				id: "142FE90DA9EF717A"
-				item: { Count: 64, id: "createutilities:void_steel_ingot" }
+				item: { count: 1, id: "createutilities:void_steel_ingot" }
 				type: "item"
 			}]
 			x: 6.0d
 			y: -2.5d
 		}
 	]
-	title: "&e商店解锁"
 }

@@ -3,22 +3,35 @@
 	loot_size: 1
 	order_index: 19
 	rewards: [
-		{ item: "createcafe:iced_coffee", weight: 10.0f }
-		{ item: "createcafe:iced_coffee_milk" }
-		{ item: "createcafe:strawberry_iced_coffee" }
-		{ item: "createcafe:vanilla_iced_coffee" }
-		{ item: "createcafe:mint_iced_coffee" }
-		{ item: "createcafe:caramel_iced_coffee" }
-		{ item: "createcafe:banana_iced_coffee" }
-		{ item: "youkaishomecoming:espresso", weight: 10.0f }
-		{ item: "youkaishomecoming:americano" }
-		{ item: "youkaishomecoming:ristretto" }
-		{ item: "youkaishomecoming:latte" }
-		{ item: "youkaishomecoming:affogato" }
-		{ item: "youkaishomecoming:con_panna" }
-		{ item: "youkaishomecoming:cappuccino" }
-		{ item: "youkaishomecoming:macchiato" }
-		{ item: "youkaishomecoming:mocha" }
+		{
+			id: "6734B25C77E9E972"
+			item: {
+				count: 1
+				id: "createcafe:iced_coffee"
+			}
+			weight: 10.0f
+		}
+		{ id: "61109BFD7249031C", item: { count: 1, id: "createcafe:iced_coffee_milk" } }
+		{ id: "2FB751C3B34632BF", item: { count: 1, id: "createcafe:strawberry_iced_coffee" } }
+		{ id: "7068C64E3BC668AA", item: { count: 1, id: "createcafe:vanilla_iced_coffee" } }
+		{ id: "3AFA3B6E36A8061D", item: { count: 1, id: "createcafe:mint_iced_coffee" } }
+		{ id: "074A3CFDB1CCAD44", item: { count: 1, id: "createcafe:caramel_iced_coffee" } }
+		{ id: "6C26BCAA46C8B7AF", item: { count: 1, id: "createcafe:banana_iced_coffee" } }
+		{
+			id: "5E3DEE1E7B2D8E04"
+			item: {
+				count: 1
+				id: "youkaishomecoming:espresso"
+			}
+			weight: 10.0f
+		}
+		{ id: "455B55520326D00B", item: { count: 1, id: "youkaishomecoming:americano" } }
+		{ id: "19AB6444AA0B38B5", item: { count: 1, id: "youkaishomecoming:ristretto" } }
+		{ id: "63DF6F9F014C554F", item: { count: 1, id: "youkaishomecoming:latte" } }
+		{ id: "45E065588F0D8D7D", item: { count: 1, id: "youkaishomecoming:affogato" } }
+		{ id: "18F21CBC3EA913F7", item: { count: 1, id: "youkaishomecoming:con_panna" } }
+		{ id: "698405700BA69D56", item: { count: 1, id: "youkaishomecoming:cappuccino" } }
+		{ id: "35F8122E21575164", item: { count: 1, id: "youkaishomecoming:macchiato" } }
+		{ id: "31A4420D30A5AA9D", item: { count: 1, id: "youkaishomecoming:mocha" } }
 	]
-	title: "COFFEE"
 }

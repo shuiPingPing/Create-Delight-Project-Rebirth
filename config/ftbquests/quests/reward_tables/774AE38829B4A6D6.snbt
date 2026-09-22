@@ -1,17 +1,36 @@
 {
-	icon: "quark:clear_shard"
 	id: "774AE38829B4A6D6"
 	loot_size: 1
 	order_index: 5
 	rewards: [
-		{ item: "minecraft:dirt" }
-		{ item: "minecraft:mangrove_roots" }
-		{ item: "minecraft:dead_tube_coral_block" }
-		{ item: "minecraft:cut_red_sandstone_slab" }
-		{ item: "minecraft:cobweb" }
-		{ count: 8, item: "minecraft:iron_nugget" }
-		{ count: 8, item: "quark:clear_shard" }
-		{ count: 4, item: "vinery:coarse_dirt_slab" }
+		{ id: "559C4E56C28DC3B2", item: { count: 1, id: "minecraft:dirt" } }
+		{ id: "52B2D19B1584FF70", item: { count: 1, id: "minecraft:mangrove_roots" } }
+		{ id: "51CC55FBA26DF2FD", item: { count: 1, id: "minecraft:dead_tube_coral_block" } }
+		{ id: "12C1E12A707B88FC", item: { count: 1, id: "minecraft:cut_red_sandstone_slab" } }
+		{ id: "2CC90216E5D14902", item: { count: 1, id: "minecraft:cobweb" } }
+		{
+			count: 8
+			id: "0B77EEB345BB7B73"
+			item: {
+				count: 1
+				id: "minecraft:iron_nugget"
+			}
+		}
+		{
+			count: 8
+			id: "7D5BB5FC8AF76DFD"
+			item: {
+				count: 1
+				id: "quark:clear_shard"
+			}
+		}
+		{
+			count: 4
+			id: "5CDF6F1C85A7A730"
+			item: {
+				count: 1
+				id: "vinery:coarse_dirt_slab"
+			}
+		}
 	]
-	title: "垃圾"
 }

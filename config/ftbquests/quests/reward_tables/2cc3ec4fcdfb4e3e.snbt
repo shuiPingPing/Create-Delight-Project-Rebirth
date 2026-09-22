@@ -3,9 +3,32 @@
 	loot_size: 1
 	order_index: 27
 	rewards: [
-		{ count: 2, item: "vinery:red_grape_seeds", random_bonus: 2 }
-		{ count: 2, item: "vinery:taiga_grape_seeds_red", random_bonus: 2 }
-		{ count: 2, item: "vinery:white_grape_seeds", random_bonus: 2 }
+		{
+			count: 2
+			id: "0E60BC67D8DA2A0F"
+			item: {
+				count: 1
+				id: "vinery:red_grape_seeds"
+			}
+			random_bonus: 2
+		}
+		{
+			count: 2
+			id: "6E5A594BFB548420"
+			item: {
+				count: 1
+				id: "vinery:taiga_grape_seeds_red"
+			}
+			random_bonus: 2
+		}
+		{
+			count: 2
+			id: "5CAAD7D1C47C338D"
+			item: {
+				count: 1
+				id: "vinery:white_grape_seeds"
+			}
+			random_bonus: 2
+		}
 	]
-	title: "妖怪们的归家葡萄种子"
 }

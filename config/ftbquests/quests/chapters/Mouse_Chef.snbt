@@ -2,13 +2,13 @@
 	autofocus_id: "6E1FD913939810BE"
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "Mouse_Chef"
+	filename: "mouse_chef"
 	group: "7D0A1432AAAD0EBA"
-	icon: "ftbquests:missing_item"
 	id: "546D1BAE985F9945"
 	images: [
 		{
 			height: 15.5d
+			id: "0D4F1649C15201ED"
 			image: "neapolitan:block/adzuki_cake_top"
 			order: 1
 			rotation: 0.0d
@@ -18,6 +18,7 @@
 		}
 		{
 			height: 17.0d
+			id: "49CA1829EAAB43E6"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -26,6 +27,7 @@
 		}
 		{
 			height: 16.0d
+			id: "003C825BE968F6B9"
 			image: "someassemblyrequired:item/bread_slice"
 			order: 1
 			rotation: 0.0d
@@ -35,6 +37,7 @@
 		}
 		{
 			height: 17.0d
+			id: "5F65941F9C842A30"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -43,6 +46,7 @@
 		}
 		{
 			height: 17.0d
+			id: "41F6549E2177A732"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -51,6 +55,7 @@
 		}
 		{
 			height: 17.0d
+			id: "0C8793696E7EB810"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -59,6 +64,7 @@
 		}
 		{
 			height: 17.0d
+			id: "70B8E820340FDBA9"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -67,6 +73,7 @@
 		}
 		{
 			height: 17.0d
+			id: "1162B527B7277906"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -75,6 +82,7 @@
 		}
 		{
 			height: 17.0d
+			id: "15D98391A14EEB64"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -83,6 +91,7 @@
 		}
 		{
 			height: 16.0d
+			id: "3E8FEE69489DCC45"
 			image: "collectorsreap:item/prawn_noodles"
 			order: 1
 			rotation: 0.0d
@@ -92,6 +101,7 @@
 		}
 		{
 			height: 16.5d
+			id: "08F5DDF212E7EAFC"
 			image: "brewinandchewin:item/beer"
 			rotation: 0.0d
 			width: 16.5d
@@ -100,6 +110,7 @@
 		}
 		{
 			height: 15.0d
+			id: "32C9ED72561C74A6"
 			image: "vinery:item/vinery_standard"
 			rotation: 0.0d
 			width: 15.0d
@@ -108,6 +119,7 @@
 		}
 		{
 			height: 15.5d
+			id: "2C59D4AA40B22010"
 			image: "youkaishomecoming:block/bags/tea_leaf_bag_top"
 			rotation: 0.0d
 			width: 15.5d
@@ -116,6 +128,7 @@
 		}
 		{
 			height: 15.5d
+			id: "183E95FE37B0D3C2"
 			image: "farmersrespite:block/coffee_sack_top"
 			rotation: 0.0d
 			width: 15.5d
@@ -124,6 +137,7 @@
 		}
 		{
 			height: 17.0d
+			id: "1C1C7EDA53C8AD62"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -132,6 +146,7 @@
 		}
 		{
 			height: 17.0d
+			id: "171986B436B39E7F"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -140,6 +155,7 @@
 		}
 		{
 			height: 15.0d
+			id: "7DED725D7AC76F40"
 			image: "vintagedelight:item/salt_dust"
 			order: 1
 			rotation: 0.0d
@@ -149,6 +165,7 @@
 		}
 		{
 			height: 15.0d
+			id: "0433014233F69100"
 			image: "dumplings_delight:item/rabbit_meat_boiled_dumpling"
 			order: 1
 			rotation: 0.0d
@@ -158,6 +175,7 @@
 		}
 		{
 			height: 17.0d
+			id: "4CE5655A64284EAE"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -166,6 +184,7 @@
 		}
 		{
 			height: 17.0d
+			id: "66D01C35E90DDA85"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -174,6 +193,7 @@
 		}
 		{
 			height: 15.0d
+			id: "1248D93ADF11EE03"
 			image: "ratatouille:item/popsicle_mold"
 			order: 1
 			rotation: 0.0d
@@ -183,6 +203,7 @@
 		}
 		{
 			height: 15.0d
+			id: "4F2EDF029CAF5EFE"
 			image: "bakeries:item/olive_oil"
 			order: 1
 			rotation: 0.0d
@@ -192,6 +213,7 @@
 		}
 		{
 			height: 17.0d
+			id: "25474AF959F5A759"
 			image: "minecraft:block/glow_item_frame"
 			rotation: 0.0d
 			width: 17.0d
@@ -200,6 +222,7 @@
 		}
 		{
 			height: 15.0d
+			id: "6DEC64BD25267D93"
 			image: "neapolitan:item/neapolitan_ice_cream"
 			order: 1
 			rotation: 0.0d
@@ -229,21 +252,21 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "minecraft:cake"
 			id: "4E3082C7AC773F5B"
 			rewards: [{
 				id: "3B6C8CAE7005D6A1"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 4.0d
-			subtitle: "你已经是一个合格的蛋糕大师了（赞赏脸）"
 			tasks: [{
 				id: "2BDDC2B78E5D9DAC"
 				type: "checkmark"
 			}]
-			title: "cakeeeeeeee"
 			x: -40.0d
 			y: -22.0d
 		}
@@ -253,7 +276,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "601BF3ACBDEF8288"
-				item: "minecraft:cake"
+				item: { count: 1, id: "minecraft:cake" }
 				type: "item"
 			}]
 			x: -37.0d
@@ -263,10 +286,9 @@
 			hide_until_deps_complete: true
 			id: "1D31026B30494798"
 			size: 2.0d
-			subtitle: "&b这蛋糕真的能吃吗?"
 			tasks: [{
 				id: "3B5C194DC975371B"
-				item: "fluidlogistics:frost_cake"
+				item: { count: 1, id: "fluidlogistics:frost_cake" }
 				type: "item"
 			}]
 			x: -35.0d
@@ -278,7 +300,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "29AD83514C210CC6"
-				item: "bakeries:cream_cake"
+				item: { count: 1, id: "bakeries:cream_cake" }
 				type: "item"
 			}]
 			x: -33.0d
@@ -290,7 +312,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "47567D80E0BE51CB"
-				item: "createaddition:honey_cake"
+				item: { count: 1, id: "createaddition:honey_cake" }
 				type: "item"
 			}]
 			x: -31.0d
@@ -302,7 +324,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2DACA1FFD46DCA82"
-				item: "neapolitan:vanilla_cake"
+				item: { count: 1, id: "neapolitan:vanilla_cake" }
 				type: "item"
 			}]
 			x: -31.0d
@@ -314,7 +336,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "6EA6C41A7C342F2C"
-				item: "collectorsreap:lime_cake"
+				item: { count: 1, id: "collectorsreap:lime_cake" }
 				type: "item"
 			}]
 			x: -33.0d
@@ -326,7 +348,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "10EC2F0FEC836A1A"
-				item: "collectorsreap:pomegranate_cake"
+				item: { count: 1, id: "collectorsreap:pomegranate_cake" }
 				type: "item"
 			}]
 			x: -31.0d
@@ -338,7 +360,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "0C82B381BE052AF1"
-				item: "trailandtales_delight:cherry_cake"
+				item: { count: 1, id: "trailandtales_delight:cherry_cake" }
 				type: "item"
 			}]
 			x: -35.0d
@@ -350,7 +372,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "51959C793BA17DD1"
-				item: "neapolitan:strawberry_cake"
+				item: { count: 1, id: "neapolitan:strawberry_cake" }
 				type: "item"
 			}]
 			x: -29.0d
@@ -360,10 +382,9 @@
 			hide_until_deps_complete: true
 			id: "3D4BBC56EB35F2C9"
 			size: 2.0d
-			subtitle: "不拿拿！"
 			tasks: [{
 				id: "65CF309E7EA9D974"
-				item: "neapolitan:banana_cake"
+				item: { count: 1, id: "neapolitan:banana_cake" }
 				type: "item"
 			}]
 			x: -33.0d
@@ -375,7 +396,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2CF573F36BB81B1E"
-				item: "neapolitan:adzuki_cake"
+				item: { count: 1, id: "neapolitan:adzuki_cake" }
 				type: "item"
 			}]
 			x: -37.0d
@@ -387,7 +408,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5DA2728A4416E86F"
-				item: "neapolitan:mint_cake"
+				item: { count: 1, id: "neapolitan:mint_cake" }
 				type: "item"
 			}]
 			x: -29.0d
@@ -397,10 +418,9 @@
 			hide_until_deps_complete: true
 			id: "4F3E18DE4E479F90"
 			size: 2.0d
-			subtitle: "&4这个蛋糕真的能吃吗?"
 			tasks: [{
 				id: "641EDB9AEA00E24D"
-				item: "create:blaze_cake"
+				item: { count: 1, id: "create:blaze_cake" }
 				type: "item"
 			}]
 			x: -31.0d
@@ -429,21 +449,21 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "minecraft:bread"
 			id: "57C9241B6B6660A0"
 			rewards: [{
 				id: "49E7281FFF22A5BA"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 4.0d
-			subtitle: "据说有个人靠卖面包成为了首富"
 			tasks: [{
 				id: "0258981F68098DDE"
 				type: "checkmark"
 			}]
-			title: "面包大亨"
 			x: -19.0d
 			y: -22.0d
 		}
@@ -453,7 +473,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "6E776D61F54FF109"
-				item: "minersdelight:pasta_with_veggieballs"
+				item: { count: 1, id: "minersdelight:pasta_with_veggieballs" }
 				type: "item"
 			}]
 			x: 3.5d
@@ -465,7 +485,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "706766F3DF32E815"
-				item: "minersdelight:glow_ink_pasta"
+				item: { count: 1, id: "minersdelight:glow_ink_pasta" }
 				type: "item"
 			}]
 			x: 11.375d
@@ -477,7 +497,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "3E880D0495C35153"
-				item: "mynethersdelight:twisted_ghasta"
+				item: { count: 1, id: "mynethersdelight:twisted_ghasta" }
 				type: "item"
 			}]
 			x: 8.75d
@@ -489,7 +509,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "5F2D77AB33DCD914"
-				item: "mynethersdelight:fries_ghasta"
+				item: { count: 1, id: "mynethersdelight:fries_ghasta" }
 				type: "item"
 			}]
 			x: 3.5d
@@ -501,7 +521,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "5C3D170D6437316C"
-				item: "mynethersdelight:plate_of_ghasta_with_cream"
+				item: { count: 1, id: "mynethersdelight:plate_of_ghasta_with_cream" }
 				type: "item"
 			}]
 			x: 10.5d
@@ -513,7 +533,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "74EF3B00C8A6AA15"
-				item: "vintagedelight:cheese_pasta"
+				item: { count: 1, id: "vintagedelight:cheese_pasta" }
 				type: "item"
 			}]
 			x: 11.375d
@@ -525,7 +545,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "78C82703ABDC08A4"
-				item: "createdelightcore:wrapped_fries_ghasta"
+				item: { count: 1, id: "createdelightcore:wrapped_fries_ghasta" }
 				type: "item"
 			}]
 			x: 6.125d
@@ -537,7 +557,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "10288806CF7484DF"
-				item: "farmersdelight:pasta_with_meatballs"
+				item: { count: 1, id: "farmersdelight:pasta_with_meatballs" }
 				type: "item"
 			}]
 			x: 6.125d
@@ -549,7 +569,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "1E0010EA4309A695"
-				item: "farmersdelight:pasta_with_mutton_chop"
+				item: { count: 1, id: "farmersdelight:pasta_with_mutton_chop" }
 				type: "item"
 			}]
 			x: 6.125d
@@ -561,7 +581,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "2CC11E0D289804BA"
-				item: "collectorsreap:portobello_pasta"
+				item: { count: 1, id: "collectorsreap:portobello_pasta" }
 				type: "item"
 			}]
 			x: 8.75d
@@ -573,7 +593,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "4C57850B0E81FDC2"
-				item: "collectorsreap:clam_pasta"
+				item: { count: 1, id: "collectorsreap:clam_pasta" }
 				type: "item"
 			}]
 			x: 8.75d
@@ -585,7 +605,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "4ADEEA6D631E27C3"
-				item: "alexsdelight:lobster_pasta"
+				item: { count: 1, id: "alexsdelight:lobster_pasta" }
 				type: "item"
 			}]
 			x: 11.375d
@@ -597,7 +617,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "27870DBE68F94FB1"
-				item: "alexsdelight:kangaroo_pasta"
+				item: { count: 1, id: "alexsdelight:kangaroo_pasta" }
 				type: "item"
 			}]
 			x: 6.125d
@@ -609,7 +629,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "1A9BCE7B4E8ED826"
-				item: "dungeonsdelight:chloropasta"
+				item: { count: 1, id: "dungeonsdelight:chloropasta" }
 				type: "item"
 			}]
 			x: 7.0d
@@ -621,7 +641,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "600846E8E488E8FD"
-				item: "cuisinedelight:mixed_pasta"
+				item: { count: 1, id: "cuisinedelight:mixed_pasta" }
 				type: "item"
 			}]
 			x: 11.375d
@@ -633,7 +653,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "4DC52B81F3A0E35B"
-				item: "cuisinedelight:fried_pasta"
+				item: { count: 1, id: "cuisinedelight:fried_pasta" }
 				type: "item"
 			}]
 			x: 6.125d
@@ -645,7 +665,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "2AEF87A165519F64"
-				item: "cuisinedelight:meat_pasta"
+				item: { count: 1, id: "cuisinedelight:meat_pasta" }
 				type: "item"
 			}]
 			x: 14.0d
@@ -657,7 +677,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "55699CBCE6FAE757"
-				item: "cuisinedelight:seafood_pasta"
+				item: { count: 1, id: "cuisinedelight:seafood_pasta" }
 				type: "item"
 			}]
 			x: 11.375d
@@ -669,7 +689,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "3ADABFF09F7E4B88"
-				item: "minecraft:bread"
+				item: { count: 1, id: "minecraft:bread" }
 				type: "item"
 			}]
 			x: -15.0d
@@ -681,7 +701,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "406CBF53AB9FD2CF"
-				item: "mynethersdelight:bread_loaf"
+				item: { count: 1, id: "mynethersdelight:bread_loaf" }
 				type: "item"
 			}]
 			x: -17.0d
@@ -693,11 +713,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "51DB608C80F2EA16"
-				item: {
-					Count: 1
-					id: "bakeries:cheese_cream_bread"
-					tag: { }
-				}
+				item: { count: 1, id: "bakeries:cheese_cream_bread" }
 				type: "item"
 			}]
 			x: -15.0d
@@ -709,11 +725,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2A340ADE8A316D39"
-				item: {
-					Count: 1
-					id: "bakeries:ciabatta"
-					tag: { }
-				}
+				item: { count: 1, id: "bakeries:ciabatta" }
 				type: "item"
 			}]
 			x: -15.0d
@@ -723,14 +735,9 @@
 			hide_until_deps_complete: true
 			id: "4A3BB3FD5B93D3D3"
 			size: 2.0d
-			subtitle: "其实还挺好吃"
 			tasks: [{
 				id: "16D78470A2A63786"
-				item: {
-					Count: 1
-					id: "bakeries:focaccia"
-					tag: { }
-				}
+				item: { count: 1, id: "bakeries:focaccia" }
 				type: "item"
 			}]
 			x: -13.5d
@@ -740,10 +747,9 @@
 			hide_until_deps_complete: true
 			id: "3F93ACB51222F2FF"
 			size: 2.0d
-			subtitle: "那叫一个香！"
 			tasks: [{
 				id: "6E6829F5D67C01FD"
-				item: "alexsdelight:gongylidia_bruschetta"
+				item: { count: 1, id: "alexsdelight:gongylidia_bruschetta" }
 				type: "item"
 			}]
 			x: -15.0d
@@ -753,10 +759,9 @@
 			hide_until_deps_complete: true
 			id: "7A1E582BD1DDBA34"
 			size: 2.0d
-			subtitle: "不拿拿!"
 			tasks: [{
 				id: "2258803053620597"
-				item: "neapolitan:banana_bread"
+				item: { count: 1, id: "neapolitan:banana_bread" }
 				type: "item"
 			}]
 			x: -13.0d
@@ -766,10 +771,9 @@
 			hide_until_deps_complete: true
 			id: "1DEF59E01D59D494"
 			size: 2.0d
-			subtitle: "&e总有一股淡淡的忧伤~"
 			tasks: [{
 				id: "73BF207F40EA97B5"
-				item: "bakeries:country_bread"
+				item: { count: 1, id: "bakeries:country_bread" }
 				type: "item"
 			}]
 			x: -10.5d
@@ -781,7 +785,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "11FC96583290CF3B"
-				item: "someassemblyrequired:bread_slice"
+				item: { count: 1, id: "someassemblyrequired:bread_slice" }
 				type: "item"
 			}]
 			x: -10.5d
@@ -791,10 +795,9 @@
 			hide_until_deps_complete: true
 			id: "44843C213D06BCDF"
 			size: 2.0d
-			subtitle: "没啥特殊的,没烤糊都能吃"
 			tasks: [{
 				id: "6619AC97BE98301E"
-				item: "someassemblyrequired:toasted_bread_slice"
+				item: { count: 1, id: "someassemblyrequired:toasted_bread_slice" }
 				type: "item"
 			}]
 			x: -8.5d
@@ -806,7 +809,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2E0199C7282F6614"
-				item: "corn_delight:cornbread"
+				item: { count: 1, id: "corn_delight:cornbread" }
 				type: "item"
 			}]
 			x: -9.0d
@@ -816,13 +819,11 @@
 			hide_until_deps_complete: true
 			id: "762B503674701CCC"
 			size: 2.0d
-			subtitle: "&4也许我可以吃一口试试?"
 			tasks: [{
 				id: "7909F2011C160CA9"
-				item: "the_bumblezone:bee_bread"
+				item: { count: 1, id: "the_bumblezone:bee_bread" }
 				type: "item"
 			}]
-			title: "蜜蜂面包"
 			x: -12.0d
 			y: -15.25d
 		}
@@ -832,11 +833,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2D0705ECBB10AF62"
-				item: {
-					Count: 1
-					id: "bakeries:round_bread"
-					tag: { }
-				}
+				item: { count: 1, id: "bakeries:round_bread" }
 				type: "item"
 			}]
 			x: -11.0d
@@ -846,14 +843,9 @@
 			hide_until_deps_complete: true
 			id: "3457C1BFAF5AE3EF"
 			size: 2.0d
-			subtitle: "学生晚饭的不二之选！"
 			tasks: [{
 				id: "034352CD394C7E6B"
-				item: {
-					Count: 1
-					id: "bakeries:meat_floss_bread_roll"
-					tag: { }
-				}
+				item: { count: 1, id: "bakeries:meat_floss_bread_roll" }
 				type: "item"
 			}]
 			x: -13.0d
@@ -865,7 +857,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5F8D4D789FFBE974"
-				item: "bakeries:honey_butter_spread_country_bread"
+				item: { count: 1, id: "bakeries:honey_butter_spread_country_bread" }
 				type: "item"
 			}]
 			x: -11.0d
@@ -875,10 +867,9 @@
 			hide_until_deps_complete: true
 			id: "505F5E054729D977"
 			size: 2.0d
-			subtitle: "粗粮有助于消化!"
 			tasks: [{
 				id: "494448926718318F"
-				item: "createdelightcore:oat_bread"
+				item: { count: 1, id: "createdelightcore:oat_bread" }
 				type: "item"
 			}]
 			x: -9.0d
@@ -890,11 +881,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "68A1A870D8968E5A"
-				item: {
-					Count: 1
-					id: "bakeries:berry_bread"
-					tag: { }
-				}
+				item: { count: 1, id: "bakeries:berry_bread" }
 				type: "item"
 			}]
 			x: -9.0d
@@ -921,11 +908,13 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "brewinandchewin:beer"
 			id: "12C2F5B552417684"
 			rewards: [{
 				id: "7591D4F93C30722B"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -934,7 +923,6 @@
 				id: "7AD47B5878CFF645"
 				type: "checkmark"
 			}]
-			title: "豪饮!"
 			x: -40.0d
 			y: -2.0d
 		}
@@ -944,13 +932,16 @@
 			rewards: [{
 				count: 3
 				id: "02270136674ED190"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "597BBEF510CA244C"
-				item: "brewinandchewin:beer"
+				item: { count: 1, id: "brewinandchewin:beer" }
 				type: "item"
 			}]
 			x: -36.0d
@@ -962,13 +953,16 @@
 			rewards: [{
 				count: 3
 				id: "4F36D1F84470979A"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "10928E20321A8650"
-				item: "brewinandchewin:strongroot_ale"
+				item: { count: 1, id: "brewinandchewin:strongroot_ale" }
 				type: "item"
 			}]
 			x: -33.0d
@@ -980,13 +974,16 @@
 			rewards: [{
 				count: 3
 				id: "4696F06F22F454D6"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "6868476CF1A4C0CF"
-				item: "brewinandchewin:bloody_mary"
+				item: { count: 1, id: "brewinandchewin:bloody_mary" }
 				type: "item"
 			}]
 			x: -35.0d
@@ -998,13 +995,16 @@
 			rewards: [{
 				count: 3
 				id: "5DE4708017BCD83F"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "43642FE61CCD89D9"
-				item: "brewinandchewin:vodka"
+				item: { count: 1, id: "brewinandchewin:vodka" }
 				type: "item"
 			}]
 			x: -29.0d
@@ -1016,13 +1016,16 @@
 			rewards: [{
 				count: 3
 				id: "6F2897DF6A7143F4"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "3BA6D43EE62B838E"
-				item: "brewinandchewin:salty_folly"
+				item: { count: 1, id: "brewinandchewin:salty_folly" }
 				type: "item"
 			}]
 			x: -37.0d
@@ -1034,13 +1037,16 @@
 			rewards: [{
 				count: 3
 				id: "61941F5E156A2E64"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "39382CD95F63BC68"
-				item: "brewinandchewin:withering_dross"
+				item: { count: 1, id: "brewinandchewin:withering_dross" }
 				type: "item"
 			}]
 			x: -32.0d
@@ -1052,13 +1058,16 @@
 			rewards: [{
 				count: 3
 				id: "6C1B6C19D136FA07"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "56038534EB0B5DE1"
-				item: "brewinandchewin:steel_toe_stout"
+				item: { count: 1, id: "brewinandchewin:steel_toe_stout" }
 				type: "item"
 			}]
 			x: -30.0d
@@ -1070,13 +1079,16 @@
 			rewards: [{
 				count: 3
 				id: "64B8196F3F1A5F96"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "5E0A0A30F6FCDAEA"
-				item: "brewinandchewin:red_rum"
+				item: { count: 1, id: "brewinandchewin:red_rum" }
 				type: "item"
 			}]
 			x: -38.0d
@@ -1088,13 +1100,16 @@
 			rewards: [{
 				count: 3
 				id: "6F5E04DEA1AB51A9"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "037F636D9BDF56BC"
-				item: "brewinandchewin:glittering_grenadine"
+				item: { count: 1, id: "brewinandchewin:glittering_grenadine" }
 				type: "item"
 			}]
 			x: -38.0d
@@ -1106,13 +1121,16 @@
 			rewards: [{
 				count: 3
 				id: "4859BB631E405E8E"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "0711B2ABEDE5BDDA"
-				item: "brewinandchewin:rice_wine"
+				item: { count: 1, id: "brewinandchewin:rice_wine" }
 				type: "item"
 			}]
 			x: -35.0d
@@ -1124,13 +1142,16 @@
 			rewards: [{
 				count: 3
 				id: "11BD0A83B6ABE519"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "1CFFA171736D2CDE"
-				item: "brewinandchewin:egg_grog"
+				item: { count: 1, id: "brewinandchewin:egg_grog" }
 				type: "item"
 			}]
 			x: -33.0d
@@ -1142,13 +1163,16 @@
 			rewards: [{
 				count: 3
 				id: "260D39D59CA39862"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "4D572418FB6E1666"
-				item: "brewinandchewin:mead"
+				item: { count: 1, id: "brewinandchewin:mead" }
 				type: "item"
 			}]
 			x: -32.0d
@@ -1160,13 +1184,16 @@
 			rewards: [{
 				count: 3
 				id: "4C40C91623C3DE6E"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "20F9BE9DCE1D140C"
-				item: "brewinandchewin:saccharine_rum"
+				item: { count: 1, id: "brewinandchewin:saccharine_rum" }
 				type: "item"
 			}]
 			x: -38.0d
@@ -1178,13 +1205,16 @@
 			rewards: [{
 				count: 3
 				id: "16FE5B4F05CF738F"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "53AC6981E615429D"
-				item: "brewinandchewin:dread_nog"
+				item: { count: 1, id: "brewinandchewin:dread_nog" }
 				type: "item"
 			}]
 			x: -29.0d
@@ -1196,13 +1226,16 @@
 			rewards: [{
 				count: 3
 				id: "5E24130C89650180"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "3AF8B54E5D638C6C"
-				item: "brewinandchewin:pale_jane"
+				item: { count: 1, id: "brewinandchewin:pale_jane" }
 				type: "item"
 			}]
 			x: -29.0d
@@ -1214,13 +1247,16 @@
 			rewards: [{
 				count: 3
 				id: "410BCEECB7B1DE12"
-				item: "createdelightcore:copper_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:copper_coin"
+				}
 				type: "item"
 			}]
 			size: 2.0d
 			tasks: [{
 				id: "6EA267EBAA1B246A"
-				item: "brewinandchewin:kombucha"
+				item: { count: 1, id: "brewinandchewin:kombucha" }
 				type: "item"
 			}]
 			x: -30.0d
@@ -1254,20 +1290,25 @@
 				"5D3CDA2F7E36689D"
 				"0A845942AC4DC6B1"
 				"2F2B18572F57CC51"
-				]
+			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "vinery:glowing_wine"
 			id: "6E1FD913939810BE"
 			rewards: [
 				{
 					id: "4357AA07F179013B"
-					item: "createdelightcore:netherite_coin"
+					item: {
+						count: 1
+						id: "createdelightcore:netherite_coin"
+					}
 					type: "item"
 				}
 				{
 					id: "01E2FAA378145AE6"
-					item: "vinery:vinery_standard"
+					item: {
+						count: 1
+						id: "vinery:vinery_standard"
+					}
 					type: "item"
 				}
 			]
@@ -1277,7 +1318,6 @@
 				id: "65F338DF4FA3783A"
 				type: "checkmark"
 			}]
-			title: "葡萄酒大师！"
 			x: -19.0d
 			y: -2.0d
 		}
@@ -1287,13 +1327,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "79B3BBA735C7DF9B"
-				item: {
-					Count: 1
-					id: "vinery:red_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:red_wine" }
 				type: "item"
 			}]
 			x: -11.375d
@@ -1305,13 +1339,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "0B90C876AD24584E"
-				item: {
-					Count: 1
-					id: "vinery:cristel_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:cristel_wine" }
 				type: "item"
 			}]
 			x: -14.875d
@@ -1323,13 +1351,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "0A80654B65278EBF"
-				item: {
-					Count: 1
-					id: "vinery:stal_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:stal_wine" }
 				type: "item"
 			}]
 			x: -14.875d
@@ -1341,13 +1363,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "72CBBC20A4645EF3"
-				item: {
-					Count: 1
-					id: "vinery:magnetic_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:magnetic_wine" }
 				type: "item"
 			}]
 			x: -16.625d
@@ -1359,13 +1375,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "1F858C7543826192"
-				item: {
-					Count: 1
-					id: "vinery:mellohi_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:mellohi_wine" }
 				type: "item"
 			}]
 			x: -14.875d
@@ -1377,13 +1387,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "057A9A39DD4B9807"
-				item: {
-					Count: 1
-					id: "vinery:jellie_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:jellie_wine" }
 				type: "item"
 			}]
 			x: -13.125d
@@ -1395,13 +1399,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "257ECA9DEC2A8BD4"
-				item: {
-					Count: 1
-					id: "vinery:aegis_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:aegis_wine" }
 				type: "item"
 			}]
 			x: -14.875d
@@ -1413,13 +1411,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "74B818955EFABC21"
-				item: {
-					Count: 1
-					id: "vinery:kelp_cider"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:kelp_cider" }
 				type: "item"
 			}]
 			x: -16.625d
@@ -1431,13 +1423,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "326D5358C7119688"
-				item: {
-					Count: 1
-					id: "vinery:mead"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:mead" }
 				type: "item"
 			}]
 			x: -7.875d
@@ -1449,13 +1435,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "555296FFC4F55707"
-				item: {
-					Count: 1
-					id: "vinery:apple_cider"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:apple_cider" }
 				type: "item"
 			}]
 			x: -7.875d
@@ -1467,13 +1447,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "52AC2CD186886938"
-				item: {
-					Count: 1
-					id: "vinery:apple_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:apple_wine" }
 				type: "item"
 			}]
 			x: -7.875d
@@ -1485,13 +1459,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "07792033B16E7765"
-				item: {
-					Count: 1
-					id: "vinery:creepers_crush"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:creepers_crush" }
 				type: "item"
 			}]
 			x: -11.5d
@@ -1503,13 +1471,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "3797A93CCF779E00"
-				item: {
-					Count: 1
-					id: "vinery:villagers_fright"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:villagers_fright" }
 				type: "item"
 			}]
 			x: -7.875d
@@ -1521,13 +1483,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "31804F5E31E8A624"
-				item: {
-					Count: 1
-					id: "vinery:eiswein"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:eiswein" }
 				type: "item"
 			}]
 			x: -9.625d
@@ -1539,13 +1495,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "7E34A28D42F27799"
-				item: {
-					Count: 1
-					id: "vinery:clark_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:clark_wine" }
 				type: "item"
 			}]
 			x: -9.625d
@@ -1557,13 +1507,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "52388A9C66A3BD3E"
-				item: {
-					Count: 1
-					id: "vinery:solaris_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:solaris_wine" }
 				type: "item"
 			}]
 			x: -11.375d
@@ -1575,13 +1519,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "3E4221170167D2FD"
-				item: {
-					Count: 1
-					id: "vinery:bolvar_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:bolvar_wine" }
 				type: "item"
 			}]
 			x: -14.875d
@@ -1593,13 +1531,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "2B8C81F22C1C4764"
-				item: {
-					Count: 1
-					id: "vinery:lilitu_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:lilitu_wine" }
 				type: "item"
 			}]
 			x: -9.625d
@@ -1611,13 +1543,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "74C2BDAE2D6E6CD9"
-				item: {
-					Count: 1
-					id: "vinery:noir_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:noir_wine" }
 				type: "item"
 			}]
 			x: -16.625d
@@ -1629,13 +1555,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "57D9F3FC24754701"
-				item: {
-					Count: 1
-					id: "vinery:bottle_mojang_noir"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:bottle_mojang_noir" }
 				type: "item"
 			}]
 			x: -16.625d
@@ -1647,13 +1567,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "50315CB7550913B2"
-				item: {
-					Count: 1
-					id: "vinery:cherry_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:cherry_wine" }
 				type: "item"
 			}]
 			x: -11.375d
@@ -1665,13 +1579,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "19A698D95B000937"
-				item: {
-					Count: 1
-					id: "vinery:jo_special_mixture"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:jo_special_mixture" }
 				type: "item"
 			}]
 			x: -11.375d
@@ -1683,13 +1591,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "312957FC8AC1699C"
-				item: {
-					Count: 1
-					id: "vinery:strad_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:strad_wine" }
 				type: "item"
 			}]
 			x: -9.625d
@@ -1701,13 +1603,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "27BBA43D6736AC9C"
-				item: {
-					Count: 1
-					id: "vinery:chorus_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:chorus_wine" }
 				type: "item"
 			}]
 			x: -9.625d
@@ -1719,13 +1615,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "1C8D341DF155513E"
-				item: {
-					Count: 1
-					id: "vinery:chenet_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:chenet_wine" }
 				type: "item"
 			}]
 			x: -13.125d
@@ -1737,13 +1627,7 @@
 			size: 1.75d
 			tasks: [{
 				id: "4AA9DED381C4118C"
-				item: {
-					Count: 1
-					id: "vinery:glowing_wine"
-					tag: {
-						Year: 0
-					}
-				}
+				item: { count: 1, id: "vinery:glowing_wine" }
 				type: "item"
 			}]
 			x: -13.125d
@@ -1765,11 +1649,13 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "ftbquests:missing_item"
 			id: "5885AB5ADC9823EC"
 			rewards: [{
 				id: "194CB173614B1C95"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1778,7 +1664,6 @@
 				id: "715F77656237F3C8"
 				type: "checkmark"
 			}]
-			title: "茶香四溢"
 			x: 2.0d
 			y: -2.0d
 		}
@@ -1788,7 +1673,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "12566BF204E3D62E"
-				item: "youkaishomecoming:saidi_tea"
+				item: { count: 1, id: "youkaishomecoming:saidi_tea" }
 				type: "item"
 			}]
 			x: 11.0d
@@ -1800,7 +1685,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "695BC9818E133CC1"
-				item: "fruitsdelight:mango_tea"
+				item: { count: 1, id: "fruitsdelight:mango_tea" }
 				type: "item"
 			}]
 			x: 7.0d
@@ -1812,7 +1697,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "736F219A02A12F02"
-				item: "youkaishomecoming:tea_mocha"
+				item: { count: 1, id: "youkaishomecoming:tea_mocha" }
 				type: "item"
 			}]
 			x: 5.0d
@@ -1824,7 +1709,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "410C99FED99E8A86"
-				item: "fruitsdelight:lychee_cherry_tea"
+				item: { count: 1, id: "fruitsdelight:lychee_cherry_tea" }
 				type: "item"
 			}]
 			x: 10.0d
@@ -1836,7 +1721,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7F2DF5118FA3D23C"
-				item: "youkaishomecoming:genmai_tea"
+				item: { count: 1, id: "youkaishomecoming:genmai_tea" }
 				type: "item"
 			}]
 			x: 13.0d
@@ -1848,7 +1733,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "50EEDD4593428401"
-				item: "fruitsdelight:mangosteen_tea"
+				item: { count: 1, id: "fruitsdelight:mangosteen_tea" }
 				type: "item"
 			}]
 			x: 11.0d
@@ -1860,7 +1745,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "4AC039B17F575B32"
-				item: "trailandtales_delight:pitcher_plant_tea"
+				item: { count: 1, id: "trailandtales_delight:pitcher_plant_tea" }
 				type: "item"
 			}]
 			x: 9.0d
@@ -1872,7 +1757,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "1A8064232834548E"
-				item: "fruitsdelight:hawberry_tea"
+				item: { count: 1, id: "fruitsdelight:hawberry_tea" }
 				type: "item"
 			}]
 			x: 13.0d
@@ -1884,7 +1769,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "079FE4FFCF0A3B78"
-				item: "trailandtales_delight:cherry_petal_tea"
+				item: { count: 1, id: "trailandtales_delight:cherry_petal_tea" }
 				type: "item"
 			}]
 			x: 13.0d
@@ -1896,7 +1781,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "6C91869028EB2CEB"
-				item: "fruitsdelight:peach_tea"
+				item: { count: 1, id: "fruitsdelight:peach_tea" }
 				type: "item"
 			}]
 			x: 13.0d
@@ -1908,7 +1793,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "3604396128BC80BF"
-				item: "trailandtales_delight:torchflower_tea"
+				item: { count: 1, id: "trailandtales_delight:torchflower_tea" }
 				type: "item"
 			}]
 			x: 11.0d
@@ -1935,11 +1820,13 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "youkaishomecoming:cappuccino"
 			id: "5FA93ABF1F7A3D6F"
 			rewards: [{
 				id: "5738D9759FA65BA5"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1948,7 +1835,6 @@
 				id: "0B77DCF2E9748CE4"
 				type: "checkmark"
 			}]
-			title: "SCA咖啡大赛冠军！"
 			x: -40.0d
 			y: 16.0d
 		}
@@ -1958,7 +1844,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "3FD09149D979126A"
-				item: "youkaishomecoming:latte"
+				item: { count: 1, id: "youkaishomecoming:latte" }
 				type: "item"
 			}]
 			x: -32.0d
@@ -1970,7 +1856,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "11AFBBB0ACC6C8B6"
-				item: "youkaishomecoming:espresso"
+				item: { count: 1, id: "youkaishomecoming:espresso" }
 				type: "item"
 			}]
 			x: -33.0d
@@ -1982,7 +1868,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "55128C5B97C3009D"
-				item: "youkaishomecoming:affogato"
+				item: { count: 1, id: "youkaishomecoming:affogato" }
 				type: "item"
 			}]
 			x: -30.0d
@@ -1994,7 +1880,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "1AB1336DFF217558"
-				item: "youkaishomecoming:macchiato"
+				item: { count: 1, id: "youkaishomecoming:macchiato" }
 				type: "item"
 			}]
 			x: -34.0d
@@ -2006,7 +1892,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5075055206BCF672"
-				item: "youkaishomecoming:ristretto"
+				item: { count: 1, id: "youkaishomecoming:ristretto" }
 				type: "item"
 			}]
 			x: -36.0d
@@ -2018,7 +1904,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "249F249482535605"
-				item: "youkaishomecoming:cappuccino"
+				item: { count: 1, id: "youkaishomecoming:cappuccino" }
 				type: "item"
 			}]
 			x: -37.0d
@@ -2030,7 +1916,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "67C299DA5C766678"
-				item: "youkaishomecoming:con_panna"
+				item: { count: 1, id: "youkaishomecoming:con_panna" }
 				type: "item"
 			}]
 			x: -29.0d
@@ -2042,7 +1928,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "32BCC27334BFE57D"
-				item: "youkaishomecoming:mocha"
+				item: { count: 1, id: "youkaishomecoming:mocha" }
 				type: "item"
 			}]
 			x: -31.0d
@@ -2054,7 +1940,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "713DE816E8E0C7D9"
-				item: "youkaishomecoming:americano"
+				item: { count: 1, id: "youkaishomecoming:americano" }
 				type: "item"
 			}]
 			x: -35.0d
@@ -2066,7 +1952,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "071C2F6D1242968D"
-				item: "createcafe:iced_coffee"
+				item: { count: 1, id: "createcafe:iced_coffee" }
 				type: "item"
 			}]
 			x: -37.0d
@@ -2078,7 +1964,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "472DB31B353683AF"
-				item: "createcafe:caramel_iced_coffee"
+				item: { count: 1, id: "createcafe:caramel_iced_coffee" }
 				type: "item"
 			}]
 			x: -35.0d
@@ -2090,7 +1976,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "0A0F0733FCF3AF67"
-				item: "createcafe:mint_iced_coffee"
+				item: { count: 1, id: "createcafe:mint_iced_coffee" }
 				type: "item"
 			}]
 			x: -33.0d
@@ -2102,7 +1988,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "000FD9B963BDD041"
-				item: "createcafe:iced_coffee_milk"
+				item: { count: 1, id: "createcafe:iced_coffee_milk" }
 				type: "item"
 			}]
 			x: -31.0d
@@ -2114,7 +2000,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5E2A22C6B0118B38"
-				item: "createcafe:strawberry_iced_coffee"
+				item: { count: 1, id: "createcafe:strawberry_iced_coffee" }
 				type: "item"
 			}]
 			x: -29.0d
@@ -2126,7 +2012,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "52954013C6C79889"
-				item: "createcafe:vanilla_iced_coffee"
+				item: { count: 1, id: "createcafe:vanilla_iced_coffee" }
 				type: "item"
 			}]
 			x: -34.0d
@@ -2138,7 +2024,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2473E943AF31BA09"
-				item: "createcafe:banana_iced_coffee"
+				item: { count: 1, id: "createcafe:banana_iced_coffee" }
 				type: "item"
 			}]
 			x: -32.0d
@@ -2167,18 +2053,19 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "cuisinedelight:meat_pasta"
 			id: "47FE2A112C8DFF02"
 			rewards: [{
 				id: "0BEEF96AD5B67D1A"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 4.0d
 			tasks: [{
 				id: "58272BA2749DEEBF"
-				title: "意面大厨"
 				type: "checkmark"
 			}]
 			x: 2.0d
@@ -2191,10 +2078,9 @@
 			size: 2.0d
 			tasks: [{
 				id: "39267876B97AC20A"
-				item: "someassemblyrequired:burger_bun"
+				item: { count: 1, id: "someassemblyrequired:burger_bun" }
 				type: "item"
 			}]
-			title: "汉博格!"
 			x: -12.0d
 			y: -10.0d
 		}
@@ -2209,7 +2095,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "22F49B41FDB11B47"
-				item: "create_deepfried:blooming_onion"
+				item: { count: 1, id: "create_deepfried:blooming_onion" }
 				type: "item"
 			}]
 			x: -8.25d
@@ -2221,7 +2107,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "48A7CFF329847662"
-				item: "casualnessdelight:fried_fish"
+				item: { count: 1, id: "casualnessdelight:fried_fish" }
 				type: "item"
 			}]
 			x: -11.25d
@@ -2233,7 +2119,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "77CCA4B28008B56F"
-				item: "culturaldelights:empanada"
+				item: { count: 1, id: "culturaldelights:empanada" }
 				type: "item"
 			}]
 			x: -6.75d
@@ -2250,7 +2136,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "019F3955279B19AB"
-				item: "create_deepfried:panzerotto"
+				item: { count: 1, id: "create_deepfried:panzerotto" }
 				type: "item"
 			}]
 			x: -9.75d
@@ -2268,7 +2154,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "5770E8491D68511A"
-				item: "create_bic_bit:wrapped_churros"
+				item: { count: 1, id: "create_bic_bit:wrapped_churros" }
 				type: "item"
 			}]
 			x: -15.75d
@@ -2285,7 +2171,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "69E946FBDB9D6C7B"
-				item: "create_bic_bit:churros"
+				item: { count: 1, id: "create_bic_bit:churros" }
 				type: "item"
 			}]
 			x: -17.25d
@@ -2303,7 +2189,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "1AD88F0BE39B9D35"
-				item: "create_bic_bit:coated_churros"
+				item: { count: 1, id: "create_bic_bit:coated_churros" }
 				type: "item"
 			}]
 			x: -14.25d
@@ -2324,7 +2210,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "1EF07245942D2B6F"
-				item: "create_bic_bit:wrapped_coated_churros"
+				item: { count: 1, id: "create_bic_bit:wrapped_coated_churros" }
 				type: "item"
 			}]
 			x: -12.75d
@@ -2345,7 +2231,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "116F2C8C41B444F5"
-				item: "create_bic_bit:mayonnaise_ketchup_topped_frikandel_sandwich"
+				item: { count: 1, id: "create_bic_bit:mayonnaise_ketchup_topped_frikandel_sandwich" }
 				type: "item"
 			}]
 			x: -11.25d
@@ -2363,7 +2249,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "6F4BB0D4AA075C9F"
-				item: "create_bic_bit:frikandel_sandwich"
+				item: { count: 1, id: "create_bic_bit:frikandel_sandwich" }
 				type: "item"
 			}]
 			x: -15.75d
@@ -2380,7 +2266,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "1EB894A224387BA6"
-				item: "create_bic_bit:frikandel"
+				item: { count: 1, id: "create_bic_bit:frikandel" }
 				type: "item"
 			}]
 			x: -17.25d
@@ -2398,7 +2284,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "2B53725E6D6511BC"
-				item: "create_bic_bit:ketchup_topped_frikandel_sandwich"
+				item: { count: 1, id: "create_bic_bit:ketchup_topped_frikandel_sandwich" }
 				type: "item"
 			}]
 			x: -14.25d
@@ -2416,7 +2302,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "66B29A3A82557122"
-				item: "create_bic_bit:mayonnaise_topped_frikandel_sandwich"
+				item: { count: 1, id: "create_bic_bit:mayonnaise_topped_frikandel_sandwich" }
 				type: "item"
 			}]
 			x: -12.75d
@@ -2433,7 +2319,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "79567AC632EAC83A"
-				item: "create_bic_bit:bitterballen"
+				item: { count: 1, id: "create_bic_bit:bitterballen" }
 				type: "item"
 			}]
 			x: -8.25d
@@ -2450,7 +2336,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "45E82DE0B2A3916A"
-				item: "create_deepfried:yuca_fries"
+				item: { count: 1, id: "create_deepfried:yuca_fries" }
 				type: "item"
 			}]
 			x: -9.75d
@@ -2462,7 +2348,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "1FCE895C8AB287E2"
-				item: "mynethersdelight:fries_ghasta"
+				item: { count: 1, id: "mynethersdelight:fries_ghasta" }
 				type: "item"
 			}]
 			x: -16.5d
@@ -2475,7 +2361,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "60765C9C59E2421A"
-				item: "createdelightcore:wrapped_fries_ghasta"
+				item: { count: 1, id: "createdelightcore:wrapped_fries_ghasta" }
 				type: "item"
 			}]
 			x: -15.0d
@@ -2487,7 +2373,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "799BBE60CAFB2BC3"
-				item: "create_deepfried:fried_chicken"
+				item: { count: 1, id: "create_deepfried:fried_chicken" }
 				type: "item"
 			}]
 			x: -12.0d
@@ -2499,7 +2385,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "22E762711E3D8691"
-				item: "casualnessdelight:fried_chicken_chip"
+				item: { count: 1, id: "casualnessdelight:fried_chicken_chip" }
 				type: "item"
 			}]
 			x: -8.25d
@@ -2511,7 +2397,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "3A3718FF54DEFD98"
-				item: "youkaishomecoming:oily_bean_curd"
+				item: { count: 1, id: "youkaishomecoming:oily_bean_curd" }
 				type: "item"
 			}]
 			x: -6.75d
@@ -2523,7 +2409,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "32E3AAE46421118D"
-				item: "dungeonsdelight:fried_ghast_calamari"
+				item: { count: 1, id: "dungeonsdelight:fried_ghast_calamari" }
 				type: "item"
 			}]
 			x: -9.75d
@@ -2540,7 +2426,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "61B5CDB09C63038C"
-				item: "create_deepfried:calamari"
+				item: { count: 1, id: "create_deepfried:calamari" }
 				type: "item"
 			}]
 			x: -8.25d
@@ -2557,7 +2443,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "09BD9CB2449D71AC"
-				item: "create_bic_bit:kroket"
+				item: { count: 1, id: "create_bic_bit:kroket" }
 				type: "item"
 			}]
 			x: -17.25d
@@ -2569,7 +2455,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "3C02B646D4B013BB"
-				item: "create_deepfried:donut"
+				item: { count: 1, id: "create_deepfried:donut" }
 				type: "item"
 			}]
 			x: -8.25d
@@ -2586,7 +2472,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "3B74AB09309E7ECC"
-				item: "create_bic_bit:speculaas"
+				item: { count: 1, id: "create_bic_bit:speculaas" }
 				type: "item"
 			}]
 			x: -6.75d
@@ -2604,7 +2490,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "197AEE924A635300"
-				item: "create_bic_bit:kroket_sandwich"
+				item: { count: 1, id: "create_bic_bit:kroket_sandwich" }
 				type: "item"
 			}]
 			x: -15.75d
@@ -2622,7 +2508,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "144D53060DD665FE"
-				item: "create_bic_bit:ketchup_topped_kroket_sandwich"
+				item: { count: 1, id: "create_bic_bit:ketchup_topped_kroket_sandwich" }
 				type: "item"
 			}]
 			x: -14.25d
@@ -2640,7 +2526,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "3D8DA2BF8121B76F"
-				item: "create_bic_bit:mayonnaise_topped_kroket_sandwich"
+				item: { count: 1, id: "create_bic_bit:mayonnaise_topped_kroket_sandwich" }
 				type: "item"
 			}]
 			x: -12.75d
@@ -2661,7 +2547,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "5103EB91ACEF918A"
-				item: "create_bic_bit:mayonnaise_ketchup_topped_kroket_sandwich"
+				item: { count: 1, id: "create_bic_bit:mayonnaise_ketchup_topped_kroket_sandwich" }
 				type: "item"
 			}]
 			x: -11.25d
@@ -2678,7 +2564,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "419441C8543AADAF"
-				item: "create_deepfried:berliner"
+				item: { count: 1, id: "create_deepfried:berliner" }
 				type: "item"
 			}]
 			x: -17.25d
@@ -2696,7 +2582,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "3A5E7B23A485F7E0"
-				item: "create_deepfried:honey_filled_berliner"
+				item: { count: 1, id: "create_deepfried:honey_filled_berliner" }
 				type: "item"
 			}]
 			x: -15.75d
@@ -2717,7 +2603,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "4CB527B8E72A0D30"
-				item: "create_deepfried:coated_honey_berliner"
+				item: { count: 1, id: "create_deepfried:coated_honey_berliner" }
 				type: "item"
 			}]
 			x: -11.25d
@@ -2735,7 +2621,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "11E50FCF54A6BC26"
-				item: "create_deepfried:coated_berliner"
+				item: { count: 1, id: "create_deepfried:coated_berliner" }
 				type: "item"
 			}]
 			x: -12.75d
@@ -2756,7 +2642,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "5D55C3D8D3255043"
-				item: "create_deepfried:coated_chocolate_berliner"
+				item: { count: 1, id: "create_deepfried:coated_chocolate_berliner" }
 				type: "item"
 			}]
 			x: -9.75d
@@ -2774,7 +2660,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "453702F4E283A6AF"
-				item: "create_deepfried:chocolate_filled_berliner"
+				item: { count: 1, id: "create_deepfried:chocolate_filled_berliner" }
 				type: "item"
 			}]
 			x: -14.25d
@@ -2795,7 +2681,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "4991B444E8114807"
-				item: "create_bic_bit:wrapped_mayonnaise_ketchup_topped_fries"
+				item: { count: 1, id: "create_bic_bit:wrapped_mayonnaise_ketchup_topped_fries" }
 				type: "item"
 			}]
 			x: -11.25d
@@ -2813,7 +2699,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "6129B613B95F2561"
-				item: "create_bic_bit:wrapped_ketchup_topped_fries"
+				item: { count: 1, id: "create_bic_bit:wrapped_ketchup_topped_fries" }
 				type: "item"
 			}]
 			x: -14.25d
@@ -2831,7 +2717,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "3B4F764169E8C0C0"
-				item: "create_bic_bit:wrapped_mayonnaise_topped_fries"
+				item: { count: 1, id: "create_bic_bit:wrapped_mayonnaise_topped_fries" }
 				type: "item"
 			}]
 			x: -12.75d
@@ -2849,7 +2735,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "23DF3C03FF7FF020"
-				item: "create_bic_bit:wrapped_fries"
+				item: { count: 1, id: "create_bic_bit:wrapped_fries" }
 				type: "item"
 			}]
 			x: -15.75d
@@ -2866,7 +2752,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "4221E8034F5BF8BB"
-				item: "create_bic_bit:fries"
+				item: { count: 1, id: "create_bic_bit:fries" }
 				type: "item"
 			}]
 			x: -17.25d
@@ -2878,7 +2764,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "0119DBBE3D2DC997"
-				item: "casualnessdelight:potato_chip"
+				item: { count: 1, id: "casualnessdelight:potato_chip" }
 				type: "item"
 			}]
 			x: -7.5d
@@ -2895,7 +2781,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "5B8D07218E059F08"
-				item: "create_deepfried:tempura"
+				item: { count: 1, id: "create_deepfried:tempura" }
 				type: "item"
 			}]
 			x: -13.5d
@@ -2907,7 +2793,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "2D97596750237D1F"
-				item: "casualnessdelight:tonkatsu"
+				item: { count: 1, id: "casualnessdelight:tonkatsu" }
 				type: "item"
 			}]
 			x: -9.75d
@@ -2919,7 +2805,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "612686272C9DB7C0"
-				item: "casualnessdelight:spring_roll"
+				item: { count: 1, id: "casualnessdelight:spring_roll" }
 				type: "item"
 			}]
 			x: -9.75d
@@ -2936,7 +2822,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "41C242DB73A4C3DF"
-				item: "create_bic_bit:enderball"
+				item: { count: 1, id: "create_bic_bit:enderball" }
 				type: "item"
 			}]
 			x: -6.75d
@@ -2953,7 +2839,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "665B1D5592D8D703"
-				item: "create_bic_bit:eggball"
+				item: { count: 1, id: "create_bic_bit:eggball" }
 				type: "item"
 			}]
 			x: -9.0d
@@ -2971,7 +2857,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "0B9E3A9F5D061505"
-				item: "create_bic_bit:wrapped_stroopwafel"
+				item: { count: 1, id: "create_bic_bit:wrapped_stroopwafel" }
 				type: "item"
 			}]
 			x: -15.75d
@@ -2992,7 +2878,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "43D99BBECC2F10BB"
-				item: "create_bic_bit:wrapped_chocolate_glazed_stroopwafel"
+				item: { count: 1, id: "create_bic_bit:wrapped_chocolate_glazed_stroopwafel" }
 				type: "item"
 			}]
 			x: -12.75d
@@ -3010,7 +2896,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "5D44111FF7DFD374"
-				item: "create_bic_bit:chocolate_glazed_stroopwafel"
+				item: { count: 1, id: "create_bic_bit:chocolate_glazed_stroopwafel" }
 				type: "item"
 			}]
 			x: -14.25d
@@ -3027,7 +2913,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "2EFF86CDBB47C3AB"
-				item: "create_bic_bit:stroopwafel"
+				item: { count: 1, id: "create_bic_bit:stroopwafel" }
 				type: "item"
 			}]
 			x: -17.25d
@@ -3044,7 +2930,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "1A6577A430FDF0E2"
-				item: "create_deepfried:corn_dog"
+				item: { count: 1, id: "create_deepfried:corn_dog" }
 				type: "item"
 			}]
 			x: -17.25d
@@ -3062,7 +2948,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "619C5FFCCA0BB4C5"
-				item: "createdelightcore:mayo_corn_dog"
+				item: { count: 1, id: "createdelightcore:mayo_corn_dog" }
 				type: "item"
 			}]
 			x: -14.25d
@@ -3083,7 +2969,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "2A43876CD6CD9703"
-				item: "corn_delight:classic_corn_dog"
+				item: { count: 1, id: "corn_delight:classic_corn_dog" }
 				type: "item"
 			}]
 			x: -12.75d
@@ -3101,7 +2987,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "548EA9A46100CD93"
-				item: "createdelightcore:ketchup_corn_dog"
+				item: { count: 1, id: "createdelightcore:ketchup_corn_dog" }
 				type: "item"
 			}]
 			x: -15.75d
@@ -3118,7 +3004,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "285E352863657D12"
-				item: "create_deepfried:onion_rings"
+				item: { count: 1, id: "create_deepfried:onion_rings" }
 				type: "item"
 			}]
 			x: -6.75d
@@ -3135,7 +3021,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "6CD00F687977E08F"
-				item: "create_bic_bit:cheese_souffle"
+				item: { count: 1, id: "create_bic_bit:cheese_souffle" }
 				type: "item"
 			}]
 			x: -11.25d
@@ -3147,7 +3033,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "7C07D703E766260D"
-				item: "create_deepfried:deepfried_chocolate_bar"
+				item: { count: 1, id: "create_deepfried:deepfried_chocolate_bar" }
 				type: "item"
 			}]
 			x: -8.25d
@@ -3164,7 +3050,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "58E69638B1CC1C80"
-				item: "create_bic_bit:oliebollen"
+				item: { count: 1, id: "create_bic_bit:oliebollen" }
 				type: "item"
 			}]
 			x: -11.25d
@@ -3181,7 +3067,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "51E004A991A6CD2F"
-				item: "create_bic_bit:kruidnoten"
+				item: { count: 1, id: "create_bic_bit:kruidnoten" }
 				type: "item"
 			}]
 			x: -9.75d
@@ -3251,12 +3137,14 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "ftbquests:missing_item"
 			id: "6A073BA63BE48A68"
 			rewards: [{
 				count: 3
 				id: "122E879E287EF928"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -3265,7 +3153,6 @@
 				id: "350C8ADE1078FECE"
 				type: "checkmark"
 			}]
-			title: "美味油炸！"
 			x: -19.0d
 			y: 16.0d
 		}
@@ -3273,13 +3160,11 @@
 			hide_until_deps_complete: true
 			id: "55C5FD7CB6CEECFC"
 			size: 2.0d
-			subtitle: "不喜欢蚊子抱脸的有福了（现实中要是也有就好了）"
 			tasks: [{
 				id: "77D6ABE38E7D7EF1"
-				item: "alexsmobsup:mosquito_repellent_stew"
+				item: { count: 1, id: "alexsmobsup:mosquito_repellent_stew" }
 				type: "item"
 			}]
-			title: "驱蚊炖菜"
 			x: 4.0d
 			y: 21.0d
 		}
@@ -3289,7 +3174,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "300E47476FA6FCB7"
-				item: "vintagedelight:century_egg"
+				item: { count: 1, id: "vintagedelight:century_egg" }
 				type: "item"
 			}]
 			x: -20.0d
@@ -3306,7 +3191,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "1613D3F91C92AA51"
-				item: "vintagedelight:pickled_egg"
+				item: { count: 1, id: "vintagedelight:pickled_egg" }
 				type: "item"
 			}]
 			x: -23.0d
@@ -3323,7 +3208,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "4B950A72F5A8F8C5"
-				item: "vintagedelight:salted_cod"
+				item: { count: 1, id: "vintagedelight:salted_cod" }
 				type: "item"
 			}]
 			x: -24.0d
@@ -3335,7 +3220,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "56B8D12CBC8D027B"
-				item: "vintagedelight:surstromming"
+				item: { count: 1, id: "vintagedelight:surstromming" }
 				type: "item"
 			}]
 			x: -22.0d
@@ -3352,7 +3237,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "22653BD640A6A1B9"
-				item: "culturaldelights:pickle"
+				item: { count: 1, id: "culturaldelights:pickle" }
 				type: "item"
 			}]
 			x: -26.0d
@@ -3365,7 +3250,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "440C70DA0205E1BB"
-				item: "culturaldelights:pickle"
+				item: { count: 1, id: "culturaldelights:pickle" }
 				type: "item"
 			}]
 			x: -24.0d
@@ -3377,7 +3262,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2192C80624D7EB91"
-				item: "vintagedelight:vinegar_bottle"
+				item: { count: 1, id: "vintagedelight:vinegar_bottle" }
 				type: "item"
 			}]
 			x: -20.0d
@@ -3390,7 +3275,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7005FF425B342EAB"
-				item: "vintagedelight:cheese_curds"
+				item: { count: 1, id: "vintagedelight:cheese_curds" }
 				type: "item"
 			}]
 			x: -26.0d
@@ -3403,10 +3288,9 @@
 			size: 2.0d
 			tasks: [{
 				id: "45D86C2E0F997AAF"
-				item: "brewinandchewin:flaxen_cheese_wheel"
+				item: { count: 1, id: "brewinandchewin:flaxen_cheese_wheel" }
 				type: "item"
 			}]
-			title: "无需发酵！"
 			x: -24.0d
 			y: 46.0d
 		}
@@ -3417,10 +3301,9 @@
 			size: 2.0d
 			tasks: [{
 				id: "6AA0F8085F16E89D"
-				item: "trailandtales_delight:cheese_slice"
+				item: { count: 1, id: "trailandtales_delight:cheese_slice" }
 				type: "item"
 			}]
-			title: "豪吃！😋"
 			x: -22.0d
 			y: 46.0d
 		}
@@ -3435,7 +3318,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7CB9235E242A552B"
-				item: "vintagedelight:pickled_onion"
+				item: { count: 1, id: "vintagedelight:pickled_onion" }
 				type: "item"
 			}]
 			x: -22.0d
@@ -3452,7 +3335,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "1A27A27514B05E6B"
-				item: "vintagedelight:salted_salmon"
+				item: { count: 1, id: "vintagedelight:salted_salmon" }
 				type: "item"
 			}]
 			x: -26.0d
@@ -3469,7 +3352,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5B6003C0B8D1D7CC"
-				item: "vintagedelight:pickled_beetroot"
+				item: { count: 1, id: "vintagedelight:pickled_beetroot" }
 				type: "item"
 			}]
 			x: -24.0d
@@ -3481,7 +3364,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "1F0AA2F6FBA36633"
-				item: "createdelightcore:salami"
+				item: { count: 1, id: "createdelightcore:salami" }
 				type: "item"
 			}]
 			x: -22.0d
@@ -3493,7 +3376,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5C7DE1C22921C674"
-				item: "vintagedelight:kimchi"
+				item: { count: 1, id: "vintagedelight:kimchi" }
 				type: "item"
 			}]
 			x: -20.0d
@@ -3505,7 +3388,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5202B0BC8F51FF12"
-				item: "vintagedelight:pickled_pepper"
+				item: { count: 1, id: "vintagedelight:pickled_pepper" }
 				type: "item"
 			}]
 			x: -24.0d
@@ -3539,11 +3422,13 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "dumplings_delight:pork_cabbage_boiled_dumpling"
 			id: "02E768658104AABF"
 			rewards: [{
 				id: "1876A711B5A9D779"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -3552,7 +3437,6 @@
 				id: "6CECBD30B3EE8CEC"
 				type: "checkmark"
 			}]
-			title: "节日佳肴！"
 			x: 2.0d
 			y: 16.0d
 		}
@@ -3562,7 +3446,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "6894DAEEC5C7822A"
-				item: "farmersdelight:dumplings"
+				item: { count: 1, id: "farmersdelight:dumplings" }
 				type: "item"
 			}]
 			x: 6.0d
@@ -3574,7 +3458,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "3F4320F2BCB04AF9"
-				item: "dumplings_delight:pork_cabbage_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:pork_cabbage_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 8.0d
@@ -3586,7 +3470,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "1EC2B040BCED904C"
-				item: "dumplings_delight:pork_kelp_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:pork_kelp_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 10.0d
@@ -3598,7 +3482,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "32E5A22FB2DB8C20"
-				item: "dumplings_delight:pork_potato_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:pork_potato_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 12.0d
@@ -3610,7 +3494,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "520598DD50FB4F5C"
-				item: "dumplings_delight:pork_fennel_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:pork_fennel_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 14.0d
@@ -3622,7 +3506,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "222AF03541CE4136"
-				item: "dumplings_delight:mutton_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:mutton_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -3634,7 +3518,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7DEA6E1F2EE93991"
-				item: "dumplings_delight:chicken_mushroom_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:chicken_mushroom_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 6.0d
@@ -3646,7 +3530,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "0BAACA1B9FBF4211"
-				item: "dumplings_delight:cod_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:cod_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 8.0d
@@ -3658,7 +3542,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7DE9A63CFB5BA843"
-				item: "dumplings_delight:salmon_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:salmon_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 10.0d
@@ -3670,7 +3554,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5DFBCFB92C2CBC96"
-				item: "dumplings_delight:eggplant_egg_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:eggplant_egg_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 12.0d
@@ -3682,7 +3566,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "490CB6807F1A2E32"
-				item: "dumplings_delight:mushroom_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:mushroom_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 14.0d
@@ -3694,7 +3578,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "75BFC8F31AF4020A"
-				item: "dumplings_delight:fungus_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:fungus_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -3706,7 +3590,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "62BDB09AD971915C"
-				item: "dumplings_delight:garlic_chive_egg_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:garlic_chive_egg_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 6.0d
@@ -3718,7 +3602,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "733E0355423C28A8"
-				item: "dumplings_delight:dandelion_leaf_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:dandelion_leaf_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 8.0d
@@ -3730,7 +3614,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7A9BA196C89A93D7"
-				item: "dumplings_delight:pufferfish_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:pufferfish_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 10.0d
@@ -3742,7 +3626,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7D4E5D299B12CEB6"
-				item: "dumplings_delight:rabbit_meat_boiled_dumpling"
+				item: { count: 1, id: "dumplings_delight:rabbit_meat_boiled_dumpling" }
 				type: "item"
 			}]
 			x: 12.0d
@@ -3754,7 +3638,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "65EC3181CB27A620"
-				item: "youkaishomecoming:flesh_dumplings"
+				item: { count: 1, id: "youkaishomecoming:flesh_dumplings" }
 				type: "item"
 			}]
 			x: 14.0d
@@ -3766,7 +3650,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "0C7C20F5EA78900A"
-				item: "casualnessdelight:phantom_dumplings"
+				item: { count: 1, id: "casualnessdelight:phantom_dumplings" }
 				type: "item"
 			}]
 			x: 5.0d
@@ -3778,7 +3662,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "23B78AA35AA76632"
-				item: "dumplings_delight:pork_mushroom_wonton"
+				item: { count: 1, id: "dumplings_delight:pork_mushroom_wonton" }
 				type: "item"
 			}]
 			x: 7.0d
@@ -3790,7 +3674,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7A58D0F9C476AB81"
-				item: "dumplings_delight:pork_cabbage_wonton"
+				item: { count: 1, id: "dumplings_delight:pork_cabbage_wonton" }
 				type: "item"
 			}]
 			x: 9.0d
@@ -3802,7 +3686,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "23F35CC51324C22C"
-				item: "dumplings_delight:pork_carrot_wonton"
+				item: { count: 1, id: "dumplings_delight:pork_carrot_wonton" }
 				type: "item"
 			}]
 			x: 11.0d
@@ -3814,7 +3698,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2EF31D4E30CC2778"
-				item: "brewinandchewin:scarlet_pierogi"
+				item: { count: 1, id: "brewinandchewin:scarlet_pierogi" }
 				type: "item"
 			}]
 			x: 13.0d
@@ -3845,11 +3729,13 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "vintagedelight:century_egg"
 			id: "1CCB1FB4787AB3C8"
 			rewards: [{
 				id: "0AF46A57B4BE4C96"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -3858,7 +3744,6 @@
 				id: "4449A9B63EBDABA6"
 				type: "checkmark"
 			}]
-			title: "腌渍的美味"
 			x: -30.0d
 			y: 36.0d
 		}
@@ -3868,7 +3753,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "3B77F2F65C73219A"
-				item: "vintagedelight:pickled_pitcher_pod"
+				item: { count: 1, id: "vintagedelight:pickled_pitcher_pod" }
 				type: "item"
 			}]
 			x: -26.0d
@@ -3880,7 +3765,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "222A499EECFF0F53"
-				item: "vintagedelight:overnight_oats"
+				item: { count: 1, id: "vintagedelight:overnight_oats" }
 				type: "item"
 			}]
 			x: -22.0d
@@ -3892,7 +3777,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "519231E3000AC124"
-				item: "brewinandchewin:kippers"
+				item: { count: 1, id: "brewinandchewin:kippers" }
 				type: "item"
 			}]
 			x: -20.0d
@@ -3904,7 +3789,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2F0025030DE63922"
-				item: "brewinandchewin:pickled_pickles"
+				item: { count: 1, id: "brewinandchewin:pickled_pickles" }
 				type: "item"
 			}]
 			x: -26.0d
@@ -3916,7 +3801,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "35AA4FA2769BBFFA"
-				item: "createdelightcore:empty_popsicle"
+				item: { count: 1, id: "createdelightcore:empty_popsicle" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -3928,7 +3813,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "4E37DCD10C458C88"
-				item: "ends_delight:chorus_fruit_popsicle"
+				item: { count: 1, id: "ends_delight:chorus_fruit_popsicle" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -3940,7 +3825,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "0E2EAD78A92713E1"
-				item: "casualnessdelight:green_tongue"
+				item: { count: 1, id: "casualnessdelight:green_tongue" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -3952,7 +3837,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "25853C4D59F66188"
-				item: "farmersdelight:melon_popsicle"
+				item: { count: 1, id: "farmersdelight:melon_popsicle" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -3964,7 +3849,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "181B25824B83F4DB"
-				item: "fruitsdelight:hamimelon_popsicle"
+				item: { count: 1, id: "fruitsdelight:hamimelon_popsicle" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -3976,7 +3861,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "479B603F6CAEA44D"
-				item: "fruitsdelight:kiwi_popsicle"
+				item: { count: 1, id: "fruitsdelight:kiwi_popsicle" }
 				type: "item"
 			}]
 			x: 2.0d
@@ -3988,7 +3873,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "3D3BE1D34111768A"
-				item: "mynethersdelight:tear_popsicle"
+				item: { count: 1, id: "mynethersdelight:tear_popsicle" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -4000,7 +3885,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2337560C5147C6A1"
-				item: "collectorsreap:lime_popsicle"
+				item: { count: 1, id: "collectorsreap:lime_popsicle" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -4012,7 +3897,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "1BA1609FB7E4C2E1"
-				item: "youkaishomecoming:milk_popsicle"
+				item: { count: 1, id: "youkaishomecoming:milk_popsicle" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -4024,7 +3909,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "170FFA9AB5E27F40"
-				item: "youkaishomecoming:big_popsicle"
+				item: { count: 1, id: "youkaishomecoming:big_popsicle" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -4045,11 +3930,13 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "farmersdelight:melon_popsicle"
 			id: "07B9873B270439D0"
 			rewards: [{
 				id: "15653AB8CA0B703C"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -4058,18 +3945,19 @@
 				id: "0FA12E85C8B2B5E3"
 				type: "checkmark"
 			}]
-			title: "现在我有冰棍"
 			x: -8.0d
 			y: 36.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "neapolitan:neapolitan_ice_cream"
 			id: "473F48570E933391"
 			rewards: [{
 				id: "7407D0FCB803D137"
-				item: "createdelightcore:netherite_coin"
+				item: {
+					count: 1
+					id: "createdelightcore:netherite_coin"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -4078,10 +3966,8 @@
 				id: "56B8B490D0493CFB"
 				type: "checkmark"
 			}]
-			title: "不止那不勒斯！"
 			x: -52.0d
 			y: 36.0d
 		}
-		]
-	title: "&6料理\"鼠\"王！"
+	]
 }

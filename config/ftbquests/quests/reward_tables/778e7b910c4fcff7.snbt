@@ -1,14 +1,40 @@
 {
-	icon: "createdelightcore:emerald_coin"
 	id: "778E7B910C4FCFF7"
 	loot_size: 1
 	order_index: 14
 	rewards: [
-		{ item: "createdelightcore:iron_coin", weight: 2.0f }
-		{ item: "createdelightcore:copper_coin" }
-		{ item: "createdelightcore:gold_coin", weight: 0.75f }
-		{ item: "createdelightcore:emerald_coin", weight: 0.1f }
-		{ item: "createdelightcore:netherite_coin", weight: 0.01f }
+		{
+			id: "03E52E3851E411DD"
+			item: {
+				count: 1
+				id: "createdelightcore:iron_coin"
+			}
+			weight: 2.0f
+		}
+		{ id: "31063EB9430AB46D", item: { count: 1, id: "createdelightcore:copper_coin" } }
+		{
+			id: "6A51F7C207B7B434"
+			item: {
+				count: 1
+				id: "createdelightcore:gold_coin"
+			}
+			weight: 0.75f
+		}
+		{
+			id: "446486E6463A213A"
+			item: {
+				count: 1
+				id: "createdelightcore:emerald_coin"
+			}
+			weight: 0.1f
+		}
+		{
+			id: "789899DC12D9736E"
+			item: {
+				count: 1
+				id: "createdelightcore:netherite_coin"
+			}
+			weight: 0.01f
+		}
 	]
-	title: "硬币"
 }

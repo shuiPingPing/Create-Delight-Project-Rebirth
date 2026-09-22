@@ -1,10 +1,10 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
-	filename: "Difficulty_System"
+	filename: "difficulty_system"
 	group: "445171CC29E98940"
-	icon: "alexscavesup:pure_darkness"
 	id: "1D6981F32D6C7E04"
+	images: [ ]
 	order_index: 7
 	quest_links: [ ]
 	quests: [
@@ -22,7 +22,6 @@
 			tasks: [{
 				disable_toast: true
 				entity: "minecraft:zombie"
-				icon: "minecraft:zombie_spawn_egg"
 				id: "47C243C807F6471B"
 				type: "kill"
 				value: 15L
@@ -521,7 +520,6 @@
 			id: "5499DBB6A21AA6B4"
 			tasks: [{
 				id: "26B48C7A592567F5"
-				title: "alex洞穴"
 				type: "checkmark"
 			}]
 			x: 4.5d
@@ -532,7 +530,6 @@
 			id: "69203D38506E49E1"
 			tasks: [{
 				id: "7FE5174955107042"
-				title: "alex生物"
 				type: "checkmark"
 			}]
 			x: 5.5d
@@ -813,7 +810,6 @@
 			id: "361A0537D532D41E"
 			tasks: [{
 				id: "0B958327AC5677A3"
-				title: "creeper overhaul"
 				type: "checkmark"
 			}]
 			x: 6.5d
@@ -863,7 +859,6 @@
 				tags: ["rank_1"]
 				type: "custom"
 			}]
-			subtitle: "危机四伏及以上难度时玩家击杀掉落鸡蛇之眼的概率更高"
 			tasks: [{
 				disable_toast: true
 				entity: "iceandfire:cockatrice"
@@ -897,7 +892,6 @@
 			id: "73B1EE6B7623F612"
 			tasks: [{
 				id: "39B09E3B431FDB78"
-				title: "ice and fire"
 				type: "checkmark"
 			}]
 			x: 7.5d
@@ -947,7 +941,6 @@
 				tags: ["rank_1"]
 				type: "custom"
 			}]
-			subtitle: "险象环生及以上难度时玩家击杀有概率掉落龙霜钢"
 			tasks: [{
 				disable_toast: true
 				entity: "iceandfire:dread_ghoul"
@@ -966,7 +959,6 @@
 				tags: ["rank_1"]
 				type: "custom"
 			}]
-			subtitle: "险象环生及以上难度时玩家击杀有概率掉落龙霜钢"
 			tasks: [{
 				disable_toast: true
 				entity: "iceandfire:dread_knight"
@@ -985,7 +977,6 @@
 				tags: ["rank_1"]
 				type: "custom"
 			}]
-			subtitle: "险象环生及以上难度时玩家击杀有概率掉落龙霜钢"
 			tasks: [{
 				disable_toast: true
 				entity: "iceandfire:dread_lich"
@@ -1021,7 +1012,6 @@
 				tags: ["rank_1"]
 				type: "custom"
 			}]
-			subtitle: "险象环生及以上难度时玩家击杀有概率掉落龙霜钢"
 			tasks: [{
 				disable_toast: true
 				entity: "iceandfire:dread_thrall"
@@ -1271,7 +1261,6 @@
 			id: "34726E8C88B9EB24"
 			tasks: [{
 				id: "7BA60C47F54B8919"
-				title: "原版"
 				type: "checkmark"
 			}]
 			x: 8.5d
@@ -1458,7 +1447,6 @@
 			y: 17.5d
 		}
 		{
-			icon: "minecraft:slime_spawn_egg"
 			id: "4FA9CD05A58478D2"
 			rewards: [{
 				auto: "no_toast"
@@ -1502,7 +1490,6 @@
 				tags: ["rank_1"]
 				type: "custom"
 			}]
-			subtitle: "危机四伏及以上难度时玩家击杀有概率掉落伊甸碎片"
 			tasks: [{
 				disable_toast: true
 				entity: "minecraft:wither_skeleton"
@@ -1557,7 +1544,6 @@
 				tags: ["rank_1"]
 				type: "custom"
 			}]
-			subtitle: "危机四伏及以上难度时玩家击杀掉落伊甸图腾的概率更高"
 			tasks: [{
 				disable_toast: true
 				entity: "minecraft:wither"
@@ -1609,7 +1595,6 @@
 			id: "29B36819331EA036"
 			tasks: [{
 				id: "41294F240F5EB613"
-				title: "其他"
 				type: "checkmark"
 			}]
 			x: 9.5d
@@ -1637,7 +1622,6 @@
 			id: "6AD592C5D877F7D9"
 			tasks: [{
 				id: "6864CBC3667BCF9F"
-				title: "前往维度"
 				type: "checkmark"
 			}]
 			x: 3.5d
@@ -1774,7 +1758,6 @@
 			tasks: [{
 				dimension: "createdelightcore:lunar_farside"
 				id: "69FA9C531CABE582"
-				title: "前往月背异常区，解锁异寂空谷"
 				type: "dimension"
 			}]
 			x: 3.5d
@@ -1819,7 +1802,6 @@
 			id: "19F7D16F2E003480"
 			tasks: [{
 				id: "6A08DE376B14F5A8"
-				title: "难度提升"
 				type: "checkmark"
 			}]
 			x: 11.5d
@@ -1832,15 +1814,13 @@
 				tags: ["rank_10"]
 				type: "custom"
 			}]
-			subtitle: "交付这些物品就可以提高10点难度值！"
 			tasks: [{
 				consume_items: true
 				count: 8L
 				id: "464B36CA12B5D392"
-				item: "alexscavesup:pure_darkness"
+				item: { count: 1, id: "alexscavesup:pure_darkness" }
 				type: "item"
 			}]
-			title: "觉得难度太低了？"
 			x: 11.5d
 			y: -0.5d
 		}
@@ -1849,7 +1829,6 @@
 			id: "5CA456D3407F3AFB"
 			tasks: [{
 				id: "750EAC7BE640D75A"
-				title: "难度降低"
 				type: "checkmark"
 			}]
 			x: 12.5d
@@ -1862,24 +1841,16 @@
 				tags: ["unrank_10"]
 				type: "custom"
 			}]
-			subtitle: "交付这些物品就可以降低10点难度值！"
 			tasks: [{
 				consume_items: true
 				id: "154772CE9D75B183"
-				item: "createdelightcore:gold_coin"
+				item: { count: 1, id: "createdelightcore:gold_coin" }
 				type: "item"
 			}]
-			title: "觉得难度太高了？"
 			x: 12.5d
 			y: -0.5d
 		}
 		{
-			description: [
-				"如果你是第一次领取这个任务的奖励，则你的难度将不再发生变化&4（交付物品的任务与玩家死亡也不会变化）&r。"
-				"此后的重复完成任务，领取奖励则是切换难度是否要变化。"
-				"此任务是为了解决&e不想要难度系统的玩家&r的难度焦虑，同时也是为因死亡难以保持难度的&e较高难度的玩家&r服务。"
-				"实际上，经过我们包的各种削弱，我们整合包的难度系统在保持在暗流涌动时都是较为安全的。"
-			]
 			id: "4CA7F329E5D39D5B"
 			rewards: [{
 				id: "4105A52905074F27"
@@ -1887,37 +1858,22 @@
 				type: "custom"
 			}]
 			size: 2.0d
-			subtitle: "切换是否允许难度值发生变化"
 			tasks: [{
 				id: "4156F5EFC8ADAA2B"
-				title: "切换难度变化开关"
 				type: "checkmark"
 			}]
 			x: 15.0d
 			y: -1.0d
 		}
 		{
-			description: [
-				"本整合包的难度是独立于原版和平/简单/普通/困难之外的一套数值系统。"
-				"难度值为0时是&e风平浪静&r；1~100为&e暗流涌动&r；101~200为&e危机四伏&r；201~300为&e险象环生&r；301~450为&e生灵涂炭&r；451~600为&e末日降临&r；600以上为&e诸神黄昏&r。"
-				"本章节中的击杀任务与维度任务会提高难度值，其中部分维度任务只会在首次完成时提供一次性奖励。"
-				"右侧两个交付任务可以手动增加或减少10点难度值；如果你不想让难度继续变化，也可以在右侧切换难度变化开关。"
-				"死亡不会直接清空总难度，而是扣除你当前档位内约35%的进度，并按5点向上取整；如果你刚进入新档位不久，则可能掉回上一档的后段。"
-				"屏幕左侧会显示你当前所处的难度档位与本档进度，部分怪物的额外掉落也会要求达到对应难度及以上。"
-				"&etips:也可以使用/improvedmobs查看当前难度值。&r"
-			]
-			icon: "alexscavesup:immortal_embryo"
 			id: "23815A088A715478"
 			size: 2.5d
-			subtitle: "独立于原版难度的数值分档系统"
 			tasks: [{
 				id: "5CF4EFDC992F2581"
-				title: "难度系统概述"
 				type: "checkmark"
 			}]
 			x: 12.0d
 			y: 2.0d
 		}
 	]
-	title: "难度索引"
 }

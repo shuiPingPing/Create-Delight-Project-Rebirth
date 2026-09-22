@@ -2,7 +2,5 @@
 	id: "727701800F2CDE21"
 	loot_size: 1
 	order_index: 24
-	rewards: [
-		]
-	title: "果莱姆"
+	rewards: [ ]
 }

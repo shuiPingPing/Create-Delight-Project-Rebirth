@@ -3,8 +3,7 @@
 	loot_size: 1
 	order_index: 31
 	rewards: [
-		{ item: "create:empty_schematic" }
-		{ item: "fluidlogistics:empty_fluid_schematic" }
+		{ id: "0C87B15F97234E45", item: { count: 1, id: "create:empty_schematic" } }
+		{ id: "5F434EA129D58B25", item: { count: 1, id: "fluidlogistics:empty_fluid_schematic" } }
 	]
-	title: "空白蓝图"
 }

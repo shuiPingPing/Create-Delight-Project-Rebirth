@@ -3,10 +3,37 @@
 	loot_size: 1
 	order_index: 9
 	rewards: [
-		{ count: 3, item: "vinery:red_grape_seeds" }
-		{ count: 3, item: "vinery:savanna_grape_seeds_red" }
-		{ count: 3, item: "vinery:taiga_grape_seeds_red" }
-		{ count: 3, item: "vinery:jungle_grape_seeds_red" }
+		{
+			count: 3
+			id: "68594DC7AB885EE3"
+			item: {
+				count: 1
+				id: "vinery:red_grape_seeds"
+			}
+		}
+		{
+			count: 3
+			id: "5E2171AB5F94F537"
+			item: {
+				count: 1
+				id: "vinery:savanna_grape_seeds_red"
+			}
+		}
+		{
+			count: 3
+			id: "25D59DA0961699D8"
+			item: {
+				count: 1
+				id: "vinery:taiga_grape_seeds_red"
+			}
+		}
+		{
+			count: 3
+			id: "24A963E7D9FF99A8"
+			item: {
+				count: 1
+				id: "vinery:jungle_grape_seeds_red"
+			}
+		}
 	]
-	title: "红葡萄种"
 }

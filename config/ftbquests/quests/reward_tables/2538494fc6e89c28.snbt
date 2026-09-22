@@ -13,183 +13,72 @@
 	order_index: 22
 	rewards: [
 		{
+			id: "0A11F95C4049E796"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:emerald_grove"
-				}
 			}
 			weight: 2.0f
 		}
 		{
+			id: "76E9698EF77D592A"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:overworldian_nights"
-				}
 			}
 			weight: 2.0f
 		}
 		{
+			id: "7E6EAEC49DF1C59C"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:endless/blaze"
-				}
 			}
 			weight: 2.0f
 		}
 		{
+			id: "3300F8766ABAAAD5"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:ice_dragon"
-				}
 			}
 			weight: 1.5f
 		}
 		{
+			id: "2EC21146A2B7F27F"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:lightning_dragon"
-				}
 			}
 			weight: 1.5f
 		}
 		{
+			id: "75D941E2583D7DB2"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:fire_dragon_eyes"
-				}
 			}
 			weight: 1.5f
 		}
 		{
+			id: "32156465E6C1E164"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:hellish_fortress"
-				}
 			}
 			weight: 1.5f
 		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:sweettide_brokenpoint"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:infinite_and_dark_trials"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_gate_of_eternal_cold"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:piercing_withering_trial"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:dream_no_more"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:a_place_of_melting"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:magnetic_storm_field"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:shattered_past"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:oath_of_fierce_blade_ouel"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:wind_mist_and_thunder_strike"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_legacy_of_the_abyss"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_ancient_end"
-				}
-			}
-		}
+		{ id: "014C8F7F74A251BD", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "17587A07AFC5550D", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "6440F5CFDC0B1921", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "317D3B07DED2758A", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "458B5135143089F1", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "478FBE6FB98C6636", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "36F453255980D2FB", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "27FB1C2526351528", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "0A41EC50CEAFEFD1", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "2D4027F3E96F4E31", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "75F888E1BF32FC14", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "48FA967D8005519E", item: { count: 1, id: "gateways:gate_pearl" } }
 	]
-	title: "深度提取"
 }

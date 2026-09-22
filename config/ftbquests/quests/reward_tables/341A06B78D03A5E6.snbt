@@ -1,23 +1,42 @@
 {
-	icon: "minecraft:wheat_seeds"
 	id: "341A06B78D03A5E6"
 	loot_size: 1
 	order_index: 13
 	rewards: [
-		{ item: "minecraft:wheat_seeds", weight: 5.0f }
-		{ item: "minecraft:pumpkin_seeds" }
-		{ item: "minecraft:melon_seeds" }
-		{ item: "minecraft:beetroot_seeds" }
-		{ item: "fruitsdelight:durian_sapling" }
-		{ item: "fruitsdelight:lemon_seeds" }
-		{ item: "createcafe:cassava_seeds" }
-		{ item: "farmersdelight:cabbage_seeds", weight: 5.0f }
-		{ item: "farmersdelight:tomato_seeds", weight: 5.0f }
-		{ item: "vintagedelight:cucumber_seeds" }
-		{ item: "culturaldelights:eggplant_seeds" }
-		{ item: "culturaldelights:eggplant_seeds" }
-		{ item: "quark:seed_pouch" }
-		{ item: "supplementaries:flax_seeds" }
+		{
+			id: "55AB959222C6F8F0"
+			item: {
+				count: 1
+				id: "minecraft:wheat_seeds"
+			}
+			weight: 5.0f
+		}
+		{ id: "08F85A5FDBB4BF1F", item: { count: 1, id: "minecraft:pumpkin_seeds" } }
+		{ id: "5A569AC383AA313C", item: { count: 1, id: "minecraft:melon_seeds" } }
+		{ id: "2D3C4E39983301E3", item: { count: 1, id: "minecraft:beetroot_seeds" } }
+		{ id: "67243A5AE198381A", item: { count: 1, id: "fruitsdelight:durian_sapling" } }
+		{ id: "69449FDA4DC972A2", item: { count: 1, id: "fruitsdelight:lemon_seeds" } }
+		{ id: "40C11273D0D52D7F", item: { count: 1, id: "createcafe:cassava_seeds" } }
+		{
+			id: "65A6E48EF224371C"
+			item: {
+				count: 1
+				id: "farmersdelight:cabbage_seeds"
+			}
+			weight: 5.0f
+		}
+		{
+			id: "44FA1BF68A29888E"
+			item: {
+				count: 1
+				id: "farmersdelight:tomato_seeds"
+			}
+			weight: 5.0f
+		}
+		{ id: "3791238DBF719ED2", item: { count: 1, id: "vintagedelight:cucumber_seeds" } }
+		{ id: "70AE4CE8E5785A56", item: { count: 1, id: "culturaldelights:eggplant_seeds" } }
+		{ id: "5466E33D7DC49DE2", item: { count: 1, id: "culturaldelights:eggplant_seeds" } }
+		{ id: "1F305A8512DEB609", item: { count: 1, id: "quark:seed_pouch" } }
+		{ id: "659CB7B7FAB909F0", item: { count: 1, id: "supplementaries:flax_seeds" } }
 	]
-	title: "种子"
 }

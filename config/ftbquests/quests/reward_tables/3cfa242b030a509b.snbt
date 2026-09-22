@@ -5,48 +5,58 @@
 	rewards: [
 		{
 			command: "/summon youkaishomecoming:yukari ~ ~ ~"
+			id: "41F6329005E46B8B"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:kochiya_sanae ~ ~ ~"
+			id: "6D8FF4F9D9D09453"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:kirisame_marisa ~ ~ ~"
+			id: "7E900ABDD7DED303"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:komeiji_koishi ~ ~ ~"
+			id: "7B5A64286CE9AB04"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:remilia_scarlet ~ ~ ~"
+			id: "4720B4A6C9D1A034"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:mystia_lorelei ~ ~ ~"
+			id: "5F952ECCD5C81AF7"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:sunny_milk ~ ~ ~"
+			id: "6EFEA6D4BF502395"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:clownpiece ~ ~ ~"
+			id: "05D8E4D8F88D2052"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:eternity_larva ~ ~ ~"
+			id: "01E572A21667DCD7"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:luna_child ~ ~ ~"
+			id: "6AAB6C5B2B140047"
 			type: "command"
 		}
 		{
 			command: "/summon youkaishomecoming:star_sapphire ~ ~ ~"
+			id: "49574D44E4AFF08D"
 			type: "command"
 		}
 	]
-	title: "妖怪们的归家 无法召唤的生物"
 }

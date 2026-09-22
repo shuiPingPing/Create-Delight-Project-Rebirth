@@ -1,17 +1,64 @@
 {
-	icon: "iceandfire:dragonsteel_ice_ingot"
 	id: "150802B9EFFFEDCA"
 	loot_size: 1
 	order_index: 18
 	rewards: [
-		{ count: 4, item: "iceandfire:dragonsteel_fire_ingot" }
-		{ count: 4, item: "iceandfire:dragonsteel_lightning_ingot" }
-		{ count: 4, item: "iceandfire:dragonsteel_ice_ingot" }
-		{ count: 8, item: "minecraft:netherite_ingot" }
-		{ item: "createdelightcore:dread_heart" }
-		{ count: 4, item: "alexscavesup:immortal_embryo" }
-		{ item: "alexscavesup:immortal_embryo", weight: 0.2f }
-		{ item: "alexscavesup:pure_darkness", weight: 0.2f }
+		{
+			count: 4
+			id: "04D33D255F99E4D2"
+			item: {
+				count: 1
+				id: "iceandfire:dragonsteel_fire_ingot"
+			}
+		}
+		{
+			count: 4
+			id: "1C1ADF84D7E004D7"
+			item: {
+				count: 1
+				id: "iceandfire:dragonsteel_lightning_ingot"
+			}
+		}
+		{
+			count: 4
+			id: "353AA51F16EB9BF3"
+			item: {
+				count: 1
+				id: "iceandfire:dragonsteel_ice_ingot"
+			}
+		}
+		{
+			count: 8
+			id: "5558F2229F6E003C"
+			item: {
+				count: 1
+				id: "minecraft:netherite_ingot"
+			}
+		}
+		{ id: "3402AFFF7F309041", item: { count: 1, id: "createdelightcore:dread_heart" } }
+		{
+			count: 4
+			id: "4FEBA6540B65944C"
+			item: {
+				count: 1
+				id: "alexscavesup:immortal_embryo"
+			}
+		}
+		{
+			id: "765AAD2719AE7919"
+			item: {
+				count: 1
+				id: "alexscavesup:immortal_embryo"
+			}
+			weight: 0.2f
+		}
+		{
+			id: "13F0C7110230237E"
+			item: {
+				count: 1
+				id: "alexscavesup:pure_darkness"
+			}
+			weight: 0.2f
+		}
 	]
-	title: "锻造大师奖励"
 }

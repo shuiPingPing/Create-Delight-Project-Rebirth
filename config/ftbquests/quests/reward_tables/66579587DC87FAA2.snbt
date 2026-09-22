@@ -2,7 +2,5 @@
 	id: "66579587DC87FAA2"
 	loot_size: 1
 	order_index: 12
-	rewards: [
-		]
-	title: "茶叶"
+	rewards: [ ]
 }

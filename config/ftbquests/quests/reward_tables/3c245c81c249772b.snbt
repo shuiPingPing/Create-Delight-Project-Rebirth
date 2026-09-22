@@ -13,232 +13,167 @@
 	order_index: 21
 	rewards: [
 		{
+			id: "0CF2E3081DD1987C"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:basic/slime"
-				}
 			}
 			weight: 2.0f
 		}
 		{
+			id: "3167454092D1D028"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:basic/enderman"
-				}
 			}
 			weight: 2.0f
 		}
 		{
+			id: "06F4E34DDDEEAB84"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:basic/blaze"
-				}
 			}
 			weight: 2.0f
 		}
 		{
+			id: "5EB4E0045160258C"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:ghast_trial"
-				}
 			}
 			weight: 2.0f
 		}
+		{ id: "3701E16A028719AB", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "5C9DC44245A4FAFA", item: { count: 1, id: "gateways:gate_pearl" } }
+		{ id: "2EC515B9A39E1A96", item: { count: 1, id: "gateways:gate_pearl" } }
 		{
+			id: "019A834DDFDEEA32"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:overworldian_nights"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:emerald_grove"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:endless/blaze"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:ice_dragon"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "5F088D61DEC49BD2"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:lightning_dragon"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "15C9B2270DFE19C3"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:fire_dragon_eyes"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "0B94F78CC8B2D1D7"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "gateways:hellish_fortress"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "44C62E6CF57753F2"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:sweettide_brokenpoint"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "18ECE9B7EABF0BC9"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:infinite_and_dark_trials"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "3AB014A98434A1AC"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_gate_of_eternal_cold"
-				}
 			}
 			weight: 0.1f
 		}
 		{
+			id: "25B2EBCD1A6399C4"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:piercing_withering_trial"
-				}
 			}
 			weight: 0.1f
 		}
 		{
+			id: "0A8BCAF25E9993CB"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:dream_no_more"
-				}
 			}
 			weight: 0.1f
 		}
 		{
+			id: "68480DA7008C00CE"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:a_place_of_melting"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "2E9147B595EDA9AF"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:magnetic_storm_field"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "52811D267CF1D8DE"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:shattered_past"
-				}
 			}
 			weight: 0.2f
 		}
 		{
+			id: "166AB236C888144A"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:oath_of_fierce_blade_ouel"
-				}
 			}
 			weight: 0.2f
 		}
 		{
+			id: "2E5C57341B00EEB3"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:wind_mist_and_thunder_strike"
-				}
 			}
 			weight: 0.2f
 		}
 		{
+			id: "594AF8CAEE1C4176"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_legacy_of_the_abyss"
-				}
 			}
 			weight: 0.5f
 		}
 		{
+			id: "68FB10181EC88FFD"
 			item: {
-				Count: 1
+				count: 1
 				id: "gateways:gate_pearl"
-				tag: {
-					gateway: "createdelightcore:the_ancient_end"
-				}
 			}
 			weight: 0.5f
 		}
 	]
-	title: "裂隙提取"
 }

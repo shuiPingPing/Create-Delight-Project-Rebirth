@@ -1,17 +1,22 @@
 {
-	icon: "tetra:pristine_amethyst"
 	id: "1CD4E0DD3154FC5C"
 	loot_size: 1
 	order_index: 17
 	rewards: [
-		{ item: "minecraft:diamond" }
-		{ item: "tetra:pristine_diamond" }
-		{ item: "minecraft:lapis_lazuli" }
-		{ item: "tetra:pristine_lapis" }
-		{ item: "tetra:pristine_emerald" }
-		{ item: "minecraft:amethyst_shard", weight: 5.0f }
-		{ item: "tetra:pristine_amethyst" }
-		{ item: "minecraft:ender_pearl" }
+		{ id: "12F76487880D0102", item: { count: 1, id: "minecraft:diamond" } }
+		{ id: "61F748CC5F9282D0", item: { count: 1, id: "tetra:pristine_diamond" } }
+		{ id: "10D6E07D37FC251B", item: { count: 1, id: "minecraft:lapis_lazuli" } }
+		{ id: "22CC0DAFE8F766A1", item: { count: 1, id: "tetra:pristine_lapis" } }
+		{ id: "587B3DD076B7FE3E", item: { count: 1, id: "tetra:pristine_emerald" } }
+		{
+			id: "0464FD6FD004D706"
+			item: {
+				count: 1
+				id: "minecraft:amethyst_shard"
+			}
+			weight: 5.0f
+		}
+		{ id: "321D013527E490DE", item: { count: 1, id: "tetra:pristine_amethyst" } }
+		{ id: "0B78017571949392", item: { count: 1, id: "minecraft:ender_pearl" } }
 	]
-	title: "宝石"
 }

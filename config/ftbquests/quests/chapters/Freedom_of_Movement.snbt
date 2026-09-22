@@ -2,16 +2,13 @@
 	autofocus_id: "7DED9A87C6CB80F0"
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "Freedom_of_Movement"
+	filename: "freedom_of_movement"
 	group: "445171CC29E98940"
 	icon: {
-		Count: 1
 		id: "minecraft:elytra"
-		tag: {
-			Damage: 0
-		}
 	}
 	id: "2EDF2DB3AA62F7A0"
+	images: [ ]
 	order_index: 4
 	quest_links: [ ]
 	quests: [
@@ -25,7 +22,7 @@
 			}]
 			tasks: [{
 				id: "0C890E7F19BB1B3C"
-				item: "immersive_aircraft:engine"
+				item: { count: 1, id: "immersive_aircraft:engine" }
 				type: "item"
 			}]
 			x: 1.0d
@@ -44,7 +41,7 @@
 			}]
 			tasks: [{
 				id: "34135D56C95501D2"
-				item: "immersive_aircraft:steel_boiler"
+				item: { count: 1, id: "immersive_aircraft:steel_boiler" }
 				type: "item"
 			}]
 			x: 1.0d
@@ -60,7 +57,7 @@
 			}]
 			tasks: [{
 				id: "1322A85CB519792C"
-				item: "immersive_aircraft:biplane"
+				item: { count: 1, id: "immersive_aircraft:biplane" }
 				type: "item"
 			}]
 			x: 2.5d
@@ -76,7 +73,7 @@
 			}]
 			tasks: [{
 				id: "26E4D73211447E09"
-				item: "immersive_aircraft:airship"
+				item: { count: 1, id: "immersive_aircraft:airship" }
 				type: "item"
 			}]
 			x: 2.5d
@@ -92,7 +89,7 @@
 			}]
 			tasks: [{
 				id: "40D26CAD9398C731"
-				item: "immersive_aircraft:cargo_airship"
+				item: { count: 1, id: "immersive_aircraft:cargo_airship" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -108,7 +105,7 @@
 			}]
 			tasks: [{
 				id: "6885E943D683E604"
-				item: "immersive_aircraft:quadrocopter"
+				item: { count: 1, id: "immersive_aircraft:quadrocopter" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -125,11 +122,9 @@
 			tasks: [{
 				dimension: "minecraft:overworld"
 				disable_toast: true
-				icon: "immersive_aircraft:engine"
 				id: "2318B47F940EA014"
 				type: "dimension"
 			}]
-			title: "更好的飞机配件！"
 			x: 1.0d
 			y: 3.0d
 		}
@@ -143,7 +138,7 @@
 			}]
 			tasks: [{
 				id: "5F5EF0BB956BD389"
-				item: "immersive_aircraft:eco_engine"
+				item: { count: 1, id: "immersive_aircraft:eco_engine" }
 				type: "item"
 			}]
 			x: 2.5d
@@ -159,7 +154,7 @@
 			}]
 			tasks: [{
 				id: "0CEF48770EAE4BB5"
-				item: "immersive_aircraft:nether_engine"
+				item: { count: 1, id: "immersive_aircraft:nether_engine" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -175,7 +170,7 @@
 			}]
 			tasks: [{
 				id: "76432D7204F527D7"
-				item: "immersive_aircraft:sturdy_pipes"
+				item: { count: 1, id: "immersive_aircraft:sturdy_pipes" }
 				type: "item"
 			}]
 			x: 1.0d
@@ -191,7 +186,7 @@
 			}]
 			tasks: [{
 				id: "0AAB5D43B422A2E6"
-				item: "immersive_aircraft:enhanced_propeller"
+				item: { count: 1, id: "immersive_aircraft:enhanced_propeller" }
 				type: "item"
 			}]
 			x: 1.0d
@@ -207,7 +202,7 @@
 			}]
 			tasks: [{
 				id: "11DC2B0814BD1EC2"
-				item: "immersive_aircraft:improved_landing_gear"
+				item: { count: 1, id: "immersive_aircraft:improved_landing_gear" }
 				type: "item"
 			}]
 			x: 2.5d
@@ -223,7 +218,7 @@
 			}]
 			tasks: [{
 				id: "5452F183BD45F18A"
-				item: "immersive_aircraft:gyroscope"
+				item: { count: 1, id: "immersive_aircraft:gyroscope" }
 				type: "item"
 			}]
 			x: 2.5d
@@ -239,7 +234,7 @@
 			}]
 			tasks: [{
 				id: "2A2E11F0FAFA1E5E"
-				item: "immersive_aircraft:industrial_gears"
+				item: { count: 1, id: "immersive_aircraft:industrial_gears" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -255,7 +250,7 @@
 			}]
 			tasks: [{
 				id: "61867F9A16B8D79A"
-				item: "immersive_aircraft:hull_reinforcement"
+				item: { count: 1, id: "immersive_aircraft:hull_reinforcement" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -274,7 +269,7 @@
 			}]
 			tasks: [{
 				id: "7537CB3054B1ACAA"
-				item: "immersive_aircraft:boiler"
+				item: { count: 1, id: "immersive_aircraft:boiler" }
 				type: "item"
 			}]
 			x: -0.5d
@@ -290,11 +285,7 @@
 			}]
 			tasks: [{
 				id: "02B5B77F52AD24D4"
-				item: {
-					Count: 1
-					id: "create_sa:large_fueling_tank"
-					tag: { }
-				}
+				item: { count: 1, id: "create_sa:large_fueling_tank" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -310,11 +301,7 @@
 			}]
 			tasks: [{
 				id: "4C99C42057DF87D6"
-				item: {
-					Count: 1
-					id: "create_sa:medium_fueling_tank"
-					tag: { }
-				}
+				item: { count: 1, id: "create_sa:medium_fueling_tank" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -331,11 +318,7 @@
 			}]
 			tasks: [{
 				id: "5C83585D863F36A4"
-				item: {
-					Count: 1
-					id: "create_sa:small_fueling_tank"
-					tag: { }
-				}
+				item: { count: 1, id: "create_sa:small_fueling_tank" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -346,131 +329,108 @@
 			id: "130011EAAAB3FA06"
 			rewards: [{
 				id: "48CA53A506A8A439"
-				item: "butchercraft:cooked_beef_roast"
+				item: {
+					count: 1
+					id: "butchercraft:cooked_beef_roast"
+				}
 				type: "item"
 			}]
-			subtitle: "可以手搓，每公里油耗仅为1块&e牛又"
 			tasks: [{
 				id: "0FDC15B013EEFC92"
-				item: "immersive_aircraft:gyrodyne"
+				item: { count: 1, id: "immersive_aircraft:gyrodyne" }
 				type: "item"
 			}]
-			title: "第一架最简单的小飞机！"
 			x: -0.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["58A94F4B434B31CD"]
-			description: ["这是你获得的最强机械外骨骼，它通过储存的水增强你的攻击力，时刻注意剩余的水以免&4被爆金币"]
 			id: "1953677BFA82BE78"
 			rewards: [
 				{
 					count: 2
 					id: "542A021738784E6C"
-					item: "minecraft:coal_block"
+					item: {
+						count: 1
+						id: "minecraft:coal_block"
+					}
 					type: "item"
 				}
 				{
 					count: 2
 					id: "1CCF41BDB3638AFC"
-					item: "minecraft:water_bucket"
+					item: {
+						count: 1
+						id: "minecraft:water_bucket"
+					}
 					type: "item"
 				}
 			]
-			subtitle: "可以给你&e急迫&r和&e力量&r的效果，算是&e有点用处&r了"
 			tasks: [{
 				id: "6C1E4FAAD921C97B"
-				item: {
-					Count: 1
-					id: "create_sa:brass_exoskeleton_chestplate"
-					tag: {
-						Damage: 0
-					}
-				}
+				item: { count: 1, id: "create_sa:brass_exoskeleton_chestplate" }
 				type: "item"
 			}]
-			title: "又快又强！"
 			x: -5.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["5E7D248B3C15ADFD"]
-			description: [
-				"这是你获得的第二个喷气背包，它通过喷出储存的燃料让你起飞，时刻注意剩余的燃料以免&4高空坠物"
-				"把喷气背包放在副手，&4按Q或者直接扔出手中的燃料&r以补充喷气背包中的燃料，或者使用便携流体储罐（可以&4自动补充&r喷气背包中的燃料）"
-				"在空气中按空格以起飞&e（最大高度&r&a17&r&e格）&r"
-				"在水中按空格时可以启动潜水模式让你&e游得更快"
-			]
 			id: "6B880C8734FE8D0C"
 			rewards: [{
 				count: 2
 				id: "43005D9026B04874"
-				item: "minecraft:coal_block"
-				type: "item"
-			}]
-			subtitle: "让&2环保之母&r非常非常的不开心"
-			tasks: [{
-				id: "7CC7D7A885A81C7A"
 				item: {
-					Count: 1
-					id: "create_sa:andesite_jetpack_chestplate"
-					tag: {
-						Damage: 0
-					}
+					count: 1
+					id: "minecraft:coal_block"
 				}
 				type: "item"
 			}]
-			title: "&0水洗煤&r上天！"
+			tasks: [{
+				id: "7CC7D7A885A81C7A"
+				item: { count: 1, id: "create_sa:andesite_jetpack_chestplate" }
+				type: "item"
+			}]
 			x: -3.5d
 			y: 1.0d
 		}
 		{
 			dependencies: ["5E7D248B3C15ADFD"]
-			description: ["这是你获得另一个的机械外骨骼，它通过储存的燃料增强你的挖掘速度，时刻注意燃料储备以免&4挖不动东西&r把外骨骼放在副手，&4按Q或者直接扔出手中的燃料&r以补充外骨骼中的水，或者使用便携流体储罐（可以&4自动补充&r外骨骼中的燃料）"]
 			id: "1C146812ECEF35E0"
 			rewards: [{
 				count: 2
 				id: "6B28930F2CEFB90B"
-				item: "minecraft:coal_block"
-				type: "item"
-			}]
-			subtitle: "这玩意可以给你&e急迫II&r但同时也会给你&4虚弱&r，算是&e挖矿神器"
-			tasks: [{
-				id: "4D75DE983D0917D3"
 				item: {
-					Count: 1
-					id: "create_sa:andesite_exoskeleton_chestplate"
-					tag: {
-						Damage: 0
-					}
+					count: 1
+					id: "minecraft:coal_block"
 				}
 				type: "item"
 			}]
-			title: "很快但是很弱！"
+			tasks: [{
+				id: "4D75DE983D0917D3"
+				item: { count: 1, id: "create_sa:andesite_exoskeleton_chestplate" }
+				type: "item"
+			}]
 			x: -3.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5E7D248B3C15ADFD"]
-			description: ["对准远处方块右键即可立体机动（&4心脏撒撒给哟&r）！强烈建议配合黄铜喷气背包体验飞一般的感觉（&e这玩意甚至比鞘翅还要好用&r）"]
 			id: "00C0C609FD96A90D"
 			rewards: [{
 				count: 2
 				id: "1CF63D40028E380C"
-				item: "minecraft:coal_block"
-				type: "item"
-			}]
-			subtitle: "哎嘿，&e走位~走位~"
-			tasks: [{
-				id: "47F375F3B49B541E"
 				item: {
-					Count: 1
-					id: "create_sa:grapplin_whisk"
-					tag: { }
+					count: 1
+					id: "minecraft:coal_block"
 				}
 				type: "item"
 			}]
-			title: "我愿称之为&e赶路的神！！！"
+			tasks: [{
+				id: "47F375F3B49B541E"
+				item: { count: 1, id: "create_sa:grapplin_whisk" }
+				type: "item"
+			}]
 			x: -2.0d
 			y: 1.5d
 		}
@@ -479,7 +439,7 @@
 			id: "58A94F4B434B31CD"
 			tasks: [{
 				id: "1362E4F2860F2E07"
-				item: "create_sa:steam_engine"
+				item: { count: 1, id: "create_sa:steam_engine" }
 				type: "item"
 			}]
 			x: -4.5d
@@ -490,7 +450,7 @@
 			id: "5E7D248B3C15ADFD"
 			tasks: [{
 				id: "232E0C5C246B1812"
-				item: "create_sa:heat_engine"
+				item: { count: 1, id: "create_sa:heat_engine" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -498,35 +458,32 @@
 		}
 		{
 			dependencies: ["58A94F4B434B31CD"]
-			description: ["这是你前中期可以获得的最强的喷气背包，它通过储存的燃料和水让你起飞，时刻注意剩余以免&4高空坠物"]
 			id: "3622034AE0FD46AA"
 			rewards: [
 				{
 					count: 2
 					id: "734B0CBC515EA4D9"
-					item: "minecraft:coal_block"
+					item: {
+						count: 1
+						id: "minecraft:coal_block"
+					}
 					type: "item"
 				}
 				{
 					count: 2
 					id: "029A1C877FF37BC6"
-					item: "minecraft:water_bucket"
+					item: {
+						count: 1
+						id: "minecraft:water_bucket"
+					}
 					type: "item"
 				}
 			]
-			subtitle: "黄铜背包！我的神！"
 			tasks: [{
 				id: "6B724B9CA33802F1"
-				item: {
-					Count: 1
-					id: "create_sa:brass_jetpack_chestplate"
-					tag: {
-						Damage: 0
-					}
-				}
+				item: { count: 1, id: "create_sa:brass_jetpack_chestplate" }
 				type: "item"
 			}]
-			title: "让我们飞的更快一些！"
 			x: -5.5d
 			y: -4.0d
 		}
@@ -535,29 +492,19 @@
 			id: "6FC1C0839095AC2D"
 			tasks: [{
 				id: "32229E6063255A14"
-				item: {
-					Count: 1
-					id: "minecraft:elytra"
-					tag: {
-						Damage: 0
-					}
-				}
+				item: { count: 1, id: "minecraft:elytra" }
 				type: "item"
 			}]
-			title: "天空才不是我的极限！"
 			x: -2.0d
 			y: -5.5d
 		}
 		{
 			dependencies: ["41C38AC7AA97CFAD"]
-			icon: "man_of_many_planes:economy_plane"
 			id: "7DED9A87C6CB80F0"
 			shape: "hexagon"
 			size: 2.0d
-			subtitle: "{ \"text\": \"启动飞行模式！\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7DED9A87C6CB80F0\" } }"
 			tasks: [{
 				id: "7DE6E5BD8D3D1A81"
-				title: "准备起飞！"
 				type: "checkmark"
 			}]
 			x: -2.0d
@@ -568,7 +515,7 @@
 			id: "52036812E8C02D60"
 			tasks: [{
 				id: "6B4CDEDB13CC29BC"
-				item: "immersive_aircraft:rotary_cannon"
+				item: { count: 1, id: "immersive_aircraft:rotary_cannon" }
 				type: "item"
 			}]
 			x: -0.5d
@@ -579,7 +526,7 @@
 			id: "07C55A79B24B5FF8"
 			tasks: [{
 				id: "248AD33B7AACAB74"
-				item: "immersive_aircraft:heavy_crossbow"
+				item: { count: 1, id: "immersive_aircraft:heavy_crossbow" }
 				type: "item"
 			}]
 			x: -0.5d
@@ -590,7 +537,7 @@
 			id: "152B248FDC49A174"
 			tasks: [{
 				id: "762AE28242A79926"
-				item: "immersive_aircraft:bomb_bay"
+				item: { count: 1, id: "immersive_aircraft:bomb_bay" }
 				type: "item"
 			}]
 			x: -0.5d
@@ -601,7 +548,7 @@
 			id: "4AF11FA853E59985"
 			tasks: [{
 				id: "0675F2B38D9C7B23"
-				item: "immersive_aircraft:telescope"
+				item: { count: 1, id: "immersive_aircraft:telescope" }
 				type: "item"
 			}]
 			x: -0.5d
@@ -611,14 +558,9 @@
 			dependencies: ["7DED9A87C6CB80F0"]
 			hide_dependency_lines: true
 			id: "2053C8AC43D015A0"
-			subtitle: "对着水右键就可以取水了，但是这玩意是只貔貅（只进不出）..."
 			tasks: [{
 				id: "427E8221A84132DA"
-				item: {
-					Count: 1
-					id: "create_sa:small_filling_tank"
-					tag: { }
-				}
+				item: { count: 1, id: "create_sa:small_filling_tank" }
 				type: "item"
 			}]
 			x: -3.5d
@@ -627,14 +569,9 @@
 		{
 			dependencies: ["2053C8AC43D015A0"]
 			id: "7B0F4836728F6D5D"
-			subtitle: "对着水右键就可以取水了，但是这玩意是只貔貅（只进不出）..."
 			tasks: [{
 				id: "3D704E7BD0461AC5"
-				item: {
-					Count: 1
-					id: "create_sa:medium_filling_tank"
-					tag: { }
-				}
+				item: { count: 1, id: "create_sa:medium_filling_tank" }
 				type: "item"
 			}]
 			x: -3.5d
@@ -642,17 +579,11 @@
 		}
 		{
 			dependencies: ["7B0F4836728F6D5D"]
-			description: ["非常非常建议你做一个大型的便携流体储罐，这玩意带在身上可以直接让你的喷气背包多出&42倍的续航时间"]
 			hide_dependent_lines: true
 			id: "074C76DFE4961F74"
-			subtitle: "对着水右键就可以取水了，但是这玩意是只貔貅（只进不出）..."
 			tasks: [{
 				id: "336BD3B045C62DBE"
-				item: {
-					Count: 1
-					id: "create_sa:large_filling_tank"
-					tag: { }
-				}
+				item: { count: 1, id: "create_sa:large_filling_tank" }
 				type: "item"
 			}]
 			x: -3.5d
@@ -663,57 +594,40 @@
 			id: "664A7BCA64EF8857"
 			rewards: [{
 				id: "082812D6BFE92EE1"
-				item: "create:copper_sheet"
+				item: {
+					count: 1
+					id: "create:copper_sheet"
+				}
 				random_bonus: 9
 				type: "item"
 			}]
-			subtitle: "谁发现的液压？一定要给他颁诺贝尔奖！"
 			tasks: [{
 				id: "432CD8441A6694B0"
-				item: "create_sa:hydraulic_engine"
+				item: { count: 1, id: "create_sa:hydraulic_engine" }
 				type: "item"
 			}]
-			title: " &1p＝ρgh"
 			x: 0.5d
 			y: -3.0d
 		}
 		{
 			dependencies: ["664A7BCA64EF8857"]
-			description: ["这是你获得的第一个喷气背包，它通过喷出储存的水让你起飞，时刻注意剩余的水以免&4高空坠物"]
 			id: "3CCD7E34B8DDB3D2"
-			subtitle: "啊？这就可以飞了？"
 			tasks: [{
 				id: "7DBB0F0669D2EDBA"
-				item: {
-					Count: 1
-					id: "create_sa:copper_jetpack_chestplate"
-					tag: {
-						Damage: 0
-					}
-				}
+				item: { count: 1, id: "create_sa:copper_jetpack_chestplate" }
 				type: "item"
 			}]
-			title: "起飞~"
 			x: 0.5d
 			y: -4.5d
 		}
 		{
 			dependencies: ["664A7BCA64EF8857"]
-			description: ["这是你获得的第一个机械外骨骼，它通过储存的水增强你的攻击力，时刻注意剩余的水以免&4被爆金币"]
 			id: "4AD353EACDE6DD71"
-			subtitle: "这玩意可以给你&e力量II&r但同时也会给你&4挖掘疲劳&r，话说这玩意&4真的有用吗？"
 			tasks: [{
 				id: "0282053DDEEB7B60"
-				item: {
-					Count: 1
-					id: "create_sa:copper_exoskeleton_chestplate"
-					tag: {
-						Damage: 0
-					}
-				}
+				item: { count: 1, id: "create_sa:copper_exoskeleton_chestplate" }
 				type: "item"
 			}]
-			title: "机械飞升？"
 			x: 2.0d
 			y: -3.0d
 		}
@@ -722,13 +636,11 @@
 			id: "21A255A324AD3CE0"
 			invisible: true
 			invisible_until_tasks: 1
-			subtitle: "什么叫做机械飞升啊（&e后仰&r）"
 			tasks: [{
 				id: "121589E89F15DAA9"
-				item: "create_enchantment_industry:enchanting_template"
+				item: { count: 1, id: "create_enchantment_industry:enchanting_template" }
 				type: "item"
 			}]
-			title: "&1附魔工业！！！"
 			x: 9.0d
 			y: -1.5d
 		}
@@ -737,82 +649,68 @@
 			id: "40DE31F53D2C424C"
 			invisible: true
 			invisible_until_tasks: 1
-			subtitle: "真的，列车系统是整个机械动力里面&e最美最浪漫&r的系统了&e(✧◡✧)"
 			tasks: [{
 				id: "37D58CAA456CDA8F"
-				item: "create:railway_casing"
+				item: { count: 1, id: "create:railway_casing" }
 				type: "item"
 			}]
-			title: "火车一响，&e黄金万两&r！"
 			x: 10.5d
 			y: 1.0d
 		}
 		{
 			dependencies: ["40DE31F53D2C424C"]
 			id: "0C08D93D8F1DAD66"
-			subtitle: "用它检测列车！"
 			tasks: [{
 				id: "62326848FB146F1F"
-				item: "create:track_observer"
+				item: { count: 1, id: "create:track_observer" }
 				type: "item"
 			}]
-			title: "哦？车来了！"
 			x: 11.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["40DE31F53D2C424C"]
 			id: "49DDEA93CFD2BAA5"
-			subtitle: "手动操作列车（记得切&4第三人称视角&r）"
 			tasks: [{
 				id: "351C4CF3527C87D1"
-				item: "create:controls"
+				item: { count: 1, id: "create:controls" }
 				type: "item"
 			}]
-			title: "体验一把列车长的快乐！"
 			x: 12.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["1DAD17F55E0D4B85"]
 			id: "270B0ACA8FAB5482"
-			subtitle: "放置烈焰人于列车并使用列车时刻表以&4自动控制列车&r！"
 			tasks: [{
 				id: "2541BFE96AAC9309"
-				item: "create:schedule"
+				item: { count: 1, id: "create:schedule" }
 				type: "item"
 			}]
-			title: "&e准时！准点！"
 			x: 13.0d
 			y: -4.5d
 		}
 		{
 			dependencies: ["5A8FA422166974A0"]
-			description: ["最最最最经典的列车轨道，是我童年的记忆！"]
-			icon: "create:track"
 			id: "1DAD17F55E0D4B85"
 			shape: "hexagon"
 			size: 2.0d
-			subtitle: "{ \"text\": \"汽笛轰鸣\", \"underlined\": \"true\", \"color\":\"blue\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7DED9A87C6CB80F0\" } }"
 			tasks: [{
 				id: "26A805D9752BC8C9"
-				item: "create:track"
+				item: { count: 1, id: "create:track" }
 				type: "item"
 			}]
-			title: "轨道交通！"
 			x: 10.5d
 			y: -4.5d
 		}
 		{
 			dependencies: ["12DF597B6B5CD4A3"]
 			id: "3914C78F40176BB3"
-			subtitle: "烈焰人使用超越经验可增加一级附魔，&e突破极限！"
 			tasks: [{
 				id: "360698F9348E1A09"
-				item: "create_enchantment_industry:super_experience_nugget"
+				item: { count: 1, id: "create_enchantment_industry:super_experience_nugget" }
 				type: "item"
 			}]
-			title: "这是...&1超越附魔？"
 			x: 7.5d
 			y: 1.5d
 		}
@@ -823,11 +721,9 @@
 			]
 			dependency_requirement: "one_completed"
 			id: "12DF597B6B5CD4A3"
-			subtitle: "你成功了！&e无限附魔工业&r向你敞开了大门"
 			tasks: [{
 				advancement: "create_enchantment_industry:additional_order"
 				criterion: ""
-				icon: "create_sa:heap_of_experience"
 				id: "5DADDEB866CA0624"
 				type: "advancement"
 			}]
@@ -837,69 +733,58 @@
 		{
 			dependencies: ["21A255A324AD3CE0"]
 			id: "27F30A468AFE992E"
-			subtitle: "你的第一次烈焰人附魔"
 			tasks: [{
 				advancement: "create_enchantment_industry:first_order"
 				criterion: ""
-				icon: "create:experience_nugget"
 				id: "2A9A2957E4D3D674"
 				type: "advancement"
 			}]
-			title: "芜湖！成功附魔！"
 			x: 9.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["21A255A324AD3CE0"]
 			id: "6D3E4BC39109B85C"
-			subtitle: "我知道了！&4蠹虫经验机&r！"
 			tasks: [{
-				icon: "minecraft:silverfish_spawn_egg"
 				id: "798983C0DDEEA44D"
+				observation_type: "entity_type"
 				observe_type: 5
 				timer: 0L
 				to_observe: "minecraft:silverfish"
 				type: "observation"
 			}]
-			title: "这是...&e蠹虫&r？"
 			x: 7.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["40DE31F53D2C424C"]
 			id: "524FC60B4E4AEBAA"
-			subtitle: "右键轨道后放置列车站！"
 			tasks: [{
 				id: "142D90837EFF3B98"
-				item: "create:track_station"
+				item: { count: 1, id: "create:track_station" }
 				type: "item"
 			}]
-			title: "创建列车第一步！"
 			x: 9.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["40DE31F53D2C424C"]
 			id: "5A52BEB442B35A32"
-			subtitle: "采用列车信号机吧，从此以后&e不再撞车~"
 			tasks: [{
 				id: "5A0EFD809F015721"
-				item: "create:track_signal"
+				item: { count: 1, id: "create:track_signal" }
 				type: "item"
 			}]
-			title: "哦不，他们撞车了！"
 			x: 10.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["3622034AE0FD46AA"]
 			id: "50C856849F88D673"
-			subtitle: "悬浮！！极速！！背饰栏！！！！"
 			tasks: [{
 				id: "5EC35CD2636BF24C"
 				type: "checkmark"
 			}]
-			title: "悬浮喷气背包！"
 			x: -7.0d
 			y: -4.0d
 		}
@@ -908,7 +793,7 @@
 			id: "0C0CFC7F2BA5C877"
 			tasks: [{
 				id: "2F161BD55339EAC4"
-				item: "man_of_many_planes:scarlet_biplane"
+				item: { count: 1, id: "man_of_many_planes:scarlet_biplane" }
 				type: "item"
 			}]
 			x: 2.5d
@@ -919,7 +804,7 @@
 			id: "2A0807E6092A927B"
 			tasks: [{
 				id: "4C3CB0B2C074515E"
-				item: "man_of_many_planes:economy_plane"
+				item: { count: 1, id: "man_of_many_planes:economy_plane" }
 				type: "item"
 			}]
 			x: 4.0d
@@ -933,24 +818,15 @@
 			]
 			hide_until_deps_complete: true
 			id: "6D20D47B7F514221"
-			subtitle: "寻找群系与结构的位置"
 			tasks: [
 				{
 					id: "7494AC6EFB55C460"
-					item: {
-						Count: 1
-						id: "naturescompass:naturescompass"
-						tag: { }
-					}
+					item: { count: 1, id: "naturescompass:naturescompass" }
 					type: "item"
 				}
 				{
 					id: "7609894C79E62F6D"
-					item: {
-						Count: 1
-						id: "explorerscompass:explorerscompass"
-						tag: { }
-					}
+					item: { count: 1, id: "explorerscompass:explorerscompass" }
 					type: "item"
 				}
 			]
@@ -958,5 +834,4 @@
 			y: -1.5d
 		}
 	]
-	title: "&e来去自由！"
 }

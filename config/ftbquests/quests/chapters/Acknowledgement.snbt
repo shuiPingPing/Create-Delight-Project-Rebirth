@@ -1,32 +1,16 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "Acknowledgement"
+	filename: "acknowledgement"
 	group: ""
 	icon: {
-		Count: 1
 		id: "minecraft:player_head"
-		tag: {
-			SkullOwner: {
-				Id: [I;
-					-1481240249
-					609436865
-					-2133274348
-					1779033550
-				]
-				Name: "hk11238981"
-				Properties: {
-					textures: [{
-						Value: "ewogICJ0aW1lc3RhbXAiIDogMTcxOTY1NTc5MTg4NCwKICAicHJvZmlsZUlkIiA6ICJhN2I2MTE0NzI0NTM0NGMxODBkOGQxMTQ2YTA5ZTVjZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJoazExMjM4OTgxIiwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JhMTg1NzljYmY1OGUyYmQyNWJiOTJjMTJmYTc3MGE2NTYxYzY1MzZjZTkxOGVkZjNmYjQzOGNiMmEyYTljMzIiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jZDlkODJhYjE3ZmQ5MjAyMmRiZDRhODZjZGU0YzM4MmE3NTQwZTExN2ZhZTdiOWEyODUzNjU4NTA1YTgwNjI1IgogICAgfQogIH0KfQ=="
-					}]
-				}
-			}
-		}
 	}
 	id: "594FBA0D053A2225"
 	images: [
 		{
 			height: 5.0d
+			id: "76CA6C5C8216361F"
 			image: "refurbished_furniture:item/television_remote"
 			order: 1
 			rotation: 0.0d
@@ -36,6 +20,7 @@
 		}
 		{
 			height: 5.0d
+			id: "4F65C0D0DC7A065C"
 			image: "minecraft:item/music_disc_otherside"
 			rotation: 0.0d
 			width: 5.0d
@@ -44,6 +29,7 @@
 		}
 		{
 			height: 2.8d
+			id: "672742A2CDB5399B"
 			image: "createdelightcore:textures/gui/windy_create.png"
 			order: 2
 			rotation: 0.0d
@@ -53,6 +39,7 @@
 		}
 		{
 			height: 4.0d
+			id: "0DA43F32DCBABAB7"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -61,6 +48,7 @@
 		}
 		{
 			height: 1.5d
+			id: "6DC981E870D5F0A3"
 			image: "create:block/andesite_casing"
 			order: 1
 			rotation: 0.0d
@@ -70,6 +58,7 @@
 		}
 		{
 			height: 2.5d
+			id: "65A76CD886851E2D"
 			image: "create:block/andesite_casing"
 			order: 3
 			rotation: 0.0d
@@ -79,6 +68,7 @@
 		}
 		{
 			height: 2.5d
+			id: "7BE82F03283CCE91"
 			image: "create:block/andesite_casing"
 			order: 3
 			rotation: 0.0d
@@ -88,6 +78,7 @@
 		}
 		{
 			height: 2.0d
+			id: "1186172C9A55D5CF"
 			image: "dramaticdoors:block/short_ms_iron_bar_door"
 			order: -2
 			rotation: 0.0d
@@ -97,6 +88,7 @@
 		}
 		{
 			height: 2.0d
+			id: "3AB723FFC23BFD1F"
 			image: "minecraft:block/stone_bricks"
 			order: 1
 			rotation: 0.0d
@@ -106,6 +98,7 @@
 		}
 		{
 			height: 2.0d
+			id: "203EED5B39FF9EA6"
 			image: "minecraft:block/stone_bricks"
 			order: 1
 			rotation: 0.0d
@@ -115,6 +108,7 @@
 		}
 		{
 			height: 2.0d
+			id: "1D0AEF32798ACF66"
 			image: "minecraft:block/stone_bricks"
 			order: 1
 			rotation: 0.0d
@@ -124,6 +118,7 @@
 		}
 		{
 			height: 2.0d
+			id: "70AE3C0C7FD7B28C"
 			image: "minecraft:block/stone_bricks"
 			order: -1
 			rotation: 0.0d
@@ -133,6 +128,7 @@
 		}
 		{
 			height: 2.0d
+			id: "1E97D4694BCD430B"
 			image: "minecraft:block/stone_bricks"
 			order: 1
 			rotation: 0.0d
@@ -142,6 +138,7 @@
 		}
 		{
 			height: 2.0d
+			id: "65669B7A343D50E1"
 			image: "dramaticdoors:block/short_ms_iron_bar_door"
 			order: -2
 			rotation: 0.0d
@@ -151,6 +148,7 @@
 		}
 		{
 			height: 2.0d
+			id: "260176AF9EB77358"
 			image: "dramaticdoors:block/short_ms_iron_bar_door"
 			order: -2
 			rotation: 0.0d
@@ -160,6 +158,7 @@
 		}
 		{
 			height: 2.0d
+			id: "6DF4E914E804DC55"
 			image: "dramaticdoors:block/short_ms_iron_bar_door"
 			order: -2
 			rotation: 0.0d
@@ -169,6 +168,7 @@
 		}
 		{
 			height: 2.0d
+			id: "69D4EBB80144B773"
 			image: "youkaishomecoming:item/crops/udumbara_flower"
 			order: 3
 			rotation: 0.0d
@@ -178,6 +178,7 @@
 		}
 		{
 			height: 1.0d
+			id: "54D50229C5C33C3C"
 			image: "createdelightcore:textures/gui/ceneralcimera117.png"
 			order: 3
 			rotation: 0.0d
@@ -187,6 +188,7 @@
 		}
 		{
 			height: 1.8d
+			id: "2B93F4BFD58204F5"
 			image: "createdelightcore:textures/gui/ceneralcimera117_s_video.png"
 			order: 6
 			rotation: 0.0d
@@ -196,6 +198,7 @@
 		}
 		{
 			height: 1.5d
+			id: "6CC8DF1C090F9968"
 			image: "create:item/brass_hand"
 			order: 7
 			rotation: 0.0d
@@ -205,6 +208,7 @@
 		}
 		{
 			height: 1.5d
+			id: "776BD90AFB4AEB54"
 			image: "create:item/brass_hand"
 			order: 2
 			rotation: 0.0d
@@ -214,6 +218,7 @@
 		}
 		{
 			height: 1.5d
+			id: "12DC7C08E955B980"
 			image: "vintageimprovements:block/andesite_frame"
 			order: 4
 			rotation: 0.0d
@@ -223,6 +228,7 @@
 		}
 		{
 			height: 1.5d
+			id: "6611FFB7AA3C5173"
 			image: "supplementaries:item/candle_holders/base"
 			order: 9
 			rotation: 0.0d
@@ -232,6 +238,7 @@
 		}
 		{
 			height: 1.5d
+			id: "7A6F6F08CB15CBAC"
 			image: "supplementaries:item/candle_holders/base"
 			order: 9
 			rotation: 0.0d
@@ -241,6 +248,7 @@
 		}
 		{
 			height: 1.5d
+			id: "29BE5EAD77FC2FC3"
 			image: "supplementaries:item/candle_holders/base"
 			order: 7
 			rotation: 0.0d
@@ -250,6 +258,7 @@
 		}
 		{
 			height: 2.0d
+			id: "02B40229C737C513"
 			image: "displaydelight:item/food_plate"
 			order: 9
 			rotation: 0.0d
@@ -259,6 +268,7 @@
 		}
 		{
 			height: 2.0d
+			id: "10D5DD7525A12924"
 			image: "minecraft:block/stone_bricks"
 			order: 1
 			rotation: 0.0d
@@ -268,6 +278,7 @@
 		}
 		{
 			height: 2.0d
+			id: "7A717154916F03EA"
 			image: "minecraft:block/stone_bricks"
 			order: 1
 			rotation: 0.0d
@@ -277,6 +288,7 @@
 		}
 		{
 			height: 2.0d
+			id: "725CB2F131F90842"
 			image: "minecraft:block/stone_bricks"
 			order: 1
 			rotation: 0.0d
@@ -286,6 +298,7 @@
 		}
 		{
 			height: 2.0d
+			id: "5718944BB90F17C5"
 			image: "dramaticdoors:block/short_ms_iron_bar_door"
 			order: -2
 			rotation: 0.0d
@@ -295,6 +308,7 @@
 		}
 		{
 			height: 2.0d
+			id: "0D1DDA84846088D0"
 			image: "dramaticdoors:block/short_ms_iron_bar_door"
 			order: -2
 			rotation: 0.0d
@@ -304,6 +318,7 @@
 		}
 		{
 			height: 2.0d
+			id: "6387AC61AE9142A0"
 			image: "dramaticdoors:block/short_ms_iron_bar_door"
 			order: -2
 			rotation: 0.0d
@@ -313,6 +328,7 @@
 		}
 		{
 			height: 2.0d
+			id: "371A346026D9C160"
 			image: "dramaticdoors:block/short_ms_iron_bar_door"
 			order: -2
 			rotation: 0.0d
@@ -322,6 +338,7 @@
 		}
 		{
 			height: 2.0d
+			id: "3B4C2E02919A8154"
 			image: "minecraft:block/stone_bricks"
 			order: -2
 			rotation: 0.0d
@@ -331,6 +348,7 @@
 		}
 		{
 			height: 2.0d
+			id: "0754D16F5B2B4812"
 			image: "minecraft:block/stone_bricks"
 			order: -2
 			rotation: 0.0d
@@ -340,6 +358,7 @@
 		}
 		{
 			height: 4.6d
+			id: "6225C232C2F56B25"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -348,6 +367,7 @@
 		}
 		{
 			height: 3.3d
+			id: "2995944744D038FD"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -356,6 +376,7 @@
 		}
 		{
 			height: 3.3d
+			id: "43BC9635F6EA6FD6"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -364,6 +385,7 @@
 		}
 		{
 			height: 2.0d
+			id: "720422648446DFE5"
 			image: "ae2:block/controller"
 			rotation: 0.0d
 			width: 2.0d
@@ -372,6 +394,7 @@
 		}
 		{
 			height: 2.0d
+			id: "37C5C5EED68999B1"
 			image: "ae2:block/controller_lights"
 			order: 1
 			rotation: 0.0d
@@ -381,6 +404,7 @@
 		}
 		{
 			height: 1.5d
+			id: "7162962EE2154380"
 			image: "create:item/goggles"
 			order: 1
 			rotation: 0.0d
@@ -390,6 +414,7 @@
 		}
 		{
 			height: 2.0d
+			id: "10D57CB7E066096C"
 			image: "createprism:block/andesite_glass_casing"
 			rotation: 0.0d
 			width: 2.0d
@@ -398,6 +423,7 @@
 		}
 		{
 			height: 1.0d
+			id: "30AD796D755DA1EE"
 			image: "minecraft:item/nether_star"
 			order: 1
 			rotation: 0.0d
@@ -407,6 +433,7 @@
 		}
 		{
 			height: 1.0d
+			id: "0D357CA3BD9EC83A"
 			image: "minecraft:item/nether_star"
 			rotation: 0.0d
 			width: 1.0d
@@ -415,6 +442,7 @@
 		}
 		{
 			height: 1.0d
+			id: "729DD06E09AECE67"
 			image: "minecraft:item/nether_star"
 			rotation: 0.0d
 			width: 1.0d
@@ -423,6 +451,7 @@
 		}
 		{
 			height: 1.0d
+			id: "37220E3655DCA415"
 			image: "minecraft:item/nether_star"
 			rotation: 0.0d
 			width: 1.0d
@@ -431,6 +460,7 @@
 		}
 		{
 			height: 1.0d
+			id: "1C45C7F6D5CB8502"
 			image: "minecraft:item/nether_star"
 			rotation: 0.0d
 			width: 1.0d
@@ -439,6 +469,7 @@
 		}
 		{
 			height: 1.0d
+			id: "160CA19A82427D36"
 			image: "minecraft:item/nether_star"
 			rotation: 0.0d
 			width: 1.0d
@@ -447,6 +478,7 @@
 		}
 		{
 			height: 1.0d
+			id: "55365631C6FF8202"
 			image: "createdelightcore:textures/gui/qd_windy_word.png"
 			order: 4
 			rotation: 0.0d
@@ -456,6 +488,7 @@
 		}
 		{
 			height: 1.8d
+			id: "1DAD468066B29514"
 			image: "create:item/precision_mechanism"
 			order: 3
 			rotation: 0.0d
@@ -465,6 +498,7 @@
 		}
 		{
 			height: 2.5d
+			id: "266C3070B1A9DC24"
 			image: "createdelightcore:textures/gui/mochenccc.png"
 			order: 1
 			rotation: 0.0d
@@ -474,6 +508,7 @@
 		}
 		{
 			height: 3.3d
+			id: "2EC2E498507FD0F8"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -482,6 +517,7 @@
 		}
 		{
 			height: 3.3d
+			id: "3400946A88B1D8C9"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -490,6 +526,7 @@
 		}
 		{
 			height: 1.5d
+			id: "69BD01541EAF7902"
 			image: "create:block/andesite_casing"
 			order: 5
 			rotation: 0.0d
@@ -499,6 +536,7 @@
 		}
 		{
 			height: 1.5d
+			id: "5B823EB2A6FCABF2"
 			image: "create:item/brass_hand"
 			order: 2
 			rotation: 0.0d
@@ -508,6 +546,7 @@
 		}
 		{
 			height: 1.5d
+			id: "0D74343CCA780097"
 			image: "casualnessdelight:item/beef_noodles"
 			order: 4
 			rotation: 0.0d
@@ -517,6 +556,7 @@
 		}
 		{
 			height: 2.5d
+			id: "5549340C0A9A36FF"
 			image: "createdelightcore:textures/gui/mochenccc_.png"
 			order: 1
 			rotation: 0.0d
@@ -526,6 +566,7 @@
 		}
 		{
 			height: 3.3d
+			id: "13ED573CEC784589"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -534,6 +575,7 @@
 		}
 		{
 			height: 3.3d
+			id: "65A1EC439D662EA0"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -542,6 +584,7 @@
 		}
 		{
 			height: 3.3d
+			id: "4AE228277A8F1286"
 			image: "create:block/andesite_casing"
 			rotation: 0.0d
 			width: 3.3d
@@ -550,6 +593,7 @@
 		}
 		{
 			height: 3.3d
+			id: "6060760D31B7FBEC"
 			image: "create:block/andesite_casing"
 			rotation: 0.0d
 			width: 3.3d
@@ -558,6 +602,7 @@
 		}
 		{
 			height: 3.3d
+			id: "6E3F42D25557A5D5"
 			image: "create:block/andesite_casing"
 			rotation: 0.0d
 			width: 3.3d
@@ -566,6 +611,7 @@
 		}
 		{
 			height: 2.0d
+			id: "35B2662E3FE43837"
 			image: "cuisinedelight:item/plate"
 			order: 3
 			rotation: 0.0d
@@ -575,6 +621,7 @@
 		}
 		{
 			height: 1.7d
+			id: "3BFB6E539EB9E97E"
 			image: "create:block/palettes/stone_types/alternatives/andesite_cut_bond"
 			order: 1
 			rotation: 0.0d
@@ -584,6 +631,7 @@
 		}
 		{
 			height: 1.5d
+			id: "22A1CB78DAFB0365"
 			image: "create:item/brass_hand"
 			order: 2
 			rotation: 0.0d
@@ -593,6 +641,7 @@
 		}
 		{
 			height: 1.7d
+			id: "1524AC956EEC885D"
 			image: "create:block/palettes/stone_types/alternatives/andesite_cut_bond"
 			order: 1
 			rotation: 0.0d
@@ -602,6 +651,7 @@
 		}
 		{
 			height: 1.7d
+			id: "12B9ED3278B89E6F"
 			image: "create:block/palettes/stone_types/alternatives/andesite_cut_bond"
 			order: 1
 			rotation: 0.0d
@@ -611,6 +661,7 @@
 		}
 		{
 			height: 3.0d
+			id: "4BD3E8CB60078CE7"
 			image: "createdelightcore:textures/gui/minecraft_csgo.png"
 			order: 4
 			rotation: 0.0d
@@ -620,6 +671,7 @@
 		}
 		{
 			height: 4.0d
+			id: "14BFB6686B791E43"
 			image: "createdelightcore:textures/gui/soridlu.png"
 			order: 1
 			rotation: 0.0d
@@ -629,6 +681,7 @@
 		}
 		{
 			height: 5.0d
+			id: "09B7F62178C56920"
 			image: "create:block/andesite_casing"
 			rotation: 0.0d
 			width: 5.0d
@@ -637,6 +690,7 @@
 		}
 		{
 			height: 1.5d
+			id: "0CA2C2F6DAD2C5A1"
 			image: "ae2:block/io_port_side"
 			order: 3
 			rotation: 0.0d
@@ -646,6 +700,7 @@
 		}
 		{
 			height: 1.5d
+			id: "57F3BCAAD07878B6"
 			image: "ae2:block/io_port_top"
 			rotation: 0.0d
 			width: 1.5d
@@ -654,6 +709,7 @@
 		}
 		{
 			height: 1.5d
+			id: "714D379D0399892D"
 			image: "ae2:block/io_port_top"
 			rotation: 0.0d
 			width: 1.5d
@@ -662,6 +718,7 @@
 		}
 		{
 			height: 1.5d
+			id: "17A707F07B461F42"
 			image: "create:block/andesite_casing"
 			order: 5
 			rotation: 0.0d
@@ -671,6 +728,7 @@
 		}
 		{
 			height: 3.0d
+			id: "1CF5FF6A706841E3"
 			image: "createcafe:item/blood_orange"
 			order: 1
 			rotation: 0.0d
@@ -680,6 +738,7 @@
 		}
 		{
 			height: 6.0d
+			id: "7DB2EF7D2864AFA2"
 			image: "fruitsdelight:item/orange_juice"
 			rotation: 0.0d
 			width: 6.0d
@@ -688,6 +747,7 @@
 		}
 		{
 			height: 3.0d
+			id: "650EB974FD9A4937"
 			image: "createcafe:item/blood_orange"
 			order: 1
 			rotation: 0.0d
@@ -697,6 +757,7 @@
 		}
 		{
 			height: 3.0d
+			id: "70A00451AA5C64A3"
 			image: "createcafe:item/blood_orange"
 			order: 1
 			rotation: 0.0d
@@ -706,6 +767,7 @@
 		}
 		{
 			height: 1.5d
+			id: "324553DB43B3FFCA"
 			image: "create:block/andesite_casing"
 			order: 5
 			rotation: 0.0d
@@ -715,6 +777,7 @@
 		}
 		{
 			height: 6.0d
+			id: "66259911608EC3E1"
 			image: "createdelightcore:textures/gui/y00_cool.png"
 			order: -1
 			rotation: 0.0d
@@ -724,6 +787,7 @@
 		}
 		{
 			height: 7.0d
+			id: "6FAE34D9DF0853AC"
 			image: "create:block/andesite_casing"
 			order: -2
 			rotation: 0.0d
@@ -733,6 +797,7 @@
 		}
 		{
 			height: 3.0d
+			id: "3BFF1F764A2FA2D5"
 			image: "createcafe:item/blood_orange"
 			order: 1
 			rotation: 0.0d
@@ -742,6 +807,7 @@
 		}
 		{
 			height: 4.0d
+			id: "553462700012333D"
 			image: "fruitsdelight:block/orange_sapling"
 			rotation: 0.0d
 			width: 4.0d
@@ -750,6 +816,7 @@
 		}
 		{
 			height: 3.0d
+			id: "3203555A85F32C94"
 			image: "minecraft:block/orange_tulip"
 			rotation: 0.0d
 			width: 3.0d
@@ -758,6 +825,7 @@
 		}
 		{
 			height: 2.6d
+			id: "24901DB950930EF8"
 			image: "alexscavesup:block/radon_lamp_orange"
 			order: 6
 			rotation: 0.0d
@@ -767,6 +835,7 @@
 		}
 		{
 			height: 4.0d
+			id: "42AF46A1AC10589C"
 			image: "cuisinedelight:item/plate"
 			order: -1
 			rotation: 0.0d
@@ -776,6 +845,7 @@
 		}
 		{
 			height: 4.0d
+			id: "5E3D695C2EB81B36"
 			image: "create:item/crafting_blueprint"
 			order: 10
 			rotation: 0.0d
@@ -785,6 +855,7 @@
 		}
 		{
 			height: 11.0d
+			id: "2732E20F7342799A"
 			image: "create:entity/blueprint_large"
 			rotation: 0.0d
 			width: 11.0d
@@ -793,6 +864,7 @@
 		}
 		{
 			height: 4.0d
+			id: "44D7435475A244EC"
 			image: "create:item/empty_schematic"
 			order: 10
 			rotation: 0.0d
@@ -802,6 +874,7 @@
 		}
 		{
 			height: 2.1d
+			id: "047D810ADA670870"
 			image: "createdelightcore:textures/gui/yanming_1.png"
 			order: 5
 			rotation: 0.0d
@@ -811,6 +884,7 @@
 		}
 		{
 			height: 4.0d
+			id: "5B91B3805038D1DE"
 			image: "farmersdelight:block/spruce_cabinet_side"
 			order: 2
 			rotation: 0.0d
@@ -820,6 +894,7 @@
 		}
 		{
 			height: 4.0d
+			id: "14050B138C4E17C8"
 			image: "farmersdelight:block/spruce_cabinet_side"
 			order: 2
 			rotation: 0.0d
@@ -829,6 +904,7 @@
 		}
 		{
 			height: 2.5d
+			id: "13187A2E4B2C1330"
 			image: "farmersdelight:block/spruce_cabinet_side"
 			order: 4
 			rotation: 0.0d
@@ -838,6 +914,7 @@
 		}
 		{
 			height: 2.5d
+			id: "1FE2517CA8780BA7"
 			image: "farmersdelight:block/spruce_cabinet_side"
 			order: 4
 			rotation: 0.0d
@@ -847,6 +924,7 @@
 		}
 		{
 			height: 2.1d
+			id: "3AE016199D66DF99"
 			image: "createdelightcore:textures/gui/yanming_2.png"
 			order: 5
 			rotation: 0.0d
@@ -856,6 +934,7 @@
 		}
 		{
 			height: 3.4d
+			id: "0C0ABAE645FB3DF8"
 			image: "createdelightcore:textures/gui/yanming_3.png"
 			order: 3
 			rotation: 0.0d
@@ -865,7 +944,7 @@
 		}
 		{
 			height: 3.0d
-			hover: ["不要因为喜欢mc而选建筑学……）"]
+			id: "6F059D68034A5CEC"
 			image: "createdelightcore:textures/gui/yanming.png"
 			order: 6
 			rotation: 0.0d
@@ -875,6 +954,7 @@
 		}
 		{
 			height: 3.5d
+			id: "155E0258A34E522E"
 			image: "farmersdelight:block/spruce_cabinet_side"
 			order: 4
 			rotation: 0.0d
@@ -884,6 +964,7 @@
 		}
 		{
 			height: 1.5d
+			id: "0E3AE643301E99DF"
 			image: "create:block/andesite_casing"
 			order: 10
 			rotation: 0.0d
@@ -893,6 +974,7 @@
 		}
 		{
 			height: 1.5d
+			id: "61B7A53BDF65C53D"
 			image: "create:item/brass_hand"
 			order: 11
 			rotation: 0.0d
@@ -902,6 +984,7 @@
 		}
 		{
 			height: 1.5d
+			id: "77D6C0BB5C71066E"
 			image: "create:item/brass_hand"
 			order: 11
 			rotation: 0.0d
@@ -911,6 +994,7 @@
 		}
 		{
 			height: 1.5d
+			id: "573776D6ADE2790F"
 			image: "create:item/brass_hand"
 			order: 11
 			rotation: 0.0d
@@ -920,6 +1004,7 @@
 		}
 		{
 			height: 3.0d
+			id: "3E07AD8D601A989B"
 			image: "fruitsdelight:item/orange_juice"
 			rotation: 0.0d
 			width: 3.0d
@@ -928,6 +1013,7 @@
 		}
 		{
 			height: 3.0d
+			id: "7AD92D3A5B754600"
 			image: "fruitsdelight:item/orange_juice"
 			rotation: 0.0d
 			width: 3.0d
@@ -936,6 +1022,7 @@
 		}
 		{
 			height: 3.0d
+			id: "4D3E965D21D9A7D9"
 			image: "fruitsdelight:item/orange_juice"
 			rotation: 0.0d
 			width: 3.0d
@@ -944,6 +1031,7 @@
 		}
 		{
 			height: 4.6d
+			id: "092930C4CD083EEA"
 			image: "vintageimprovements:block/andesite_frame"
 			order: 2
 			rotation: 0.0d
@@ -953,6 +1041,7 @@
 		}
 		{
 			height: 4.0d
+			id: "433DCB061F12B3BA"
 			image: "createdelightcore:textures/gui/song_5007.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -961,6 +1050,7 @@
 		}
 		{
 			height: 3.3d
+			id: "10F41EBD936278EF"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -969,6 +1059,7 @@
 		}
 		{
 			height: 3.3d
+			id: "333BFBBEB57C4ABE"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -977,6 +1068,7 @@
 		}
 		{
 			height: 2.5d
+			id: "33B32D1AF5347A08"
 			image: "createdelightcore:textures/gui/the_legend_of_2900.png"
 			order: 1
 			rotation: 0.0d
@@ -986,6 +1078,7 @@
 		}
 		{
 			height: 3.3d
+			id: "210BEC86B5F04FCD"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -994,6 +1087,7 @@
 		}
 		{
 			height: 2.5d
+			id: "41B026493A0C7268"
 			image: "createdelightcore:textures/gui/mechanomania.png"
 			order: 1
 			rotation: 0.0d
@@ -1003,6 +1097,7 @@
 		}
 		{
 			height: 3.3d
+			id: "26782764E65406C3"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 3.3d
@@ -1011,6 +1106,7 @@
 		}
 		{
 			height: 1.5d
+			id: "1FAE3E8896DF05C1"
 			image: "create:block/andesite_casing"
 			order: 5
 			rotation: 0.0d
@@ -1020,6 +1116,7 @@
 		}
 		{
 			height: 1.5d
+			id: "4B3BF45D3B7ACA14"
 			image: "create:block/andesite_casing"
 			order: 5
 			rotation: 0.0d
@@ -1029,6 +1126,7 @@
 		}
 		{
 			height: 4.4d
+			id: "1D24E0D9D5869903"
 			image: "createdelightcore:textures/gui/an_sir.png"
 			order: 5
 			rotation: 0.0d
@@ -1038,6 +1136,7 @@
 		}
 		{
 			height: 6.0d
+			id: "079578B4E7ADA6A3"
 			image: "create:block/andesite_casing"
 			order: 4
 			rotation: 0.0d
@@ -1047,6 +1146,7 @@
 		}
 		{
 			height: 3.0d
+			id: "0BB2AA4AAD2F00F0"
 			image: "createdelightcore:textures/gui/an_sir_bilibili.png"
 			order: 1
 			rotation: 0.0d
@@ -1056,6 +1156,7 @@
 		}
 		{
 			height: 3.0d
+			id: "074387CBDD3E173B"
 			image: "createdelightcore:textures/gui/an_sir_create_delight_remake.png"
 			order: 1
 			rotation: 0.0d
@@ -1065,6 +1166,7 @@
 		}
 		{
 			height: 4.0d
+			id: "4CACEE1C48555025"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.0d
@@ -1073,6 +1175,7 @@
 		}
 		{
 			height: 7.0d
+			id: "3830090F47F032C5"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 8.0d
@@ -1081,6 +1184,7 @@
 		}
 		{
 			height: 9.0d
+			id: "530E0155E6C2CC88"
 			image: "createdelightcore:textures/gui/an_sir_jie_li.png"
 			order: 2
 			rotation: 0.0d
@@ -1090,6 +1194,7 @@
 		}
 		{
 			height: 4.0d
+			id: "19D90502C7CE6DDD"
 			image: "create:item/empty_clipboard"
 			order: 13
 			rotation: 0.0d
@@ -1099,6 +1204,7 @@
 		}
 		{
 			height: 4.0d
+			id: "748EE8C7297A6D92"
 			image: "createdelightcore:textures/gui/wrench.png"
 			order: 14
 			rotation: -70.0d
@@ -1108,6 +1214,7 @@
 		}
 		{
 			height: 4.0d
+			id: "60781A4F5F538B37"
 			image: "createdelightcore:textures/gui/schematic.png"
 			order: 14
 			rotation: 0.0d
@@ -1117,6 +1224,7 @@
 		}
 		{
 			height: 3.0d
+			id: "21A09DF3E88242EF"
 			image: "create_pattern_schematics:item/pattern_schematic"
 			order: 11
 			rotation: 0.0d
@@ -1126,6 +1234,7 @@
 		}
 		{
 			height: 3.0d
+			id: "09BBC0E5391B9B01"
 			image: "create_pattern_schematics:item/pattern_schematic"
 			order: 11
 			rotation: 0.0d
@@ -1135,6 +1244,7 @@
 		}
 		{
 			height: 3.0d
+			id: "6A88023084D0C43C"
 			image: "create_pattern_schematics:item/pattern_schematic"
 			order: 11
 			rotation: 0.0d
@@ -1144,6 +1254,7 @@
 		}
 		{
 			height: 1.5d
+			id: "35642A13E539114A"
 			image: "create:block/andesite_casing"
 			order: 10
 			rotation: 0.0d
@@ -1153,6 +1264,7 @@
 		}
 		{
 			height: 7.0d
+			id: "0C6D4507BD76CAE0"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 8.0d
@@ -1161,6 +1273,7 @@
 		}
 		{
 			height: 4.0d
+			id: "3E234186841F16FD"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.0d
@@ -1169,6 +1282,7 @@
 		}
 		{
 			height: 4.0d
+			id: "21B629C499CBF965"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.0d
@@ -1177,6 +1291,7 @@
 		}
 		{
 			height: 4.0d
+			id: "3E2D308034428742"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.0d
@@ -1185,6 +1300,7 @@
 		}
 		{
 			height: 1.9d
+			id: "12339A72B7803D77"
 			image: "createdelightcore:textures/gui/an_sir_dou_yin.png"
 			order: 1
 			rotation: 0.0d
@@ -1194,6 +1310,7 @@
 		}
 		{
 			height: 3.0d
+			id: "79F0CF682D0FF611"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.0d
@@ -1202,6 +1319,7 @@
 		}
 		{
 			height: 3.0d
+			id: "275DCE024CE5104E"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.0d
@@ -1210,7 +1328,7 @@
 		}
 		{
 			height: 0.0d
-			hover: ["AUTO_CONTRIBUTORS_START"]
+			id: "703E9BDD6277A752"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 0.0d
@@ -1219,6 +1337,7 @@
 		}
 		{
 			height: 4.0d
+			id: "6A56A70AF68E78DE"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1227,7 +1346,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "5A09BB7FF5B0254F"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1236,6 +1355,7 @@
 		}
 		{
 			height: 4.0d
+			id: "4D8F4CA6DF17D95E"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1244,7 +1364,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "38A2BC74C53555C7"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1253,6 +1373,7 @@
 		}
 		{
 			height: 4.0d
+			id: "55EBAECF6A22AD84"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1261,7 +1382,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "1E6FD1CD66355FC7"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1270,6 +1391,7 @@
 		}
 		{
 			height: 4.0d
+			id: "1E4FADCDE6B9F79B"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1278,7 +1400,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "7DEDA0D2A3C9EF70"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1287,6 +1409,7 @@
 		}
 		{
 			height: 4.0d
+			id: "78B3F143946BBFE9"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1295,7 +1418,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "39A6D2E7F73CF8AA"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1304,6 +1427,7 @@
 		}
 		{
 			height: 4.0d
+			id: "1C611046E2C5050D"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1312,7 +1436,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "176A96E18D988778"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1321,6 +1445,7 @@
 		}
 		{
 			height: 4.0d
+			id: "304F07B4BCD12CE4"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1329,7 +1454,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "61702D96EC53617A"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1338,6 +1463,7 @@
 		}
 		{
 			height: 4.0d
+			id: "7E9AB5D731748FB3"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1346,7 +1472,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "084FA164E5CF61CB"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1355,6 +1481,7 @@
 		}
 		{
 			height: 4.0d
+			id: "1EFFE62479F8EF70"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1363,7 +1490,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "10416F7C583FD762"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1372,6 +1499,7 @@
 		}
 		{
 			height: 4.0d
+			id: "72970EB1F6329999"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 4.0d
@@ -1380,7 +1508,7 @@
 		}
 		{
 			height: 4.6d
-			hover: ["Placeholder - dev版本占位"]
+			id: "5C7184D5F1AB97F7"
 			image: "vintageimprovements:block/andesite_frame"
 			rotation: 0.0d
 			width: 4.6d
@@ -1389,7 +1517,7 @@
 		}
 		{
 			height: 0.0d
-			hover: ["AUTO_CONTRIBUTORS_END"]
+			id: "3D5A6E75CC11B4EF"
 			image: "createdelightcore:textures/gui/qd_windy.png"
 			rotation: 0.0d
 			width: 0.0d
@@ -1398,6 +1526,7 @@
 		}
 		{
 			height: 2.0d
+			id: "14BEC494CCB9ACBC"
 			image: "abnormals_delight:item/duck_noodles"
 			order: 3
 			rotation: 0.0d
@@ -1410,483 +1539,171 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["         本列表列出的up/技术支持均为测试服中成员，如有遗漏将会补充，排名不分先后！感谢你们的陪伴，才有了如今的齿轮盛宴！（本章节会有大量头颅，建议有了储存在点任务）"]
-			icon: "minecraft:writable_book"
 			id: "6C3ED350AA7C4E08"
 			shape: "square"
-			subtitle: "排名不分先后，大家都是好兄弟！Ciallo～(∠・ω< )⌒★"
 			tasks: [{
 				id: "5E37890467D7E2BA"
-				title: "感谢各位主播大大的宣传"
 				type: "checkmark"
 			}]
-			title: "特别谢鸣"
 			x: -6.0d
 			y: 7.5d
 		}
 		{
-			description: [
-				"平台ID：QD_windy"
-				"游戏ID：Aegleseekerawa"
-				"主要类型：直播+教学实况"
-				"主要活动平台：哔哩哔哩"
-				"相关作品：QD的齿轮盛宴攻略向实况"
-				"直播时间：不定时直播"
-			]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							-1621284893
-							-1668526728
-							-1336138287
-							-1864358187
-						]
-						Name: "Aegleseekerawa"
-						Properties: {
-							textures: [{
-								Signature: "azAUcFOZJR1B8Aq/+oH/SzXp/X5lEX79WuHWs9ONiQ1XgXlt77OMKRcH4rNCUXK9AuYWN6RYiaVa698pHjyHeHdwatlYDWTqZNlhKHfHCuuqOStQ2xQuB3IlvcdrRJBLeUh+0UvvfzK9Wza2NmbzXJ8z2CaIw5pI8NdpjfnpFz9qhxYwhSKfUUAgThXiMUzSJFDWVCpISbLhNxOV97lY8j72oo3JoO6HAovz14VyRUY+kHs3jej55Qa4SSmdB3McvZgXWxUDIqUKZxjw4VvFlzzKYXInqSp7pGDDYCKXmNJQFPa7wTTyM92JD3IvUQV4hamv1rm1ZYxhEGRGaPsnKr5oGyyDuR01HkVlKIwVFDl5/FIJV3fkF17T5xa9YltKDlv2U08aOLMxZYuXriXOgiEo7xXi6rXkjkZmrZm30ZKBgl9FXTtdq7ry7IqEZdrN++s912dO/nFVK682BG4CN+6Fpc/3SujF+gaDHh1wClUo/iZgocvq0ByG+aHDGx6tGw6ChH/u0INQWcVbv0Uc/BuqHPPTTZ/qQuHt+2UR9jxCxvkkqHo9tymfUU4fqiVtFmarrkCKVZWXdJvYobss3N0Rd69xrr40lBBVDlLNCmFhqH5SFfEBQu2Bgn0TYvFrODniy4bST2ph152EIxUJizIY/O04Prc0q8G1yx17iV8="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc1ODQ2MTYyOTYxMywKICAicHJvZmlsZUlkIiA6ICI5ZjVkMjdlMzljOGM0ZDc4YjA1YzI1ZDE5MGUwMjZkNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJBZWdsZXNlZWtlcmF3YSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lMjhjNTgzMmM4YjI4NTcwZGVhZjRkMDU3ZDYwZTU3MmNjNjc3ZGE5OWE3MTQ0MTA1MDBhYzIyNzk1NWVhM2QiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ=="
-							}]
-						}
-					}
-				}
 			}
 			id: "29DF95CE1A83396C"
 			rewards: [{
 				id: "67D2F0FA4995F833"
 				item: {
-					Count: 1
+					count: 1
 					id: "minecraft:player_head"
-					tag: {
-						SkullOwner: {
-							Id: [I;
-								-1621284893
-								-1668526728
-								-1336138287
-								-1864358187
-							]
-							Name: "Aegleseekerawa"
-							Properties: {
-								textures: [{
-									Signature: "azAUcFOZJR1B8Aq/+oH/SzXp/X5lEX79WuHWs9ONiQ1XgXlt77OMKRcH4rNCUXK9AuYWN6RYiaVa698pHjyHeHdwatlYDWTqZNlhKHfHCuuqOStQ2xQuB3IlvcdrRJBLeUh+0UvvfzK9Wza2NmbzXJ8z2CaIw5pI8NdpjfnpFz9qhxYwhSKfUUAgThXiMUzSJFDWVCpISbLhNxOV97lY8j72oo3JoO6HAovz14VyRUY+kHs3jej55Qa4SSmdB3McvZgXWxUDIqUKZxjw4VvFlzzKYXInqSp7pGDDYCKXmNJQFPa7wTTyM92JD3IvUQV4hamv1rm1ZYxhEGRGaPsnKr5oGyyDuR01HkVlKIwVFDl5/FIJV3fkF17T5xa9YltKDlv2U08aOLMxZYuXriXOgiEo7xXi6rXkjkZmrZm30ZKBgl9FXTtdq7ry7IqEZdrN++s912dO/nFVK682BG4CN+6Fpc/3SujF+gaDHh1wClUo/iZgocvq0ByG+aHDGx6tGw6ChH/u0INQWcVbv0Uc/BuqHPPTTZ/qQuHt+2UR9jxCxvkkqHo9tymfUU4fqiVtFmarrkCKVZWXdJvYobss3N0Rd69xrr40lBBVDlLNCmFhqH5SFfEBQu2Bgn0TYvFrODniy4bST2ph152EIxUJizIY/O04Prc0q8G1yx17iV8="
-									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc1ODQ2MTYyOTYxMywKICAicHJvZmlsZUlkIiA6ICI5ZjVkMjdlMzljOGM0ZDc4YjA1YzI1ZDE5MGUwMjZkNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJBZWdsZXNlZWtlcmF3YSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lMjhjNTgzMmM4YjI4NTcwZGVhZjRkMDU3ZDYwZTU3MmNjNjc3ZGE5OWE3MTQ0MTA1MDBhYzIyNzk1NWVhM2QiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ=="
-								}]
-							}
-						}
-					}
 				}
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "多周目直播大佬，恐怖如斯（"
 			tasks: [{
 				id: "1E71FA92EBCF3F94"
-				title: "QD_windy"
 				type: "checkmark"
 			}]
 			x: 12.0d
 			y: 3.5d
 		}
 		{
-			description: [
-				"平台ID：y0-果霖橙"
-				"游戏ID：G0orange"
-				"主要类型：视频"
-				"主要活动平台：哔哩哔哩"
-				"相关作品：【机械动力：齿轮盛宴】+齿轮盛宴：悠然乐事（虽然本质上是一个合集）"
-			]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							780879128
-							-1487713875
-							-1407512712
-							44931435
-						]
-						Name: "G0orange"
-						Properties: {
-							textures: [{
-								Signature: "A+ZhNdNGX46MovKlaiJFd9g5ngW5QLLcTaKhxlj3awpE9L1Q/KyxYmr60xixk77+b1bQrPvcYonI2BY85Au+KsgjWOFn2jQ/1p1j3RMaJCkDtFK7Nod7OBd+4UOcMkvIvLQGoVobRZswQ8oKmegcjrpgk7N0hVwwisECOAq5SvjuzYUMFIe0i+JcHrMO1Plm93AsQX+x5cYVatnrfAuZAqGX03pvDRKbMEIMeJ1GdbytFM+SGkTUEDxHIRVVpNAATFtbH7kl7nFz1HJb6q/USmAO4bu8Cl97UgjXoWkafd0mb8O8ekj4e9hPDIEOjRILYUAR64Es8w+CfY+JWQbSXKoftDEEkd91BKZ08V/8qwSZg2142pQ8ZvSUWxghvroDp2YZ1ies3hccTlHvHPtpx2luY/czj+OcVePGQXxZICT1OstcvTQ3RthuGuBGnI4r4sDXgmxO/W0jd37UCN5HLJmhnfrD9v+wtEAbWw/viADS0WbN/+YL6DijHuRhjMb4U6OYrMUBkKHgrWr025ek2K3WIsGkr5728N4OG4MzxyKPZZCaPFPgM0aacy0Ka3MlO+mEFKi3lhLDI1mfHYE9PpbupN3ai4mGbJ1EtlUVPYYJ2hO95Tg7E0mAJsSIqyXRu02UH7D+EZ5GK6mxENcuhvDvAERcFMasjXdH4N2y5Zw="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIzMDAzMTU5MywKICAicHJvZmlsZUlkIiA6ICIyZThiNDUxOGE3NTM0OWFkYWMxYjBmNzgwMmFkOTk2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHMG9yYW5nZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MGMwMmQ5NjI5NDZlY2Q4MjJmN2YyMTI2NDYwMWQxZDczYjU4YTk0OWQ5ZWY5NDdhYzdiNTU3NDA2OGY5ZDUwIgogICAgfQogIH0KfQ=="
-							}]
-						}
-					}
-				}
 			}
 			id: "12026DFD10F71758"
 			rewards: [{
 				id: "431E8EABC0F061D4"
 				item: {
-					Count: 1
+					count: 1
 					id: "minecraft:player_head"
-					tag: {
-						SkullOwner: {
-							Id: [I;
-								780879128
-								-1487713875
-								-1407512712
-								44931435
-							]
-							Name: "G0orange"
-							Properties: {
-								textures: [{
-									Signature: "A+ZhNdNGX46MovKlaiJFd9g5ngW5QLLcTaKhxlj3awpE9L1Q/KyxYmr60xixk77+b1bQrPvcYonI2BY85Au+KsgjWOFn2jQ/1p1j3RMaJCkDtFK7Nod7OBd+4UOcMkvIvLQGoVobRZswQ8oKmegcjrpgk7N0hVwwisECOAq5SvjuzYUMFIe0i+JcHrMO1Plm93AsQX+x5cYVatnrfAuZAqGX03pvDRKbMEIMeJ1GdbytFM+SGkTUEDxHIRVVpNAATFtbH7kl7nFz1HJb6q/USmAO4bu8Cl97UgjXoWkafd0mb8O8ekj4e9hPDIEOjRILYUAR64Es8w+CfY+JWQbSXKoftDEEkd91BKZ08V/8qwSZg2142pQ8ZvSUWxghvroDp2YZ1ies3hccTlHvHPtpx2luY/czj+OcVePGQXxZICT1OstcvTQ3RthuGuBGnI4r4sDXgmxO/W0jd37UCN5HLJmhnfrD9v+wtEAbWw/viADS0WbN/+YL6DijHuRhjMb4U6OYrMUBkKHgrWr025ek2K3WIsGkr5728N4OG4MzxyKPZZCaPFPgM0aacy0Ka3MlO+mEFKi3lhLDI1mfHYE9PpbupN3ai4mGbJ1EtlUVPYYJ2hO95Tg7E0mAJsSIqyXRu02UH7D+EZ5GK6mxENcuhvDvAERcFMasjXdH4N2y5Zw="
-									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIzMDAzMTU5MywKICAicHJvZmlsZUlkIiA6ICIyZThiNDUxOGE3NTM0OWFkYWMxYjBmNzgwMmFkOTk2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHMG9yYW5nZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MGMwMmQ5NjI5NDZlY2Q4MjJmN2YyMTI2NDYwMWQxZDczYjU4YTk0OWQ5ZWY5NDdhYzdiNTU3NDA2OGY5ZDUwIgogICAgfQogIH0KfQ=="
-								}]
-							}
-						}
-					}
 				}
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "教程系机→械↓动↑力↓高质量新人up"
 			tasks: [{
 				id: "4A6F385B07F9043D"
-				title: "y0-果霖橙"
 				type: "checkmark"
 			}]
 			x: 34.0d
 			y: 3.5d
 		}
 		{
-			description: [
-				"平台ID：塞尼西蒙_117"
-				"游戏ID：CeneralCimera117"
-				"主要类型：视频"
-				"主要活动平台：哔哩哔哩"
-				"相关作品：按寻思能行"
-				"直播时间：极少时间直播，并且一般不是mc"
-			]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							-917295711
-							1918650479
-							-1377987081
-							1049847103
-						]
-						Name: "CeneralCimera117"
-						Properties: {
-							textures: [{
-								Signature: "Ava/Qe9ZOe90JIiM4oM4EIK2vHtGOEkuq6HjnkHO4QJtZd5M7CQqDpDH7QYC0J32BR/KsQjCmPkaR2zwBQBexp6ap+KK0dmHJHOj2gPBsDvx/6BjQK3H780+9if9rXVYePLqRB8dtrU2oE6UQ76cLgnbEPxD487Sov8jq5EqVbGt0OrYbPqh0DszUl0dSBinDKKurL32ecP5WRLP+eT+B3mDmTZQpU69Z41zvRCpuVkpWoQzQH5jbKoZjxFtqQuj6uN6GDB0YfE4Q5MaPMvrvdeIh0C4jMNUB2cvmZqVJtJoSVbUz9nRQ4xf8OaOX45jNXb9rUM6q0CoEQmnJwje7KCs33nksOx5g6Yf4kS24n5bMx0KGu7TydEbmg0vI53sadL4FsAHropPjgdkmR5FkGQKV/nSOsobHr8JzZ8+8rGD4mNWyKTbjXyfymW98gYGxCfo7hTlBsgyNDf7zAL1pg5oM5Mne45zaluMHRHDyiSQamYzhY4HzcvhnQqFvZ07O3IHPMvmZjZV5TEdAgccVvI1kROkGzkKpHU0gP9aqo5Kx8p3NEOQKVgcsSADwE9ohU+TkQ+W3ete7urGROL/VaWW+lQ53i/mqX0nsRIwHHD2QRojX+J6RwvUDBzkg08jHb/u8xDym6XaIiKgz3E20ytWfWdiM7+ffqXYlyJnCrc="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc1ODQ0NjcwMDEyNSwKICAicHJvZmlsZUlkIiA6ICJjOTUzMmRhMTcyNWM0ODZmYWRkZDk1ZjczZTkzNjUzZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJDZW5lcmFsQ2ltZXJhMTE3IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2EwZTQ2ZjEzYzM0NjBhZThiYmY4MDliMWE2NDNmNWM0ZWI0YTM1OTA0ZDIyNTViZGVkZjkxNTFmNjkwZWU5ZGUiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NkOWQ4MmFiMTdmZDkyMDIyZGJkNGE4NmNkZTRjMzgyYTc1NDBlMTE3ZmFlN2I5YTI4NTM2NTg1MDVhODA2MjUiCiAgICB9CiAgfQp9"
-							}]
-						}
-					}
-				}
 			}
 			id: "571BD8F01BEFC03C"
 			rewards: [{
 				id: "0DC14D0E972E9F71"
 				item: {
-					Count: 1
+					count: 1
 					id: "minecraft:player_head"
-					tag: {
-						SkullOwner: {
-							Id: [I;
-								-917295711
-								1918650479
-								-1377987081
-								1049847103
-							]
-							Name: "CeneralCimera117"
-							Properties: {
-								textures: [{
-									Signature: "Ava/Qe9ZOe90JIiM4oM4EIK2vHtGOEkuq6HjnkHO4QJtZd5M7CQqDpDH7QYC0J32BR/KsQjCmPkaR2zwBQBexp6ap+KK0dmHJHOj2gPBsDvx/6BjQK3H780+9if9rXVYePLqRB8dtrU2oE6UQ76cLgnbEPxD487Sov8jq5EqVbGt0OrYbPqh0DszUl0dSBinDKKurL32ecP5WRLP+eT+B3mDmTZQpU69Z41zvRCpuVkpWoQzQH5jbKoZjxFtqQuj6uN6GDB0YfE4Q5MaPMvrvdeIh0C4jMNUB2cvmZqVJtJoSVbUz9nRQ4xf8OaOX45jNXb9rUM6q0CoEQmnJwje7KCs33nksOx5g6Yf4kS24n5bMx0KGu7TydEbmg0vI53sadL4FsAHropPjgdkmR5FkGQKV/nSOsobHr8JzZ8+8rGD4mNWyKTbjXyfymW98gYGxCfo7hTlBsgyNDf7zAL1pg5oM5Mne45zaluMHRHDyiSQamYzhY4HzcvhnQqFvZ07O3IHPMvmZjZV5TEdAgccVvI1kROkGzkKpHU0gP9aqo5Kx8p3NEOQKVgcsSADwE9ohU+TkQ+W3ete7urGROL/VaWW+lQ53i/mqX0nsRIwHHD2QRojX+J6RwvUDBzkg08jHb/u8xDym6XaIiKgz3E20ytWfWdiM7+ffqXYlyJnCrc="
-									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc1ODQ0NjcwMDEyNSwKICAicHJvZmlsZUlkIiA6ICJjOTUzMmRhMTcyNWM0ODZmYWRkZDk1ZjczZTkzNjUzZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJDZW5lcmFsQ2ltZXJhMTE3IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2EwZTQ2ZjEzYzM0NjBhZThiYmY4MDliMWE2NDNmNWM0ZWI0YTM1OTA0ZDIyNTViZGVkZjkxNTFmNjkwZWU5ZGUiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NkOWQ4MmFiMTdmZDkyMDIyZGJkNGE4NmNkZTRjMzgyYTc1NDBlMTE3ZmFlN2I5YTI4NTM2NTg1MDVhODA2MjUiCiAgICB9CiAgfQp9"
-								}]
-							}
-						}
-					}
 				}
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "我说西蒙是最抽象的up有人懂吗（"
 			tasks: [{
 				id: "1FBE0508FDF59E32"
-				title: "CeneralCimera117"
 				type: "checkmark"
 			}]
-			title: "塞尼西蒙_117"
 			x: 3.0d
 			y: 2.5d
 		}
 		{
-			description: [
-				"平台ID：一地鹅毛Cc"
-				"游戏ID：mochenccc"
-				"主要类型：视频+直播"
-				"主要活动平台：哔哩哔哩"
-				"相关作品：《齿轮盛宴》"
-				"直播时间：一般在下午"
-			]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							-2099465734
-							1833779657
-							-1909333953
-							-1668566492
-						]
-						Name: "mochenccc"
-						Properties: {
-							textures: [{
-								Signature: "qO9cO3MHKQ1CpNn1zc5q29auhrQuHDNgB8nw262VwwU+ak+5IqJUnXemciAH1FinHURnLpV+ENZqTtv9XpB/UZFxP8dprFpKORwYRQx9t6yZhiq5J7VyXPcEIoJXz0l6/cKNlaj36Fc3R1VkFsPutritMpGa8xi2oiGA8k65HjlL7WsWJuL7Ro2rmZ0JTsFaAM6yjF/Wm1MngopK53r0jfz/NtraQ2TZk5xPNGvRkVxvUINftDiCyK6HoFKRiTAz3tlZxUf65Xuq5oE5C2fHAsW66A9RKgWoy82+wpn6gJ7LHW6UdXgpywz4avVhtpJuYL1Rpwikbhl3Xmg7D71FztLV0R7V4Y92HMQzPw8CXP9J+lQNrsnHsWl/1F9ETG8Iq17kYKSFAmKZBBYA5Z/562ZU6vofdyqBWdAH6jUVvyheM2I8+WrbHzm1fAdKcp6xvzyBJA6bNcOy1r6sUV0Gof0YjRlcETZhfSnxkAfab5fyTCMlgtWGdqkN7U4EggOu9KprGRhIuNgO4p6MMsLce/R/n/pXTapWg1jz3EIqcdQ1uC+dmfWjtkqqYTyn8qR71luJC/BL2c/ueR/kDYdGbq5eU97m44i7B4eCL/n8WA4Qy8a9RqlOA5jgdsB3p4qYCQv41gqilMOFzsy6Y2cAHc/S1ZyHOt2sZQ360xL6N4E="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc1OTM5Njc4MTE4NiwKICAicHJvZmlsZUlkIiA6ICI4MmRjYjFmYTZkNGQ0MWM5OGUzMWUwM2Y5YzhiYjIyNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJtb2NoZW5jY2MiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTU2YjBiZjExMGExZjU0MzU3YjZhYmNlNDAzMTUzZDJmMmRkYzMzYzU2ZTc4NDg5MmYzYjdjMjY2NmEzNjIyNyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NkOWQ4MmFiMTdmZDkyMDIyZGJkNGE4NmNkZTRjMzgyYTc1NDBlMTE3ZmFlN2I5YTI4NTM2NTg1MDVhODA2MjUiCiAgICB9CiAgfQp9"
-							}]
-						}
-					}
-				}
 			}
 			id: "305E5B982C26DADB"
 			rewards: [{
 				id: "716A81004865F5AC"
 				item: {
-					Count: 1
+					count: 1
 					id: "minecraft:player_head"
-					tag: {
-						SkullOwner: {
-							Id: [I;
-								-2099465734
-								1833779657
-								-1909333953
-								-1668566492
-							]
-							Name: "mochenccc"
-							Properties: {
-								textures: [{
-									Signature: "qO9cO3MHKQ1CpNn1zc5q29auhrQuHDNgB8nw262VwwU+ak+5IqJUnXemciAH1FinHURnLpV+ENZqTtv9XpB/UZFxP8dprFpKORwYRQx9t6yZhiq5J7VyXPcEIoJXz0l6/cKNlaj36Fc3R1VkFsPutritMpGa8xi2oiGA8k65HjlL7WsWJuL7Ro2rmZ0JTsFaAM6yjF/Wm1MngopK53r0jfz/NtraQ2TZk5xPNGvRkVxvUINftDiCyK6HoFKRiTAz3tlZxUf65Xuq5oE5C2fHAsW66A9RKgWoy82+wpn6gJ7LHW6UdXgpywz4avVhtpJuYL1Rpwikbhl3Xmg7D71FztLV0R7V4Y92HMQzPw8CXP9J+lQNrsnHsWl/1F9ETG8Iq17kYKSFAmKZBBYA5Z/562ZU6vofdyqBWdAH6jUVvyheM2I8+WrbHzm1fAdKcp6xvzyBJA6bNcOy1r6sUV0Gof0YjRlcETZhfSnxkAfab5fyTCMlgtWGdqkN7U4EggOu9KprGRhIuNgO4p6MMsLce/R/n/pXTapWg1jz3EIqcdQ1uC+dmfWjtkqqYTyn8qR71luJC/BL2c/ueR/kDYdGbq5eU97m44i7B4eCL/n8WA4Qy8a9RqlOA5jgdsB3p4qYCQv41gqilMOFzsy6Y2cAHc/S1ZyHOt2sZQ360xL6N4E="
-									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc1OTM5Njc4MTE4NiwKICAicHJvZmlsZUlkIiA6ICI4MmRjYjFmYTZkNGQ0MWM5OGUzMWUwM2Y5YzhiYjIyNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJtb2NoZW5jY2MiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTU2YjBiZjExMGExZjU0MzU3YjZhYmNlNDAzMTUzZDJmMmRkYzMzYzU2ZTc4NDg5MmYzYjdjMjY2NmEzNjIyNyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NkOWQ4MmFiMTdmZDkyMDIyZGJkNGE4NmNkZTRjMzgyYTc1NDBlMTE3ZmFlN2I5YTI4NTM2NTg1MDVhODA2MjUiCiAgICB9CiAgfQp9"
-								}]
-							}
-						}
-					}
 				}
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "被谜之引擎折磨爆炸第一人！"
 			tasks: [{
 				id: "055BC3227061C5C3"
-				title: "y0-果霖橙"
 				type: "checkmark"
 			}]
-			title: "一地鹅毛Cc"
 			x: 23.0d
 			y: 3.0d
 		}
 		{
-			description: [
-				"平台ID：阿梓才不想当菜狗"
-				"游戏ID：soridLu"
-				"主要活动平台：哔哩哔哩"
-				"投稿主要内容：cs:2（反恐精英：2）相关（老登可是很有实力的cs大佬！）"
-				"技术支持内容：超绝苦力修服人（Minecraft服务器）"
-			]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							-1616982806
-							551241010
-							-1427583748
-							-1547248723
-						]
-						Name: "soridLu"
-						Properties: {
-							textures: [{
-								Signature: "OmdViEF5pWSKQB3hn3cDyut8N0VS77fHWNKWSbz2h+K1xsCQ6R+bKW+dJbW+A5IzKu+gfayE+735pZtTh2enxBj5rM8AblkC/ugHLGOZVs7RFi+hoZzoeFTZXAAnMwnCXtgDUATkwKZOOn0Er4xh/BFdcl/BoF7JdmMboSxM5yWOnCNL99n/qjimYqLbNQeDNTn3meRL3H9JYOrKBDw+IfW0LOrnaNWVON6VfPlftDqK7b9WOr4NRBoMxI5/ZuhscFIEYodQlBmu5coqAQ7PLyLDzFns1hRXh9xUzCxAHTZAv5ibKl/o9LQj3Bos40uwyH3v4jqF+1//Cf5lhpJr4RakrxIirpiVgVRaaA2eN+Y2cq4Vea39/nrhb4UdK/lbRP5RiM4zQS++QlkqZvigL5nlOCvNfa8GjOv4b9zC2T7kQovyhVqxtIq4xzAcPbfYf9orU64OxIvV3F31/LINdGQcADpNIDRhteLdv2/zPZ3xz7eVuM86n5TgaVn8WQkvo2Ll4RiK7PeIFSnpVFF5ZNFB2OaUyOt5pfgBw7CpUYxBLbwtZv3Ax5buvlP4UXrvUP+xgCLotYdO2PAFDLmqw26o/SVrIj7FhP7T7bDeF+52nBNck8mCnNzweKBtM7rOu7NmnRWBnZtqFRancqHcBADERQeaXu+ipOZoMycfWfA="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MDAxODk5NTYwOSwKICAicHJvZmlsZUlkIiA6ICI5ZjllY2NlYTIwZGI0NTMyYWFlOGNjZmNhM2M2ZGJhZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJzb3JpZEx1IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVkM2FhMThiNTg4ODM2MjIzZjM4ZmVlMWIzZjI3YTcxODJhZDMwZGNjYjBlNGUwYjFlYWJhODU2ZDRhMDViNGEiCiAgICB9CiAgfQp9"
-							}]
-						}
-					}
-				}
 			}
 			id: "03194F6C5C2D8686"
 			rewards: [{
 				id: "6484924EA52560BB"
 				item: {
-					Count: 1
+					count: 1
 					id: "minecraft:player_head"
-					tag: {
-						SkullOwner: {
-							Id: [I;
-								-1616982806
-								551241010
-								-1427583748
-								-1547248723
-							]
-							Name: "soridLu"
-							Properties: {
-								textures: [{
-									Signature: "OmdViEF5pWSKQB3hn3cDyut8N0VS77fHWNKWSbz2h+K1xsCQ6R+bKW+dJbW+A5IzKu+gfayE+735pZtTh2enxBj5rM8AblkC/ugHLGOZVs7RFi+hoZzoeFTZXAAnMwnCXtgDUATkwKZOOn0Er4xh/BFdcl/BoF7JdmMboSxM5yWOnCNL99n/qjimYqLbNQeDNTn3meRL3H9JYOrKBDw+IfW0LOrnaNWVON6VfPlftDqK7b9WOr4NRBoMxI5/ZuhscFIEYodQlBmu5coqAQ7PLyLDzFns1hRXh9xUzCxAHTZAv5ibKl/o9LQj3Bos40uwyH3v4jqF+1//Cf5lhpJr4RakrxIirpiVgVRaaA2eN+Y2cq4Vea39/nrhb4UdK/lbRP5RiM4zQS++QlkqZvigL5nlOCvNfa8GjOv4b9zC2T7kQovyhVqxtIq4xzAcPbfYf9orU64OxIvV3F31/LINdGQcADpNIDRhteLdv2/zPZ3xz7eVuM86n5TgaVn8WQkvo2Ll4RiK7PeIFSnpVFF5ZNFB2OaUyOt5pfgBw7CpUYxBLbwtZv3Ax5buvlP4UXrvUP+xgCLotYdO2PAFDLmqw26o/SVrIj7FhP7T7bDeF+52nBNck8mCnNzweKBtM7rOu7NmnRWBnZtqFRancqHcBADERQeaXu+ipOZoMycfWfA="
-									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MDAxODk5NTYwOSwKICAicHJvZmlsZUlkIiA6ICI5ZjllY2NlYTIwZGI0NTMyYWFlOGNjZmNhM2M2ZGJhZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJzb3JpZEx1IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVkM2FhMThiNTg4ODM2MjIzZjM4ZmVlMWIzZjI3YTcxODJhZDMwZGNjYjBlNGUwYjFlYWJhODU2ZDRhMDViNGEiCiAgICB9CiAgfQp9"
-								}]
-							}
-						}
-					}
 				}
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "古希腊掌管服务器的神"
 			tasks: [{
 				id: "086C3E55352250BF"
-				title: "阿梓才不想当菜狗"
 				type: "checkmark"
 			}]
 			x: 3.0d
 			y: 15.5d
 		}
 		{
-			description: [
-				"平台ID：晏鸣HL_VN"
-				"游戏ID：Yanming_319"
-				"主要类型：视频"
-				"主要活动平台：哔哩哔哩"
-				"相关作品：建成的温室不够浪漫？参考我这一款！【机械动力：齿轮盛宴】+  开局很迷茫？看看我这篇！【齿轮盛宴扫盲：开局篇】+  【机械动力：齿轮盛宴】还在丢弃制作组头像？教你如何活用！+【机械动力：齿轮盛宴】已经沉浸在自己的艺术中不知天地为何物了  +  悠 然 乐 事.mp4   +  我又做了一个机械动力建筑【机械动力：齿轮盛宴】"
-			]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							-2102515965
-							456019167
-							-1968380802
-							175357824
-						]
-						Name: "Yanming_319"
-						Properties: {
-							textures: [{
-								Signature: "BIAgWt0Ndw301cEv0ReFsODH1sWKZwWj+gkIUaSCZxt4D+CYpdPY5c/FA1UGbO+bOAPAOiwVkXZ9OlDMFxvj/VDET531YZjb6WdsZ7r7Rer4S8xQ1IFyx0Mz1NIX1wcwB/Ks2viviH9uRyefRTEC/G9KJ1u8XZptyeHI8Gf42gVH9EL1OIUuWTorAeLnjYRrQsrZVhb2SuPYsDgVFzPpQA+ers5o2cS2UUyd0LKsUELtx87b0WksU55w1kRRU9o82/GjVTWXP61nachXa13dZ2R8+hchQRX9+8jrYDYY7Ex2cmgzfiK5YFufejfZNu0/6TtIlxLe+5tSyAtKV73z3NlnmJySBaoAyVsx4Ua9gJpW5G4su1jvF4Z5PVZo8qopZXx5ouDbafuHzg8+fjd9GxNDhlk78RbKcFInAvQKe7F3Xqaj2TBJrzPZic0yeZunijXD1V/ldKJJB2BzcAcAcGGk3eEM4YU5ehBG/jSz/KNw7qHQipEW+CYJd0V5yvs6A2KrQifpW0QP185s+NaX8fU3qIwl0htaGIzXRP5/D9dofxjhs2t693PKnZNy7KuHXaK/FjgjO/+MmA4gb7H1ys5+HFpkT3vfk52PGPf5AtAl2xpHROpvTKmBS5huL59fcka0yHRoA9h4ca5msplo9FcGuh8tpMedsc3k0RePrPg="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIyOTg5MTM1MiwKICAicHJvZmlsZUlkIiA6ICI4MmFlMjcwMzFiMmU0Y2RmOGFhY2U0N2UwYTczYmY4MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJZYW5taW5nXzMxOSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jYzUxODNkYTNkZDUwNjE4MjNkOThiMzAzMmFmOTcxNWJkY2ExZDU5ZTMyNzc2NDY1YWQ2NTA5OTE0YzE1OTZlIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
-							}]
-						}
-					}
-				}
 			}
 			id: "0AED8B8373AD8C79"
 			rewards: [{
 				id: "36B894148AB92CA1"
 				item: {
-					Count: 1
+					count: 1
 					id: "minecraft:player_head"
-					tag: {
-						SkullOwner: {
-							Id: [I;
-								-2102515965
-								456019167
-								-1968380802
-								175357824
-							]
-							Name: "Yanming_319"
-							Properties: {
-								textures: [{
-									Signature: "BIAgWt0Ndw301cEv0ReFsODH1sWKZwWj+gkIUaSCZxt4D+CYpdPY5c/FA1UGbO+bOAPAOiwVkXZ9OlDMFxvj/VDET531YZjb6WdsZ7r7Rer4S8xQ1IFyx0Mz1NIX1wcwB/Ks2viviH9uRyefRTEC/G9KJ1u8XZptyeHI8Gf42gVH9EL1OIUuWTorAeLnjYRrQsrZVhb2SuPYsDgVFzPpQA+ers5o2cS2UUyd0LKsUELtx87b0WksU55w1kRRU9o82/GjVTWXP61nachXa13dZ2R8+hchQRX9+8jrYDYY7Ex2cmgzfiK5YFufejfZNu0/6TtIlxLe+5tSyAtKV73z3NlnmJySBaoAyVsx4Ua9gJpW5G4su1jvF4Z5PVZo8qopZXx5ouDbafuHzg8+fjd9GxNDhlk78RbKcFInAvQKe7F3Xqaj2TBJrzPZic0yeZunijXD1V/ldKJJB2BzcAcAcGGk3eEM4YU5ehBG/jSz/KNw7qHQipEW+CYJd0V5yvs6A2KrQifpW0QP185s+NaX8fU3qIwl0htaGIzXRP5/D9dofxjhs2t693PKnZNy7KuHXaK/FjgjO/+MmA4gb7H1ys5+HFpkT3vfk52PGPf5AtAl2xpHROpvTKmBS5huL59fcka0yHRoA9h4ca5msplo9FcGuh8tpMedsc3k0RePrPg="
-									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIyOTg5MTM1MiwKICAicHJvZmlsZUlkIiA6ICI4MmFlMjcwMzFiMmU0Y2RmOGFhY2U0N2UwYTczYmY4MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJZYW5taW5nXzMxOSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jYzUxODNkYTNkZDUwNjE4MjNkOThiMzAzMmFmOTcxNWJkY2ExZDU5ZTMyNzc2NDY1YWQ2NTA5OTE0YzE1OTZlIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
-								}]
-							}
-						}
-					}
 				}
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "建筑大佬，真的太酷啦！"
 			tasks: [{
 				id: "1C1A6F32B076CDFC"
-				title: "y0-果霖橙"
 				type: "checkmark"
 			}]
-			title: "晏鸣HL_VN"
 			x: 48.25d
 			y: 2.0d
 		}
 		{
 			dependencies: ["12026DFD10F71758"]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							780879128
-							-1487713875
-							-1407512712
-							44931435
-						]
-						Name: "G0orange"
-						Properties: {
-							textures: [{
-								Signature: "A+ZhNdNGX46MovKlaiJFd9g5ngW5QLLcTaKhxlj3awpE9L1Q/KyxYmr60xixk77+b1bQrPvcYonI2BY85Au+KsgjWOFn2jQ/1p1j3RMaJCkDtFK7Nod7OBd+4UOcMkvIvLQGoVobRZswQ8oKmegcjrpgk7N0hVwwisECOAq5SvjuzYUMFIe0i+JcHrMO1Plm93AsQX+x5cYVatnrfAuZAqGX03pvDRKbMEIMeJ1GdbytFM+SGkTUEDxHIRVVpNAATFtbH7kl7nFz1HJb6q/USmAO4bu8Cl97UgjXoWkafd0mb8O8ekj4e9hPDIEOjRILYUAR64Es8w+CfY+JWQbSXKoftDEEkd91BKZ08V/8qwSZg2142pQ8ZvSUWxghvroDp2YZ1ies3hccTlHvHPtpx2luY/czj+OcVePGQXxZICT1OstcvTQ3RthuGuBGnI4r4sDXgmxO/W0jd37UCN5HLJmhnfrD9v+wtEAbWw/viADS0WbN/+YL6DijHuRhjMb4U6OYrMUBkKHgrWr025ek2K3WIsGkr5728N4OG4MzxyKPZZCaPFPgM0aacy0Ka3MlO+mEFKi3lhLDI1mfHYE9PpbupN3ai4mGbJ1EtlUVPYYJ2hO95Tg7E0mAJsSIqyXRu02UH7D+EZ5GK6mxENcuhvDvAERcFMasjXdH4N2y5Zw="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIzMDAzMTU5MywKICAicHJvZmlsZUlkIiA6ICIyZThiNDUxOGE3NTM0OWFkYWMxYjBmNzgwMmFkOTk2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHMG9yYW5nZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MGMwMmQ5NjI5NDZlY2Q4MjJmN2YyMTI2NDYwMWQxZDczYjU4YTk0OWQ5ZWY5NDdhYzdiNTU3NDA2OGY5ZDUwIgogICAgfQogIH0KfQ=="
-							}]
-						}
-					}
-				}
 			}
 			id: "1FE0CF25565790DC"
 			rewards: [{
 				count: 4
 				id: "0589BA04CE015E01"
-				item: "createcafe:orange_milk_tea"
+				item: {
+					count: 1
+					id: "createcafe:orange_milk_tea"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
-			subtitle: "果霖橙！好吃！"
 			tasks: [
 				{
 					id: "5A77AD0E1F390F8A"
-					title: "橙子！"
 					type: "checkmark"
 				}
 				{
 					id: "4445521E660DB2C3"
-					item: {
-						Count: 1
-						id: "minecraft:player_head"
-						tag: {
-							SkullOwner: {
-								Id: [I;
-									780879128
-									-1487713875
-									-1407512712
-									44931435
-								]
-								Name: "G0orange"
-								Properties: {
-									textures: [{
-										Signature: "A+ZhNdNGX46MovKlaiJFd9g5ngW5QLLcTaKhxlj3awpE9L1Q/KyxYmr60xixk77+b1bQrPvcYonI2BY85Au+KsgjWOFn2jQ/1p1j3RMaJCkDtFK7Nod7OBd+4UOcMkvIvLQGoVobRZswQ8oKmegcjrpgk7N0hVwwisECOAq5SvjuzYUMFIe0i+JcHrMO1Plm93AsQX+x5cYVatnrfAuZAqGX03pvDRKbMEIMeJ1GdbytFM+SGkTUEDxHIRVVpNAATFtbH7kl7nFz1HJb6q/USmAO4bu8Cl97UgjXoWkafd0mb8O8ekj4e9hPDIEOjRILYUAR64Es8w+CfY+JWQbSXKoftDEEkd91BKZ08V/8qwSZg2142pQ8ZvSUWxghvroDp2YZ1ies3hccTlHvHPtpx2luY/czj+OcVePGQXxZICT1OstcvTQ3RthuGuBGnI4r4sDXgmxO/W0jd37UCN5HLJmhnfrD9v+wtEAbWw/viADS0WbN/+YL6DijHuRhjMb4U6OYrMUBkKHgrWr025ek2K3WIsGkr5728N4OG4MzxyKPZZCaPFPgM0aacy0Ka3MlO+mEFKi3lhLDI1mfHYE9PpbupN3ai4mGbJ1EtlUVPYYJ2hO95Tg7E0mAJsSIqyXRu02UH7D+EZ5GK6mxENcuhvDvAERcFMasjXdH4N2y5Zw="
-										Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIzMDAzMTU5MywKICAicHJvZmlsZUlkIiA6ICIyZThiNDUxOGE3NTM0OWFkYWMxYjBmNzgwMmFkOTk2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHMG9yYW5nZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MGMwMmQ5NjI5NDZlY2Q4MjJmN2YyMTI2NDYwMWQxZDczYjU4YTk0OWQ5ZWY5NDdhYzdiNTU3NDA2OGY5ZDUwIgogICAgfQogIH0KfQ=="
-									}]
-								}
-							}
-						}
-					}
+					item: { count: 1, id: "minecraft:player_head" }
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "605D9BB0E5470356"
-					item: { Count: 4, id: "createcafe:blood_orange" }
+					item: { count: 1, id: "createcafe:blood_orange" }
 					type: "item"
 				}
 			]
@@ -1896,70 +1713,33 @@
 		{
 			dependencies: ["12026DFD10F71758"]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							780879128
-							-1487713875
-							-1407512712
-							44931435
-						]
-						Name: "G0orange"
-						Properties: {
-							textures: [{
-								Signature: "A+ZhNdNGX46MovKlaiJFd9g5ngW5QLLcTaKhxlj3awpE9L1Q/KyxYmr60xixk77+b1bQrPvcYonI2BY85Au+KsgjWOFn2jQ/1p1j3RMaJCkDtFK7Nod7OBd+4UOcMkvIvLQGoVobRZswQ8oKmegcjrpgk7N0hVwwisECOAq5SvjuzYUMFIe0i+JcHrMO1Plm93AsQX+x5cYVatnrfAuZAqGX03pvDRKbMEIMeJ1GdbytFM+SGkTUEDxHIRVVpNAATFtbH7kl7nFz1HJb6q/USmAO4bu8Cl97UgjXoWkafd0mb8O8ekj4e9hPDIEOjRILYUAR64Es8w+CfY+JWQbSXKoftDEEkd91BKZ08V/8qwSZg2142pQ8ZvSUWxghvroDp2YZ1ies3hccTlHvHPtpx2luY/czj+OcVePGQXxZICT1OstcvTQ3RthuGuBGnI4r4sDXgmxO/W0jd37UCN5HLJmhnfrD9v+wtEAbWw/viADS0WbN/+YL6DijHuRhjMb4U6OYrMUBkKHgrWr025ek2K3WIsGkr5728N4OG4MzxyKPZZCaPFPgM0aacy0Ka3MlO+mEFKi3lhLDI1mfHYE9PpbupN3ai4mGbJ1EtlUVPYYJ2hO95Tg7E0mAJsSIqyXRu02UH7D+EZ5GK6mxENcuhvDvAERcFMasjXdH4N2y5Zw="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIzMDAzMTU5MywKICAicHJvZmlsZUlkIiA6ICIyZThiNDUxOGE3NTM0OWFkYWMxYjBmNzgwMmFkOTk2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHMG9yYW5nZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MGMwMmQ5NjI5NDZlY2Q4MjJmN2YyMTI2NDYwMWQxZDczYjU4YTk0OWQ5ZWY5NDdhYzdiNTU3NDA2OGY5ZDUwIgogICAgfQogIH0KfQ=="
-							}]
-						}
-					}
-				}
 			}
 			id: "69C462326A1C4475"
 			rewards: [{
 				count: 4
 				id: "6588232A20542074"
-				item: "fruitsdelight:orange_juice"
+				item: {
+					count: 1
+					id: "fruitsdelight:orange_juice"
+				}
 				type: "item"
 			}]
 			shape: "rsquare"
-			subtitle: "果粒橙！好吃！"
 			tasks: [
 				{
 					id: "1B5A9EA23189F5BF"
-					title: "橙子！"
 					type: "checkmark"
 				}
 				{
 					id: "107E64D593EF8628"
-					item: {
-						Count: 1
-						id: "minecraft:player_head"
-						tag: {
-							SkullOwner: {
-								Id: [I;
-									780879128
-									-1487713875
-									-1407512712
-									44931435
-								]
-								Name: "G0orange"
-								Properties: {
-									textures: [{
-										Signature: "A+ZhNdNGX46MovKlaiJFd9g5ngW5QLLcTaKhxlj3awpE9L1Q/KyxYmr60xixk77+b1bQrPvcYonI2BY85Au+KsgjWOFn2jQ/1p1j3RMaJCkDtFK7Nod7OBd+4UOcMkvIvLQGoVobRZswQ8oKmegcjrpgk7N0hVwwisECOAq5SvjuzYUMFIe0i+JcHrMO1Plm93AsQX+x5cYVatnrfAuZAqGX03pvDRKbMEIMeJ1GdbytFM+SGkTUEDxHIRVVpNAATFtbH7kl7nFz1HJb6q/USmAO4bu8Cl97UgjXoWkafd0mb8O8ekj4e9hPDIEOjRILYUAR64Es8w+CfY+JWQbSXKoftDEEkd91BKZ08V/8qwSZg2142pQ8ZvSUWxghvroDp2YZ1ies3hccTlHvHPtpx2luY/czj+OcVePGQXxZICT1OstcvTQ3RthuGuBGnI4r4sDXgmxO/W0jd37UCN5HLJmhnfrD9v+wtEAbWw/viADS0WbN/+YL6DijHuRhjMb4U6OYrMUBkKHgrWr025ek2K3WIsGkr5728N4OG4MzxyKPZZCaPFPgM0aacy0Ka3MlO+mEFKi3lhLDI1mfHYE9PpbupN3ai4mGbJ1EtlUVPYYJ2hO95Tg7E0mAJsSIqyXRu02UH7D+EZ5GK6mxENcuhvDvAERcFMasjXdH4N2y5Zw="
-										Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIzMDAzMTU5MywKICAicHJvZmlsZUlkIiA6ICIyZThiNDUxOGE3NTM0OWFkYWMxYjBmNzgwMmFkOTk2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHMG9yYW5nZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MGMwMmQ5NjI5NDZlY2Q4MjJmN2YyMTI2NDYwMWQxZDczYjU4YTk0OWQ5ZWY5NDdhYzdiNTU3NDA2OGY5ZDUwIgogICAgfQogIH0KfQ=="
-									}]
-								}
-							}
-						}
-					}
+					item: { count: 1, id: "minecraft:player_head" }
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "1A3DED65D8D1779E"
-					item: { Count: 4, id: "createcafe:blood_orange" }
+					item: { count: 1, id: "createcafe:blood_orange" }
 					type: "item"
 				}
 			]
@@ -1969,78 +1749,44 @@
 		{
 			dependencies: ["12026DFD10F71758"]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							780879128
-							-1487713875
-							-1407512712
-							44931435
-						]
-						Name: "G0orange"
-						Properties: {
-							textures: [{
-								Signature: "A+ZhNdNGX46MovKlaiJFd9g5ngW5QLLcTaKhxlj3awpE9L1Q/KyxYmr60xixk77+b1bQrPvcYonI2BY85Au+KsgjWOFn2jQ/1p1j3RMaJCkDtFK7Nod7OBd+4UOcMkvIvLQGoVobRZswQ8oKmegcjrpgk7N0hVwwisECOAq5SvjuzYUMFIe0i+JcHrMO1Plm93AsQX+x5cYVatnrfAuZAqGX03pvDRKbMEIMeJ1GdbytFM+SGkTUEDxHIRVVpNAATFtbH7kl7nFz1HJb6q/USmAO4bu8Cl97UgjXoWkafd0mb8O8ekj4e9hPDIEOjRILYUAR64Es8w+CfY+JWQbSXKoftDEEkd91BKZ08V/8qwSZg2142pQ8ZvSUWxghvroDp2YZ1ies3hccTlHvHPtpx2luY/czj+OcVePGQXxZICT1OstcvTQ3RthuGuBGnI4r4sDXgmxO/W0jd37UCN5HLJmhnfrD9v+wtEAbWw/viADS0WbN/+YL6DijHuRhjMb4U6OYrMUBkKHgrWr025ek2K3WIsGkr5728N4OG4MzxyKPZZCaPFPgM0aacy0Ka3MlO+mEFKi3lhLDI1mfHYE9PpbupN3ai4mGbJ1EtlUVPYYJ2hO95Tg7E0mAJsSIqyXRu02UH7D+EZ5GK6mxENcuhvDvAERcFMasjXdH4N2y5Zw="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIzMDAzMTU5MywKICAicHJvZmlsZUlkIiA6ICIyZThiNDUxOGE3NTM0OWFkYWMxYjBmNzgwMmFkOTk2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHMG9yYW5nZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MGMwMmQ5NjI5NDZlY2Q4MjJmN2YyMTI2NDYwMWQxZDczYjU4YTk0OWQ5ZWY5NDdhYzdiNTU3NDA2OGY5ZDUwIgogICAgfQogIH0KfQ=="
-							}]
-						}
-					}
-				}
 			}
 			id: "2A9DEDC057449AFF"
 			rewards: [
 				{
 					count: 12
 					id: "08EDE1F0CC8693E2"
-					item: "minecraft:orange_stained_glass"
+					item: {
+						count: 1
+						id: "minecraft:orange_stained_glass"
+					}
 					type: "item"
 				}
 				{
 					count: 12
 					id: "4436ADD79B2F1871"
-					item: "alexscavesup:radon_lamp_orange"
+					item: {
+						count: 1
+						id: "alexscavesup:radon_lamp_orange"
+					}
 					type: "item"
 				}
 			]
 			shape: "rsquare"
-			subtitle: "果粒橙！好看！"
 			tasks: [
 				{
 					id: "77DC3C5CD44025D3"
-					title: "橙子！"
 					type: "checkmark"
 				}
 				{
 					id: "276B1E51EC1CFE32"
-					item: {
-						Count: 1
-						id: "minecraft:player_head"
-						tag: {
-							SkullOwner: {
-								Id: [I;
-									780879128
-									-1487713875
-									-1407512712
-									44931435
-								]
-								Name: "G0orange"
-								Properties: {
-									textures: [{
-										Signature: "A+ZhNdNGX46MovKlaiJFd9g5ngW5QLLcTaKhxlj3awpE9L1Q/KyxYmr60xixk77+b1bQrPvcYonI2BY85Au+KsgjWOFn2jQ/1p1j3RMaJCkDtFK7Nod7OBd+4UOcMkvIvLQGoVobRZswQ8oKmegcjrpgk7N0hVwwisECOAq5SvjuzYUMFIe0i+JcHrMO1Plm93AsQX+x5cYVatnrfAuZAqGX03pvDRKbMEIMeJ1GdbytFM+SGkTUEDxHIRVVpNAATFtbH7kl7nFz1HJb6q/USmAO4bu8Cl97UgjXoWkafd0mb8O8ekj4e9hPDIEOjRILYUAR64Es8w+CfY+JWQbSXKoftDEEkd91BKZ08V/8qwSZg2142pQ8ZvSUWxghvroDp2YZ1ies3hccTlHvHPtpx2luY/czj+OcVePGQXxZICT1OstcvTQ3RthuGuBGnI4r4sDXgmxO/W0jd37UCN5HLJmhnfrD9v+wtEAbWw/viADS0WbN/+YL6DijHuRhjMb4U6OYrMUBkKHgrWr025ek2K3WIsGkr5728N4OG4MzxyKPZZCaPFPgM0aacy0Ka3MlO+mEFKi3lhLDI1mfHYE9PpbupN3ai4mGbJ1EtlUVPYYJ2hO95Tg7E0mAJsSIqyXRu02UH7D+EZ5GK6mxENcuhvDvAERcFMasjXdH4N2y5Zw="
-										Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTIzMDAzMTU5MywKICAicHJvZmlsZUlkIiA6ICIyZThiNDUxOGE3NTM0OWFkYWMxYjBmNzgwMmFkOTk2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHMG9yYW5nZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85MGMwMmQ5NjI5NDZlY2Q4MjJmN2YyMTI2NDYwMWQxZDczYjU4YTk0OWQ5ZWY5NDdhYzdiNTU3NDA2OGY5ZDUwIgogICAgfQogIH0KfQ=="
-									}]
-								}
-							}
-						}
-					}
+					item: { count: 1, id: "minecraft:player_head" }
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "6CA0AA721A46CD72"
-					item: { Count: 4, id: "createcafe:blood_orange" }
+					item: { count: 1, id: "createcafe:blood_orange" }
 					type: "item"
 				}
 			]
@@ -2048,93 +1794,35 @@
 			y: 4.0d
 		}
 		{
-			description: [
-				"平台ID：song_5007"
-				"游戏ID：MoePus（因为某些原因，头颅暂时无法加载qwq）"
-				"主要活动平台：哔哩哔哩"
-				"投稿主要内容：Minecraft优化"
-				"代表作：海上机械师，重度机械症"
-				"技术支持内容：整合包优化"
-			]
-			icon: "simplehats:digger"
 			id: "77102957237A4BAE"
 			shape: "square"
-			subtitle: "老鼠就是神！"
 			tasks: [{
 				id: "01617C8F5DC3B6D2"
-				title: "阿梓才不想当菜狗"
 				type: "checkmark"
 			}]
-			title: "song_5007"
 			x: 12.0d
 			y: 15.0d
 		}
 		{
-			description: [
-				"平台ID：吃年糕的安sir"
-				"游戏ID：54shuige"
-				"主要类型：视频"
-				"主要活动平台：抖音+哔哩哔哩"
-				"相关作品：[整合包推荐]齿轮盛宴？机械动力与农夫乐事的完美结合！"
-			]
 			icon: {
-				Count: 1
 				id: "minecraft:player_head"
-				tag: {
-					SkullOwner: {
-						Id: [I;
-							377114016
-							2061386530
-							-1491875607
-							-1689082453
-						]
-						Name: "54shuige"
-						Properties: {
-							textures: [{
-								Signature: "idTe3n/swF2+Ma7I6ZP2GKjb0rzm1BnkU82eJMtYOLXraSlWPl1fz5GwQm7ytSBBxBeDg9aYmdm3KftBbu2Df5Hxqo/MH+N2c5rpPi4ubuTtH1mSuvX0uruVCn8W39eJxwRies42IeUXDvNCjO9OEwC0+N0RZSeaDhmr4RntDbUyf5PWdxJ5mE8tSC/ooSCD+VGEZukO3lEvuoDxsmyMvVPYP6YMWE332Q8LB5wk3ly35x1GfUesySR2fb71e7e5PfEetPIZttU1085sjY0rnW+lCr33Bq7CIfvnc3/FwH/mW8PSszGqEh3Uvs2dYSneinOWqvpPiCVTnd8DCLAdX9/Rfhd1MR9Z55bb9wpG3zfehlYhgK3twnOTCdDojGhzGspRK2fQYPtOwLen8oEGuvoh+HwLFsSZfErSNZ3hHvmjEBPdcfEvTudB4+lHvJwQ3Rnm1qfDi3ZW7fXF37AbJt3T00vhMQY0OKbh00YNdMwQ/+1kNrJgWl1rNygpGi7R4h4SmrKmkgW9WsGKRbIf7H3+23eDsWC1JkSwy0OX61zvuiV36zR+B17F+tq3BkbTRujybXa9CO72d5xJcU0A61ApHOZm6g2BAfRHfdWaAOvErmM9LvrUW7boFYdpQtLwYxe32PWoftf/0EgVVbWUDijP7nVQkJN/qjsrukYzgKY="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTY1OTI3ODYwOSwKICAicHJvZmlsZUlkIiA6ICIxNjdhNGRhMDdhZGU0MzIyYTcxM2M4ZTk5YjUyYTVhYiIsCiAgInByb2ZpbGVOYW1lIiA6ICI1NHNodWlnZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81ZDBkYTI2YzliMzIyNzE2NmM4ZmI4NGVkZDI1YWYzNzRiY2M4ZWJjNzk2NTUxMGRiODIxZDcyYjI0NTdiYTcwIgogICAgfQogIH0KfQ=="
-							}]
-						}
-					}
-				}
 			}
 			id: "030FA9D8319DBDA7"
 			rewards: [{
 				id: "131E70E512F04002"
 				item: {
-					Count: 1
+					count: 1
 					id: "minecraft:player_head"
-					tag: {
-						SkullOwner: {
-							Id: [I;
-								377114016
-								2061386530
-								-1491875607
-								-1689082453
-							]
-							Name: "54shuige"
-							Properties: {
-								textures: [{
-									Signature: "idTe3n/swF2+Ma7I6ZP2GKjb0rzm1BnkU82eJMtYOLXraSlWPl1fz5GwQm7ytSBBxBeDg9aYmdm3KftBbu2Df5Hxqo/MH+N2c5rpPi4ubuTtH1mSuvX0uruVCn8W39eJxwRies42IeUXDvNCjO9OEwC0+N0RZSeaDhmr4RntDbUyf5PWdxJ5mE8tSC/ooSCD+VGEZukO3lEvuoDxsmyMvVPYP6YMWE332Q8LB5wk3ly35x1GfUesySR2fb71e7e5PfEetPIZttU1085sjY0rnW+lCr33Bq7CIfvnc3/FwH/mW8PSszGqEh3Uvs2dYSneinOWqvpPiCVTnd8DCLAdX9/Rfhd1MR9Z55bb9wpG3zfehlYhgK3twnOTCdDojGhzGspRK2fQYPtOwLen8oEGuvoh+HwLFsSZfErSNZ3hHvmjEBPdcfEvTudB4+lHvJwQ3Rnm1qfDi3ZW7fXF37AbJt3T00vhMQY0OKbh00YNdMwQ/+1kNrJgWl1rNygpGi7R4h4SmrKmkgW9WsGKRbIf7H3+23eDsWC1JkSwy0OX61zvuiV36zR+B17F+tq3BkbTRujybXa9CO72d5xJcU0A61ApHOZm6g2BAfRHfdWaAOvErmM9LvrUW7boFYdpQtLwYxe32PWoftf/0EgVVbWUDijP7nVQkJN/qjsrukYzgKY="
-									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2MTY1OTI3ODYwOSwKICAicHJvZmlsZUlkIiA6ICIxNjdhNGRhMDdhZGU0MzIyYTcxM2M4ZTk5YjUyYTVhYiIsCiAgInByb2ZpbGVOYW1lIiA6ICI1NHNodWlnZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81ZDBkYTI2YzliMzIyNzE2NmM4ZmI4NGVkZDI1YWYzNzRiY2M4ZWJjNzk2NTUxMGRiODIxZDcyYjI0NTdiYTcwIgogICAgfQogIH0KfQ=="
-								}]
-							}
-						}
-					}
 				}
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "来自dy的建筑大佬！（大up哦！@（宣发）安某 ）"
 			tasks: [{
 				id: "23B31EC53D449141"
-				title: "y0-果霖橙"
 				type: "checkmark"
 			}]
-			title: "吃年糕的安sir"
 			x: 61.0d
 			y: 3.5d
 		}
 	]
-	title: "致谢名单"
 }

@@ -1,234 +1,66 @@
 {
 	icon: {
-		Count: 1
 		id: "minecraft:potion"
-		tag: {
-			Potion: "minecraft:healing"
-		}
 	}
 	id: "68C0C21E2EE6FB93"
 	loot_size: 1
 	order_index: 6
 	rewards: [
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:night_vision"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:awkward"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:thick"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:mundane"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:water"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:long_strength"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:regeneration"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:healing"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:water_breathing"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:slowness"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:swiftness"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:fire_resistance"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:leaping"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:invisibility"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "alexsmobsup:bug_pheromones"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "alexsmobsup:poison_resistance"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "alexsmobsup:lava_vision"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "alexsmobsup:knockback_resistance"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:luck"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "minecraft:slow_falling"
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "minecraft:potion"
-				tag: {
-					Potion: "ulterlands:inferno_potions"
-				}
-			}
-		}
+		{ id: "51AB9DBEEEE4AF2C", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "6FBBDA33464CF492", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "4FD0E02D3B294858", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "61E76FAD06BEB325", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "3B4DD6069ADB71C2", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "79DA69453E81B685", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "3F76DB7E06A0BAC3", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "709856F8DA745FD6", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "7D132D010D65A806", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "5EF07EC1B14FB7C5", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "2900696F5AF5E501", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "69F7794D39627E0C", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "2ED704EA2D14E3B6", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "3905157D06B4B0AD", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "716AE87C093AA958", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "1C98ACA17F7A5B90", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "2D74BFB6D6348E74", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "0DC8746E2E422BCA", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "52F9CB7E46B9FEC0", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "239D25F6A9F86EE6", item: { count: 1, id: "minecraft:potion" } }
+		{ id: "679480C7E0537104", item: { count: 1, id: "minecraft:potion" } }
 		{
 			command: "/effect give @p blindness 10 255"
+			id: "1004BC60AC509829"
 			silent: true
 			type: "command"
 			weight: 5.0f
 		}
 		{
 			command: "/effect give @p minecraft:hunger 10 255"
+			id: "6AE434F74CB002C7"
 			silent: true
 			type: "command"
 			weight: 3.0f
 		}
 		{
 			command: "/effect give @p nausea 10 255"
+			id: "13233ACA24620C34"
 			silent: true
 			type: "command"
 			weight: 3.0f
 		}
 		{
 			command: "/effect give @p poison 10 255"
+			id: "7F189FD2A55E792B"
 			silent: true
 			type: "command"
 			weight: 3.0f
 		}
 		{
 			command: "/effect give @p wither 10 255"
+			id: "5DB1C03FD68AFBE9"
 			silent: true
 			type: "command"
 			weight: 3.0f
 		}
 	]
-	title: "药水福袋！"
 }

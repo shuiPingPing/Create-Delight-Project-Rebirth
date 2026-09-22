@@ -1,18 +1,16 @@
 {
-	icon: "ae2:engineering_processor"
 	id: "051AD7319446C4E0"
 	loot_size: 1
 	order_index: 15
 	rewards: [
-		{ item: "ae2:logic_processor" }
-		{ item: "ae2:printed_calculation_processor" }
-		{ item: "ae2:engineering_processor" }
-		{ item: "ae2:calculation_processor" }
-		{ item: "ae2:printed_engineering_processor" }
-		{ item: "ae2:printed_logic_processor" }
-		{ item: "ae2:printed_silicon" }
-		{ item: "megacells:accumulation_processor" }
-		{ item: "megacells:printed_accumulation_processor" }
+		{ id: "1927EA0A5DC7E7BE", item: { count: 1, id: "ae2:logic_processor" } }
+		{ id: "0007ECBA7F477B76", item: { count: 1, id: "ae2:printed_calculation_processor" } }
+		{ id: "31C624D041287FB1", item: { count: 1, id: "ae2:engineering_processor" } }
+		{ id: "2BD25BDAC51DF4FF", item: { count: 1, id: "ae2:calculation_processor" } }
+		{ id: "276EB2CBEFC89E43", item: { count: 1, id: "ae2:printed_engineering_processor" } }
+		{ id: "7BA9BD1366F7456A", item: { count: 1, id: "ae2:printed_logic_processor" } }
+		{ id: "5121B1196BA9C053", item: { count: 1, id: "ae2:printed_silicon" } }
+		{ id: "0C840F17B17683C9", item: { count: 1, id: "megacells:accumulation_processor" } }
+		{ id: "3B8920D43CABE67B", item: { count: 1, id: "megacells:printed_accumulation_processor" } }
 	]
-	title: "处理器"
 }

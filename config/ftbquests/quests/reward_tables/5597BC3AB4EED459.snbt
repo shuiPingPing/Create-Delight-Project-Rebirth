@@ -1,77 +1,21 @@
 {
 	icon: {
-		Count: 1
-		id: "nethervinery:nether_fizz"
-		tag: { }
+		components: {
+			"ftbquests:missing_item": "nethervinery:nether_fizz"
+		}
+		id: "ftbquests:missing_item"
 	}
 	id: "5597BC3AB4EED459"
 	loot_size: 1
 	order_index: 11
 	rewards: [
-		{
-			item: {
-				Count: 1
-				id: "vinery:noir_wine"
-				tag: {
-					Year: 0
-				}
-			}
-		}
-		{ item: "createcafe:mango_milk_tea" }
-		{
-			item: {
-				Count: 1
-				id: "vinery:stal_wine"
-				tag: {
-					Year: 0
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "vinery:kelp_cider"
-				tag: {
-					Year: 0
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "vinery:strad_wine"
-				tag: {
-					Year: 0
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "vinery:magnetic_wine"
-				tag: {
-					Year: 0
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "vinery:chorus_wine"
-				tag: {
-					Year: 0
-				}
-			}
-		}
-		{
-			item: {
-				Count: 1
-				id: "vinery:aegis_wine"
-				tag: {
-					Year: 0
-				}
-			}
-		}
+		{ id: "00567E31FA3DBF56", item: { count: 1, id: "vinery:noir_wine" } }
+		{ id: "54D9BEF44921406B", item: { count: 1, id: "createcafe:mango_milk_tea" } }
+		{ id: "55C30730FF1FE0CC", item: { count: 1, id: "vinery:stal_wine" } }
+		{ id: "646592EEE92BE5E6", item: { count: 1, id: "vinery:kelp_cider" } }
+		{ id: "7893F959D6FCFD60", item: { count: 1, id: "vinery:strad_wine" } }
+		{ id: "0B5F047FDB83AB7A", item: { count: 1, id: "vinery:magnetic_wine" } }
+		{ id: "269CEADD8574C8C1", item: { count: 1, id: "vinery:chorus_wine" } }
+		{ id: "1F538D197EA2EC75", item: { count: 1, id: "vinery:aegis_wine" } }
 	]
-	title: "酒与奶茶"
 }

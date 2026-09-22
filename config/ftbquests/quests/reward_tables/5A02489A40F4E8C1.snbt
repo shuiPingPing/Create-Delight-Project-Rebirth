@@ -1,17 +1,15 @@
 {
-	icon: "createcafe:vanilla_milk_tea"
 	id: "5A02489A40F4E8C1"
 	loot_size: 1
 	order_index: 2
 	rewards: [
-		{ item: "createcafe:oreo_milk_tea" }
-		{ item: "createcafe:banana_milk_tea" }
-		{ item: "createcafe:vanilla_milk_tea" }
-		{ item: "createcafe:watermelon_milk_tea" }
-		{ item: "createcafe:sweetberry_milk_tea" }
-		{ item: "createcafe:pumpkin_milk_tea" }
-		{ item: "createcafe:apple_milk_tea" }
-		{ item: "createcafe:strawberry_milk_tea" }
+		{ id: "3E80C5BFC48F302D", item: { count: 1, id: "createcafe:oreo_milk_tea" } }
+		{ id: "57AEE5A6D4C13C4D", item: { count: 1, id: "createcafe:banana_milk_tea" } }
+		{ id: "31F3AF97DC7F05E7", item: { count: 1, id: "createcafe:vanilla_milk_tea" } }
+		{ id: "34341FD513AE0BA5", item: { count: 1, id: "createcafe:watermelon_milk_tea" } }
+		{ id: "0E164D7FC1063417", item: { count: 1, id: "createcafe:sweetberry_milk_tea" } }
+		{ id: "4C2F0AD72AB217FC", item: { count: 1, id: "createcafe:pumpkin_milk_tea" } }
+		{ id: "78F9018F900B07C5", item: { count: 1, id: "createcafe:apple_milk_tea" } }
+		{ id: "7B8B97DFB132CC21", item: { count: 1, id: "createcafe:strawberry_milk_tea" } }
 	]
-	title: "奶茶！！"
 }

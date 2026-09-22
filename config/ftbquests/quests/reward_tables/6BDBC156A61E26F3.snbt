@@ -3,39 +3,174 @@
 	loot_size: 1
 	order_index: 1
 	rewards: [
-		{ count: 10, item: "farmersdelight:dog_food" }
-		{ count: 2, item: "corn_delight:corn_soup" }
-		{ count: 2, item: "corn_delight:nachos_bowl" }
-		{ count: 5, item: "corn_delight:taco" }
-		{ count: 5, item: "corn_delight:cornbread_stuffing" }
-		{ count: 2, item: "ends_delight:ender_congee" }
-		{ count: 2, item: "ends_delight:dragon_breath_and_chorus_soup" }
-		{ count: 5, item: "farmersdelight:stuffed_potato", weight: 50.0f }
-		{ count: 5, item: "farmersdelight:dumplings", weight: 50.0f }
-		{ count: 5, item: "farmersdelight:mutton_wrap" }
-		{ count: 5, item: "farmersdelight:bacon_sandwich" }
-		{ count: 5, item: "farmersdelight:hamburger" }
-		{ count: 5, item: "farmersdelight:chicken_sandwich" }
-		{ count: 2, item: "farmersdelight:barbecue_stick" }
-		{ count: 2, item: "farmersdelight:smoked_ham" }
-		{ item: "farmersdelight:mushroom_rice" }
-		{ item: "farmersdelight:roasted_mutton_chops" }
-		{ item: "farmersdelight:pasta_with_mutton_chop" }
-		{ item: "farmersdelight:pasta_with_meatballs" }
-		{ item: "farmersdelight:bacon_and_eggs" }
-		{ count: 5, item: "farmersdelight:kelp_roll" }
-		{ count: 5, item: "farmersdelight:cod_roll" }
-		{ count: 5, item: "farmersdelight:salmon_roll" }
-		{ count: 5, item: "farmersdelight:cabbage_rolls", weight: 50.0f }
-		{ item: "farmersdelight:shepherds_pie" }
-		{ item: "farmersdelight:honey_glazed_ham" }
-		{ item: "farmersdelight:stuffed_pumpkin" }
-		{ item: "farmersdelight:roast_chicken" }
-		{ item: "farmersdelight:grilled_salmon" }
-		{ item: "farmersdelight:squid_ink_pasta" }
-		{ item: "farmersdelight:ratatouille" }
-		{ item: "farmersdelight:steak_and_potatoes" }
-		{ item: "farmersdelight:vegetable_noodles" }
+		{
+			count: 10
+			id: "590C94639D10C5A4"
+			item: {
+				count: 1
+				id: "farmersdelight:dog_food"
+			}
+		}
+		{
+			count: 2
+			id: "7D88951A7F3E2659"
+			item: {
+				count: 1
+				id: "corn_delight:corn_soup"
+			}
+		}
+		{
+			count: 2
+			id: "1DFD4ABBCD0E7792"
+			item: {
+				count: 1
+				id: "corn_delight:nachos_bowl"
+			}
+		}
+		{
+			count: 5
+			id: "4C76C45B507249B5"
+			item: {
+				count: 1
+				id: "corn_delight:taco"
+			}
+		}
+		{
+			count: 5
+			id: "212B9B964E3E025E"
+			item: {
+				count: 1
+				id: "corn_delight:cornbread_stuffing"
+			}
+		}
+		{
+			count: 2
+			id: "2D1553A5C62EF047"
+			item: {
+				count: 1
+				id: "ends_delight:ender_congee"
+			}
+		}
+		{
+			count: 2
+			id: "54886A28A8E6472A"
+			item: {
+				count: 1
+				id: "ends_delight:dragon_breath_and_chorus_soup"
+			}
+		}
+		{
+			count: 5
+			id: "15B879C47F2832FB"
+			item: {
+				count: 1
+				id: "farmersdelight:stuffed_potato"
+			}
+			weight: 50.0f
+		}
+		{
+			count: 5
+			id: "7C0B402CB400BF03"
+			item: {
+				count: 1
+				id: "farmersdelight:dumplings"
+			}
+			weight: 50.0f
+		}
+		{
+			count: 5
+			id: "4F6D63BD5F38AC3E"
+			item: {
+				count: 1
+				id: "farmersdelight:mutton_wrap"
+			}
+		}
+		{
+			count: 5
+			id: "049172F49A6E3A56"
+			item: {
+				count: 1
+				id: "farmersdelight:bacon_sandwich"
+			}
+		}
+		{
+			count: 5
+			id: "66EC2032CE8585D5"
+			item: {
+				count: 1
+				id: "farmersdelight:hamburger"
+			}
+		}
+		{
+			count: 5
+			id: "020D3329DCC1B8C5"
+			item: {
+				count: 1
+				id: "farmersdelight:chicken_sandwich"
+			}
+		}
+		{
+			count: 2
+			id: "0A580E9BE5C95779"
+			item: {
+				count: 1
+				id: "farmersdelight:barbecue_stick"
+			}
+		}
+		{
+			count: 2
+			id: "0FB1D63865E23370"
+			item: {
+				count: 1
+				id: "farmersdelight:smoked_ham"
+			}
+		}
+		{ id: "10ECB7A5082BEE18", item: { count: 1, id: "farmersdelight:mushroom_rice" } }
+		{ id: "31E10877C4A35754", item: { count: 1, id: "farmersdelight:roasted_mutton_chops" } }
+		{ id: "0456E747E2B9AD6B", item: { count: 1, id: "farmersdelight:pasta_with_mutton_chop" } }
+		{ id: "1FB2B5E9864BD129", item: { count: 1, id: "farmersdelight:pasta_with_meatballs" } }
+		{ id: "70BDB0C801FB3249", item: { count: 1, id: "farmersdelight:bacon_and_eggs" } }
+		{
+			count: 5
+			id: "541E224B3A678605"
+			item: {
+				count: 1
+				id: "farmersdelight:kelp_roll"
+			}
+		}
+		{
+			count: 5
+			id: "267F340AA910B765"
+			item: {
+				count: 1
+				id: "farmersdelight:cod_roll"
+			}
+		}
+		{
+			count: 5
+			id: "0ACA2E350BB5E63D"
+			item: {
+				count: 1
+				id: "farmersdelight:salmon_roll"
+			}
+		}
+		{
+			count: 5
+			id: "3FB3AB57CAAB8510"
+			item: {
+				count: 1
+				id: "farmersdelight:cabbage_rolls"
+			}
+			weight: 50.0f
+		}
+		{ id: "33E5C172FF54209B", item: { count: 1, id: "farmersdelight:shepherds_pie" } }
+		{ id: "763AAC917487CB6F", item: { count: 1, id: "farmersdelight:honey_glazed_ham" } }
+		{ id: "37BA8B7CE1DF6CD7", item: { count: 1, id: "farmersdelight:stuffed_pumpkin" } }
+		{ id: "66C5B94D2E3BD88E", item: { count: 1, id: "farmersdelight:roast_chicken" } }
+		{ id: "21EDBCDBDDA014C4", item: { count: 1, id: "farmersdelight:grilled_salmon" } }
+		{ id: "43ED24CBACF7426F", item: { count: 1, id: "farmersdelight:squid_ink_pasta" } }
+		{ id: "253E6ACA896633D0", item: { count: 1, id: "farmersdelight:ratatouille" } }
+		{ id: "656156BCB17B65A2", item: { count: 1, id: "farmersdelight:steak_and_potatoes" } }
+		{ id: "065AA90EABD3339B", item: { count: 1, id: "farmersdelight:vegetable_noodles" } }
 	]
-	title: "美味食物！"
 }

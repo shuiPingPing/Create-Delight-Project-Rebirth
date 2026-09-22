@@ -1,139 +1,106 @@
 {
 	icon: {
-		Count: 1
 		id: "farmersdelight:iron_knife"
-		tag: {
-			Damage: 0
-		}
 	}
 	id: "467863873CF4CF6D"
 	loot_size: 1
 	order_index: 8
 	rewards: [
 		{
+			id: "42ACB19E14308B32"
 			item: {
-				Count: 1
+				count: 1
 				id: "farmersdelight:iron_knife"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 100.0f
 		}
 		{
+			id: "4C7F1FCA3486CAED"
 			item: {
-				Count: 1
+				count: 1
 				id: "farmersdelight:flint_knife"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 20.0f
 		}
 		{
+			id: "3A9DED4C7D1746B0"
 			item: {
-				Count: 1
+				count: 1
 				id: "farmersdelight:golden_knife"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 5.0f
 		}
 		{
+			id: "760E40570B9E2C9E"
 			item: {
-				Count: 1
+				count: 1
 				id: "ends_delight:end_stone_knife"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 3.0f
 		}
 		{
+			id: "44D9924B47E77AD1"
 			item: {
-				Count: 1
+				count: 1
 				id: "ends_delight:purpur_knife"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 3.0f
 		}
 		{
+			id: "50E3B801AF23C74B"
 			item: {
-				Count: 1
+				count: 1
 				id: "trailandtales_delight:cherry_iron_knife"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 100.0f
 		}
 		{
+			id: "1DA5747E95B1D45A"
 			item: {
-				Count: 1
+				count: 1
 				id: "dungeonsdelight:iron_cleaver"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 100.0f
 		}
 		{
+			id: "136D5E3B7428B293"
 			item: {
-				Count: 1
+				count: 1
 				id: "dungeonsdelight:flint_cleaver"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 20.0f
 		}
 		{
+			id: "22C5A28CB276C9A6"
 			item: {
-				Count: 1
+				count: 1
 				id: "dungeonsdelight:golden_cleaver"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 5.0f
 		}
 		{
+			id: "191C6137FDE6AC2C"
 			item: {
-				Count: 1
+				count: 1
 				id: "dungeonsdelight:stained_knife"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 3.0f
 		}
 		{
+			id: "4D9829E2C49143BF"
 			item: {
-				Count: 1
+				count: 1
 				id: "trailandtales_delight:sniffer_eggshell_knife"
-				tag: {
-					Damage: 0
-				}
 			}
 			weight: 3.0f
 		}
 		{
+			id: "72AD5B1E76492826"
 			item: {
-				Count: 1
+				count: 1
 				id: "trailandtales_delight:sniffer_eggshell_knife"
-				tag: {
-					Damage: 0
-					Enchantments: [{
-						id: "minecraft:sharpness"
-						lvl: 7s
-					}]
-				}
 			}
 			weight: 0.01f
 		}
 	]
-	title: "刀具奖励"
 }
