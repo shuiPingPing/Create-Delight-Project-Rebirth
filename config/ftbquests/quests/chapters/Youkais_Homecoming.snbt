@@ -1675,7 +1675,7 @@
 			]
 			description: ["（本效果在大部分同类食物中拥有，在此处不过多介绍获取方式）"]
 			hide_dependency_lines: true
-			icon: "farmersrespite:yellow_tea_leaves"
+			icon: "ftbquests:missing_item"
 			id: "21B8B14AD0EF29D9"
 			rewards: [{
 				id: "5550EE926946B4FD"
@@ -1699,7 +1699,7 @@
 			]
 			description: ["（本效果在大部分同类食物中拥有，在此处不过多介绍获取方式）"]
 			hide_dependency_lines: true
-			icon: "farmersrespite:black_tea_leaves"
+			icon: "ftbquests:missing_item"
 			id: "3ABCE05AAE7D94B1"
 			rewards: [{
 				id: "1E3E19BE4A6A2D59"
@@ -2006,7 +2006,7 @@
 				"        1.红色环玉弹幕：5-10个"
 				"        2.黑色环玉弹幕：3-6个"
 			]
-			icon: "youkaishomecoming:red_circle_danmaku"
+			icon: "ftbquests:missing_item"
 			id: "69AAC8A157DAD845"
 			optional: true
 			rewards: [

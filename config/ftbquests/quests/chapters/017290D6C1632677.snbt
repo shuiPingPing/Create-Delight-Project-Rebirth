@@ -253,7 +253,7 @@
 			description: ["       部分boos会生成再次召唤的祭坛，无法破坏，请不要在家里挑战！！！"]
 			hide_until_deps_complete: true
 			hide_until_deps_visible: true
-			icon: "blackknightarmor:end_dragon_ingot"
+			icon: "ftbquests:missing_item"
 			id: "333BF6EDDA0D6998"
 			rewards: [{
 				exclude_from_claim_all: true

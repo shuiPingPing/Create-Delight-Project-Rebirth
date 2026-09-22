@@ -112,3 +112,9 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 
 1.20.1 遗留的 `icon` / `title`（书本图标与标题）保留在文件里——2101 会忽略不认识的键，无害；
 `version` 两边都是 `13`，无需迁移。章节文件的字段无漂移（`order_index` / `quest_links` 等 1.21.1 字段本来就有）。
+## 九、图标兜底（2026-09-22）
+
+- 书本图标 `createdelightcore:textures/gui/packicon64.png` 在 **`kubejs/assets/createdelightcore/textures/gui/packicon64.png`** ✓ 存在（KubeJS 资源作为内置资源包生效，`ftbquests:custom_icon` 物品也在注册表里 ✓）。
+- 保留下来的 quest 里共有 395 处 `icon:` 引用，其中 **8 处指向 1.21.1 已不存在的物品**
+  （`farmersrespite` 3、`bakeries`/`youkaishomecoming`/`cosmopolitan`/`oceanic_delight`/`blackknightarmor` 各 1，加上 reward table 里的 1 处）
+  → 已统一替换为 FTB Quests 自带的占位物品 **`ftbquests:missing_item`**（显示为明确的"缺失"图标，而不是破图）。

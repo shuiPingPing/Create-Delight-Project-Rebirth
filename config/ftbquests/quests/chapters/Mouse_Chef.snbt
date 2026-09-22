@@ -4,7 +4,7 @@
 	default_quest_shape: ""
 	filename: "Mouse_Chef"
 	group: "7D0A1432AAAD0EBA"
-	icon: "oceanic_delight:takoyaki"
+	icon: "ftbquests:missing_item"
 	id: "546D1BAE985F9945"
 	images: [
 		{
@@ -1765,7 +1765,7 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "farmersrespite:green_tea"
+			icon: "ftbquests:missing_item"
 			id: "5885AB5ADC9823EC"
 			rewards: [{
 				id: "194CB173614B1C95"
@@ -3251,7 +3251,7 @@
 			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
-			icon: "cosmopolitan:potato_pancakes"
+			icon: "ftbquests:missing_item"
 			id: "6A073BA63BE48A68"
 			rewards: [{
 				count: 3
