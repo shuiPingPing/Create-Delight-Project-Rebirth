@@ -356,3 +356,38 @@ return ClientTextComponentUtils.parse(UNESCAPER.translate(raw));                
 
 **过程中踩到的坑（已写进脚本注释）**：源包章节文件里存在「大小写映射会改变长度」的 Unicode 字符，
 所以**不能** `text.toUpperCase().indexOf(...)` 定位 id（实测整批 82 条全部定位失败），要用大小写不敏感的正则或分别试大小写。
+
+### 14.3 TACZ 任务物品/图标的 NBT 被清空 → 黑紫缺失贴图（2026-09-22 晚，已修）
+
+**现象**：任务书里 TACZ 相关任务、以及「精械锐制」章节图标显示为**缺失贴图**（黑紫格）。
+
+**根因**：源包这些物品带 NBT 且要求匹配：
+
+```
+item: { Count: 1  id: "tacz:attachment"  tag: { AttachmentId: "create_armorer:sight_standard" } }
+match_nbt: true
+```
+
+游戏在 1.21.1 回写时把 `tag` 变成**空** custom_data（或整块删掉）、并丢掉 `match_nbt`：
+
+```
+item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+item: { count: 1  id: "tacz:ammo" }
+```
+
+TACZ 1.21 靠 `minecraft:custom_data` 里的 `AttachmentId` / `GunId` / `AmmoId` 选模型与匹配
+（`tacz-neoforge-1.21.1-1.1.8-hotfix-r6.jar` 内 `com.tacz.guns.api.item.nbt.*ItemDataAccessor`）→ 数据空了就没有模型。
+
+**修法**：`scripts/fix-quests-tacz-items.mjs` 按「所属对象 id」从源包搬回数据 →
+恢复 **108 个 item 块 + 9 个 icon 块**（含章节图标），并把 `match_nbt` 换成 1.21 的名字 **`match_components`**（86 处）。
+源包 117 个带 NBT 块 ↔ 本改动 117 处，1:1 对应。pre-fix 备份：`_dsh_tmp/quests-tacz-bak/`。
+
+**映射注意（踩坑）**：不能用"出现顺序"对齐 —— 游戏回写时按字母序重排过 key，顺序全错。要按 id：
+
+- `item:` 块 → 取它**前面**最近的 `id: "HEX"`（task / reward 自身的 id）
+- `icon:` 块 → 取它**后面**最近的 `id: "HEX"`（quest / chapter 自身的 id）
+
+**生效方式**：任务数据在服务端，改完要**重进世界或重启游戏**。
+
+**顺带确认**：该提交里另外 3 个 `icon:` 删除行是**重复插入**（同一 quest 有两个被转换的任务，图标脚本给它插了两次），
+游戏回写时去重删掉一份 —— 这 3 个 quest 现在都仍有图标，无需补救。
