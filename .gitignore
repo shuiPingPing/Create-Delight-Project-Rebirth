@@ -103,3 +103,9 @@ server/
 .probe
 kubejs/config/probe-settings.json
 kubejs/config/web_server.json
+
+# Northstar 本地补丁备份（11MB 原版 jar，不入库/不发布）
+mods/.northstar-original/
+# Euphoria Patcher / Iris 运行时生成物：补丁后的光影文件夹与选项覆盖 txt（每个用户本地自动生成）
+shaderpacks/*/
+shaderpacks/*.txt

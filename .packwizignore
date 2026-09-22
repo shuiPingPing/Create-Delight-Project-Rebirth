@@ -24,3 +24,8 @@ AGENTS.md
 .gitattributes
 devtool.bat
 devtool.sh
+
+# Northstar patch backup + runtime-generated shader artifacts
+mods/.northstar-original
+shaderpacks/*/
+shaderpacks/*.txt
