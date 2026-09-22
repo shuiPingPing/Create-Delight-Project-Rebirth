@@ -909,6 +909,9 @@
 		{
 			dependencies: ["4D21060946DAD49C"]
 			dependency_requirement: "one_started"
+			icon: {
+				id: "create_bs:iron_item_vault"
+			}
 			id: "65877729DB7620EF"
 			shape: "gear"
 			size: 1.5d

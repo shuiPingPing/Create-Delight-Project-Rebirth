@@ -57,6 +57,9 @@
 		}
 		{
 			dependencies: ["3BBBADC1B0766B77"]
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "00AF35D832509CB8"
 			shape: "hexagon"
 			size: 2.0d
@@ -69,6 +72,9 @@
 		}
 		{
 			dependencies: ["7DC98E34AECFBB5C"]
+			icon: {
+				id: "create:copper_backtank"
+			}
 			id: "6E314AD4717C615D"
 			tasks: [
 				{

@@ -148,6 +148,9 @@
 		}
 		{
 			hide_until_deps_complete: true
+			icon: {
+				id: "vinery:white_grape"
+			}
 			id: "3E63AA1AAFDE43A0"
 			tasks: [{
 				id: "32553D21388CEE0D"
@@ -158,6 +161,9 @@
 		}
 		{
 			hide_until_deps_complete: true
+			icon: {
+				id: "vinery:red_grape"
+			}
 			id: "35CFE29C0207239D"
 			tasks: [{
 				id: "59C16038D45F59AF"

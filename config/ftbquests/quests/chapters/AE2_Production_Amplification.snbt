@@ -321,6 +321,9 @@
 		{
 			dependencies: ["5AB2EBBD2243DE6B"]
 			hide_until_deps_visible: false
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "0462FFB851550962"
 			tasks: [{
 				id: "074988C6E5470F39"
@@ -363,6 +366,9 @@
 		{
 			dependencies: ["3087A516BF36628A"]
 			hide_until_deps_visible: false
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "57F8817405EFEF38"
 			tasks: [{
 				id: "6193E4C687C96D49"
@@ -474,6 +480,9 @@
 			]
 			dependency_requirement: "one_completed"
 			hide_until_deps_visible: false
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "1E75F90CA8E6E2EE"
 			tasks: [{
 				id: "7785B3C2623D1A9F"
@@ -540,6 +549,9 @@
 		{
 			dependencies: ["690EB66CF852144F"]
 			hide_until_deps_visible: false
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "1F11EC5781998C5F"
 			tasks: [{
 				id: "43FE8A88EA3D9B66"

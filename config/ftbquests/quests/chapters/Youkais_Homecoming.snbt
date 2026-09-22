@@ -1018,6 +1018,12 @@
 		}
 		{
 			dependencies: ["3D7F0A98AE45B0B0"]
+			icon: {
+				id: "vinery:red_grape_seeds"
+			}
+			icon: {
+				id: "youkaishomecoming:black_grape"
+			}
 			id: "60521CC89812A87E"
 			rewards: [
 				{
@@ -2217,6 +2223,9 @@
 		}
 		{
 			dependencies: ["6A06275C072AE4F0"]
+			icon: {
+				id: "youkaishomecoming:frozen_frog_temperate"
+			}
 			id: "2A65ED174CF69AB7"
 			rewards: [{
 				id: "0185B9EF1ABC64C5"

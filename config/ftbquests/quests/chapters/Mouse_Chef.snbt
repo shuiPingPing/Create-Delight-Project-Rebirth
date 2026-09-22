@@ -3951,6 +3951,9 @@
 		{
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "473F48570E933391"
 			rewards: [{
 				id: "7407D0FCB803D137"

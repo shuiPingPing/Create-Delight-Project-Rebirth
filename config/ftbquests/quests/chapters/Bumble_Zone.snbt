@@ -205,6 +205,9 @@
 		}
 		{
 			dependencies: ["588F6A55189D0FA8"]
+			icon: {
+				id: "the_bumblezone:essence_calming"
+			}
 			id: "3C2F7E48D064D706"
 			rewards: [{
 				id: "6285C508E2B9D34B"
@@ -442,6 +445,9 @@
 		}
 		{
 			dependencies: ["588F6A55189D0FA8"]
+			icon: {
+				id: "the_bumblezone:bumble_bee_chestplate_1"
+			}
 			id: "6B51D7ED18958653"
 			rewards: [
 				{

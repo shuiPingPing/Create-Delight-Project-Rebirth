@@ -275,6 +275,9 @@
 			dependencies: ["1DD9F7C0F4BD2170"]
 			hide_until_deps_complete: true
 			hide_until_deps_visible: true
+			icon: {
+				id: "gateways:gate_pearl"
+			}
 			id: "333BF6EDDA0D6998"
 			rewards: [{
 				exclude_from_claim_all: true

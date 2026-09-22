@@ -317,3 +317,42 @@ return ClientTextComponentUtils.parse(UNESCAPER.translate(raw));                
 
 - 2101 **没有** `itemfilters` 的等价任务类型；`ftb-quests` 与 `ftb-filter-system` 的 jar 里都搜不到任何 `ftbfiltersystem` 任务类型集成（0 命中）→ 那 84 个只能保持 checkmark（显示 ✔、无物品图标）。
 - 若要把其中"过滤器其实只锁定了一个具体物品"的恢复成 `item` 任务（拿回物品图标与"持有该物品"语义），属于可选精修，见报告 `_dsh_tmp/quests-migration-report.md` 的 itemfilters 明细。
+
+### 14.2 已做：给这 82 个 quest 补回 quest 级图标（2026-09-22 晚，**已完成**）
+
+**做法**：不动任务类型（仍是 checkmark，语义不变），只给"自己没有 icon"的 quest 补 `icon: { id: … }` 取回视觉图标。
+工具：`scripts/restore-quest-icons.mjs`（`--dry-run` / `--debug` / 无参写回，写回时同目录留 `.bak`，本次备份已移到 `_dsh_tmp/quests-chapters-bak/`）。
+
+图标来源（按优先级）：
+1. 源包（CDR1201）里该 task 的 `item:` 块 → `itemfilters:tag` 的 tag → 用**各 jar 的 `data/*/tags/item*/**.json`**（原版 + 364 个 mod）递归展开，挑代表物品；
+2. tag 在 1.21.1 不存在时 → 按名字猜 `<ns>:<末段>`（含命名空间改名表、单复数变体），并用 `assets/<ns>/models/{item,block}/*.json` **验证物品确实存在**；
+3. 仍不行 → 人工指定（下表 12 个，全部经模型表校验）。
+
+| 指标 | 数 |
+|---|---|
+| 待补 quest（无 icon 的转换任务） | **82** |
+| 实际补上 | **75** |
+| 其中：按 tag 解析 | 61 |
+| 其中：按名字猜（tag 已不存在） | 2 |
+| 其中：人工指定 | 12 |
+| 未补（保持 ✔） | 0 |
+
+人工指定的 12 个（原 tag → 采用图标，理由见脚本内注释）：
+
+| quest | 原 tag | 采用图标 |
+|---|---|---|
+| `333BF6EDDA0D6998` 命定之门 | `#more_mod_tetra:over_core` | `gateways:gate_pearl` |
+| `38FEB46E9F16E159` 可丢出 | `#alexscaves:ice_cream_scoop` | `alexscavesup:vanilla_ice_cream_scoop` |
+| `1DC5E003961CA53D` | `#alexscaves:sweetish_fish` | `alexscavesup:sweetish_fish_blue` |
+| `731F8C9DC5ADC57F` | `#alexscaves:ice_cream` | `alexscavesup:vanilla_ice_cream` |
+| `65877729DB7620EF` 保险库 | `#create_bs:vaults` | `create_bs:iron_item_vault` |
+| `3968AC36E0517F5B` 低强度弹簧 | `#forge:spring/below_500` | `vintageimprovements:andesite_spring` |
+| `610ED0789BAF7EFC` 高强度弹簧 | `#forge:spring/between_500_2_1000` | `vintageimprovements:steel_spring` |
+| `4CC4E893A6950B0F` 超高强度弹簧 | `#forge:spring/over_1000` | `vintageimprovements:netherite_spring` |
+| `395CE84DC5201E94` 电线 | `#forge:wires/electric` | `create_new_age:copper_wire` |
+| `73B0EDFE6627F286` 竹子/树皮/木屑/草杆 | `#forge:papers_raw_material` | `minecraft:bamboo` |
+| `5F7A132E1CFCEED3` 仙人掌/菠萝苗/腐肉/粗布 | `#createdelight:leather_ingredient` | `minecraft:cactus` |
+| `2A65ED174CF69AB7` 冻青蛙这一块 | `#youkaishomecoming:frozen_frog` | `youkaishomecoming:frozen_frog_temperate` |
+
+**过程中踩到的坑（已写进脚本注释）**：源包章节文件里存在「大小写映射会改变长度」的 Unicode 字符，
+所以**不能** `text.toUpperCase().indexOf(...)` 定位 id（实测整批 82 条全部定位失败），要用大小写不敏感的正则或分别试大小写。

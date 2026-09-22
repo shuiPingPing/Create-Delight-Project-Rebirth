@@ -112,6 +112,9 @@
 		}
 		{
 			dependencies: ["278C1A8A569B34B7"]
+			icon: {
+				id: "alexscavesup:vanilla_ice_cream_scoop"
+			}
 			id: "38FEB46E9F16E159"
 			tasks: [{
 				id: "2DA3936E8A7BF249"
@@ -122,6 +125,9 @@
 		}
 		{
 			dependencies: ["278C1A8A569B34B7"]
+			icon: {
+				id: "alexscavesup:gelatin_blue"
+			}
 			id: "5750ECB9C1709BB9"
 			tasks: [{
 				id: "4711CAE14D0B1BF6"
@@ -396,6 +402,9 @@
 		}
 		{
 			dependencies: ["278C1A8A569B34B7"]
+			icon: {
+				id: "alexscavesup:sweetish_fish_blue"
+			}
 			id: "1DC5E003961CA53D"
 			tasks: [{
 				id: "413BCDB393EB807F"
@@ -755,6 +764,9 @@
 		}
 		{
 			dependencies: ["38FEB46E9F16E159"]
+			icon: {
+				id: "alexscavesup:vanilla_ice_cream"
+			}
 			id: "731F8C9DC5ADC57F"
 			tasks: [{
 				id: "704838DD5AB2E2B4"

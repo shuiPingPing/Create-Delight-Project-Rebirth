@@ -848,6 +848,9 @@
 		}
 		{
 			dependencies: ["18DF6CDFF018EE5C"]
+			icon: {
+				id: "abnormals_delight:necromium_knife"
+			}
 			id: "30732771A11E3164"
 			tasks: [{
 				id: "037EC4D432734C19"
@@ -909,6 +912,9 @@
 		}
 		{
 			dependencies: ["3B22EE550A58193D"]
+			icon: {
+				id: "vinery:grapevine_pot"
+			}
 			id: "29FBDE7B850C28C1"
 			rewards: [{
 				id: "06721E9AEB42F5BE"
@@ -1565,6 +1571,9 @@
 		}
 		{
 			dependencies: ["67A7A1B0700FFCA3"]
+			icon: {
+				id: "ae2:fluix_hoe"
+			}
 			id: "33C679A615377ADF"
 			tasks: [{
 				id: "0929FB89418F90B7"
@@ -1608,6 +1617,9 @@
 		}
 		{
 			dependencies: ["7F49D3F72AC85F8D"]
+			icon: {
+				id: "create_central_kitchen:cooking_guide"
+			}
 			id: "2EE4D90FD7E54C3B"
 			tasks: [{
 				id: "0904E2AC60CB07B3"

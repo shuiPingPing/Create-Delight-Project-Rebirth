@@ -52,6 +52,9 @@
 		}
 		{
 			dependencies: ["17D9DB61D8A8DC98"]
+			icon: {
+				id: "iceandfire:dragonscales_bronze"
+			}
 			id: "69CC188E28D83004"
 			size: 1.25d
 			tasks: [{
@@ -640,6 +643,9 @@
 		}
 		{
 			dependencies: ["7C9857F0DAD1E04E"]
+			icon: {
+				id: "iceandfire:dragonscales_amethyst"
+			}
 			id: "1231C11A3F017724"
 			size: 1.25d
 			tasks: [{
@@ -662,6 +668,9 @@
 		}
 		{
 			dependencies: ["1D34EBFF1D60EA85"]
+			icon: {
+				id: "iceandfire:dragonscales_blue"
+			}
 			id: "1EA272CB25BF206C"
 			size: 1.25d
 			tasks: [{
@@ -843,6 +852,9 @@
 		}
 		{
 			dependencies: ["33AEA40FA5FE2CE3"]
+			icon: {
+				id: "iceandfire:sea_serpent_scales_blue"
+			}
 			id: "2A1F4B842B1E2BC9"
 			tasks: [{
 				id: "655F2B936FB21B13"

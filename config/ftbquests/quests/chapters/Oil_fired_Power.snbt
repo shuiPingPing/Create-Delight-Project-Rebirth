@@ -608,6 +608,9 @@
 		}
 		{
 			dependencies: ["2CC8B87D086B3275"]
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "38E346D9F782E7BC"
 			shape: "hexagon"
 			size: 2.0d

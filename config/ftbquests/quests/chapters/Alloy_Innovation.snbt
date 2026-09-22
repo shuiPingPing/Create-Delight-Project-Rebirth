@@ -1005,6 +1005,9 @@
 				"6DBEF23BA8608F4B"
 				"3A9275459C333CF8"
 			]
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "2CC8B87D086B3275"
 			shape: "hexagon"
 			size: 2.0d

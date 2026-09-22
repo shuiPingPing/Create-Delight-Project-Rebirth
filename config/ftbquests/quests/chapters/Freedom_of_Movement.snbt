@@ -780,6 +780,9 @@
 		}
 		{
 			dependencies: ["3622034AE0FD46AA"]
+			icon: {
+				id: "create_jetpack:netherite_jetpack"
+			}
 			id: "50C856849F88D673"
 			tasks: [{
 				id: "5EC35CD2636BF24C"

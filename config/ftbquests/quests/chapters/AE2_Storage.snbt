@@ -150,6 +150,9 @@
 		{
 			dependencies: ["05D7688036D40AE4"]
 			hide_dependency_lines: true
+			icon: {
+				id: "ae2:dark_monitor"
+			}
 			id: "328FC706631222E9"
 			tasks: [{
 				id: "09E0A231A2C3E972"
@@ -674,6 +677,9 @@
 				"62AA7E83D24E4093"
 				"05D7688036D40AE4"
 			]
+			icon: {
+				id: "ae2:interface"
+			}
 			id: "1E7DEA74331684BC"
 			tasks: [{
 				id: "128A4ED3860A238A"
@@ -793,6 +799,9 @@
 		}
 		{
 			dependencies: ["62AA7E83D24E4093"]
+			icon: {
+				id: "ae2:interface"
+			}
 			id: "629F5A2C1CAB5FEE"
 			tasks: [{
 				id: "67706A4F2B5240E8"
@@ -837,6 +846,9 @@
 		}
 		{
 			dependencies: ["79C92A2E1542C1A7"]
+			icon: {
+				id: "ae2:pattern_provider"
+			}
 			id: "0E63C201EF1FC4FB"
 			tasks: [{
 				id: "7B3F7199EDE33A91"

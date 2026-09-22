@@ -273,6 +273,9 @@
 		{
 			dependencies: ["3066F516B382ED92"]
 			hide_until_deps_complete: false
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "638505D6DDD35EF8"
 			shape: "square"
 			size: 1.5d
@@ -341,6 +344,9 @@
 			y: 0.0d
 		}
 		{
+			icon: {
+				id: "create_new_age:basic_energiser"
+			}
 			id: "6809B16089E6CDA2"
 			tasks: [{
 				id: "7BDC6AEC4CF89C84"
@@ -558,6 +564,9 @@
 		}
 		{
 			dependencies: ["6894705A95F46440"]
+			icon: {
+				id: "ae2:fluix_glass_cable"
+			}
 			id: "489072B7A17F349C"
 			tasks: [{
 				id: "321994BF715DDB2E"
@@ -568,6 +577,9 @@
 		}
 		{
 			dependencies: ["489072B7A17F349C"]
+			icon: {
+				id: "ae2:fluix_covered_cable"
+			}
 			id: "38D93D6E4F62BE49"
 			tasks: [{
 				id: "64E8A68884306E2C"
@@ -578,6 +590,12 @@
 		}
 		{
 			dependencies: ["38D93D6E4F62BE49"]
+			icon: {
+				id: "ae2:fluix_covered_dense_cable"
+			}
+			icon: {
+				id: "ae2:fluix_smart_dense_cable"
+			}
 			id: "54ED0E26FB0C2F3F"
 			shape: "square"
 			tasks: [
@@ -606,6 +624,9 @@
 		}
 		{
 			dependencies: ["38D93D6E4F62BE49"]
+			icon: {
+				id: "ae2:fluix_smart_cable"
+			}
 			id: "56FD042D461B7B75"
 			shape: "square"
 			tasks: [{

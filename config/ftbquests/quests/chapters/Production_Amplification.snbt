@@ -24,6 +24,9 @@
 		{
 			dependencies: ["4290279E12E3E104"]
 			disable_toast: true
+			icon: {
+				id: "minecraft:bamboo"
+			}
 			id: "73B0EDFE6627F286"
 			tasks: [
 				{
@@ -127,6 +130,9 @@
 		{
 			dependencies: ["06C244AEF0521053"]
 			disable_toast: true
+			icon: {
+				id: "minecraft:cactus"
+			}
 			id: "5F7A132E1CFCEED3"
 			tasks: [{
 				id: "62522B721B4D3B1F"

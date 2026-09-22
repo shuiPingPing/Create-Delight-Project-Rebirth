@@ -171,6 +171,9 @@
 		}
 		{
 			dependencies: ["2B4939BD8F985C5A"]
+			icon: {
+				id: "lightmanscurrency:vending_machine"
+			}
 			id: "6B6E89B8D3487F89"
 			rewards: [{
 				id: "28DDC1EFF4F62D1A"
@@ -189,6 +192,9 @@
 		}
 		{
 			dependencies: ["2B4939BD8F985C5A"]
+			icon: {
+				id: "lctech:fluid_tap"
+			}
 			id: "56ABD359681947A7"
 			rewards: [{
 				id: "78E7B40E1CD9A20C"
@@ -226,6 +232,9 @@
 		}
 		{
 			dependencies: ["2B4939BD8F985C5A"]
+			icon: {
+				id: "lightmanscurrency:item_trader_server_lrg"
+			}
 			id: "0A701F832E820DD8"
 			rewards: [{
 				id: "1CA5AB9C7EF2286B"
@@ -244,6 +253,9 @@
 		}
 		{
 			dependencies: ["2B4939BD8F985C5A"]
+			icon: {
+				id: "lctech:fluid_trader_server_lrg"
+			}
 			id: "06DCB4066290236F"
 			rewards: [{
 				id: "4A0E834DA33767CA"
@@ -371,6 +383,9 @@
 		}
 		{
 			dependencies: ["0D06E960DDC64CDE"]
+			icon: {
+				id: "lightmanscurrency:speed_upgrade_1"
+			}
 			id: "69844CCA1F887224"
 			rewards: [{
 				id: "4B948459EBB9E1EA"
@@ -389,6 +404,9 @@
 		}
 		{
 			dependencies: ["0D06E960DDC64CDE"]
+			icon: {
+				id: "lightmanscurrency:offer_upgrade_1"
+			}
 			id: "796F860EC76D6D5E"
 			rewards: [{
 				id: "2864EE10196DC300"
@@ -426,6 +444,9 @@
 		}
 		{
 			dependencies: ["0D06E960DDC64CDE"]
+			icon: {
+				id: "lightmanscurrency:item_capacity_upgrade_1"
+			}
 			id: "6D62093A07CCE710"
 			rewards: [{
 				id: "19475E52401AC42E"
@@ -494,6 +515,9 @@
 		}
 		{
 			dependencies: ["2B4939BD8F985C5A"]
+			icon: {
+				id: "lightmanscurrency:gacha_machine_black"
+			}
 			id: "1A5FBD229E4557ED"
 			tasks: [{
 				id: "08A0031402EDDE71"

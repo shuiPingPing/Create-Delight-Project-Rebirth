@@ -284,6 +284,9 @@
 				"298DCE38C0E0D5B9"
 				"1DD55129A6C4D355"
 			]
+			icon: {
+				id: "northstar:tungsten_sheetmetal"
+			}
 			id: "119E0BF4CFAA0B5F"
 			tasks: [{
 				id: "2DA834973EBF90E4"
@@ -347,6 +350,9 @@
 		}
 		{
 			dependencies: ["5171DC10561530DE"]
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "4500AE5CD0F890A9"
 			size: 2.0d
 			tasks: [{
@@ -361,6 +367,9 @@
 				"4500AE5CD0F890A9"
 				"53F8AADD69D02613"
 			]
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "1EBBAD136C725820"
 			size: 2.0d
 			tasks: [{
@@ -375,6 +384,9 @@
 				"1EBBAD136C725820"
 				"0A78650F17E1E069"
 			]
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "53F2234B38B8E4A0"
 			size: 2.0d
 			tasks: [{
@@ -482,6 +494,9 @@
 		}
 		{
 			dependencies: ["40BDFCC7A3B77F26"]
+			icon: {
+				id: "minecraft:clock"
+			}
 			id: "1EF771A80F0460CF"
 			shape: "hexagon"
 			size: 2.0d
