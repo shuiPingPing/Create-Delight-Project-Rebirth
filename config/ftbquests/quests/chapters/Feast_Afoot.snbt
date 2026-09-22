@@ -1618,7 +1618,10 @@
 		{
 			dependencies: ["7F49D3F72AC85F8D"]
 			icon: {
-				id: "create_central_kitchen:cooking_guide"
+				components: {
+					"ftbquests:missing_item": "create_central_kitchen:cooking_guide"
+				}
+				id: "ftbquests:missing_item"
 			}
 			id: "2EE4D90FD7E54C3B"
 			tasks: [{

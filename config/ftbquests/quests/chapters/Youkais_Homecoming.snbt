@@ -1019,9 +1019,6 @@
 		{
 			dependencies: ["3D7F0A98AE45B0B0"]
 			icon: {
-				id: "vinery:red_grape_seeds"
-			}
-			icon: {
 				id: "youkaishomecoming:black_grape"
 			}
 			id: "60521CC89812A87E"

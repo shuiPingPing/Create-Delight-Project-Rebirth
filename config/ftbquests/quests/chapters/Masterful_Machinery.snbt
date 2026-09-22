@@ -5,6 +5,15 @@
 	filename: "masterful_machinery"
 	group: "14CFC96B5B37F10B"
 	icon: {
+		components: {
+			"minecraft:custom_data": {
+				GunCurrentAmmoCount: 100
+				GunFireMode: "AUTO"
+				GunId: "applied_armorer:moritz_mg_emg_prototype"
+				HasBulletInBarrel: 1b
+			}
+		}
+		count: 1
 		id: "tacz:modern_kinetic_gun"
 	}
 	id: "55F5367DDD56CDDE"
@@ -19,17 +28,44 @@
 			tasks: [
 				{
 					id: "01D37BAD97AA4C1D"
-					item: { count: 1, id: "tacz:ammo_box" }
+					item: {
+						components: {
+							"minecraft:custom_data": {
+								Level: 0
+							}
+						}
+						count: 1
+						id: "tacz:ammo_box"
+					}
+					match_components: true
 					type: "item"
 				}
 				{
 					id: "192B3D3C6A969DF6"
-					item: { count: 1, id: "tacz:ammo_box" }
+					item: {
+						components: {
+							"minecraft:custom_data": {
+								Level: 1
+							}
+						}
+						count: 1
+						id: "tacz:ammo_box"
+					}
+					match_components: true
 					type: "item"
 				}
 				{
 					id: "724339726522C5B4"
-					item: { count: 1, id: "tacz:ammo_box" }
+					item: {
+						components: {
+							"minecraft:custom_data": {
+								Level: 2
+							}
+						}
+						count: 1
+						id: "tacz:ammo_box"
+					}
+					match_components: true
 					type: "item"
 				}
 			]
@@ -41,7 +77,16 @@
 			id: "6EB35AD69CE00DFB"
 			tasks: [{
 				id: "2D7DFE9713891322"
-				item: { count: 1, id: "tacz:ammo" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AmmoId: "create_armorer:slap"
+						}
+					}
+					count: 1
+					id: "tacz:ammo"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -4.0d
@@ -61,7 +106,16 @@
 			shape: "square"
 			tasks: [{
 				id: "3F8DE1E39DB54662"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:sight_standard"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -81,7 +135,16 @@
 			shape: "square"
 			tasks: [{
 				id: "1391BF9FE306F05C"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:sight_medium_distance"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -101,7 +164,16 @@
 			shape: "square"
 			tasks: [{
 				id: "47B3C4C050835B5D"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:scope_telephoto"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -121,7 +193,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "55001013B645A6A0"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 4
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:pistol_revolver_torque"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 6.25d
@@ -141,7 +225,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "3724706504EB75D2"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 16
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:pistol_auto_stress"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 4.25d
@@ -161,7 +257,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "53EE5F698BC357A1"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 8
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:sniper_semi_clockwork"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 6.25d
@@ -181,7 +289,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "29748633842F9360"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 2
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:shotgun_db_stone"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 4.25d
@@ -201,7 +321,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "6ECE416CE90063FE"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 4
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:shotgun_pump_bearing"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 6.25d
@@ -221,7 +353,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "06C897AB38520ECE"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 30
+							GunFireMode: "AUTO"
+							GunId: "create_armorer:smg_auto_crank"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 6.25d
@@ -241,7 +385,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "22DAAE69B88FAE5C"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 50
+							GunFireMode: "AUTO"
+							GunId: "create_armorer:mg_platemag_flywheel"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 4.25d
@@ -261,7 +417,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "589D43DECB0E011C"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 30
+							GunFireMode: "AUTO"
+							GunId: "create_armorer:rifle_assult_crane"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 4.25d
@@ -281,7 +449,16 @@
 			shape: "square"
 			tasks: [{
 				id: "6A2F518383DC365B"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:muzzle_refit_lava_perfusion_bottle"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -301,7 +478,16 @@
 			shape: "square"
 			tasks: [{
 				id: "1D618053E9165766"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:muzzle_refit_brass_retractor"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -321,7 +507,16 @@
 			shape: "square"
 			tasks: [{
 				id: "0B8EA515A3A54DA1"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:grip_wooden"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -341,7 +536,16 @@
 			shape: "square"
 			tasks: [{
 				id: "727C91190365D9C4"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:grip_gantry_shaft"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -353,7 +557,16 @@
 			shape: "square"
 			tasks: [{
 				id: "0BD52011BA5EE3AB"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:extended_mag_ca_1"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -365,7 +578,16 @@
 			shape: "square"
 			tasks: [{
 				id: "1BE0995C51C408DA"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:extended_mag_ca_2"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -377,7 +599,16 @@
 			shape: "square"
 			tasks: [{
 				id: "5EC27DFFD4C55E14"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "create_armorer:extended_mag_ca_3"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -395,6 +626,11 @@
 					count: 10
 					id: "156CAAD4BC0B9B3F"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "create_armorer:slap"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -404,6 +640,11 @@
 					count: 10
 					id: "2FEF467A84C6FC96"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "tacz:12g"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -413,6 +654,11 @@
 					count: 10
 					id: "21370CBD9A773F72"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "create_armorer:rbapb"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -422,6 +668,11 @@
 					count: 10
 					id: "6D7471CCFEBDE766"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "create_armorer:gas_pistol_ammo"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -431,6 +682,11 @@
 					count: 10
 					id: "1654C646CA870413"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:hard_core_quartz_bullet"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -440,6 +696,11 @@
 					count: 10
 					id: "7613087E9D678426"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:etched_quartz_bullet"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -449,6 +710,11 @@
 					count: 10
 					id: "0377172480C1B029"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:fluix_infused_grenade"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -458,6 +724,11 @@
 					count: 10
 					id: "4F0A1A809733E68F"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:fluix_battery"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -467,6 +738,11 @@
 					count: 10
 					id: "44A946E5989DC0CC"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:cluster_quartz_bullet"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -529,12 +805,24 @@
 		{
 			dependencies: ["4A3D2C33E49D1ACB"]
 			icon: {
+				components: {
+					"minecraft:custom_data": {
+						Creative: 1b
+					}
+				}
+				count: 1
 				id: "tacz:ammo_box"
 			}
 			id: "2F27A7E899601927"
 			tasks: [
 				{
 					icon: {
+						components: {
+							"minecraft:custom_data": {
+								Creative: 1b
+							}
+						}
+						count: 1
 						id: "tacz:ammo_box"
 					}
 					id: "33D6EF8BEB6E466E"
@@ -556,7 +844,16 @@
 			id: "01436C8ED39FE322"
 			tasks: [{
 				id: "77A2A8BBD1F10964"
-				item: { count: 1, id: "tacz:ammo" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AmmoId: "create_armorer:rbapb"
+						}
+					}
+					count: 1
+					id: "tacz:ammo"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -3.0d
@@ -567,7 +864,16 @@
 			id: "73CC1BADE5FD79FC"
 			tasks: [{
 				id: "78AAE192F0A139EE"
-				item: { count: 1, id: "tacz:ammo" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AmmoId: "create_armorer:gas_pistol_ammo"
+						}
+					}
+					count: 1
+					id: "tacz:ammo"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -2.0d
@@ -578,7 +884,16 @@
 			id: "230431D3F812415C"
 			tasks: [{
 				id: "56F3E3DE23A81A20"
-				item: { count: 1, id: "tacz:ammo" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AmmoId: "tacz:12g"
+						}
+					}
+					count: 1
+					id: "tacz:ammo"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -1.0d
@@ -587,6 +902,15 @@
 		{
 			dependencies: ["168836201ED24533"]
 			icon: {
+				components: {
+					"minecraft:custom_data": {
+						GunCurrentAmmoCount: 1
+						GunFireMode: "SEMI"
+						GunId: "create_armorer:special_melee_wrench"
+						HasBulletInBarrel: 1b
+					}
+				}
+				count: 1
 				id: "tacz:modern_kinetic_gun"
 			}
 			id: "4A3D2C33E49D1ACB"
@@ -594,6 +918,15 @@
 			size: 2.0d
 			tasks: [{
 				icon: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 1
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:special_melee_wrench"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
 					id: "tacz:modern_kinetic_gun"
 				}
 				id: "3C054F9466B24240"
@@ -607,6 +940,15 @@
 		{
 			dependencies: ["168836201ED24533"]
 			icon: {
+				components: {
+					"minecraft:custom_data": {
+						GunCurrentAmmoCount: 1
+						GunFireMode: "SEMI"
+						GunId: "applied_armorer:special_melee_task_manager"
+						HasBulletInBarrel: 1b
+					}
+				}
+				count: 1
 				id: "tacz:modern_kinetic_gun"
 			}
 			id: "040055671B026118"
@@ -614,6 +956,15 @@
 			size: 2.0d
 			tasks: [{
 				icon: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 1
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:special_melee_task_manager"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
 					id: "tacz:modern_kinetic_gun"
 				}
 				id: "33E81D0A649971E0"
@@ -627,11 +978,23 @@
 		{
 			dependencies: ["040055671B026118"]
 			icon: {
+				components: {
+					"minecraft:custom_data": {
+						Creative: 1b
+					}
+				}
+				count: 1
 				id: "tacz:ammo_box"
 			}
 			id: "1FE65EE620098050"
 			tasks: [{
 				icon: {
+					components: {
+						"minecraft:custom_data": {
+							Creative: 1b
+						}
+					}
+					count: 1
 					id: "tacz:ammo_box"
 				}
 				id: "0339452A6761D305"
@@ -647,7 +1010,15 @@
 			id: "2A8462E426CD5578"
 			tasks: [{
 				id: "69C6FA9CA87C685B"
-				item: { count: 1, id: "tacz:ammo" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AmmoId: "applied_armorer:etched_quartz_bullet"
+						}
+					}
+					count: 1
+					id: "tacz:ammo"
+				}
 				type: "item"
 			}]
 			x: -4.0d
@@ -658,7 +1029,15 @@
 			id: "59B56F92B991AF69"
 			tasks: [{
 				id: "4881C72422735EB8"
-				item: { count: 1, id: "tacz:ammo" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AmmoId: "applied_armorer:fluix_infused_grenade"
+						}
+					}
+					count: 1
+					id: "tacz:ammo"
+				}
 				type: "item"
 			}]
 			x: -3.0d
@@ -669,7 +1048,15 @@
 			id: "06EA565753996219"
 			tasks: [{
 				id: "557BD5A447B3478F"
-				item: { count: 1, id: "tacz:ammo" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AmmoId: "applied_armorer:fluix_battery"
+						}
+					}
+					count: 1
+					id: "tacz:ammo"
+				}
 				type: "item"
 			}]
 			x: -2.0d
@@ -680,7 +1067,15 @@
 			id: "2FD1005F92819A98"
 			tasks: [{
 				id: "7333D061AE7E0587"
-				item: { count: 1, id: "tacz:ammo" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AmmoId: "applied_armorer:cluster_quartz_bullet"
+						}
+					}
+					count: 1
+					id: "tacz:ammo"
+				}
 				type: "item"
 			}]
 			x: -1.0d
@@ -693,17 +1088,44 @@
 			tasks: [
 				{
 					id: "3144D9CA5E2A8F71"
-					item: { count: 1, id: "tacz:ammo_box" }
+					item: {
+						components: {
+							"minecraft:custom_data": {
+								Level: 0
+							}
+						}
+						count: 1
+						id: "tacz:ammo_box"
+					}
+					match_components: true
 					type: "item"
 				}
 				{
 					id: "6E1F3D589DE4AAC5"
-					item: { count: 1, id: "tacz:ammo_box" }
+					item: {
+						components: {
+							"minecraft:custom_data": {
+								Level: 1
+							}
+						}
+						count: 1
+						id: "tacz:ammo_box"
+					}
+					match_components: true
 					type: "item"
 				}
 				{
 					id: "498B0825555306B1"
-					item: { count: 1, id: "tacz:ammo_box" }
+					item: {
+						components: {
+							"minecraft:custom_data": {
+								Level: 2
+							}
+						}
+						count: 1
+						id: "tacz:ammo_box"
+					}
+					match_components: true
 					type: "item"
 				}
 			]
@@ -768,7 +1190,16 @@
 			shape: "square"
 			tasks: [{
 				id: "1AD90AEBFCC31F02"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:si_double_sided_mirror"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -788,7 +1219,16 @@
 			shape: "square"
 			tasks: [{
 				id: "7610DF9D6FE9D0BA"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:si_profession"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -11.5d
@@ -808,7 +1248,16 @@
 			shape: "square"
 			tasks: [{
 				id: "4739B75C05F4C237"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:scope_xgs_905"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -828,7 +1277,16 @@
 			shape: "square"
 			tasks: [{
 				id: "5BD349CDE09304AB"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:si_simple_3"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -848,7 +1306,16 @@
 			shape: "square"
 			tasks: [{
 				id: "1A49A844B5C57977"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:si_zako_2403"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -13.0d
@@ -868,7 +1335,16 @@
 			shape: "square"
 			tasks: [{
 				id: "1A2100A371E94745"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:si_ms_12"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -888,7 +1364,16 @@
 			shape: "square"
 			tasks: [{
 				id: "25D5A4A3F06D1C6F"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:scope_ms_14"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -908,7 +1393,16 @@
 			shape: "square"
 			tasks: [{
 				id: "36A1A2ACCCB0EAC2"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:sight_type_3741"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -928,7 +1422,16 @@
 			shape: "square"
 			tasks: [{
 				id: "2004EBB73365CFBE"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:si_pricision"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -11.5d
@@ -948,7 +1451,16 @@
 			shape: "square"
 			tasks: [{
 				id: "29BE3FCEA614E48B"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bracelet_niklas"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -976,7 +1488,16 @@
 			shape: "square"
 			tasks: [{
 				id: "3D2E798096C52F7A"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bracelet_zenith"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -996,7 +1517,16 @@
 			shape: "square"
 			tasks: [{
 				id: "558B42FFE1F4306D"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bracelet_broken_handcuffs"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1016,7 +1546,16 @@
 			shape: "square"
 			tasks: [{
 				id: "5F9DA4B7005FB654"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bracelet_aerial_wristband"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1036,7 +1575,16 @@
 			shape: "square"
 			tasks: [{
 				id: "4BADA04C947656F3"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bracelet_broken_watch"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1056,7 +1604,16 @@
 			shape: "square"
 			tasks: [{
 				id: "20E6EBE493FB9731"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bracelet_koeis_armband"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1076,7 +1633,16 @@
 			shape: "square"
 			tasks: [{
 				id: "54BA031A5449A674"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bracelet_magma_wristband"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1096,7 +1662,16 @@
 			shape: "square"
 			tasks: [{
 				id: "0F44EEBAF7B151AB"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bracelet_exo"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1116,7 +1691,16 @@
 			shape: "square"
 			tasks: [{
 				id: "50B74C44A61A9B18"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_commander"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1136,7 +1720,16 @@
 			shape: "square"
 			tasks: [{
 				id: "790DD123D31382DE"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_classic"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -11.5d
@@ -1156,7 +1749,16 @@
 			shape: "square"
 			tasks: [{
 				id: "538945A9ED474C4E"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_ns_1"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1176,7 +1778,16 @@
 			shape: "square"
 			tasks: [{
 				id: "4808B3CA85314BF1"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_bs_mod4"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1196,7 +1807,16 @@
 			shape: "square"
 			tasks: [{
 				id: "7A51BA61C87CF5AB"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bayonet_er"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -11.5d
@@ -1216,7 +1836,16 @@
 			shape: "square"
 			tasks: [{
 				id: "184DF06C0C19B868"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:bayonet_gladius"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1236,7 +1865,16 @@
 			shape: "square"
 			tasks: [{
 				id: "06BDC2765F402BB5"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_chip_hyper_propellant"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1256,7 +1894,16 @@
 			shape: "square"
 			tasks: [{
 				id: "2260011FEA23AF91"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_chip_pcs_x1"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1276,7 +1923,16 @@
 			shape: "square"
 			tasks: [{
 				id: "712A2A009A89F53B"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_chip_firework"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1296,7 +1952,16 @@
 			shape: "square"
 			tasks: [{
 				id: "68AB7BB466D74DD7"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_chip_fat_boy"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -11.5d
@@ -1316,7 +1981,16 @@
 			shape: "square"
 			tasks: [{
 				id: "3C1A4EFADFE6CCDB"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_chip_firefly"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1336,7 +2010,16 @@
 			shape: "square"
 			tasks: [{
 				id: "5F8B9FB0195FF7B7"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:muzzle_chip_atm_x2"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1356,7 +2039,16 @@
 			shape: "square"
 			tasks: [{
 				id: "02DDDB37A2FF70E1"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_mid_mag_aa_1"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1376,7 +2068,16 @@
 			shape: "square"
 			tasks: [{
 				id: "397FAE54231C5EDC"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_battery_aa_1"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1396,7 +2097,16 @@
 			shape: "square"
 			tasks: [{
 				id: "2BE5A54B4D431D19"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_mag_aa_1"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1416,7 +2126,16 @@
 			shape: "square"
 			tasks: [{
 				id: "4524AA37266C7825"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_mid_mag_aa_2"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1436,7 +2155,16 @@
 			shape: "square"
 			tasks: [{
 				id: "330994C7EE0AF05C"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_mid_mag_aa_3"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1456,7 +2184,16 @@
 			shape: "square"
 			tasks: [{
 				id: "3822B711F4022D02"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_battery_aa_2"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1476,7 +2213,16 @@
 			shape: "square"
 			tasks: [{
 				id: "4173D603827FF8D1"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_battery_aa_3"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1496,7 +2242,16 @@
 			shape: "square"
 			tasks: [{
 				id: "4A40E36C2CF2A9DF"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_mag_aa_2"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1516,7 +2271,16 @@
 			shape: "square"
 			tasks: [{
 				id: "20009F6C089F1770"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:extended_mag_aa_3"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1536,7 +2300,16 @@
 			shape: "square"
 			tasks: [{
 				id: "59632A5781BF2BA6"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:grip_lf11"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1556,7 +2329,16 @@
 			shape: "square"
 			tasks: [{
 				id: "55B7A7CD29997656"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:grip_hf_17"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -8.5d
@@ -1576,7 +2358,16 @@
 			shape: "square"
 			tasks: [{
 				id: "324B821BBEE50E41"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:grip_storm"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -11.5d
@@ -1596,7 +2387,16 @@
 			shape: "square"
 			tasks: [{
 				id: "06BD45F320F2E18C"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:grip_eazy"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1616,7 +2416,16 @@
 			shape: "square"
 			tasks: [{
 				id: "69804EC718DDDF42"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:grip_sl_2"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1636,7 +2445,16 @@
 			shape: "square"
 			tasks: [{
 				id: "0E304974CCB54C10"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:grip_static_1"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -7.0d
@@ -1656,7 +2474,16 @@
 			shape: "square"
 			tasks: [{
 				id: "7C22E0B9949058D5"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:grip_stable"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -11.5d
@@ -1676,7 +2503,16 @@
 			shape: "square"
 			tasks: [{
 				id: "1B6F8240A0BFA88E"
-				item: { components: { "minecraft:custom_data": { } }, count: 1, id: "tacz:attachment" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							AttachmentId: "applied_armorer:grip_light"
+						}
+					}
+					count: 1
+					id: "tacz:attachment"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: -10.0d
@@ -1692,7 +2528,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "1B22C5E838E7A771"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 17
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:niklas_pistol_semi_union"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 2.25d
@@ -1708,7 +2556,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "279484B46EE95110"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 17
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:niklas_pistol_semi_right"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 6.25d
@@ -1724,7 +2584,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "299FD1CE1E2F08DC"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 10
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:niklas_pistol_semi_pride"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 4.25d
@@ -1740,7 +2612,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "070A8289DE5CEB3B"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 34
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:niklas_pistol_double_win_win"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 2.25d
@@ -1756,7 +2640,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "5AC726F416EEDE73"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 7
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:moritz_sniper_semi_k30"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 6.25d
@@ -1772,7 +2668,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "348727696AD9561C"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 11
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:niklas_lever_vigenere"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 4.25d
@@ -1788,7 +2696,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "5AC4600EAEB49EB9"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 20
+							GunFireMode: "AUTO"
+							GunId: "applied_armorer:moritz_rifle_ar77"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 4.25d
@@ -1804,7 +2724,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "5CDB15632163EF6C"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 4
+							GunFireMode: "AUTO"
+							GunId: "applied_armorer:moritz_shotgun_sg914"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 6.25d
@@ -1820,7 +2752,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "58781FC955A107EC"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 16
+							GunFireMode: "AUTO"
+							GunId: "applied_armorer:niklas_smg_freedom"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 2.25d
@@ -1836,7 +2780,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "2094E929D5DDF14B"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 100
+							GunFireMode: "AUTO"
+							GunId: "applied_armorer:moritz_mg_emg_prototype"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 6.25d
@@ -1852,7 +2808,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "46A41393E139C0C3"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 80
+							GunFireMode: "AUTO"
+							GunId: "applied_armorer:moritz_mg_hmg22"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 4.25d
@@ -1868,7 +2836,19 @@
 			size: 2.0d
 			tasks: [{
 				id: "590C8E7683FCEC38"
-				item: { count: 1, id: "tacz:modern_kinetic_gun" }
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							GunCurrentAmmoCount: 3
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:moritz_gernade_gl3"
+							HasBulletInBarrel: 1b
+						}
+					}
+					count: 1
+					id: "tacz:modern_kinetic_gun"
+				}
+				match_components: true
 				type: "item"
 			}]
 			x: 2.25d

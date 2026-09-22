@@ -591,9 +591,6 @@
 		{
 			dependencies: ["38D93D6E4F62BE49"]
 			icon: {
-				id: "ae2:fluix_covered_dense_cable"
-			}
-			icon: {
 				id: "ae2:fluix_smart_dense_cable"
 			}
 			id: "54ED0E26FB0C2F3F"

@@ -1738,6 +1738,11 @@
 					count: 10
 					id: "0BFF6F4EBB116A94"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "create_armorer:slap"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -1747,6 +1752,11 @@
 					count: 10
 					id: "21CA6A19740043B4"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "tacz:12g"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -1756,6 +1766,11 @@
 					count: 10
 					id: "19676FBB3CF111DC"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "create_armorer:rbapb"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -1765,6 +1780,11 @@
 					count: 10
 					id: "6E3C6EAE19674C32"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "create_armorer:gas_pistol_ammo"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -1774,6 +1794,11 @@
 					count: 10
 					id: "50D7D2A9451D3747"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:hard_core_quartz_bullet"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -1783,6 +1808,11 @@
 					count: 10
 					id: "72A8395465126620"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:etched_quartz_bullet"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -1792,6 +1822,11 @@
 					count: 10
 					id: "1A53BFF9213EB5AE"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:fluix_infused_grenade"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -1801,6 +1836,11 @@
 					count: 10
 					id: "31A3E10163B8C995"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:fluix_battery"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
@@ -1810,6 +1850,11 @@
 					count: 10
 					id: "7589E4017AFDA53B"
 					item: {
+						components: {
+							"minecraft:custom_data": {
+								AmmoId: "applied_armorer:cluster_quartz_bullet"
+							}
+						}
 						count: 1
 						id: "tacz:ammo"
 					}
