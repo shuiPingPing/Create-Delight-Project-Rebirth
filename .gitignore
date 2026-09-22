@@ -109,3 +109,6 @@ mods/.northstar-original/
 # Euphoria Patcher / Iris 运行时生成物：补丁后的光影文件夹与选项覆盖 txt（每个用户本地自动生成）
 shaderpacks/*/
 shaderpacks/*.txt
+
+# 迁移/修复脚本产生的本地备份
+*.bak
