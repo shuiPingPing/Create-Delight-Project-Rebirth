@@ -39,7 +39,7 @@
 				"/tpahere <player> 请求xxx玩家传送到你这里"
 				"/nickname <名称> 更改聊天中的昵称"
 			]
-			icon: "ftbquests:missing_item"
+			icon: "ftbfiltersystem:smart_filter"
 			id: "38534B68FE00B668"
 			shape: "square"
 			subtitle: "实用指令"
@@ -238,7 +238,7 @@
 				""
 				"更多内容请看FTB Teams的百科界面。"
 			]
-			icon: "ftbquests:missing_item"
+			icon: "ftbfiltersystem:smart_filter"
 			id: "682E85347D06AFF2"
 			shape: "square"
 			tasks: [{
