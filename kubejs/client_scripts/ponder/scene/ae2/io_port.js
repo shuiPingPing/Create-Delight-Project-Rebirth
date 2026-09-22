@@ -6,6 +6,7 @@ Ponder.registry((e) => {
       'createdelightcore:ponder_io_port',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.833);
         scene.world.showSection([0, 0, 0, 9, 0, 9], Direction.UP);
         scene.idle(20);
         scene.world.showSection([3, 1, 4, 5, 1, 4], Direction.DOWN);

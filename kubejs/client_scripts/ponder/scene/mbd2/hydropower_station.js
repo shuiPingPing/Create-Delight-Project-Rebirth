@@ -40,6 +40,7 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.469);
         scene.showBasePlate();
         scene.scaleSceneView(0.45);
         scene.idle(20);

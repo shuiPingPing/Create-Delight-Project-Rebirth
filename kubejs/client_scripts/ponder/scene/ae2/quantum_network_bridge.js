@@ -6,6 +6,7 @@ Ponder.registry((e) => {
 
     (builder, util) => {
       let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+      scene.scaleSceneView(0.833);
       scene.world.showSection([0, 0, 0, 9, 0, 9], Direction.UP);
       scene.idle(20);
       scene.text(60, '量子网桥可用于网络的传输');

@@ -7,6 +7,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_me_controller',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.521);
         scene.world.showSection([0, 0, 0, 9, 0, 9], Direction.UP);
         scene.world.setBlocks([8, 1, 1], 'ae2:controller', false);
         scene.idle(20);

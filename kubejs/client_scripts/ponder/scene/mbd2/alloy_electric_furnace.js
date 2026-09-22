@@ -7,6 +7,7 @@ Ponder.registry((e) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.833);
         scene.showBasePlate();
         scene.scaleSceneView(0.8);
         scene.idle(20);
@@ -104,6 +105,7 @@ Ponder.registry((e) => {
       'createdelightcore:ponder_alloy_electric_furnace_use',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.75);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '现在让我们来学习一下如何使用合金电炉').attachKeyFrame();

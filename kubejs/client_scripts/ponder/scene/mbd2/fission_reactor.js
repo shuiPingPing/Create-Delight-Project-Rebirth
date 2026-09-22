@@ -12,6 +12,7 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.577);
         scene.showBasePlate();
         scene.scaleSceneView(0.6);
         scene.idle(20);

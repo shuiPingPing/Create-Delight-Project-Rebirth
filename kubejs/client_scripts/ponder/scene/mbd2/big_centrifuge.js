@@ -8,6 +8,7 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.833);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '先让我们快速的搭建一下基础结构').attachKeyFrame();
@@ -214,6 +215,7 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.75);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '现在让我们来学习一下如何使用大型离心机').attachKeyFrame();

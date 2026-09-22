@@ -65,6 +65,7 @@ Ponder.registry((event) => {
 
     (builder, util) => {
       let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+      scene.scaleSceneView(0.833);
       scene.world.showSection([0, 0, 0, 9, 0, 9], Direction.UP);
       scene.idle(20);
       scene.world.showSection([0, 1, 0, 9, 1, 9], Direction.DOWN);

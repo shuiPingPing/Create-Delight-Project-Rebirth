@@ -12,6 +12,7 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        scene.scaleSceneView(0.833);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '先让我们快速的搭建一下基础结构').attachKeyFrame();
