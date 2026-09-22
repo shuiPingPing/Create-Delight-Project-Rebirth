@@ -107,3 +107,10 @@ Entity Shadows / Block Entity Shadows 在光影里默认常关，需手动打开
 
 未采纳：Colorwheel `1.3.0-beta3`（新增 `colorwheel:indirect` 后端，Create 密集区约 +30% FPS）——beta 通道，本次不进包，
 待 1.3.0 转正后再评估。
+
+**上游对照（合并时必看）**：`iris-flywheel-compat` 是**上游文件** —— `upstream/main` 及上游各分支都有
+`mods/client/iris-flywheel-compat.pw.toml`（由上游 PR #136 `400189e` 更新过）。因此本节的删除属于**本 fork 的有意偏离**：
+
+- 上游**未改动**该文件时，合并会保留我们的删除，无冲突；
+- 上游**改动/升级**了它时会出现 **modify/delete 冲突** —— 处置为**保留删除**（与 Colorwheel 的 mixin 冲突无解）；
+- `mods/client/colorwheel.pw.toml` 是**本 fork 独有**，合并时不会被上游覆盖。
