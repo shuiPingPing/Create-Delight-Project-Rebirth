@@ -153,3 +153,13 @@ CDR1201 的 **75 个 snbt**（41 章节 + 32 奖励表 + `data.snbt` + `chapter_
 已停用（`mods/certain_questing_additions-*.jar` → `.disabled`；包自检会报 `Missing mods: certain_questing_additions`，属预期）。
 
 **待实机确认**：进游戏后日志应出现 `[FTB Quests/]: Loaded 6 chapter groups, 41 chapters, N quests, 32 reward tables` 且无报错（迁移前是 `1/1/0/0`）。
+## 2026-09-22 移除 `certain_questing_additions`（与任务书迁移同批）
+
+**动作**：删除 `mods/client/certain-questing-additions.pw.toml`（模组 `certain_questing_additions` 1.2.0.4，CF project `1372051`）。
+**原因**：它的 `ChapterImageConfigGroupMixin` 用 `@Shadow` 抓编译器生成的 lambda 捕获字段 `val$name`，在 `ftb-quests 2101.1.36` 上定位不到 →
+该 mixin **硬失败**，**一打开任务书界面就崩**（`InvalidMixinException: @Shadow field val$name was not located in the target class dev.ftb.mods.ftbquests.client.gui.quests…`，
+见 2026-09-22 日志的 mixin FATAL）。这与任务书迁移直接冲突：迁移后的任务书在带该模组的包里无法游玩。
+**影响**：失去该模组提供的任务书 APNG 动画增强（纯客户端装饰），其余无影响。
+**处置**：与 `iris-flywheel-compat` 同类，属**本 fork 有意移除的上游文件**；等上游适配新版 FTB Quests 后可加回。
+**注意**：本地 jar 已同时改名为 `certain_questing_additions-neoforge-1.2.0.4+mc1.21.1.jar.disabled`（不再加载）；
+本地 jar 备份/恢复＝去掉 `.disabled` 后缀并恢复上述描述符。

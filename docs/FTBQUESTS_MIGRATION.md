@@ -118,3 +118,5 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 - 保留下来的 quest 里共有 395 处 `icon:` 引用，其中 **8 处指向 1.21.1 已不存在的物品**
   （`farmersrespite` 3、`bakeries`/`youkaishomecoming`/`cosmopolitan`/`oceanic_delight`/`blackknightarmor` 各 1，加上 reward table 里的 1 处）
   → 已统一替换为 FTB Quests 自带的占位物品 **`ftbquests:missing_item`**（显示为明确的"缺失"图标，而不是破图）。
+> **2026-09-22 更新**：不只是本地停用——已**从整合包移除其描述符**（`mods/client/certain-questing-additions.pw.toml` 删除，完整性清单重生成：client 73→72），
+> 否则新装玩家仍会加载到它、一开任务书即崩，与"任务书可打开游玩"的目标直接冲突。移除理由与恢复方式见 `docs/MOD_UPDATE_COMPATIBILITY.md` 同名小节。

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T02:21:23Z",
+  "generatedAt": "2026-09-22T04:58:24Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -413,7 +413,6 @@
       "betteradvancements",
       "broknowmyemifolder",
       "catalogue",
-      "certain_questing_additions",
       "chat_heads",
       "colorfulhearts",
       "colorwheel",
@@ -530,14 +529,6 @@
       "filename": "catalogue-neoforge-1.21.1-1.11.2.jar",
       "modIds": [
         "catalogue"
-      ]
-    },
-    {
-      "side": "client",
-      "metadata": "mods/client/certain-questing-additions.pw.toml",
-      "filename": "certain_questing_additions-neoforge-1.2.0.4+mc1.21.1.jar",
-      "modIds": [
-        "certain_questing_additions"
       ]
     },
     {
