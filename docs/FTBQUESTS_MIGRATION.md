@@ -164,3 +164,30 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 - **顺序修正后：80 个文件 SHA256 全部一致** ✓ —— 证明"脚本 + §八/§九/§十"可完整复现该迁移。
 
 > 因此 §十 第 2 项的正确顺序是：**先**把 `icon:` 里的 `itemfilters:*` 改成 `ftbfiltersystem:smart_filter`（§二），**再**把其余指向不存在物品的图标改成 `ftbquests:missing_item`。
+## 十二、实机验收（2026-09-22 14:12，**通过**）
+
+启动 `CDPR` 进入世界后，服务端线程加载任务书：
+
+```
+[Server thread/INFO] [FTB Quests/]: Loaded 7 chapter groups, 41 chapters, 2386 quests, 32 reward tables
+```
+
+| 指标 | 日志值 | 预期 | 说明 |
+|---|---|---|---|
+| chapter groups | **7** | 6（文档口径） | = `chapter_groups.snbt` 定义的 6 组 + FTB Quests 自带的默认组 |
+| chapters | **41** | 41 | ✓ |
+| quests | **2386** | 2385（`tasks:` 计数口径） | 我按 `tasks:` 数组统计少算 1 个"无 `tasks` 数组的 quest"；与删除数自洽：源包 2510 − 删除 124 = 2386 ✓ |
+| reward tables | **32** | 32 | ✓ |
+
+**客户端侧同步证据**（说明任务书数据已完整下发到客户端，可打开）：
+`[Render thread/INFO] [FTB Quests/]: Read 321108 bytes, 7489 objects` +
+`received translation table en_us (with 3819 entries) from server`。
+
+**健康检查（同一会话）**：
+- FTB Quests 相关报错 **0**；`/FATAL]` 1 条（既有噪音，与任务书无关）；`/ERROR]` 1572 条为既有噪音（loot 解析 549、ProbeJS 109、Veil 54、Sable tag 48 等）。
+- 包自检：`Missing mods: (none)`、`Extra mods: mcpmod`（移除 `certain_questing_additions` 后清单已同步，无缺失告警）。
+- KubeJS：startup 7/7、client 2/2、server 205/205，**0 errors**。
+
+**结论**：任务书在 1.21.1 **正常加载**；客户端已收到完整数据，且全库已无任何 mod 注入 `dev/ftb/mods/ftbquests`（无 mixin 崩溃来源），打开界面的前提满足。
+
+**收尾待办**：`data.snbt` 的 `verify_on_load` 由本次验收临时打开的 `true` 改回 `false`（游戏运行中会被其重写，需在退出后改）。
