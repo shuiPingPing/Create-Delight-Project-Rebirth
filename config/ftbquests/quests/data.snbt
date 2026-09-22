@@ -9,14 +9,14 @@
 	drop_book_on_death: false
 	drop_loot_crates: false
 	emergency_items_cooldown: 300
+	fallback_locale: "en_us"
 	grid_scale: 0.5d
 	hide_excluded_quests: false
 	icon: {
-		Count: 1
-		id: "ftbquests:custom_icon"
-		tag: {
-			Icon: "createdelightcore:textures/gui/packicon64.png"
+		components: {
+			"ftbquests:icon": "createdelightcore:textures/gui/packicon64.png"
 		}
+		id: "ftbquests:custom_icon"
 	}
 	lock_message: ""
 	loot_crate_no_drop: {
@@ -25,11 +25,6 @@
 		passive: 4000
 	}
 	pause_game: true
-	progression_mode: "linear"
-	show_lock_icons: true
-	title: "机械动力：齿轮盛宴"
-	version: 13
-	fallback_locale: "en_us"
 	presets: {
 		goal: {
 			shape: "hexagon"
@@ -44,5 +39,8 @@
 			size: 1.0d
 		}
 	}
-	verify_on_load: true
+	progression_mode: "linear"
+	show_lock_icons: true
+	verify_on_load: false
+	version: 13
 }

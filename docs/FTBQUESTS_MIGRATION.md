@@ -144,6 +144,24 @@ node scripts/migrate-ftbquests.mjs              # 真实写入（会先把目标
 >
 > 结论：**不要手工替换图标**。保留原始 id，让 FTB Quests 自己转成带原始 id 的缺失占位；手工写死的占位既丢原 id，又会被下一次回写抹掉。
 > 因此 §十 第 2 项在"重跑脚本"时应**跳过**。
+
+- **书本图标：1.20.1 的 `tag:` 写法在 1.21 静默失效（2026-09-22 晚修）**
+  1.20.1 时代 `data.snbt` 的书本图标是 `icon: { id: "ftbquests:custom_icon" tag: { Icon: "createdelightcore:textures/gui/packicon64.png" } }`，
+  而 1.21 的物品栈用 **`components`** 而不是 `tag`：游戏读不懂 `tag`（静默忽略），回写时直接删掉 →
+  **书图标一直是兜底的 `textures/misc/unknown_pack.png`**（这张贴图本身在 `kubejs/assets/...` 里没丢，丢的是"指定它"的那段数据）。
+  已改成 2101 的正确形式（组件键来自 `ModDataComponents`，由 `CustomIconItem.getCustomComponent` 读取，值可为贴图路径或实体类型）：
+
+  ```
+  icon: {
+      components: {
+          "ftbquests:icon": "createdelightcore:textures/gui/packicon64.png"
+      }
+      id: "ftbquests:custom_icon"
+  }
+  ```
+
+- **`data.snbt` 的 `title` 键在 2101 已不存在**（`ServerQuestFile` 里没有该字段），所以游戏回写时删掉 `title: "机械动力：齿轮盛宴"` 是**正常**的，
+  书本标题随之失效、无需恢复（要改书名得走 1.21 的其它入口）。
 ## 十、迁移后置修正（重要：脚本一次跑完 ≠ 最终结果）
 
 `scripts/migrate-ftbquests.mjs` 是**第一遍**（复制 + 改名 + 类型转换 + 缺失清理）。以下三项是其后的人工复核修正，**如果将来重跑脚本，需要按本节再补一遍**：
