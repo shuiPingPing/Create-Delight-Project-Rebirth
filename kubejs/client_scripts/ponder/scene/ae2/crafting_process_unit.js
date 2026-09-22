@@ -6,7 +6,7 @@ Ponder.registry((event) => {
       'CPU的搭建',
       'createdelightcore:ponder_crafting_processing_unit',
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.world.showSection([0, 0, 0, 8, 0, 8], Direction.DOWN);
         scene.idle(20);
         scene.text(40, 'CPU的搭建有一定的规则……');

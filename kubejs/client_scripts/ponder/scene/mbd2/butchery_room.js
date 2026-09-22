@@ -11,7 +11,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_butchery_room',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '先让我们快速的搭建一下基础结构').attachKeyFrame();
@@ -39,7 +39,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [5, 1, 3],
           Block.id('createdelightcore:andesite_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.NORTH
           ),
           true
@@ -47,7 +47,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [3, 1, 3],
           Block.id('createdelightcore:andesite_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.NORTH
           ),
           true
@@ -55,7 +55,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [4, 5, 3],
           Block.id('createdelightcore:create_in').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.NORTH
           ),
           true

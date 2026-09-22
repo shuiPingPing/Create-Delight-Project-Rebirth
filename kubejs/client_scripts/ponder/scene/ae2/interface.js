@@ -6,7 +6,7 @@ Ponder.registry((event) => {
       'ME接口的使用',
       'createdelightcore:ponder_ae_interface',
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.idle(20);
         scene.world.showSection([1, 1, 1, 1, 1, 3], Direction.DOWN);

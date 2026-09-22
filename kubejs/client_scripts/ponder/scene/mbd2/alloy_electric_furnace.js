@@ -6,7 +6,7 @@ Ponder.registry((e) => {
       'createdelightcore:ponder_alloy_electric_furnace',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.scaleSceneView(0.8);
         scene.idle(20);
@@ -33,7 +33,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [2, 2, 3],
           Block.id('createdelightcore:forged_steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -41,7 +41,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [2, 2, 4],
           Block.id('createdelightcore:forged_steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -49,7 +49,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [2, 2, 5],
           Block.id('createdelightcore:forged_steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -64,7 +64,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [6, 2, 3],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -72,7 +72,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [6, 2, 4],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -80,7 +80,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [6, 2, 5],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -103,7 +103,7 @@ Ponder.registry((e) => {
       '合金电炉的使用',
       'createdelightcore:ponder_alloy_electric_furnace_use',
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '现在让我们来学习一下如何使用合金电炉').attachKeyFrame();
@@ -115,7 +115,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [2, 2, 4],
           Block.id('createdelightcore:forged_steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -126,7 +126,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [6, 2, 3],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -134,7 +134,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [6, 2, 4],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -142,7 +142,7 @@ Ponder.registry((e) => {
         scene.world.replaceBlocks(
           [6, 2, 5],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true

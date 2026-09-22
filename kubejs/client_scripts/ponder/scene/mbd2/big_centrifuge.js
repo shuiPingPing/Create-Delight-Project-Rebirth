@@ -7,7 +7,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_big_centrifuge',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '先让我们快速的搭建一下基础结构').attachKeyFrame();
@@ -28,7 +28,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [2, 3, 4],
           Block.id('createdelightcore:steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -36,7 +36,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [2, 6, 4],
           Block.id('createdelightcore:steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -51,7 +51,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [6, 3, 4],
           Block.id('createdelightcore:steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -59,7 +59,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [6, 6, 4],
           Block.id('createdelightcore:steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -74,7 +74,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [4, 3, 6],
           Block.id('createdelightcore:steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.SOUTH
           ),
           true
@@ -82,7 +82,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [4, 6, 6],
           Block.id('createdelightcore:steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.SOUTH
           ),
           true
@@ -213,7 +213,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_big_centrifuge_use',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '现在让我们来学习一下如何使用大型离心机').attachKeyFrame();
@@ -224,7 +224,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [2, 2, 4],
           Block.id('createdelightcore:steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -235,7 +235,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [6, 2, 4],
           Block.id('createdelightcore:steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true

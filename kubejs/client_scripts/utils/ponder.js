@@ -13,10 +13,7 @@ PonderUtil.spawnItemParticles = function (scene, position, vec3d, item, count, a
   scene.effects.emitParticles(
     position,
     scene.effects.particleEmitterWithinBlockSpace(
-      new global.CDClientJavaClasses.$ItemParticleOption(
-        global.CDClientJavaClasses.$ParticleTypes.ITEM,
-        item
-      ),
+      new CDClientJavaClasses.$ItemParticleOption(CDClientJavaClasses.$ParticleTypes.ITEM, item),
       vec3d
     ),
     count,

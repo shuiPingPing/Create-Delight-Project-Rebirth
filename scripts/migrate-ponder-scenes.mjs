@@ -39,6 +39,9 @@ const RENAMES = [
   [/\bsome_assembly_required:/g, 'someassemblyrequired:'],
   [/\bexpatternprovider:/g, 'extendedae:'],
   [/\bcreatenewage:/g, 'create_new_age:'],
+  // KubeJS 2101 里 client 脚本**不能**写 global（拿到的 binding 是 Collections.unmodifiableMap，
+  // 只有 startup 脚本拿到可写 HashMap，见 BuiltinKubeJSPlugin.registerBindings）→ 改用顶层变量跨文件共享
+  [/global\.CDClientJavaClasses/g, 'CDClientJavaClasses'],
 ]
 
 /* ---------- 1. 收集源文件 ---------- */
@@ -139,7 +142,9 @@ const facadeLines = [
   '// priority: 1200',
   '// 由 CDR1201 的 00_java_classes.js 裁剪而来：只保留 ponder 场景/工具实际用到的成员（2026-09-22 迁移）。',
   '// 其余客户端脚本（tooltip/JEI/渲染等）迁入时，再把需要的成员补回来。',
-  'global.CDClientJavaClasses = {',
+  '// 注意：KubeJS 2101 里只有 startup 脚本能写 global（client/server 拿到的是 Collections.unmodifiableMap），',
+  '// 所以这里用顶层 var，跨文件共享（与 utils/ponder.js 的 PonderUtil 同机制）。',
+  'var CDClientJavaClasses = {',
   ...facadeKept.map((e) => `    ${e.alias}: Java.loadClass("${e.fqcn}"),`),
   ...facadeDropped.map((e) => `    // ${e.alias}: Java.loadClass("${e.fqcn}"),   // ← 1.21.1 已不存在，暂缺`),
   '}',

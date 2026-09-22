@@ -6,7 +6,7 @@ Ponder.registry((event) => {
       '破坏面板的使用',
       'createdelightcore:ponder_annihilation_plane',
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.idle(20);
         scene.world.showSection([2, 1, 1, 3, 1, 2], Direction.DOWN);
@@ -43,7 +43,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_annihilation_plane_filter',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.world.showSection([0, 1, 0, 3, 1, 2], Direction.DOWN);
         scene.world.showSection([2, 2, 2], Direction.DOWN);

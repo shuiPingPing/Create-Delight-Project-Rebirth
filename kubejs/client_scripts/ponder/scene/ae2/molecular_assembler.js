@@ -5,7 +5,7 @@ Ponder.registry((event) => {
     'createdelightcore:ponder_molecular_assembler',
 
     (builder, util) => {
-      let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+      let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
       scene.showBasePlate();
       scene.idle(20);
       scene.world.showSection([0, 1, 0, 3, 1, 0], Direction.DOWN);

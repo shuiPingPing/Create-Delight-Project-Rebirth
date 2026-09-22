@@ -7,7 +7,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_pattern_provider',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.world.showSection([0, 0, 0, 7, 0, 7], Direction.UP);
         scene.showBasePlate();
         scene.idle(10);
@@ -66,7 +66,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_ae_crafting_parallel',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.world.showSection([1, 0, 0, 8, 0, 8], Direction.UP);
         scene.idle(20);
         scene.world.showSection([1, 1, 0, 1, 1, 3], Direction.DOWN);
@@ -135,7 +135,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_pattern_provider_interaction',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.idle(20);
         scene.world.showSection([1, 1, 0, 4, 1, 1], Direction.DOWN);

@@ -11,7 +11,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_fission_reactor',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.scaleSceneView(0.6);
         scene.idle(20);
@@ -40,7 +40,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [2, 1, 6],
           Block.id('createdelightcore:forged_steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -48,7 +48,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [2, 2, 6],
           Block.id('createdelightcore:forged_steel_export_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.WEST
           ),
           true
@@ -63,7 +63,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [10, 1, 6],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -71,7 +71,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [10, 2, 6],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.EAST
           ),
           true
@@ -86,7 +86,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [6, 1, 10],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.SOUTH
           ),
           true
@@ -94,7 +94,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [6, 2, 10],
           Block.id('createdelightcore:forged_steel_import_bus').blockState.trySetValue(
-            global.CDClientJavaClasses.$BlockStateProperties.FACING,
+            CDClientJavaClasses.$BlockStateProperties.FACING,
             Direction.SOUTH
           ),
           true
@@ -234,7 +234,7 @@ Ponder.registry((event) => {
         scene.effects.emitParticles(
           [6, 3, 6],
           scene.effects.simpleParticleEmitter(
-            global.CDClientJavaClasses.$ACParticleRegistry.MUSHROOM_CLOUD.get(),
+            CDClientJavaClasses.$ACParticleRegistry.MUSHROOM_CLOUD.get(),
             [0, 0, 0]
           ),
           1,

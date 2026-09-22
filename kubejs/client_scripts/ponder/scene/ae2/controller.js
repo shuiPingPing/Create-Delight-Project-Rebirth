@@ -6,7 +6,7 @@ Ponder.registry((event) => {
       'ME控制器的摆放方式……',
       'createdelightcore:ponder_me_controller',
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.world.showSection([0, 0, 0, 9, 0, 9], Direction.UP);
         scene.world.setBlocks([8, 1, 1], 'ae2:controller', false);
         scene.idle(20);

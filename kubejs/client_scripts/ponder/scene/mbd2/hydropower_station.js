@@ -39,7 +39,7 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_hydropower_station',
 
       (builder, util) => {
-        let scene = new global.CDClientJavaClasses.$CreateSceneBuilder(builder);
+        let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
         scene.showBasePlate();
         scene.scaleSceneView(0.45);
         scene.idle(20);
@@ -108,7 +108,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [8, 3, 4, 9, 3, 4],
           Block.id('createdelightcore:steel_fan').blockState.setValue(
-            global.CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
+            CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
             Direction.WEST
           ),
           true
@@ -116,7 +116,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [6, 3, 4, 7, 3, 4],
           Block.id('createdelightcore:forge_steel_fan').blockState.setValue(
-            global.CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
+            CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
             Direction.WEST
           ),
           true
@@ -124,7 +124,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [4, 3, 4, 5, 3, 4],
           Block.id('createdelightcore:dragon_steel_fan').blockState.setValue(
-            global.CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
+            CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
             Direction.WEST
           ),
           true
@@ -134,7 +134,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [8, 3, 4, 9, 3, 4],
           Block.id('createdelightcore:wooden_fan').blockState.setValue(
-            global.CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
+            CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
             Direction.WEST
           ),
           true
@@ -142,7 +142,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [6, 3, 4, 7, 3, 4],
           Block.id('createdelightcore:wooden_fan').blockState.setValue(
-            global.CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
+            CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
             Direction.WEST
           ),
           true
@@ -150,7 +150,7 @@ Ponder.registry((event) => {
         scene.world.replaceBlocks(
           [4, 3, 4, 5, 3, 4],
           Block.id('createdelightcore:wooden_fan').blockState.setValue(
-            global.CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
+            CDClientJavaClasses.$BlockStateProperties.HORIZONTAL_FACING,
             Direction.WEST
           ),
           true
