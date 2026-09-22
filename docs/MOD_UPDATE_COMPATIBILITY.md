@@ -130,3 +130,8 @@ Entity Shadows / Block Entity Shadows 在光影里默认常关，需手动打开
 - ⚠️ **`devtool install-files` / `check` 会按描述符 hash 把原版 jar 覆盖回来**，之后需重跑脚本（脚本幂等，已打过补丁会直接退出）。
 - 已验证：对 `Northstar-0.6.1+1.21.1.jar` 打补丁成功、二次运行识别为已打补丁。
 - 该 mixin **无配置开关**，Northstar 也**不能升级**（新版 `TelescopeScreen` 与 Core 客户端 mixin 不兼容）→ 只能靠补丁，故本项需在下次合并/升级 Northstar 时保留。
+**结论更新（2026-09-22 晚）：该补丁未采用 —— 决定接受双日。**
+
+- 当前状态：Northstar 保持 **0.6.1 原版**（`mods/common/northstar-redux.pw.toml` 仍为 CF 元数据 + `pin = true`，file-id `8307391`，sha1 `1f588a45…` 已复核）；本节的补丁脚本与备份目录已清理，`mods/.northstar-original/` 不再存在。
+- **备用方案（保留，随时可用）**：① `scripts/patch-northstar-sun.ps1`（单日，代价＝Northstar 太空维度失去日月/天空/行星接管）；② `resourcepacks/no-vanilla-sun.zip`（32×32 全透明 `sun.png`，零 mod 改动，启用后原版方块太阳不可见，代价＝关光影时也看不到太阳）。两者都**未启用**。
+- **上游修复点（将来采用的关键）**：Northstar **0.6.3** changelog 明写 `Fixed overworld sun/moon rendering compatibility (Enhanced Celestials, Ecliptic Seasons, Arctic Nights and others)` —— 本问题上游已修。**升级被 Core 挡住**：Core 2.0.0.6 的 `io/github/jasonsimpart/mixin/northstar/TelescopeScreenMixin` `@Shadow` 了 `TelescopeScreen.northstar$dimension`，该字段在 **0.6.3 中已被删除**（0.6.1 有）；`PlanetRenderer.getViewRotation(DD…PlanetProperties,PlanetDimension)` 与 `northstar$planet` 未变。→ **待 Core 适配后，升级 Northstar 至 0.6.3+ 即可彻底解决双日，无需任何补丁**。
