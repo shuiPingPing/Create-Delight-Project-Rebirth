@@ -136,3 +136,20 @@ Entity Shadows / Block Entity Shadows 在光影里默认常关，需手动打开
 - **备用方案（保留，随时可用）**：① `scripts/patch-northstar-sun.ps1`（单日，代价＝Northstar 太空维度失去日月/天空/行星接管）；② `resourcepacks/no-vanilla-sun.zip`（32×32 全透明 `sun.png`，零 mod 改动，启用后原版方块太阳不可见，代价＝关光影时也看不到太阳）。两者都**未启用**。
 - **上游修复点（将来采用的关键）**：Northstar **0.6.3** changelog 明写 `Fixed overworld sun/moon rendering compatibility (Enhanced Celestials, Ecliptic Seasons, Arctic Nights and others)` —— 本问题上游已修。**升级被 Core 挡住**：Core 2.0.0.6 的 `io/github/jasonsimpart/mixin/northstar/TelescopeScreenMixin` `@Shadow` 了 `TelescopeScreen.northstar$dimension`，该字段在 **0.6.3 中已被删除**（0.6.1 有）；`PlanetRenderer.getViewRotation(DD…PlanetProperties,PlanetDimension)` 与 `northstar$planet` 未变。→ **待 Core 适配后，升级 Northstar 至 0.6.3+ 即可彻底解决双日，无需任何补丁**。
 > **相关草稿**：给 Core/Northstar 的上游 issue 文本（中文＋English，**未提交**）见 `docs/UPSTREAM_ISSUE_DRAFTS.md`。
+## 2026-09-22 FTB Quests 任务书迁移（1.20.1 → 1.21.1）
+
+CDR1201 的 **75 个 snbt**（41 章节 + 32 奖励表 + `data.snbt` + `chapter_groups.snbt`）已迁入本仓库 `config/ftbquests/quests`：
+
+- 命名空间改名 **1044** 处：`createdelight→createdelightcore` 245、`alexscaves→alexscavesup` 440、`alexsmobs→alexsmobsup` 332、`citadel→citadelup` 2、
+  `miners_delight→minersdelight` 4、`casualness_delight→casualnessdelight` 11、`some_assembly_required→someassemblyrequired` 4、`expatternprovider→extendedae` 6、`forge→c` 8；
+- task 转换 **84**（`itemfilters:*` 62 + `questsadditions:*` 22 → `checkmark` / 具体物品）、删除 quest **124**（缺失物品 114 / 实体 7 / 维度 3）、
+  删除 reward **52**、清理 dependencies **152**、空章节 **0**、`parseOk 75 / parseFail 0`；
+- 工具：`scripts/migrate-ftbquests.mjs`（`--metrics` / `--dry-run` / 无参写入并备份）；完整记录见 `docs/FTBQUESTS_MIGRATION.md`。
+
+**离线自洽性校验（2026-09-22，全部通过）**：41 章 / 6 章节组；悬空 `group` 引用 0；2531 条 `dependencies` 悬空 0；
+95 处 `table_id` 引用（22 个不同表）全部能解析到 32 个奖励表文件；奖励表内部物品与任务奖励物品缺失均为 0。
+
+**验证前置**：`certain_questing_additions` 的 `ChapterImageConfigGroupMixin` 在 `ftb-quests 2101.1.36` 上 `@Shadow val$name` 硬失败（**打开任务书即崩**），
+已停用（`mods/certain_questing_additions-*.jar` → `.disabled`；包自检会报 `Missing mods: certain_questing_additions`，属预期）。
+
+**待实机确认**：进游戏后日志应出现 `[FTB Quests/]: Loaded 6 chapter groups, 41 chapters, N quests, 32 reward tables` 且无报错（迁移前是 `1/1/0/0`）。
