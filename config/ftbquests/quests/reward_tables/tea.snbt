@@ -1,0 +1,9 @@
+{
+	id: "07353B900F4DA13F"
+	loot_size: 1
+	order_index: 20
+	rewards: [
+		{ item: "youkaishomecoming:white_tea" }
+	]
+	title: "TEA"
+}
