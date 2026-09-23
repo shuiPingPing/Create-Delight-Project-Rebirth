@@ -69,10 +69,11 @@ const batches = {
   '2b-real': { section: '3.1', mode: 'mixed' },
   '2b-stub': { section: '3.2', mode: 'move' },
   '3-real': { section: '4.1', mode: 'move' },
-  '3-stub': { section: '4.2', mode: 'move' },
+  // §4.2 的存根禁用的是 1.21.1 里已不存在的对象（同名近似条目为空或类型不符）→ 改名也禁不掉任何东西，直接删
+  '3-stub': { section: '4.2', mode: 'delete' },
 }
 
-const stats = { move: 0, delete: 0, skip: 0 }
+const stats = { move: 0, delete: 0, skip: 0, failed: 0 }
 const log = []
 
 for (const [name, cfg] of Object.entries(batches)) {
@@ -91,17 +92,24 @@ for (const [name, cfg] of Object.entries(batches)) {
       log.push(`SKIP  源不存在（可能已处理）: ${src}`)
       continue
     }
-    // §3.1 的 .nbt 是 1.20.1 旧快照 → 删包内那份，保留 mod 版本
+    // §3.1 的 .nbt 是 1.20.1 旧快照 → 删包内那份，保留 mod 版本；§4.2 整批是失效存根 → 删
     const isNbtSnapshot = cfg.mode === 'mixed' && (intent.includes('nbt') || src.endsWith('.nbt'))
-    if (isNbtSnapshot) {
+    if (isNbtSnapshot || cfg.mode === 'delete') {
+      const why = isNbtSnapshot ? 'nbt 旧快照，保留 mod 版本' : '禁用的目标在 1.21.1 已不存在'
       if (dryRun) {
-        log.push(`DEL   ${src}（nbt 旧快照，保留 mod 版本）`)
+        log.push(`DEL   ${src}（${why}）`)
       } else {
-        const bak = path.join(BACKUP, src)
-        fs.mkdirSync(path.dirname(bak), { recursive: true })
-        fs.copyFileSync(absSrc, bak)
-        fs.unlinkSync(absSrc)
-        log.push(`DEL   ${src}`)
+        try {
+          const bak = path.join(BACKUP, src)
+          fs.mkdirSync(path.dirname(bak), { recursive: true })
+          fs.copyFileSync(absSrc, bak)
+          fs.unlinkSync(absSrc)
+          log.push(`DEL   ${src}`)
+        } catch (err) {
+          stats.failed += 1
+          log.push(`FAIL  删除失败 ${src}: ${err.code ?? err.message}（文件可能被别的进程占用，稍后重跑即可）`)
+          continue
+        }
       }
       stats.delete += 1
       continue
@@ -119,9 +127,17 @@ for (const [name, cfg] of Object.entries(batches)) {
     if (dryRun) {
       log.push(`MOVE  ${src}\n   -> ${target}`)
     } else {
-      fs.mkdirSync(path.dirname(path.join(REPO, target)), { recursive: true })
-      fs.renameSync(absSrc, path.join(REPO, target))
-      log.push(`MOVE  ${src}\n   -> ${target}`)
+      try {
+        fs.mkdirSync(path.dirname(path.join(REPO, target)), { recursive: true })
+        fs.renameSync(absSrc, path.join(REPO, target))
+        log.push(`MOVE  ${src}\n   -> ${target}`)
+      } catch (err) {
+        // Windows 上偶发 EPERM/EBUSY：文件被其它进程（杀软/索引器）短暂占用。脚本是幂等的，
+        // 已经改好的文件下次会被跳过，直接重跑即可。
+        stats.failed += 1
+        log.push(`FAIL  改名失败 ${src} -> ${target}: ${err.code ?? err.message}`)
+        continue
+      }
     }
     stats.move += 1
   }
@@ -129,6 +145,7 @@ for (const [name, cfg] of Object.entries(batches)) {
 
 console.log(log.join('\n'))
 console.log(
-  `\n${dryRun ? '[dry-run] ' : ''}改名 ${stats.move}；删除 ${stats.delete}；跳过 ${stats.skip}` +
+  `\n${dryRun ? '[dry-run] ' : ''}改名 ${stats.move}；删除 ${stats.delete}；跳过 ${stats.skip}；失败 ${stats.failed}` +
     (dryRun ? '' : `；删除备份在 ${BACKUP}`)
 )
+if (stats.failed) process.exitCode = 1
