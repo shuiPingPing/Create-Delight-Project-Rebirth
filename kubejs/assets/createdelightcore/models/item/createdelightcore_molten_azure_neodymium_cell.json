@@ -1,0 +1,6 @@
+{
+  "parent": "createdelightcore:item/infinity_cell_base",
+  "textures": {
+    "icon": "alexscavesup:item/azure_neodymium_ingot"
+  }
+}

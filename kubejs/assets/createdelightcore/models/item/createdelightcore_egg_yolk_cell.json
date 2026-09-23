@@ -1,0 +1,6 @@
+{
+  "parent": "createdelightcore:item/infinity_cell_base",
+  "textures": {
+    "icon": "ratatouille:item/egg_yolk_bucket"
+  }
+}

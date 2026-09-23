@@ -1,0 +1,6 @@
+{
+  "parent": "createdelightcore:item/infinity_cell_base",
+  "textures": {
+    "icon": "createmetallurgy:item/molten_necromium_bucket"
+  }
+}
