@@ -114,7 +114,9 @@ const baseModel = {
   gui_light: 'front',
   textures: { particle: CELL_TEXTURE, cell: CELL_TEXTURE, icon: 'minecraft:item/water_bucket' },
   display: {
-    gui: { rotation: [30, 225, 0], translation: [0, 0, 0], scale: [0.625, 0.625, 0.625] },
+    // 注意：物品模型不要写 gui 变换 —— 那个 [30,225,0]/0.625 是「方块」在背包里的倾斜变换
+    // （定义在 vanilla 的 block/block.json）。物品（item/generated）本身没有 gui 条目，
+    // 不写就是平铺；写了会变成倾斜+缩小的「变形」样子。
     ground: { rotation: [0, 0, 0], translation: [0, 2, 0], scale: [0.5, 0.5, 0.5] },
     head: { rotation: [0, 180, 0], translation: [0, 13, 7], scale: [1, 1, 1] },
     thirdperson_righthand: { rotation: [0, 0, 0], translation: [0, 3, 1], scale: [0.55, 0.55, 0.55] },
