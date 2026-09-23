@@ -262,106 +262,6 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:taiga_gulime_small",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:taiga_gulime",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:arid_gulime_small",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:arid_gulime",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:strawberry_gulime_small",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:strawberry_gulime",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:underground_gulime_small",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chorus_gulime",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chorus_gulime_small",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:glimmering_gulime",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:glimmering_gulime_small",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:gulime",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:gulime_small",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:llama_marshmallow",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:llama_marshmallow_brown",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:llama_marshmallow_trader",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:toffee_apple",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:toffee_golden_apple",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:underground_gulime",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:jelly_roll",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:jelly_roll_slice",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chocolate_roll",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chocolate_roll_slice",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:ink_roll",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:ink_roll_slice",
-      "required": false
-    },
-    {
       "id": "collectorsreap:candied_lime",
       "required": false
     },
@@ -426,10 +326,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:spelunkie_pudding",
-      "required": false
-    },
-    {
       "id": "youkaishomecoming:doughnut",
       "required": false
     },
@@ -462,75 +358,7 @@
       "required": false
     },
     {
-      "id": "festival_delicacies:qingtuan",
-      "required": false
-    },
-    {
       "id": "youkaishomecoming:seven_colored_yokan",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:eton_mess",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:flower_love",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:ghostcream",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:mojang_mess",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:penuche",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:popwart",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:rice_pudding",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:rodgrod",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:soulblight_ghostcream",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:spaghettieis",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:trifle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tuber_puree",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tuber_puree_cone",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tuber_puree_cone_with_confiture",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tuber_puree_with_confiture",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:warped_ghostcream",
       "required": false
     }
   ]

@@ -116,26 +116,6 @@
     {
       "id": "collectorsreap:strong_limbo_brew",
       "required": false
-    },
-    {
-      "id": "cosmopolitan:berry_syrup_americano",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chorus_fruit_americano",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:iced_americano",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:mocha",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:orange_americano",
-      "required": false
     }
   ]
 }

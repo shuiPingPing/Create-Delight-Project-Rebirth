@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     {
-      "id": "#forge:fruits/grape",
+      "id": "#c:fruits/grape",
       "required": false
     },
     {
@@ -126,7 +126,7 @@
       "required": false
     },
     {
-      "id": "#forge:fruits/strawberry",
+      "id": "#c:foods/strawberry",
       "required": false
     },
     {
@@ -163,50 +163,6 @@
     },
     {
       "id": "collectorsreap:pink_dragon_fruit",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:apricot",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:hawthorn",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:jujube",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:peach",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:persimmon",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:arbutus_berries",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:golden_arbutus_berries",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:enchanted_golden_arbutus_berries",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:occult_apple",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:wildberry",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:wildberry_medley",
       "required": false
     },
     {

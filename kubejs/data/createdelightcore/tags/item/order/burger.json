@@ -50,14 +50,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:slam_burger",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:flying_dutchman_burger",
-      "required": false
-    },
-    {
       "id": "minersdelight:cave_hamburger",
       "required": false
     },

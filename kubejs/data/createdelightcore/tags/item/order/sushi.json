@@ -46,14 +46,6 @@
       "required": false
     },
     {
-      "id": "oceanic_delight:shrimp_roll",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:sea_pickle_roll_slice",
-      "required": false
-    },
-    {
       "id": "silentsdelight:sculk_sensor_tendril_roll",
       "required": false
     },
@@ -74,10 +66,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:trilocaris_roll",
-      "required": false
-    },
-    {
       "id": "youkaishomecoming:egg_nigiri",
       "required": false
     },
@@ -91,10 +79,6 @@
     },
     {
       "id": "youkaishomecoming:flesh_roll",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:sea_pickle_roll",
       "required": false
     },
     {

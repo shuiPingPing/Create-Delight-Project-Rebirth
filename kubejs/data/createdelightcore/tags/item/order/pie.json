@@ -38,10 +38,6 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:water_pie_slice",
-      "required": false
-    },
-    {
       "id": "farmersdelight:sweet_berry_cheesecake_slice",
       "required": false
     },
@@ -78,39 +74,11 @@
       "required": false
     },
     {
-      "id": "cavedelight:slice_of_pinenut_pie",
-      "required": false
-    },
-    {
       "id": "bakeries:egg_tart",
       "required": false
     },
     {
       "id": "brewinandchewin:quiche_slice",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:blisterberry_tart",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:mendosteen_tart",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:magebloom_tart",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:shoofly_pie_block",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:shoofly_pie_slice",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:water_pie",
       "required": false
     },
     {

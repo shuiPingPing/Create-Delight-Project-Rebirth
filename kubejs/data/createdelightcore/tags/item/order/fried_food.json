@@ -158,18 +158,6 @@
       "required": false
     },
     {
-      "id": "frycooks_delight:fried_potato",
-      "required": false
-    },
-    {
-      "id": "frycooks_delight:fried_chicken_leg",
-      "required": false
-    },
-    {
-      "id": "frycooks_delight:plain_donut",
-      "required": false
-    },
-    {
       "id": "create_bic_bit:cheese_souffle",
       "required": false
     },
@@ -186,10 +174,6 @@
       "required": false
     },
     {
-      "id": "oceanic_delight:fried_shrimp",
-      "required": false
-    },
-    {
       "id": "mynethersdelight:fries_ghasta",
       "required": false
     },
@@ -198,19 +182,11 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:potato_pancakes",
-      "required": false
-    },
-    {
       "id": "casualnessdelight:fish_and_chips",
       "required": false
     },
     {
       "id": "corn_delight:classic_corn_dog",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:shrimp_chips",
       "required": false
     },
     {
@@ -238,10 +214,6 @@
       "required": false
     },
     {
-      "id": "frycooks_delight:fried_onion_ring",
-      "required": false
-    },
-    {
       "id": "corn_delight:corn_dog",
       "required": false
     },
@@ -255,10 +227,6 @@
     },
     {
       "id": "dungeonsdelight:fried_bug_chops",
-      "required": false
-    },
-    {
-      "id": "cavedelight:fried_slam_rice",
       "required": false
     },
     {
@@ -279,18 +247,6 @@
     },
     {
       "id": "collectorsreap:bullet_pepper_popper",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:egg_roll",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:fish_egg_roll",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:fiddlehead_tempura",
       "required": false
     },
     {

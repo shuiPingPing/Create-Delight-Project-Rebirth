@@ -46,35 +46,7 @@
       "required": false
     },
     {
-      "id": "cavedelight:star_cookie",
-      "required": false
-    },
-    {
       "id": "minersdelight:bat_cookie",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:birch_cookie",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:paw_cookie",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:herbal_cookie",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:arbutus_berry_cookie",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:howling_cookie",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:molasses_cookie",
       "required": false
     },
     {

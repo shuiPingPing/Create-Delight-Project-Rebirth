@@ -18,22 +18,6 @@
       "required": false
     },
     {
-      "id": "oceanic_delight:squid_salad",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:potato_salad",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:caesar_salad",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:sea_salad",
-      "required": false
-    },
-    {
       "id": "silentsdelight:sculk_vein_salad",
       "required": false
     },
@@ -66,27 +50,11 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:classic_fruit_salad",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:jello_salad",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:jello_salad_cup",
-      "required": false
-    },
-    {
       "id": "farmersdelight:gleaming_salad",
       "required": false
     },
     {
       "id": "farmersdelight:gleaming_salad_block",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:mana_salad",
       "required": false
     }
   ]

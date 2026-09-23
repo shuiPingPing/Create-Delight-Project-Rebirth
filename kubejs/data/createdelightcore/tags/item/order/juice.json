@@ -30,10 +30,6 @@
       "required": false
     },
     {
-      "id": "oceanic_delight:nautilus_juice",
-      "required": false
-    },
-    {
       "id": "crabbersdelight:sea_pickle_juice",
       "required": false
     },
@@ -94,18 +90,6 @@
       "required": false
     },
     {
-      "id": "nethervinery:crimson_grapejuice",
-      "required": false
-    },
-    {
-      "id": "nethervinery:warped_grapejuice",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:sea_grape_juice",
-      "required": false
-    },
-    {
       "id": "youkaishomecoming:black_grape_juice",
       "required": false
     },
@@ -119,18 +103,6 @@
     },
     {
       "id": "collectorsreap:strong_limeade",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:wildberry_punch",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:greenday_juice",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:sugarcane_juice",
       "required": false
     },
     {

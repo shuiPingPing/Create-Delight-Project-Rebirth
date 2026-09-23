@@ -134,34 +134,6 @@
       "required": false
     },
     {
-      "id": "nethervinery:blazewine_pinot",
-      "required": false
-    },
-    {
-      "id": "nethervinery:netherite_nectar",
-      "required": false
-    },
-    {
-      "id": "nethervinery:ghastly_grenache",
-      "required": false
-    },
-    {
-      "id": "nethervinery:lava_fizz",
-      "required": false
-    },
-    {
-      "id": "nethervinery:nether_fizz",
-      "required": false
-    },
-    {
-      "id": "nethervinery:improved_nether_fizz",
-      "required": false
-    },
-    {
-      "id": "nethervinery:improved_lava_fizz",
-      "required": false
-    },
-    {
       "id": "farmersdelight:apple_cider",
       "required": false
     },
@@ -219,42 +191,6 @@
     },
     {
       "id": "brewinandchewin:vodka",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:cosmopolitan_cocktail",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:enchanted_cosmopolitan_cocktail",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:cachaca",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:exotic_mirage",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:generic_romance",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:green_beer",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:morning_fog",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:neverending_night",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:steeleaf_nectar",
       "required": false
     }
   ]

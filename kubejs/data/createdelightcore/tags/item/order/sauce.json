@@ -62,14 +62,6 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:molasses_bottle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:green_sauce",
-      "required": false
-    },
-    {
       "id": "collectorsreap:prawn_spread",
       "required": false
     }

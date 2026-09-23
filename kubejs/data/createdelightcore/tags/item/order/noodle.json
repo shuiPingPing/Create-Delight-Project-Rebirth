@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "alexcaves_delight:pastawithtrilocaristail",
-      "required": false
-    },
-    {
       "id": "farmersdelight:noodle_soup",
       "required": false
     },
@@ -38,10 +34,6 @@
       "required": false
     },
     {
-      "id": "oceanic_delight:pasta_with_eyeball",
-      "required": false
-    },
-    {
       "id": "collectorsreap:clam_pasta",
       "required": false
     },
@@ -70,18 +62,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:dino_chop_pasta",
-      "required": false
-    },
-    {
-      "id": "cavedelight:tectonic_pasta",
-      "required": false
-    },
-    {
-      "id": "cavedelight:trilocaris_noodles",
-      "required": false
-    },
-    {
       "id": "youkaishomecoming:longevity_noodles",
       "required": false
     },
@@ -95,10 +75,6 @@
     },
     {
       "id": "brewinandchewin:cheesy_pasta",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:green_pasta",
       "required": false
     },
     {
@@ -119,10 +95,6 @@
     },
     {
       "id": "ends_delight:ender_noodle",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:fish_egg_noodle_soup",
       "required": false
     },
     {
@@ -147,10 +119,6 @@
     },
     {
       "id": "abnormals_delight:duck_noodles",
-      "required": false
-    },
-    {
-      "id": "cavedelight:gamma_spaghetti",
       "required": false
     },
     {

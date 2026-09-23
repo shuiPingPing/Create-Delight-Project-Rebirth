@@ -110,26 +110,6 @@
       "required": false
     },
     {
-      "id": "oceanic_delight:caviar_toast",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:strawberry_vanilla_cream_bun",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:adzuki_mint_cream_bun",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:cream_bun",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chocolate_banana_cream_bun",
-      "required": false
-    },
-    {
       "id": "culturaldelights:avocado_toast",
       "required": false
     },
@@ -187,30 +167,6 @@
     },
     {
       "id": "mynethersdelight:toasts",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:bacon_egg_bagel",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:berry_cream_cheese_bagel",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:bush_bread",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:geode_bread",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:matcha_cream_cheese_ink_bagel",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:meadow_bread",
       "required": false
     }
   ]

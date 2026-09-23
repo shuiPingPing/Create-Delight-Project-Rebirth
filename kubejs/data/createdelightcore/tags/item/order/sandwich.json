@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "cavedelight:pine_and_sap_sandwich",
-      "required": false
-    },
-    {
       "id": "alexsdelight:bunfungus_sandwich",
       "required": false
     },
@@ -38,10 +34,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:lux_and_ham_sandwich",
-      "required": false
-    },
-    {
       "id": "minersdelight:insect_sandwich",
       "required": false
     },
@@ -59,18 +51,6 @@
     },
     {
       "id": "brewinandchewin:ham_and_cheese_sandwich",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:woodland_sub",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:travelers_panini",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:bagel_sandwich",
       "required": false
     },
     {

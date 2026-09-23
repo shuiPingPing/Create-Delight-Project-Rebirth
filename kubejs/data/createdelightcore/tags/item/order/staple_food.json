@@ -30,10 +30,6 @@
       "required": false
     },
     {
-      "id": "festival_delicacies:mantou",
-      "required": false
-    },
-    {
       "id": "vintagedelight:oatmeal",
       "required": false
     },
@@ -43,10 +39,6 @@
     },
     {
       "id": "farmersdelight:stuffed_potato",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:farina",
       "required": false
     },
     {

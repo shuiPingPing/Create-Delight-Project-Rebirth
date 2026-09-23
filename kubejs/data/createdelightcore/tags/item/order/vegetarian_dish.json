@@ -54,14 +54,6 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:potato_wedges",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:mashed_potato",
-      "required": false
-    },
-    {
       "id": "minersdelight:vegan_steak_and_potatoes",
       "required": false
     },
@@ -139,14 +131,6 @@
     },
     {
       "id": "culturaldelights:smoked_corn",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:couscous_with_vegetables",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:mana_salad",
       "required": false
     }
   ]

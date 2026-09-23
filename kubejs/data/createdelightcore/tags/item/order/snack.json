@@ -66,10 +66,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:honey_glazed_dino_nugget",
-      "required": false
-    },
-    {
       "id": "vintagedelight:chocolate_nut_granola_bar",
       "required": false
     },
@@ -94,75 +90,11 @@
       "required": false
     },
     {
-      "id": "festival_delicacies:candied_tangerine",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:dried_persimmon",
-      "required": false
-    },
-    {
       "id": "vintagedelight:roasted_peanut",
       "required": false
     },
     {
       "id": "vintagedelight:honey_roasted_peanut",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:arbutus_berry_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:bastion_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:berry_syrup_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:blisterberry_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:carrot_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:droopfruit_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:emerald_candy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:enchanted_fruit_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:kabloom_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:mendosteen_gummy",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:slime_cone",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:strawberry_tanghulu",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tuber_chip_bag",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tuber_chips",
       "required": false
     },
     {

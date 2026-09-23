@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     {
-      "id": "#forge:sausage",
+      "id": "#c:sausage",
       "required": false
     },
     {

@@ -2,14 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "alexcaves_delight:uraniumsoup",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:tripodfishsoup",
-      "required": false
-    },
-    {
       "id": "corn_delight:corn_soup",
       "required": false
     },
@@ -150,14 +142,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:radgill_stew",
-      "required": false
-    },
-    {
-      "id": "cavedelight:toxic_soup",
-      "required": false
-    },
-    {
       "id": "trailandtales_delight:sniffer_egg_soup",
       "required": false
     },
@@ -251,38 +235,6 @@
     },
     {
       "id": "collectorsreap:lucuma_gazpacho_cup",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:abc_soup",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:abc_soup_cup",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:green_cream_stew",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:green_cream_stew_cup",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:lush_stew",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:lush_stew_cup",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:stobhach_gaelach",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:stobhach_gaelach_cup",
       "required": false
     },
     {

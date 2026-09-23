@@ -28,10 +28,6 @@
     {
       "id": "casualnessdelight:fried_chicken_chip",
       "required": false
-    },
-    {
-      "id": "frycooks_delight:fried_chicken_leg",
-      "required": false
     }
   ]
 }

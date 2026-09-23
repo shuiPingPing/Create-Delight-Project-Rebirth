@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "cavedelight:fiddlehead_tea",
-      "required": false
-    },
-    {
       "id": "trailandtales_delight:torchflower_tea",
       "required": false
     },
@@ -15,10 +11,6 @@
     },
     {
       "id": "trailandtales_delight:pitcher_plant_tea",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:autumn_tea",
       "required": false
     },
     {
@@ -127,10 +119,6 @@
     },
     {
       "id": "fruitsdelight:mangosteen_tea",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:tree_star_tea",
       "required": false
     },
     {

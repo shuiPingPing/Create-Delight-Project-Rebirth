@@ -62,14 +62,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:dino_cut_rice",
-      "required": false
-    },
-    {
-      "id": "cavedelight:prehistoric_egg_rice",
-      "required": false
-    },
-    {
       "id": "youkaishomecoming:pork_rice_ball",
       "required": false
     },
@@ -91,22 +83,6 @@
     },
     {
       "id": "minersdelight:bowl_of_stuffed_squid",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:globular_rice",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:shrimp_rice",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:bowl_of_paella",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:plate_of_stuffed_pufferfish",
       "required": false
     },
     {
@@ -170,22 +146,6 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:wild_risotto",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:meat_zongzi",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:sweet_zongzi",
-      "required": false
-    },
-    {
-      "id": "cavedelight:musubi",
-      "required": false
-    },
-    {
       "id": "cuisinedelight:fried_rice",
       "required": false
     },
@@ -207,18 +167,6 @@
     },
     {
       "id": "cuisinedelight:vegetable_fried_rice",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:beetroot_mixed_rice",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:salted_qingtuan",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:sweet_qingtuan",
       "required": false
     },
     {

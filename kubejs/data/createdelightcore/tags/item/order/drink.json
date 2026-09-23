@@ -26,10 +26,6 @@
       "required": false
     },
     {
-      "id": "alexcaves_delight:jellyfish_soda",
-      "required": false
-    },
-    {
       "id": "corn_delight:creamy_corn_drink",
       "required": false
     },
@@ -54,38 +50,6 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:spring_soda",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:charmed_infusion",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:funguis_bottle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:kykeon",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:soulblight_funguis_bottle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:strawberry_matcha_latte",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tisane",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:warped_funguis_bottle",
-      "required": false
-    },
-    {
       "id": "farmersdelight:glow_berry_custard",
       "required": false
     },
@@ -95,26 +59,6 @@
     },
     {
       "id": "brewinandchewin:kombucha",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:black_cow",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:root_beer",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:summer_cordial",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:winter_glogg",
-      "required": false
-    },
-    {
-      "id": "cavedelight:radpop",
       "required": false
     }
   ]

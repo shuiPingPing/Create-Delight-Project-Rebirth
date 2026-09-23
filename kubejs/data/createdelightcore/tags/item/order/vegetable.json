@@ -42,30 +42,6 @@
       "required": false
     },
     {
-      "id": "festival_delicacies:chinese_cabbage",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:chinese_cabbage_leaf",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:greenonion",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:eggplant",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:garlic_chive",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:fennel",
-      "required": false
-    },
-    {
       "id": "vintagedelight:peanut",
       "required": false
     },
@@ -75,10 +51,6 @@
     },
     {
       "id": "vintagedelight:cucumber",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:fiddlehead",
       "required": false
     },
     {

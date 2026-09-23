@@ -22,46 +22,6 @@
       "required": false
     },
     {
-      "id": "oceanic_delight:sponge_cake_slice",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:berry_cheesecake_bar",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:wheatgrass_cubecake",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:wheatgrass_cubecake_block",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chorus_fruit_cubecake",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chorus_fruit_cubecake_block",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:glow_berry_cubecake",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:glow_berry_cubecake_block",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:warped_velvet_cubecake",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:warped_velvet_cubecake_block",
-      "required": false
-    },
-    {
       "id": "farmersdelight:cake_slice",
       "required": false
     },
@@ -115,46 +75,6 @@
     },
     {
       "id": "seasonals:red_velvet_cupcake",
-      "required": false
-    },
-    {
-      "id": "cavedelight:slice_of_spelunkie_cake",
-      "required": false
-    },
-    {
-      "id": "cavedelight:slice_of_tectonic_cheesecake",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:raindroop_cake",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:recovery_lava_cake",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:zebra_cake",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:yule_log_slice",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:five_nuts_mooncake",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:hawthorn_with_jujube_paste_mooncake",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:lotus_seed_paste_with_salted_yolk_mooncake",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:preserved_meat_mooncake",
       "required": false
     },
     {

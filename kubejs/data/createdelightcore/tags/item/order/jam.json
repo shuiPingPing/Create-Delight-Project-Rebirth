@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "#forge:jams",
-      "required": false
-    },
-    {
       "id": "vintagedelight:gearo_berry_mason_jar",
       "required": false
     },
@@ -43,18 +39,6 @@
     },
     {
       "id": "createdelightcore:lush_confiture_jelly_bottle",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:jujube_paste",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:red_bean_paste",
-      "required": false
-    },
-    {
-      "id": "festival_delicacies:sweetened_lotus_seed_paste",
       "required": false
     }
   ]

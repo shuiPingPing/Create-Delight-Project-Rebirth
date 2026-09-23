@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "cavedelight:flytrap_taco",
-      "required": false
-    },
-    {
       "id": "mynethersdelight:hotdog",
       "required": false
     },
@@ -75,14 +71,6 @@
     },
     {
       "id": "collectorsreap:sea_wrap",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chard_rolls",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:glitterkelp_burrito",
       "required": false
     }
   ]

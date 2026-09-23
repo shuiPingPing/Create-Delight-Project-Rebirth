@@ -34,34 +34,6 @@
       "required": false
     },
     {
-      "id": "cosmopolitan:berry_popsicle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:berry_popsicle_double",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:blisterberry_popsicle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:blisterberry_popsicle_double",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chorus_fruit_popsicle_double",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:chorus_fruit_popsicle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:lime_popsicle_double",
-      "required": false
-    },
-    {
       "id": "casualnessdelight:green_tongue",
       "required": false
     },
@@ -71,34 +43,6 @@
     },
     {
       "id": "corn_delight:corn_popsicle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:ardent_split_popsicle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:ardent_split_popsicle_double",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:gamblers_popsicle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:gamblers_popsicle_double",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:slabfish_jelly_popsicle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tranquil_split_popsicle",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:tranquil_split_popsicle_double",
       "required": false
     }
   ]

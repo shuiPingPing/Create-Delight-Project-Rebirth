@@ -2,38 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "alexcaves_delight:subterranodonamlette",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:vallumraptoramlette",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:atlatitanamlette",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:grottoceratopsamlette",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:tremorsaurusamlette",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:relicheirusamlette",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:tremorzillaamlette",
-      "required": false
-    },
-    {
-      "id": "alexcaves_delight:ammletfromembryo",
-      "required": false
-    },
-    {
       "id": "casualnessdelight:bowl_of_paper_wrapped_fish",
       "required": false
     },
@@ -110,30 +78,6 @@
       "required": false
     },
     {
-      "id": "cavedelight:plate_of_grotto_burnt_ends",
-      "required": false
-    },
-    {
-      "id": "cavedelight:plate_of_grotto_leg",
-      "required": false
-    },
-    {
-      "id": "cavedelight:plate_of_roasted_dino_chop",
-      "required": false
-    },
-    {
-      "id": "cavedelight:plate_of_tail_cut",
-      "required": false
-    },
-    {
-      "id": "cavedelight:stuffed_trilo_tails",
-      "required": false
-    },
-    {
-      "id": "cavedelight:volcanic_chop",
-      "required": false
-    },
-    {
       "id": "mynethersdelight:hot_wings",
       "required": false
     },
@@ -207,10 +151,6 @@
     },
     {
       "id": "minersdelight:takoyaki",
-      "required": false
-    },
-    {
-      "id": "oceanic_delight:takoyaki",
       "required": false
     },
     {
@@ -295,22 +235,6 @@
     },
     {
       "id": "abnormals_delight:venison_with_bamboo_shoots",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:baked_cod_with_mashed_potatoes",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:couscous_with_mutton",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:glazed_fish",
-      "required": false
-    },
-    {
-      "id": "cosmopolitan:glazed_fish_roll",
       "required": false
     },
     {
