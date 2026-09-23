@@ -17,6 +17,12 @@ Shared repository skills live under `.agents/skills/`.
 - Prefer the root `devtool.bat` entry point on Windows, or `./devtool.sh` on Linux/macOS, for local bkmpw operations in this repository.
 - Keep Minecraft `1.21.1`, NeoForge `21.1.242`, and Java `21` aligned across `pack/pack.toml`, `pack/variables.txt`, and documented examples.
 - Treat `Create-Delight-Remake` as source reference only. Do not bulk-copy old Forge `1.20.1` KubeJS/configs into this repo without checking target mod availability and schema/API changes.
+- **参考仓库只读（用户明确要求，2026-09-22）**：`D:\git-MC\CDR1201`（1.20.1 源包）与上游 `Jasons-impart/Create-Delight-Project-Rebirth` **只允许读取**，
+  作为向本仓库迁移的参考：不改文件、不建分支、不提交、不推送、不建 PR/Issue。迁移产物一律落在本仓库（CDR1211）内，并在提交信息里写明来源。
+  需要"上游素材"时读 `upstream/*` 远程引用或 CDR1201 工作区即可（`git show upstream/main:<path>`、直接读文件），不要写入。
+- **运行期回写不要跟业务改动混提交**：`config/ftbquests/**`、`config/c2me.toml` 等会被游戏按当前机器状态重写（任务书序列化、C2ME 按 CPU 核数写注释默认值）。
+  提交前用 `git diff --numstat <path>` 确认确有内容改动；纯 stat 噪声先 `git add -u` / `git update-index --refresh` 刷新，机器相关值（如 c2me）直接撤销。
+- **别用 `git add <目录>` 一把梭**：会顺带把 `.bak`、运行期回写、其它零散改动卷进提交（本项目已踩过两次）。只 `git add` 明确列出的文件；`.bak` 已在 `.gitignore`。
 
 ## Migration Approach
 
