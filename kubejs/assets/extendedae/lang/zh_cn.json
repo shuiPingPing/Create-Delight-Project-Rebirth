@@ -262,5 +262,10 @@
   "emi.extendedae.category.fixer": "水晶修复器",
   "emi.extendedae.text.success_chance": "成功率：%s",
   "emi.extendedae.desc.entro_crystal": "恩特罗水晶由萌芽的恩特罗化福鲁伊克斯生长，就像赛特斯水晶的工作原理一样。要获得萌芽的恩特罗化福鲁伊克斯，您需要制作恩特罗种子并在福鲁伊克斯块上使用它。",
-  "emi.extendedae.desc.entro_seed": "在放置于世界中的福鲁伊克斯块上使用恩特罗种子，会将该福鲁伊克斯块变成萌芽的恩特罗化福鲁伊克斯。"
+  "emi.extendedae.desc.entro_seed": "在放置于世界中的福鲁伊克斯块上使用恩特罗种子，会将该福鲁伊克斯块变成萌芽的恩特罗化福鲁伊克斯。",
+  "itemGroup.epp": "AE2扩展",
+  "gui.extendedae.tank_empty": "空",
+  "gui.extendedae.tank_amount": "%s mb / %s mb",
+  "key.epp.viewpattern": "查看样板",
+  "key.epp.category": "AE2扩展"
 }

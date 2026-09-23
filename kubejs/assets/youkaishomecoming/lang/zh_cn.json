@@ -1687,5 +1687,9 @@
   "youkaishomecoming.tab.no_role": "普通人类（无角色）",
   "youkaishomecoming.tab.role_progress": "%s - %s",
   "youkaishomecoming.tab.title": "幻想乡角色",
-  "youkaishomecoming.title": "妖怪们的归家"
+  "youkaishomecoming.title": "妖怪们的归家",
+  "advancements.youkaishomecoming.advancements.main.coffea.description": "种植咖啡树",
+  "advancements.youkaishomecoming.advancements.main.coffea.title": "需营养咖啡树",
+  "advancements.youkaishomecoming.advancements.main.redbean.description": "在砂土上种植红豆",
+  "advancements.youkaishomecoming.advancements.main.redbean.title": "耐瘠薄赤小豆"
 }
