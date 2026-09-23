@@ -1,0 +1,18 @@
+{
+  "menu.seasonhud.main.journeymap.options.button": "JourneyMap 选项",
+  "menu.seasonhud.main.journeymap.options.tooltip": "打开 SeasonHUD 的 JourneyMap 选项。",
+  "menu.seasonhud.main.minimap.options": "小地图选项",
+  "menu.seasonhud.main.season.button": "季节显示选项",
+  "menu.seasonhud.main.season.tooltip": "季节显示方式的选项",
+  "menu.seasonhud.season.calendarDetail.button": "日历详情模式",
+  "menu.seasonhud.season.calendarDetail.tooltip": "持有日历物品时显示详细版 HUD",
+  "menu.seasonhud.season.fertilityReplacesSeason.button": "肥力替代季节",
+  "menu.seasonhud.season.fertilityReplacesSeason.tooltip": "用当前肥力替代季节名称\n\n仅当它与生物群系的默认值不同时才生效",
+  "menu.seasonhud.season.scale.slider": "缩放：",
+  "menu.seasonhud.season.scale.tooltip": "未安装小地图时季节文本的缩放比例",
+  "menu.seasonhud.season.serverSide.tooltip": "此选项由服务器控制",
+  "menu.seasonhud.season.showFertility.button": "显示肥力",
+  "menu.seasonhud.season.showFertility.tooltip": "显示当前生物群系的肥力等级",
+  "menu.seasonhud.season.showSubSeason.tooltip.error": "当前季节长度为 %d 天（%d 刻），不能被 3 整除\n\n要启用此功能，你需要将 'seasons.json' 中的 'seasonLength' 值改为能被 3 整除",
+  "menu.seasonhud.season.title": "季节显示选项"
+}

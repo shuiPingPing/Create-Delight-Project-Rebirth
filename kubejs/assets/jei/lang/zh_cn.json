@@ -31,7 +31,7 @@
   "gui.jei.editMode.description.hide": "按“%s”以隐藏。",
   "gui.jei.editMode.description.hide.wild": "按“%s”以使用通配符隐藏。",
   "jei.alias.panda.spawn.egg": "濒危物种",
-  "jei.alias.villager.spawn.egg": "HMMM",
+  "jei.alias.villager.spawn.egg": "哼",
   "jei.chat.error.no.cheat.permission.1": "你没有使用JEI作弊模式的权限。",
   "jei.chat.error.no.cheat.permission.creative": "处于创造模式的玩家",
   "jei.chat.error.no.cheat.permission.disabled": "在该服务器，该模式对所有玩家禁用。",

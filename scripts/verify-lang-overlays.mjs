@@ -130,6 +130,19 @@ for (const ns of targets) {
   const effZh = { ...(en.zh ?? {}), ...zh }
   const missing = Object.keys(en.json).filter((k) => effZh[k] === undefined)
   const missingVisible = missing.filter((k) => VISIBLE.test(k))
+  const missingRest = missing.filter((k) => !VISIBLE.test(k))
+  // 非"可见前缀"的缺口按首段分类：tag/commands/subtitles 这类游戏里看不到，
+  // 而以 mod 命名空间开头的（如 ftbchunks.config.*）往往仍是配置界面文字 → 供"低优先残留"盘点
+  const buckets = {}
+  for (const k of missingRest) {
+    const seg = k.split('.')[0]
+    const cls = ['tag', 'commands', 'subtitles', 'jukebox_song', 'death'].includes(seg) ? seg : 'σ其它(mod前缀)'
+    buckets[cls] = (buckets[cls] ?? 0) + 1
+  }
+  const bucketText = Object.entries(buckets)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `${k}:${v}`)
+    .join(' ')
   const extra = Object.keys(zh).filter((k) => en.json[k] === undefined)
   const phBad = Object.keys(zh).filter((k) => en.json[k] !== undefined && ph(en.json[k]) !== ph(zh[k]))
   const empty = Object.keys(zh).filter((k) => zh[k] === '' && en.json[k] !== '')
@@ -138,7 +151,7 @@ for (const ns of targets) {
   console.log(
     `${ok ? '✓' : '✗'} ${ns}: en ${Object.keys(en.json).length} / 覆盖层 ${Object.keys(zh).length} / 有效中文 ${Object.keys(effZh).length}` +
       `${missingVisible.length ? ` 可见仍英文 ${missingVisible.length}(${missingVisible.slice(0, 3).join(', ')}…)` : ''}` +
-      `${missing.length - missingVisible.length > 0 ? ` 不可见缺口 ${missing.length - missingVisible.length}` : ''}` +
+      `${missing.length - missingVisible.length > 0 ? ` 不可见缺口 ${missing.length - missingVisible.length}(${bucketText})` : ''}` +
       `${extra.length ? ` 多 ${extra.length}` : ''}` +
       `${phBad.length ? ` 占位符不一致 ${phBad.length}(${phBad.slice(0, 3).join(', ')})` : ''}` +
       `${empty.length ? ` 空值 ${empty.length}` : ''}`
