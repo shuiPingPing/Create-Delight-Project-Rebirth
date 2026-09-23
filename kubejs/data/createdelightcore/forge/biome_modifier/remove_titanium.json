@@ -1,5 +1,0 @@
-{
-  "type": "forge:remove_features", 
-  "biomes": "#northstar:moon_biomes", 
-  "features": "northstar:moon_ore_titanium"
-}

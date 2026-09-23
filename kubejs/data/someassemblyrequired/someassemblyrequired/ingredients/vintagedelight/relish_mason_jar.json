@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "vintagedelight"
+    }
+  ],
+  "display_item": {
+    "count": 1,
+    "id": "someassemblyrequired:spread",
+    "components": {
+      "someassemblyrequired:spread_color": "#6D8D0D"
+    }
+  },
+  "full_name": {
+    "translate": "some_assembly_required.ingredient.relish"
+  },
+  "item": "vintagedelight:relish_mason_jar",
+  "sound": "someassemblyrequired:block.sandwich.add_item.moist"
+}

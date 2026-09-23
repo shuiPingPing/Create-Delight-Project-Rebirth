@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "fruitsdelight"
+    }
+  ],
+  "display_item": {
+    "count": 1,
+    "id": "someassemblyrequired:spread",
+    "components": {
+      "someassemblyrequired:spread_color": "#A34C13"
+    }
+  },
+  "item": "fruitsdelight:apple_jello",
+  "sound": "someassemblyrequired:block.sandwich.add_item.moist"
+}

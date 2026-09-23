@@ -66,14 +66,6 @@
       "required": false
     },
     {
-      "id": "farmersrespite:tea_curry",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:black_cod",
-      "required": false
-    },
-    {
       "id": "mynethersdelight:dried_ghast_with_milk",
       "required": false
     },

@@ -58,10 +58,6 @@
       "required": false
     },
     {
-      "id": "bakeries:cake_roll",
-      "required": false
-    },
-    {
       "id": "bakeries:sliced_pound_cake",
       "required": false
     },
@@ -106,10 +102,6 @@
       "required": false
     },
     {
-      "id": "farmersrespite:nether_wart_sourdough",
-      "required": false
-    },
-    {
       "id": "culturaldelights:avocado_toast",
       "required": false
     },
@@ -134,7 +126,7 @@
       "required": false
     },
     {
-      "id": "fruitsdelight:jelly_bread",
+      "id": "fruitsdelight:jam_bread",
       "required": false
     },
     {
@@ -147,10 +139,6 @@
     },
     {
       "id": "bakeries:flat_croissant",
-      "required": false
-    },
-    {
-      "id": "bakeries:garlic_flavored_baguette",
       "required": false
     },
     {

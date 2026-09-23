@@ -16,25 +16,33 @@
                   "target": "createdelightcore:lunar_farside",
                   "science": 1,
                   "day": 0
-                },
-                "minecraft:custom_name": {
-                  "text": "残损的月背遥测记录",
-                  "color": "dark_purple",
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "残损的月背遥测记录",
+                "color": "dark_purple",
+                "italic": false
+              },
+              "target": "custom_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "记录着月面背后无法由望远镜直接观测的异常信号。",
+                  "color": "gray",
                   "italic": false
                 },
-                "minecraft:lore": [
-                  {
-                    "text": "记录着月面背后无法由望远镜直接观测的异常信号。",
-                    "color": "gray",
-                    "italic": false
-                  },
-                  {
-                    "text": "可在天文台中写入星图。",
-                    "color": "aqua",
-                    "italic": false
-                  }
-                ]
-              }
+                {
+                  "text": "可在天文台中写入星图。",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
             }
           ]
         }

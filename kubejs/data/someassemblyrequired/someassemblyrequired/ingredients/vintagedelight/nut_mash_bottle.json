@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "vintagedelight"
+    }
+  ],
+  "display_item": {
+    "count": 1,
+    "id": "someassemblyrequired:spread",
+    "components": {
+      "someassemblyrequired:spread_color": "#96754E"
+    }
+  },
+  "full_name": {
+    "translate": "some_assembly_required.ingredient.nut_mash"
+  },
+  "item": "vintagedelight:nut_mash_bottle",
+  "sound": "someassemblyrequired:block.sandwich.add_item.moist"
+}

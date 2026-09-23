@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "northstar:europan_subsurface_ocean",
     "alexscavesup:abyssal_chasm"
   ]
 }

@@ -2,7 +2,7 @@
   "type": "quality_food:quality_loot_modifier",
   "conditions": [
     {
-      "condition": "forge:loot_table_id",
+      "condition": "neoforge:loot_table_id",
       "loot_table_id": "createdelightcore:disabled/quality_food_loot_modifier"
     }
   ]

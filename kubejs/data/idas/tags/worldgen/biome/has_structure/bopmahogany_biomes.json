@@ -1,9 +1,4 @@
 {
   "replace": true,
-  "values": [
-    {
-      "id": "biomesoplenty:rainforest",
-      "required": false
-    }
-  ]
+  "values": []
 }

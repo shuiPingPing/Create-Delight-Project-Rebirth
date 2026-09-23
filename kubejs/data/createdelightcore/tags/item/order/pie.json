@@ -30,10 +30,6 @@
       "required": false
     },
     {
-      "id": "farmersrespite:rose_hip_pie_slice",
-      "required": false
-    },
-    {
       "id": "silentsdelight:sculk_catalyst_pie_slice",
       "required": false
     },
@@ -94,15 +90,7 @@
       "required": false
     },
     {
-      "id": "create_central_kitchen:mulberry_pie_slice",
-      "required": false
-    },
-    {
-      "id": "create_central_kitchen:pumpkin_pie_slice",
-      "required": false
-    },
-    {
-      "id": "createdelightcore:pizza_slice",
+      "id": "brewinandchewin:pizza_slice",
       "required": false
     },
     {

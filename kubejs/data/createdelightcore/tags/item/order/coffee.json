@@ -74,18 +74,6 @@
       "required": false
     },
     {
-      "id": "farmersrespite:coffee",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:long_coffee",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:strong_coffee",
-      "required": false
-    },
-    {
       "id": "bakeries:brown_sugar_latte",
       "required": false
     },

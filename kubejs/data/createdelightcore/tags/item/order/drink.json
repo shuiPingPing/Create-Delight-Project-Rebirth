@@ -38,10 +38,6 @@
       "required": false
     },
     {
-      "id": "farmersrespite:strong_hot_cocoa",
-      "required": false
-    },
-    {
       "id": "collectorsreap:pomegranate_custard",
       "required": false
     },

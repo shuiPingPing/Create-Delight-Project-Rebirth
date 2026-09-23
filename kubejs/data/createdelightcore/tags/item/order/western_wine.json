@@ -106,39 +106,11 @@
       "required": false
     },
     {
-      "id": "vinery:blazewine_pinot",
-      "required": false
-    },
-    {
-      "id": "vinery:netherite_nectar",
-      "required": false
-    },
-    {
-      "id": "vinery:ghastly_grenache",
-      "required": false
-    },
-    {
-      "id": "vinery:lava_fizz",
-      "required": false
-    },
-    {
-      "id": "vinery:nether_fizz",
-      "required": false
-    },
-    {
       "id": "fruitsdelight:bellini_cocktail",
       "required": false
     },
     {
-      "id": "farmersrespite:strong_apple_cider",
-      "required": false
-    },
-    {
       "id": "farmersdelight:apple_cider",
-      "required": false
-    },
-    {
-      "id": "farmersrespite:long_apple_cider",
       "required": false
     },
     {

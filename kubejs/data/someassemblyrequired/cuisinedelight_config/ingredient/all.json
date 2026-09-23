@@ -5,22 +5,22 @@
             "effects": [],
             "ingredient": [
                 {
-                    "item": "some_assembly_required:apple_slices"
+                    "item": "someassemblyrequired:apple_slices"
                 },
                 {
-                    "item": "some_assembly_required:chopped_beetroot"
+                    "item": "someassemblyrequired:chopped_beetroot"
                 },
                 {
-                    "item": "some_assembly_required:chopped_carrot"
+                    "item": "someassemblyrequired:chopped_carrot"
                 },
                 {
-                    "item": "some_assembly_required:chopped_golden_carrot"
+                    "item": "someassemblyrequired:chopped_golden_carrot"
                 },
                 {
-                    "item": "some_assembly_required:tomato_slices"
+                    "item": "someassemblyrequired:tomato_slices"
                 },
                 {
-                    "item": "some_assembly_required:sliced_onion"
+                    "item": "someassemblyrequired:sliced_onion"
                 }
             ],
             "max_time": 360,
@@ -42,7 +42,7 @@
             ],
             "ingredient": [
                 {
-                    "item": "some_assembly_required:golden_apple_slices"
+                    "item": "someassemblyrequired:golden_apple_slices"
                 }
             ],
             "max_time": 360,
@@ -74,7 +74,7 @@
             ],
             "ingredient": [
                 {
-                    "item": "some_assembly_required:enchanted_golden_apple_slices"
+                    "item": "someassemblyrequired:enchanted_golden_apple_slices"
                 }
             ],
             "max_time": 360,

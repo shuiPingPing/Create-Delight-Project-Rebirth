@@ -26,10 +26,6 @@
       "required": false
     },
     {
-      "id": "farmersrespite:strong_melon_juice",
-      "required": false
-    },
-    {
       "id": "crabbersdelight:sea_pickle_juice",
       "required": false
     },

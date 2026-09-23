@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createdelightcore"
+    }
+  ],
+  "display_item": {
+    "count": 1,
+    "id": "someassemblyrequired:spread",
+    "components": {
+      "someassemblyrequired:spread_color": "#F0612E"
+    }
+  },
+  "item": "createdelightcore:lush_confiture_jelly_bottle",
+  "sound": "someassemblyrequired:block.sandwich.add_item.moist"
+}

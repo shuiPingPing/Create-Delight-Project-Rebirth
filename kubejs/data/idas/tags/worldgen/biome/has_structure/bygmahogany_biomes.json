@@ -1,9 +1,4 @@
 {
   "replace": true,
-  "values": [
-    {
-      "id": "byg:tropical_rainforest",
-      "required": false
-    }
-  ]
+  "values": []
 }

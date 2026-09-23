@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ends_delight"
+    }
+  ],
+  "display_item": {
+    "count": 1,
+    "id": "someassemblyrequired:spread",
+    "components": {
+      "someassemblyrequired:spread_color": "#883787"
+    }
+  },
+  "item": "ends_delight:chorus_sauce",
+  "sound": "someassemblyrequired:block.sandwich.add_item.moist"
+}

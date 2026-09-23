@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "the_bumblezone"
+    }
+  ],
+  "display_item": {
+    "count": 1,
+    "id": "someassemblyrequired:spread",
+    "components": {
+      "someassemblyrequired:spread_color": "#AE32DB"
+    }
+  },
+  "item": "the_bumblezone:royal_jelly_bottle",
+  "sound": "someassemblyrequired:block.sandwich.add_item.moist"
+}

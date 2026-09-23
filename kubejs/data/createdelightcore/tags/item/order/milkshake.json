@@ -50,18 +50,6 @@
       "required": false
     },
     {
-      "id": "seasonals:pumpkin_milkshake",
-      "required": false
-    },
-    {
-      "id": "seasonals:sweet_berry_milkshake",
-      "required": false
-    },
-    {
-      "id": "seasonals:beetroot_milkshake",
-      "required": false
-    },
-    {
       "id": "fruitsdelight:mango_milkshake",
       "required": false
     }

@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "farmersrespite:green_tea_cookie",
-      "required": false
-    },
-    {
       "id": "farmersdelight:honey_cookie",
       "required": false
     },

@@ -14,10 +14,6 @@
       "required": false
     },
     {
-      "id": "farmersrespite:coffee_cake_slice",
-      "required": false
-    },
-    {
       "id": "mynethersdelight:magma_cake_slice",
       "required": false
     },
@@ -50,55 +46,11 @@
       "required": false
     },
     {
-      "id": "seasonals:pumpkin_cake_slice",
-      "required": false
-    },
-    {
-      "id": "seasonals:sweet_berry_cake_slice",
-      "required": false
-    },
-    {
-      "id": "seasonals:beetroot_cake_slice",
-      "required": false
-    },
-    {
       "id": "collectorsreap:lime_cake_slice",
       "required": false
     },
     {
       "id": "collectorsreap:pomegranate_cake_slice",
-      "required": false
-    },
-    {
-      "id": "create_central_kitchen:honey_cake_slice",
-      "required": false
-    },
-    {
-      "id": "seasonals:red_velvet_cupcake",
-      "required": false
-    },
-    {
-      "id": "create_central_kitchen:aloe_cake_slice",
-      "required": false
-    },
-    {
-      "id": "create_central_kitchen:chocolate_cake_slice",
-      "required": false
-    },
-    {
-      "id": "create_central_kitchen:passion_fruit_cake_slice",
-      "required": false
-    },
-    {
-      "id": "create_central_kitchen:pumpkin_cake_slice",
-      "required": false
-    },
-    {
-      "id": "create_central_kitchen:sweet_berry_cake_slice",
-      "required": false
-    },
-    {
-      "id": "create_central_kitchen:yucca_cake_slice",
       "required": false
     },
     {
@@ -115,10 +67,6 @@
     },
     {
       "id": "bakeries:cream_cake_cube",
-      "required": false
-    },
-    {
-      "id": "bakeries:yuntui_mooncake",
       "required": false
     }
   ]

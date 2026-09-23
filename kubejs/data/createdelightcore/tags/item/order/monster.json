@@ -138,10 +138,6 @@
       "required": false
     },
     {
-      "id": "dungeonsdelight:ominous_omelette",
-      "required": false
-    },
-    {
       "id": "dungeonsdelight:terrine_loaf",
       "required": false
     },
@@ -227,10 +223,6 @@
     },
     {
       "id": "dungeonsdelight:poisonous_poutine",
-      "required": false
-    },
-    {
-      "id": "dungeonsdelight:glow_berry_gelatin",
       "required": false
     },
     {
