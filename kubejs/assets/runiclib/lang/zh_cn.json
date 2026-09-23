@@ -1,6 +1,6 @@
 {
   "death.attack.runiclib.creative_shock": "%1$s的创造力被彻底抽干了",
-  "death.attack.runiclib.creative_shock.player": "%2$s将%1$s的创造力榨取得一干二净",
+  "death.attack.runiclib.creative_shock.player": "%2$s将%2$s的创造力榨取得一干二净",
   "death.attack.runiclib.retaliation": "%1$s承受不住反噬之力",
   "death.attack.runiclib.retaliation.player": "%1$s在攻击%2$s时遭到强烈反噬",
   "death.attack.runiclib.venom": "%1$s的重要器官被剧毒侵蚀",

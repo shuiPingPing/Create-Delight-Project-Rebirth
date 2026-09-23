@@ -17,7 +17,7 @@
   "sodium.options.attack_indicator.tooltip": "控制攻击指示器在屏幕上的显示位置。",
   "sodium.options.autosave_indicator.tooltip": "如果启用，当游戏将世界保存到硬盘时，将显示一个提示。",
   "sodium.options.biome_blend.tooltip": "控制对生物群落进行采样以进行方块着色的范围。较高的值会大大增加加载区块所需的时间，但画质提升会更少。",
-  "sodium.options.biome_blend.value": "%s方块",
+  "sodium.options.biome_blend.value": "%sx%s 方块",
   "sodium.options.brightness.tooltip": "控制游戏的亮度（伽玛值）。",
   "sodium.options.buttons.apply": "应用",
   "sodium.options.buttons.donate": "支持钠！",

@@ -115,7 +115,7 @@
     "northstar.gui.rocket_waypoint.added_waypoint": "航点已成功加入星图。",
     "northstar.gui.rocket_waypoint.max_waypoints": "无法向此星图加入更多航点。",
     "northstar.gui.space_atlas.unknown_dimension": "未知维度",
-    "northstar.gui.space_atlas.waypoint_tooltip": "%2$s上的%s\n点击重命名",
+    "northstar.gui.space_atlas.waypoint_tooltip": "%s 位于 %s\n点击重命名",
     "northstar.gui.telescope.can_be_landed": "可以着陆。",
     "northstar.gui.telescope.cannot_be_landed": "无法着陆。",
     "northstar.gui.telescope.hold_for_reading": "按住以打印天文观测记录",
@@ -169,7 +169,7 @@
     "northstar.planets.venus.name": "金星",
     "northstar.recipe.astronomy_table": "天文台",
     "northstar.recipe.atmospheric_concentrator": "大气收集器",
-    "northstar.recipe.atmospheric_concentrator.rate": "以 %2$s 收集 %1$s",
+    "northstar.recipe.atmospheric_concentrator.rate": "以 %s 收集（需 %s）",
     "northstar.recipe.heat_shielding": "隔热防护",
     "northstar.recipe.oxygen_filler": "氧气填充",
     "stat.northstar.rocket_travels": "火箭飞行次数"

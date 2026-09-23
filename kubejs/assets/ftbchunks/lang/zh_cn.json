@@ -153,7 +153,7 @@
   "ftbteamsconfig.ftbchunks.allow_explosions": "允许爆炸破坏",
   "ftbteamsconfig.ftbchunks.allow_explosions.tooltip": "是否允许爆炸破坏领地内方块",
   "ftbteamsconfig.ftbchunks.allow_pvp": "允许PVP战斗",
-  "ftbteamsconfig.ftbchunks.allow_pvp.tooltip": "是否允许在领地内进行玩家对战\n需服务器设置支持",
+  "ftbteamsconfig.ftbchunks.allow_pvp.tooltip": "是否允许在领地内进行玩家对战\n服务器配置项 'Allow PvP Combat' 必须设为 'per_team' 才能生效\n不保证能防御 100%% 的间接攻击；需要伤害来源能归属到玩家",
   "ftbteamsconfig.ftbchunks.allow_mob_griefing": "允许生物破坏",
   "ftbteamsconfig.ftbchunks.allow_mob_griefing.tooltip": "是否允许末影人等生物破坏领地",
   "ftbteamsconfig.ftbchunks.block_edit_and_interact_mode": "方块编辑/交互模式",

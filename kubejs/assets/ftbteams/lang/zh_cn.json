@@ -60,7 +60,7 @@
   "ftbteams.not_member": "%s不是“%s”的成员！",
   "ftbteams.not_officer": "%s不是“%s”的管理者！",
   "ftbteams.owner_cant_leave": "你必须在退出之前转让队伍的所有权！",
-  "ftbteams.party_api_only": "在这个整合包中，你不能直接创建队伍！",
+  "ftbteams.party_api_only": "在这个整合包中，你不能直接创建队伍！\n%s",
   "ftbteams.player_already_in_party": "%s已经在一个团队里了！",
   "ftbteams.privacy_mode.allies": "盟友",
   "ftbteams.privacy_mode.private": "私有",
