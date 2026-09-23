@@ -13,6 +13,9 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_cable',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        // [ponder-camera] 按结构尺寸适配（5x4x5，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 5);
+        scene.scaleSceneView(0.942);
         scene.showBasePlate();
         scene.idle(20);
         scene.world.showSection([0, 1, 0, 4, 1, 1], Direction.DOWN);
@@ -38,6 +41,9 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_small_cable',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        // [ponder-camera] 按结构尺寸适配（5x4x5，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 5);
+        scene.scaleSceneView(0.942);
         scene.showBasePlate();
         scene.idle(20);
         scene.world.showSection([0, 1, 0], Direction.DOWN);
@@ -65,7 +71,10 @@ Ponder.registry((event) => {
 
     (builder, util) => {
       let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-      scene.scaleSceneView(0.833);
+      // [ponder-camera] 按结构尺寸适配（9x4x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+      scene.configureBasePlate(0, 0, 9);
+      scene.scaleSceneView(0.775);
+      scene.showBasePlate();
       scene.world.showSection([0, 0, 0, 9, 0, 9], Direction.UP);
       scene.idle(20);
       scene.world.showSection([0, 1, 0, 9, 1, 9], Direction.DOWN);

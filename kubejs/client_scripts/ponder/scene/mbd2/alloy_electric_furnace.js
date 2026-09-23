@@ -7,9 +7,11 @@ Ponder.registry((e) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.833);
+        // [ponder-camera] 按结构尺寸适配（9x9x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 9);
+        scene.scaleSceneView(0.775);
+        scene.setSceneOffsetY(-1);
         scene.showBasePlate();
-        scene.scaleSceneView(0.8);
         scene.idle(20);
         scene.text(40, '先让我们快速的搭建一下基础结构').attachKeyFrame();
         scene.idle(40);
@@ -105,7 +107,10 @@ Ponder.registry((e) => {
       'createdelightcore:ponder_alloy_electric_furnace_use',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.75);
+        // [ponder-camera] 按结构尺寸适配（10x10x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 10);
+        scene.scaleSceneView(0.733);
+        scene.setSceneOffsetY(-1);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '现在让我们来学习一下如何使用合金电炉').attachKeyFrame();

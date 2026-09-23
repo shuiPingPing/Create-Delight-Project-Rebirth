@@ -7,7 +7,11 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_me_controller',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.521);
+        // [ponder-camera] 按结构尺寸适配（9x18x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 9);
+        scene.scaleSceneView(0.55);
+        scene.setSceneOffsetY(-3);
+        scene.showBasePlate();
         scene.world.showSection([0, 0, 0, 9, 0, 9], Direction.UP);
         scene.world.setBlocks([8, 1, 1], 'ae2:controller', false);
         scene.idle(20);

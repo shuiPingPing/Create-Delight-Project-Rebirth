@@ -6,6 +6,9 @@ Ponder.registry((event) => {
 
     (builder, util) => {
       let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+      // [ponder-camera] 按结构尺寸适配（5x4x5，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+      scene.configureBasePlate(0, 0, 5);
+      scene.scaleSceneView(0.942);
       scene.showBasePlate();
       scene.idle(20);
       scene.world.showSection([0, 1, 0, 3, 1, 0], Direction.DOWN);

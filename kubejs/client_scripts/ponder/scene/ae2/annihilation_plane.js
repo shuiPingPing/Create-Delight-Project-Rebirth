@@ -7,6 +7,9 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_annihilation_plane',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        // [ponder-camera] 按结构尺寸适配（6x4x6，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 6);
+        scene.scaleSceneView(0.9);
         scene.showBasePlate();
         scene.idle(20);
         scene.world.showSection([2, 1, 1, 3, 1, 2], Direction.DOWN);
@@ -44,6 +47,9 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        // [ponder-camera] 按结构尺寸适配（6x4x6，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 6);
+        scene.scaleSceneView(0.9);
         scene.showBasePlate();
         scene.world.showSection([0, 1, 0, 3, 1, 2], Direction.DOWN);
         scene.world.showSection([2, 2, 2], Direction.DOWN);

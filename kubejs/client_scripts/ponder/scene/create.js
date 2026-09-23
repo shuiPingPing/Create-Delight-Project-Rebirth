@@ -8,9 +8,10 @@ Ponder.registry((event) => {
 
     (builder, util) => {
       let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+      // [ponder-camera] 按结构尺寸适配（6x6x4，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+      scene.configureBasePlate(0, 0, 6);
+      scene.scaleSceneView(0.9);
       scene.showBasePlate();
-
-      // 设置转速(不设置默认256)
       PonderUtil.setKineticSpeed(scene, util.select.everywhere(), 64);
       PonderUtil.setKineticSpeed(scene, [1, 0, 0], -64);
 

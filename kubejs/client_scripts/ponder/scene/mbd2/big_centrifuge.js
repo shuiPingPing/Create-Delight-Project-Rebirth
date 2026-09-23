@@ -8,7 +8,10 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.833);
+        // [ponder-camera] 按结构尺寸适配（9x8x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 9);
+        scene.scaleSceneView(0.775);
+        scene.setSceneOffsetY(-1);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '先让我们快速的搭建一下基础结构').attachKeyFrame();
@@ -215,7 +218,10 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.75);
+        // [ponder-camera] 按结构尺寸适配（10x8x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 10);
+        scene.scaleSceneView(0.733);
+        scene.setSceneOffsetY(-1);
         scene.showBasePlate();
         scene.idle(20);
         scene.text(40, '现在让我们来学习一下如何使用大型离心机').attachKeyFrame();

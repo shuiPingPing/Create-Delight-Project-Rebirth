@@ -8,7 +8,10 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.938);
+        // [ponder-camera] 按结构尺寸适配（7x4x8，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 8);
+        scene.scaleSceneView(0.817);
+        scene.showBasePlate();
         scene.world.showSection([0, 0, 0, 7, 0, 7], Direction.UP);
         scene.showBasePlate();
         scene.idle(10);
@@ -68,7 +71,10 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.833);
+        // [ponder-camera] 按结构尺寸适配（9x4x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 9);
+        scene.scaleSceneView(0.775);
+        scene.showBasePlate();
         scene.world.showSection([1, 0, 0, 8, 0, 8], Direction.UP);
         scene.idle(20);
         scene.world.showSection([1, 1, 0, 1, 1, 3], Direction.DOWN);
@@ -138,6 +144,9 @@ Ponder.registry((event) => {
 
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        // [ponder-camera] 按结构尺寸适配（6x4x6，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 6);
+        scene.scaleSceneView(0.9);
         scene.showBasePlate();
         scene.idle(20);
         scene.world.showSection([1, 1, 0, 4, 1, 1], Direction.DOWN);

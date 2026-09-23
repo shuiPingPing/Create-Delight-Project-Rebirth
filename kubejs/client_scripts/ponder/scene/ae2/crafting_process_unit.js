@@ -7,7 +7,10 @@ Ponder.registry((event) => {
       'createdelightcore:ponder_crafting_processing_unit',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.833);
+        // [ponder-camera] 按结构尺寸适配（9x4x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 9);
+        scene.scaleSceneView(0.775);
+        scene.showBasePlate();
         scene.world.showSection([0, 0, 0, 8, 0, 8], Direction.DOWN);
         scene.idle(20);
         scene.text(40, 'CPU的搭建有一定的规则……');

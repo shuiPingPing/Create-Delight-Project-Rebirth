@@ -6,7 +6,10 @@ Ponder.registry((e) => {
       'createdelightcore:ponder_io_port',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
-        scene.scaleSceneView(0.833);
+        // [ponder-camera] 按结构尺寸适配（9x4x9，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 9);
+        scene.scaleSceneView(0.775);
+        scene.showBasePlate();
         scene.world.showSection([0, 0, 0, 9, 0, 9], Direction.UP);
         scene.idle(20);
         scene.world.showSection([3, 1, 4, 5, 1, 4], Direction.DOWN);
@@ -39,6 +42,9 @@ Ponder.registry((e) => {
       'createdelightcore:ponder_io_port_output',
       (builder, util) => {
         let scene = new CDClientJavaClasses.$CreateSceneBuilder(builder);
+        // [ponder-camera] 按结构尺寸适配（5x4x5，参考 Create 的 configureBasePlate/scaleSceneView/setSceneOffsetY 用法）
+        scene.configureBasePlate(0, 0, 5);
+        scene.scaleSceneView(0.942);
         scene.showBasePlate();
         scene.idle(20);
         scene.world.showSection([1, 1, 4, 3, 1, 4], Direction.DOWN);
