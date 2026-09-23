@@ -1,0 +1,11 @@
+{
+  "item.idas.music_disc_slither": "音乐唱片",
+  "item.idas.music_disc_slither.desc": "Cama - Slither",
+  "item.idas.music_disc_calidum": "音乐唱片",
+  "item.idas.music_disc_calidum.desc": "Cama - calidum",
+  "item.idas.disc_fragment_slither.desc": "唱片碎片 Slither",
+  "item.idas.disc_fragment_slither": "唱片残片",
+  "jukebox_song.idas.slither": "Cama - Slither",
+  "jukebox_song.idas.calidum": "Cama - calidum",
+  "itemGroup.idas": "IDAS"
+}

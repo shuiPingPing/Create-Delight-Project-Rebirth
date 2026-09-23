@@ -1,0 +1,10 @@
+{
+  "force_group.stickywheels.normal_adhesion": "法向附着力",
+  "force_group.stickywheels.side_friction": "侧向摩擦力",
+  "force_group.stickywheels.rolling_resistance": "滚动阻力",
+  "force_group.stickywheels.sticky_forces": "黏性",
+  "item.offroad.sticky_small_tire": "小型黏性轮胎",
+  "item.offroad.sticky_tire": "黏性轮胎",
+  "item.offroad.sticky_large_tire": "大型黏性轮胎",
+  "item.offroad.sticky_monstrous_tire": "巨型黏性轮胎"
+}

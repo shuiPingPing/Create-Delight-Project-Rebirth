@@ -1,0 +1,16 @@
+{
+  "block.create_lnl.contraption_lift": "载具升降机",
+  "block.create_lnl.thruster": "推进器",
+  "block.create_lnl.thruster_structure": "推进器",
+  "block.create_lnl.wheel": "轮子",
+  "create_lnl.keyinfo.c_lift": "顺时针旋转升降机上的载具",
+  "create_lnl.keyinfo.cc_lift": "逆时针旋转载具升降机",
+  "create_lnl.keyinfo.lower_lift": "降低你的载具升降机",
+  "create_lnl.keyinfo.raise_lift": "升高你的载具升降机",
+  "create_lnl.simulated_section.create_lnl": "Lift n' Load",
+  "item.create_lnl.large_slime_tire": "大型黏液轮胎",
+  "item.create_lnl.monstrous_slime_tire": "巨型黏液轮胎",
+  "item.create_lnl.physic_welder": "物理焊接器",
+  "item.create_lnl.slime_tire": "黏液轮胎",
+  "item.create_lnl.small_slime_tire": "小型黏液轮胎"
+}

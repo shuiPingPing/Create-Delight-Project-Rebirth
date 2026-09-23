@@ -1,0 +1,19 @@
+{
+  "config.fragmentum.anyReloadWrapper": "%s\n\n§6⚠ 此选项需要重新加载世界或执行 /reload 命令才能生效！",
+  "config.fragmentum.worldReloadWrapper": "%s\n\n§6⚠ 此选项需要重新加载世界才能生效！",
+  "config.fragmentum.format.percentage": "%s%%",
+  "config.fragmentum.format.seconds": "%s 秒",
+  "config.fragmentum.format.minutes": "%s 分钟",
+  "config.fragmentum.format.blocks": "%s 方块",
+  "config.fragmentum.format.chunks": "%s 区块",
+  "config.fragmentum.format.potency.0": "I",
+  "config.fragmentum.format.potency.1": "II",
+  "config.fragmentum.format.potency.2": "III",
+  "config.fragmentum.format.potency.3": "VI",
+  "config.fragmentum.format.potency.4": "V",
+  "config.fragmentum.format.potency.5": "VI",
+  "config.fragmentum.format.potency.6": "VII",
+  "config.fragmentum.format.potency.7": "VIII",
+  "config.fragmentum.format.potency.8": "IX",
+  "config.fragmentum.format.potency.9": "X"
+}

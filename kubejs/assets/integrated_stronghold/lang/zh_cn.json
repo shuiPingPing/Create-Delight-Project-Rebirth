@@ -1,0 +1,11 @@
+{
+  "item.integrated_stronghold.music_disc_sight": "唱片",
+  "item.integrated_stronghold.music_disc_sight.desc": "Cama - sight",
+  "item.integrated_stronghold.music_disc_forlorn": "唱片",
+  "item.integrated_stronghold.music_disc_forlorn.desc": "Cama - Forlorn",
+  "jukebox_song.integrated_stronghold.sight": "Cama - sight",
+  "jukebox_song.integrated_stronghold.forlorn": "Cama - Forlorn",
+  "item.integrated_stronghold.disc_fragment_sight": "唱片碎片",
+  "item.integrated_stronghold.disc_fragment_sight.desc": "唱片 - sight",
+  "itemGroup.integrated_stronghold": "Integrated Stronghold"
+}

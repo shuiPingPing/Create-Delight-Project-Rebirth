@@ -1,0 +1,12 @@
+{
+  "itemGroup.aerocopycats": "示例模组标签页",
+  "block.aerocopycats.example_block": "示例方块",
+  "item.aerocopycats.example_item": "示例物品",
+  "aerocopycats.configuration.title": "aero_copycats 配置",
+  "aerocopycats.configuration.section.aerocopycats.common.toml": "aero_copycats 配置",
+  "aerocopycats.configuration.section.aerocopycats.common.toml.title": "aero_copycats 配置",
+  "aerocopycats.configuration.items": "物品列表",
+  "aerocopycats.configuration.logDirtBlock": "记录泥土方块",
+  "aerocopycats.configuration.magicNumberIntroduction": "魔法数字文本",
+  "aerocopycats.configuration.magicNumber": "魔法数字"
+}

@@ -1,0 +1,12 @@
+{
+  "gui.charmofundying.config.xOffset.name": "水平渲染偏移",
+  "gui.charmofundying.config.xOffset.description": "在玩家身上渲染图腾时的水平偏移。",
+  "gui.charmofundying.config.yOffset.name": "垂直渲染偏移",
+  "gui.charmofundying.config.yOffset.description": "在玩家身上渲染图腾时的垂直偏移。",
+  "gui.charmofundying.config.zOffset.name": "Z 轴渲染偏移",
+  "gui.charmofundying.config.zOffset.description": "在玩家身上渲染图腾时的 Z 轴偏移。",
+  "gui.charmofundying.config.renderTotem.name": "渲染已装备的图腾",
+  "gui.charmofundying.config.renderTotem.description": "启用后，会在玩家身上渲染已装备的图腾。",
+  "trinkets.slot.charm.charm": "护符",
+  "charmofundying.networking.failed": "不死护符网络错误"
+}
