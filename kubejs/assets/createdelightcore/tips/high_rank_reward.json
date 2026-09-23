@@ -1,5 +1,6 @@
 {
-    "tip": {
-        "translate": "createdelightcore.tip.high_rank_reward"
-    }
+  "type": "tipsmod:simple",
+  "text": {
+    "translate": "createdelightcore.tip.high_rank_reward"
+  }
 }

@@ -1,5 +1,6 @@
 {
-    "tip": {
-        "translate": "createdelightcore.tip.enter_alexscavesup_dimension"
-    }
+  "type": "tipsmod:simple",
+  "text": {
+    "translate": "createdelightcore.tip.enter_alexscavesup_dimension"
+  }
 }

@@ -1,5 +1,6 @@
 {
-    "tip": {
-        "translate": "createdelightcore.tip.faucet"
-    }
+  "type": "tipsmod:simple",
+  "text": {
+    "translate": "createdelightcore.tip.faucet"
+  }
 }
