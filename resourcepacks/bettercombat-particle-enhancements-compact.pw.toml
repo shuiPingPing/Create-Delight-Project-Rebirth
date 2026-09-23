@@ -1,0 +1,8 @@
+name = "BetterCombat Particle Enhancements + Compact"
+filename = "BC Particle Enhancement (1.21.1) (1.0).zip"
+side = "client"
+
+[download]
+url = "https://edge.forgecdn.net/files/8289/109/BC%20Particle%20Enhancement%20(1.21.1)%20(1.0).zip"
+hash-format = "sha256"
+hash = "d854c851073e67c6ab0e9633326598c269bee0b287fb7095240c42d170c383e0"

@@ -1,0 +1,8 @@
+name = "Squareful"
+filename = "Squareful 方纹v3.55 for MC 1.20.2~1.21.1.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/rq4lDGdf/versions/cHMxe788/Squareful%20%E6%96%B9%E7%BA%B9v3.55%20for%20MC%201.20.2~1.21.1.zip"
+hash-format = "sha256"
+hash = "f99fab546946f93d87f950d86926414f19aa9b237e5458b4a90de98b8e400268"

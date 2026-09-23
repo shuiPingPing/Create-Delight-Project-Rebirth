@@ -1,0 +1,8 @@
+name = "Torchmaster Remaster"
+filename = "Torchmaster Remaster.zip"
+side = "client"
+
+[download]
+url = "https://edge.forgecdn.net/files/4893/379/Torchmaster%20Remaster.zip"
+hash-format = "sha256"
+hash = "443cf04aeae1a64924cba8e9a1a0851222b9257dff2c86f0b6bb5a943546461e"

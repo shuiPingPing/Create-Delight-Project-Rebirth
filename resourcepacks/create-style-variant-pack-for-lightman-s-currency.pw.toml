@@ -1,0 +1,8 @@
+name = "Create Style | Variant Pack for Lightman's Currency"
+filename = "LCVP_CreateStyle_v1.7.zip"
+side = "client"
+
+[download]
+url = "https://edge.forgecdn.net/files/6597/119/LCVP_CreateStyle_v1.7.zip"
+hash-format = "sha256"
+hash = "09cac84afd8399709ee6a646b0a5054be3f3e9ff71c619424aafde7f41de936a"

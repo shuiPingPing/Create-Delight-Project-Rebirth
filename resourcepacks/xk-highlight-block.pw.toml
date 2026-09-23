@@ -1,0 +1,8 @@
+name = "XK Highlight Block"
+filename = "XK Highlight Block.zip"
+side = "client"
+
+[download]
+url = "https://edge.forgecdn.net/files/4666/843/XK%20Highlight%20Block.zip"
+hash-format = "sha256"
+hash = "34e25cfd155d85817fe5eefd71c0db512f36f01700d65ce21b21acef749c97e0"
