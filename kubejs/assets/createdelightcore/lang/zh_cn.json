@@ -1331,5 +1331,7 @@
   "emi_group.createdelightcore.covered_cables": "包层线缆",
   "emi_group.createdelightcore.covered_dense_cables": "致密包层线缆",
   "emi_group.createdelightcore.citadelup": "Citadel Up",
-  "fluid.createdelightcore.genetic_culture": "遗传培养液"
+  "fluid.createdelightcore.genetic_culture": "遗传培养液",
+  "tetra.material.feature.dragonfire": "龙焰",
+  "tetra.material.feature.chillingfire": "霜焰"
 }

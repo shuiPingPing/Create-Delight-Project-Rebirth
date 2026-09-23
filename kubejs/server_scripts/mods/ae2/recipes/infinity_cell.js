@@ -2,7 +2,7 @@
 // 源包是单物品 expatternprovider:infinity_cell + NBT(record) 输出，1.21 一个来源一个物品，
 // 所以输出改成 createdelightcore:<流体id>_cell（与 startup_scripts/mods/ae2/eae/inf_cells.js 的注册 id 一一对应），
 // 中间物沿用 Core 自带的 createdelightcore:incomplete_infinity_cell，配方形状与源包保持一致（注液 → 4096 次）。
-if (global.hasAllMods(['ae2', 'create', 'extendedae'])) {
+if (global.hasAllMods(['ae2', 'create', 'extendedae', 'createdelightcore'])) {
   ServerEvents.recipes((event) => {
     const { create } = event.recipes;
     const id = (path) => `createdelightcore:ae2/infinity_cell/${path}`;

@@ -298,5 +298,7 @@
   "item.farmersdelight.vegetable_noodles": "蔬菜面",
   "item.farmersdelight.vegetable_soup": "蔬菜汤",
   "item.farmersdelight.wheat_dough": "发酵蛋黄面团",
-  "itemGroup.farmersdelight": "农夫乐事"
+  "itemGroup.farmersdelight": "农夫乐事",
+  "effect.farmersdelight.nourishment.0.desc": "不再消耗除回复生命以外原因的饥饿值",
+  "effect.farmersdelight.comfort.0.desc": "免疫饥饿、缓慢和虚弱效果"
 }

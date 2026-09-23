@@ -157,5 +157,7 @@
   "gui.extendedae.assembler_matrix.tooltip": "搜索样板",
   "gui.extendedae.assembler_matrix.pattern": "只接受合成样板",
   "gui.extendedae.assembler_matrix.threads": "正在进行的合成： %s",
-  "gui.extendedae.assembler_matrix.cancel": "停止所有合成并归还原材料"
+  "gui.extendedae.assembler_matrix.cancel": "停止所有合成并归还原材料",
+  "gui.extendedae.tank_empty": "空",
+  "gui.extendedae.tank_amount": "%s mb / %s mb"
 }

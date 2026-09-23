@@ -219,12 +219,10 @@ item_ids:
   </Row>
 </Column>
 
-# 创造物品元件与创作流体元件
+# 创造ME元件
 
 <Row>
-  <ItemImage id="creative_item_cell" scale="2" />
-
-  <ItemImage id="creative_fluid_cell" scale="2" />
+  <ItemImage id="creative_storage_cell" scale="2" />
 </Row>
 
-创造物品元件与创作流体元件**并不能提供无限存储空间**。它们是所[分区](cell_workbench.md)物品或流体的无限供应源和销毁池。
+创造ME元件**并不能提供无限存储空间**。它是所[分区](cell_workbench.md)物品或流体的无限供应源和销毁池。
