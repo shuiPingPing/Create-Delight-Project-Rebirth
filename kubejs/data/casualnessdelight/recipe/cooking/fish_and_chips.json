@@ -6,20 +6,21 @@
       "item": "farmersdelight:cod_slice"
     },
     {
-      "tag": "forge:vegetables/potato"
+      "tag": "c:crops/potato"
     },
     {
-      "tag": "forge:vegetables/potato"
+      "tag": "c:crops/potato"
     },
     {
-      "tag": "forge:dough"
+      "tag": "c:foods/dough"
     }
   ],
   "result": {
     "id": "casualnessdelight:fish_and_chips"
   },
   "container": {
-    "item": "minecraft:bowl"
+    "count": 1,
+    "id": "minecraft:bowl"
   },
   "cookingtime": 200,
   "experience": 0

@@ -24,7 +24,8 @@
     "id": "casualnessdelight:bobo_chicken"
   },
   "container": {
-    "item": "farmersdelight:tomato_sauce"
+    "count": 1,
+    "id": "farmersdelight:tomato_sauce"
   },
   "cookingtime": 200,
   "experience": 0

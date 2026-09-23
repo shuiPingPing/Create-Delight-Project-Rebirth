@@ -9,21 +9,15 @@
     },
     {
       "item": "minecraft:poppy"
-    },
-    {
-      "item": "youkaishomecoming:red_circle_danmaku"
-    },
-    {
-      "item": "youkaishomecoming:red_circle_danmaku"
     }
   ],
   "inputFluid": {
     "amount": 1000,
-    "fluid": "butchercraft:blood_fluid"
+    "id": "butchercraft:blood_fluid"
   },
   "outputFluid": {
     "amount": 1000,
-    "fluid": "youkaishomecoming:scarlet_mist"
+    "id": "youkaishomecoming:scarlet_mist"
   },
   "results": [],
   "time": 3600

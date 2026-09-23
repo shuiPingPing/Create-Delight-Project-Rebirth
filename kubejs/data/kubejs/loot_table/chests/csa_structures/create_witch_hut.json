@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "kubejs:chests/csa_shared/mixed_t2"
+          "value": "kubejs:chests/csa_shared/mixed_t2"
         }
       ]
     }

@@ -2,9 +2,12 @@
   "type": "youkaishomecoming:drying_rack",
   "category": "misc",
   "cookingtime": 9600,
-  "experience": 0.0,
+  "experience": 0,
   "ingredient": {
-    "tag": "forge:meat/raw"
+    "tag": "c:foods/raw_meat"
   },
-  "result": "brewinandchewin:jerky"
+  "result": {
+    "count": 1,
+    "id": "brewinandchewin:jerky"
+  }
 }

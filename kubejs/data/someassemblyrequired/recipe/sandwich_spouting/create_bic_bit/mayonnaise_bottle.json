@@ -1,17 +1,16 @@
 {
-  "type": "some_assembly_required:sandwich_spouting",
-  "conditions": [
+  "type": "someassemblyrequired:sandwich_spouting",
+  "fluid": {
+    "amount": 250,
+    "fluid": "create_bic_bit:mayonnaise"
+  },
+  "result": {
+    "id": "create_bic_bit:mayonnaise_bottle"
+  },
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "create_bic_bit"
     }
-  ],
-  "fluid": {
-    "amount": 250,
-    "fluid": "create_bic_bit:mayonnaise",
-    "nbt": {}
-  },
-  "result": {
-    "item": "create_bic_bit:mayonnaise_bottle"
-  }
+  ]
 }

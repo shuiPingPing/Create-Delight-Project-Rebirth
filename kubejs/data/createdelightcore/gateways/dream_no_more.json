@@ -301,7 +301,7 @@
         {
           "attribute": "minecraft:generic.attack_damage",
           "operation": "add_multiplied_total",
-          "value": 3.0
+          "value": 3
         }
       ],
       "rewards": [
@@ -346,7 +346,7 @@
         {
           "attribute": "minecraft:generic.max_health",
           "operation": "add_multiplied_total",
-          "value": 14.0
+          "value": 14
         },
         {
           "attribute": "minecraft:generic.armor",
@@ -366,7 +366,7 @@
         {
           "attribute": "minecraft:generic.attack_damage",
           "operation": "add_multiplied_total",
-          "value": -1.0
+          "value": -1
         }
       ],
       "rewards": [
@@ -383,13 +383,6 @@
             "components": {
               "gateways:gateway": "createdelightcore:dream_no_more"
             }
-          }
-        },
-        {
-          "type": "gateways:stack",
-          "stack": {
-            "count": 1,
-            "id": "createdelightcore:pale_steel_needle"
           }
         }
       ],

@@ -21,15 +21,9 @@
       "item": {
         "id": "minecraft:bone_meal"
       }
-    },
-    {
-      "item": {
-        "id": "oceanic_delight:salmon_eggs"
-      },
-      "chance": 0.5
     }
   ],
   "tool": {
-    "tag": "forge:tools/knives"
+    "tag": "c:tools/knife"
   }
 }

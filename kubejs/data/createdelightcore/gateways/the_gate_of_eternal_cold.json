@@ -30,7 +30,7 @@
         {
           "attribute": "minecraft:generic.max_health",
           "operation": "add_multiplied_total",
-          "value": 2.0
+          "value": 2
         },
         {
           "attribute": "minecraft:generic.armor",
@@ -109,7 +109,7 @@
         {
           "attribute": "minecraft:generic.max_health",
           "operation": "add_multiplied_total",
-          "value": 2.0
+          "value": 2
         },
         {
           "attribute": "minecraft:generic.armor",
@@ -192,7 +192,7 @@
         {
           "attribute": "minecraft:generic.max_health",
           "operation": "add_multiplied_total",
-          "value": 2.0
+          "value": 2
         },
         {
           "attribute": "minecraft:generic.armor",
@@ -289,7 +289,7 @@
         {
           "attribute": "minecraft:generic.max_health",
           "operation": "add_multiplied_total",
-          "value": 2.0
+          "value": 2
         },
         {
           "attribute": "minecraft:generic.armor",
@@ -417,13 +417,6 @@
         }
       ],
       "rewards": [
-        {
-          "type": "gateways:stack",
-          "stack": {
-            "count": 2,
-            "id": "dreadsteel:dreadsteel_ingot"
-          }
-        },
         {
           "type": "gateways:stack",
           "stack": {

@@ -8,23 +8,24 @@
       "item": "minecraft:beef"
     },
     {
-      "tag": "forge:pasta"
+      "tag": "c:foods/pasta"
     },
     {
-      "tag": "forge:vegetables/carrot"
+      "tag": "c:crops/carrot"
     },
     {
-      "tag": "forge:crops/cabbage"
+      "tag": "c:crops/cabbage"
     },
     {
-      "tag": "forge:vegetables/onion"
+      "tag": "c:crops/onion"
     }
   ],
   "result": {
     "id": "casualnessdelight:beef_noodles"
   },
   "container": {
-    "item": "minecraft:bowl"
+    "count": 1,
+    "id": "minecraft:bowl"
   },
   "cookingtime": 200,
   "experience": 0
