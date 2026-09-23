@@ -1,11 +1,11 @@
 {
   "conditions": [
     {
-      "type": "forge:false"
+      "type": "neoforge:false"
     }
   ],
   "result": {
-    "item": "minecraft:barrier"
+    "id": "minecraft:barrier"
   },
   "key": {
     "A": {

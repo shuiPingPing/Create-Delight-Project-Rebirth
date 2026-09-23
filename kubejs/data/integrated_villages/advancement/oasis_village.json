@@ -2,7 +2,7 @@
   "parent": "integrated_villages:integrated_villages_root",
   "display": {
     "icon": {
-      "item": "minecraft:cactus"
+      "id": "minecraft:cactus"
     },
     "title": {
       "translate": "integrated_villages.advancements.oasis_village.title"

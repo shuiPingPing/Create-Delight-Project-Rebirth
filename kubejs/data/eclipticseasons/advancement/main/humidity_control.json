@@ -34,7 +34,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "createdelightcore:sprinkler"
+      "id": "createdelightcore:sprinkler"
     },
     "show_toast": false,
     "title": {

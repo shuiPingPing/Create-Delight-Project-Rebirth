@@ -860,8 +860,8 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "youkaishomecoming:reimu_hairband",
-      "nbt": "{Damage:0}"
+      "nbt": "{Damage:0}",
+      "id": "youkaishomecoming:reimu_hairband"
     },
     "show_toast": true,
     "title": {

@@ -28,7 +28,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:pumpkin_pie"
+      "id": "minecraft:pumpkin_pie"
     },
     "show_toast": false,
     "title": {

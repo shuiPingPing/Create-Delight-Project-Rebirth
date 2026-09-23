@@ -22,7 +22,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "createdelightcore:copper_coin"
+      "id": "createdelightcore:copper_coin"
     },
     "show_toast": true,
     "title": {

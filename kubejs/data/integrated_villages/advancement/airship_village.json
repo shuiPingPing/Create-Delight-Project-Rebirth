@@ -2,7 +2,7 @@
   "parent": "integrated_villages:integrated_villages_root",
   "display": {
     "icon": {
-      "item": "create:flywheel"
+      "id": "create:flywheel"
     },
     "title": {
       "translate": "integrated_villages.advancements.airship_village.title"

@@ -28,7 +28,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:campfire"
+      "id": "minecraft:campfire"
     },
     "show_toast": false,
     "title": {

@@ -10,8 +10,10 @@
   },
   "result": [
     {
-      "item": "bakeries:sliced_toast",
-      "count": 2
+      "item": {
+        "id": "bakeries:sliced_toast",
+        "count": 2
+      }
     }
   ]
 }

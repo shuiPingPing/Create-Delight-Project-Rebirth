@@ -2,7 +2,7 @@
   "parent": "integrated_villages:integrated_villages_root",
   "display": {
     "icon": {
-      "item": "create:windmill_bearing"
+      "id": "create:windmill_bearing"
     },
     "title": {
       "translate": "integrated_villages.advancements.tavern_village.title"

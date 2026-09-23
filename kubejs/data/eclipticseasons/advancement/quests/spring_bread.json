@@ -28,7 +28,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:bread"
+      "id": "minecraft:bread"
     },
     "show_toast": false,
     "title": {

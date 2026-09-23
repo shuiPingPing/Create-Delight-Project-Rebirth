@@ -2,7 +2,7 @@
   "parent": "integrated_villages:integrated_villages_root",
   "display": {
     "icon": {
-      "item": "minecraft:oak_log"
+      "id": "minecraft:oak_log"
     },
     "title": {
       "translate": "integrated_villages.advancements.cabin_village.title"

@@ -2,7 +2,7 @@
   "parent": "integrated_villages:integrated_villages_root",
   "display": {
     "icon": {
-      "item": "minecraft:pink_petals"
+      "id": "minecraft:pink_petals"
     },
     "title": {
       "translate": "integrated_villages.advancements.minka_village.title"

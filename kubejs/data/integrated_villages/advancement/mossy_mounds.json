@@ -2,7 +2,7 @@
   "parent": "integrated_villages:integrated_villages_root",
   "display": {
     "icon": {
-      "item": "supplementaries:goblet"
+      "id": "supplementaries:goblet"
     },
     "title": {
       "translate": "integrated_villages.advancements.mossy_mounds.title"

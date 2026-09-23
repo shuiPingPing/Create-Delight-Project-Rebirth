@@ -22,8 +22,8 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "eclipticseasons:broom",
-      "nbt": "{Damage:0}"
+      "nbt": "{Damage:0}",
+      "id": "eclipticseasons:broom"
     },
     "show_toast": false,
     "title": {

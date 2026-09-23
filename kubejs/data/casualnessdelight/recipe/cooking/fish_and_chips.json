@@ -16,7 +16,7 @@
     }
   ],
   "result": {
-    "item": "casualnessdelight:fish_and_chips"
+    "id": "casualnessdelight:fish_and_chips"
   },
   "container": {
     "item": "minecraft:bowl"

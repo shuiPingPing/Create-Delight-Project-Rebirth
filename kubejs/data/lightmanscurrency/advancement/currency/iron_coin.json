@@ -22,7 +22,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "createdelightcore:iron_coin"
+      "id": "createdelightcore:iron_coin"
     },
     "show_toast": true,
     "title": {

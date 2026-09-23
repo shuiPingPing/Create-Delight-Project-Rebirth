@@ -7,8 +7,10 @@
   ],
   "result": [
     {
-      "count": 5,
-      "item": "bakeries:sliced_toast"
+      "item": {
+        "id": "bakeries:sliced_toast",
+        "count": 5
+      }
     }
   ],
   "tool": {

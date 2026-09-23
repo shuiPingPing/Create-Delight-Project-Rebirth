@@ -1,7 +1,7 @@
 {
   "conditions": [
     {
-      "type": "forge:false"
+      "type": "neoforge:false"
     }
   ],
   "type": "minecraft:crafting_shapeless",
@@ -12,6 +12,6 @@
     }
   ],
   "result": {
-    "item": "minecraft:barrier"
+    "id": "minecraft:barrier"
   }
 }
