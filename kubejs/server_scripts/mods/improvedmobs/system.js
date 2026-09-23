@@ -11,7 +11,10 @@ Difficulty.getPlayerRawValue = function (player) {
 
 Difficulty.setPlayerRawValue = function (player, number) {
   // Client.tell(number)
-  global.difficultyCache = number;
+  // 注意：KubeJS 2101 只有 startup 域能写 global（server/client 绑到 unmodifiableMap），
+  // 这里原来写的 global.difficultyCache 会抛 UnsupportedOperationException。
+  // 1.20.1 里它是给客户端 HUD（client_scripts/render/render_difficulty_gui.js）读的，
+  // 该 HUD 还没迁到 CDR1211；等迁过来时按本包惯例用 player.sendData() 做本地镜像，不要写 global。
   player.persistentData.putDouble('cdr_difficulty_level', number);
 };
 
@@ -53,9 +56,10 @@ Difficulty.getPlayerCurrentProcessValue = function (player, process) {
   else return this.tierThreshold[tier - 1];
 };
 
-PlayerEvents.loggedIn((e) => {
-  global.difficultyCache = Difficulty.getPlayerRawValue(e.player);
-});
+// 原来这里有一个 PlayerEvents.loggedIn 回调，只为把难度写进 global.difficultyCache（server 域不能写 global，
+// 每次玩家登录都会抛 UnsupportedOperationException）。玩家难度值本来就存在 persistentData 里，
+// 需要时用 Difficulty.getPlayerRawValue(player) 读即可，因此该回调整体删除；
+// 若之后要恢复客户端 HUD，用 player.sendData() 同步，不要写 global。
 
 Difficulty.tierThreshold = [0, 100, 200, 300, 450, 600];
 
