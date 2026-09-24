@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T06:16:35Z",
+  "generatedAt": "2026-09-24T06:24:35Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -482,7 +482,6 @@
       "jeed",
       "jei",
       "jei_plus_plus",
-      "justenoughthreads",
       "krypton_fnp",
       "libbamboo",
       "mcwifipnp",
@@ -891,14 +890,6 @@
       "filename": "jei-1.21.1-neoforge-19.27.0.336.jar",
       "modIds": [
         "jei"
-      ]
-    },
-    {
-      "side": "client",
-      "metadata": "mods/client/justenoughthreads.pw.toml",
-      "filename": "justenoughthreads-0.14.1+1.21.1.jar",
-      "modIds": [
-        "justenoughthreads"
       ]
     },
     {
