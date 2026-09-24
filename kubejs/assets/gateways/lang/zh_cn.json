@@ -95,5 +95,14 @@
   "createdelightcore.the_legacy_of_the_abyss": "自噬之潮",
   "createdelightcore.piercing_withering_trial": "枯萎穿刺试炼",
   "createdelightcore.dream_no_more": "不再有梦",
-  "createdelightcore.the_gate_of_eternal_cold": "永寒悚怖之门"
+  "createdelightcore.the_gate_of_eternal_cold": "永寒悚怖之门",
+  "error.gateways.no_nearby_player": "传送门崩塌了，因为附近没有玩家",
+  "error.gateways.out_of_lives": "传送门崩塌了，因为你的生命次数已用完",
+  "rule.gateways.lives": "生命次数：%s",
+  "rule.gateways.requires_nearby_player": "需要附近有玩家：%s",
+  "text.gateways.errored_gate_pearl": "未知传送门：%s",
+  "subtitle.gateways.gate_ambient": "传送门环境音",
+  "subtitle.gateways.gate_end": "传送门关闭",
+  "subtitle.gateways.gate_start": "传送门开启",
+  "subtitle.gateways.gate_warp": "传送门生成物体"
 }

@@ -10,5 +10,12 @@
   "item.cataclysm.music_disc_the_cataclysmfarer.desc": "Yuri_O - 灾变远航者",
   "effect.cataclysm.lightning_hex": "闪电咒",
   "effect.cataclysm.over_gravity": "重力过载",
-  "effect.cataclysm.dragon_wound": "龙之创伤"
+  "effect.cataclysm.dragon_wound": "龙之创伤",
+  "notice.click": "前往 MakeShip 网站",
+  "notice.link.check": "链接检查",
+  "notice.no.more": "不再显示公告",
+  "notice.no.more.text": "公告已禁用。注意，可在配置中重新启用。",
+  "notice.open.browser": "前往 MakeShip 网站",
+  "notice.qna": "你对 Cataclysm 中的焰魔毛绒玩偶感兴趣吗？",
+  "notice.yes": "是"
 }

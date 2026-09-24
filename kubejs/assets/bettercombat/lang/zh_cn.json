@@ -1,4 +1,8 @@
 {
-  "hud.bettercombat.mine_with_weapons_on" : "已§a§l开启§r 使用武器挖掘方块",
-  "hud.bettercombat.mine_with_weapons_off" : "已§a§l关闭§r 使用武器挖掘方块"
+  "hud.bettercombat.mine_with_weapons_on": "已§a§l开启§r 使用武器挖掘方块",
+  "hud.bettercombat.mine_with_weapons_off": "已§a§l关闭§r 使用武器挖掘方块",
+  "text.autoconfig.bettercombat.option.client.isShowingWeaponTrails": "显示武器挥舞拖尾",
+  "text.autoconfig.bettercombat.option.client.isShowingWeaponTrails.@Tooltip": "在所有视角下渲染攻击时的武器拖尾粒子",
+  "text.autoconfig.bettercombat.option.client.mineWithWeaponWhitelist": "武器开采白名单",
+  "text.autoconfig.bettercombat.option.client.mineWithWeaponWhitelist.@Tooltip": "拥有对应ID的武器始终可以开采方块，即使“使用武器开采”已禁用"
 }

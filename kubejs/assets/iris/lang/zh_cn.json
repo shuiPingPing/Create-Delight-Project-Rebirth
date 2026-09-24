@@ -26,5 +26,11 @@
   "options.iris.shadowDistance.disabled": "当前光影包已经设置了阴影渲染距离；你无法对其进行更改。",
   "options.iris.shadowDistance.enabled": "能够更改阴影渲染的最大距离。超出此距离的地形和实体不会渲染阴影。降低阴影渲染距离可以显著提高性能。",
   "pack.iris.list.label": "+ 拖入光影包以添加",
-  "pack.iris.select.title": "选择"
+  "pack.iris.select.title": "选择",
+  "iris.keybind.wireframe": "线框模式（仅单人游戏）",
+  "iris.load.failure.generic": "Iris 在尝试加载光影时遇到问题；请将此问题报告给 Iris 开发者。 ",
+  "iris.load.failure.shader": "光影包加载失败！请将该错误报告给光影包开发者。 ",
+  "options.iris.colorSpace": "色彩空间",
+  "iris.shaders.debug.restartNoDebug": "光影调试已启用；NeoForge 不支持 OpenGL 调试。",
+  "options.iris.colorSpace.sodium_tooltip": "将屏幕转换到的色彩空间。会叠加在光影包之上生效。如果不确定，请使用 SRGB。"
 }

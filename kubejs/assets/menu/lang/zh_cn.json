@@ -21,5 +21,7 @@
   "mine_menu.selectKey": "选择一处键位",
   "mine_menu.selectSlot": "选择一个槽位",
   "mine_menu.send": "直接发送文本",
-  "mine_menu.toggle": "切换"
+  "mine_menu.toggle": "切换",
+  "mine_menu.category": "类别",
+  "mine_menu.useItem": "使用物品"
 }

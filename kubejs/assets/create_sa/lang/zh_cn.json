@@ -133,5 +133,6 @@
   "item.create_sa.slime_helmet.description_0": "咕咕鸡",
   "item.create_sa.blazing_axe.description_0": "咕咕鸡",
   "entity.create_sa.brass_drone": "黄铜无人机",
-  "entity.create_sa.vault_module": "保险库组件"
+  "entity.create_sa.vault_module": "保险库组件",
+  "subtitles.cogs_sound": ""
 }

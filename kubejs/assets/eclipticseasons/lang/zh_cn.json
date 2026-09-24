@@ -12,5 +12,8 @@
   "advancement.eclipticseasons.winter_start": "冬季任务",
   "advancement.eclipticseasons.winter_start.desc": "准备拿起扫帚扫雪吧~",
   "advancement.eclipticseasons.humidity_control": "湿度控制",
-  "advancement.eclipticseasons.humidity_control.desc": "使用加湿器与除湿器以控制环境湿度"
+  "advancement.eclipticseasons.humidity_control.desc": "使用加湿器与除湿器以控制环境湿度",
+  "eclipticseasons.configuration.ShowSnowyBlock": "显示覆雪方块",
+  "ui.label.eclipticseasons.namespace": "命名空间",
+  "ui.label.eclipticseasons.path": "路径"
 }

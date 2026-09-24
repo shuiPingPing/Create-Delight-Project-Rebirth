@@ -172,5 +172,12 @@
   "enchantment.shieldsplus.shield_bash.desc": "使盾牌能够进行盾击。",
   "enchantment.stalwart_dungeons.thunder_strike.desc": "给予锤子召唤闪电的能力。",
   "enchdesc.activate.message": "按住Shift查看魔咒描述。",
-  "enchdesc.jei.compatible_items.title": "兼容物品"
+  "enchdesc.jei.compatible_items.title": "兼容物品",
+  "enchantment.minecraft.breach.desc": "提高对穿戴护甲的目标的攻击效果。",
+  "enchantment.minecraft.density.desc": "根据下落高度提高攻击伤害。",
+  "enchantment.minecraft.wind_burst.desc": "重击会将使用者弹回空中。",
+  "__support_betterarcheology": "https://www.curseforge.com/minecraft/mc-mods/better-archeology",
+  "__support_deeperdarker": "https://www.curseforge.com/minecraft/mc-mods/deeperdarker",
+  "__support_endlessbiomes": "https://www.curseforge.com/minecraft/mc-mods/endless-biomes",
+  "__support_stalwart_dungeons": "https://www.curseforge.com/minecraft/mc-mods/stalwart-dungeons"
 }

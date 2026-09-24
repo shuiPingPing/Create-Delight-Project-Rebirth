@@ -9,5 +9,12 @@
     "someassemblyrequired.ingredient.vinegar": "醋",
     "someassemblyrequired.ingredient.nut_milk": "坚果露",
     "someassemblyrequired.ingredient.ketchup": "番茄酱",
-    "someassemblyrequired.ingredient.mayonnaise": "蛋黄酱"
+    "someassemblyrequired.ingredient.mayonnaise": "蛋黄酱",
+    "create.item_attributes.someassemblyrequired.burger": "是汉堡",
+    "create.item_attributes.someassemblyrequired.burger.inverted": "不是汉堡",
+    "create.item_attributes.someassemblyrequired.double_decker": "是双层汉堡",
+    "create.item_attributes.someassemblyrequired.double_decker.inverted": "不是双层汉堡",
+    "create.item_attributes.someassemblyrequired.open_faced": "是开放式汉堡",
+    "create.item_attributes.someassemblyrequired.open_faced.inverted": "不是开放式汉堡",
+    "tag.item.someassemblyrequired.special_sandwich_fillings": "特殊三明治馅料"
 }
