@@ -1,8 +1,0 @@
-name = "Future Villager Trades Visible"
-filename = "futurevillagertradesvisible-0.1.0.jar"
-side = "both"
-
-[download]
-url = "https://mediafilez.forgecdn.net/files/7542/942/futurevillagertradesvisible-0.1.0.jar"
-hash-format = "sha256"
-hash = "54c031323ad6a6057ee856f6c86f9b33413499c0ffe9c3363cc63c862b70cfcd"

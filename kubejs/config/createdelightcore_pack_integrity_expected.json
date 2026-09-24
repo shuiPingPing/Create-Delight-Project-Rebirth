@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T06:01:26Z",
+  "generatedAt": "2026-09-24T06:09:51Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -253,7 +253,6 @@
       "ftbultimine",
       "ftbxmodcompat",
       "functionalstorage",
-      "futurevillagertradesvisible",
       "fzzy_config",
       "gadgetsngizmos",
       "gateways",
@@ -2546,14 +2545,6 @@
       "filename": "functionalstorage-1.21.1-1.5.8.jar",
       "modIds": [
         "functionalstorage"
-      ]
-    },
-    {
-      "side": "common",
-      "metadata": "mods/common/futurevillagertradesvisible.pw.toml",
-      "filename": "futurevillagertradesvisible-0.1.0.jar",
-      "modIds": [
-        "futurevillagertradesvisible"
       ]
     },
     {
