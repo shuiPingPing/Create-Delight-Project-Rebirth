@@ -57,7 +57,7 @@ ServerEvents.recipes((e) => {
     .shaped('fluidlogistics:mechanical_fluid_gun', ['AAB', 'AC ', 'DE '], {
       A: 'create:copper_sheet',
       B: 'create:spout',
-      C: '#forge:spring/between_500_2_1000',
+      C: '#vintageimprovements:springs',
       D: 'create_sa:hydraulic_engine',
       E: 'create:copper_casing',
     })
@@ -67,7 +67,7 @@ ServerEvents.recipes((e) => {
     .shaped('2x fluidlogistics:faucet', [' A ', 'BCB', ' D '], {
       A: 'create:copper_valve_handle',
       B: 'create:copper_sheet',
-      C: '#forge:spring/below_500',
+      C: '#vintageimprovements:small_springs',
       D: 'minecraft:dried_kelp',
     })
     .id('createdelightcore:faucet');

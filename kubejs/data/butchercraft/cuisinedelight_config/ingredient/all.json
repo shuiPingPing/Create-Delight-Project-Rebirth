@@ -206,7 +206,7 @@
             "effects": [],
             "ingredient": [
                 {
-                    "tag": "forge:offal/raw"
+                    "tag": "c:offal/raw"
                 }
             ],
             "max_time": 240,

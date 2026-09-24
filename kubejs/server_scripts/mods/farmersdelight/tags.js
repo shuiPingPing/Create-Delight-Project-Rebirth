@@ -7,36 +7,30 @@ if (global.hasMod('farmersdelight')) {
       tags.forEach((tag) => event.add(tag, items));
     };
 
-    addTags(['c:popcorn', 'forge:popcorn'], ['corn_delight:caramel_popcorn']);
+    // 1.21 的 c:mushrooms 目前只有 collectorsreap 的 portobello（还是通过 #forge:mushrooms/portobello 间接挂上的），
+    // 补上原版两种蘑菇，否则移植过来的炒蘑菇等配方（原来用 forge:mushrooms）没有可用原料。
+    addTags(['c:mushrooms'], ['minecraft:brown_mushroom', 'minecraft:red_mushroom']);
+
+    addTags(['c:popcorn'], ['corn_delight:caramel_popcorn']);
     addTags(['neapolitan:vanilla'], ['neapolitan:dried_vanilla_pods']);
     addTags(
       ['createdelightcore:cabbage_leaves'],
       ['dumplings_delight:chinese_cabbage_leaf', 'farmersdelight:cabbage_leaf']
     );
     addTags(
-      ['c:salad_ingredients/cabbage', 'forge:salad_ingredients/cabbage'],
+      ['c:salad_ingredients/cabbage'],
       ['dumplings_delight:chinese_cabbage', 'dumplings_delight:chinese_cabbage_leaf']
     );
     addTags(
-      [
-        'c:vegetables/cabbage',
-        'forge:vegetables/cabbage',
-        'c:crops/cabbage',
-        'forge:crops/cabbage',
-      ],
+      ['c:vegetables/cabbage', 'c:crops/cabbage'],
       ['dumplings_delight:chinese_cabbage', 'dumplings_delight:chinese_cabbage_leaf']
     );
     addTags(
-      [
-        'c:vegetables/eggplant',
-        'forge:vegetables/eggplant',
-        'c:crops/eggplant',
-        'forge:crops/eggplant',
-      ],
+      ['c:vegetables/eggplant', 'c:crops/eggplant'],
       ['culturaldelights:eggplant', 'culturaldelights:cut_eggplant', 'dumplings_delight:eggplant']
     );
     addTags(
-      ['c:foods/raw_meat', 'forge:meat/raw'],
+      ['c:foods/raw_meat'],
       [
         'farmersdelight:chicken_cuts',
         'farmersdelight:mutton_chops',
@@ -61,7 +55,7 @@ if (global.hasMod('farmersdelight')) {
       ]
     );
     addTags(
-      ['c:ground_meat/raw', 'forge:meat/processed/raw'],
+      ['c:ground_meat/raw'],
       [
         '#c:ground_meat/raw/beef',
         '#c:ground_meat/raw/pork',
@@ -72,7 +66,7 @@ if (global.hasMod('farmersdelight')) {
       ]
     );
     addTags(
-      ['c:ground_meat/raw/beef', 'forge:meat/processed/raw/beef'],
+      ['c:ground_meat/raw/beef'],
       [
         'alexsdelight:bison_mince',
         'farmersdelight:minced_beef',
@@ -83,7 +77,7 @@ if (global.hasMod('farmersdelight')) {
       ]
     );
     addTags(
-      ['c:ground_meat/raw/pork', 'forge:meat/processed/raw/pork'],
+      ['c:ground_meat/raw/pork'],
       [
         'butchercraft:pork_scraps',
         'butchercraft:ground_pork',
@@ -94,7 +88,7 @@ if (global.hasMod('farmersdelight')) {
       ]
     );
     addTags(
-      ['c:ground_meat/raw/chicken', 'forge:meat/processed/raw/chicken'],
+      ['c:ground_meat/raw/chicken'],
       [
         'farmersdelight:chicken_cuts',
         'butchercraft:chicken_scraps',
@@ -104,7 +98,7 @@ if (global.hasMod('farmersdelight')) {
       ]
     );
     addTags(
-      ['c:ground_meat/raw/rabbit', 'forge:meat/processed/raw/rabbit'],
+      ['c:ground_meat/raw/rabbit'],
       [
         'butchercraft:rabbit_scraps',
         'butchercraft:ground_rabbit',
@@ -113,7 +107,7 @@ if (global.hasMod('farmersdelight')) {
       ]
     );
     addTags(
-      ['c:ground_meat/raw/lamb', 'forge:meat/processed/raw/lamb'],
+      ['c:ground_meat/raw/lamb'],
       [
         'butchercraft:lamb_scraps',
         'butchercraft:ground_lamb',
@@ -122,7 +116,7 @@ if (global.hasMod('farmersdelight')) {
       ]
     );
     addTags(
-      ['c:ground_meat/raw/goat', 'forge:meat/processed/raw/goat'],
+      ['c:ground_meat/raw/goat'],
       [
         'butchercraft:goat_scraps',
         'butchercraft:ground_goat',
@@ -130,32 +124,21 @@ if (global.hasMod('farmersdelight')) {
         'butchercraft:goat_stewmeat',
       ]
     );
+    addTags(['c:foods/cooked_beef'], ['minecraft:cooked_beef', 'farmersdelight:beef_patty']);
+    addTags(['c:milk/milk_bottle'], ['vintagedelight:nut_milk_bottle']);
+    addTags(['c:cheese'], ['trailandtales_delight:cheese_slice']);
     addTags(
-      ['c:foods/cooked_beef', 'forge:beef/cooked'],
-      ['minecraft:cooked_beef', 'farmersdelight:beef_patty']
-    );
-    addTags(['c:milk/milk_bottle', 'forge:milk/milk_bottle'], ['vintagedelight:nut_milk_bottle']);
-    addTags(['c:cheese', 'forge:cheese'], ['trailandtales_delight:cheese_slice']);
-    addTags(
-      [
-        'c:crops/cucumber',
-        'c:vegetables/cucumber',
-        'forge:crops/cucumber',
-        'forge:vegetables/cucumber',
-      ],
+      ['c:crops/cucumber', 'c:vegetables/cucumber'],
       ['vintagedelight:cucumber', 'culturaldelights:cut_cucumber']
     );
+    addTags(['c:pickles'], ['culturaldelights:pickle', 'culturaldelights:cut_pickle']);
+    addTags(['c:seeds/corn'], ['culturaldelights:corn_kernels']);
     addTags(
-      ['c:pickles', 'forge:pickle'],
-      ['culturaldelights:pickle', 'culturaldelights:cut_pickle']
-    );
-    addTags(['c:seeds/corn', 'forge:seeds/corn'], ['culturaldelights:corn_kernels']);
-    addTags(
-      ['c:foods/sausage', 'forge:sausage/raw'],
+      ['c:foods/sausage'],
       ['ratatouille:raw_sausage', 'butchercraft:blood_sausage', 'dungeonsdelight:snifferwurst']
     );
     addTags(
-      ['c:foods/cooked_sausage', 'forge:sausage/cooked'],
+      ['c:foods/cooked_sausage'],
       [
         'ratatouille:sausage',
         'createdelightcore:salami',
@@ -167,6 +150,5 @@ if (global.hasMod('farmersdelight')) {
     addTags(['mynethersdelight:hot_spice'], ['vintagedelight:ghost_pepper']);
 
     event.remove('c:vegetables/ghost_pepper', existingItems(['vintagedelight:ghost_pepper']));
-    event.remove('forge:vegetables/ghost_pepper', existingItems(['vintagedelight:ghost_pepper']));
   });
 }

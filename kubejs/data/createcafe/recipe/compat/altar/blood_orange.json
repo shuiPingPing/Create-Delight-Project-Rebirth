@@ -7,7 +7,7 @@
   ],
   "type": "bloodmagic:altar",
   "input": {
-    "tag": "forge:fruits/orange"
+    "tag": "c:foods/fruits/orange"
   },
   "output": {
     "item": "createcafe:blood_orange"

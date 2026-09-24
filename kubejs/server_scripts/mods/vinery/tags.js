@@ -15,9 +15,7 @@ if (global.hasMod('vinery')) {
     const cherries = ['vinery:cherry'].filter((id) => global.itemExists(id));
 
     event.add('c:fruits/grape', grapes);
-    event.add('forge:fruits/grape', grapes);
     event.add('c:fruits/cherry', cherries);
-    event.add('forge:fruits/cherry', cherries);
 
     event.add(
       'vinery:grapevine_pot',

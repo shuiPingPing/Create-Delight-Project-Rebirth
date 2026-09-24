@@ -5,11 +5,9 @@ if (global.hasMod('youkaishomecoming')) {
       const existing = existingItems(ids);
       event.add(`c:${path}`, existing);
     };
-    const addCommonAndForge = (path, ids) => {
-      const existing = existingItems(ids);
-      event.add(`c:${path}`, existing);
-      event.add(`forge:${path}`, existing);
-    };
+    // 1.21 没有 mod 读 forge: 命名空间（common tag 全在 c:），保留原函数名以免改一堆调用点，
+    // 但不再往 forge: 里重复塞一份。
+    const addCommonAndForge = (path, ids) => addCommon(path, ids);
 
     event.removeAllTagsFrom(
       existingItems([

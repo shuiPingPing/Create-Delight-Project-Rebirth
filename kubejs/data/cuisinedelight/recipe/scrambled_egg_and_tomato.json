@@ -5,7 +5,7 @@
     {
       "bonus": 0.1,
       "ingredient": {
-        "tag": "forge:eggs"
+        "tag": "c:foods/eggs"
       },
       "max": 1.7,
       "min": 0.3,
@@ -14,7 +14,7 @@
     {
       "bonus": 0.1,
       "ingredient": {
-        "tag": "forge:vegetables/tomato"
+        "tag": "c:crops/tomato"
       },
       "max": 1.7,
       "min": 0.3,
