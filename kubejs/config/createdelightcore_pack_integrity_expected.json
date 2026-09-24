@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T03:10:19Z",
+  "generatedAt": "2026-09-24T03:32:01Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -98,6 +98,7 @@
       "comforts",
       "compat_manager",
       "conditional_mixin",
+      "configurable",
       "constructionwand",
       "copycats",
       "corn_delight",
@@ -312,6 +313,7 @@
       "mechanicals",
       "megacells",
       "melody",
+      "midnightlib",
       "minersdelight",
       "modernfix",
       "moonlight",
@@ -324,6 +326,7 @@
       "neapolitan",
       "nebulusbetterportals",
       "neobeefix",
+      "neruina",
       "netherexp",
       "netmusic",
       "nochatreports",
@@ -342,6 +345,7 @@
       "polymorph",
       "ponder",
       "portable_engine_liquid_fuel",
+      "powerfuljs",
       "prickle",
       "prism",
       "probejs",
@@ -409,6 +413,7 @@
       "trailandtales_delight",
       "trashcans",
       "travelerstitles",
+      "trueuuid",
       "txnilib",
       "uranus",
       "veil",
@@ -423,9 +428,11 @@
       "youkaishomecoming",
       "yungsapi",
       "yungsextras",
-      "zeta"
+      "zeta",
+      "zfastnoise"
     ],
     "client": [
+      "acceleratedrendering",
       "aci",
       "ae2jeiintegration",
       "ali",
@@ -439,6 +446,7 @@
       "commonnetworking",
       "configured",
       "controlling",
+      "crash_assistant",
       "create_cyber_goggles",
       "createbetterfps",
       "customskinloader",
@@ -459,12 +467,14 @@
       "fabric_rendering_data_attachment_v1",
       "fancymenu",
       "fastboot",
+      "fastrecipesearch",
       "flerovium",
       "flywheel",
       "ftbxaerocompat",
       "generalfeedback",
       "ias",
       "imblocker",
+      "immediatelyfast",
       "iris",
       "iris_shader_folder",
       "itemborders",
@@ -472,9 +482,14 @@
       "jecharacters",
       "jeed",
       "jei",
+      "jei_plus_plus",
+      "justenoughthreads",
+      "krypton_fnp",
       "libbamboo",
       "mcwifipnp",
+      "meed",
       "minemenu",
+      "modernui",
       "mousetweaks",
       "obscure_tooltips",
       "overloadedarmorbar",
@@ -489,22 +504,34 @@
       "seasonhud",
       "shouldersurfing",
       "skinlayers3d",
+      "smrb",
+      "smsn",
       "sodium",
       "sodiumextras",
       "toastcontrol",
       "transition",
       "trashslot",
       "trender",
+      "vanillin",
       "visual_keybinder",
       "world_preview",
       "xaerolib",
       "xaerominimap",
       "xaeroworldmap",
-      "yeetusexperimentus"
+      "yeetusexperimentus",
+      "zstdnet"
     ],
     "server": []
   },
   "sources": [
+    {
+      "side": "client",
+      "metadata": "mods/client/acceleratedrendering.pw.toml",
+      "filename": "acceleratedrendering-1.0.14-1.21.1-alpha.jar",
+      "modIds": [
+        "acceleratedrendering"
+      ]
+    },
     {
       "side": "client",
       "metadata": "mods/client/advanced-core-info.pw.toml",
@@ -599,6 +626,14 @@
       "filename": "Controlling-neoforge-1.21.1-19.0.5.jar",
       "modIds": [
         "controlling"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/crash-assistant.pw.toml",
+      "filename": "CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar",
+      "modIds": [
+        "crash_assistant"
       ]
     },
     {
@@ -734,6 +769,14 @@
     },
     {
       "side": "client",
+      "metadata": "mods/client/fastrecipesearch.pw.toml",
+      "filename": "fastrecipesearch-1.21.1-1.7-neoforge.jar",
+      "modIds": [
+        "fastrecipesearch"
+      ]
+    },
+    {
+      "side": "client",
       "metadata": "mods/client/flerovium.pw.toml",
       "filename": "flerovium-neoforge-1.21.1-1.1.3-all.jar",
       "modIds": [
@@ -774,6 +817,14 @@
       "filename": "IMBlocker-5.6.1-neoforge+1.20.6-1.21.8.jar",
       "modIds": [
         "imblocker"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/immediatelyfast.pw.toml",
+      "filename": "ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar",
+      "modIds": [
+        "immediatelyfast"
       ]
     },
     {
@@ -830,10 +881,34 @@
     },
     {
       "side": "client",
+      "metadata": "mods/client/jei-plus-plus.pw.toml",
+      "filename": "jei_plus_plus-1.0.5-1.21.1.jar",
+      "modIds": [
+        "jei_plus_plus"
+      ]
+    },
+    {
+      "side": "client",
       "metadata": "mods/client/jei.pw.toml",
       "filename": "jei-1.21.1-neoforge-19.27.0.336.jar",
       "modIds": [
         "jei"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/justenoughthreads.pw.toml",
+      "filename": "justenoughthreads-0.14.1+1.21.1.jar",
+      "modIds": [
+        "justenoughthreads"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/krypton-fnp.pw.toml",
+      "filename": "krypton_fnp-neoforge-1.21.1-0.2.28.1-1.21.1.jar",
+      "modIds": [
+        "krypton_fnp"
       ]
     },
     {
@@ -846,11 +921,27 @@
     },
     {
       "side": "client",
+      "metadata": "mods/client/meed.pw.toml",
+      "filename": "meed-1.21.1-8.2.0.jar",
+      "modIds": [
+        "meed"
+      ]
+    },
+    {
+      "side": "client",
       "metadata": "mods/client/minemenu.pw.toml",
       "filename": "MineMenu-neoforge-1.21-1.14.2.jar",
       "modIds": [
         "commonnetworking",
         "minemenu"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/modernui.pw.toml",
+      "filename": "ModernUI-NeoForge-1.21.1-3.13.0.1-universal.jar",
+      "modIds": [
+        "modernui"
       ]
     },
     {
@@ -963,6 +1054,22 @@
     },
     {
       "side": "client",
+      "metadata": "mods/client/smrb.pw.toml",
+      "filename": "smrb-1.0.0.jar",
+      "modIds": [
+        "smrb"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/smsn.pw.toml",
+      "filename": "smsn-neoforge-1.4.5-1.21.1.jar",
+      "modIds": [
+        "smsn"
+      ]
+    },
+    {
+      "side": "client",
       "metadata": "mods/client/sodium.pw.toml",
       "filename": "sodium-neoforge-0.8.13+mc1.21.1.jar",
       "modIds": [
@@ -995,6 +1102,15 @@
       "filename": "trashslot-neoforge-1.21.1-21.1.11.jar",
       "modIds": [
         "trashslot"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/vanillin.pw.toml",
+      "filename": "vanillin-neoforge-1.21.1-1.1.3.jar",
+      "modIds": [
+        "flywheel",
+        "vanillin"
       ]
     },
     {
@@ -1037,6 +1153,14 @@
       "filename": "yeetusexperimentus-neoforge-87.0.0.jar",
       "modIds": [
         "yeetusexperimentus"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/zstdnet.pw.toml",
+      "filename": "zstdnet-1.21.1-neoforge-1.4.2-m2.7.jar",
+      "modIds": [
+        "zstdnet"
       ]
     },
     {
@@ -1563,6 +1687,14 @@
       "modIds": [
         "comforts",
         "spectrelib"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/configurable.pw.toml",
+      "filename": "configurable-3.5.2+1.21.1-neoforge.jar",
+      "modIds": [
+        "configurable"
       ]
     },
     {
@@ -2837,6 +2969,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/midnightlib.pw.toml",
+      "filename": "midnightlib-neoforge-1.9.3+1.21.1.jar",
+      "modIds": [
+        "midnightlib"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/miners-delight-plus.pw.toml",
       "filename": "minersdelight-1.21.1-1.4.5.jar",
       "modIds": [
@@ -2959,6 +3099,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/neruina.pw.toml",
+      "filename": "neruina-3.3.3+1.21.1-neoforge.jar",
+      "modIds": [
+        "neruina"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/net-music.pw.toml",
       "filename": "netmusic-1.5.2-neoforge+mc1.21.1.jar",
       "modIds": [
@@ -3060,6 +3208,14 @@
       "filename": "portable_engine_liquid_fuel-2.0.0-neoforge-1.21.1.jar",
       "modIds": [
         "portable_engine_liquid_fuel"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/powerfuljs.pw.toml",
+      "filename": "PowerfulJS-2.4.0.jar",
+      "modIds": [
+        "powerfuljs"
       ]
     },
     {
@@ -3529,6 +3685,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/trueuuid.pw.toml",
+      "filename": "trueuuid-1.3.0-neoforge-1.21.1.jar",
+      "modIds": [
+        "trueuuid"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/txnilib.pw.toml",
       "filename": "txnilib-neoforge-1.0.24-1.21.1.jar",
       "modIds": [
@@ -3707,6 +3871,14 @@
       "filename": "Zeta-1.1-40.jar",
       "modIds": [
         "zeta"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/zfastnoise.pw.toml",
+      "filename": "zfastnoise-1.0.13+1.21.1+neoforge.jar",
+      "modIds": [
+        "zfastnoise"
       ]
     }
   ]

@@ -1,0 +1,8 @@
+name = "JEI++"
+filename = "jei_plus_plus-1.0.5-1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8870/206/jei_plus_plus-1.0.5-1.21.1.jar"
+hash-format = "sha256"
+hash = "d414154855973c5256620f35a0dae8c8c33b28ae551dc8205fbbdcab759f4d70"

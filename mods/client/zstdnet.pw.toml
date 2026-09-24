@@ -1,0 +1,8 @@
+name = "ZSTDNET"
+filename = "zstdnet-1.21.1-neoforge-1.4.2-m2.7.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Vc9GWMlk/versions/bNs1swdj/zstdnet-1.21.1-neoforge-1.4.2-m2.7.jar"
+hash-format = "sha256"
+hash = "cf6f660f7178c7993ebaf567a27aef9a5ffdf7b5e69df3c47ddb85650e8346e7"

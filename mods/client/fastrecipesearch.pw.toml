@@ -1,0 +1,8 @@
+name = "Fast Recipe Search"
+filename = "fastrecipesearch-1.21.1-1.7-neoforge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/qExiachl/versions/Fvdw6FwZ/fastrecipesearch-1.21.1-1.7-neoforge.jar"
+hash-format = "sha256"
+hash = "587035ba19f79f9374fb457f7194f899149ab6f999d42a8ee8e84d0aa5a5376a"

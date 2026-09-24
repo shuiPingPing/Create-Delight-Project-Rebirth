@@ -1,0 +1,8 @@
+name = "Save My Shaky Network"
+filename = "smsn-neoforge-1.4.5-1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8862/254/smsn-neoforge-1.4.5-1.21.1.jar"
+hash-format = "sha256"
+hash = "7e8b550baafe3546390b83a251ff777451f9a28678e2e9bbb6ca2bcb594a9200"

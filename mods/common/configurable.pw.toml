@@ -1,0 +1,8 @@
+name = "Configurable"
+filename = "configurable-3.5.2+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/lGffrQ3O/versions/8gFREgfa/configurable-3.5.2%2B1.21.1-neoforge.jar"
+hash-format = "sha256"
+hash = "735076ab03947c0fc8a588ddfbe1cce5fa94b361fbaf8cc71f2325cb747e27b0"

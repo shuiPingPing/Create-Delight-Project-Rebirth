@@ -1,0 +1,8 @@
+name = "Accelerated Rendering"
+filename = "acceleratedrendering-1.0.14-1.21.1-alpha.jar"
+side = "client"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8448/200/acceleratedrendering-1.0.14-1.21.1-alpha.jar"
+hash-format = "sha256"
+hash = "f567f7a88c241e5e4266ee1804bd89e31f4fd6faf31745ed14f4a0a0a0e199cc"

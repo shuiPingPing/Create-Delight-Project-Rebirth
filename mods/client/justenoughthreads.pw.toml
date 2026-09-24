@@ -1,0 +1,8 @@
+name = "Just Enough Threads"
+filename = "justenoughthreads-0.14.1+1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8928/917/justenoughthreads-0.14.1%2B1.21.1.jar"
+hash-format = "sha256"
+hash = "297d36fc3b007ebc01edbba801d968a1b6dc34b8144a1d1b16cf6a74cbc67a80"

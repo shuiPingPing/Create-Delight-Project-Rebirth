@@ -1,0 +1,8 @@
+name = "SaveMyRecipeBook"
+filename = "smrb-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8164/806/smrb-1.0.0.jar"
+hash-format = "sha256"
+hash = "91642737aad509ba39d66ed62eec56e7df47d76853913e4c862dca4421cf0dc1"
