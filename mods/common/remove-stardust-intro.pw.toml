@@ -1,0 +1,8 @@
+name = "Remove Stardust Labs Intro Message"
+filename = "zRemove_SDL_Intro_v1.2.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/sk4iFZGy/versions/BHr8OLOk/zRemove_SDL_Intro_v1.2.2.jar"
+hash-format = "sha256"
+hash = "7a20d74dc05270616eeb5f53f51ebf5d67b43c3a3fed7d745377ab70107641fe"

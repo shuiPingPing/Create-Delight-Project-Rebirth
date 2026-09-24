@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T03:32:01Z",
+  "generatedAt": "2026-09-24T03:39:36Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -358,6 +358,7 @@
       "railways",
       "ratatouille",
       "refurbished_furniture",
+      "remove_sdl_intro",
       "resourcefulconfig",
       "resourcefullib",
       "rhino",
@@ -3879,6 +3880,14 @@
       "filename": "zfastnoise-1.0.13+1.21.1+neoforge.jar",
       "modIds": [
         "zfastnoise"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/remove-stardust-intro.pw.toml",
+      "filename": "zRemove_SDL_Intro_v1.2.2.jar",
+      "modIds": [
+        "remove_sdl_intro"
       ]
     }
   ]
