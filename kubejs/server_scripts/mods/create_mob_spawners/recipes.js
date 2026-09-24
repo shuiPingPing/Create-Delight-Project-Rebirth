@@ -325,6 +325,11 @@ ServerEvents.recipes((e) => {
         Color: culture.color,
       },
     };
+    // 配方的 `input.ingredient` 走的是 **DataComponentPredicate**，它对 `minecraft:custom_name`
+    // 的 codec 是"字符串"而不是文本组件（2026-09-24 实测：传 {translate:…} 会报
+    // `JsonParseException: Not a string: {"translate":…}`，9 条 spawning 配方全部解析失败）。
+    // 所以判定条件里只留 custom_data（谱系数据），显示名仍然只在**产物**那一侧用组件写。
+    const cultureData = { 'minecraft:custom_data': cultureComponents['minecraft:custom_data'] };
 
     create
       .mixing(Fluid.of('createdelightcore:genetic_culture', 1000, cultureComponents), [
@@ -345,7 +350,8 @@ ServerEvents.recipes((e) => {
         ingredient: {
           type: 'neoforge:components',
           fluids: 'createdelightcore:genetic_culture',
-          components: cultureComponents,
+          components: cultureData,
+          // strict=false：只要求列出的组件匹配，产物上多出来的 custom_name 不影响判定
           strict: false,
         },
       },
