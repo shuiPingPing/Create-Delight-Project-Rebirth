@@ -386,5 +386,16 @@
   "emi_group.createdelightcore.covered_dense_cables": "Covered Dense Cables",
   "emi_group.createdelightcore.citadelup": "Citadel Up",
   "item.createdelightcore.life_matter": "Life Matter",
-  "fluid.createdelightcore.genetic_culture": "Genetic Culture"
+  "fluid.createdelightcore.genetic_culture": "Genetic Culture",
+  "emi_group.createdelightcore.card_display_oak": "Oak Card Display",
+  "emi_group.createdelightcore.card_display_spruce": "Spruce Card Display",
+  "emi_group.createdelightcore.card_display_birch": "Birch Card Display",
+  "emi_group.createdelightcore.card_display_jungle": "Jungle Card Display",
+  "emi_group.createdelightcore.card_display_acacia": "Acacia Card Display",
+  "emi_group.createdelightcore.card_display_dark_oak": "Dark Oak Card Display",
+  "emi_group.createdelightcore.card_display_mangrove": "Mangrove Card Display",
+  "emi_group.createdelightcore.card_display_cherry": "Cherry Card Display",
+  "emi_group.createdelightcore.card_display_bamboo": "Bamboo Card Display",
+  "emi_group.createdelightcore.card_display_crimson": "Crimson Card Display",
+  "emi_group.createdelightcore.card_display_warped": "Warped Card Display"
 }

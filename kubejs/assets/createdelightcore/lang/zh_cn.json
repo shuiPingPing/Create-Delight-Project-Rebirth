@@ -1333,5 +1333,16 @@
   "emi_group.createdelightcore.citadelup": "Citadel Up",
   "fluid.createdelightcore.genetic_culture": "遗传培养液",
   "tetra.material.feature.dragonfire": "龙焰",
-  "tetra.material.feature.chillingfire": "霜焰"
+  "tetra.material.feature.chillingfire": "霜焰",
+  "emi_group.createdelightcore.card_display_oak": "橡木卡片展示架",
+  "emi_group.createdelightcore.card_display_spruce": "云杉木卡片展示架",
+  "emi_group.createdelightcore.card_display_birch": "白桦木卡片展示架",
+  "emi_group.createdelightcore.card_display_jungle": "丛林木卡片展示架",
+  "emi_group.createdelightcore.card_display_acacia": "金合欢木卡片展示架",
+  "emi_group.createdelightcore.card_display_dark_oak": "深色橡木卡片展示架",
+  "emi_group.createdelightcore.card_display_mangrove": "红树林卡片展示架",
+  "emi_group.createdelightcore.card_display_cherry": "樱花木卡片展示架",
+  "emi_group.createdelightcore.card_display_bamboo": "竹卡片展示架",
+  "emi_group.createdelightcore.card_display_crimson": "绯红木卡片展示架",
+  "emi_group.createdelightcore.card_display_warped": "诡异木卡片展示架"
 }

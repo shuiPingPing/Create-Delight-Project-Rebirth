@@ -254,7 +254,23 @@ RecipeViewerEvents.fold((event) => {
   fold('arrows', '#minecraft:arrows');
   fold('canvas_signs', '#farmersdelight:canvas_signs');
   fold('cannon_boats', '#supplementaries:cannon_boats');
-  fold('card_display', '#lightmanscurrency:traders/card_display');
+  // Lightman's Currency 1.21.1 起每种木头各有 16 个染色变体，且变体与本体同名（模组只给每木一个名称键）。
+  // 整条 tag 折成一组会出现上百条同名条目，这里改为按木种分组，与脚本里其它颜色家族保持一致。
+  [
+    'oak',
+    'spruce',
+    'birch',
+    'jungle',
+    'acacia',
+    'dark_oak',
+    'mangrove',
+    'cherry',
+    'bamboo',
+    'crimson',
+    'warped',
+  ].forEach((wood) => {
+    foldIds(`card_display_${wood}`, colorSuffixIds(`lightmanscurrency:card_display_${wood}`));
+  });
   fold('cave_paintings', { blockTag: '#alexscavesup:cave_paintings' });
   fold('hanging_canvas_signs', '#farmersdelight:hanging_canvas_signs');
   fold('jelly_bean', 'alexscavesup:jelly_bean');
