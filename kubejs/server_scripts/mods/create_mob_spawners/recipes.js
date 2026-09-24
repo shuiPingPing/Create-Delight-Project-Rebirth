@@ -309,16 +309,25 @@ ServerEvents.recipes((e) => {
     const variant = `${culture.grade}/${culture.lineage}`;
     const recipeName = `${culture.grade}_${culture.lineage}_genetic_culture`;
     const stats = gradeStats[culture.grade];
-    const cultureNbt = {
-      Variant: variant,
-      Grade: culture.grade,
-      Lineage: culture.lineage,
-      Color: culture.color,
-      Name: `fluid.createdelightcore.${recipeName}`,
+    // 1.20.1 是把这些数据挂在流体 NBT 上（`Fluid.of(fluid, amount, nbt)`）。
+    // 1.21 的 FluidStack 用**数据组件**：KubeJS 的第三个参数必须是组件表，否则 Rhino 会按
+    // DataComponentMap 转换、遇到非组件键（Variant/Grade/…）直接 NPE（这就是那条
+    // `DataComponentWrapper.java#444` 报错的来源，并且会让本文件后面 9 组配方全部不注册）。
+    //   · 显示名：1.20.1 的 `Name`（翻译键）→ 1.21 的 `minecraft:custom_name`（NeoForge 的
+    //     FluidStack.getHoverName 读它；9 条谱系在 JEI/工具提示里靠它区分）
+    //   · 谱系数据：原样放进 `minecraft:custom_data`（Variant/Grade/Lineage/Color）
+    const cultureComponents = {
+      'minecraft:custom_name': { translate: `fluid.createdelightcore.${recipeName}` },
+      'minecraft:custom_data': {
+        Variant: variant,
+        Grade: culture.grade,
+        Lineage: culture.lineage,
+        Color: culture.color,
+      },
     };
 
     create
-      .mixing(Fluid.of('createdelightcore:genetic_culture', 1000, cultureNbt), [
+      .mixing(Fluid.of('createdelightcore:genetic_culture', 1000, cultureComponents), [
         `createdelightcore:${culture.grade}_genetic_seed`,
         culture.marker,
         Fluid.of('netherexp:ectoplasm', 250),
@@ -328,15 +337,23 @@ ServerEvents.recipes((e) => {
 
     e.custom({
       type: 'create_mob_spawners:spawning',
+      // 1.21 的 SpawningRecipe.input 是 SizedFluidIngredient 的**嵌套**写法
+      // （对照 mod jar 自带 data/create_mob_spawners/recipe/spawning/*.json）：
+      //   input: { amount, ingredient: { type: 'neoforge:components', fluids, components, strict } }
       input: {
         amount: stats.amount,
-        fluid: 'createdelightcore:genetic_culture',
-        nbt: cultureNbt,
+        ingredient: {
+          type: 'neoforge:components',
+          fluids: 'createdelightcore:genetic_culture',
+          components: cultureComponents,
+          strict: false,
+        },
       },
       particle_color: culture.color,
       spawn_ticks_at_max_speed: stats.ticks,
       additional_spawn_attempts: 0,
-      spawnable_entity_whitelist: culture.entities,
+      // 字段名也变了：1.20.1 的 spawnable_entity_whitelist → 1.21 的 whitelist
+      whitelist: culture.entities,
     }).id(`createdelightcore:spawning/${recipeName}`);
   });
 });
