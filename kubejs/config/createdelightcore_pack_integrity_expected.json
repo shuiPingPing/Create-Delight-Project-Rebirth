@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T06:24:35Z",
+  "generatedAt": "2026-09-24T06:30:35Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -147,7 +147,6 @@
       "createfastschematiccannon",
       "createfluidstuffs",
       "createhigherlogisticspatch",
-      "createidlx",
       "createlazytick",
       "createliquidfuel",
       "createlogisticscontrol",
@@ -2103,14 +2102,6 @@
       "filename": "createfluidstuffs-neoforge-1.2.1.jar",
       "modIds": [
         "createfluidstuffs"
-      ]
-    },
-    {
-      "side": "common",
-      "metadata": "mods/common/createidlx.pw.toml",
-      "filename": "createidlx-1.21.1-1.5.jar",
-      "modIds": [
-        "createidlx"
       ]
     },
     {
