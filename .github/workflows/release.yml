@@ -1,0 +1,216 @@
+name: 发布版本
+
+# 触发方式：
+#   1. 推 tag（v0.1.0 / v0.2.0-test 等）-> 构建四份产物，并创建「草稿」GitHub Release 挂上资产
+#   2. 手动 workflow_dispatch            -> 只构建产物（workflow artifact），不创建 Release
+# 草稿 Release 需要人工确认后发布：gh release edit <tag> --draft=false [--prerelease]
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      create_release:
+        description: 手动触发时也创建草稿 Release（默认只产出 workflow 产物）
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  DIST_DIR: dist
+
+jobs:
+  build:
+    name: 构建发布产物
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    outputs:
+      name: ${{ steps.meta.outputs.name }}
+      version: ${{ steps.meta.outputs.version }}
+      is_prerelease: ${{ steps.meta.outputs.is_prerelease }}
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: false
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 安装 bkmpw
+        run: npm install -g @bro-know-my/packwiz
+
+      - name: 读取整合包名与版本
+        id: meta
+        run: node scripts/release-meta.mjs --ref "$GITHUB_REF_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: 展开发布根目录文件
+        run: node scripts/devtool.mjs prepare-pack
+
+      - name: 环境自检
+        run: node scripts/devtool.mjs check
+
+      - name: 下载运行期模组文件
+        run: node scripts/devtool.mjs install-files-headless
+
+      - name: 校验完整性清单
+        run: |
+          node scripts/devtool.mjs generate-integrity-manifest
+          if ! git diff --exit-code -- kubejs/config/createdelightcore_pack_integrity_expected.json; then
+            echo "::error::kubejs/config/createdelightcore_pack_integrity_expected.json 与当前 mod 列表不一致；请在本地跑 devtool.bat generate-integrity-manifest 并提交后再发版"
+            exit 1
+          fi
+
+      - name: 生成模组清单
+        run: node scripts/devtool.mjs modlist
+
+      - name: 导出发布产物
+        env:
+          PACK_NAME: ${{ steps.meta.outputs.name }}
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$DIST_DIR"
+          node scripts/devtool.mjs export-client "$DIST_DIR/Client-${PACK_NAME}-${VERSION}.zip"
+          node scripts/devtool.mjs export-server "$DIST_DIR/Server-${PACK_NAME}-${VERSION}.zip"
+          node scripts/devtool.mjs export-server-installer "$DIST_DIR/ServerInstaller-${PACK_NAME}-${VERSION}.zip"
+          node scripts/devtool.mjs export-curseforge "$DIST_DIR/CurseForge-Client-${PACK_NAME}-${VERSION}.zip" client
+          ls -lh "$DIST_DIR"
+
+      - name: 收集诊断信息
+        if: always()
+        run: |
+          mkdir -p diagnostics
+          cp -f pack/pack.toml diagnostics/ 2>/dev/null || true
+          git status --short --untracked-files=all > diagnostics/git-status.txt || true
+          node -v > diagnostics/node.txt 2>&1 || true
+          npm -v >> diagnostics/node.txt 2>&1 || true
+          bkmpw --version >> diagnostics/node.txt 2>&1 || true
+
+      - name: 上传发布产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-assets
+          path: ${{ env.DIST_DIR }}/*.zip
+          if-no-files-found: error
+          compression-level: 0
+
+      - name: 上传模组清单与诊断信息
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: modlist-and-diagnostics
+          path: |
+            docs/generated/
+            diagnostics/
+          if-no-files-found: warn
+          compression-level: 0
+
+  release:
+    name: 创建草稿 Release
+    needs: build
+    if: >-
+      github.ref_type == 'tag' ||
+      (github.event_name == 'workflow_dispatch' && inputs.create_release)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: false
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 下载发布产物
+        uses: actions/download-artifact@v4
+        with:
+          name: release-assets
+          path: ${{ env.DIST_DIR }}
+
+      - name: 生成更新说明
+        env:
+          VERSION: ${{ needs.build.outputs.version }}
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            notes_ref="HEAD"
+          else
+            notes_ref="$GITHUB_REF_NAME"
+          fi
+          node scripts/release-notes.mjs --to "$notes_ref" --version "$VERSION" --repo "$GITHUB_REPOSITORY" > notes.md
+          cat notes.md
+
+      - name: 创建草稿 Release 并上传资产
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.build.outputs.version }}
+          PACK_NAME: ${{ needs.build.outputs.name }}
+          IS_PRERELEASE: ${{ needs.build.outputs.is_prerelease }}
+        run: |
+          set -euo pipefail
+          tag="$GITHUB_REF_NAME"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            tag="$VERSION"
+          fi
+
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json isDraft >/dev/null 2>&1; then
+            is_draft=$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)
+            if [ "$is_draft" != "true" ]; then
+              echo "::error::Release $tag 已公开发布，不能覆盖；请换版本号后重试"
+              exit 1
+            fi
+            echo "草稿 Release $tag 已存在，继续上传资产"
+          else
+            title="$tag"
+            prerelease_args=()
+            if [ "$IS_PRERELEASE" = "true" ]; then
+              title="$tag 测试版"
+              prerelease_args=(--prerelease)
+            else
+              title="$tag 正式版"
+            fi
+            gh release create "$tag" \
+              --repo "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" \
+              --title "$title" \
+              --notes-file notes.md \
+              --draft "${prerelease_args[@]}"
+          fi
+
+          shopt -s nullglob
+          assets=("$DIST_DIR"/*.zip)
+          if [ "${#assets[@]}" -eq 0 ]; then
+            echo "::error::没有可上传的产物"
+            exit 1
+          fi
+          for asset in "${assets[@]}"; do
+            uploaded=false
+            for attempt in 1 2 3 4 5; do
+              if timeout 3600 gh release upload "$tag" "$asset" --repo "$GITHUB_REPOSITORY" --clobber; then
+                uploaded=true
+                break
+              fi
+              echo "第 $attempt 次上传 $(basename "$asset") 失败，15 秒后重试"
+              sleep 15
+            done
+            if [ "$uploaded" != "true" ]; then
+              echo "::error::上传 $(basename "$asset") 失败"
+              exit 1
+            fi
+          done
+          echo "草稿 Release 已就绪：https://github.com/$GITHUB_REPOSITORY/releases"
