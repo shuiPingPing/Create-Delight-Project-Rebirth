@@ -1,8 +1,0 @@
-name = "PowerfulJS"
-filename = "PowerfulJS-2.4.0.jar"
-side = "both"
-
-[download]
-url = "https://mediafilez.forgecdn.net/files/7105/174/PowerfulJS-2.4.0.jar"
-hash-format = "sha256"
-hash = "408d40f68bfbf4f4dbfdabb06459e6e7df0b0a3f675458080dedc70baee1f477"
