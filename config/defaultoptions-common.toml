@@ -2,6 +2,6 @@
 #Allowed Values: PEACEFUL, EASY, NORMAL, HARD
 defaultDifficulty = "NORMAL"
 #Resource pack IDs to have enabled by default on the first run.
-defaultResourcePacks = ["file/【1.21.1】§l§n§a§oCreate Functional Storage §c§lv1.0.0.zip", "file/Squareful 方纹v3.55 for MC 1.20.2~1.21.1.zip", "file/LCVP_CreateStyle_v1.7.zip", "file/Quark Programmer Art.zip", "file/Squareful-Create_Delight_Remake.zip", "file/XK Highlight Block.zip", "file/Torchmaster Remaster.zip", "file/BC Particle Enhancement (1.21.1) (1.0).zip"]
+defaultResourcePacks = ["fabric", "generated/fragmentum_layer", "mod_resources", "netherexp:jne_retextures", "SnowySodiumStairs", "moonlight:merged_pack", "file/【1.21.1】§l§n§a§oCreate Functional Storage §c§lv1.0.0.zip", "file/Squareful 方纹v3.55 for MC 1.20.2~1.21.1.zip", "file/LCVP_CreateStyle_v1.7.zip", "file/Quark Programmer Art.zip", "file/Squareful-Create_Delight_Remake.zip", "file/XK Highlight Block.zip", "file/Torchmaster Remaster.zip", "file/BC Particle Enhancement (1.21.1) (1.0).zip"]
 #Set to true if the difficulty for new world's should be locked to the specific default. This cannot be unlocked by players without external tools! Probably a bad idea. I don't recommend. Why am I adding this option?
 lockDifficulty = false
