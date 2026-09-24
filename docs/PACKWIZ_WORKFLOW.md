@@ -150,11 +150,7 @@ roots/client/   # 鍙繘鍏ュ鎴风鍏ㄩ噺鍖呯殑瀹炰緥鏍圭�
 | `Server-<name>-<ver>.zip` | `export-server` | 寮€绠卞嵆鐢ㄦ湇鍔＄鍏ㄩ噺鍖咃紙涓嶅惈 client-only 鍐呭锛?|
 | `ServerInstaller-<name>-<ver>.zip` | `export-server-installer` | 涓嬭浇鍨嬫湇鍔＄瀹夎鍖咃紝涓嶅惈 runtime jar |
 | `ModList-<name>-<ver>.md` / `.csv` | `modlist` | 模组清单，随 Release 一起给玩家核对版本 |
-| `CurseForge-Client-<name>-<ver>.zip` | `export-curseforge <out> client` | CurseForge 格式客户端包；**需要仓库 secret `CURSEFORGE_API_KEY`**，未配置时该步骤自动跳过 |
 
-> `export-curseforge` 会为 `mods/common/create-delight-core.pw.toml` 的 `[export.curseforge] latest = true`
-> 调 CurseForge API，所以必须有 `CURSEFORGE_API_KEY`（本地导出同样要设这个环境变量）；
-> 另外三条导出与 `install-files-headless` 都不需要 key —— CDC 的 `[download]` 是 GitHub Release 直链。
 
 `build` job 鐨勬楠ら『搴忥細`prepare-pack` 鈫?`check` 鈫?`install-files-headless`锛堜笅杞借繍琛屾湡 jar锛夆啋
 `generate-integrity-manifest` 骞朵笌鎻愪氦閲岀殑 `kubejs/config/createdelightcore_pack_integrity_expected.json` 姣斿

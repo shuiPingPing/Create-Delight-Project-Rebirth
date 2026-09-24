@@ -60,12 +60,21 @@ jobs:
       - name: 环境自检
         run: node scripts/devtool.mjs check
 
+      - name: 缓存已下载的模组文件
+        uses: actions/cache@v4
+        with:
+          path: |
+            mods
+            resourcepacks
+            shaderpacks
+            tacz
+          key: packwiz-${{ runner.os }}-${{ hashFiles('mods/**/*.pw.toml', 'resourcepacks/**/*.pw.toml', 'shaderpacks/**/*.pw.toml', 'tacz/**/*.pw.toml', '.packwizignore') }}
+          restore-keys: |
+            packwiz-${{ runner.os }}-
+
       - name: 下载运行期模组文件
-        env:
-          # create-delight-core 的元数据用 [update.github] + 直链下载，不需要 key；
-          # 这里传上去是为了兼容需要 CF API 的场景（缺失时 bkmpw 会自行降级）。
-          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
-        run: node scripts/devtool.mjs install-files-headless
+        # 3 次尝试 / 每次间隔 15 秒，缓解 CurseForge 偶发限流
+        run: node scripts/devtool.mjs install-files-headless 3 15
 
       - name: 校验完整性清单
         run: |
@@ -92,24 +101,6 @@ jobs:
           cp -f docs/generated/modlist.md "$DIST_DIR/ModList-${PACK_NAME}-${VERSION}.md" 2>/dev/null || true
           cp -f docs/generated/modlist.csv "$DIST_DIR/ModList-${PACK_NAME}-${VERSION}.csv" 2>/dev/null || true
           ls -lh "$DIST_DIR"
-
-      - name: 导出 CurseForge 客户端安装包
-        # create-delight-core.pw.toml 里 [export.curseforge] latest = true 需要 CF API key；
-        # 没配 secret 时跳过这一步，Release 仍然有另外三份产物 + 模组清单。
-        if: env.CURSEFORGE_API_KEY != ''
-        env:
-          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
-          PACK_NAME: ${{ steps.meta.outputs.name }}
-          VERSION: ${{ steps.meta.outputs.version }}
-        run: |
-          set -euo pipefail
-          node scripts/devtool.mjs export-curseforge "$DIST_DIR/CurseForge-Client-${PACK_NAME}-${VERSION}.zip" client
-          ls -lh "$DIST_DIR"
-
-      - name: 未配置 CURSEFORGE_API_KEY 的提示
-        if: env.CURSEFORGE_API_KEY == ''
-        run: |
-          echo "::warning::未配置 secrets.CURSEFORGE_API_KEY，已跳过 CurseForge 客户端安装包（export-curseforge 需要它来解析 create-delight-core 的 latest）"
 
       - name: 收集诊断信息
         if: always()
@@ -198,7 +189,8 @@ jobs:
               echo "::error::Release $tag 已公开发布，不能覆盖；请换版本号后重试"
               exit 1
             fi
-            echo "草稿 Release $tag 已存在，继续上传资产"
+            echo "草稿 Release $tag 已存在，刷新发布说明后继续上传资产"
+            gh release edit "$tag" --repo "$GITHUB_REPOSITORY" --notes-file notes.md
           else
             title="$tag"
             prerelease_args=()

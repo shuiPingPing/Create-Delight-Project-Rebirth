@@ -118,7 +118,7 @@ lines.push('');
 lines.push('- `Client-*.zip`：客户端全量包，自带客户端/通用模组本体，解压到实例根目录即可。');
 lines.push('- `Server-*.zip`：开箱即用服务端全量包，模组已随包。');
 lines.push('- `ServerInstaller-*.zip`：下载型服务端安装包，解压后运行 `install-server.bat` / `install-server.sh` 按需下载。');
-lines.push('- `CurseForge-Client-*.zip`：CurseForge 格式客户端安装包，给 CurseForge 类启动器导入用。');
+lines.push('- `ModList-*.md` / `.csv`：本版本模组清单，方便核对。');
 lines.push('');
 
 if (args.repo && from) {
