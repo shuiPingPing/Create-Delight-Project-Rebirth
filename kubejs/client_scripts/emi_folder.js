@@ -227,7 +227,9 @@ const CREATED_DELIGHT_BUCKETS = [
 ];
 
 RecipeViewerEvents.fold((event) => {
-  const options = { spread: 4, color: 'rainbow' };
+  // spread = 预览卡片之间的水平像素偏移（BKMEF 里 `{ spread?: number, color?: number | string }`，
+  // 模组默认 4）。设为 0 时整组只占一张卡，不再摊成一条；成员数量在悬停提示里显示（「N 个折叠条目」）。
+  const options = { spread: 0, color: 'rainbow' };
   const fold = (key, filter) => event.fold(groupId(key), groupName(key), filter, options);
   const foldIds = (key, paths) => event.foldId(groupId(key), groupName(key), ids(paths), options);
 
