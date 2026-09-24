@@ -1,0 +1,8 @@
+name = "TaCZ JS"
+filename = "taczjs-neoforge-1.4.2+mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8075/284/taczjs-neoforge-1.4.2%2Bmc1.21.1.jar"
+hash-format = "sha256"
+hash = "534a6236fcc90d48408813743e8e63201f1fa8cd06c6a69e17b3b5e7340b4754"

@@ -1,0 +1,8 @@
+name = "Nebulus Better Portals"
+filename = "nebulusbetterportals-1.0.8-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/6435/966/nebulusbetterportals-1.0.8-neoforge-1.21.1.jar"
+hash-format = "sha256"
+hash = "c401611bdbfd1fdc0e8b07b786b3a5af3d1f9a105c7edc2103034a4f6b7978ed"

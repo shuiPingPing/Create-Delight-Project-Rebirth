@@ -1,0 +1,8 @@
+name = "Create: Bits 'n' Bobs"
+filename = "bits_n_bobs-2.3.5.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/T8bvmqVZ/versions/g9Lmjjc5/bits_n_bobs-2.3.5.jar"
+hash-format = "sha256"
+hash = "3e1647383c6ed1d629b6f20210179d5870bcbf8ba2a2a0ec58af69b53513db68"

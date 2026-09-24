@@ -1,0 +1,8 @@
+name = "Create More: Package Couriers"
+filename = "cmpackagecouriers-neoforge-2.3.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/GRqrodjM/versions/rv1JwLWn/cmpackagecouriers-neoforge-2.3.0.jar"
+hash-format = "sha256"
+hash = "76e728a765ee04a53e566eda6b302a05ff855965dcf0230cc33f3dd2c1836e8b"

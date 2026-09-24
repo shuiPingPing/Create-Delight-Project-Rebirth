@@ -1,0 +1,8 @@
+name = "Create Solar Dimension Efficiency"
+filename = "solardimensionaddon-1.1.0-1.21.jar"
+side = "both"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8194/744/solardimensionaddon-1.1.0-1.21.jar"
+hash-format = "sha256"
+hash = "fc905cc0853f0c45711fdc4b25174b20fa9ec07566a7934f13ac01ee5a99f3b3"

@@ -1,0 +1,8 @@
+name = "Integrated Cataclysm"
+filename = "integrated_cataclysm-1.0.6+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/7808/552/integrated_cataclysm-1.0.6%2B1.21.1-neoforge.jar"
+hash-format = "sha256"
+hash = "18b71fc9f2cc2541e1f63dcd5862519fc433c6d7270f397e7afd4e08c56c1f1c"

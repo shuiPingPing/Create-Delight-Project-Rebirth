@@ -1,0 +1,8 @@
+name = "DragonLib"
+filename = "dragonlib-neoforge-1.21.1-beta-3.0.28.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/sbIsGaOV/versions/x376YU9w/dragonlib-neoforge-1.21.1-beta-3.0.28.jar"
+hash-format = "sha256"
+hash = "ba127947220504d1410716e422ef6a9a387d818a922ad5fdb3be044f9f7556f7"

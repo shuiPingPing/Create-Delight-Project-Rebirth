@@ -1,0 +1,8 @@
+name = "TaCZ addon"
+filename = "taczaddon-1.1.8-fix2-1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/3Ihyt5WL/versions/mo66IMw3/taczaddon-1.1.8-fix2-1.21.1-neoforge.jar"
+hash-format = "sha256"
+hash = "96c4ef3744dd6285b945d3a08b9370abd72ec9767f921084b2cca2917dd71f63"

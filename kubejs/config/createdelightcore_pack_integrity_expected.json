@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T06:23:00Z",
+  "generatedAt": "2026-09-24T03:10:19Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -38,6 +38,7 @@
       "architectury",
       "athena",
       "attributefix",
+      "azimuth",
       "bakeries",
       "balm",
       "bcc",
@@ -48,6 +49,7 @@
       "betterwitchhuts",
       "biolith",
       "biomespy",
+      "bits_n_bobs",
       "blueprint",
       "bookshelf",
       "bountiful",
@@ -86,6 +88,8 @@
       "climbable_ropes",
       "cloth_config",
       "clumps",
+      "cmpackagecouriers",
+      "cmparallelpipes",
       "cmr",
       "cnbridge",
       "cobweb",
@@ -117,6 +121,7 @@
       "create_easier_filters",
       "create_enchantment_industry",
       "create_enhanced_schematicannon",
+      "create_factory_abstractions",
       "create_fantasizing",
       "create_integrated_farming",
       "create_jetpack",
@@ -141,12 +146,14 @@
       "createfastschematiccannon",
       "createfluidstuffs",
       "createhigherlogisticspatch",
+      "createidlx",
       "createlazytick",
       "createliquidfuel",
       "createlogisticscontrol",
       "createmetallurgy",
       "createoreexcavation",
       "createprism",
+      "createrailwaysnavigator",
       "createredstonelinkgui",
       "createsolar",
       "createstockbridge",
@@ -167,6 +174,7 @@
       "displaydelight",
       "dnd_aero_compat",
       "dndecor",
+      "dragonlib",
       "dramaticdoors",
       "dsbg",
       "dummmmmmy",
@@ -179,6 +187,7 @@
       "esl",
       "explorerscompass",
       "extendedae",
+      "extendedae_plus",
       "extra_gauges",
       "fabric_api",
       "fabric_api_base",
@@ -229,6 +238,7 @@
       "flightlib",
       "fluidlogistics",
       "flywheel",
+      "forgeconfigapiport",
       "fragmentum",
       "framework",
       "fruitsdelight",
@@ -242,6 +252,7 @@
       "ftbultimine",
       "ftbxmodcompat",
       "functionalstorage",
+      "futurevillagertradesvisible",
       "fzzy_config",
       "gadgetsngizmos",
       "gateways",
@@ -260,6 +271,7 @@
       "improvedmobs",
       "industrial_platform",
       "integrated_api",
+      "integrated_cataclysm",
       "integrated_stronghold",
       "integrated_villages",
       "integration",
@@ -310,6 +322,7 @@
       "mysterious_mountain_lib",
       "naturescompass",
       "neapolitan",
+      "nebulusbetterportals",
       "neobeefix",
       "netherexp",
       "netmusic",
@@ -360,21 +373,27 @@
       "simplehats",
       "simulated",
       "smartbrainlib",
+      "solardimensionaddon",
+      "solcarrot",
       "someassemblyrequired",
       "sophisticatedbackpacks",
       "sophisticatedbackpackscreateintegration",
       "sophisticatedcore",
       "soul_fire_d",
       "spark",
+      "sparsestructures",
       "spectrelib",
       "ssrd",
       "stickywheels",
+      "struts",
       "supermartijn642configlib",
       "supermartijn642corelib",
       "supplementaries",
       "t_and_t",
       "tacz",
       "tacz_aero_compat",
+      "taczaddon",
+      "taczjs",
       "tectonic",
       "tenshilib",
       "terralith",
@@ -444,6 +463,7 @@
       "flywheel",
       "ftbxaerocompat",
       "generalfeedback",
+      "ias",
       "imblocker",
       "iris",
       "iris_shader_folder",
@@ -476,6 +496,7 @@
       "trashslot",
       "trender",
       "visual_keybinder",
+      "world_preview",
       "xaerolib",
       "xaerominimap",
       "xaeroworldmap",
@@ -741,6 +762,14 @@
     },
     {
       "side": "client",
+      "metadata": "mods/client/in-game-account-switcher.pw.toml",
+      "filename": "IAS-9.0.7+1.21.1-neoforge.jar",
+      "modIds": [
+        "ias"
+      ]
+    },
+    {
+      "side": "client",
       "metadata": "mods/client/imblocker.pw.toml",
       "filename": "IMBlocker-5.6.1-neoforge+1.20.6-1.21.8.jar",
       "modIds": [
@@ -974,6 +1003,14 @@
       "filename": "visual_keybinder-1.21.1-0.1.13-neoforge.jar",
       "modIds": [
         "visual_keybinder"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/world-preview.pw.toml",
+      "filename": "world_preview-1.3.1.jar",
+      "modIds": [
+        "world_preview"
       ]
     },
     {
@@ -1237,6 +1274,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/azimuth.pw.toml",
+      "filename": "azimuth-1.4.9.jar",
+      "modIds": [
+        "azimuth"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/bakeries.pw.toml",
       "filename": "bakeries-1.21.1-NeoForge-1.0.4.jar",
       "modIds": [
@@ -1283,6 +1328,15 @@
       "filename": "biomespy-neoforge-1.21.1-1.3.3.jar",
       "modIds": [
         "biomespy"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/bits-n-bobs.pw.toml",
+      "filename": "bits_n_bobs-2.3.5.jar",
+      "modIds": [
+        "bits_n_bobs",
+        "sablecompanion"
       ]
     },
     {
@@ -1459,6 +1513,23 @@
       "filename": "Clumps-neoforge-1.21.1-19.0.0.1.jar",
       "modIds": [
         "clumps"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/cmpackagecouriers.pw.toml",
+      "filename": "cmpackagecouriers-neoforge-2.3.0.jar",
+      "modIds": [
+        "cmpackagecouriers",
+        "create_factory_abstractions"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/cmparallelpipes.pw.toml",
+      "filename": "cmparallelpipes-neoforge-2.0.2.jar",
+      "modIds": [
+        "cmparallelpipes"
       ]
     },
     {
@@ -1924,6 +1995,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/createidlx.pw.toml",
+      "filename": "createidlx-1.21.1-1.5.jar",
+      "modIds": [
+        "createidlx"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/create-lazytick.pw.toml",
       "filename": "CreateLazyTick-2.6.25-6.0.10-neoforge-1.21.1.jar",
       "modIds": [
@@ -1960,6 +2039,14 @@
       "filename": "createprism-1.2.2.jar",
       "modIds": [
         "createprism"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/createrailwaysnavigator.pw.toml",
+      "filename": "createrailwaysnavigator-neoforge-1.21.1-beta-0.9.1-C6.jar",
+      "modIds": [
+        "createrailwaysnavigator"
       ]
     },
     {
@@ -2094,6 +2181,16 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/dragonlib.pw.toml",
+      "filename": "dragonlib-neoforge-1.21.1-beta-3.0.28.jar",
+      "modIds": [
+        "architectury",
+        "dragonlib",
+        "forgeconfigapiport"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/dramatic-doors.pw.toml",
       "filename": "DramaticDoors-NeoQuiFab-1.21.1-3.3.2.jar",
       "modIds": [
@@ -2170,6 +2267,14 @@
       "filename": "ExplorersCompass-1.21.1-3.4.0-neoforge.jar",
       "modIds": [
         "explorerscompass"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/extendedae-plus.pw.toml",
+      "filename": "extendedae_plus-1.6.2.jar",
+      "modIds": [
+        "extendedae_plus"
       ]
     },
     {
@@ -2322,6 +2427,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/futurevillagertradesvisible.pw.toml",
+      "filename": "futurevillagertradesvisible-0.1.0.jar",
+      "modIds": [
+        "futurevillagertradesvisible"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/fzzy-config.pw.toml",
       "filename": "fzzy_config-0.7.7+1.21+neoforge.jar",
       "modIds": [
@@ -2440,6 +2553,14 @@
       "filename": "integrated_api-neoforge-1.21.1-1.8.2.jar",
       "modIds": [
         "integrated_api"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/integrated-cataclysm.pw.toml",
+      "filename": "integrated_cataclysm-1.0.6+1.21.1-neoforge.jar",
+      "modIds": [
+        "integrated_cataclysm"
       ]
     },
     {
@@ -2797,6 +2918,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/nebulusbetterportals.pw.toml",
+      "filename": "nebulusbetterportals-1.0.8-neoforge-1.21.1.jar",
+      "modIds": [
+        "nebulusbetterportals"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/neo-bee-fix.pw.toml",
       "filename": "neobeefix-1.21.1-2.0.1.jar",
       "modIds": [
@@ -3130,6 +3259,22 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/solardimensionaddon.pw.toml",
+      "filename": "solardimensionaddon-1.1.0-1.21.jar",
+      "modIds": [
+        "solardimensionaddon"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/solcarrot.pw.toml",
+      "filename": "solcarrot-1.21.1-1.16.6.jar",
+      "modIds": [
+        "solcarrot"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/some-assembly-required.pw.toml",
       "filename": "someassemblyrequired-5.2.8.jar",
       "modIds": [
@@ -3178,6 +3323,14 @@
     },
     {
       "side": "common",
+      "metadata": "mods/common/sparsestructures.pw.toml",
+      "filename": "sparsestructures-neoforge-1.21.1-3.0.jar",
+      "modIds": [
+        "sparsestructures"
+      ]
+    },
+    {
+      "side": "common",
       "metadata": "mods/common/ssrd.pw.toml",
       "filename": "SSRD-1.8.6-1.21.1.jar",
       "modIds": [
@@ -3190,6 +3343,15 @@
       "filename": "stickywheels-1.21.1-0.0.3.jar",
       "modIds": [
         "stickywheels"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/struts.pw.toml",
+      "filename": "struts-1.3.1.jar",
+      "modIds": [
+        "sablecompanion",
+        "struts"
       ]
     },
     {
@@ -3240,6 +3402,22 @@
       "modIds": [
         "simplebedrockmodel",
         "tacz"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/taczaddon.pw.toml",
+      "filename": "taczaddon-1.1.8-fix2-1.21.1-neoforge.jar",
+      "modIds": [
+        "taczaddon"
+      ]
+    },
+    {
+      "side": "common",
+      "metadata": "mods/common/taczjs.pw.toml",
+      "filename": "taczjs-neoforge-1.4.2+mc1.21.1.jar",
+      "modIds": [
+        "taczjs"
       ]
     },
     {

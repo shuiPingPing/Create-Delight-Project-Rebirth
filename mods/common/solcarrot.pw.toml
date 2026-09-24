@@ -1,0 +1,8 @@
+name = "Spice of Life: Carrot Edition"
+filename = "solcarrot-1.21.1-1.16.6.jar"
+side = "both"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/7374/98/solcarrot-1.21.1-1.16.6.jar"
+hash-format = "sha256"
+hash = "ae3e73a08c8373fbee639b2feaf21c2e08caf9e4a44f8dfa610f44a5143f2fd1"

@@ -1,0 +1,8 @@
+name = "Create: Improved Display Link"
+filename = "createidlx-1.21.1-1.5.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/n0AbAYWj/versions/lY9vVUXi/createidlx-1.21.1-1.5.jar"
+hash-format = "sha256"
+hash = "fa88e93f8f53f55c3f2b4014b32f965bb8ccbeeec7071d0c615b1749510d5f52"

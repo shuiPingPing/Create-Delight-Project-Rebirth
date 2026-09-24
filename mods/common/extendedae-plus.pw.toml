@@ -1,0 +1,8 @@
+name = "ExtendedAE-Plus"
+filename = "extendedae_plus-1.6.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/xr109llC/versions/o8U8Ekro/extendedae_plus-1.6.2.jar"
+hash-format = "sha256"
+hash = "237122901f8340c2217924c230229f62f44a1d4613ad21a25957d2e7994c911a"
