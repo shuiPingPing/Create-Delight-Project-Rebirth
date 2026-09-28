@@ -94,7 +94,7 @@
 	# Default: 30
 	# Range: > 0
 	sorrowsquishedMaxDamage = 30
-	#Chance for sorrowsquashes to grow from a sorrowsquash stem 
+	#Chance for sorrowsquashes to grow from a sorrowsquash stem
 	#If sorrowsquash fails to grow then the stem will attempt to grow upwards instead
 	# Default: 0.2
 	# Range: 0.0 ~ 1.0
@@ -121,7 +121,7 @@
 	# Default: 10
 	# Range: > 0
 	shotgunBarrelBullets = 10
-	#Normally frogmists can only be broken when other frogmist or a hoe is held in hand 
+	#Normally frogmists can only be broken when other frogmist or a hoe is held in hand
 	#This config makes it breakable with anything regardless of what's in your hand
 	canAnythingBreakFrogmist = false
 	#Duration of unbounded speed when it is inflicted from soul swirls
@@ -154,7 +154,7 @@
 	immunityConsumption = 600
 	#Weather the amount of duration depleted multiplies with the infliction's amplifier
 	amplifierScalesImmunityConsumption = true
-	#Makes obtaining the tears music disc harder, when enabled requires you to slay a ghast in the overworld 
+	#Makes obtaining the tears music disc harder, when enabled requires you to slay a ghast in the overworld
 	#If disabled then the disc is obtained by redirecting a fireball into a ghast like in vanilla
 	tweakObtainingTearsMusicDisc = true
 	#The amount of self-pushback experienced upon firing a shotgun
@@ -227,12 +227,12 @@
 	# Default: 2
 	# Range: > 0
 	wispsDroppedByApparition = 2
-	#Cooldown in ticks for how long an apparition needs to wait before re-possessing a mob 
+	#Cooldown in ticks for how long an apparition needs to wait before re-possessing a mob
 	#If set to -1 then apparitions unleashed from a possessed mob cannot repossess anything
 	# Default: 300
 	# Range: > -1
 	apparitionPossessionCooldown = 300
-	#Apparitions can be salted... or erm, "waxed" until actual salt is added in the future 
+	#Apparitions can be salted... or erm, "waxed" until actual salt is added in the future
 	#Salted apparitions cannot possess any mobs, although they will still attack them
 	apparitionsCanBeSalted = true
 	#Apparitions can take control of certain mobs they kill and turn into possessed variants
@@ -245,7 +245,7 @@
 	# Default: 2.0
 	# Range: 0.0 ~ 1.7976931348623157E308
 	hardDifficultyUnleashingMultiplier = 2.0
-	#Most projectiles will phase through apparitions and wisps except for a few specific kinds 
+	#Most projectiles will phase through apparitions and wisps except for a few specific kinds
 	#Projectiles specified in the "phantasm_hull_protects_blacklist" tag still hit these entities regardless
 	projectilesPhaseThroughGhosts = true
 	#Blazes will visibly become dimmer the lower their health is much like Minecraft: Dungeons
@@ -258,12 +258,12 @@
 	# Default: 20
 	# Range: > 0
 	maxVesselBullets = 20
-	#Attack timer is a value that decrements when a vessel is aggroed 
+	#Attack timer is a value that decrements when a vessel is aggroed
 	#It dictates the wait-time between each shotgun blast the vessel does
 	# Default: 110
 	# Range: > 0
 	vesselAttackTime = 110
-	#At the specified attack time the vessel will take aim preparing to fire 
+	#At the specified attack time the vessel will take aim preparing to fire
 	#This value cannot go any lower than 50 to prevent animation issues
 	# Default: 100
 	# Range: > 50
@@ -274,15 +274,15 @@
 	vesselAccurateDistance = 5
 	#Banshees hurt by an entity will try to teleport away to a random spot or their anchor
 	bansheeTeleportsAfterHit = true
-	#The number of teleports a banshee can do before returning to its anchor point 
-	#This config value is influenced by the world difficulty adding: 
-	#-1 on Easy 
+	#The number of teleports a banshee can do before returning to its anchor point
+	#This config value is influenced by the world difficulty adding:
+	#-1 on Easy
 	#+1 on Hard
 	#
 	# Default: 3
 	# Range: > 1
 	bansheeAnchorInterval = 3
-	#The base attack interval of a banshee, which constantly ticks down. when the value reaches "0" it'll fire a will o' wisp 
+	#The base attack interval of a banshee, which constantly ticks down. when the value reaches "0" it'll fire a will o' wisp
 	#After which the specified value will be added to the attack interval for it to continue ticking down
 	# Default: 40
 	# Range: > 0
@@ -298,7 +298,7 @@
 	#Specify what behavior should take place if a banshee gets hit with its own will o' wisp projectile
 	#Allowed Values: DO_NOTHING, STUN, INSTAKILL
 	bansheeRedirectBehavior = "STUN"
-	#Defines how long a banshee hit with its own projectile will be stunned for 
+	#Defines how long a banshee hit with its own projectile will be stunned for
 	#During this it is unable to fire will o' wisps
 	# Default: 100
 	# Range: > 0
@@ -311,9 +311,9 @@
 	# Default: 0.2
 	# Range: 0.0 ~ 1.7976931348623157E308
 	bansheeWillOWispManoeuvrability = 0.2
-	#Weather world difficulty will have any effect on a banshee will o' wisps' manoeuvrability 
-	#The values below are added onto whatever is specifed in "bansheeWillOWispManoeuvrability" 
-	#-0.05 on Easy 
+	#Weather world difficulty will have any effect on a banshee will o' wisps' manoeuvrability
+	#The values below are added onto whatever is specifed in "bansheeWillOWispManoeuvrability"
+	#-0.05 on Easy
 	#+0.04 on Hard
 	#
 	manoeuvrabilityAffectedByDifficulty = true
@@ -393,9 +393,9 @@
 	# Default: 2.0
 	# Range: 0.0 ~ 1.7976931348623157E308
 	emergeBurstDamageMultiplier = 2.0
-	#The absolute maximum stack size for all ecto slabs 
-	#§cWARNING: Higher values can easily cause FPS lag when too many ecto slabs are present 
-	# 
+	#The absolute maximum stack size for all ecto slabs
+	#§cWARNING: Higher values can easily cause FPS lag when too many ecto slabs are present
+	#
 	#Due to the additional segments needing to be added for rendering
 	# Default: 16
 	# Range: 1 ~ 99
@@ -465,26 +465,26 @@
 
 #World Settings
 [worldSettings]
-	#Improves the vanilla nether terrain generation with better multilayered-ness and height changes 
-	#The Height changes include: 
-	#-Base Nether being extended to 192 blocks tall 
-	#-Underlava sections extended by -32 blocks of depth 
-	#-And the area above the roof will be 64 blocks tall instead 
-	# 
+	#Improves the vanilla nether terrain generation with better multilayered-ness and height changes
+	#The Height changes include:
+	#-Base Nether being extended to 192 blocks tall
+	#-Underlava sections extended by -32 blocks of depth
+	#-And the area above the roof will be 64 blocks tall instead
+	#
 	#§cNOTE: If Amplified Nether is installed then that mod's generation will take priority regardless of config value
 	#
 	netherWorldGenOverhaul = true
-	#Brightens up the nether fog of most vanilla and modded biomes to compliment their environments better 
+	#Brightens up the nether fog of most vanilla and modded biomes to compliment their environments better
 	#It overall makes the nether feel warmer and helps make out shapes in the distance like actual fog
 	brighterNetherFog = true
 	#Changes the nether wastes fog back to being red like in vanilla
 	redNetherWastesFog = false
 	#Dust like particles will blow in the soul sand valley instead of the occasional falling ash
 	betterSoulSandValleyParticles = true
-	#Completely replaces the vanilla multi-noise biome source for Elysium API's mosaic ones 
-	#Rather than determining a biomes' position based on the terrain's noise climate. it instead uses voronoi cells with a weighted list 
-	#Mosaic biome source is remarkably stellar at keeping consistent sizes between all the biomes and equally distributes them too, no matter how many mods you have 
-	# 
+	#Completely replaces the vanilla multi-noise biome source for Elysium API's mosaic ones
+	#Rather than determining a biomes' position based on the terrain's noise climate. it instead uses voronoi cells with a weighted list
+	#Mosaic biome source is remarkably stellar at keeping consistent sizes between all the biomes and equally distributes them too, no matter how many mods you have
+	#
 	#§cNOTE: MosaicBiomeSource is currently in BETA and in active testing. as of now sub-biome support is limited and there is no 3D biome support either
 	#
 	improvedNetherBiomeSource = true
@@ -563,7 +563,7 @@
 	# Default: 0.05
 	# Range: 0.0 ~ 1.7976931348623157E308
 	netherMistMotionMultiplier = 0.05
-	#Makes the nether mist particles disappear faster if you get close enough to them, 
+	#Makes the nether mist particles disappear faster if you get close enough to them,
 	#You may disable this functionality entirely by just setting the value to 0.0
 	# Default: 28.0
 	# Range: 0.0 ~ 1.7976931348623157E308
@@ -646,12 +646,12 @@
 	# Default: 64.0
 	# Range: 4.9E-324 ~ 1.7976931348623157E308
 	heatDistortionLavaMaxDistance = 64.0
-	#How often the game will check around the player for lava heat distortion in ticks 
+	#How often the game will check around the player for lava heat distortion in ticks
 	#§cWARNING: Lower numbers can increase lag especially when paired with high proximity distances to iterate through
 	# Default: 150
 	# Range: > 0
 	heatDistortionLavaCheckPeriod = 100
-	#How far the game will check around the player for heat distortion lava sources 
+	#How far the game will check around the player for heat distortion lava sources
 	#§cWARNING: Increasing the distance can add some latency to performance! as it needs to iterate through all the specified blocks in-range
 	# Default: 2.0
 	# Range: 0.0 ~ 1.7976931348623157E308

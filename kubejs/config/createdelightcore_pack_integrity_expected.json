@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T06:30:35Z",
+  "generatedAt": "2026-09-28T03:23:13Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -2056,7 +2056,7 @@
     {
       "side": "common",
       "metadata": "mods/common/create-delight-core.pw.toml",
-      "filename": "createdelightcore-2.0.0.6+1.21.1.jar",
+      "filename": "createdelightcore-2.0.0.7+1.21.1.jar",
       "modIds": [
         "createdelightcore"
       ]
