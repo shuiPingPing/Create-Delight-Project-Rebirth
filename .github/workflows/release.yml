@@ -34,7 +34,6 @@ jobs:
     outputs:
       name: ${{ steps.meta.outputs.name }}
       version: ${{ steps.meta.outputs.version }}
-      is_prerelease: ${{ steps.meta.outputs.is_prerelease }}
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -175,7 +174,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ needs.build.outputs.version }}
           PACK_NAME: ${{ needs.build.outputs.name }}
-          IS_PRERELEASE: ${{ needs.build.outputs.is_prerelease }}
         run: |
           set -euo pipefail
           tag="$GITHUB_REF_NAME"
@@ -190,22 +188,16 @@ jobs:
               exit 1
             fi
             echo "草稿 Release $tag 已存在，刷新发布说明后继续上传资产"
-            gh release edit "$tag" --repo "$GITHUB_REPOSITORY" --notes-file notes.md
+            gh release edit "$tag" --repo "$GITHUB_REPOSITORY" --notes-file notes.md --prerelease
           else
-            title="$tag"
-            prerelease_args=()
-            if [ "$IS_PRERELEASE" = "true" ]; then
-              title="$tag 测试版"
-              prerelease_args=(--prerelease)
-            else
-              title="$tag 正式版"
-            fi
+            # 维护者要求：GitHub Release 一律作为「预发布 / 测试版」，不写「正式版」
             gh release create "$tag" \
               --repo "$GITHUB_REPOSITORY" \
               --target "$GITHUB_SHA" \
-              --title "$title" \
+              --title "$tag 测试版" \
               --notes-file notes.md \
-              --draft "${prerelease_args[@]}"
+              --prerelease \
+              --draft
           fi
 
           shopt -s nullglob
