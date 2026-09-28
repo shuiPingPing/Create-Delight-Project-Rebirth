@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T06:59:50Z",
+  "generatedAt": "2026-09-28T07:29:15Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -1998,7 +1998,7 @@
     {
       "side": "common",
       "metadata": "mods/common/create-integrated-farming.pw.toml",
-      "filename": "create-integrated-farming-1.2.6.jar",
+      "filename": "create-integrated-farming-1.4.2.jar",
       "modIds": [
         "create_integrated_farming"
       ]
