@@ -85,3 +85,30 @@ git -C D:\git-MC\CDR1201 show HEAD:mods/apotheosis.pw.toml | Select-String 'proj
 ```
 
 > 注：`web_search` 工具当前 401（端点鉴权问题），所以本轮全部走 Modrinth API + cfwidget 直查。
+
+## 执行结果（2026-09-28，用户勾选，提交 `f19b339`）
+
+用户在 A/B/C 里勾选了「零风险两项 + Iron's Spells 体系 + Apotheosis 线 + Integrated Farming 升级」，执行情况：
+
+| 项 | 结果 | 说明 |
+| --- | --- | --- |
+| A1 Iron's Spells 'n Spellbooks | ✅ 已装 `1.21.1-3.16.3` | CF 8680204 / project 855414 |
+| A2 Iron's Lib | ✅ 已装 `1.21.1-2.2.0` | 其 `geckolib` 声明是裸版本号 `4.7.5.1`，见下方「两个发现」 |
+| A3 Farmer's Spell 'n Spell Book | ✅ 已装 `1.0.5.1-1.21.1` | Modrinth CDN（URL 描述符，无自动更新源） |
+| A5 Apotheosis | ✅ 已装 `1.21.1-8.9.0` + 前置 Apothic Spawners `1.4.0`、Apothic Enchanting `1.6.2`、Patchouli `1.21.1-93` | Placebo 9.9.2 / Apothic Attributes 2.10.1 本仓已有；Apotheosis 的 jar 只把 Placebo+Apothic Attributes 声明为 required，Patchouli 是 Modrinth 元数据里的 required（它的指南书需要），一并装了 |
+| A6 Create: Apokinetics | ✅ 已装 `1.0.6` | 要求 `create [6.0.10,6.1)` ✓、`apotheosis [8.5.3,)` ✓ |
+| B1 Create: Integrated Farming | ✅ 升到 `1.4.3`（CF 8937623，旧 1.2.6 jar 已删） | 1.4.3 里 `supplementaries` 是 **optional**（`[1.21.1-3.9.9,)`），所以当年「要 Supp 3.9.9→NeoForge 247」的 pin 理由不再成立；`pin = true` 保留 |
+| C6 alexsmobs 禁用轻语灵/洞穴蜈蚣 | ✅ **无需改动**：本仓 `config/alexsmobsup.toml` 里 `caveCentipedeSpawnWeight` 与 `murmurSpawnWeight` 已经是 0 | 源包那次改动只是把 KubeJS 拦截换成配置；我们从来没迁过那个拦截脚本 |
+| C7 任务书 3 处 | ⚠️ 只落了 1 处 | ③ `630FA0478B7DAAAA`（Junior_Engineer）已把任务从 createfluidstuffs 桶/罐 改成 `fluidlogistics:copper_bucket`，文案同步；② 467AE0EF8AF5ACAF 的文案已更新；① Introduction 的官网二维码**本仓任务书里没有对应内容**（源包那是它自己官网/QQ 群的内容），未强搬 |
+| C1/C2 燃料桶脚本 | ⏸ 用户选择「先验证」，未动 | 见 §E-1 |
+| A4 traveloptics / C15 cdr-updater | ⏸ 未选 | — |
+
+**依赖核对（装前逐个读 jar 的 `neoforge.mods.toml`）**：geckolib 4.9.3 ✓（要求 ≥4.7.5.1 / ≥4.9.2）、playeranimator 2.0.4+1.21.1 ✓（要求 ≥2.0.1+1.21.1）、curios 9.5.1 ✓（要求 ≥9.0.5+1.21.0）、farmersdelight 1.3.2 ✓（要求 ≥1.3.2）、placebo 9.9.2 ✓、apothic_attributes 2.10.1 ✓、create 6.0.10 ✓。
+
+**两个发现（已记进 `MIGRATION_LOG.md` §3.9）**
+
+1. **裸版本号 `versionRange` 是宽松语义**：`irons_lib` 写的是 `geckolib = "4.7.5.1"`（不是区间）。用本仓现存 24 处同形声明做实证（例如 `dg_js` 要求 `kubejs = "2101.7.2-build.321"` 而实装 build.363、`createtransmission` 要求 `create = "6.0.6"` 而实装 6.0.10，游戏都能正常启动）→ 结论：NeoForge 把裸版本号当「推荐版本」，不会拦 4.9.3。证据脚本 `_dsh_tmp/bare-versionrange-evidence.mjs`。
+2. **任务书文案不在章节文件里**：1.21.1 的 FTB Quests 把文本放在 `config/ftbquests/quests/lang/en_us.snbt`（键形如 `quest.<id>.quest_desc` / `.title` / `.quest_subtitle`），章节 `.snbt` 只有结构（tasks / dependencies / 坐标 / 图标 / images）。改文案必须改 lang 文件。
+
+**待验证（重启游戏后）**：新模组能否正常加载（含 Apotheosis 首次生成配置、Patchouli 指南书）、法术系物品是否出现在创造栏/EMI、任务书那条任务的图标与文案是否正确、Integrated Farming 的水稻收割。
+

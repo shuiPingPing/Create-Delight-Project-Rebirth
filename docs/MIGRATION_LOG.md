@@ -343,6 +343,9 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-153 | 完整性清单报 `Extra mods: drippyloadingscreen` | 装回 Drippy 后没重生成清单 | 跑 `devtool generate-integrity-manifest` | `696c22c` vs `47b5598` | 待办 |
 | P-154 | 完整性清单把本地 MCP 桥接报成 Extra mods | `mcpmod` 是本地调试用模组 | 发布/测试实例移除或登记 | 台账 §七、§10.6 | 待办 |
 | P-155 | ProbeJS 只导出精简 dump | 411 个模组触发性能保护 | `/probejs config complete_dump` 后再 dump | `config/probe-settings.json` | 限制 |
+| P-159 | 误以为「裸版本号 versionRange（如 `4.7.5.1`）是精确匹配」，据此判定新模组装不了 | NeoForge 把裸版本号当「推荐版本」，是宽松语义（不含限制区间） | 实证：本仓 24 处同形声明都能正常启动（`dg_js` 要 kubejs build.321、实装 build.363；`createtransmission` 要 create 6.0.6、实装 6.0.10） | `_dsh_tmp/bare-versionrange-evidence.mjs`；`mods/common/irons-lib.pw.toml` | 判据 |
+| P-160 | 按 1.20.1 的做法改任务书章节文件里的文案，游戏里不会变 | 1.21.1 的 FTB Quests 文本存在 `config/ftbquests/quests/lang/en_us.snbt`（`quest.<id>.quest_desc` / `.title` / `.quest_subtitle`），章节 `.snbt` 没有文本字段 | 文案改 lang 文件；章节文件只改结构（tasks / dependencies / 坐标 / 图标） | `config/ftbquests/quests/lang/en_us.snbt`、`chapters/Junior_Engineer.snbt` | 判据 |
+| P-161 | 源包 `create-integrated-farming` 曾被 pin 在 1.2.6（理由：新版要 Supplementaries 3.9.9 → NeoForge 247） | 1.4.3 里 `supplementaries` 已改成 **optional** dep，不再有硬约束 | 升级到 1.4.3（本仓 1.21.1 有该版本），`pin` 保留 | `mods/common/create-integrated-farming.pw.toml`、`f19b339` | 已解决 |
 
 ### 3.10 源包侧新问题（来自 CDR1201 的 49 个新提交，作为同步参考）
 
@@ -392,6 +395,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 默认启用 7 个补搬的材质包 + FPS 显示随包默认 | 台账 §8.16/§8.31 |
 | CDR1201 与上游仓库**只读**（越界一次已撤销） | P-110、`AGENTS.md` |
 | 每轮收工前更新并提交本文件 | `AGENTS.md`「收工前必做」 |
+| **移入 Iron's Spells 体系 + Apotheosis 线 + Integrated Farming 升级**（8 个新模组，见 `docs/PORT_BACKLOG.md`） | 2026-09-28 用户勾选，提交 `f19b339` |
 
 ### 4.3 其它挂账（战役 4/5 与待拍板项）
 
@@ -472,6 +476,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 2026-09-28 | 建立本文件：汇总 `移植台账.md` / `移植作战图.md` / 仓内 `docs/*` 的问题与过程，补 1.20.1 侧 git 溯源；同时把「收工前更新本文件」写进 `AGENTS.md` | `f990e66`、`4ca5922`（航空学文档）、`df2fc5e`、`782724c`（上游流水线 + 四段式）、`9fadd15`（README），本文件随本轮一起提交 |
 | 2026-09-28（第二轮） | 核对 CDR1201 的推进：基线 `1b1b8b7e` → `4c85c39c`（+49 提交 / 556 文件），刷新 §1.1/§1.2 基线、新增 §2.3 差异清单与 §3.10 源包侧问题、§4.3 补 6 项跟进 | 本文件；源包侧对应提交 `8844be3a`、`30781f52`、`cc1a4622`、`9f6d77a4`、`a5abd893` 等 |
 | 2026-09-28（第三轮） | 逐个核实「能不能移过来」并出清单：新增 `docs/PORT_BACKLOG.md`（模组类 A1~A11 / 更新类 B1 / 修复类 C1~C15 / 不可行 D / 待验证 E / 采纳顺序 F） | `03a21fc`；核查用 Modrinth API + cfwidget（`web_search` 端点 401，未用） |
+| 2026-09-28（第四轮） | 按用户勾选执行移入：8 个新模组（Iron's Spells 系 3 个 + Apotheosis 线 4 个 + Apokinetics）+ Integrated Farming 升 1.4.3；任务书 2 处文案/结构更新；完整性清单重生成（common 424→432）。同时纠正两个认知（裸 versionRange 的宽松语义 P-159、任务书文本在 lang 文件 P-160） | `f19b339` |
 
 ## 7. 附录：仓内文档索引
 
@@ -482,7 +487,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | `PACKWIZ_WORKFLOW.md` | 171 | bkmpw 工作流与 CI 发版说明（含与上游的三处差异） |
 | `CREATE_AERONAUTICS.md` | 161 | 航空学体系接入记录（33 附属 / 依赖链 / 6 个启动坑） |
 | `MOD_UPDATE_COMPATIBILITY.md` | 97 | 上游升级后的兼容性 pin 清单与原因 |
-| `PORT_BACKLOG.md` | 95 | **移植候选清单**：模组类/更新类/修复类的 1.21.1 可用性核实与逐条建议（待用户勾选） |
+| `PORT_BACKLOG.md` | 114 | **移植候选清单**：模组类/更新类/修复类的 1.21.1 可用性核实、逐条建议与执行结果（含两个判据发现） |
 | `FTBQUESTS_MIGRATION.md` | 260 | 任务书迁移的做法与坑 |
 | `HOTAI_MIXIN_OVERRIDES.md` | 27 | hotai 的 mixin 覆盖说明 |
 | `未安装mod清单.md` | 61 | 1.21.1 侧没有对应版本的 mod 及替代方案 |
