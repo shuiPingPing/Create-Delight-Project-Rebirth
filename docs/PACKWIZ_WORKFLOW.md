@@ -195,3 +195,19 @@ Linux/macOS：
 - Minecraft: `1.21.1`
 - NeoForge: `21.1.242`
 - Java: `21`
+
+## 本仓库的 CI 发版（与上游说明的差异）
+
+`.github/workflows/release.yml` 是**本 fork 自己的实现**；上游 `docs/DevGuide.md` 的「CI 自动发版」一节
+描述的是上游那套流程，两者不一样，以本文件为准。
+
+- 触发：推 `v*` tag，或手动 `workflow_dispatch`（默认只出 workflow 产物，勾选才建草稿 Release）
+- 步骤：`prepare-pack` → `check` → `install-files-headless 3 15`（配 `actions/cache` 缓存已下载模组）→
+  `generate-integrity-manifest` 且必须与提交里的 `kubejs/config/createdelightcore_pack_integrity_expected.json` 一致
+  （不一致直接失败，需本地重生成后提交）→ `modlist` → 三条导出 → 上传产物
+- 产物：`Client-<name>-<ver>.zip`、`Server-…`、`ServerInstaller-…`、`ModList-….md` / `.csv`
+- **只发 GitHub Release**：不产出、不上传 CurseForge / Modrinth 等任何第三方平台
+  （`export-curseforge` 需要 CF API key，因此不进 CI，仅本地按需使用）
+- **Release 一律作为预发布（测试版）**：workflow 与 `scripts/release-publish.mjs` 都固定 `prerelease=true`
+- 发布：CI 建**草稿** Release 并挂资产 → 人工执行 `node scripts/release-publish.mjs --tag <tag>`（需 token）
+  或在网页上勾选 "Set as a pre-release" 后 Publish

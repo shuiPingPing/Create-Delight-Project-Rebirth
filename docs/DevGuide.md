@@ -373,6 +373,10 @@ roots/server/   # 只进入服务端全量包和下载型服务端安装包根�
 
 Modrinth export 已移除。导出产物默认不提交。
 
+> ⚠️ 本节描述的是**上游**的自动发版实现。本仓库当前用的是本 fork 自己的
+> `.github/workflows/release.yml`（bkmpw 原生导出 + 只发 GitHub Release + 一律预发布/测试版），
+> 以 `docs/PACKWIZ_WORKFLOW.md` 的「本仓库的 CI 发版」一节为准。
+
 ## CI 自动发版
 
 `.github/workflows/release.yml` 提供 tag 触发的自动发版。tag 只负责标记"这个状态发版了"，代码从哪条分支来由下面的分支模型决定。
