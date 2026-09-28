@@ -3,6 +3,9 @@
 面向 Minecraft 1.21.1 NeoForge 的 Create Delight Remake
 火热移植中
 
+本 fork 分支额外加入了 Create Aeronautics（航空学）本体及其部分附属，并迁移了 1.20.1 源包的部分内容；
+这些新增内容尚未实际测试玩法，仅供娱乐。
+
 ## 协助开发
 
 本仓库使用 `bkmpw` 管理 packwiz-style mod 元数据、下载来源和文件索引。
