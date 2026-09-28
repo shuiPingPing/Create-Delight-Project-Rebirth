@@ -117,3 +117,5 @@ shaderpacks/*.txt
 artifacts/
 *.zip
 !pack/**/*.zip
+# 自制材质包（非下载物）：no-vanilla-sun 由本仓直接分发，随包默认启用
+!/resourcepacks/no-vanilla-sun.zip
