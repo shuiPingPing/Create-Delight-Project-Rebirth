@@ -142,11 +142,20 @@ git -C D:\git-MC\CDR1201 show HEAD:mods/apotheosis.pw.toml | Select-String 'proj
 
 > **用户决定（2026-09-28）**：这两项都**先等上游更新**，暂不降级任何宿主 mod（不把 Apotheosis 降到 8.8.0、不动 Drippy/IF 组合）。
 >
-> **⚠️ 重要发现（2026-09-28 15:35）——「Drippy 是 CustomSkinLoader 的隐形依赖」**：把所有 Drippy（两个 jar + provider 改 `vanilla`）摘掉后，
-> CSL 依旧在 patch `ResourceManager` 时崩 `NoClassDefFoundError: …IFakeIResourceManager$V1`；加上 14:54 那次（jar 在位、provider=vanilla）→
-> **两次都是在 `earlyWindowProvider = "vanilla"` 时崩，与 Drippy 的 jar 在不在无关**。也就是说：
-> **早窗必须保持 `drippy_early_window`，否则皮肤 mod（CSL）起不来**——Drippy 在这个包里是「承重墙」，不只是加载屏好看。
-> 推论：想上 IF 1.4.x，只能等 Drippy 或 IF 一侧更新（不能靠"摘掉 Drippy 换 vanilla 早窗"绕过）。
+> **⚠️ 重要发现（2026-09-28 15:35）——「Drippy 是本包唯一的早窗 provider，也是 CSL 15.x 的隐形依赖」**
+>
+> 1. 扫全包 `mods/**.jar`：提供 `net.neoforged.neoforgespi.earlywindow.ImmediateWindowProvider` 的**只有**
+>    `drippyloadingscreen-earlywindow`（Sodium 只提供 `GraphicsBootstrapper`）。所以 `config/fml.toml` 的
+>    `earlyWindowProvider` 实际只有两种结局：`drippy_early_window`（成功）或**任何其它值 → `Failed to find ImmediateWindowProvider …, disabling`（早窗被整个禁用）**。
+>    注意 `"vanilla"` **不是**有效值（日志实测：找不到就禁用）。
+> 2. 实测两次「早窗被禁用」（14:54 的 `provider=vanilla`、15:35 的摘掉两个 Drippy jar + `provider=vanilla`）：
+>    **CustomSkinLoader 15.0.1 都在 patch `ResourceManager` 时崩** `NoClassDefFoundError: …IFakeIResourceManager$V1`
+>    （该类确实在 CSL 释放的 `CustomSkinLoader/Core/CustomSkinLoader-Common.jar` 里，98 条目齐全）。
+> 3. 对照历史日志：CSL **14.28** 时代（09-18 / 09-20，当时 Drippy jar 也不在位、早窗同样被禁用）**没有崩**——
+>    那时 CSL 不做 interface-patch（日志里 0 行），fake-interface 机制是 15.x 才有的。
+>    → 真正不兼容的组合是「**CSL 15.x × 早窗被禁用**」，而不是「Drippy 本身有问题」。
+> 4. 结论：**Drippy 不能摘、`earlyWindowProvider` 不能改成别的值**。想上 IF 1.4.x 只有三条路：
+>    等 Drippy 或 IF 更新（首选）、等 CSL 修、或**试把 CSL 降到 14.x**（未验证的新选项，代价是皮肤 mod 变旧）。
 >
 > 复活任意一项时的动作：把描述符放回 `mods/common/`、jar 放回 `mods/` → `devtool.bat generate-integrity-manifest` → 启动验证（照 `MIGRATION_LOG.md` §5.5：同时看 `logs/latest.log` 与 `logs/stderr_stream.log`，并与上次成功日志做 jar 集合 diff）。
 > 不依赖 `_dsh_tmp/` 的重新下载来源：IF `1.4.3` = CF project `1249131` file `8937623`、`1.4.2` = file `8899993`、`1.2.6` = file `8225206`；Apokinetics `1.0.6` = Modrinth `apokinetics`（project `jRFvnLpf`，version `En6Zf987`）或 CF project `1606442` file `8790422`；Apotheosis `8.8.0` = Modrinth `apotheosis` 版本号 `1.21.1-8.8.0`。
