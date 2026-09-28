@@ -1,0 +1,12 @@
+{
+  "apothic_enchanting:max_eterna": "最高位阶",
+  "apothic_enchanting:max_eterna.desc": "在附魔台中可使用的位阶上限。",
+  "block.apothic_enchanting.apothic_enchanting_table": "神化附魔台",
+  "block.apothic_enchanting.apothic_enchanting_table.desc": "附魔台的外观变体。",
+  "block.apothic_enchanting.basic_bookshelf": "基础书架",
+  "block.apothic_enchanting.raven_enchanting_table": "渡鸦附魔台",
+  "block.apothic_enchanting.raven_enchanting_table.desc": "可手动调整附魔台的核心属性。",
+  "gui.apothic_enchanting.enchant.eterna.limited": "受最高位阶属性限制为 %s",
+  "gui.apothic_enchanting.enchant.eterna.limited.world_tier": "受世界层级限制为 %s（CTRL+T）",
+  "text.apothic_enchanting.star_prefix": "🌟 "
+}

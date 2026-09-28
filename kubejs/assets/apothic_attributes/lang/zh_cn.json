@@ -1,0 +1,4 @@
+{
+  "apothic_attributes:cooldown_reduction": "冷却缩减",
+  "apothic_attributes:cooldown_reduction.desc": "降低触发式能力与效果的冷却时间。冷却时间以 ⌛ 符号表示。"
+}
