@@ -32,6 +32,18 @@ Shared repository skills live under `.agents/skills/`.
 4. Port KubeJS by layer: utilities, registrations, tags, recipes, client scripts, then optional integrations.
 5. Verify with server boot or focused reload after each layer.
 
+## 收工前必做：更新移植总账（用户要求，2026-09-28）
+
+每一轮工作结束前，**先更新 `docs/MIGRATION_LOG.md` 并提交推送，再结束会话**：
+
+1. 本轮遇到的问题/踩坑逐条补进该文档「问题总台账」表（编号顺延 `P-###`，写清 现象 / 根因 / 处置 / 相关提交 / 状态）。
+2. 有新的迁移或改造阶段，补进「迁移过程」时间线（日期 + 做了什么 + 提交号 + 来源路径，1.20.1 侧来源要写 CDR1201 的路径）。
+3. 未解决 / 搁置 / 用户新决定，更新「遗留与决定」一节。
+4. 在「更新历史」追加一行：日期、本轮主题、提交号。
+5. 提交信息用 `docs(migration-log): ...`，可以跟当轮业务提交合并提交，但**必须推到 `origin/main`**。
+
+只写真实发生过的事，宁可一行也不写空话；发现文档与代码/日志不符时，以代码/日志为准并顺手订正。
+
 ## Current Unknowns
 
 - Final 1.21.1 mod list.
