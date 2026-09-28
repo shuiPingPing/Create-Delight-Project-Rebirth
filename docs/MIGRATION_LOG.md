@@ -409,7 +409,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | `docs/UPSTREAM_ISSUE_DRAFTS.md` | issue 草稿已写、未提交 |
 | 本地环境提示 | MCP 悬浮按钮不要点；web 搜索端点 401 时改走 harness 抓取通道 |
 | 长期维护 | 上游 `release.yml` 的三处 fork 差异需在每次合并上游时确认仍在 |
-| **源包新增的 8 类模组**（Iron's Spells 全家桶、Apokinetics、Fallen Lib/Gems Affixes、Tetra Apothic Link、TaCZ:Accel、Quantified API、Farmer's Spell） | 需按 §3.2 的流程核实 1.21.1 是否有版本（CF 标签 + Modrinth 交叉验证），再决定加/替代/放弃 |
+| **源包新增的 8 类模组**（Iron's Spells 全家桶、Apokinetics、Fallen Lib/Gems Affixes、Tetra Apothic Link、TaCZ:Accel、Quantified API、Farmer's Spell） | ✅ **已核实（2026-09-28）**：可移入 Iron's Spells 3.16.3 + Iron's Lib 2.2.0、Farmer's Spell 1.0.5.1、Apotheosis 8.9.0（+3 个前置）、Apokinetics 1.0.6；不可行 Fallen 系 / Tetra Apothic Link / TaCZ:Accel；traveloptics 只有 alpha。逐条见 `docs/PORT_BACKLOG.md`，等用户勾选 |
 | **配方来源变化** | 源包已把配方从 `data/**/*.json` 迁到 KJS 脚本（`8844be3a`）→ 以后同步配方要看 `kubejs/server_scripts/**/recipe*.js`，不能再只 diff `data/` |
 | **`cdr-updater`（Go 更新服务器 + jar 客户端）** | 在源包 `.agents/skills/release/cdr-updater-go/`（93 文件）；本仓目前是 Core + `release-info.json` 的更新链路，需评估是否对齐或借鉴 |
 | **PCL2 包瘦身做法**（列 CF mod 而不打包 jar，#2333） | 与本仓 P-099（`Install-PCL.ps1` 必然失败）相关，可作为修复参考 |
@@ -471,6 +471,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | --- | --- | --- |
 | 2026-09-28 | 建立本文件：汇总 `移植台账.md` / `移植作战图.md` / 仓内 `docs/*` 的问题与过程，补 1.20.1 侧 git 溯源；同时把「收工前更新本文件」写进 `AGENTS.md` | `f990e66`、`4ca5922`（航空学文档）、`df2fc5e`、`782724c`（上游流水线 + 四段式）、`9fadd15`（README），本文件随本轮一起提交 |
 | 2026-09-28（第二轮） | 核对 CDR1201 的推进：基线 `1b1b8b7e` → `4c85c39c`（+49 提交 / 556 文件），刷新 §1.1/§1.2 基线、新增 §2.3 差异清单与 §3.10 源包侧问题、§4.3 补 6 项跟进 | 本文件；源包侧对应提交 `8844be3a`、`30781f52`、`cc1a4622`、`9f6d77a4`、`a5abd893` 等 |
+| 2026-09-28（第三轮） | 逐个核实「能不能移过来」并出清单：新增 `docs/PORT_BACKLOG.md`（模组类 A1~A11 / 更新类 B1 / 修复类 C1~C15 / 不可行 D / 待验证 E / 采纳顺序 F） | `03a21fc`；核查用 Modrinth API + cfwidget（`web_search` 端点 401，未用） |
 
 ## 7. 附录：仓内文档索引
 
@@ -481,6 +482,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | `PACKWIZ_WORKFLOW.md` | 171 | bkmpw 工作流与 CI 发版说明（含与上游的三处差异） |
 | `CREATE_AERONAUTICS.md` | 161 | 航空学体系接入记录（33 附属 / 依赖链 / 6 个启动坑） |
 | `MOD_UPDATE_COMPATIBILITY.md` | 97 | 上游升级后的兼容性 pin 清单与原因 |
+| `PORT_BACKLOG.md` | 95 | **移植候选清单**：模组类/更新类/修复类的 1.21.1 可用性核实与逐条建议（待用户勾选） |
 | `FTBQUESTS_MIGRATION.md` | 260 | 任务书迁移的做法与坑 |
 | `HOTAI_MIXIN_OVERRIDES.md` | 27 | hotai 的 mixin 覆盖说明 |
 | `未安装mod清单.md` | 61 | 1.21.1 侧没有对应版本的 mod 及替代方案 |
