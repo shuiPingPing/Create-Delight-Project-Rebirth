@@ -129,4 +129,8 @@ git -C D:\git-MC\CDR1201 show HEAD:mods/apotheosis.pw.toml | Select-String 'proj
 - **Apokinetics 移除**（P-164：其 mixin 与 Apotheosis 8.9.0 内部 API 不匹配；想要它可把 Apotheosis 降到 8.7.0）
 - 所以本次「B1 升级」实际**未生效**（回退了），Iron's Spells 系 + Apotheosis 线保留
 
+**✅ 实机验证（2026-09-28 15:03）**：按上述定案启动成功（到标题界面），且错误分布与移入前那次成功逐项一致（无新增噪音类目）。
+
+**仍需进游戏确认的**：法术系物品/构造在创造栏与 EMI 里的显示、Apotheosis 首次生成配置与词缀玩法、Patchouli 指南书、任务书那两处文案；Integrated Farming 的水稻修复本次未生效（停在 1.2.6）。
+
 

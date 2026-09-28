@@ -496,6 +496,9 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
   所以当前**两条实测约束**：① `Integrated Farming 1.4.3` ↔ Drippy 早窗崩；② `vanilla` 早窗 ↔ CSL 崩。
   **采用的组合**：`drippy_early_window` + Integrated Farming 1.2.6（提交 `e848913`）。
 - 处置：保持 `config/fml.toml` 的 `earlyWindowProvider = "drippy_early_window"`（注意：NeoForge 会在启动时**重写该文件并抹掉注释**，所以解释只能留在文档里）。
+- ✅ **验证（2026-09-28 15:03）**：以上配置实机启动成功（`Sound engine started`、Iris 为 overworld 建管线）。
+  错误分布与 09-24 成功那次逐项一致（`attributeslib` 12/12、`Failed to load config provider from mod` 1/1、
+  `statbar` 3/3、`Invalid path` 30/31；FATAL 仅 ModernUI 的 `OK` 那条已知噪音）→ **无新增错误类目**。
 
 ### 5.5 排查这类崩溃的固定动作（本轮验证有效）
 
@@ -512,7 +515,7 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
 | 2026-09-28（第三轮） | 逐个核实「能不能移过来」并出清单：新增 `docs/PORT_BACKLOG.md`（模组类 A1~A11 / 更新类 B1 / 修复类 C1~C15 / 不可行 D / 待验证 E / 采纳顺序 F） | `03a21fc`；核查用 Modrinth API + cfwidget（`web_search` 端点 401，未用） |
 | 2026-09-28（第四轮） | 按用户勾选执行移入：8 个新模组（Iron's Spells 系 3 个 + Apotheosis 线 4 个 + Apokinetics）+ Integrated Farming 升 1.4.3；任务书 2 处文案/结构更新；完整性清单重生成（common 424→432）。同时纠正两个认知（裸 versionRange 的宽松语义 P-159、任务书文本在 lang 文件 P-160） | `f19b339` |
 | 2026-09-28（第五轮·故障排查） | 用户连续导出 3 次崩溃日志，定位出两个独立故障：① Drippy 早窗缺陷（P-162，反汇编坐实，与 IF 1.4.3 强相关）→ 早窗 provider 改回 vanilla；② `forged_steel_ingot` 重复注册（P-163，Core 2.0.0.7 已自带而我们仍在 KubeJS 补回）→ 删除补回脚本。排查方法沉淀为 §5.4/§5.5 | `dc21f9c`、`97013d0`；证据脚本 `_dsh_tmp/{modset-diff.py,extract-first-error.py,drippy-disasm}` |
-| 2026-09-28（第六轮·继续排查） | ① 发现 `vanilla` 早窗会连带崩 CustomSkinLoader → 回退为 `drippy_early_window` 并把 Integrated Farming 钉回 1.2.6（两条实测约束记入 §5.4）；② 定位并移除 Apokinetics（P-164，其 mixin 与 Apotheosis 8.9.0 内部 API 不匹配）；③ 完整性清单重生成（common 431） | `e848913`、`06a82c3` |
+| 2026-09-28（第六轮·继续排查） | ① 发现 `vanilla` 早窗会连带崩 CustomSkinLoader → 回退为 `drippy_early_window` 并把 Integrated Farming 钉回 1.2.6（两条实测约束记入 §5.4）；② 定位并移除 Apokinetics（P-164，其 mixin 与 Apotheosis 8.9.0 内部 API 不匹配）；③ 完整性清单重生成（common 431）；④ **15:03 实机启动成功**，错误分布与上次成功逐项一致（无新增噪音类目） | `e848913`、`06a82c3`、`eddef52` |
 
 ## 7. 附录：仓内文档索引
 
