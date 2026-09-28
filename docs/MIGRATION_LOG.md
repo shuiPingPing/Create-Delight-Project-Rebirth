@@ -18,9 +18,9 @@
 | 本地路径 | `D:\git-MC\CDR1201` | `D:\git-MC\CDR1211` |
 | GitHub remote | `shuiPingPing/Create-Delight-Remake` | `shuiPingPing/Create-Delight-Project-Rebirth` |
 | Minecraft / 加载器 | 1.20.1 / Forge **47.4.16** | 1.21.1 / NeoForge **21.1.242**（Java **21**） |
-| 包版本 | `v0.5.0.9-test`（`modpack.toml`） | `v2.0.0.0-test5`（`pack/pack.toml`，四段式，与上游一致） |
-| HEAD | `1b1b8b7e`（2026-09-12） | `9fadd15`（2026-09-28） |
-| git 提交数 | 3030（首提交 2024-08-07；2024 年 1281 / 2025 年 1116 / 2026 年 633） | 455（首提交 2026-05-03；05 月 112 / 06 月 38 / 07 月 118 / 08 月 2 / 09 月 185） |
+| 包版本 | `v0.5.0.9-test`（`modpack.toml`，未变） | `v2.0.0.0-test5`（`pack/pack.toml`，四段式，与上游一致） |
+| HEAD | `4c85c39c`（2026-09-27；**首次核对时是 `1b1b8b7e`/2026-09-12，之间 49 个提交见 §2.3**） | `51acdce`（2026-09-28） |
+| git 提交数 | 3079（首提交 2024-08-07；2024 年 1281 / 2025 年 1116 / 2026 年 682） | 456（首提交 2026-05-03；05 月 112 / 06 月 38 / 07 月 118 / 08 月 2 / 09 月 186） |
 | tag | 无 tag（`git describe` 失败） | `v0.1.0`（唯一已推 origin 的 tag）、`v2.0.0.0-test1`~`test4`（上游 tag，仅本地）、`pre-upstream-20260920`（= `00a6873`，合并上游前的存档点） |
 | 包管理工具链 | 原生 `packwiz` + 自研 PowerShell 脚本 | `bkmpw` **0.1.1**（npm `@bro-know-my/packwiz`，CI 装 `@latest`）+ `devtool.mjs`（`devtool.bat` / `devtool.sh`） |
 | mod 元数据布局 | `mods/` 扁平 | `mods/common`、`mods/client`、`mods/server` 分层（+ `resourcepacks/`、`shaderpacks/` 的 `.pw.toml`） |
@@ -32,34 +32,33 @@
 > 复现命令：`git -C D:\git-MC\CDR1201 log -1 --format='%h|%ad|%s' --date=short -- <路径>`
 > 说明：迁移**不是从某个固定 commit 拉分支**，而是持续读取 CDR1201 `main` 的工作区，
 > 所以下表是「核对日各来源目录最后变更的提交」＝当时看到的那一版的下界。
+> **核对日 2026-09-28（第二次，HEAD=`4c85c39c`）**；带 ★ 的是相比首次核对（`1b1b8b7e`）有推进的目录。
 
 | 来源路径（CDR1201） | 最后变更提交 | 日期 | 提交说明 |
 | --- | --- | --- | --- |
-| `modpack.toml` | `db813954` | 2026-09-02 | [feat] v0.5.0.9-test 测试版版本更新 (#2219) |
-| `mods/` | `28794669` | 2026-09-12 | [mod] 更新集成农业 (#2284) |
-| `config/` | `53ef0567` | 2026-09-12 | [fix] 补充龙血任务的百合采集提示 (#2286) |
-| `config/ftbquests/`（任务书） | `53ef0567` | 2026-09-12 | 同上 |
+| `mods/` ★ | `4c85c39c` | 2026-09-27 | [mod] 更新 Tetra Insight 至 0.1.8 (#2376) |
+| `config/` ★ | `4c85c39c` | 2026-09-27 | 同上（Apotheosis / JEI / Crash Assistant / FancyMenu 配置同批） |
+| `kubejs/` ★ | `30781f52` | 2026-09-27 | [feat] 主菜单随机彩蛋与节日灯带 |
+| `kubejs/assets/` ★ | `30781f52` | 2026-09-27 | 同上（title.png、官网二维码、多语言文件） |
+| `kubejs/server_scripts/` ★ | `8844be3a` | 2026-09-26 | [dev] kubejs/data 配方 JSON 迁移到 KJS 脚本 |
+| `kubejs/data/` ★ | `8844be3a` | 2026-09-26 | 同上（341 文件、-6226 行，配方从 JSON 改为脚本） |
+| `kubejs/startup_scripts/` ★ | `4ee92d1b` | 2026-09-26 | [fix] 补齐 cryo_fuel_bucket 的 empty bucket 剩余物 |
+| `kubejs/client_scripts/` ★ | `a10a2089` | 2026-09-19 | [mod] 迁移流体容器并更新模组 |
+| `kubejs/startup_scripts/creative_tab/` ★ | `a10a2089` | 2026-09-19 | 同上 |
+| `config/ftbquests/` ★ | `a10a2089` | 2026-09-19 | 同上（另 30781f52/790b5fde 改过任务书章节） |
+| `scripts/` ★ | `30781f52` | 2026-09-27 | [feat] 主菜单随机彩蛋与节日灯带 |
+| `docs/` ★ | `30781f52` | 2026-09-27 | 同上 |
+| `.agents/` ★（新增重点） | `cc1a4622` | 2026-09-27 | 修复 Java/Go 更新器安全漏洞（新增 release skill 的 cdr-updater） |
+| `.github/workflows/` ★ | `54592727` | 2026-09-18 | [dev] 在客户端构建日志列出内置模组并审计允许列表 (#2311) |
+| `CDC-mod-src/` ★ | `0d7585ea` | 2026-09-27 | [mod] 更新 Create Delight Core 至 2.2.16k (#2377) |
+| `hotai/` ★ | `05a541d2` | 2026-09-26 | [fix] 修复烈焰人燃烧室无法使用普通固体燃料 |
+| `packwiz-files/` ★ | `0d7585ea` | 2026-09-27 | [mod] 更新 Create Delight Core 至 2.2.16k (#2377) |
+| `modpack.toml` | `db813954` | 2026-09-02 | [feat] v0.5.0.9-test 测试版版本更新 (#2219)（版本号本轮未变） |
 | `defaultconfigs/` | `7ef30de1` | 2026-09-06 | [mod] 进一步适配流体包裹新内容 (#2244) |
-| `kubejs/`（整体） | `1b1b8b7e` | 2026-09-12 | [fix] 修正 Gateways 惩罚提示和默认值翻译 (#2290) |
-| `kubejs/server_scripts/` | `93f0b4da` | 2026-09-11 | [mod] 更新 NCC，添加 kubejs 接口… (#2279) |
-| `kubejs/startup_scripts/` | `93f0b4da` | 2026-09-11 | 同上 |
-| `kubejs/startup_scripts/creative_tab/`（物品栏页签，移植批次 `14fbb06`） | `93f0b4da` | 2026-09-11 | 同上 |
-| `kubejs/client_scripts/` | `cf7daad5` | 2026-08-26 | [dev] 压缩客户端安装包体积；[fix] Crash Assistant 版本判断 (#2190) |
-| `kubejs/assets/`（含各模组 `lang/zh_cn.json`，汉化来源） | `1b1b8b7e` | 2026-09-12 | 翻译修正 |
-| `kubejs/data/` | `d1f341b1` | 2026-09-12 | [fix] 移除 Tetra 失效的葡萄酒旗帜盾面改造入口 (#2288) |
-| `kubejs/data/createdelight/` | `5aa51f4c` | 2026-09-06 | [mod] 移除 cmr (#2246) |
 | `resourcepacks/` | `c1a25633` | 2026-09-09 | [fix] 回滚方纹更新（画风不贴合）(#2266) |
 | `shaderpacks/` | `8c885c2c` | 2026-06-23 | [fix] 移除多余的 pw.toml 文件 (#1865) |
-| `scripts/`（自研脚本） | `39362b01` | 2026-09-11 | [fix] 修复任务书失效图标并隐藏未开放锻造节点 (#2275) |
-| `docs/` | `ec5b399d` | 2026-09-11 | [fix] 避免护甲公式平方根求值卡死 (#2282) |
-| `.github/workflows/` | `c9e06e41` | 2026-09-06 | [dev] 正式发布时增加 CF 允许清单校验 (#2240) |
-| `tacz/`（枪包） | `8f9c7c05` | 2026-08-28 | [fix] tacz 枪包元数据改 CF CDN 直链 (#2201) |
-| `schematics/`（蓝图） | `7206efaf` | 2026-06-17 | [fix] 去除炼油蓝图中的创造取出升级卡 (#1800) |
-| `CDC-mod-src/`（自研 Core 子模块） | `3ac1cfde` | 2026-09-06 | [feat] 更新液体燃料及相关 hotai (#2247) |
-| `hotai/` | `3ac1cfde` | 2026-09-06 | 同上 |
-| `packwiz-files/` | `3ac1cfde` | 2026-09-06 | 同上 |
-| `ldlib/` | `54284c37` | 2026-08-18 | [feat] 重构订单系统与供货流程 (#2169) |
-| `minemenu/` | `d03871f4` | 2025-10-11 | [quest] 任务书增加 MineMenu 键位说明 (#1035) |
+| `tacz/` | `8f9c7c05` | 2026-08-28 | [fix] tacz 枪包元数据改 CF CDN 直链 (#2201) |
+| `schematics/` | `7206efaf` | 2026-06-17 | [fix] 去除炼油蓝图中的创造取出升级卡 (#1800) |
 
 ### 1.3 复现某一批迁移时的源文件
 
@@ -101,6 +100,44 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 09-24 晚 | 合并上游 16 提交 + **Core 升 2.0.0.7**；修提交里的乱码文档 | `b1defb5` | `mods/common/create-delight-core.pw.toml` |
 | 09-24 晚 | 改用上游那套 `release.yml` + 版本号对齐四段式 `v2.0.0.0-test5`；顺带修完整性清单路径误伤 | `df2fc5e`、`782724c` | `.github/workflows/release.yml`、`pack/pack.toml` |
 | 09-28 | 航空学接入记录整理成文；README 加「仅供娱乐」说明；建立本总账并把「收工前更新」写进 `AGENTS.md` | `f990e66`、`4ca5922`、`9fadd15` | `docs/CREATE_AERONAUTICS.md`、`README.md`、本文件 |
+
+### 2.3 CDR1201 侧的新变化（2026-09-12 → 2026-09-27，**49 提交 / 556 文件**，尚未同步）
+
+用户要求「看下 1201，对比下有哪些变化」时的核对结果。范围 `1b1b8b7e..4c85c39c`，
+文件变更 A129 / M136 / D290 / R1；版本号 `v0.5.0.9-test` **未变**。
+
+| 目录 | 文件数 | ±行 | 主要内容 |
+| --- | --- | --- | --- |
+| `kubejs/` | 396 | +1449 / −6894 | **配方从 `data/**/*.json` 迁到 KJS 脚本**（`8844be3a`：341 文件 / −6226 行），`kubejs/data` 里的 recipe JSON 只剩 120 个；顺带改各模组 `recipe.js` |
+| `.agents/` | 85 | +19472 / −5 | 知识库与技能大增，**新增 release skill 的 `cdr-updater-go/`（93 个文件，Go 更新服务器 + `cdr-updater.jar` 客户端）** |
+| `mods/` | 23 | +164 / −48 | +10 新模组、−1、12 个更新（见下表） |
+| `config/` | 19 | +2655 / −801 | Apotheosis（names/adventure/apotheosis）、JEI 分类排序、Crash Assistant（+modlist）、FancyMenu（title 纹理/布局/彩蛋/节日灯带）、3 个任务书章节、alexsmobs、imblocker |
+| `docs/` | 10 | +410 / −24 | 兼容文档、肥皂合并计划、工作站兼容三项计划等 |
+| `.github/` | 3 | +56 / −8 | 客户端构建日志列出内置模组并审计允许列表 (#2311) |
+| `scripts/` | 3 | +76 / −7 | Crash Assistant 清单生成、packwiz 分发过滤测试、知识库校验 |
+
+**模组变化（23 个描述符）**
+
+- 新增 10 个：`irons-spellbooks 3.16.3`、`irons-lib 2.1.0`、`traveloptics 6.3.0`（Iron's Spells 附属）、
+  `farmers-spell 1.0.5`（手动分发，走 GitHub raw）、`apokinetics 1.0.6`（Create: Apokinetics）、
+  `fallen-lib 1.4.6`、`fallen-gems-affixes 2.1.5`、`tetra-apothic-link 0.1.1`、
+  `tacza 1.2.0`（TaCZ:Accel 性能优化）、`quantified-api 2.2.3`
+- 删除 1 个：`createfluidstuffs`（此前已并入流体容器/流体包裹体系）
+- 更新 12 个：**`kubejs` build.24 → build.16（回退，修食物属性覆盖 #2369）**、
+  `CreateLazyTick 2.5.21→2.6.25`、`create-dragons-plus 1.11.7→1.11.9`、
+  `createfactorycontroller 1.1.1→1.2.1`、`fluidlogistics 1.2.9→1.3.0`、
+  `create-integrated-farming 1.4.1c→1.4.3`、`create_enchantment_industry 2.5.2→2.5.4`、
+  `tetra-insight 0.1.6→0.1.8`、`crash-assistant → 1.11.11`（并把基线改用 CurseForge 安装名消除误报）、
+  `vintageimprovements`、`taczaddon`，以及 `create-delight-core`（1.20.1 线升到 **2.2.16k**）
+
+**与 CDR1211 的交叉核对（本仓现状）**
+
+- 已经同步/更新：`Crash Assistant 1.11.12`（更新）、`create-dragons-plus 1.11.9`、`create-enchantment-industry 2.5.4`、
+  `createfactorycontroller 1.2.1`、`CreateLazyTick 2.6.25`、`fluidlogistics 1.3.0`（版本号已一致）
+- 本仓**没有**：Iron's Spells 全家桶（`irons_spellbooks`/`irons_lib`/`traveloptics`/`farmers_spell`）、
+  `apokinetics`、`fallen_lib`/`fallen_gems_affixes`、`tetra_apothic_link`、`tacza`、`quantified-api`，
+  以及 **Apotheosis 本体**（因此那几处 Apotheosis 配置对本仓不适用）
+- KubeJS 线不同：本仓是 `2101.7.2-build.363`（1.21.1 线），源包是 2001.6.5 线；源包这次的回退原因（食物属性覆盖）值得留意同类回归
 
 ## 3. 问题总台账
 
@@ -307,6 +344,14 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-154 | 完整性清单把本地 MCP 桥接报成 Extra mods | `mcpmod` 是本地调试用模组 | 发布/测试实例移除或登记 | 台账 §七、§10.6 | 待办 |
 | P-155 | ProbeJS 只导出精简 dump | 411 个模组触发性能保护 | `/probejs config complete_dump` 后再 dump | `config/probe-settings.json` | 限制 |
 
+### 3.10 源包侧新问题（来自 CDR1201 的 49 个新提交，作为同步参考）
+
+| 编号 | 现象 | 根因 | 处置 | 相关提交 / 文件 | 状态 |
+| --- | --- | --- | --- | --- | --- |
+| P-156 | 源包侧：食物属性被覆盖 | KubeJS build.24 回归 | 回退到 build.16（1.20.1 线） | `77700637`；`mods/kubejs.pw.toml` | 源包已修；本仓 2101 线需留意同类回归 |
+| P-157 | 源包侧：更新器（Java/Go）存在安全漏洞 | `cdr-updater` 鉴权/文件保存流程缺陷 | 修复并复测；另把 PCL2 包改为「列 CF mod 而不打包 jar」 | `cc1a4622`、`a5abd893`；`.agents/skills/release/cdr-updater-go/` | 源包已修；本仓更新链路（Core + `release-info.json`）待评估 |
+| P-158 | 源包侧：`data/**/*.json` 配方维护成本高 | 配方散落在 JSON 里不易复用 | **配方 JSON → KJS 脚本**（341 文件 / −6226 行） | `8844be3a`；`kubejs/server_scripts/**/recipe*.js` | 源包进行中；影响本仓后续配方同步的来源 |
+
 ## 4. 遗留与决定
 
 ### 4.1 仍未解决 / 待验证 / 待用户决定
@@ -364,6 +409,12 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | `docs/UPSTREAM_ISSUE_DRAFTS.md` | issue 草稿已写、未提交 |
 | 本地环境提示 | MCP 悬浮按钮不要点；web 搜索端点 401 时改走 harness 抓取通道 |
 | 长期维护 | 上游 `release.yml` 的三处 fork 差异需在每次合并上游时确认仍在 |
+| **源包新增的 8 类模组**（Iron's Spells 全家桶、Apokinetics、Fallen Lib/Gems Affixes、Tetra Apothic Link、TaCZ:Accel、Quantified API、Farmer's Spell） | 需按 §3.2 的流程核实 1.21.1 是否有版本（CF 标签 + Modrinth 交叉验证），再决定加/替代/放弃 |
+| **配方来源变化** | 源包已把配方从 `data/**/*.json` 迁到 KJS 脚本（`8844be3a`）→ 以后同步配方要看 `kubejs/server_scripts/**/recipe*.js`，不能再只 diff `data/` |
+| **`cdr-updater`（Go 更新服务器 + jar 客户端）** | 在源包 `.agents/skills/release/cdr-updater-go/`（93 文件）；本仓目前是 Core + `release-info.json` 的更新链路，需评估是否对齐或借鉴 |
+| **PCL2 包瘦身做法**（列 CF mod 而不打包 jar，#2333） | 与本仓 P-099（`Install-PCL.ps1` 必然失败）相关，可作为修复参考 |
+| **FancyMenu 主菜单改动**（title 纹理/布局/随机彩蛋/节日灯带） | 与 §4.3 的 UI 待办（标题图响应式、背景色、中文 hoverlabel）同题，可直接参考源包做法 |
+| **Apotheosis / JEI 排序 / Crash Assistant 配置** | 本仓没装 Apotheosis（配置不适用）；`config/jei/recipe-category-sort-order.ini` 与 Crash Assistant 基线可对照 |
 
 ## 5. 日志噪音基线（判断「是不是新问题」的参照）
 
@@ -419,6 +470,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 日期 | 本轮主题 | 相关提交 |
 | --- | --- | --- |
 | 2026-09-28 | 建立本文件：汇总 `移植台账.md` / `移植作战图.md` / 仓内 `docs/*` 的问题与过程，补 1.20.1 侧 git 溯源；同时把「收工前更新本文件」写进 `AGENTS.md` | `f990e66`、`4ca5922`（航空学文档）、`df2fc5e`、`782724c`（上游流水线 + 四段式）、`9fadd15`（README），本文件随本轮一起提交 |
+| 2026-09-28（第二轮） | 核对 CDR1201 的推进：基线 `1b1b8b7e` → `4c85c39c`（+49 提交 / 556 文件），刷新 §1.1/§1.2 基线、新增 §2.3 差异清单与 §3.10 源包侧问题、§4.3 补 6 项跟进 | 本文件；源包侧对应提交 `8844be3a`、`30781f52`、`cc1a4622`、`9f6d77a4`、`a5abd893` 等 |
 
 ## 7. 附录：仓内文档索引
 
