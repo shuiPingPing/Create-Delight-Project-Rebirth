@@ -120,6 +120,27 @@ devtool.bat download-files
 
 清理只针对上一次 `bkmpw:1` `packwiz.json` manifest 记录过的 `mods/`、`resourcepacks/`、`shaderpacks/` 文件；手动塞入且未记录的 jar 不应被删除。
 
+## 描述符 hash 预检（push 前）
+
+```powershell
+devtool.bat check-hashes                          # 全部托管文件：地址可达 + 本地 hash/体积对照
+devtool.bat check-hashes --changed                 # 只查相对 origin/main 改动过的描述符，并对其深验（下载校验）
+devtool.bat check-hashes --changed HEAD~1          # 只查最近一次提交动过的描述符
+devtool.bat check-hashes --full --only <路径片段>  # 对匹配到的文件全量深验（下载后校验 hash）
+```
+
+**为什么需要**：描述符里记录的 hash 与 CDN 实际内容不一致时，`bkmpw install-files-headless` 会重试 3 次后
+`error: install completed with errors`（退出码 2）。CI 的 `cache-seed` 作业依赖这个命令，它一失败就会跳过
+`actions/cache` 的 post-save，缓存不再更新，于是之后每次 push 都重复同一失败——表现为「CI 老卡在 cache-seed」。
+CurseForge 允许作者重传同一个 file-id，重传后同一版本的文件字节可能变化（历史上出现过：4466 个条目 CRC 全一致、
+仅 `META-INF/MANIFEST.MF` 的压缩长度与时间戳不同，但整体 sha1 变了），所以锁 sha1 的描述符需要定期校验。
+
+**判定规则**：地址不可达 / 非 2xx / 深验 hash 与描述符不一致 → 失败（退出码 1）；
+本地文件与描述符不一致或远端体积与本地不同 → 先记提醒，随后自动对该文件深验，因此「hash 写错」不会漏过。
+
+**建议用法**：改过 `mods/**/*.pw.toml`、`resourcepacks/*.pw.toml`、`shaderpacks/*.pw.toml` 后、push 前跑一次
+`--changed`；打 tag 或发版前跑一次 `--full`（约 2.5 GB 流量，必要时配 `--only` 缩小范围）。
+
 ## Mod 清单
 
 ```powershell

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { spawn, spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import readline from 'node:readline/promises';
@@ -61,6 +62,7 @@ const commands = new Set([
   'download-files',
   'modlist',
   'generate-integrity-manifest',
+  'check-hashes',
   'set-version',
   'export-client',
   'export-curseforge',
@@ -111,6 +113,7 @@ function showHelp() {
   devtool.bat download-files [jobs] [--force]
   devtool.bat modlist [output-dir]
   devtool.bat generate-integrity-manifest
+  devtool.bat check-hashes [--full] [--changed [git-ref]] [--only <路径片段>]   # 预检描述符的下载地址与 hash
   devtool.bat set-version <vA.B.C.D[-testN]>                        # 同步 pack.toml / bcc / fancymenu 版本号
   devtool.bat export-curseforge [output.zip] [client|server|both]   # 客户端 CurseForge 安装包
   devtool.bat export-client [output.zip] [root-dir]                 # 客户端全量包，自带 mod 文件
@@ -129,6 +132,10 @@ Linux/macOS 可使用 ./devtool.sh 执行同样命令。
   - install-files/download-files 由 bkmpw 执行，只处理清单记录的托管文件，不清理手动塞入且未入清单的 jar。
   - 菜单 13 是客户端 CurseForge 安装包；14 是客户端全量包；15 是开箱即用服务端包；16 是 bkmpw 下载型服务端安装包。
   - prepare-pack 按 .pw/config.toml 展开本地模板并刷新索引。
+  - check-hashes 用于 push 前预检「描述符记录的 hash 与 CDN 实际内容是否一致」：不一致会让 bkmpw 校验失败，
+    CI 的 cache-seed 作业随之失败且不再更新缓存（详见 docs/MIGRATION_LOG.md）。默认只做快速检查
+    （地址可达 + 本地 hash/体积对照）；带 --changed 时只查相对 git-ref 改动过的描述符并默认深验（下载校验），
+    --full 对全部托管文件深验（约 2.5 GB，建议配 --only 或发布前使用）。
   - 四种导出由 bkmpw 在临时目录准备模板、校验并打包；CDPR 完整性清单仍由脚本生成。`);
 }
 
@@ -1082,6 +1089,311 @@ async function startDevMenu() {
   }
 }
 
+// ---------------------------------------------------------------------------
+// check-hashes：push 前预检托管文件的下载地址与 hash
+//
+// 背景：描述符里的 hash 与 CDN 实际内容不一致时，bkmpw 会重试后报
+// `error: install completed with errors` 并退出 2 —— CI 的 cache-seed 作业因此失败，
+// 而失败会跳过 actions/cache 的 post-save，于是每次 push 重复同一失败（P-168）。
+// 本命令把「地址可达 / 体积合理 / hash 对得上」在本地先过一遍。
+// ---------------------------------------------------------------------------
+const METADATA_ROOTS = [
+  'mods',
+  'mods/common',
+  'mods/client',
+  'mods/server',
+  'resourcepacks',
+  'shaderpacks',
+];
+const CURSEFORGE_CDN_PREFIXES = [
+  'https://edge.forgecdn.net/files',
+  'https://mediafilez.forgecdn.net/files',
+];
+const CHECK_HASHES_USER_AGENT = 'cdpr-devtool-check-hashes';
+
+function parseDownloadMetadata(text) {
+  const metadata = {
+    filename: null,
+    hashFormat: null,
+    hash: null,
+    url: null,
+    mode: null,
+    fileId: null,
+    projectId: null,
+  };
+  let section = '';
+  for (const rawLine of text.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith('#')) continue;
+    const header = line.match(/^\[([^\]]+)\]$/);
+    if (header) {
+      section = header[1];
+      continue;
+    }
+    const entry = line.match(/^([A-Za-z0-9_.-]+)\s*=\s*(.*)$/);
+    if (!entry) continue;
+    const key = entry[1];
+    const quoted = entry[2].trim().match(/^"((?:[^"\\]|\\.)*)"/);
+    const value = quoted ? quoted[1].replace(/\\(.)/g, '$1') : entry[2].trim();
+    if (section === '' && key === 'filename') metadata.filename = value;
+    else if (section === 'download') {
+      if (key === 'hash-format') metadata.hashFormat = value;
+      else if (key === 'hash') metadata.hash = value;
+      else if (key === 'url') metadata.url = value;
+      else if (key === 'mode') metadata.mode = value;
+    } else if (section === 'update.curseforge') {
+      if (key === 'file-id') metadata.fileId = value;
+      else if (key === 'project-id') metadata.projectId = value;
+    }
+  }
+  return metadata;
+}
+
+// 描述符只记 file-id + 文件名，下载地址要自己拼。CF 有两个 CDN 域名：
+// - edge.forgecdn.net 对「作者关闭第三方分发」的文件也返回 200；
+// - mediafilez.forgecdn.net 对这些文件返回 403（但历史上是默认域名）。
+// 另外这两个域名对带 Range 的请求会返回 404，所以这里一律用 HEAD 探测体积。
+function resolveDownloadUrls(metadata) {
+  if (metadata.url) return { urls: [metadata.url], source: 'url' };
+  if (metadata.fileId && metadata.filename) {
+    const id = String(metadata.fileId);
+    const suffix = `${id.slice(0, 4)}/${id.slice(4)}/${encodeURIComponent(metadata.filename)}`;
+    return { urls: CURSEFORGE_CDN_PREFIXES.map((prefix) => `${prefix}/${suffix}`), source: 'curseforge' };
+  }
+  return { urls: [], source: metadata.mode ?? '(未知)' };
+}
+
+function listManagedMetadataFiles() {
+  const files = new Set();
+  for (const root of METADATA_ROOTS) {
+    if (!fs.existsSync(path.join(repoRoot, root))) continue;
+    for (const relative of walkFiles(root)) {
+      if (relative.endsWith('.pw.toml')) files.add(relative);
+    }
+  }
+  return [...files].sort();
+}
+
+function listChangedMetadataFiles(ref) {
+  const pathspec = METADATA_ROOTS.filter((root) => fs.existsSync(path.join(repoRoot, root)));
+  const diff = run('git', ['diff', '--name-only', '--diff-filter=ACMR', `${ref}...HEAD`, '--', ...pathspec], {
+    stdio: 'pipe',
+    check: false,
+  });
+  if (diff.status !== 0) {
+    const reason = diff.error ? `无法执行 git：${diff.error.message}` : `git diff 退出码 ${diff.status}`;
+    throw new Error(`无法与 ${ref} 比较（${reason}）。先 git fetch 或换一个已存在的引用。`);
+  }
+  const untracked = run('git', ['ls-files', '--others', '--exclude-standard', '--', ...pathspec], {
+    stdio: 'pipe',
+    check: false,
+  });
+  const lines = `${diff.stdout ?? ''}\n${untracked.stdout ?? ''}`
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  return [...new Set(lines.filter((file) => file.endsWith('.pw.toml')))].sort();
+}
+
+async function probeRemote(urls) {
+  const attempts = [];
+  for (const url of urls) {
+    try {
+      const response = await fetch(url, {
+        method: 'HEAD',
+        headers: { 'user-agent': CHECK_HASHES_USER_AGENT },
+        redirect: 'follow',
+      });
+      const contentLength = response.headers.get('content-length');
+      const total = contentLength ? Number(contentLength) : null;
+      attempts.push(`${url} -> HTTP ${response.status}`);
+      if (response.ok) {
+        return { ok: true, url, total, attempts };
+      }
+    } catch (error) {
+      attempts.push(`${url} -> ${error.message}`);
+    }
+  }
+  return { ok: false, url: null, total: null, attempts };
+}
+
+async function downloadAndHash(url, hashFormat) {
+  const response = await fetch(url, {
+    headers: { 'user-agent': CHECK_HASHES_USER_AGENT },
+    redirect: 'follow',
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const buffer = Buffer.from(await response.arrayBuffer());
+  return {
+    size: buffer.length,
+    digest: createHash(hashFormat).update(buffer).digest('hex'),
+  };
+}
+
+function fileHash(filePath, hashFormat) {
+  return createHash(hashFormat).update(fs.readFileSync(filePath)).digest('hex');
+}
+
+function formatMegabytes(bytes) {
+  if (bytes === null || bytes === undefined) return '(未知)';
+  return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+}
+
+function parseCheckHashesArgs(args) {
+  const options = { full: false, changed: null, only: null };
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    if (arg === '--full') options.full = true;
+    else if (arg === '--changed') {
+      const next = args[index + 1];
+      if (next && !next.startsWith('--')) {
+        options.changed = next;
+        index += 1;
+      } else {
+        options.changed = 'origin/main';
+      }
+    } else if (arg.startsWith('--changed=')) {
+      options.changed = arg.slice('--changed='.length);
+    } else if (arg === '--only') {
+      options.only = args[index + 1] ?? null;
+      index += 1;
+      if (!options.only) throw new Error('--only 需要一个路径片段。');
+    } else if (arg.startsWith('--only=')) {
+      options.only = arg.slice('--only='.length);
+    } else {
+      throw new Error(`未知参数：${arg}（可用：--full / --changed [git-ref] / --only <路径片段>）`);
+    }
+  }
+  return options;
+}
+
+async function checkHashes(args) {
+  const options = parseCheckHashesArgs(args);
+  let targets = listManagedMetadataFiles();
+  const changed = options.changed ? new Set(listChangedMetadataFiles(options.changed)) : null;
+  if (changed) targets = targets.filter((file) => changed.has(file));
+  if (options.only) targets = targets.filter((file) => file.includes(options.only));
+
+  if (targets.length === 0) {
+    writeInfo(
+      changed
+        ? `与 ${options.changed} 相比没有改动的描述符，无需预检。`
+        : '没有找到可预检的描述符。'
+    );
+    return;
+  }
+
+  // 刚改过描述符时默认深验（数量少、代价可控）：这类场景正是「记录下来的 hash 已经不对」的高发点。
+  const deepByDefault = Boolean(changed) && !options.full;
+  writeInfo(
+    `预检 ${targets.length} 个托管文件` +
+      `${options.full ? '（--full 全量深验）' : deepByDefault ? `（--changed ${options.changed}，改动项深验）` : '（快速检查）'}`
+  );
+
+  const failures = [];
+  const warnings = [];
+  let deepChecked = 0;
+  let index = 0;
+
+  for (const relativePath of targets) {
+    index += 1;
+    const prefix = `[${index}/${targets.length}] ${relativePath}`;
+    const metadata = parseDownloadMetadata(fs.readFileSync(path.join(repoRoot, relativePath), 'utf8'));
+    const { urls, source } = resolveDownloadUrls(metadata);
+
+    if (!metadata.filename || !metadata.hash || !metadata.hashFormat) {
+      warnings.push(`${prefix} 缺少 filename/hash，跳过（source=${source}）`);
+      writeWarn(`${prefix} 缺少 filename/hash，跳过`);
+      continue;
+    }
+    if (urls.length === 0) {
+      warnings.push(`${prefix} 推导不出下载地址（mode=${source}），跳过`);
+      writeWarn(`${prefix} 推导不出下载地址（mode=${source}），跳过`);
+      continue;
+    }
+
+    // 托管文件落点：mods/**/*.pw.toml 的 jar 都在 mods/ 下；resourcepacks / shaderpacks 的包就在自己目录。
+    const localDir = relativePath.startsWith('mods/') ? 'mods' : path.dirname(relativePath);
+    const localPath = path.join(repoRoot, localDir, metadata.filename);
+    const localExists = fs.existsSync(localPath);
+    let localSize = null;
+    let localDigest = null;
+    if (localExists) {
+      localSize = fs.statSync(localPath).size;
+      try {
+        localDigest = fileHash(localPath, metadata.hashFormat);
+      } catch (error) {
+        warnings.push(`${prefix} 本地文件读取失败：${error.message}`);
+      }
+    }
+
+    const remote = await probeRemote(urls);
+    if (!remote.ok) {
+      failures.push(`${prefix} 下载地址不可达（${remote.attempts.join('；')}）`);
+      writeFail(`${prefix} 下载地址不可达（${remote.attempts.join('；')}）`);
+      continue;
+    }
+    const remoteUrl = remote.url;
+
+    // 本地文件与描述符对不上时也深验：可能是本地还没 install-files（正常），
+    // 也可能是描述符里的 hash 本身就写错了（要让预检拦住的那种）。
+    const localMismatch = Boolean(localDigest) && localDigest !== metadata.hash;
+    const needDeep =
+      options.full ||
+      deepByDefault ||
+      localMismatch ||
+      !localExists ||
+      (remote.total !== null && localSize !== null && remote.total !== localSize);
+    if (needDeep) {
+      deepChecked += 1;
+      let downloaded;
+      try {
+        downloaded = await downloadAndHash(remoteUrl, metadata.hashFormat);
+      } catch (error) {
+        failures.push(`${prefix} 下载失败：${error.message}`);
+        writeFail(`${prefix} 下载失败：${error.message}`);
+        continue;
+      }
+      if (localMismatch) {
+        writeWarn(`${prefix} 本地文件与描述符不一致（本地 ${localDigest.slice(0, 12)}…），已改用深验判定`);
+      }
+      if (downloaded.digest !== metadata.hash) {
+        failures.push(
+          `${prefix} hash 不一致：描述符 ${metadata.hash} ≠ 远端 ${downloaded.digest}（${formatMegabytes(downloaded.size)}）`
+        );
+        writeFail(
+          `${prefix} hash 不一致：描述符 ${metadata.hash.slice(0, 12)}… ≠ 远端 ${downloaded.digest.slice(0, 12)}…`
+        );
+        continue;
+      }
+      writeSuccess(`${prefix} 深验通过 ${metadata.hashFormat}=${downloaded.digest.slice(0, 12)}… ${formatMegabytes(downloaded.size)}`);
+      continue;
+    }
+
+    const problems = [];
+    if (remote.total !== null && localSize !== null && remote.total !== localSize) {
+      problems.push(`远端体积 ${formatMegabytes(remote.total)} ≠ 本地 ${formatMegabytes(localSize)}`);
+    }
+    if (problems.length > 0) {
+      warnings.push(`${prefix} ${problems.join('；')}`);
+      writeWarn(`${prefix} ${problems.join('；')}`);
+    } else {
+      writeInfo(`${prefix} OK（远端 ${formatMegabytes(remote.total)}，本地 hash 一致）`);
+    }
+  }
+
+  console.log('');
+  for (const warning of warnings) writeWarn(warning);
+  for (const failure of failures) writeFail(failure);
+  if (failures.length > 0) {
+    writeFail(`预检失败：${failures.length} 个文件有问题（深验 ${deepChecked}/${targets.length}）。`);
+    process.exit(1);
+  }
+  writeSuccess(
+    `预检通过：${targets.length} 个文件（深验 ${deepChecked}）${warnings.length > 0 ? `，${warnings.length} 条提醒` : ''}。`
+  );
+}
+
 async function dispatch(command, rest) {
   switch (command) {
     case 'help':
@@ -1146,6 +1458,9 @@ async function dispatch(command, rest) {
       break;
     case 'generate-integrity-manifest':
       generateManifest();
+      break;
+    case 'check-hashes':
+      await checkHashes(rest);
       break;
     case 'set-version':
       setVersion(rest);

@@ -80,11 +80,14 @@
 node -e "fetch('https://api.modrinth.com/v2/project/irons-spells-n-spellbooks/version?game_versions=%5B%221.21.1%22%5D&loaders=%5B%22neoforge%22%5D',{headers:{'User-Agent':'x'}}).then(r=>r.json()).then(v=>console.log(v[0]?.version_number, v[0]?.files?.[0]?.filename))"
 # CurseForge（无需 key）：用源包描述符里的 project-id
 node -e "fetch('https://api.cfwidget.com/855414',{headers:{'User-Agent':'Mozilla/5.0'}}).then(r=>r.json()).then(j=>console.log(j.title, j.files.filter(f=>f.version==='1.21.1').map(f=>f.name)))"
-# 源包描述符里的 CF 项目号
-git -C D:\git-MC\CDR1201 show HEAD:mods/apotheosis.pw.toml | Select-String 'project-id|file-id'
+# 源包描述符里的 CF 项目号（<参考仓库> = 1.20.1 源包工作区，路径见不入库的 AGENTS.local.md）
+git -C <参考仓库> show HEAD:mods/apotheosis.pw.toml | Select-String 'project-id|file-id'
 ```
 
 > 注：`web_search` 工具当前 401（端点鉴权问题），所以本轮全部走 Modrinth API + cfwidget 直查。
+>
+> 另：描述符里的 hash 与 CDN 实际内容可能因上游重传而不一致（会让 CI 的 `cache-seed` 失败，见 `MIGRATION_LOG.md` P-168）；
+> 改动描述符后、push 前先跑 `devtool.bat check-hashes --changed`。
 
 ## 执行结果（2026-09-28，用户勾选，提交 `f19b339`）
 
