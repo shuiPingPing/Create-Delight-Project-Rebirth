@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T06:05:36Z",
+  "generatedAt": "2026-09-28T06:59:50Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -31,7 +31,6 @@
       "always_eat",
       "amendments",
       "anvilcore",
-      "apokinetics",
       "apollib",
       "apotheosis",
       "apothic_attributes",
@@ -1337,14 +1336,6 @@
     },
     {
       "side": "common",
-      "metadata": "mods/common/apokinetics.pw.toml",
-      "filename": "apokinetics-1.0.6.jar",
-      "modIds": [
-        "apokinetics"
-      ]
-    },
-    {
-      "side": "common",
       "metadata": "mods/common/apotheosis.pw.toml",
       "filename": "Apotheosis-1.21.1-8.9.0.jar",
       "modIds": [
@@ -2007,7 +1998,7 @@
     {
       "side": "common",
       "metadata": "mods/common/create-integrated-farming.pw.toml",
-      "filename": "create-integrated-farming-1.4.3.jar",
+      "filename": "create-integrated-farming-1.2.6.jar",
       "modIds": [
         "create_integrated_farming"
       ]
