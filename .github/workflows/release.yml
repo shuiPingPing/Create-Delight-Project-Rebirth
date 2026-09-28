@@ -1,226 +1,236 @@
+# 发布流水线。
+# 基准：上游 Jasons-impart/Create-Delight-Project-Rebirth 的 .github/workflows/release.yml
+# （2026-09-24 起本仓库直接采用上游这套，目的就是减少分叉、方便后续合并）。
+# 与上游的差异只有下面三处，改这个文件时请同步更新这段说明：
+#   1. 不发 CurseForge：去掉 `bkmpw export-curseforge` 步骤与 `--curseforge` 校验开关
+#      （本仓库没有 STUDIO_CURSEFORGE_API_KEY，也确定只发 GitHub Release）。
+#   2. 不跑 `bkmpw update create-delight-core`（该命令要走 CurseForge 查询、需要 key）；
+#      Core 版本由 `mods/common/create-delight-core.pw.toml` 决定，随提交走。
+#   3. Release 一律「测试版 / 预发布」：标题固定 `<tag> 测试版`、固定带 --prerelease，
+#      即使 pack 版本号不带 -testN 也只发测试版（本仓库约定：不发布正式版）。
+# 版本号规则（与上游一致）：pack/pack.toml 必须形如 vA.B.C.D 或 vA.B.C.D-testN；
+# 打 tag 前先用 `devtool.bat set-version <版本>` 同步并提交，tag 必须与 pack 版本完全一致。
 name: 发布版本
-
-# 触发方式：
-#   1. 推 tag（v0.1.0 / v0.2.0-test 等）-> 构建四份产物，并创建「草稿」GitHub Release 挂上资产
-#   2. 手动 workflow_dispatch            -> 只构建产物（workflow artifact），不创建 Release
-# 草稿 Release 需要人工确认后发布；**一律作为预发布（测试版）**：
-#   node scripts/release-publish.mjs --tag <tag>   （脚本固定 prerelease=true）
-#   或 gh release edit <tag> --draft=false --prerelease
 
 on:
   push:
+    branches:
+      - main
+      - test-*
     tags:
       - 'v*'
   workflow_dispatch:
-    inputs:
-      create_release:
-        description: 手动触发时也创建草稿 Release（默认只产出 workflow 产物）
-        type: boolean
-        default: false
-
-permissions:
-  contents: write
 
 concurrency:
-  group: release-${{ github.ref }}
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 env:
-  DIST_DIR: dist
+  BKMPW_PACKAGE: '@bro-know-my/packwiz@latest'
 
 jobs:
-  build:
-    name: 构建发布产物
+  metadata:
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 10
     outputs:
-      name: ${{ steps.meta.outputs.name }}
-      version: ${{ steps.meta.outputs.version }}
+      modpack_name: ${{ steps.read.outputs.name }}
+      modpack_version: ${{ steps.version.outputs.version }}
+      mc_version: ${{ steps.read.outputs.mc }}
+      neoforge_version: ${{ steps.read.outputs.neoforge }}
+      is_stable_release: ${{ steps.version.outputs.is_stable }}
     steps:
-      - name: 检出代码
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          submodules: false
-
-      - name: 安装 Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      - name: 安装 bkmpw
-        run: npm install -g @bro-know-my/packwiz
-
-      - name: 读取整合包名与版本
-        id: meta
-        run: node scripts/release-meta.mjs --ref "$GITHUB_REF_NAME" >> "$GITHUB_OUTPUT"
-
-      - name: 展开发布根目录文件
-        run: node scripts/devtool.mjs prepare-pack
-
-      - name: 环境自检
-        run: node scripts/devtool.mjs check
-
-      - name: 缓存已下载的模组文件
-        uses: actions/cache@v4
-        with:
-          path: |
-            mods
-            resourcepacks
-            shaderpacks
-            tacz
-          key: packwiz-${{ runner.os }}-${{ hashFiles('mods/**/*.pw.toml', 'resourcepacks/**/*.pw.toml', 'shaderpacks/**/*.pw.toml', 'tacz/**/*.pw.toml', '.packwizignore') }}
-          restore-keys: |
-            packwiz-${{ runner.os }}-
-
-      - name: 下载运行期模组文件
-        # 3 次尝试 / 每次间隔 15 秒，缓解 CurseForge 偶发限流
-        run: node scripts/devtool.mjs install-files-headless 3 15
-
-      - name: 校验完整性清单
+          sparse-checkout: pack/pack.toml
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+      - name: 读取 pack 信息
+        id: read
         run: |
-          node scripts/devtool.mjs generate-integrity-manifest
-          if ! git diff --exit-code -- kubejs/config/createdelightcore_pack_integrity_expected.json; then
-            echo "::error::kubejs/config/createdelightcore_pack_integrity_expected.json 与当前 mod 列表不一致；请在本地跑 devtool.bat generate-integrity-manifest 并提交后再发版"
+          name=$(grep -m1 '^name' pack/pack.toml | cut -d'"' -f2)
+          version=$(grep -m1 '^version' pack/pack.toml | cut -d'"' -f2)
+          mc=$(grep -m1 '^minecraft' pack/pack.toml | cut -d'"' -f2)
+          neoforge=$(grep -m1 '^neoforge' pack/pack.toml | cut -d'"' -f2)
+          echo "name=$name" >> $GITHUB_OUTPUT
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "mc=$mc" >> $GITHUB_OUTPUT
+          echo "neoforge=$neoforge" >> $GITHUB_OUTPUT
+      - name: 计算发布版本号与渠道
+        id: version
+        env:
+          PACK_VERSION: ${{ steps.read.outputs.version }}
+        run: |
+          set -euo pipefail
+          VERSION="$PACK_VERSION"
+          if [[ ! "$VERSION" =~ ^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(-test[0-9]+)?$ ]]; then
+            echo "pack/pack.toml version '$VERSION' 不符合 vA.B.C.D 或 vA.B.C.D-testN 格式" >&2
             exit 1
           fi
-
-      - name: 生成模组清单
-        run: node scripts/devtool.mjs modlist
-
-      - name: 导出发布产物（全量包 / 服务端包 / 下载型服务端包）
-        env:
-          PACK_NAME: ${{ steps.meta.outputs.name }}
-          VERSION: ${{ steps.meta.outputs.version }}
-        run: |
-          set -euo pipefail
-          mkdir -p "$DIST_DIR"
-          node scripts/devtool.mjs export-client "$DIST_DIR/Client-${PACK_NAME}-${VERSION}.zip"
-          node scripts/devtool.mjs export-server "$DIST_DIR/Server-${PACK_NAME}-${VERSION}.zip"
-          node scripts/devtool.mjs export-server-installer "$DIST_DIR/ServerInstaller-${PACK_NAME}-${VERSION}.zip"
-          # 整合包清单随 Release 一起给出，方便玩家核对模组与版本
-          cp -f docs/generated/modlist.md "$DIST_DIR/ModList-${PACK_NAME}-${VERSION}.md" 2>/dev/null || true
-          cp -f docs/generated/modlist.csv "$DIST_DIR/ModList-${PACK_NAME}-${VERSION}.csv" 2>/dev/null || true
-          ls -lh "$DIST_DIR"
-
-      - name: 收集诊断信息
-        if: always()
-        run: |
-          mkdir -p diagnostics
-          cp -f pack/pack.toml diagnostics/ 2>/dev/null || true
-          git status --short --untracked-files=all > diagnostics/git-status.txt || true
-          node -v > diagnostics/node.txt 2>&1 || true
-          npm -v >> diagnostics/node.txt 2>&1 || true
-          bkmpw --version >> diagnostics/node.txt 2>&1 || true
-
-      - name: 上传发布产物
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-assets
-          path: ${{ env.DIST_DIR }}/*
-          if-no-files-found: error
-          compression-level: 0
-
-      - name: 上传模组清单与诊断信息
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: modlist-and-diagnostics
-          path: |
-            docs/generated/
-            diagnostics/
-          if-no-files-found: warn
-          compression-level: 0
-
-  release:
-    name: 创建草稿 Release
-    needs: build
-    if: >-
-      github.ref_type == 'tag' ||
-      (github.event_name == 'workflow_dispatch' && inputs.create_release)
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
-    steps:
-      - name: 检出代码
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          submodules: false
-
-      - name: 安装 Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      - name: 下载发布产物
-        uses: actions/download-artifact@v4
-        with:
-          name: release-assets
-          path: ${{ env.DIST_DIR }}
-
-      - name: 生成更新说明
-        env:
-          VERSION: ${{ needs.build.outputs.version }}
-        run: |
-          set -euo pipefail
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            notes_ref="HEAD"
-          else
-            notes_ref="$GITHUB_REF_NAME"
-          fi
-          node scripts/release-notes.mjs --to "$notes_ref" --version "$VERSION" --repo "$GITHUB_REPOSITORY" > notes.md
-          cat notes.md
-
-      - name: 创建草稿 Release 并上传资产
-        env:
-          GH_TOKEN: ${{ github.token }}
-          VERSION: ${{ needs.build.outputs.version }}
-          PACK_NAME: ${{ needs.build.outputs.name }}
-        run: |
-          set -euo pipefail
-          tag="$GITHUB_REF_NAME"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            tag="$VERSION"
-          fi
-
-          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json isDraft >/dev/null 2>&1; then
-            is_draft=$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)
-            if [ "$is_draft" != "true" ]; then
-              echo "::error::Release $tag 已公开发布，不能覆盖；请换版本号后重试"
+          IS_STABLE=true
+          if [[ "$GITHUB_REF_TYPE" == "tag" ]]; then
+            if [[ "$GITHUB_REF_NAME" != "$VERSION" ]]; then
+              echo "tag '$GITHUB_REF_NAME' 与 pack/pack.toml version '$VERSION' 不一致，先运行 devtool set-version 并提交" >&2
               exit 1
             fi
-            echo "草稿 Release $tag 已存在，刷新发布说明后继续上传资产"
-            gh release edit "$tag" --repo "$GITHUB_REPOSITORY" --notes-file notes.md --prerelease
+            [[ "$VERSION" == *-test* ]] && IS_STABLE=false
           else
-            # 维护者要求：GitHub Release 一律作为「预发布 / 测试版」，不写「正式版」
-            gh release create "$tag" \
-              --repo "$GITHUB_REPOSITORY" \
-              --target "$GITHUB_SHA" \
-              --title "$tag 测试版" \
-              --notes-file notes.md \
-              --prerelease \
-              --draft
+            VERSION="${VERSION%-test*}-test-build-${GITHUB_RUN_NUMBER}"
+            IS_STABLE=false
           fi
+          if [[ "$IS_STABLE" == "true" ]]; then
+            echo "::warning::pack/pack.toml 版本 $VERSION 不带 -testN；按本仓库约定仍以「测试版 / 预发布」发布"
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "is_stable=$IS_STABLE" >> $GITHUB_OUTPUT
 
+  cache-seed:
+    needs: metadata
+    if: github.event_name == 'push' && github.ref_name == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 安装 bkmpw
+        run: npm install -g ${{ env.BKMPW_PACKAGE }}
+      - name: 展开本地发布文件并刷新索引
+        run: node scripts/devtool.mjs prepare-pack
+      - uses: actions/cache@v4
+        id: modjar-cache
+        with:
+          path: |
+            mods/*.jar
+            packwiz.json
+          key: mods-jars-${{ hashFiles('mods/**/*.pw.toml') }}
+          restore-keys: mods-jars-
+      - name: 同步托管文件（仅用于种缓存）
+        run: bkmpw install-files-headless . 3 10
+
+  build:
+    needs: metadata
+    if: github.event_name != 'push' || github.ref_name != 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      MODPACK_VERSION: ${{ needs.metadata.outputs.modpack_version }}
+      MODPACK_NAME: ${{ needs.metadata.outputs.modpack_name }}
+      MC_VERSION: ${{ needs.metadata.outputs.mc_version }}
+      NEOFORGE_VERSION: ${{ needs.metadata.outputs.neoforge_version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 安装 bkmpw
+        run: npm install -g ${{ env.BKMPW_PACKAGE }}
+      - name: 注入构建版本号
+        run: node scripts/devtool.mjs set-version "${MODPACK_VERSION}"
+      - name: 展开本地发布文件并刷新索引
+        run: node scripts/devtool.mjs prepare-pack
+      - uses: actions/cache@v4
+        id: modjar-cache
+        with:
+          path: |
+            mods/*.jar
+            packwiz.json
+          key: mods-jars-${{ hashFiles('mods/**/*.pw.toml') }}
+          restore-keys: mods-jars-
+      - name: 同步托管文件
+        run: bkmpw install-files-headless . 3 10
+      - name: 检查仓库结构
+        run: node scripts/devtool.mjs check
+      - name: 生成并校验完整性清单
+        run: |
+          node scripts/devtool.mjs generate-integrity-manifest
+          python3 scripts/validate-integrity-manifest.py
+      - name: 生成更新器发版信息
+        run: |
+          mkdir -p artifacts
+          jq -n \
+            --arg version "$MODPACK_VERSION" \
+            --arg commitId "$GITHUB_SHA" \
+            --arg minecraftVersion "$MC_VERSION" \
+            --arg neoforgeVersion "$NEOFORGE_VERSION" \
+            '{schemaVersion: 1, version: $version, commitId: $commitId, minecraftVersion: $minecraftVersion, neoforgeVersion: $neoforgeVersion}' \
+            > artifacts/release-info.json
+          cp artifacts/release-info.json config/createdelight_release_info.json
+          node scripts/devtool.mjs refresh
+      - name: 导出客户端全量包
+        run: bkmpw export-client . "artifacts/[Client-Full]${MODPACK_NAME}-${MODPACK_VERSION}.zip"
+      - name: 导出开箱即用服务端包
+        run: bkmpw export-server . "artifacts/[Server]${MODPACK_NAME}-${MODPACK_VERSION}.zip"
+      - name: 导出 bkmpw 下载型服务端安装包
+        run: bkmpw export-server-installer . "artifacts/[Server-Installer]${MODPACK_NAME}-${MODPACK_VERSION}.zip"
+      - name: 验证发布包内容
+        run: python3 scripts/validate-release-artifacts.py artifacts "$MODPACK_NAME" "$MODPACK_VERSION"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-packages
+          path: |
+            artifacts/*.zip
+            artifacts/release-info.json
+          if-no-files-found: error
+
+  release:
+    needs: [metadata, build]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: github.ref_type == 'tag'
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      MODPACK_VERSION: ${{ needs.metadata.outputs.modpack_version }}
+    steps:
+      - name: 创建或确认草稿 Release（固定预发布 / 测试版）
+        run: |
+          set -euo pipefail
+          if gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --json isDraft >/dev/null 2>&1; then
+            is_draft=$(gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)
+            if [[ "$is_draft" != "true" ]]; then
+              echo "Release $GITHUB_REF_NAME is already public" >&2
+              exit 1
+            fi
+            exit 0
+          fi
+          gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" \
+            --title "$GITHUB_REF_NAME 测试版" --generate-notes --draft --prerelease
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-packages
+          path: release-assets
+      - name: 上传 Release 资产至草稿
+        run: |
+          set -euo pipefail
           shopt -s nullglob
-          assets=("$DIST_DIR"/*)
-          if [ "${#assets[@]}" -eq 0 ]; then
-            echo "::error::没有可上传的产物"
+          assets=(release-assets/*.zip release-assets/release-info.json)
+          if [[ "${#assets[@]}" -ne 4 || ! -f release-assets/release-info.json ]]; then
+            echo "Expected 3 release archives and release-info.json, got ${#assets[@]} assets" >&2
             exit 1
           fi
           for asset in "${assets[@]}"; do
-            uploaded=false
-            for attempt in 1 2 3 4 5; do
-              if timeout 3600 gh release upload "$tag" "$asset" --repo "$GITHUB_REPOSITORY" --clobber; then
-                uploaded=true
+            # gh release upload 会把 [] 当作 glob；转义文件名中的方括号。
+            escaped_asset="${asset//[/\\[}"
+            escaped_asset="${escaped_asset//]/\\]}"
+            for attempt in {1..5}; do
+              if gh release upload "$GITHUB_REF_NAME" "$escaped_asset" --repo "$GITHUB_REPOSITORY" --clobber; then
                 break
               fi
-              echo "第 $attempt 次上传 $(basename "$asset") 失败，15 秒后重试"
+              if [[ "$attempt" == "5" ]]; then
+                echo "Failed to upload $(basename "$asset")" >&2
+                exit 1
+              fi
               sleep 15
             done
-            if [ "$uploaded" != "true" ]; then
-              echo "::error::上传 $(basename "$asset") 失败"
-              exit 1
-            fi
           done
-          echo "草稿 Release 已就绪：https://github.com/$GITHUB_REPOSITORY/releases"
+      - name: 公开 Release（预发布）
+        run: gh release edit "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --draft=false

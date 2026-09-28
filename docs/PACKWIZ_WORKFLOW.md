@@ -196,18 +196,25 @@ Linux/macOS：
 - NeoForge: `21.1.242`
 - Java: `21`
 
-## 本仓库的 CI 发版（与上游说明的差异）
+## 本仓库的 CI 发版
 
-`.github/workflows/release.yml` 是**本 fork 自己的实现**；上游 `docs/DevGuide.md` 的「CI 自动发版」一节
-描述的是上游那套流程，两者不一样，以本文件为准。
+`.github/workflows/release.yml` **直接采用上游那套**（2026-09-24 起，目的就是少分叉、方便以后合并），
+只在三处保留 fork 差异；上游 `docs/DevGuide.md` 的「CI 自动发版」一节描述的就是这套流程。
 
-- 触发：推 `v*` tag，或手动 `workflow_dispatch`（默认只出 workflow 产物，勾选才建草稿 Release）
-- 步骤：`prepare-pack` → `check` → `install-files-headless 3 15`（配 `actions/cache` 缓存已下载模组）→
-  `generate-integrity-manifest` 且必须与提交里的 `kubejs/config/createdelightcore_pack_integrity_expected.json` 一致
-  （不一致直接失败，需本地重生成后提交）→ `modlist` → 三条导出 → 上传产物
-- 产物：`Client-<name>-<ver>.zip`、`Server-…`、`ServerInstaller-…`、`ModList-….md` / `.csv`
-- **只发 GitHub Release**：不产出、不上传 CurseForge / Modrinth 等任何第三方平台
-  （`export-curseforge` 需要 CF API key，因此不进 CI，仅本地按需使用）
-- **Release 一律作为预发布（测试版）**：workflow 与 `scripts/release-publish.mjs` 都固定 `prerelease=true`
-- 发布：CI 建**草稿** Release 并挂资产 → 人工执行 `node scripts/release-publish.mjs --tag <tag>`（需 token）
-  或在网页上勾选 "Set as a pre-release" 后 Publish
+- 触发：
+  - 推 `v*` tag → 构建 + 建 Release（**固定测试版 / 预发布**，建完即公开，没有人工确认步骤）
+  - 推 `test-*` 分支 → 只构建（挂在 workflow artifact，不发 Release，用于验证流水线）
+  - 推 `main` → 只跑 cache-seed（预先缓存已下载的模组 jar，不发版）
+  - 手动 `workflow_dispatch` → 只构建
+- 版本号：`pack/pack.toml` 必须形如 `vA.B.C.D` 或 `vA.B.C.D-testN`（**四段式**，与上游一致）。
+  发版前用 `devtool.bat set-version <版本>` 同步 `pack/pack.toml` / `config/bcc-common.toml` /
+  `config/fancymenu/options.txt`，提交后再打**同名** tag——CI 会校验 tag 与 pack 版本一致，不一致直接失败。
+- 步骤：`metadata` → `set-version <构建版本>` → `prepare-pack` → `install-files-headless 3 10`
+  （配 `actions/cache` 缓存 `mods/*.jar`）→ `check` → `generate-integrity-manifest` +
+  `validate-integrity-manifest.py`（必须与提交里的 `kubejs/config/createdelight_pack_integrity_expected.json`
+  一致，不一致直接失败，需本地重生成后提交）→ 生成 `artifacts/release-info.json` 与
+  `config/createdelight_release_info.json` → 三条导出 → `validate-release-artifacts.py` 校验包内容 → 上传产物
+- 产物：`[Client-Full]<name>-<ver>.zip`、`[Server]-…`、`[Server-Installer]-…`、`release-info.json`
+- 与上游的三处差异：① **不发 CurseForge**（去掉 `export-curseforge` 与 `--curseforge` 校验开关）；
+  ② 不跑 `bkmpw update create-delight-core`（该命令走 CurseForge 查询、需要 key；Core 版本随描述符提交）；
+  ③ **Release 永远按「测试版 / 预发布」发布**（标题 `<tag> 测试版`、固定 `--prerelease`，即使版本号不带 `-testN`）

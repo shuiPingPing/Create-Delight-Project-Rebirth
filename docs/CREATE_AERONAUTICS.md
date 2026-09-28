@@ -157,5 +157,5 @@
 2. **依赖链是递进的**（waystones → balm 就是例子），升一个主 mod 往往带出一串。
 3. **优先看 JarJar 内嵌物**：`flywheel` / `simulated` 这类被内嵌的库版本，决定实际运行时行为。
 4. **新增附属后**：跑 `devtool.bat check`、进游戏看日志里有无 mixin/依赖 FATAL，
-   必要时更新 `kubejs/config/createdelightcore_pack_integrity_expected.json`。
+   必要时更新 `kubejs/config/createdelight_pack_integrity_expected.json`。
 5. **纯客户端渲染附属**记得标 `side = "client"`，避免进服务端包。
