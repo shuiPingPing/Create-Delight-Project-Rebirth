@@ -10,6 +10,20 @@
 > 其余时间不要中途更新，避免打断工作流（中途留痕写 `_dsh_tmp/`）。`AGENTS.md` 的「移植总账的更新时机」一节写明了同样要求。
 > 只写真实发生过的事，宁可少写也不写空话。
 
+## 0. 一页速览（2026-09-28 收工同步）
+
+| 项 | 状态 |
+| --- | --- |
+| 迁移规模 | CDR1201（1.20.1 Forge，3079 提交）→ CDR1211（1.21.1 NeoForge **21.1.242**，456 提交）；脚本覆盖约 41%，数据包 / 汉化 / 任务书 / 配置主体已迁 |
+| 当前包状态 | ✅ **能进游戏**（2026-09-28 15:03 实机验证到标题界面，错误分布与上次成功一致） |
+| 在位的大件 | Create Aeronautics 体系（本体 + 33 附属 + Sable）、Iron's Spells 系 3 个、Apotheosis 线 4 个、Core **2.0.0.7**、Drippy 加载屏、光影栈（Colorwheel + Complementary + Euphoria Patcher） |
+| 问题台账 | **166 条**（`P-001`~`P-166`）；今天本轮新增 11 条（P-156~P-166） |
+| 今天装了/升了什么 | 7 个新模组（法术系 `irons_spellbooks` 3.16.3 + `irons_lib` 2.2.0 + `farmers_spell` 1.0.5.1；Apotheosis 线 `Apotheosis` 8.9.0 + `ApothicSpawners` 1.4.0 + `ApothicEnchanting` 1.6.2 + `Patchouli` 93）、任务书 2 处、`forged_steel_ingot` 重复注册修复 |
+| 今天修掉的故障 | ① Drippy 早窗缺陷（P-162）② `forged_steel_ingot` 重复注册（P-163）③ Apokinetics × Apotheosis 8.9 签名不匹配（P-164，以移除收场）④ CSL 15.x × 早窗被禁用（P-165，回退 drippy） |
+| 两条硬约束 | ① **IF 1.4.x ↔ Drippy 早窗必崩**（1.4.2 / 1.4.3 实测）② **早窗不能不是 `drippy_early_window`**（全包只有 Drippy 提供 provider；改成别的值=禁用早窗 → CSL 15.x 崩） |
+| 暂缓项（等上游更新） | IF 1.4.3（真空收割机）、Apokinetics 1.0.6 → 详见 `PORT_BACKLOG.md`（含复活步骤与重新下载来源） |
+| 流程约定 | 崩溃时**先摘 Drippy 启动一次**看真凶再装回（`AGENTS.md`《崩溃排查的固定流程》）；移植总账**只在用户喊收工时**同步 |
+
 ## 1. 两侧仓库与基线（核对日：2026-09-28）
 
 ### 1.1 对照表
@@ -100,7 +114,8 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 09-24 白天 | **发布体系**：建 GitHub Actions Release + Assets，tag `v0.1.0` 跑通并由用户发布（5 个资产） | `31d0a9a`、`699f315`、`8b17b86` | `.github/workflows/release.yml` |
 | 09-24 晚 | 合并上游 16 提交 + **Core 升 2.0.0.7**；修提交里的乱码文档 | `b1defb5` | `mods/common/create-delight-core.pw.toml` |
 | 09-24 晚 | 改用上游那套 `release.yml` + 版本号对齐四段式 `v2.0.0.0-test5`；顺带修完整性清单路径误伤 | `df2fc5e`、`782724c` | `.github/workflows/release.yml`、`pack/pack.toml` |
-| 09-28 | 航空学接入记录整理成文；README 加「仅供娱乐」说明；建立本总账并把「收工前更新」写进 `AGENTS.md` | `f990e66`、`4ca5922`、`9fadd15` | `docs/CREATE_AERONAUTICS.md`、`README.md`、本文件 |
+| 09-28 | 航空学接入记录整理成文；README 加「仅供娱乐」说明；建立本总账并把同步规则写进 `AGENTS.md` | `f990e66`、`4ca5922`、`9fadd15` | `docs/CREATE_AERONAUTICS.md`、`README.md`、本文件 |
+| 09-28（下午） | 核对 CDR1201 的 49 个新提交 → 出候选清单 → 按用户勾选移入 **Iron's Spells 系 3 个 + Apotheosis 线 4 个**；任务书 2 处；随后连遇 4 个启动故障（详见 §3 P-162~P-165）并全部处置，15:03 实机验证通过 | `f19b339`、`dc21f9c`、`97013d0`→`e848913`、`06a82c3`、`a89c29a`、`d7de143` | `mods/common/{irons-*,apotheosis,apothic-*,patchouli}.pw.toml`、`docs/PORT_BACKLOG.md` |
 
 ### 2.3 CDR1201 侧的新变化（2026-09-12 → 2026-09-27，**49 提交 / 556 文件**，尚未同步）
 
@@ -349,7 +364,9 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-161 | 源包 `create-integrated-farming` 曾被 pin 在 1.2.6（理由：新版要 Supplementaries 3.9.9 → NeoForge 247） | 1.4.3 里 `supplementaries` 已改成 **optional** dep，不再有硬约束 | 升级到 1.4.3（本仓 1.21.1 有该版本），`pin` 保留 | `mods/common/create-integrated-farming.pw.toml`、`f19b339` | 已解决 |
 | P-162 | 启动即崩：`ClassNotFoundException: de.keksuccino.drippyloadingscreen.neoforge.CustomLoadingOverlay`（Drippy 早窗） | **Drippy 自身缺陷**：`DrippyEarlyWindowProvider.updateModuleReads(ModuleLayer)` 完全忽略传入的 layer，改用 `Thread.currentThread().getContextClassLoader()` 加载自己主 jar 里的类（反汇编证据见 §5.4）；与 `Integrated Farming 1.4.3` 在位强相关 **3/3**，1.2.6 时 **2/2** 正常 | 先试过把 `earlyWindowProvider` 改回 `vanilla`，但那样 **CustomSkinLoader 会崩**（见 P-164 的姊妹问题，`NoClassDefFoundError: customskinloader/fake/itf/IFakeIResourceManager$V1`）→ **已回退为 `drippy_early_window`，并把 Integrated Farming 钉在 1.2.6** | `97013d0`（改 vanilla）→ `e848913`（回退）；`config/fml.toml`、`mods/common/create-integrated-farming.pw.toml` | 已绕开（两条约束见 §5.4） |
 | P-163 | 进到标题界面阶段崩：`screenshot_viewer` 报 `Cannot get config value before config is loaded`，日志前面是成片的 `Cowardly refusing to send event … to a broken mod state` | **真凶不是截图 mod**：`createdelightcore:forged_steel_ingot` 被注册两次 —— Core **2.0.0.7** 自己注册了它（jar 内有 model/texture/lang），而 P-021 时代 Core 2.0.0.6 缺它、我们用 `kubejs/startup_scripts/mods/createdelightcore/content_restore.js` 补回 → `Adding duplicate key … to registry` → 注册表 `Rolling back to VANILLA` → broken mod state | 删除该补回脚本（`life_matter` / `genetic_culture` 的补回保留，核对 Core 2.0.0.7 jar 后确认仍缺这两项） | `dc21f9c` | 已修 |
-| P-164 | 同上「broken mod state → screenshot_viewer 报错」的第二次出现（14:58） | **另一个真凶**：`apokinetics` 1.0.6 的 `apokinetics.mixins.json:GemCaseTileMixin` 注入 `dev.shadowsoffire.apotheosis.socket.gem.storage.GemCaseTile` 时 `InvalidInjectionException: Invalid descriptor`（`@Inject::apokinetics$reconcileAfterUpgrade` 的参数签名引用 Placebo 类，Apotheosis **8.9.0** 已改）→ `Failed to wait for future Mod Construction` → broken mod state。版本范围 `apotheosis [8.5.3,)` 满足但内部 API 已变 | **移除 Apokinetics**（其描述符与 jar 都移出；Apotheosis 保留 8.9.0，两边各自都是最新版，属上游未跟进）。想要这个桥接可把 Apotheosis 降到 8.7.0 再试 | `06a82c3` | 已修（移除） |
+| P-164 | 同上「broken mod state → screenshot_viewer 报错」的第二次出现（14:58） | **另一个真凶**：`apokinetics` 1.0.6 的 `apokinetics.mixins.json:GemCaseTileMixin` 注入 `dev.shadowsoffire.apotheosis.socket.gem.storage.GemCaseTile` 时 `InvalidInjectionException: Invalid descriptor`（宿主方法少了 `Container` 参数，见 P-166）→ `Failed to wait for future Mod Construction` → broken mod state。版本范围 `apotheosis [8.5.3,)` 满足但内部 API 已变 | **移除 Apokinetics**（描述符与 jar 都移出；Apotheosis 保留 8.9.0）。**逐个版本反编译确认**：8.6.0 / 8.6.1 / 8.7.0 / **8.8.0** 都还带 `Container`，8.9.0 起没了 → 想保留这个桥接应把 Apotheosis 钉 **8.8.0**（不是 8.7.0） | `06a82c3`、`66729b8`（更正） | 已修（移除，暂缓等上游） |
+| P-165 | 摘掉 Drippy 后启动仍崩：`NoClassDefFoundError: customskinloader/fake/itf/IFakeIResourceManager$V1`（CSL patch `ResourceManager` 时） | **不是 Drippy 的锅**：`config/fml.toml` 里 `earlyWindowProvider` 只能是 `drippy_early_window`——全包扫过只有 `drippyloadingscreen-earlywindow` 提供 `ImmediateWindowProvider`（Sodium 只提供 bootstrapper），改成任何其它值（包括 `vanilla`）都会 `Failed to find ImmediateWindowProvider …, disabling`（早窗被整个禁用）→ **CSL 15.x 的 fake-interface patch 依赖早窗阶段建立的模块读取，缺了就崩**。（历史对照：CSL 14.28 时代早窗同样被禁用也不崩，fake-interface 是 15.x 才有的。） | 恢复 `drippy_early_window` + 把 Drippy 两个 jar 放回；**结论：Drippy 是本包的承重墙，不能摘**，「摘 Drippy 换 vanilla 早窗」这条绕行路封死 | `a89c29a`、`d7de143`；`config/fml.toml` | 已修（回退） |
+| P-166 | Apokinetics 的注入签名判定 | `GemCaseTile#upgradeGem` 在 Apotheosis 8.9.0 由 `(DynamicHolder, Purity, Container)` 改为 `(DynamicHolder, Purity)` | 记录为「宿主内部签名变更导致 mixin 附属失效」的又一实例（同 P-001 / P-003 / P-094） | `66729b8`；`_dsh_tmp/apo-versions/` | 已记录 |
 
 ### 3.10 源包侧新问题（来自 CDR1201 的 49 个新提交，作为同步参考）
 
@@ -399,7 +416,10 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 默认启用 7 个补搬的材质包 + FPS 显示随包默认 | 台账 §8.16/§8.31 |
 | CDR1201 与上游仓库**只读**（越界一次已撤销） | P-110、`AGENTS.md` |
 | 每轮收工前更新并提交本文件 | `AGENTS.md`「收工前必做」 |
-| **移入 Iron's Spells 体系 + Apotheosis 线 + Integrated Farming 升级**（8 个新模组，见 `docs/PORT_BACKLOG.md`） | 2026-09-28 用户勾选，提交 `f19b339` |
+| **移入 Iron's Spells 体系 + Apotheosis 线**（`f19b339`，其中 Integrated Farming 升级后被回退、Apokinetics 后被移除） | 2026-09-28 用户勾选 |
+| **移植总账只在用户喊收工时同步**（不再每轮收工即更新） | 2026-09-28 用户要求，见 `AGENTS.md` |
+| **崩溃排查固定流程：先临时摘掉 Drippy 启动一次看真凶，再装回** | 2026-09-28 用户要求，见 `AGENTS.md` |
+| **IF 1.4.x 与 Apokinetics 都先等上游更新**，不降级 Drippy / Apotheosis 等宿主 mod | 2026-09-28 用户决定，见 `PORT_BACKLOG.md` |
 
 ### 4.3 其它挂账（战役 4/5 与待拍板项）
 
@@ -422,7 +442,10 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | **`cdr-updater`（Go 更新服务器 + jar 客户端）** | 在源包 `.agents/skills/release/cdr-updater-go/`（93 文件）；本仓目前是 Core + `release-info.json` 的更新链路，需评估是否对齐或借鉴 |
 | **PCL2 包瘦身做法**（列 CF mod 而不打包 jar，#2333） | 与本仓 P-099（`Install-PCL.ps1` 必然失败）相关，可作为修复参考 |
 | **FancyMenu 主菜单改动**（title 纹理/布局/随机彩蛋/节日灯带） | 与 §4.3 的 UI 待办（标题图响应式、背景色、中文 hoverlabel）同题，可直接参考源包做法 |
-| **Apotheosis / JEI 排序 / Crash Assistant 配置** | 本仓没装 Apotheosis（配置不适用）；`config/jei/recipe-category-sort-order.ini` 与 Crash Assistant 基线可对照 |
+| **Apotheosis / JEI 排序 / Crash Assistant 配置** | ✅ Apotheosis 已于 2026-09-28 装入（8.9.0 + 3 个官方模块 + Patchouli）；源包的 `config/apotheosis/names.cfg`、JEI 排序、Crash Assistant 基线可作后续对照（本仓 JEI 文件 mod 集不同） |
+| **暂缓①：Integrated Farming 1.4.x**（目的＝真空收割机 Vacuum Harvester） | 等上游（Drippy 或 IF）更新。已实测：1.4.2 / 1.4.3 都崩 Drippy 早窗；「摘掉 Drippy 换 vanilla 早窗」也已排除（P-165）。复活步骤与重新下载来源见 `PORT_BACKLOG.md` |
+| **暂缓②：Apokinetics 1.0.6**（Create×Apotheosis 联动） | 等作者跟进 Apotheosis ≥8.9 的内部签名；若要现在就用，把 Apotheosis 钉 **8.8.0**（P-164/P-166）。同上见 `PORT_BACKLOG.md` |
+| **未验证的新选项：把 CustomSkinLoader 降到 14.x** | 历史日志显示 CSL 14.28 在「早窗被禁用」时也不崩（15.x 才引入 fake-interface）。若将来一定要「无 Drippy 早窗」（例如为了 IF 1.4.x），可试这条路，代价是皮肤 mod 变旧且需实测 |
 
 ## 5. 日志噪音基线（判断「是不是新问题」的参照）
 
@@ -497,6 +520,9 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
   所以当前**两条实测约束**：① `Integrated Farming 1.4.3` ↔ Drippy 早窗崩；② `vanilla` 早窗 ↔ CSL 崩。
   **采用的组合**：`drippy_early_window` + Integrated Farming 1.2.6（提交 `e848913`）。
 - 处置：保持 `config/fml.toml` 的 `earlyWindowProvider = "drippy_early_window"`（注意：NeoForge 会在启动时**重写该文件并抹掉注释**，所以解释只能留在文档里）。
+- **它不是可选值**（2026-09-28 补测）：扫全包 `mods/**.jar`，提供 `net.neoforged.neoforgespi.earlywindow.ImmediateWindowProvider` 的**只有** `drippyloadingscreen-earlywindow`（Sodium 只提供 `GraphicsBootstrapper`）。所以这个配置项只有两种结局：`drippy_early_window`（成功）或**任何其它值 → `Failed to find ImmediateWindowProvider …, disabling`（早窗整个被禁用）**；`"vanilla"` 也不是有效值。
+- **为什么不能没有早窗**（P-165）：CSL **15.x** 的 `interface-patch`（把 `ResourceManager` 打上 fake 接口）依赖早窗阶段建立的模块读取；早窗一禁用就 `NoClassDefFoundError: …IFakeIResourceManager$V1`（类其实在 CSL 释放的 `CustomSkinLoader/Core/CustomSkinLoader-Common.jar` 里，98 条目齐全）。历史对照：CSL **14.28** + 早窗禁用（09-18 / 09-20）不崩，因为 fake-interface 是 15.x 才引入的。
+  → **Drippy 是本包（Drippy 加载屏 + CSL 15.x）的承重墙**：既提供加载屏，又提供 CSL 需要的早窗环境，不能摘。
 - ✅ **验证（2026-09-28 15:03）**：以上配置实机启动成功（`Sound engine started`、Iris 为 overworld 建管线）。
   错误分布与 09-24 成功那次逐项一致（`attributeslib` 12/12、`Failed to load config provider from mod` 1/1、
   `statbar` 3/3、`Invalid path` 30/31；FATAL 仅 ModernUI 的 `OK` 那条已知噪音）→ **无新增错误类目**。
@@ -517,6 +543,7 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
 | 2026-09-28（第四轮） | 按用户勾选执行移入：8 个新模组（Iron's Spells 系 3 个 + Apotheosis 线 4 个 + Apokinetics）+ Integrated Farming 升 1.4.3；任务书 2 处文案/结构更新；完整性清单重生成（common 424→432）。同时纠正两个认知（裸 versionRange 的宽松语义 P-159、任务书文本在 lang 文件 P-160） | `f19b339` |
 | 2026-09-28（第五轮·故障排查） | 用户连续导出 3 次崩溃日志，定位出两个独立故障：① Drippy 早窗缺陷（P-162，反汇编坐实，与 IF 1.4.3 强相关）→ 早窗 provider 改回 vanilla；② `forged_steel_ingot` 重复注册（P-163，Core 2.0.0.7 已自带而我们仍在 KubeJS 补回）→ 删除补回脚本。排查方法沉淀为 §5.4/§5.5 | `dc21f9c`、`97013d0`；证据脚本 `_dsh_tmp/{modset-diff.py,extract-first-error.py,drippy-disasm}` |
 | 2026-09-28（第六轮·继续排查） | ① 发现 `vanilla` 早窗会连带崩 CustomSkinLoader → 回退为 `drippy_early_window` 并把 Integrated Farming 钉回 1.2.6（两条实测约束记入 §5.4）；② 定位并移除 Apokinetics（P-164，其 mixin 与 Apotheosis 8.9.0 内部 API 不匹配）；③ 完整性清单重生成（common 431）；④ **15:03 实机启动成功**，错误分布与上次成功逐项一致（无新增噪音类目） | `e848913`、`06a82c3`、`eddef52` |
+| 2026-09-28（第七轮·收工同步） | ① 按用户新流程试 IF 1.4.2（含真空收割机）：**同样崩 Drippy 早窗** → 判定整条 1.4.x 线冲突，回退 1.2.6；② 按「崩溃先摘 Drippy」流程实测：摘掉两个 Drippy jar + provider 设 vanilla 后 **CSL 15.x 照样崩** → 顺查清「全包只有 Drippy 提供早窗 provider、`vanilla` 是无效值、CSL 15.x 依赖早窗」（P-165）；③ 查明 Apokinetics 的确切断点（`GemCaseTile#upgradeGem` 在 8.9.0 少了 `Container`，钉 8.8.0 可兼容）；④ 流程与文档同步：`AGENTS.md` 新增《崩溃排查的固定流程》并把总账同步改为「用户喊收工才做」 | `578f733`、`4ad4714`、`7b12c93`、`a89c29a`、`d7de143`、`66729b8` |
 
 ## 7. 附录：仓内文档索引
 
@@ -527,7 +554,7 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
 | `PACKWIZ_WORKFLOW.md` | 171 | bkmpw 工作流与 CI 发版说明（含与上游的三处差异） |
 | `CREATE_AERONAUTICS.md` | 161 | 航空学体系接入记录（33 附属 / 依赖链 / 6 个启动坑） |
 | `MOD_UPDATE_COMPATIBILITY.md` | 97 | 上游升级后的兼容性 pin 清单与原因 |
-| `PORT_BACKLOG.md` | 114 | **移植候选清单**：模组类/更新类/修复类的 1.21.1 可用性核实、逐条建议与执行结果（含两个判据发现） |
+| `PORT_BACKLOG.md` | 163 | **移植候选清单 + 暂缓项**：模组类/更新类/修复类的 1.21.1 可用性核实、逐条建议、执行结果、两条暂缓项的复活条件与重新下载来源 |
 | `FTBQUESTS_MIGRATION.md` | 260 | 任务书迁移的做法与坑 |
 | `HOTAI_MIXIN_OVERRIDES.md` | 27 | hotai 的 mixin 覆盖说明 |
 | `未安装mod清单.md` | 61 | 1.21.1 侧没有对应版本的 mod 及替代方案 |
