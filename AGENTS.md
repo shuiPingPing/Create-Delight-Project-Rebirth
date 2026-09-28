@@ -32,6 +32,21 @@ Shared repository skills live under `.agents/skills/`.
 4. Port KubeJS by layer: utilities, registrations, tags, recipes, client scripts, then optional integrations.
 5. Verify with server boot or focused reload after each layer.
 
+## 崩溃排查的固定流程（用户要求，2026-09-28）
+
+一旦启动崩溃，**先做这一步排除干扰，再谈真凶**：
+
+1. **临时移除 Drippy**：把两个 `mods/drippyloadingscreen*.jar` 移出 `mods/`，并把 `config/fml.toml` 的
+   `earlyWindowProvider` 改成 `vanilla`。理由：Drippy 的早窗崩溃发生在 mod 加载**之前**，会把真正的错误完全挡住
+   （本项目已两次被它误导）。
+   - 注意：缺 jar 会让 `devtool generate-integrity-manifest` 报「受管理 mod jar 缺失」→ 要么先跑清单再移 jar，
+     要么把 `mods/client/drippy-*.pw.toml` 两个描述符也一起临时移出（测试完一起放回）。
+2. 让用户**启动一次**，然后同时看 `logs/latest.log` 与 `logs/stderr_stream.log` 里的**第一个 ERROR**（那才是真凶；
+   后面的 `screenshot_viewer` 配置报错、`Cowardly refusing … broken mod state` 之类多是次生现象）。
+3. **查完把 Drippy 加回来**：两个 jar 放回 `mods/`、`earlyWindowProvider` 改回 `drippy_early_window`、
+   描述符放回、重生成完整性清单。
+4. 结论记进 `docs/PORT_BACKLOG.md` 或（收工同步时）`docs/MIGRATION_LOG.md`。
+
 ## 移植总账的更新时机（用户要求，2026-09-28 修订）
 
 **只在用户明确说「今天到此」「今天先到这」这类结束语时**，才更新 `docs/MIGRATION_LOG.md` 并提交推送。做法：
