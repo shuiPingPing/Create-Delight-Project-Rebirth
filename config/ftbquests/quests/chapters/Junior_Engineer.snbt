@@ -1236,18 +1236,11 @@
 			hide_until_deps_complete: true
 			id: "630FA0478B7DAAAA"
 			size: 1.0d
-			tasks: [
-				{
-					id: "574A5F305CD2C196"
-					item: { count: 1, id: "createfluidstuffs:bucket" }
-					type: "item"
-				}
-				{
-					id: "26FD9BF000DE9F1C"
-					item: { count: 1, id: "createfluidstuffs:jar" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "15073BB6C6878BA7"
+				item: { count: 1, id: "fluidlogistics:copper_bucket" }
+				type: "item"
+			}]
 			x: 1.0d
 			y: 1.0d
 		}
