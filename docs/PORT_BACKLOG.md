@@ -138,7 +138,7 @@ git -C D:\git-MC\CDR1201 show HEAD:mods/apotheosis.pw.toml | Select-String 'proj
 | 项 | 它能带来什么 | 现在为什么没上 | 复活条件 / 动作 |
 | --- | --- | --- | --- |
 | **Create: Integrated Farming 1.4.3** | 主要是 **Vacuum Harvester（真空收割机）**——自动收割作物（1.4.3 修的就是它的水稻收割）；另加更多物种与兼容栖架变体 | 「IF 1.4.3 ↔ Drippy 早窗必崩」3/3 复现，故钉在 1.2.6（栖架 + 渔网都在，只缺新机器） | Drippy 或 IF 任一更新后再试：先 `1.4.2`、再 `1.4.3`；或改 vanilla 早窗（但需先解决 CSL 那关）。jar 与 1.4.2 都在 `_dsh_tmp/bisect-held/` |
-| **Apokinetics 1.0.6** | Create×Apotheosis 联动：12 颗 Apotheosis 宝石（迅捷/平衡/精准/屈服/冲击/延展/点燃/霜工/流动/输送/动量/破裂）+ 动能台/动能塔/动能扳手/动能碎片 + 工厂定位器/扫描仪，并对接 Apotheosis 宝石盒 | 其 `GemCaseTileMixin` 与 Apotheosis **8.9.0** 内部方法签名不匹配（`InvalidInjectionException`）→ 移除 | 等 apokinetics 跟进 Apotheosis ≥8.9 的 API；或把 Apotheosis 降到 **8.7.0** 实测。描述符与 jar 都在 `_dsh_tmp/bisect-held/` |
+| **Apokinetics 1.0.6** | Create×Apotheosis 联动：12 颗 Apotheosis 宝石（迅捷/平衡/精准/屈服/冲击/延展/点燃/霜工/流动/输送/动量/破裂）+ 动能台/动能塔/动能扳手/动能碎片 + 工厂定位器/扫描仪，并对接 Apotheosis 宝石盒 | 其 `GemCaseTileMixin` 与 Apotheosis **8.9.0** 内部方法签名不匹配（`InvalidInjectionException`）→ 移除。**具体断点已查明**：`GemCaseTile#upgradeGem` 在 8.9.0 里把 `Container` 参数删了（`(DynamicHolder, Purity, Container)` → `(DynamicHolder, Purity)`），而 apokinetics 的注入方法仍按 3 参写 | 等 apokinetics 跟进 Apotheosis 8.9 的新签名；**若现在就想用，把 Apotheosis 钉到 `8.8.0`**（逐个版本反编译确认：8.6.0 / 8.6.1 / 8.7.0 / **8.8.0** 都还带 `Container`，8.9.0 起没了）。jar 在 `_dsh_tmp/{bisect-held,apo-versions}/` |
 
 > 复活任意一项时的动作：把描述符放回 `mods/common/`、jar 放回 `mods/` → `devtool.bat generate-integrity-manifest` → 启动验证（照 `MIGRATION_LOG.md` §5.5：同时看 `logs/latest.log` 与 `logs/stderr_stream.log`，并与上次成功日志做 jar 集合 diff）。
 
