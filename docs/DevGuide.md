@@ -373,9 +373,11 @@ roots/server/   # 只进入服务端全量包和下载型服务端安装包根�
 
 Modrinth export 已移除。导出产物默认不提交。
 
-> ⚠️ 本节描述的是**上游**的自动发版实现。本仓库当前用的是本 fork 自己的
-> `.github/workflows/release.yml`（bkmpw 原生导出 + 只发 GitHub Release + 一律预发布/测试版），
-> 以 `docs/PACKWIZ_WORKFLOW.md` 的「本仓库的 CI 发版」一节为准。
+> ℹ️ 本仓库自 2026-09-24 起**直接采用上游这套 `release.yml`**，只在三处保留 fork 差异：
+> ① 不发 CurseForge（去掉 `export-curseforge` 与 `--curseforge` 校验）；
+> ② 不跑 `bkmpw update create-delight-core`（走 CurseForge 查询、需要 key，Core 版本随描述符提交）；
+> ③ **Release 固定按「测试版 / 预发布」发布**（不上传正式版）。
+> 因此下文流程与本仓库实际执行一致；差异清单与产物名见 `docs/PACKWIZ_WORKFLOW.md` 的「本仓库的 CI 发版」。
 
 ## CI 自动发版
 
