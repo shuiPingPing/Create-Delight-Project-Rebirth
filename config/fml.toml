@@ -11,12 +11,7 @@ defaultConfigPath = "defaultconfigs"
 #Disables Optimized DFU client-side - already disabled on servers
 disableOptimizedDFU = true
 #Early window provider
-# 2026-09-28：改回 vanilla。Drippy 的早窗 provider 有代码缺陷（updateModuleReads 完全忽略
-# NeoForge 传入的 ModuleLayer，改用 Thread.getContextClassLoader() 去加载主 jar 里的
-# CustomLoadingOverlay），在 Integrated Farming 1.4.3 在位时必崩（3/3），换 1.2.6 才过。
-# 影响：失去「窗口早开 + 最早期那段定制加载画面」；Drippy 的正式加载屏（MixinLoadingOverlay /
-# CustomLoadingOverlay）不受影响。要恢复只需把这里改回 "drippy_early_window"。
-earlyWindowProvider = "vanilla"
+earlyWindowProvider = "drippy_early_window"
 #Early window width
 earlyWindowWidth = 854
 #Early window height
