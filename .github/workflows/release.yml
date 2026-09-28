@@ -3,7 +3,9 @@ name: 发布版本
 # 触发方式：
 #   1. 推 tag（v0.1.0 / v0.2.0-test 等）-> 构建四份产物，并创建「草稿」GitHub Release 挂上资产
 #   2. 手动 workflow_dispatch            -> 只构建产物（workflow artifact），不创建 Release
-# 草稿 Release 需要人工确认后发布：gh release edit <tag> --draft=false [--prerelease]
+# 草稿 Release 需要人工确认后发布；**一律作为预发布（测试版）**：
+#   node scripts/release-publish.mjs --tag <tag>   （脚本固定 prerelease=true）
+#   或 gh release edit <tag> --draft=false --prerelease
 
 on:
   push:
