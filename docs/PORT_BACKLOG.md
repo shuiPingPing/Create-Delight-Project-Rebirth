@@ -97,7 +97,7 @@ git -C D:\git-MC\CDR1201 show HEAD:mods/apotheosis.pw.toml | Select-String 'proj
 | A3 Farmer's Spell 'n Spell Book | ✅ 已装 `1.0.5.1-1.21.1` | Modrinth CDN（URL 描述符，无自动更新源） |
 | A5 Apotheosis | ✅ 已装 `1.21.1-8.9.0` + 前置 Apothic Spawners `1.4.0`、Apothic Enchanting `1.6.2`、Patchouli `1.21.1-93` | Placebo 9.9.2 / Apothic Attributes 2.10.1 本仓已有；Apotheosis 的 jar 只把 Placebo+Apothic Attributes 声明为 required，Patchouli 是 Modrinth 元数据里的 required（它的指南书需要），一并装了 |
 | A6 Create: Apokinetics | ✅ 已装 `1.0.6` | 要求 `create [6.0.10,6.1)` ✓、`apotheosis [8.5.3,)` ✓ |
-| B1 Create: Integrated Farming | ✅ 升到 `1.4.3`（CF 8937623，旧 1.2.6 jar 已删） | 1.4.3 里 `supplementaries` 是 **optional**（`[1.21.1-3.9.9,)`），所以当年「要 Supp 3.9.9→NeoForge 247」的 pin 理由不再成立；`pin = true` 保留 |
+| B1 Create: Integrated Farming | ✅ 升到 `1.4.3`（CF 8937623，旧 1.2.6 jar 已删） | 1.4.3 里 `supplementaries` 是 **optional**（`[1.21.1-3.9.9,)`），所以当年「要 Supp 3.9.9→NeoForge 247」的 pin 理由不再成立；`pin = true` 保留。⚠️ **副作用见 §Drippy**：1.4.3 在位时 Drippy 早窗必崩 |
 | C6 alexsmobs 禁用轻语灵/洞穴蜈蚣 | ✅ **无需改动**：本仓 `config/alexsmobsup.toml` 里 `caveCentipedeSpawnWeight` 与 `murmurSpawnWeight` 已经是 0 | 源包那次改动只是把 KubeJS 拦截换成配置；我们从来没迁过那个拦截脚本 |
 | C7 任务书 3 处 | ⚠️ 只落了 1 处 | ③ `630FA0478B7DAAAA`（Junior_Engineer）已把任务从 createfluidstuffs 桶/罐 改成 `fluidlogistics:copper_bucket`，文案同步；② 467AE0EF8AF5ACAF 的文案已更新；① Introduction 的官网二维码**本仓任务书里没有对应内容**（源包那是它自己官网/QQ 群的内容），未强搬 |
 | C1/C2 燃料桶脚本 | ⏸ 用户选择「先验证」，未动 | 见 §E-1 |
@@ -111,4 +111,16 @@ git -C D:\git-MC\CDR1201 show HEAD:mods/apotheosis.pw.toml | Select-String 'proj
 2. **任务书文案不在章节文件里**：1.21.1 的 FTB Quests 把文本放在 `config/ftbquests/quests/lang/en_us.snbt`（键形如 `quest.<id>.quest_desc` / `.title` / `.quest_subtitle`），章节 `.snbt` 只有结构（tasks / dependencies / 坐标 / 图标 / images）。改文案必须改 lang 文件。
 
 **待验证（重启游戏后）**：新模组能否正常加载（含 Apotheosis 首次生成配置、Patchouli 指南书）、法术系物品是否出现在创造栏/EMI、任务书那条任务的图标与文案是否正确、Integrated Farming 的水稻收割。
+
+### Drippy 早窗副作用（2026-09-28 追加）
+
+移入后首次启动即崩在 Drippy 早窗（`ClassNotFoundException: …CustomLoadingOverlay`）。A/B 对照：
+
+| 运行 | IF 版本 | 结果 |
+| --- | --- | --- |
+| 14:27 / 14:34 / 14:46 | **1.4.3** | ❌ 3/3 崩在早窗（`DrippyEarlyWindowProvider.updateModuleReads` 用线程上下文 CL 加载主 jar 的类） |
+| 14:38 | 1.2.6 | ✅ 早窗正常（该次是另一个问题——`forged_steel_ingot` 重复注册） |
+
+处置：**保留 1.4.3**，把 `config/fml.toml` 的 `earlyWindowProvider` 改回 `vanilla`（提交 `97013d0`）。代价只有「窗口早开 + 最早期定制画面」；恢复只需改回 `drippy_early_window`。若以后想同时要 1.4.3 与早窗，可退回 1.2.6（旧 jar 与 1.4.2 都在 `_dsh_tmp/bisect-held/`）。详见 `MIGRATION_LOG.md` §5.4/§5.5。
+
 
