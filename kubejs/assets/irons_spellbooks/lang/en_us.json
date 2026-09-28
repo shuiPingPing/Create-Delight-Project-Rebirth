@@ -3,5 +3,6 @@
   "effect.irons_spellbooks.raise_dead_timer": "Raise Dead (Time Remaining)",
   "effect.irons_spellbooks.summon_horse_timer": "Summon Horse (Time Remaining)",
   "effect.irons_spellbooks.summon_swords_timer": "Summon Swords (Time Remaining)",
-  "effect.irons_spellbooks.vex_timer": "Summon Vex (Time Remaining)"
+  "effect.irons_spellbooks.vex_timer": "Summon Vex (Time Remaining)",
+  "effect.irons_spellbooks.volt_strike": "Volt Strike"
 }

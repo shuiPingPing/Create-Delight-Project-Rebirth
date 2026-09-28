@@ -3,5 +3,6 @@
   "effect.irons_spellbooks.raise_dead_timer": "驱役亡灵（剩余时间）",
   "effect.irons_spellbooks.summon_horse_timer": "召唤骏马（剩余时间）",
   "effect.irons_spellbooks.summon_swords_timer": "召唤利剑（剩余时间）",
-  "effect.irons_spellbooks.vex_timer": "召唤恼鬼（剩余时间）"
+  "effect.irons_spellbooks.vex_timer": "召唤恼鬼（剩余时间）",
+  "effect.irons_spellbooks.volt_strike": "伏特打击"
 }
