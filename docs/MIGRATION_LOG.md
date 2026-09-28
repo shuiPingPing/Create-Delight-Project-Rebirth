@@ -2,8 +2,12 @@
 
 > CDR1201（1.20.1 Forge 源包）→ CDR1211（1.21.1 NeoForge 移植仓）整条迁移线的**总账**：
 > 迁移是怎么做的、踩过哪些坑、1.20.1 侧对应的 git 版本号、以及还没解决的事。
-> 逐日流水仍在仓库外的根文档（`D:\git-MC\移植台账.md`、`移植作战图.md`、`开发环境与工具链现状.md`），
+> 逐日流水仍在**仓库外**的根文档（`移植台账.md`、`移植作战图.md`、`开发环境与工具链现状.md`，位于工作区根目录），
 > 本文件是**汇总与检索入口**，冲突时以根文档的流水与代码/日志为准。
+>
+> **本文件与其它入库文档一律不写本机绝对路径**（用户要求，2026-09-28）：文中 `<本仓库>` = 本仓库工作区、
+> `<参考仓库>` = 1.20.1 源包工作区（只读）、`<实例目录>` = 客户端实例的 `.minecraft`；
+> 具体路径与环境变量写在**不入库**的 `AGENTS.local.md`。
 >
 > **维护约定（用户要求，2026-09-28 修订）**：**只在用户说「今天到此」「今天先到这」这类结束语时**才更新本文件并提交推送——
 > 新问题进 §3（编号顺延 `P-###`）、新工作阶段进 §2、遗留与决定进 §4、更新历史进 §6。
@@ -14,15 +18,17 @@
 
 | 项 | 状态 |
 | --- | --- |
-| 迁移规模 | CDR1201（1.20.1 Forge，3079 提交）→ CDR1211（1.21.1 NeoForge **21.1.242**，456 提交）；脚本覆盖约 41%，数据包 / 汉化 / 任务书 / 配置主体已迁 |
-| 当前包状态 | ✅ **能进游戏**（2026-09-28 15:03 实机验证到标题界面，错误分布与上次成功一致） |
+| 迁移规模 | CDR1201（1.20.1 Forge，3079 提交）→ CDR1211（1.21.1 NeoForge **21.1.242**，四段式版本 `v2.0.0.0-test5`）；脚本覆盖约 41%，数据包 / 汉化 / 任务书 / 配置主体已迁 |
+| 当前包状态 | ✅ **能进游戏，且创造模式可正常进世界**（2026-09-28 实机确认；此前创造模式进世界必崩，见 P-167） |
 | 在位的大件 | Create Aeronautics 体系（本体 + 33 附属 + Sable）、Iron's Spells 系 3 个、Apotheosis 线 4 个、Core **2.0.0.7**、Drippy 加载屏、光影栈（Colorwheel + Complementary + Euphoria Patcher） |
-| 问题台账 | **166 条**（`P-001`~`P-166`）；今天本轮新增 11 条（P-156~P-166） |
-| 今天装了/升了什么 | 7 个新模组（法术系 `irons_spellbooks` 3.16.3 + `irons_lib` 2.2.0 + `farmers_spell` 1.0.5.1；Apotheosis 线 `Apotheosis` 8.9.0 + `ApothicSpawners` 1.4.0 + `ApothicEnchanting` 1.6.2 + `Patchouli` 93）、任务书 2 处、`forged_steel_ingot` 重复注册修复 |
-| 今天修掉的故障 | ① Drippy 早窗缺陷（P-162）② `forged_steel_ingot` 重复注册（P-163）③ Apokinetics × Apotheosis 8.9 签名不匹配（P-164，以移除收场）④ CSL 15.x × 早窗被禁用（P-165，回退 drippy） |
+| 问题台账 | **170 条**（`P-001`~`P-170`）：上午一轮 P-156~P-166，本轮新增 **P-167~P-170** |
+| 今天装了/升了什么 | 7 个新模组（法术系 `irons_spellbooks` 3.16.3 + `irons_lib` 2.2.0 + `farmers_spell` 1.0.5.1；Apotheosis 线 `Apotheosis` 8.9.0 + `ApothicSpawners` 1.4.0 + `ApothicEnchanting` 1.6.2 + `Patchouli` 93）、任务书 2 处、`forged_steel_ingot` 重复注册修复、自制材质包 `no-vanilla-sun` 进包 |
+| 今天修掉的故障 | ① Drippy 早窗缺陷（P-162）② `forged_steel_ingot` 重复注册（P-163）③ Apokinetics × Apotheosis 8.9 签名不匹配（P-164，以移除收场）④ CSL 15.x × 早窗被禁用（P-165，回退 drippy）⑤ **创造模式进世界崩服**（P-167）⑥ **CI cache-seed 每次都失败**（P-168）⑦ 一批上游缺键/缺图（P-169）⑧ KubeJS 重复加入创造标签页（P-170） |
+| 今天的汉化/资源补齐 | Iron's Spellbooks 状态名与图标、Apotheosis 三件套 36 键、Iron's Lib 72 键、`createdelightcore` en_us 的 49 个 tip 键、`no-vanilla-sun` 材质包默认启用 |
 | 两条硬约束 | ① **IF 1.4.x ↔ Drippy 早窗必崩**（1.4.2 / 1.4.3 实测）② **早窗不能不是 `drippy_early_window`**（全包只有 Drippy 提供 provider；改成别的值=禁用早窗 → CSL 15.x 崩） |
 | 暂缓项（等上游更新） | IF 1.4.3（真空收割机）、Apokinetics 1.0.6 → 详见 `PORT_BACKLOG.md`（含复活步骤与重新下载来源） |
-| 流程约定 | 崩溃时**先摘 Drippy 启动一次**看真凶再装回（`AGENTS.md`《崩溃排查的固定流程》）；移植总账**只在用户喊收工时**同步 |
+| 流程约定 | 崩溃时**先摘 Drippy 启动一次**看真凶再装回（`AGENTS.md`）；**改过描述符、push 前跑 `devtool.bat check-hashes --changed`**（P-168 的教训）；移植总账**只在用户喊收工时**同步 |
+| 文档口径 | 入库文档一律不写本机绝对路径（用 `<本仓库>` / `<参考仓库>` / `<实例目录>` 占位，实际路径见不入库的 `AGENTS.local.md`） |
 
 ## 1. 两侧仓库与基线（核对日：2026-09-28）
 
@@ -30,7 +36,7 @@
 
 | 项 | CDR1201（源包，**只读**） | CDR1211（本仓，迁移产物） |
 | --- | --- | --- |
-| 本地路径 | `D:\git-MC\CDR1201` | `D:\git-MC\CDR1211` |
+| 本地路径 | `<参考仓库>`（1.20.1 源包，只读） | `<本仓库>`（迁移产物） |
 | GitHub remote | `shuiPingPing/Create-Delight-Remake` | `shuiPingPing/Create-Delight-Project-Rebirth` |
 | Minecraft / 加载器 | 1.20.1 / Forge **47.4.16** | 1.21.1 / NeoForge **21.1.242**（Java **21**） |
 | 包版本 | `v0.5.0.9-test`（`modpack.toml`，未变） | `v2.0.0.0-test5`（`pack/pack.toml`，四段式，与上游一致） |
@@ -39,12 +45,12 @@
 | tag | 无 tag（`git describe` 失败） | `v0.1.0`（唯一已推 origin 的 tag）、`v2.0.0.0-test1`~`test4`（上游 tag，仅本地）、`pre-upstream-20260920`（= `00a6873`，合并上游前的存档点） |
 | 包管理工具链 | 原生 `packwiz` + 自研 PowerShell 脚本 | `bkmpw` **0.1.1**（npm `@bro-know-my/packwiz`，CI 装 `@latest`）+ `devtool.mjs`（`devtool.bat` / `devtool.sh`） |
 | mod 元数据布局 | `mods/` 扁平 | `mods/common`、`mods/client`、`mods/server` 分层（+ `resourcepacks/`、`shaderpacks/` 的 `.pw.toml`） |
-| 客户端实例 | HMCL 里的 CDR1201 发布版实例 | HMCL 实例 `CDPR`：`E:\myWord\hcml\.minecraft\versions\CDPR` → **junction** → `D:\git-MC\CDR1211` |
+| 客户端实例 | HMCL 里的 CDR1201 发布版实例 | HMCL 实例 `CDPR`：实例目录 `<实例目录>/versions/CDPR`，与本仓库为**同一目录**（junction） |
 | 写权限 | **只读**（2026-09-22 用户明确要求：不改文件、不建分支、不提交、不推送、不建 PR/Issue） | 所有迁移产物落这里，提交信息里写明来源 |
 
 ### 1.2 CDR1201 各部门的 git 版本号（1.20.1 侧溯源）
 
-> 复现命令：`git -C D:\git-MC\CDR1201 log -1 --format='%h|%ad|%s' --date=short -- <路径>`
+> 复现命令：`git -C <参考仓库> log -1 --format='%h|%ad|%s' --date=short -- <路径>`
 > 说明：迁移**不是从某个固定 commit 拉分支**，而是持续读取 CDR1201 `main` 的工作区，
 > 所以下表是「核对日各来源目录最后变更的提交」＝当时看到的那一版的下界。
 > **核对日 2026-09-28（第二次，HEAD=`4c85c39c`）**；带 ★ 的是相比首次核对（`1b1b8b7e`）有推进的目录。
@@ -79,9 +85,9 @@
 
 ```powershell
 # 看某路径在源包上的历史
-git -C D:\git-MC\CDR1201 log --oneline -5 -- kubejs/server_scripts
-# 取当时的文件内容（只读读取，不要写入 CDR1201）
-git -C D:\git-MC\CDR1201 show 93f0b4da:kubejs/startup_scripts/creative_tab/<file>.js
+git -C <参考仓库> log --oneline -5 -- kubejs/server_scripts
+# 取当时的文件内容（只读读取，不要写入参考仓库）
+git -C <参考仓库> show 93f0b4da:kubejs/startup_scripts/creative_tab/<file>.js
 ```
 
 CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属正常——目录没动就不会有新提交。
@@ -116,6 +122,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 09-24 晚 | 改用上游那套 `release.yml` + 版本号对齐四段式 `v2.0.0.0-test5`；顺带修完整性清单路径误伤 | `df2fc5e`、`782724c` | `.github/workflows/release.yml`、`pack/pack.toml` |
 | 09-28 | 航空学接入记录整理成文；README 加「仅供娱乐」说明；建立本总账并把同步规则写进 `AGENTS.md` | `f990e66`、`4ca5922`、`9fadd15` | `docs/CREATE_AERONAUTICS.md`、`README.md`、本文件 |
 | 09-28（下午） | 核对 CDR1201 的 49 个新提交 → 出候选清单 → 按用户勾选移入 **Iron's Spells 系 3 个 + Apotheosis 线 4 个**；任务书 2 处；随后连遇 4 个启动故障（详见 §3 P-162~P-165）并全部处置，15:03 实机验证通过 | `f19b339`、`dc21f9c`、`97013d0`→`e848913`、`06a82c3`、`a89c29a`、`d7de143` | `mods/common/{irons-*,apotheosis,apothic-*,patchouli}.pw.toml`、`docs/PORT_BACKLOG.md` |
+| 09-28（晚） | ① 用户报「创造模式进世界崩」→ 定位为三个战利品箱 `string_id` 撞车（P-167，已修，用户实机确认可正常进游戏）② 补一批上游缺键/缺图（P-169）：Iron's Spellbooks 状态名+图标、Apotheosis 三件套、Iron's Lib、`createdelightcore` 的 en_us tip 键 ③ KubeJS 重复加入创造标签页（P-170）④ 用户报「CI 老卡在 cache-seed」→ 复现并定位为描述符 sha1 与 CurseForge 现字节不一致（P-168），修 hash 后 CI 转绿；新增 `devtool check-hashes` 预检 ⑤ 自制材质包 `no-vanilla-sun` 进包并默认启用 ⑥ 入库文档去掉本机绝对路径口径 | `67901bb`、`23e106b`、`9b23638`、`a0ada68`、`17715ba`、`116d5bc`、`d39d925`、`5d190d8`、`aeda017`、`4cf996e` | `config/ftbquests/quests/reward_tables/`、`kubejs/assets/*/lang/`、`kubejs/config/createdelight_pack_integrity.json`、`mods/common/irons-spellbooks.pw.toml`、`resourcepacks/no-vanilla-sun.zip`、`scripts/devtool.mjs` |
 
 ### 2.3 CDR1201 侧的新变化（2026-09-12 → 2026-09-27，**49 提交 / 556 文件**，尚未同步）
 
@@ -232,7 +239,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-046 | 转换任务图标退回 ✔ | 82 个转 checkmark 后 74 个没有 quest 级 icon | 补 75 个 quest icon | `scripts/restore-quest-icons.mjs` | 已修 |
 | P-047 | 深灰占位图标 430 处 | 1.21.1 缺 4 个 mod（tetra 系等） | 非迁移误伤，保守保留原 id | 台账 §8.3 | 已核实 |
 | P-048 | 「打开任务书即崩」为误判 | 把 ProbeJS 启动期 dump 的 FATAL 当成开书证据 | 反编译核实后恢复启用 | `6899385`（撤销移除） | 已订正 |
-| P-049 | ME 无限元件黑紫块 | ExtendedAE 改成 KubeJS 物品类型，缺 model/texture 任一项 | `cellModel` + `texture`，实际注册 44 个 | `2f9253e`；`eae/inf_cells.js`、`ae2/recipes/infinity_cell.js` | 未进游戏复验 |
+| P-049 | ME 无限元件黑紫块 | ExtendedAE 改成 KubeJS 物品类型，缺 model/texture 任一项 | `cellModel` + `texture`，实际注册 44 个 | `2f9253e`；`eae/inf_cells.js`、`ae2/recipes/infinity_cell.js` | 已复验（2026-09-28 用户确认无问题） |
 | P-050 | 图鉴 icon 找不到 | 引用了 1.21 已无的 `extendedae:infinity_cell` 等 | 改为存在物品，正文补说明 | `2f9253e`、`c76bd63` | 已修 |
 | P-051 | 汉化「包内缺键」口径严重高估 | 语言文件按 key 合并，mod 自带 `zh_cn` 兜底 | 有效中文 = 覆盖层 ∪ mod zh | 台账 §8.10；`verify-lang-overlays.mjs` | 已订正 |
 | P-052 | 汉化「0 英文」是假象 | 只比键集合、漏 `key.*`，没查值级 | 新扫描：46 ns / 141 键 | `scan-visible-english.mjs` | 已修 |
@@ -273,7 +280,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-077 | CI 首次运行失败（第 11 步导出） | `export-curseforge` 需要 `CURSEFORGE_API_KEY`，且与其余导出挤在同一步 | 拆成独立条件步骤 | `699f315` | 已修 |
 | P-078 | 不发布到第三方平台 | 用户 2026-09-24 要求 | CI 只出三份包（CF 步骤后来整体移除） | 台账 §8.35、`8b17b86` | 已落实 |
 | P-079 | Release 不再留草稿等人工发布 | 改用上游 `release.yml`（推 tag 即自动公开） | 固定 `--prerelease` + 标题「测试版」 | `df2fc5e` | 已落实 |
-| P-080 | `v0.1.0` 的徽标仍显示 Latest | 发布时未勾选预发布 | 网页 Edit 勾 "Set as a pre-release" | 台账 §8.39 | 遗留 |
+| P-080 | `v0.1.0` 的徽标仍显示 Latest | 发布时未勾选预发布 | 网页 Edit 勾 "Set as a pre-release" | 台账 §8.39 | 已修（2026-09-28 用户自行改掉） |
 | P-081 | 版本号三段式 vs 上游四段式 | `devtool set-version` 只接受四段式 | 对齐四段式 `v2.0.0.0-test5` | `df2fc5e`；`pack/pack.toml` | 已决定 |
 | P-082 | 完整性清单路径被误改 | `0d70170` 命名空间全局替换误伤文件名 | 改回 5+1+2 处并 `git mv` 重命名 | `df2fc5e` | 已修 |
 | P-083 | 两份中文文档被写成乱码 | PowerShell `Get-Content \| -replace \| Set-Content` 破坏编码 | 取上游干净版本覆盖 + 记教训 | `b1defb5`；`docs/DevGuide.md`、`docs/PACKWIZ_WORKFLOW.md` | 已修 |
@@ -298,7 +305,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-102 | Euphoria Patcher 版本必须与光影包对齐 | 版本号耦合 | 记配对规则（与 `ComplementaryUnbound_r5.9.3.zip` 成对） | `f833a26` | 已注意 |
 | P-103 | Windows 检出把文件变成 CRLF | 跨平台换行不一致 | `.gitattributes` 改 `* text=auto eol=lf` + `core.autocrlf false`，165 个文件物理转 LF | — | 已修（2 个运行期文件残留，不对抗） |
 | P-104 | 启动 OOM（Java heap） | HMCL `autoMemory` 开着导致 Xmx 飘（2.4g~6.5g），且重叠启动 | 关自动分配、固定 8G、别重叠启动 | — | 已注意 |
-| P-105 | Java 侧下载依赖需要代理 | 直连 `maven.neoforged.net` 不通（installer 吞异常会装出缺库坏环境） | Java 用 SOCKS5 `127.0.0.1:7897`；git 用 `-c http.sslBackend=openssl -c http.proxy=…` | — | 环境要求 |
+| P-105 | Java 侧下载依赖需要代理 | 直连 `maven.neoforged.net` 不通（installer 吞异常会装出缺库坏环境） | Java 侧走本机 SOCKS5 代理；git 用 `-c http.sslBackend=openssl -c http.proxy=…`（具体端口见 `AGENTS.local.md`，不写进入库文档） | — | 环境要求 |
 | P-106 | DSH 沙箱下 `git commit`/`push`/`devtool install-files` 失败 | 信号管道、凭据、PATH 等被沙箱限制 | 需放宽权限或到真实终端执行 | — | 环境限制 |
 | P-107 | PowerShell `>` 重定向写出 UTF-16 | bkmpw 报 `stream did not contain valid UTF-8` | 用显式 UTF-8 写文件 | — | 教训 |
 | P-108 | `git hash-object` 与内容 sha1 不一致 | 它给的是 blob 哈希 | 校验文件哈希用 `Get-FileHash -Algorithm SHA1` | — | 教训 |
@@ -356,8 +363,8 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-150 | 标题图过大、缺中文 hoverlabel | 固定 500×86（原图 2026×348）；v3 字段名未确认 | 改按屏幕宽比例缩放 | `config/fancymenu/assets/title.png` | 未做（等用户） |
 | P-151 | 任务书的 advancement 任务永远无法完成 | 只改了命名空间没改路径前缀（28 处） | 改为 `alexsmobsup:alexsmobsup/*` | `docs/FTBQUESTS_MIGRATION.md` §八/§十 | 已修 |
 | P-152 | 重跑任务书迁移脚本结果差 1 个文件 | `itemfilters` 图标必须在 `missing_item` 之前替换 | 把顺序写进文档；SHA256 80 文件一致 | `migrate-ftbquests.mjs` | 已修 |
-| P-153 | 完整性清单报 `Extra mods: drippyloadingscreen` | 装回 Drippy 后没重生成清单 | 跑 `devtool generate-integrity-manifest` | `696c22c` vs `47b5598` | 待办 |
-| P-154 | 完整性清单把本地 MCP 桥接报成 Extra mods | `mcpmod` 是本地调试用模组 | 发布/测试实例移除或登记 | 台账 §七、§10.6 | 待办 |
+| P-153 | 完整性清单报 `Extra mods: drippyloadingscreen` | 装回 Drippy 后没重生成清单 | 跑 `devtool generate-integrity-manifest` | 清单 `generatedAt=2026-09-28T07:31:31Z`，`client=86` 已含 `drippyloadingscreen` | 已修（自愈） |
+| P-154 | 完整性清单把本地 MCP 桥接报成 Extra mods | `mcpmod` 是本地调试用模组（随包不分发） | 写进 `kubejs/config/createdelight_pack_integrity.json` 的 `allowedExtraModIds`，客户端自检归入「Allowed extra mods」且不再弹警告屏 | `5d190d8` | 已修 |
 | P-155 | ProbeJS 只导出精简 dump | 411 个模组触发性能保护 | `/probejs config complete_dump` 后再 dump | `config/probe-settings.json` | 限制 |
 | P-159 | 误以为「裸版本号 versionRange（如 `4.7.5.1`）是精确匹配」，据此判定新模组装不了 | NeoForge 把裸版本号当「推荐版本」，是宽松语义（不含限制区间） | 实证：本仓 24 处同形声明都能正常启动（`dg_js` 要 kubejs build.321、实装 build.363；`createtransmission` 要 create 6.0.6、实装 6.0.10） | `_dsh_tmp/bare-versionrange-evidence.mjs`；`mods/common/irons-lib.pw.toml` | 判据 |
 | P-160 | 按 1.20.1 的做法改任务书章节文件里的文案，游戏里不会变 | 1.21.1 的 FTB Quests 文本存在 `config/ftbquests/quests/lang/en_us.snbt`（`quest.<id>.quest_desc` / `.title` / `.quest_subtitle`），章节 `.snbt` 没有文本字段 | 文案改 lang 文件；章节文件只改结构（tasks / dependencies / 坐标 / 图标） | `config/ftbquests/quests/lang/en_us.snbt`、`chapters/Junior_Engineer.snbt` | 判据 |
@@ -367,6 +374,10 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-164 | 同上「broken mod state → screenshot_viewer 报错」的第二次出现（14:58） | **另一个真凶**：`apokinetics` 1.0.6 的 `apokinetics.mixins.json:GemCaseTileMixin` 注入 `dev.shadowsoffire.apotheosis.socket.gem.storage.GemCaseTile` 时 `InvalidInjectionException: Invalid descriptor`（宿主方法少了 `Container` 参数，见 P-166）→ `Failed to wait for future Mod Construction` → broken mod state。版本范围 `apotheosis [8.5.3,)` 满足但内部 API 已变 | **移除 Apokinetics**（描述符与 jar 都移出；Apotheosis 保留 8.9.0）。**逐个版本反编译确认**：8.6.0 / 8.6.1 / 8.7.0 / **8.8.0** 都还带 `Container`，8.9.0 起没了 → 想保留这个桥接应把 Apotheosis 钉 **8.8.0**（不是 8.7.0） | `06a82c3`、`66729b8`（更正） | 已修（移除，暂缓等上游） |
 | P-165 | 摘掉 Drippy 后启动仍崩：`NoClassDefFoundError: customskinloader/fake/itf/IFakeIResourceManager$V1`（CSL patch `ResourceManager` 时） | **不是 Drippy 的锅**：`config/fml.toml` 里 `earlyWindowProvider` 只能是 `drippy_early_window`——全包扫过只有 `drippyloadingscreen-earlywindow` 提供 `ImmediateWindowProvider`（Sodium 只提供 bootstrapper），改成任何其它值（包括 `vanilla`）都会 `Failed to find ImmediateWindowProvider …, disabling`（早窗被整个禁用）→ **CSL 15.x 的 fake-interface patch 依赖早窗阶段建立的模块读取，缺了就崩**。（历史对照：CSL 14.28 时代早窗同样被禁用也不崩，fake-interface 是 15.x 才有的。） | 恢复 `drippy_early_window` + 把 Drippy 两个 jar 放回；**结论：Drippy 是本包的承重墙，不能摘**，「摘 Drippy 换 vanilla 早窗」这条绕行路封死 | `a89c29a`、`d7de143`；`config/fml.toml` | 已修（回退） |
 | P-166 | Apokinetics 的注入签名判定 | `GemCaseTile#upgradeGem` 在 Apotheosis 8.9.0 由 `(DynamicHolder, Purity, Container)` 改为 `(DynamicHolder, Purity)` | 记录为「宿主内部签名变更导致 mixin 附属失效」的又一实例（同 P-001 / P-003 / P-094） | `66729b8`；`_dsh_tmp/apo-versions/` | 已记录 |
+| P-167 | **选创造模式进世界即断线**：客户端 `ModLoadingException: Architectury … BuildCreativeModeTabContentsEvent: IllegalArgumentException: Itemstack 1 ftbquests:lootcrate already exists in the tab's list` | `config/ftbquests/quests/reward_tables/` 里三张表（order_index 21/22/23）都带 `loot_crate` 且 `string_id` 全是 `"_"`；`LootCrate.createStack()` 生成的是「同物品 + 同 `ftbquests:loot_crate` 组件」的相同 ItemStack，`ftb-quests` 经 architectury 插第二个箱子时触发 NeoForge 的重复断言。**触发条件**：只有创造权限变化时才会 `tryRebuildTabContents`（ProbeJS 在世界加入时调用），所以生存进服不炸——这解释了为什么 09-24 之前一直没暴露；`javap` 逐版核对证明 2101.1.24 与 2101.1.36 代码相同，**回退版本治不了**；CF 上 1.21.1 最新就是 2101.1.36 | 给三张表各自的 `string_id` 改成唯一值（`gate_pearl_crate_21/22/23`），内容与颜色不变 | `67901bb`；`config/ftbquests/quests/reward_tables/{3c245c81c249772b,2538494fc6e89c28,28fed68b293aac2f}.snbt` | 已修（用户实机确认可正常进游戏） |
+| P-168 | **CI `cache-seed` 作业每次 push 都失败**（exit 2、约 24 秒），表现为「老卡在 cache-seed」 | 描述符 `mods/common/irons-spellbooks.pw.toml` 记录的 sha1 是 CurseForge 早先那次上传的字节，而 CF **重传过同一个 file-id**（8680204）：现 CDN 稳定返回 `017fd814…`。`bkmpw install-files-headless` 校验 hash → 重试 3/3 仍失败 → `error: install completed with errors` → 作业失败会**跳过 `actions/cache` 的 post-save**，缓存不再更新，于是每次 push 重复同一失败。两份 jar 内容其实一致：4466 个条目 CRC32 全同、未压缩大小全同，仅 `META-INF/MANIFEST.MF` 的压缩长度差 1 字节、时间戳晚 2 分钟 | 描述符 hash 更新为 `017fd814…`（file-id/project-id 不变）；本机 jar 同步换成 CDN 现字节；**新增 `devtool.bat check-hashes [--full] [--changed [ref]] [--only <片段>]` 做 push 前预检**（CF 描述符按 `edge` → `mediafilez` 两个 CDN 域名用 HEAD 探测，深验时下载校验 hash） | `4cf996e`；`mods/common/irons-spellbooks.pw.toml`、`scripts/devtool.mjs`、`docs/PACKWIZ_WORKFLOW.md` | 已修（CI run `36405937541` 起成功） |
+| P-169 | 中文/英文界面出现原始键名或英文：EMI 的 `effect.irons_spellbooks.volt_strike`、5 个召唤计时状态的图标是品红黑格、Apothic Enchanting Table 等条目全英文、加载界面 tip 显示 `createdelightcore.tip.*` | **全部是上游缺键/缺图，不是本包汉化遗漏**：① irons_spellbooks 1.21.1-3.16.3 自带 en_us/zh_cn 都缺 6 个 `effect.*` 键、`textures/mob_effect/` 只有 31 张图（5 个计时状态没图）② Apotheosis 三件套自带 zh_cn 只是部分翻译（apothic_enchanting 缺 10、apotheosis 缺 24、apothic_attributes 缺 2）③ irons_lib 干脆没有 zh_cn（72 键）④ tipsmod 的 51 个 tip 文件引用 49 个去重键，只有 zh_cn 有文本 | 按本包 `kubejs/assets` 覆盖写法补齐：状态名 6 键 + 复用模组自带法术图标补 5 张 mob_effect 图；Apotheosis 三件套 36 键；Iron's Lib 72 键（另含 `irons_patreon_lib` 2 键）；`createdelightcore` en_us 49 个 tip 键（专有名词逐个按各 mod 自身 en_us 对齐） | `9b23638`、`a0ada68`、`17715ba`、`116d5bc`、`d39d925`；`kubejs/assets/{irons_spellbooks,apotheosis,apothic_enchanting,apothic_attributes,irons_lib,createdelightcore}/` | 已修 |
+| P-170 | 每次启动都有两条 KubeJS Startup 报错：`Itemstack 1 create_connected:fan_freezing_catalyst / create:chocolate_bucket already exists in the tab's list` | 1.20.1→1.21.1 迁移遗留：1.21.1 的 create 与 create_connected 已自带这些物品进创造标签页，脚本按 1.20.1 行为再 add 一次 → NeoForge 重复断言（KubeJS 只记日志、不致命，但会盖住后续脚本错误） | 两个 `creative_tab/*.js` 改成只留来源与原因注释，不再重复添加 | `23e106b`；`kubejs/startup_scripts/creative_tab/{create,create_connected}.js` | 已修 |
 
 ### 3.10 源包侧新问题（来自 CDR1201 的 49 个新提交，作为同步参考）
 
@@ -388,14 +399,14 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | Northstar 升级 0.6.3 | 被 Core 的 `TelescopeScreenMixin` 挡住，等 Core 适配；issue 草稿未提交 | P-069 |
 | Voxy / Roxy 方案 | 待用户选 A（Roxy+voxy）/ B（+Voxy Server Side）/ C（+Voxy WorldGen v2）/ D 先不动 | P-126 |
 | Cull Less Leaves 的 NeoForge 替代 | 已核实 3 个候选有 1.21.1 文件，未加 | P-015 |
-| `v0.1.0` Release 徽标 | 需网页勾选 pre-release；新 tag 由 CI 直接建预发布 | P-080 |
 | 旧数据包路径迁移后的内容 | 472 个文件尚未进游戏验证 | P-123 |
 | `rolled_polymer_sheet` 2 条配方 | 源包与 Core 都无该 id，等上游修 | P-022 |
 | client 侧 16 个非 ponder 脚本的判定 | 待逐个判定已由 Java 接管 / 应迁 / 放弃 | P-118 |
 | `Install-PCL.ps1` 与 `test_server/` | PCL 部署脚本必然失败、服务端 reload 验证跑不通，均未修 | P-099、P-100 |
-| ME 无限元件、A/B 组新 mod、simplehats 关掉落 | 需要重启进游戏复验 | P-049、P-064、P-124 |
+| A/B 组新 mod、simplehats 关掉落 | 需要重启进游戏复验 | P-064、P-124 |
 | 526 条缺贴图 / Core 缺图 | `createdelightcore:enchanted_golden_arbutus_berries` 确认 Core 缺图，未补 | P-065 |
-| `en_us` 49 个 tip 键、`zh_cn.snbt` 孤儿键、160 个 jar 无中文 | 低优先级，未处理 | P-120~P-122 |
+| `zh_cn.snbt` 孤儿键、160 个 jar 无中文 | 低优先级，未处理（`en_us` 的 49 个 tip 键本轮已补，P-121 → 已修） | P-120、P-122 |
+| **`scripts/` 下 18 个迁移期一次性脚本仍硬编码本机绝对路径** | 入库文档已按用户要求改成占位符（本轮完成），但这些脚本里还留着本仓库/参考仓库/实例目录的绝对路径；建议改成「从 `import.meta.url` 推导 + `CDPR_REF_REPO` / `CDPR_MC_HOME` 环境变量」，见 `AGENTS.md` 与不入库的 `AGENTS.local.md`。本轮未动，等用户点头 |
 | forge:* 标签中无 `c:` 对应的 | 已 REMAP 10 条，其余逐个决定删或落到自有命名空间 | P-029 |
 
 ### 4.2 已拍板的决定
@@ -420,13 +431,17 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | **移植总账只在用户喊收工时同步**（不再每轮收工即更新） | 2026-09-28 用户要求，见 `AGENTS.md` |
 | **崩溃排查固定流程：先临时摘掉 Drippy 启动一次看真凶，再装回** | 2026-09-28 用户要求，见 `AGENTS.md` |
 | **IF 1.4.x 与 Apokinetics 都先等上游更新**，不降级 Drippy / Apotheosis 等宿主 mod | 2026-09-28 用户决定，见 `PORT_BACKLOG.md` |
+| **上游 `release.yml` 保持最小分叉**：Cache-seed 的同步步骤**不加 `continue-on-error`**（用户 2026-09-28 决定「第一个不加，保持和上游一致」） | 2026-09-28 用户决定，本文件 §P-168 |
+| **新增 `devtool.bat check-hashes` 作为 push 前预检**（`--changed` 查改过的描述符并深验、`--full` 全量深验），写进 `AGENTS.md` / `docs/PACKWIZ_WORKFLOW.md` | 2026-09-28 用户要求，`4cf996e` |
+| **入库文档一律不写本机绝对路径**：用 `<本仓库>` / `<参考仓库>` / `<实例目录>` 占位，实际路径只放不入库的 `AGENTS.local.md` | 2026-09-28 用户要求 |
+| **自制材质包 `no-vanilla-sun.zip` 进包并默认启用**：`.gitignore` 单独白名单放行该 zip（随仓分发），`config/defaultoptions-common.toml` 的 `defaultResourcePacks` 追加 `file/no-vanilla-sun.zip`（只作用于首次运行，已有实例需手动勾选） | 2026-09-28 用户决定，`aeda017` |
 
 ### 4.3 其它挂账（战役 4/5 与待拍板项）
 
 | 条目 | 说明 |
 | --- | --- |
 | Accelerated Rendering（alpha）是否摘掉 | 它会顶掉 FTB 大地图，现用 `mods_compatibility.ftb_feature_status = DISABLED` 绕过；是否直接移除等用户定 |
-| `resourcepacks/no-vanilla-sun.zip` 是否正式进包 | 本地自制、未启用、不在描述符里 |
+| ~~`resourcepacks/no-vanilla-sun.zip` 是否正式进包~~ | ✅ 2026-09-28 已进包并默认启用（`aeda017`）：仓内分发 + `defaultResourcePacks` 追加 |
 | 战役 4 未做：iceandfire 的 25 个 biome json | 1.20.1 是 config json，1.21 要转 `biome_modifier`，且引用了未安装的 byg 群系，需转换 + 清理 |
 | config 整体 | 165 vs 282 的差异多为「模组绑定型」，**几乎没有现在能做的批量拷贝** |
 | B 类真缺失的 13~14 个 mod | 仍需逐个「找替代 / 放弃」；**替代映射 24 条无方案＝当前最大空白**，建议按体系整体决策（枪械线换哪套 / tetra 6.x 内置多少） |
@@ -544,6 +559,7 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
 | 2026-09-28（第五轮·故障排查） | 用户连续导出 3 次崩溃日志，定位出两个独立故障：① Drippy 早窗缺陷（P-162，反汇编坐实，与 IF 1.4.3 强相关）→ 早窗 provider 改回 vanilla；② `forged_steel_ingot` 重复注册（P-163，Core 2.0.0.7 已自带而我们仍在 KubeJS 补回）→ 删除补回脚本。排查方法沉淀为 §5.4/§5.5 | `dc21f9c`、`97013d0`；证据脚本 `_dsh_tmp/{modset-diff.py,extract-first-error.py,drippy-disasm}` |
 | 2026-09-28（第六轮·继续排查） | ① 发现 `vanilla` 早窗会连带崩 CustomSkinLoader → 回退为 `drippy_early_window` 并把 Integrated Farming 钉回 1.2.6（两条实测约束记入 §5.4）；② 定位并移除 Apokinetics（P-164，其 mixin 与 Apotheosis 8.9.0 内部 API 不匹配）；③ 完整性清单重生成（common 431）；④ **15:03 实机启动成功**，错误分布与上次成功逐项一致（无新增噪音类目） | `e848913`、`06a82c3`、`eddef52` |
 | 2026-09-28（第七轮·收工同步） | ① 按用户新流程试 IF 1.4.2（含真空收割机）：**同样崩 Drippy 早窗** → 判定整条 1.4.x 线冲突，回退 1.2.6；② 按「崩溃先摘 Drippy」流程实测：摘掉两个 Drippy jar + provider 设 vanilla 后 **CSL 15.x 照样崩** → 顺查清「全包只有 Drippy 提供早窗 provider、`vanilla` 是无效值、CSL 15.x 依赖早窗」（P-165）；③ 查明 Apokinetics 的确切断点（`GemCaseTile#upgradeGem` 在 8.9.0 少了 `Container`，钉 8.8.0 可兼容）；④ 流程与文档同步：`AGENTS.md` 新增《崩溃排查的固定流程》并把总账同步改为「用户喊收工才做」 | `578f733`、`4ad4714`、`7b12c93`、`a89c29a`、`d7de143`、`66729b8` |
+| 2026-09-28（第八轮·收工同步） | ① **创造模式进世界崩服**（P-167）定位为三张战利品箱表 `string_id` 全为 `"_"` 导致 FTB Quests 插入重复 ItemStack → 改唯一 id，用户实机确认可正常进游戏；② **CI `cache-seed` 每次失败**（P-168）复现为描述符 sha1 与 CurseForge 重传后的字节不一致 → 修 hash 后 CI 转绿，并新增 `devtool check-hashes` push 前预检（`--changed`/`--full`）；③ 上游缺键/缺图一次补齐（P-169）：Iron's Spellbooks 状态名 6 键 + 5 张图标、Apotheosis 三件套 36 键、Iron's Lib 72 键、`createdelightcore` en_us 的 49 个 tip 键；④ KubeJS 重复加入创造标签页报错清理（P-170，1.20.1 遗留）；⑤ `no-vanilla-sun` 材质包进包并默认启用、`mcpmod` 登记进完整性允许列表（P-154）、P-153 自愈、P-049 复验通过；⑥ 入库文档统一去掉本机绝对路径（改用占位符 + 不入库的 `AGENTS.local.md`） | `67901bb`、`23e106b`、`9b23638`、`a0ada68`、`17715ba`、`116d5bc`、`d39d925`、`5d190d8`、`aeda017`、`4cf996e` |
 
 ## 7. 附录：仓内文档索引
 
