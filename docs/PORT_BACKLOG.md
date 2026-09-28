@@ -112,15 +112,21 @@ git -C D:\git-MC\CDR1201 show HEAD:mods/apotheosis.pw.toml | Select-String 'proj
 
 **待验证（重启游戏后）**：新模组能否正常加载（含 Apotheosis 首次生成配置、Patchouli 指南书）、法术系物品是否出现在创造栏/EMI、任务书那条任务的图标与文案是否正确、Integrated Farming 的水稻收割。
 
-### Drippy 早窗副作用（2026-09-28 追加）
+### Drippy 早窗副作用（2026-09-28 追加，已定案）
 
 移入后首次启动即崩在 Drippy 早窗（`ClassNotFoundException: …CustomLoadingOverlay`）。A/B 对照：
 
-| 运行 | IF 版本 | 结果 |
-| --- | --- | --- |
-| 14:27 / 14:34 / 14:46 | **1.4.3** | ❌ 3/3 崩在早窗（`DrippyEarlyWindowProvider.updateModuleReads` 用线程上下文 CL 加载主 jar 的类） |
-| 14:38 | 1.2.6 | ✅ 早窗正常（该次是另一个问题——`forged_steel_ingot` 重复注册） |
+| 运行 | IF 版本 | 早窗 provider | 结果 |
+| --- | --- | --- | --- |
+| 14:27 / 14:34 / 14:46 | **1.4.3** | drippy | ❌ 3/3 崩在早窗（`DrippyEarlyWindowProvider.updateModuleReads` 用线程上下文 CL 加载主 jar 的类） |
+| 14:38 / 14:57 | 1.2.6 | drippy | ✅ 早窗正常（两次分别在注册表重复与 apokinetics mixin 上失败，都与早窗无关） |
+| 14:54 | 1.4.3 | **vanilla** | ❌ 换 vanilla 后早窗过了，但 **CustomSkinLoader 崩**（`NoClassDefFoundError: …IFakeIResourceManager$V1`） |
 
-处置：**保留 1.4.3**，把 `config/fml.toml` 的 `earlyWindowProvider` 改回 `vanilla`（提交 `97013d0`）。代价只有「窗口早开 + 最早期定制画面」；恢复只需改回 `drippy_early_window`。若以后想同时要 1.4.3 与早窗，可退回 1.2.6（旧 jar 与 1.4.2 都在 `_dsh_tmp/bisect-held/`）。详见 `MIGRATION_LOG.md` §5.4/§5.5。
+**定案（提交 `e848913`、`06a82c3`）**：
+
+- `config/fml.toml` 保持 `earlyWindowProvider = "drippy_early_window"`
+- **Integrated Farming 钉回 1.2.6**（描述符与 jar 都回退）——1.4.3 的 jar、1.4.2 都在 `_dsh_tmp/bisect-held/`，将来重启排查可用
+- **Apokinetics 移除**（P-164：其 mixin 与 Apotheosis 8.9.0 内部 API 不匹配；想要它可把 Apotheosis 降到 8.7.0）
+- 所以本次「B1 升级」实际**未生效**（回退了），Iron's Spells 系 + Apotheosis 线保留
 
 

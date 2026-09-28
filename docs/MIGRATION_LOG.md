@@ -346,8 +346,9 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-159 | 误以为「裸版本号 versionRange（如 `4.7.5.1`）是精确匹配」，据此判定新模组装不了 | NeoForge 把裸版本号当「推荐版本」，是宽松语义（不含限制区间） | 实证：本仓 24 处同形声明都能正常启动（`dg_js` 要 kubejs build.321、实装 build.363；`createtransmission` 要 create 6.0.6、实装 6.0.10） | `_dsh_tmp/bare-versionrange-evidence.mjs`；`mods/common/irons-lib.pw.toml` | 判据 |
 | P-160 | 按 1.20.1 的做法改任务书章节文件里的文案，游戏里不会变 | 1.21.1 的 FTB Quests 文本存在 `config/ftbquests/quests/lang/en_us.snbt`（`quest.<id>.quest_desc` / `.title` / `.quest_subtitle`），章节 `.snbt` 没有文本字段 | 文案改 lang 文件；章节文件只改结构（tasks / dependencies / 坐标 / 图标） | `config/ftbquests/quests/lang/en_us.snbt`、`chapters/Junior_Engineer.snbt` | 判据 |
 | P-161 | 源包 `create-integrated-farming` 曾被 pin 在 1.2.6（理由：新版要 Supplementaries 3.9.9 → NeoForge 247） | 1.4.3 里 `supplementaries` 已改成 **optional** dep，不再有硬约束 | 升级到 1.4.3（本仓 1.21.1 有该版本），`pin` 保留 | `mods/common/create-integrated-farming.pw.toml`、`f19b339` | 已解决 |
-| P-162 | 启动即崩：`ClassNotFoundException: de.keksuccino.drippyloadingscreen.neoforge.CustomLoadingOverlay`（Drippy 早窗） | **Drippy 自身缺陷**：`DrippyEarlyWindowProvider.updateModuleReads(ModuleLayer)` 完全忽略传入的 layer，改用 `Thread.currentThread().getContextClassLoader()` 加载自己主 jar 里的类（反汇编证据见 §附录）；与 `Integrated Farming 1.4.3` 在位强相关 | 把 `config/fml.toml` 的 `earlyWindowProvider` 由 `drippy_early_window` 改回 `vanilla`（保留所有 mod 与更新，只失去「窗口早开 + 最早期定制画面」） | `97013d0`；`config/fml.toml` | 已修（绕开） |
+| P-162 | 启动即崩：`ClassNotFoundException: de.keksuccino.drippyloadingscreen.neoforge.CustomLoadingOverlay`（Drippy 早窗） | **Drippy 自身缺陷**：`DrippyEarlyWindowProvider.updateModuleReads(ModuleLayer)` 完全忽略传入的 layer，改用 `Thread.currentThread().getContextClassLoader()` 加载自己主 jar 里的类（反汇编证据见 §5.4）；与 `Integrated Farming 1.4.3` 在位强相关 **3/3**，1.2.6 时 **2/2** 正常 | 先试过把 `earlyWindowProvider` 改回 `vanilla`，但那样 **CustomSkinLoader 会崩**（见 P-164 的姊妹问题，`NoClassDefFoundError: customskinloader/fake/itf/IFakeIResourceManager$V1`）→ **已回退为 `drippy_early_window`，并把 Integrated Farming 钉在 1.2.6** | `97013d0`（改 vanilla）→ `e848913`（回退）；`config/fml.toml`、`mods/common/create-integrated-farming.pw.toml` | 已绕开（两条约束见 §5.4） |
 | P-163 | 进到标题界面阶段崩：`screenshot_viewer` 报 `Cannot get config value before config is loaded`，日志前面是成片的 `Cowardly refusing to send event … to a broken mod state` | **真凶不是截图 mod**：`createdelightcore:forged_steel_ingot` 被注册两次 —— Core **2.0.0.7** 自己注册了它（jar 内有 model/texture/lang），而 P-021 时代 Core 2.0.0.6 缺它、我们用 `kubejs/startup_scripts/mods/createdelightcore/content_restore.js` 补回 → `Adding duplicate key … to registry` → 注册表 `Rolling back to VANILLA` → broken mod state | 删除该补回脚本（`life_matter` / `genetic_culture` 的补回保留，核对 Core 2.0.0.7 jar 后确认仍缺这两项） | `dc21f9c` | 已修 |
+| P-164 | 同上「broken mod state → screenshot_viewer 报错」的第二次出现（14:58） | **另一个真凶**：`apokinetics` 1.0.6 的 `apokinetics.mixins.json:GemCaseTileMixin` 注入 `dev.shadowsoffire.apotheosis.socket.gem.storage.GemCaseTile` 时 `InvalidInjectionException: Invalid descriptor`（`@Inject::apokinetics$reconcileAfterUpgrade` 的参数签名引用 Placebo 类，Apotheosis **8.9.0** 已改）→ `Failed to wait for future Mod Construction` → broken mod state。版本范围 `apotheosis [8.5.3,)` 满足但内部 API 已变 | **移除 Apokinetics**（其描述符与 jar 都移出；Apotheosis 保留 8.9.0，两边各自都是最新版，属上游未跟进）。想要这个桥接可把 Apotheosis 降到 8.7.0 再试 | `06a82c3` | 已修（移除） |
 
 ### 3.10 源包侧新问题（来自 CDR1201 的 49 个新提交，作为同步参考）
 
@@ -488,8 +489,13 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
 ```
 
 - 早窗阶段主 jar 的类不一定对 TCCL 可见 → `ClassNotFoundException` → 启动即崩（无 crash 报告，只有 `stderr_stream.log` 里有）。
-- 复现规律（2026-09-28 实测）：`Integrated Farming 1.4.3` 在位时 3/3 崩；换成 1.2.6 时早窗正常。机制上未解释（该 jar 无 `META-INF/services`、无 jar-in-jar、无 `de/keksuccino` 包），**结论按经验记录，不当作因果定论**。
-- 处置：`config/fml.toml` → `earlyWindowProvider = "vanilla"`。恢复只需改回 `"drippy_early_window"`（Drippy 主 mod 与早窗 jar 都不必移除）。
+- 复现规律（2026-09-28 实测）：`Integrated Farming 1.4.3` 在位时 **3/3 崩**；换成 1.2.6 时早窗正常 **2/2**。机制上未解释（该 jar 无 `META-INF/services`、无 jar-in-jar、无 `de/keksuccino` 包），**结论按经验记录，不当作因果定论**。
+- ⚠️ **不能简单地把早窗换成 `vanilla`**：实测 14:54 那次改成 `vanilla` 后，`CustomSkinLoader` 在 patch `ResourceManager` 时崩
+  `NoClassDefFoundError: customskinloader/fake/itf/IFakeIResourceManager$V1`（该类确实在 CSL 每次释放的
+  `CustomSkinLoader/Core/CustomSkinLoader-Common.jar` 里，98 条目齐全）→ 又是「模块读取看不见」那一类。
+  所以当前**两条实测约束**：① `Integrated Farming 1.4.3` ↔ Drippy 早窗崩；② `vanilla` 早窗 ↔ CSL 崩。
+  **采用的组合**：`drippy_early_window` + Integrated Farming 1.2.6（提交 `e848913`）。
+- 处置：保持 `config/fml.toml` 的 `earlyWindowProvider = "drippy_early_window"`（注意：NeoForge 会在启动时**重写该文件并抹掉注释**，所以解释只能留在文档里）。
 
 ### 5.5 排查这类崩溃的固定动作（本轮验证有效）
 
@@ -506,6 +512,7 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
 | 2026-09-28（第三轮） | 逐个核实「能不能移过来」并出清单：新增 `docs/PORT_BACKLOG.md`（模组类 A1~A11 / 更新类 B1 / 修复类 C1~C15 / 不可行 D / 待验证 E / 采纳顺序 F） | `03a21fc`；核查用 Modrinth API + cfwidget（`web_search` 端点 401，未用） |
 | 2026-09-28（第四轮） | 按用户勾选执行移入：8 个新模组（Iron's Spells 系 3 个 + Apotheosis 线 4 个 + Apokinetics）+ Integrated Farming 升 1.4.3；任务书 2 处文案/结构更新；完整性清单重生成（common 424→432）。同时纠正两个认知（裸 versionRange 的宽松语义 P-159、任务书文本在 lang 文件 P-160） | `f19b339` |
 | 2026-09-28（第五轮·故障排查） | 用户连续导出 3 次崩溃日志，定位出两个独立故障：① Drippy 早窗缺陷（P-162，反汇编坐实，与 IF 1.4.3 强相关）→ 早窗 provider 改回 vanilla；② `forged_steel_ingot` 重复注册（P-163，Core 2.0.0.7 已自带而我们仍在 KubeJS 补回）→ 删除补回脚本。排查方法沉淀为 §5.4/§5.5 | `dc21f9c`、`97013d0`；证据脚本 `_dsh_tmp/{modset-diff.py,extract-first-error.py,drippy-disasm}` |
+| 2026-09-28（第六轮·继续排查） | ① 发现 `vanilla` 早窗会连带崩 CustomSkinLoader → 回退为 `drippy_early_window` 并把 Integrated Farming 钉回 1.2.6（两条实测约束记入 §5.4）；② 定位并移除 Apokinetics（P-164，其 mixin 与 Apotheosis 8.9.0 内部 API 不匹配）；③ 完整性清单重生成（common 431） | `e848913`、`06a82c3` |
 
 ## 7. 附录：仓内文档索引
 
