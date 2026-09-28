@@ -143,8 +143,8 @@
   `veil-neoforge-1.21.1-4.3.2.jar`（另带 `sable_rapier`、`sable-companion-common-1.6.0`），
   并自带 Iris 兼容 mixin `compatibility.iris.ExtendedShaderMixin`（见 `sable.mixins.json`）。
   我们排查「双日」问题时已逐一排除 Sable / Colorwheel / Flywheel / Euphoria / EclipticSeasons，
-  **最终根因是 Northstar 的 `renderSky` mixin 顶掉了 Iris 的日月开关**（处置见作战图 §11.5，
-  当前方案：保留本地补丁 `scripts/patch-northstar-sun.ps1`）。
+  **最终根因是 Northstar 的 `renderSky` mixin 顶掉了 Iris 的日月开关**（处置见作战图 §11.5；
+  当前方案＝**保留本地补丁** `scripts/patch-northstar-sun.ps1`，2026-09-24 用户决定，见作战图 §11.5 与台账 §8.2）。
 - **Sable 自己声明的版本边界**（`sable.pw.toml` 对应 jar 的 `neoforge.mods.toml`）：
   `flywheel` ≥ 1.0.6（client）、`create` `[6.0.10, 6.1.0)`、`sodium` < 0.8.12-alpha.2 **不兼容**、
   `sablecompanion` > 1.6.0 **不兼容**（"Sable is out of date"）。
