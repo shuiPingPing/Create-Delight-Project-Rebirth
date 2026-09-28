@@ -7,7 +7,7 @@
 			monster: 0
 			passive: 0
 		}
-		string_id: "_"
+		string_id: "gate_pearl_crate_23"
 	}
 	loot_size: 1
 	order_index: 23
