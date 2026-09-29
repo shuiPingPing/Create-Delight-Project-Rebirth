@@ -7,7 +7,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { inflateRawSync } from 'node:zlib'
 
-const REPO = 'D:/git-MC/CDR1211'
+import { REPO } from './paths.mjs'
 const ASSETS = path.join(REPO, 'kubejs/assets')
 
 function collect(buf, want, depth = 0) {

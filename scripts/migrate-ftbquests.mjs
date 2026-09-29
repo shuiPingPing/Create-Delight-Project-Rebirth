@@ -24,15 +24,15 @@ import path from 'node:path';
 import zlib from 'node:zlib';
 
 // ------------------------------------------------------------------ 路径
-const WORKSPACE = 'D:/git-MC';
-const SRC_DIR = `${WORKSPACE}/CDR1201/config/ftbquests/quests`;
-const DST_DIR = `${WORKSPACE}/CDR1211/config/ftbquests/quests`;
-const TMP_DIR = `${WORKSPACE}/_dsh_tmp`;
-const BACKUP_DIR = `${TMP_DIR}/ftbquests-pre-migration`;
-const REPORT_PATH = `${TMP_DIR}/quests-migration-report.md`;
-const REGISTRY_JSON = `${WORKSPACE}/CDR1211/.probe/registry_objects.json`;
-const MODS_DIR = `${WORKSPACE}/CDR1211/mods`;
-const KJS_DATA = `${WORKSPACE}/CDR1211/kubejs/data`;
+import { REPO, WORKSPACE, REF_REPO, TMP } from './paths.mjs';
+const SRC_DIR = path.join(REF_REPO, 'config/ftbquests/quests');
+const DST_DIR = path.join(REPO, 'config/ftbquests/quests');
+const TMP_DIR = TMP;
+const BACKUP_DIR = path.join(TMP, 'ftbquests-pre-migration');
+const REPORT_PATH = path.join(TMP, 'quests-migration-report.md');
+const REGISTRY_JSON = path.join(REPO, '.probe/registry_objects.json');
+const MODS_DIR = path.join(REPO, 'mods');
+const KJS_DATA = path.join(REPO, 'kubejs/data');
 /** 目标目录中需要删除的旧空壳文件（相对路径） */
 const STALE_TARGET_FILES = ['chapters/1.snbt'];
 
@@ -1020,7 +1020,7 @@ function buildReport(ctx) {
   p();
   p(`- 生成时间：${new Date().toISOString()}`);
   p(`- 模式：${DRY_RUN ? '**--dry-run（未写目标目录）**' : '真实写入'}`);
-  p(`- 脚本：\`D:\\git-MC\\CDR1211\\scripts\\migrate-ftbquests.mjs\``);
+  p('- 脚本：`scripts/migrate-ftbquests.mjs`');
   p(`- 源目录：\`${SRC_DIR}\``);
   p(`- 目标目录：\`${DST_DIR}\``);
   p(`- 耗时：${elapsedMs} ms`);

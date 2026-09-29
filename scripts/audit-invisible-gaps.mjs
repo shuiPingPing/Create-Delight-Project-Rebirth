@@ -15,9 +15,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { inflateRawSync } from 'node:zlib'
 
-const REPO = 'D:/git-MC/CDR1211'
+import { REPO, TMP } from './paths.mjs'
 const ASSETS = path.join(REPO, 'kubejs/assets')
-const OUT = 'D:/git-MC/_dsh_tmp'
+const OUT = TMP
 
 const VISIBLE =
   /^(item|block|entity|effect|biome|itemGroup|item_group|gui|advancement|advancements|container|jei|jade|jadeaddons|config|tooltip|guideme|accessories|curios|menu|screen|slot)[.\w]*$/

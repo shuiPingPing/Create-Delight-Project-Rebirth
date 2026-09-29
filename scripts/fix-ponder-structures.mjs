@@ -14,7 +14,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 
-const ASSETS = 'D:/git-MC/CDR1211/kubejs/assets'
+import { REPO } from './paths.mjs'
+const ASSETS = path.join(REPO, 'kubejs/assets')
 const dryRun = process.argv.includes('--dry-run')
 
 const RENAMES = [

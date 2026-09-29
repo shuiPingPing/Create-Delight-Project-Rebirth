@@ -12,9 +12,9 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const REPO = 'D:/git-MC/CDR1211'
+import { REPO, TMP } from './paths.mjs'
 const DATA = path.join(REPO, 'kubejs/data')
-const BACKUP = 'D:/git-MC/_dsh_tmp/datapack-recipe-format-bak'
+const BACKUP = path.join(TMP, 'datapack-recipe-format-bak')
 const dryRun = process.argv.includes('--dry-run')
 
 /** 结果字段用 ItemStack 形状的配方类型（1.21 要 id） */

@@ -11,19 +11,19 @@
 // 只读脚本：不修改任何游戏内容文件，只写报告。
 //
 // 用法：
-//   node scripts/scan-l10n.mjs                 # 生成 D:/git-MC/_dsh_tmp/l10n-report.md
+//   node scripts/scan-l10n.mjs                 # 生成 <工作区>/_dsh_tmp/l10n-report.md
 //   node scripts/scan-l10n.mjs --out <path>    # 换输出路径
 import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 
-const REPO = 'D:/git-MC/CDR1211'
+import { REPO, TMP, MC_HOME } from './paths.mjs'
 const KUBEJS_ASSETS = path.join(REPO, 'kubejs/assets')
 const STARTUP_DIR = path.join(REPO, 'kubejs/startup_scripts')
 const MODS_DIR = path.join(REPO, 'mods')
 const QUEST_LANG = path.join(REPO, 'config/ftbquests/quests/lang')
 const outIdx = process.argv.indexOf('--out')
-const OUT = outIdx >= 0 ? process.argv[outIdx + 1] : 'D:/git-MC/_dsh_tmp/l10n-report.md'
+const OUT = outIdx >= 0 ? process.argv[outIdx + 1] : path.join(TMP, 'l10n-report.md')
 
 /* ---------- 通用小工具 ---------- */
 // 文本一律按 UTF-8 读（jar 内条目同理），并剥掉可能存在的 BOM
@@ -336,7 +336,7 @@ const evidenceNames = new Map() // 命中的条目名 -> jar 标签
 // 1.21.1 原版 client jar 只自带 assets/minecraft/lang/en_us.json，其它语种由启动器的资源对象库
 // （assets/indexes/*.json → assets/objects/<hash 前两位>/<hash>，gzip 存放）提供。
 // 找到就用它当 minecraft 命名空间的中文来源；找不到就把 minecraft:* 标成「n/a（原版自带）」而不是「缺中文」。
-const VANILLA_ROOTS = ['E:/myWord/hcml/.minecraft', REPO, path.join(REPO, '.minecraft')]
+const VANILLA_ROOTS = [MC_HOME, REPO, path.join(REPO, '.minecraft')]
 const VANILLA_JAR = (() => {
   for (const root of VANILLA_ROOTS) {
     const p = path.join(root, 'versions/1.21.1/1.21.1.jar')
@@ -733,7 +733,7 @@ const totalMissEn = sec1.reduce((a, b) => a + b.missEn.length, 0)
 p('# CDR1211 汉化缺口扫描报告', '')
 p(`- 生成时间：${new Date().toISOString().replace('T', ' ').slice(0, 19)}`)
 p('- 生成脚本：`scripts/scan-l10n.mjs`（只读扫描，可重复运行：`node scripts/scan-l10n.mjs`）')
-p('- 仓库：`D:/git-MC/CDR1211`（Minecraft 1.21.1 / NeoForge）')
+p(`- 仓库：\`${path.basename(REPO)}\`（Minecraft 1.21.1 / NeoForge）`)
 p(
   `- 扫描范围：包内 \`kubejs/assets/*/lang/*.json\` ${pkgLang.size} 个命名空间；\`mods/*.jar\` ${jarsScanned} 个（另含 ${nestedScanned} 个内嵌 jar，读取失败 ${jarsFailed} 个）；KubeJS 注册 ${registrations.length} 个 id；AE2 图鉴 ${new Set(guideRefs.map((r) => r.file)).size} 个 md / ${refIds.length} 个唯一 id；FTB 任务书 2 个 lang 文件`
 )

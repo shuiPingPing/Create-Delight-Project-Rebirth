@@ -15,8 +15,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 
-const SCENES = 'D:/git-MC/CDR1211/kubejs/client_scripts/ponder'
-const ASSETS = 'D:/git-MC/CDR1211/kubejs/assets'
+import { REPO } from './paths.mjs'
+const SCENES = path.join(REPO, 'kubejs/client_scripts/ponder')
+const ASSETS = path.join(REPO, 'kubejs/assets')
 const dryRun = process.argv.includes('--dry-run')
 
 /* ---- 读取结构尺寸（顶层 size） ---- */

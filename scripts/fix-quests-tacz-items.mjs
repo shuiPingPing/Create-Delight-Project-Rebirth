@@ -21,8 +21,9 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const SRC = 'D:/git-MC/CDR1201/config/ftbquests/quests/chapters'
-const CUR = 'D:/git-MC/CDR1211/config/ftbquests/quests/chapters'
+import { REPO, REF_REPO } from './paths.mjs'
+const SRC = path.join(REF_REPO, 'config/ftbquests/quests/chapters')
+const CUR = path.join(REPO, 'config/ftbquests/quests/chapters')
 const dryRun = process.argv.includes('--dry-run')
 const verbose = process.argv.includes('--verbose')
 

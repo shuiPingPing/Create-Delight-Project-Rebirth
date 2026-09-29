@@ -1,6 +1,8 @@
 // 分类日志里的配方失败：KubeJS 回退到原版加载器（= 配方仍生效，只是 KubeJS 建模失败）vs 真正的解析失败
 import fs from 'node:fs'
-const log = process.argv[2] ?? 'D:/git-MC/CDR1211/logs/latest.log'
+import path from 'node:path'
+import { REPO } from './paths.mjs'
+const log = process.argv[2] ?? path.join(REPO, 'logs/latest.log')
 const text = fs.readFileSync(log, 'utf8')
 const warn = []
 const hard = []

@@ -13,11 +13,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 
-const REPO = 'D:/git-MC/CDR1211'
-const SRC = 'D:/git-MC/CDR1201/config/ftbquests/quests/chapters'
-const REPORT = 'D:/git-MC/_dsh_tmp/quests-migration-report.md'
+import { REPO, TMP, REF_REPO, MC_JAR } from './paths.mjs'
+const SRC = path.join(REF_REPO, 'config/ftbquests/quests/chapters')
+const REPORT = path.join(TMP, 'quests-migration-report.md')
 const CUR = path.join(REPO, 'config/ftbquests/quests/chapters')
-const MC_JAR = 'E:/myWord/hcml/.minecraft/versions/1.21.1/1.21.1.jar'
+// MC_JAR 由 paths.mjs 提供（可用 CDPR_MC_HOME 覆盖）
 
 const dryRun = process.argv.includes('--dry-run')
 const dbg = process.argv.includes('--debug')

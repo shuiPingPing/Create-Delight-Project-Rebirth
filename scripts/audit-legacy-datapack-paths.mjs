@@ -24,12 +24,12 @@ import crypto from 'node:crypto'
 /* ------------------------------------------------------------------ *
  * 0. 常量
  * ------------------------------------------------------------------ */
-const REPO = 'D:/git-MC/CDR1211'
+import { REPO, TMP, MC_JAR } from './paths.mjs'
 const DATA_DIR = path.join(REPO, 'kubejs/data')
 const MODS_DIR = path.join(REPO, 'mods')
-const VANILLA_JAR = 'E:/myWord/hcml/.minecraft/versions/1.21.1/1.21.1.jar'
+const VANILLA_JAR = MC_JAR
 
-let OUT = 'D:/git-MC/_dsh_tmp/legacy-datapack-audit.md'
+let OUT = path.join(TMP, 'legacy-datapack-audit.md')
 const argv = process.argv.slice(2)
 const ri = argv.indexOf('--report')
 if (ri >= 0 && argv[ri + 1]) OUT = argv[ri + 1]
@@ -526,7 +526,7 @@ const p = (s = '') => L.push(s)
 
 p('# 旧数据包路径审计（1.20.1 目录名 → 1.21.1）')
 p()
-p(`- 仓库：\`D:/git-MC/CDR1211\``)
+p(`- 仓库：\`${path.basename(REPO)}\``)
 p(`- 扫描范围：\`kubejs/data/**\` 共 **${allFiles.length}** 个文件；其中仍挂在 1.20.1 旧目录名下的 **${legacyFiles.length}** 个`)
 p(`- 对照物：仓库内单数路径副本 + \`mods/*.jar\`${fs.existsSync(VANILLA_JAR) ? ' + 原版 ' + path.basename(VANILLA_JAR) : ''}（共 ${scanned} 个 jar，${nsJars.size} 个命名空间）`)
 p(`- 内容比较：\`.nbt\` 用字节哈希/字节比较，二进制不同时再比 gzip/zlib 解压后的内容；文本按字节比较，`)

@@ -1,6 +1,6 @@
 // 按审计报告的表执行旧数据包路径迁移（1.20.1 复数目录 → 1.21.1 单数目录）。
 //
-// 计划来源：`D:/git-MC/_dsh_tmp/legacy-datapack-audit.md` 的表格（由 scripts/audit-legacy-datapack-paths.mjs 生成）。
+// 计划来源：`<工作区>/_dsh_tmp/legacy-datapack-audit.md` 的表格（由 scripts/audit-legacy-datapack-paths.mjs 生成）。
 //   §3.1 第 2b 类真实内容覆盖 → 非 nbt 改名（恢复覆盖意图）；nbt 是 1.20.1 旧快照 → 删包内那份
 //   §3.2 第 2b 类禁用存根     → 改名（恢复禁用意图）
 //   §4.1 第 3 类真实缺口      → 改名（新增内容）
@@ -11,13 +11,13 @@
 //   node scripts/migrate-legacy-datapack-paths.mjs --only 2b-real
 //   node scripts/migrate-legacy-datapack-paths.mjs --only 2b-stub,3-real,3-stub
 //
-// 删除的文件会先复制到 D:/git-MC/_dsh_tmp/legacy-datapack-bak/ 下（同样的相对路径）。
+// 删除的文件会先复制到 <工作区>/_dsh_tmp/legacy-datapack-bak/ 下（同样的相对路径）。
 import fs from 'node:fs'
 import path from 'node:path'
 
-const REPO = 'D:/git-MC/CDR1211'
-const REPORT = 'D:/git-MC/_dsh_tmp/legacy-datapack-audit.md'
-const BACKUP = 'D:/git-MC/_dsh_tmp/legacy-datapack-bak'
+import { REPO, TMP } from './paths.mjs'
+const REPORT = path.join(TMP, 'legacy-datapack-audit.md')
+const BACKUP = path.join(TMP, 'legacy-datapack-bak')
 
 const argv = process.argv.slice(2)
 const dryRun = argv.includes('--dry-run')

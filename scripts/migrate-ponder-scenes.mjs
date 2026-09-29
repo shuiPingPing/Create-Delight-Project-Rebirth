@@ -20,10 +20,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 
-const SRC_ROOT = 'D:/git-MC/CDR1201/kubejs/client_scripts'
-const DST_ROOT = 'D:/git-MC/CDR1211/kubejs/client_scripts'
-const NS_ASSETS = 'D:/git-MC/CDR1211/kubejs/assets'
-const MODS = 'D:/git-MC/CDR1211/mods'
+import { REPO, REF_REPO } from './paths.mjs'
+const SRC_ROOT = path.join(REF_REPO, 'kubejs/client_scripts')
+const DST_ROOT = path.join(REPO, 'kubejs/client_scripts')
+const NS_ASSETS = path.join(REPO, 'kubejs/assets')
+const MODS = path.join(REPO, 'mods')
 
 const write = process.argv.includes('--write')
 const verbose = process.argv.includes('--verbose')
@@ -154,7 +155,7 @@ transformed.set('00_java_classes.js', { text: facadeLines, srcRel: '00_java_clas
 
 /* ---------- 4. 校验场景引用的 id ---------- */
 const itemsBlocks = new Set()
-const probe = 'D:/git-MC/CDR1211/.probe/registry_objects.json'
+const probe = path.join(REPO, '.probe/registry_objects.json')
 if (fs.existsSync(probe)) {
   const j = JSON.parse(fs.readFileSync(probe, 'utf8'))
   for (const key of ['minecraft:item', 'minecraft:block', 'minecraft:fluid', 'minecraft:entity_type'])

@@ -15,8 +15,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const REPO = 'D:/git-MC/CDR1211'
-const MC_JAR = 'E:/myWord/hcml/.minecraft/versions/1.21.1/1.21.1.jar'
+import { REPO, TMP, MC_JAR } from './paths.mjs'
 const ASSETS = path.join(REPO, 'kubejs/assets/createdelightcore')
 const dryRun = process.argv.includes('--dry-run')
 
@@ -164,7 +163,7 @@ const lines = ['# ME 无限元件图标映射', '', '| 元件 | 图标贴图 | �
 for (const r of [...results, ...extras.map((e) => ({ cell: e.model.replace('item/', ''), icon: e.icon, how: e.how + '(ExtendedAE)' }))]) {
   lines.push(`| \`${r.cell}\` | \`${r.icon ?? '—'}\` | ${r.how} |`)
 }
-fs.writeFileSync('D:/git-MC/_dsh_tmp/infinity-cell-icons.md', `${lines.join('\n')}\n`)
+fs.writeFileSync(path.join(TMP, 'infinity-cell-icons.md'), `${lines.join('\n')}\n`)
 
 console.log(`流体 ${fluids.length}；未解析 ${unresolved.length}`)
 for (const u of unresolved) console.log(`  ✗ ${u.fluid}`)

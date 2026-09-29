@@ -13,9 +13,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { inflateRawSync } from 'node:zlib'
 
-const REPO = 'D:/git-MC/CDR1211'
+import { REPO, TMP } from './paths.mjs'
 const outArg = process.argv.indexOf('--out')
-const OUT = outArg > 0 ? process.argv[outArg + 1] : 'D:/git-MC/_dsh_tmp/visible-english.md'
+const OUT = outArg > 0 ? process.argv[outArg + 1] : path.join(TMP, 'visible-english.md')
 
 const VISIBLE =
   /^(item|block|entity|effect|biome|itemGroup|item_group|gui|advancement|advancements|container|jei|jade|jadeaddons|config|tooltip|guideme|accessories|curios|menu|screen|slot|key|keybind|keys)[.\w]*$/

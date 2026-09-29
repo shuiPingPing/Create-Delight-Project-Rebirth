@@ -18,7 +18,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 
-const REPO = 'D:/git-MC/CDR1211'
+import { REPO } from './paths.mjs'
 const SCENE_DIR = path.join(REPO, 'kubejs/client_scripts/ponder/scene')
 const NBT_DIR = path.join(REPO, 'kubejs/assets/createdelightcore/ponder')
 const dryRun = process.argv.includes('--dry-run')

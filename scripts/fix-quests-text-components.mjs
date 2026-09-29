@@ -14,6 +14,7 @@
 //   node scripts/fix-quests-text-components.mjs               # 就地写回（自动备份 .bak）
 import fs from 'node:fs'
 import path from 'node:path'
+import { REPO } from './paths.mjs'
 
 const STYLE_BOOL_KEYS = ['bold', 'italic', 'underlined', 'strikethrough', 'obfuscated']
 const KNOWN_ACTIONS = new Set([
@@ -89,7 +90,7 @@ function normalizeComponent(node, trail = '$') {
 const args = process.argv.slice(2)
 const dryRun = args.includes('--dry-run')
 const file = args.find((a) => !a.startsWith('--'))
-  ?? 'D:/git-MC/CDR1211/config/ftbquests/quests/lang/en_us.snbt'
+  ?? path.join(REPO, 'config/ftbquests/quests/lang/en_us.snbt')
 
 const raw = fs.readFileSync(file, 'utf8')
 const eol = raw.includes('\r\n') ? '\r\n' : '\n'

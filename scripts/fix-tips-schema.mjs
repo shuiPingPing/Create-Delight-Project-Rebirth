@@ -7,13 +7,13 @@
 //
 // 用法：
 //   node scripts/fix-tips-schema.mjs --dry-run
-//   node scripts/fix-tips-schema.mjs            # 就地改写，原件备份到 D:/git-MC/_dsh_tmp/tips-bak/
+//   node scripts/fix-tips-schema.mjs            # 就地改写，原件备份到 <工作区>/_dsh_tmp/tips-bak/
 import fs from 'node:fs'
 import path from 'node:path'
 
-const REPO = 'D:/git-MC/CDR1211'
+import { REPO, TMP } from './paths.mjs'
 const TIPS_DIR = path.join(REPO, 'kubejs/assets/createdelightcore/tips')
-const BACKUP = 'D:/git-MC/_dsh_tmp/tips-bak'
+const BACKUP = path.join(TMP, 'tips-bak')
 const dryRun = process.argv.includes('--dry-run')
 
 function walk(dir) {
