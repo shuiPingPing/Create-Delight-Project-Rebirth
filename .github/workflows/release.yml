@@ -8,6 +8,10 @@
 #      Core 版本由 `mods/common/create-delight-core.pw.toml` 决定，随提交走。
 #   3. Release 一律「测试版 / 预发布」：标题固定 `<tag> 测试版`、固定带 --prerelease，
 #      即使 pack 版本号不带 -testN 也只发测试版（本仓库约定：不发布正式版）。
+#   4. 发布包校验按本仓实际工具链行为修正（在 `scripts/validate-release-artifacts.py`，不在本文件）：
+#      bkmpw 0.1.1 的 `export-client` / `export-server` 是**已展开**的全量包、**不含描述符**
+#      （描述符只在 `export-server-installer` 里），所以 full 分支不再要求描述符齐全；
+#      另放行随仓分发的自制材质包 `no-vanilla-sun.zip`。合并上游时注意别被覆盖回去（见 MIGRATION_LOG P-174）。
 # 版本号规则（与上游一致）：pack/pack.toml 必须形如 vA.B.C.D 或 vA.B.C.D-testN；
 # 打 tag 前先用 `devtool.bat set-version <版本>` 同步并提交，tag 必须与 pack 版本完全一致。
 name: 发布版本

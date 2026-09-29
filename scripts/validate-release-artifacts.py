@@ -27,7 +27,14 @@ def expected_descriptors(side):
     folders = [Path("mods/common"), Path("mods") / side]
     if side == "client":
         folders.extend((Path("resourcepacks"), Path("shaderpacks")))
-    return {str(path) for folder in folders for path in folder.glob("*.pw.toml")}
+    # ZIP 里的路径一律是正斜杠；Windows 上 str(Path(...)) 给反斜杠，会让校验误报 descriptor mismatch。
+    return {path.as_posix() for folder in folders for path in folder.glob("*.pw.toml")}
+
+
+# 手工管理、随仓直接分发、没有 .pw.toml 描述符的本地资产（`.gitignore` 白名单放行的自制材质包）。
+# 上游这份校验脚本只从描述符推导期望资产，本仓加了自制材质包之后必须显式放行，
+# 否则 build 会在「验证发布包内容」报 resource/shader pack mismatch（2026-09-29 首次推 tag 时踩到，见 MIGRATION_LOG P-174）。
+LOCAL_MANAGED_CLIENT_ASSETS = ("resourcepacks/no-vanilla-sun.zip",)
 
 
 def expected_client_assets():
@@ -36,6 +43,9 @@ def expected_client_assets():
         for descriptor in Path(folder).glob("*.pw.toml"):
             with descriptor.open("rb") as source:
                 assets.add(f"{folder}/{tomllib.load(source)['filename']}")
+    for extra in LOCAL_MANAGED_CLIENT_ASSETS:
+        if Path(extra).is_file():
+            assets.add(extra)
     return assets
 
 
@@ -78,10 +88,17 @@ def inspect_archive(path, prefix, release_info, side, kind):
             require(jars == expected,
                     f"{path.name}: mod jar mismatch: missing={list((expected - jars).elements())}, "
                     f"extra={list((jars - expected).elements())}")
+            # 本 fork 与上游的第 4 处差异：bkmpw 0.1.1 的 `export-client` / `export-server` 产出的是
+            # **已展开**的全量包（mods/*.jar + config/ + kubejs/…），**不含 .pw.toml 描述符**；
+            # 描述符只出现在 `export-server-installer` 里。上游这份脚本在 full 分支要求描述符齐全，
+            # 在本仓必然报 descriptor mismatch（2026-09-29 首次推 tag 时撞到，见 MIGRATION_LOG P-174）。
+            # 因此这里只校验「没有多余 / 没有越侧的描述符」，jar 与资源包仍精确比对。
             expected = expected_descriptors(side)
-            require(descriptors == expected,
-                    f"{path.name}: descriptor mismatch: "
-                    f"missing={sorted(expected - descriptors)}, extra={sorted(descriptors - expected)}")
+            require(descriptors <= expected,
+                    f"{path.name}: unexpected descriptor: {sorted(descriptors - expected)}")
+            if side == "client":
+                require(not any(name.startswith("mods/server/") for name in descriptors),
+                        f"{path.name}: server-only descriptor in client package")
             expected_assets = expected_client_assets() if side == "client" else set()
             require(client_assets == expected_assets,
                     f"{path.name}: resource/shader pack mismatch: "
