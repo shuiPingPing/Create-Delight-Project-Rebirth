@@ -118,8 +118,8 @@ element {
   auto_sizing_base_gui_height = 343
   sticky_anchor = true
   anchor_point = top-centered
-  x = 175
-  y = 90
+  x = 120
+  y = 56
   width = 200
   height = 30
   stay_on_screen = false
