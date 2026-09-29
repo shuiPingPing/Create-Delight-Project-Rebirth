@@ -45,15 +45,18 @@ element {
   disappearance_delay = no_delay
   fade_in_v2 = no_fading
   fade_out = no_fading
-  auto_sizing = false
-  auto_sizing_base_screen_width = 3441
-  auto_sizing_base_screen_height = 1419
+  auto_sizing = true
+  auto_sizing_base_screen_width = 2560
+  auto_sizing_base_screen_height = 1372
+  auto_sizing_base_gui_scale = 4.0
+  auto_sizing_base_gui_width = 640
+  auto_sizing_base_gui_height = 343
   sticky_anchor = false
   anchor_point = top-centered
   x = 0
   y = 8
-  width = 380
-  height = 65
+  width = 437
+  height = 75
   stay_on_screen = true
   element_loading_requirement_container_identifier = e2003eb1-a3c8-4b9c-8b23-e8b5e281aca9-1779077396354
   [loading_requirement_container_meta:e2003eb1-a3c8-4b9c-8b23-e8b5e281aca9-1779077396354] = [groups:][instances:]
@@ -126,13 +129,16 @@ vanilla_button {
   disappearance_delay = no_delay
   fade_in_v2 = no_fading
   fade_out = no_fading
-  auto_sizing = false
-  auto_sizing_base_screen_width = 3441
-  auto_sizing_base_screen_height = 1419
+  auto_sizing = true
+  auto_sizing_base_screen_width = 2560
+  auto_sizing_base_screen_height = 1372
+  auto_sizing_base_gui_scale = 4.0
+  auto_sizing_base_gui_width = 640
+  auto_sizing_base_gui_height = 343
   sticky_anchor = false
   anchor_point = top-centered
   x = 0
-  y = 76
+  y = 88
   width = 220
   height = 38
   stay_on_screen = true
@@ -200,7 +206,7 @@ vanilla_button {
   template_share_with = buttons
   nine_slice_slider_handle = false
   element_type = vanilla_button
-  instance_identifier = mc_titlescreen_multiplayer_button
+  instance_identifier = minecraft_logo_widget
   appearance_delay = no_delay
   disappearance_delay = no_delay
   fade_in_v2 = no_fading
@@ -254,7 +260,7 @@ vanilla_button {
   nine_slice_slider_handle_border_x = 5
   nine_slice_slider_handle_border_y = 5
   automated_button_clicks = 0
-  is_hidden = false
+  is_hidden = true
 }
 
 
