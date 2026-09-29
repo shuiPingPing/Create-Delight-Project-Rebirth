@@ -14,17 +14,20 @@
 > 其余时间不要中途更新，避免打断工作流（中途留痕写 `_dsh_tmp/`）。`AGENTS.md` 的「移植总账的更新时机」一节写明了同样要求。
 > 只写真实发生过的事，宁可少写也不写空话。
 
-## 0. 一页速览（2026-09-28 收工同步）
+## 0. 一页速览（2026-09-29 收工同步）
 
 | 项 | 状态 |
 | --- | --- |
-| 迁移规模 | CDR1201（1.20.1 Forge，3079 提交）→ CDR1211（1.21.1 NeoForge **21.1.242**，四段式版本 `v2.0.0.0-test5`）；脚本覆盖约 41%，数据包 / 汉化 / 任务书 / 配置主体已迁 |
-| 当前包状态 | ✅ **能进游戏，且创造模式可正常进世界**（2026-09-28 实机确认；此前创造模式进世界必崩，见 P-167） |
+| 迁移规模 | CDR1201（1.20.1 Forge，3079 提交）→ CDR1211（1.21.1 NeoForge **21.1.242**，四段式版本 `v2.0.0.0-test6`）；脚本覆盖约 41%，数据包 / 汉化 / 任务书 / 配置主体已迁 |
+| 当前包状态 | ✅ **能进游戏、创造模式可正常进世界、主菜单 UI 定稿**（LOGO 居中且自适应；彩蛋文字落在标题右下角，既不被 LOGO 遮住也不压 LOGO）。本轮打 Release `v2.0.0.0-test6`（首次走「推 tag → CI 自动构建并公开预发布」） |
 | 在位的大件 | Create Aeronautics 体系（本体 + 33 附属 + Sable）、Iron's Spells 系 3 个、Apotheosis 线 4 个、Core **2.0.0.7**、Drippy 加载屏、光影栈（Colorwheel + Complementary + Euphoria Patcher） |
-| 问题台账 | **170 条**（`P-001`~`P-170`）：上午一轮 P-156~P-166，本轮新增 **P-167~P-170** |
-| 今天装了/升了什么 | 7 个新模组（法术系 `irons_spellbooks` 3.16.3 + `irons_lib` 2.2.0 + `farmers_spell` 1.0.5.1；Apotheosis 线 `Apotheosis` 8.9.0 + `ApothicSpawners` 1.4.0 + `ApothicEnchanting` 1.6.2 + `Patchouli` 93）、任务书 2 处、`forged_steel_ingot` 重复注册修复、自制材质包 `no-vanilla-sun` 进包 |
-| 今天修掉的故障 | ① Drippy 早窗缺陷（P-162）② `forged_steel_ingot` 重复注册（P-163）③ Apokinetics × Apotheosis 8.9 签名不匹配（P-164，以移除收场）④ CSL 15.x × 早窗被禁用（P-165，回退 drippy）⑤ **创造模式进世界崩服**（P-167）⑥ **CI cache-seed 每次都失败**（P-168）⑦ 一批上游缺键/缺图（P-169）⑧ KubeJS 重复加入创造标签页（P-170） |
-| 今天的汉化/资源补齐 | Iron's Spellbooks 状态名与图标、Apotheosis 三件套 36 键、Iron's Lib 72 键、`createdelightcore` en_us 的 49 个 tip 键、`no-vanilla-sun` 材质包默认启用 |
+| 问题台账 | **173 条**（`P-001`~`P-173`）：本轮新增 **P-171~P-173**（主菜单居中 / 遮挡 / 按钮重叠），并把 P-118、P-120、P-065 收口 |
+| 本轮（09-29）修掉的故障 | ① 主菜单 LOGO 被裁且不居中（P-171：`auto_sizing` 缺 `sticky_anchor`）② 彩蛋黄字被自定义 LOGO 盖住、位置怎么调都不对（P-172：原版 splash 属原版层，改用自定义 `splash_text` 元素）③ IAS 标题按钮与 Supplementaries 配置按钮重叠（P-173）④ 缺贴图/缺模型告警口径订正并清掉 461 条（`c99c8b2`）⑤ `zh_cn` 那 4 个键实为占位章节文案、`en_us` 缺键（P-120 订正，`9611bb0`）⑥ `check-hashes` 卡死加超时（`cd9062a`） |
+| 本轮判定收口 | **P-118 客户端 16 脚本**：应迁 0 / 已由 mod（Java）接管 11 / 放弃 5（难度 HUD 试做一次后撤销——Improved Mobs 自带右上角难度 overlay）；**P-065**：实际 **808 条**告警（原口径 526 只数了一类），已修 461 条，余下 6 类挂账 + 1 条待用户决策 |
+| 本轮工程清理 | `scripts/` 下 18 个迁移期脚本不再硬编码本机绝对路径（`d07c504`：新增 `scripts/paths.mjs`，路径由 `import.meta.url` 推导，参考仓库/实例目录走 `CDPR_REF_REPO`/`CDPR_MC_HOME`）；入库文档口径不变（仍不写本机路径） |
+| 上一轮（09-28）装了/升了什么 | 7 个新模组（法术系 `irons_spellbooks` 3.16.3 + `irons_lib` 2.2.0 + `farmers_spell` 1.0.5.1；Apotheosis 线 `Apotheosis` 8.9.0 + `ApothicSpawners` 1.4.0 + `ApothicEnchanting` 1.6.2 + `Patchouli` 93）、任务书 2 处、`forged_steel_ingot` 重复注册修复、自制材质包 `no-vanilla-sun` 进包 |
+| 上一轮（09-28）修掉的故障 | ① Drippy 早窗缺陷（P-162）② `forged_steel_ingot` 重复注册（P-163）③ Apokinetics × Apotheosis 8.9 签名不匹配（P-164，以移除收场）④ CSL 15.x × 早窗被禁用（P-165，回退 drippy）⑤ **创造模式进世界崩服**（P-167）⑥ **CI cache-seed 每次都失败**（P-168）⑦ 一批上游缺键/缺图（P-169）⑧ KubeJS 重复加入创造标签页（P-170） |
+| 上一轮（09-28）的汉化/资源补齐 | Iron's Spellbooks 状态名与图标、Apotheosis 三件套 36 键、Iron's Lib 72 键、`createdelightcore` en_us 的 49 个 tip 键、`no-vanilla-sun` 材质包默认启用 |
 | 两条硬约束 | ① **IF 1.4.x ↔ Drippy 早窗必崩**（1.4.2 / 1.4.3 实测）② **早窗不能不是 `drippy_early_window`**（全包只有 Drippy 提供 provider；改成别的值=禁用早窗 → CSL 15.x 崩） |
 | 暂缓项（等上游更新） | IF 1.4.3（真空收割机）、Apokinetics 1.0.6 → 详见 `PORT_BACKLOG.md`（含复活步骤与重新下载来源） |
 | 流程约定 | 崩溃时**先摘 Drippy 启动一次**看真凶再装回（`AGENTS.md`）；**改过描述符、push 前跑 `devtool.bat check-hashes --changed`**（P-168 的教训）；移植总账**只在用户喊收工时**同步 |
@@ -104,7 +107,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 停滞 | 2026-08（仅 2 提交） | 只做了 alex 系列换稳定移植版、Quality Food 换 Quality Food J；08-11 后停更 | `ca5e08a`、`3b3441f` | `mods/` |
 | **实机驱动期** | 2026-09-14 起（185 提交） | 见 §2.2 | — | — |
 
-### 2.2 实机驱动期（2026-09-14 ~ 2026-09-28）
+### 2.2 实机驱动期（2026-09-14 ~ 2026-09-29）
 
 | 日期 | 做了什么 | 关键提交 | 来源 / 产出 |
 | --- | --- | --- | --- |
@@ -123,6 +126,8 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | 09-28 | 航空学接入记录整理成文；README 加「仅供娱乐」说明；建立本总账并把同步规则写进 `AGENTS.md` | `f990e66`、`4ca5922`、`9fadd15` | `docs/CREATE_AERONAUTICS.md`、`README.md`、本文件 |
 | 09-28（下午） | 核对 CDR1201 的 49 个新提交 → 出候选清单 → 按用户勾选移入 **Iron's Spells 系 3 个 + Apotheosis 线 4 个**；任务书 2 处；随后连遇 4 个启动故障（详见 §3 P-162~P-165）并全部处置，15:03 实机验证通过 | `f19b339`、`dc21f9c`、`97013d0`→`e848913`、`06a82c3`、`a89c29a`、`d7de143` | `mods/common/{irons-*,apotheosis,apothic-*,patchouli}.pw.toml`、`docs/PORT_BACKLOG.md` |
 | 09-28（晚） | ① 用户报「创造模式进世界崩」→ 定位为三个战利品箱 `string_id` 撞车（P-167，已修，用户实机确认可正常进游戏）② 补一批上游缺键/缺图（P-169）：Iron's Spellbooks 状态名+图标、Apotheosis 三件套、Iron's Lib、`createdelightcore` 的 en_us tip 键 ③ KubeJS 重复加入创造标签页（P-170）④ 用户报「CI 老卡在 cache-seed」→ 复现并定位为描述符 sha1 与 CurseForge 现字节不一致（P-168），修 hash 后 CI 转绿；新增 `devtool check-hashes` 预检 ⑤ 自制材质包 `no-vanilla-sun` 进包并默认启用 ⑥ 入库文档去掉本机绝对路径口径 | `67901bb`、`23e106b`、`9b23638`、`a0ada68`、`17715ba`、`116d5bc`、`d39d925`、`5d190d8`、`aeda017`、`4cf996e` | `config/ftbquests/quests/reward_tables/`、`kubejs/assets/*/lang/`、`kubejs/config/createdelight_pack_integrity.json`、`mods/common/irons-spellbooks.pw.toml`、`resourcepacks/no-vanilla-sun.zip`、`scripts/devtool.mjs` |
+
+| 09-29 | ① `scripts/` 本机路径清理（`d07c504`，18 个脚本 + `scripts/paths.mjs`）② P-120 订正：`zh_cn` 4 键是占位章节/任务正文，真问题是 `en_us.snbt` 缺键 → 补进（`9611bb0`）③ `check-hashes` 加超时（`cd9062a`）④ 缺贴图/模型口径订正为 808 条并清掉 461 条（`c99c8b2`）⑤ P-118 判定闭环（难度 HUD 试做后撤销，Improved Mobs 自带 overlay）⑥ **主菜单 UI 迭代到定稿**：LOGO 自适应 + 居中（`82adf6c`、`d9b72b2`）、彩蛋黄字挪位（`53fa684`→`9b2e946`）、改用自定义 `splash_text` 元素并藏掉原版 splash（`9ac375f`）、坐标改用屏幕 GUI 像素后落定 `x=120, y=56`（`1200b28`）⑦ 打 Release `v2.0.0.0-test6` | `d07c504`、`9611bb0`、`cd9062a`、`c99c8b2`、`8f3f7af`→`b3443b8`、`f61bce5`、`82adf6c`、`d9b72b2`、`53fa684`、`9b2e946`、`9ac375f`、`1200b28` | `scripts/paths.mjs`、`config/ftbquests/quests/lang/en_us.snbt`、`kubejs/`、`config/fancymenu/customization/title_screen_layout.txt` |
 
 ### 2.3 CDR1201 侧的新变化（2026-09-12 → 2026-09-27，**49 提交 / 556 文件**，尚未同步）
 
@@ -255,7 +260,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-062 | 默认启用材质包不生效 | DefaultOptions 的真正入口不是 `options.txt` | 写 `defaultoptions-common.toml` 的 `defaultResourcePacks` | `c2bb8d0` | 已修 |
 | P-063 | 16 条 vintagedelight 厨师帽模型加载失败 | jar 内模型仍写 1.20.1 的 `forge:separate_transforms` | 把包内材质包排到列表最后使覆盖生效 | `f6bc89f`；`config/defaultoptions-common.toml` | 已修 |
 | P-064 | simplehats 帽子掉落未按 1.20.1 关掉 | 1.21 该 mod 改用 Java `LootRegistry` | 关 `config/simplehats.json5` 两项 | `f644b0b` | 需重启验证 |
-| P-065 | 526 条其它命名空间缺贴图模型 | mod 自身 bug 或覆盖层造成，未逐条判定 | 未做 | 台账 §8.7C | 未做 |
+| P-065 | 缺贴图 / 缺模型告警（原记「526 条」） | 口径订正：526 条只数了 `Exception loading blockstate definition` 一类；四类合计 **808 条**（`Unable to load model` 57 / `Missing textures in model` 221 / blockstate missing variant 74 / blockstate Unknown value 456），其中**我们覆盖层造成 473 条（58.5%）**、mod 自身缺 251、1.20.1→1.21.1 结构变化 60 | 已清 461 条（crabbersdelight blockstate 456 + extendedae 36 个 wireless 覆盖模型 + `infinity_cobblestone_cell` 图标路径）；余下 6 类挂账（Farmer's Delight `tray` 72、`createthrusters` 38、`dndecor` 48、`struts`、`displaydelight` 130 只影响粒子、`minecraft:` 9 条上游 parent 漏写），另 1 条待用户决策（`enchanted_golden_arbutus_berries` 引用无 1.21.1 版的 cosmopolitan 贴图） | `c99c8b2`；`_dsh_tmp/p065-missing-models.md` | 部分已修 |
 
 ### 3.6 客户端渲染与体验
 
@@ -324,10 +329,10 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-115 | Lets Do / The End 被判「未迁」 | 原判有误 | 已并入 `vinery` / `ends_delight` | 台账 §2.2/§6.4 | 已订正 |
 | P-116 | Debug / yungs / FTB Quest 脚本 | 依赖已删工具 / 全注释 / 空函数死代码 | 放弃不迁 | 台账 §2.2 | 放弃 |
 | P-117 | `00_java_classes.js` | 已由 CDC 2.0 的 Java 架构替代 | 不迁 | 台账 §2.2 | 已决定 |
-| P-118 | client 侧 16 个非 ponder 脚本 | 未逐个判定 | 待判定「已由 Java 接管 / 应迁 / 放弃」 | 台账 §6.4 | 待定 |
+| P-118 | client 侧 16 个非 ponder 脚本 | 未逐个判定 | **判定完成：应迁 0 / 已由 mod（Java）接管 11 / 放弃 5**。原判「应迁 1」的 `render/render_difficulty_gui.js` 作废：1.21.1 的难度显示由 **Improved Mobs 自带 overlay** 提供（自制 HUD 版曾提交 `8f3f7af`，用户实测发现重复后 `b3443b8` 撤销）。顺带发现 `bettercombat/network.js` 已是死代码 | `_dsh_tmp/p118-client-scripts.md`；`8f3f7af`→`b3443b8` | 已完成 |
 | P-119 | `ponderjs_generated` 汉化目录 | key 需 `createdelight`→`createdelightcore` | 澄清：由 ponderjs 重新生成，不用搬 | 台账 §8.4 | 已澄清 |
-| P-120 | FTB 任务书孤儿键 | `zh_cn.snbt` 1 个孤儿键 | 中文不受影响，可清理（未做） | 台账 §8.9 | 未做 |
-| P-121 | `en_us` 缺 49 个 tip 键 | 反向缺口 | 本次只报告 | 台账 §8.8 | 未做 |
+| P-120 | FTB 任务书「孤儿键」 | 实为误判：那 4 个键是占位章节 `7D9978A1C3951396` / 任务 `0EEB8FE71772B757` 的正式文案；真问题是 `fallback_locale=en_us` 而 `en_us.snbt` 缺这 4 键 → 非中文语言显示原始键名 | 补进 `en_us.snbt`（3819→3823 键，括号配平） | `9611bb0`；`config/ftbquests/quests/lang/en_us.snbt` | 已订正 |
+| P-121 | `en_us` 缺 49 个 tip 键 | 反向缺口（tipsmod 的 51 个 tip 文件引用 49 个去重键，只有 `zh_cn` 有文本） | 已在 P-169 一并补齐（专有名词逐个按各 mod 自身 `en_us` 对齐） | `d39d925`；`kubejs/assets/createdelightcore/` | 已修 |
 | P-122 | 364 个 jar 里 160 个无可用 `zh_cn` | 上游未做中文，部分包内也未覆盖 | 低优先级记录 | 台账 §8.9 | 记录 |
 | P-123 | 472 个旧路径迁移文件内容未验证 | 是否对上 1.21.1 物品 id 未知 | 待进游戏看日志 | 台账 §8.7A | 未验证 |
 | P-124 | B 组 18 个新 mod 未做游戏内验证 | 新 mod 注册物品需重启 | 重启后看日志 | `c4bda0e` | 未验证 |
@@ -378,6 +383,9 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | P-168 | **CI `cache-seed` 作业每次 push 都失败**（exit 2、约 24 秒），表现为「老卡在 cache-seed」 | 描述符 `mods/common/irons-spellbooks.pw.toml` 记录的 sha1 是 CurseForge 早先那次上传的字节，而 CF **重传过同一个 file-id**（8680204）：现 CDN 稳定返回 `017fd814…`。`bkmpw install-files-headless` 校验 hash → 重试 3/3 仍失败 → `error: install completed with errors` → 作业失败会**跳过 `actions/cache` 的 post-save**，缓存不再更新，于是每次 push 重复同一失败。两份 jar 内容其实一致：4466 个条目 CRC32 全同、未压缩大小全同，仅 `META-INF/MANIFEST.MF` 的压缩长度差 1 字节、时间戳晚 2 分钟 | 描述符 hash 更新为 `017fd814…`（file-id/project-id 不变）；本机 jar 同步换成 CDN 现字节；**新增 `devtool.bat check-hashes [--full] [--changed [ref]] [--only <片段>]` 做 push 前预检**（CF 描述符按 `edge` → `mediafilez` 两个 CDN 域名用 HEAD 探测，深验时下载校验 hash） | `4cf996e`；`mods/common/irons-spellbooks.pw.toml`、`scripts/devtool.mjs`、`docs/PACKWIZ_WORKFLOW.md` | 已修（CI run `36405937541` 起成功） |
 | P-169 | 中文/英文界面出现原始键名或英文：EMI 的 `effect.irons_spellbooks.volt_strike`、5 个召唤计时状态的图标是品红黑格、Apothic Enchanting Table 等条目全英文、加载界面 tip 显示 `createdelightcore.tip.*` | **全部是上游缺键/缺图，不是本包汉化遗漏**：① irons_spellbooks 1.21.1-3.16.3 自带 en_us/zh_cn 都缺 6 个 `effect.*` 键、`textures/mob_effect/` 只有 31 张图（5 个计时状态没图）② Apotheosis 三件套自带 zh_cn 只是部分翻译（apothic_enchanting 缺 10、apotheosis 缺 24、apothic_attributes 缺 2）③ irons_lib 干脆没有 zh_cn（72 键）④ tipsmod 的 51 个 tip 文件引用 49 个去重键，只有 zh_cn 有文本 | 按本包 `kubejs/assets` 覆盖写法补齐：状态名 6 键 + 复用模组自带法术图标补 5 张 mob_effect 图；Apotheosis 三件套 36 键；Iron's Lib 72 键（另含 `irons_patreon_lib` 2 键）；`createdelightcore` en_us 49 个 tip 键（专有名词逐个按各 mod 自身 en_us 对齐） | `9b23638`、`a0ada68`、`17715ba`、`116d5bc`、`d39d925`；`kubejs/assets/{irons_spellbooks,apotheosis,apothic_enchanting,apothic_attributes,irons_lib,createdelightcore}/` | 已修 |
 | P-170 | 每次启动都有两条 KubeJS Startup 报错：`Itemstack 1 create_connected:fan_freezing_catalyst / create:chocolate_bucket already exists in the tab's list` | 1.20.1→1.21.1 迁移遗留：1.21.1 的 create 与 create_connected 已自带这些物品进创造标签页，脚本按 1.20.1 行为再 add 一次 → NeoForge 重复断言（KubeJS 只记日志、不致命，但会盖住后续脚本错误） | 两个 `creative_tab/*.js` 改成只留来源与原因注释，不再重复添加 | `23e106b`；`kubejs/startup_scripts/creative_tab/{create,create_connected}.js` | 已修 |
+| P-171 | 主菜单 LOGO 溢出被窗口裁掉；改自适应后又整体「歪到右侧」 | ① LOGO 元素用的是**固定 GUI 单位**尺寸（500×86，而窗口 GUI 宽只有约 420）→ 必然溢出；② FancyMenu 的 `auto_sizing` 只缩放宽高、**不缩放 x/y**，且 `anchor_point = top-centered` 在 `sticky_anchor = false` 时走基类分支 `left = originX + offset`（top-centered 的 `originX` = 屏幕宽/2）→ 元素**左边缘**落在屏幕中线、LOGO 甩到右半屏 | 照 `<参考仓库>` 的 `create.txt` 换成 `auto_sizing = true` + `auto_sizing_base_screen_width/height/gui_scale = 2560/1372/4.0` + `auto_sizing_base_gui_width/height = 640/343`，并补上关键的 `sticky_anchor = true`（`AnchorTopCenter` 才会走 `屏幕宽/2 - 绝对宽/2 + x` 的真居中分支）；LOGO 定 437×75（图 2026×348 按比例） | `82adf6c`、`d9b72b2`、`f61bce5`；`config/fancymenu/customization/title_screen_layout.txt` | 已修（用户实测居中） |
+| P-172 | 标题后面那行黄字位置怎么调都不对：先被 LOGO 盖住，后来跑到屏幕右缘被裁 | ① 那行黄字是**原版** splash（`assets/minecraft/texts/splashes.txt` 每次随机抽一句），在本菜单 `render_custom_elements_behind_vanilla = false` 下属于**原版层**，与自定义 LOGO 一重叠就必然被压住（截图里只剩 `you` 露在 DELIGHT 上边缘）；② 原版 splash widget 的枢轴 = 原版默认位 `(屏宽/2 + 123, 69)` 再加元素偏移，且偏移的缩放并非 1:1；③ 换成自定义 `splash_text` 元素后才查清：`auto_sizing` 元素的 x/y 单位是**当前屏幕 GUI 像素**（`AbstractElement.getPositioningScreenWidth()` 直接返回 `Screen.width`），`sticky_anchor + top-centered` 时**枢轴 = (Screen.width/2 + x, y)**（`SplashTextElement#renderSplash` 平移到 `absX + absW/2, absY`，文字从 `(-font.width/2, 0)` 起画再绕枢轴转 `rotation` 度） | 把 `minecraft_splash_widget` 元素设 `is_hidden = true`（原版黄字不再渲染），新增 `element_type = splash_text` 元素：`source_mode = vanilla`（**仍抽原版随机宣传语，内容不变**）、`rotation = -20`、`base_color = #FFFF00`、`shadow`/`bouncing` 开、与 LOGO 同一套 auto_sizing 参数；最终 `x = 120, y = 56` → 枢轴 (327, 56) 正好在 LOGO 右下角，抬上去的那段已在 LOGO 右边之外，既不被遮也不被裁 | `9b2e946`、`9ac375f`、`1200b28`、`53fa684`；`config/fancymenu/customization/title_screen_layout.txt` | 已修（用户确认） |
+| P-173 | Realms 那一行右侧两个方块按钮叠在一起 | 两个按钮分属两个 mod：**IAS 的标题按钮**（可配）与 **Supplementaries 的配置按钮**（`net.mehvahdjukaar.supplementaries.client.screens.ConfigButton`，位置写死、不可配），摆在同行同侧必然重叠。另踩坑：IAS 的占位符是**单百分号** `%width%`（照抄 lang tooltip 里的 `%%width%%` 会让 `Expression.parsePosition` 解析失败 → 返回 null → 回退内置默认 `width/2 + 104`，改动看起来「没生效」） | 改 `config/ias.json`（本机运行期配置、**不入库**）：`titleButtonX = "%width% / 2 - 124"`、`titleButtonY = "%height% / 4 + 48 + 48"` → 把 IAS 挪到 Realms 行**左侧**，与右侧的 Supplementaries 按钮分开 | `config/ias.json`（本机） | 已修 |
 
 ### 3.10 源包侧新问题（来自 CDR1201 的 49 个新提交，作为同步参考）
 
@@ -401,12 +409,12 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | Cull Less Leaves 的 NeoForge 替代 | 已核实 3 个候选有 1.21.1 文件，未加 | P-015 |
 | 旧数据包路径迁移后的内容 | 472 个文件尚未进游戏验证 | P-123 |
 | `rolled_polymer_sheet` 2 条配方 | 源包与 Core 都无该 id，等上游修 | P-022 |
-| client 侧 16 个非 ponder 脚本的判定 | 待逐个判定已由 Java 接管 / 应迁 / 放弃 | P-118 |
+| ~~client 侧 16 个非 ponder 脚本的判定~~ ✅ | 2026-09-29 判定完成：应迁 0 / 已由 mod（Java）接管 11 / 放弃 5；难度 HUD 不迁（Improved Mobs 自带 overlay） | P-118 |
 | `Install-PCL.ps1` 与 `test_server/` | PCL 部署脚本必然失败、服务端 reload 验证跑不通，均未修 | P-099、P-100 |
 | A/B 组新 mod、simplehats 关掉落 | 需要重启进游戏复验 | P-064、P-124 |
-| 526 条缺贴图 / Core 缺图 | `createdelightcore:enchanted_golden_arbutus_berries` 确认 Core 缺图，未补 | P-065 |
-| `zh_cn.snbt` 孤儿键、160 个 jar 无中文 | 低优先级，未处理（`en_us` 的 49 个 tip 键本轮已补，P-121 → 已修） | P-120、P-122 |
-| **`scripts/` 下 18 个迁移期一次性脚本仍硬编码本机绝对路径** | 入库文档已按用户要求改成占位符（本轮完成），但这些脚本里还留着本仓库/参考仓库/实例目录的绝对路径；建议改成「从 `import.meta.url` 推导 + `CDPR_REF_REPO` / `CDPR_MC_HOME` 环境变量」，见 `AGENTS.md` 与不入库的 `AGENTS.local.md`。本轮未动，等用户点头 |
+| 缺贴图/模型挂账 + 1 条待决策 | 口径订正为 808 条，已清 461 条；余下 6 类属上游资源残缺或只影响粒子（不必修）。**唯一确认的「迁移漏迁」**：`createdelightcore:enchanted_golden_arbutus_berries` 的模型引用无 1.21.1 版的 `cosmopolitan:item/golden_arbutus_berries` → 三条路（自绘 16×16 贴图 / 报上游改 Core 模型 / 不动）**待用户选** | P-065 |
+| 160 个 jar 无中文 | 低优先级，未处理（`zh_cn` 那 4 个「孤儿键」已订正为占位章节文案、`en_us` 的 49 个 tip 键已补） | P-120、P-121、P-122 |
+| ~~`scripts/` 下 18 个迁移期一次性脚本仍硬编码本机绝对路径~~ ✅ | 2026-09-29 已完成（`d07c504`）：新增 `scripts/paths.mjs` 统一解析，路径从 `import.meta.url` 推导，参考仓库/实例目录走 `CDPR_REF_REPO` / `CDPR_MC_HOME`；19 个文件 `node --check` 通过、`git grep` 复查无本机路径残留 | P-106 相关，见 §4.2 |
 | forge:* 标签中无 `c:` 对应的 | 已 REMAP 10 条，其余逐个决定删或落到自有命名空间 | P-029 |
 
 ### 4.2 已拍板的决定
@@ -435,6 +443,10 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | **新增 `devtool.bat check-hashes` 作为 push 前预检**（`--changed` 查改过的描述符并深验、`--full` 全量深验），写进 `AGENTS.md` / `docs/PACKWIZ_WORKFLOW.md` | 2026-09-28 用户要求，`4cf996e` |
 | **入库文档一律不写本机绝对路径**：用 `<本仓库>` / `<参考仓库>` / `<实例目录>` 占位，实际路径只放不入库的 `AGENTS.local.md` | 2026-09-28 用户要求 |
 | **自制材质包 `no-vanilla-sun.zip` 进包并默认启用**：`.gitignore` 单独白名单放行该 zip（随仓分发），`config/defaultoptions-common.toml` 的 `defaultResourcePacks` 追加 `file/no-vanilla-sun.zip`（只作用于首次运行，已有实例需手动勾选） | 2026-09-28 用户决定，`aeda017` |
+| **主菜单 LOGO 走 `auto_sizing` + `sticky_anchor`，彩蛋文字改用自定义 `splash_text` 元素**（`source_mode = vanilla` 保留原版随机宣传语；原版 splash widget 用 `is_hidden = true` 关掉） | 2026-09-29 用户要求「仿着 1201 那边搞」+ 实机确认，见 P-171/P-172；`f61bce5`→`1200b28` |
+| **难度 HUD 不迁**：1.21.1 上角的难度显示由 Improved Mobs 自带 overlay 提供，不自制（也不写 `global`） | 2026-09-29 用户实测指出重复后决定，见 P-118；`8f3f7af`→`b3443b8` |
+| **`scripts/` 一次性脚本不再硬编码本机路径**：路径由 `import.meta.url` 推导，参考仓库/实例目录走 `CDPR_REF_REPO` / `CDPR_MC_HOME`（约定写在不入库的 `AGENTS.local.md`） | 2026-09-29，`d07c504` |
+| **发布方式：推 tag（tag 名必须等于 `pack/pack.toml` 的版本）→ CI 自动构建三份包 + `release-info.json` 并公开预发布**，不发第三方平台 | 沿用 `df2fc5e`；本轮 `v2.0.0.0-test6` 首次实跑 |
 
 ### 4.3 其它挂账（战役 4/5 与待拍板项）
 
@@ -448,7 +460,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | FTB 任务书剩余 5 处 advancement | 未随 jar 提供（northstar 2+1、create_enchantment_industry 2），保守保留 |
 | `data.snbt` 的 `verify_on_load` | 验收后应改回 `false`（游戏退出后） |
 | `custom/order/` 订单系统 3 个脚本 | 归入 mbd2 战役，未迁 |
-| UI 待办 3 项 | 背景色（`#FF14141E`→`#14141EFF`）、标题图响应式、中文 hoverlabel；用户要求后面再弄 |
+| UI 待办 | ✅ **标题图响应式已做**（P-171，`82adf6c`/`d9b72b2`：`auto_sizing` + `sticky_anchor`，LOGO 437×75）；**仍未做**：主菜单背景色（`#FF14141E`→`#14141EFF`）、中文 hoverlabel |
 | `docs/UPSTREAM_ISSUE_DRAFTS.md` | issue 草稿已写、未提交 |
 | 本地环境提示 | MCP 悬浮按钮不要点；web 搜索端点 401 时改走 harness 抓取通道 |
 | 长期维护 | 上游 `release.yml` 的三处 fork 差异需在每次合并上游时确认仍在 |
@@ -456,7 +468,7 @@ CDR1201 的 HEAD（`1b1b8b7e`）与各目录的“最后变更提交”不同属
 | **配方来源变化** | 源包已把配方从 `data/**/*.json` 迁到 KJS 脚本（`8844be3a`）→ 以后同步配方要看 `kubejs/server_scripts/**/recipe*.js`，不能再只 diff `data/` |
 | **`cdr-updater`（Go 更新服务器 + jar 客户端）** | 在源包 `.agents/skills/release/cdr-updater-go/`（93 文件）；本仓目前是 Core + `release-info.json` 的更新链路，需评估是否对齐或借鉴 |
 | **PCL2 包瘦身做法**（列 CF mod 而不打包 jar，#2333） | 与本仓 P-099（`Install-PCL.ps1` 必然失败）相关，可作为修复参考 |
-| **FancyMenu 主菜单改动**（title 纹理/布局/随机彩蛋/节日灯带） | 与 §4.3 的 UI 待办（标题图响应式、背景色、中文 hoverlabel）同题，可直接参考源包做法 |
+| **FancyMenu 主菜单改动**（title 纹理/布局/随机彩蛋/节日灯带） | ✅ 2026-09-29 已按源包做法对齐：LOGO `auto_sizing` + `sticky_anchor`、彩蛋文字改用自定义 `splash_text` 元素（P-171/P-172）。源包那份 16 条中文彩蛋 `<参考仓库>/config/fancymenu/assets/splashes.txt` **仍未迁**——我们目前 `source_mode = vanilla`，要换成中文梗再加文本源即可 |
 | **Apotheosis / JEI 排序 / Crash Assistant 配置** | ✅ Apotheosis 已于 2026-09-28 装入（8.9.0 + 3 个官方模块 + Patchouli）；源包的 `config/apotheosis/names.cfg`、JEI 排序、Crash Assistant 基线可作后续对照（本仓 JEI 文件 mod 集不同） |
 | **暂缓①：Integrated Farming 1.4.x**（目的＝真空收割机 Vacuum Harvester） | 等上游（Drippy 或 IF）更新。已实测：1.4.2 / 1.4.3 都崩 Drippy 早窗；「摘掉 Drippy 换 vanilla 早窗」也已排除（P-165）。复活步骤与重新下载来源见 `PORT_BACKLOG.md` |
 | **暂缓②：Apokinetics 1.0.6**（Create×Apotheosis 联动） | 等作者跟进 Apotheosis ≥8.9 的内部签名；若要现在就用，把 Apotheosis 钉 **8.8.0**（P-164/P-166）。同上见 `PORT_BACKLOG.md` |
@@ -560,6 +572,8 @@ public void updateModuleReads(java.lang.ModuleLayer layer) {          // ← 参
 | 2026-09-28（第六轮·继续排查） | ① 发现 `vanilla` 早窗会连带崩 CustomSkinLoader → 回退为 `drippy_early_window` 并把 Integrated Farming 钉回 1.2.6（两条实测约束记入 §5.4）；② 定位并移除 Apokinetics（P-164，其 mixin 与 Apotheosis 8.9.0 内部 API 不匹配）；③ 完整性清单重生成（common 431）；④ **15:03 实机启动成功**，错误分布与上次成功逐项一致（无新增噪音类目） | `e848913`、`06a82c3`、`eddef52` |
 | 2026-09-28（第七轮·收工同步） | ① 按用户新流程试 IF 1.4.2（含真空收割机）：**同样崩 Drippy 早窗** → 判定整条 1.4.x 线冲突，回退 1.2.6；② 按「崩溃先摘 Drippy」流程实测：摘掉两个 Drippy jar + provider 设 vanilla 后 **CSL 15.x 照样崩** → 顺查清「全包只有 Drippy 提供早窗 provider、`vanilla` 是无效值、CSL 15.x 依赖早窗」（P-165）；③ 查明 Apokinetics 的确切断点（`GemCaseTile#upgradeGem` 在 8.9.0 少了 `Container`，钉 8.8.0 可兼容）；④ 流程与文档同步：`AGENTS.md` 新增《崩溃排查的固定流程》并把总账同步改为「用户喊收工才做」 | `578f733`、`4ad4714`、`7b12c93`、`a89c29a`、`d7de143`、`66729b8` |
 | 2026-09-28（第八轮·收工同步） | ① **创造模式进世界崩服**（P-167）定位为三张战利品箱表 `string_id` 全为 `"_"` 导致 FTB Quests 插入重复 ItemStack → 改唯一 id，用户实机确认可正常进游戏；② **CI `cache-seed` 每次失败**（P-168）复现为描述符 sha1 与 CurseForge 重传后的字节不一致 → 修 hash 后 CI 转绿，并新增 `devtool check-hashes` push 前预检（`--changed`/`--full`）；③ 上游缺键/缺图一次补齐（P-169）：Iron's Spellbooks 状态名 6 键 + 5 张图标、Apotheosis 三件套 36 键、Iron's Lib 72 键、`createdelightcore` en_us 的 49 个 tip 键；④ KubeJS 重复加入创造标签页报错清理（P-170，1.20.1 遗留）；⑤ `no-vanilla-sun` 材质包进包并默认启用、`mcpmod` 登记进完整性允许列表（P-154）、P-153 自愈、P-049 复验通过；⑥ 入库文档统一去掉本机绝对路径（改用占位符 + 不入库的 `AGENTS.local.md`） | `67901bb`、`23e106b`、`9b23638`、`a0ada68`、`17715ba`、`116d5bc`、`d39d925`、`5d190d8`、`aeda017`、`4cf996e` |
+
+| 2026-09-29（收工同步） | ① `scripts/` 本机路径清理完成（`scripts/paths.mjs` + `CDPR_REF_REPO`/`CDPR_MC_HOME` 约定）；② P-120 订正（占位章节文案 + `en_us` 缺键）；③ `check-hashes` 加超时；④ P-065 口径订正（808 条）并清 461 条；⑤ **P-118 判定闭环**（应迁 0 / 已由 mod 接管 11 / 放弃 5，难度 HUD 不迁）；⑥ **主菜单 UI 定稿**：LOGO 自适应 + `sticky_anchor` 真居中、彩蛋文字改用自定义 `splash_text` 元素并查清「x/y = 屏幕 GUI 像素、枢轴 = (Screen.width/2 + x, y)」、IAS 标题按钮挪到 Realms 行左侧；新增 **P-171~P-173**；⑦ 打 Release `v2.0.0.0-test6`（首个走「推 tag → CI 自动公开预发布」的版本） | `d07c504`、`9611bb0`、`cd9062a`、`c99c8b2`、`8f3f7af`→`b3443b8`、`f61bce5`、`82adf6c`、`d9b72b2`、`53fa684`、`9b2e946`、`9ac375f`、`1200b28` + 本轮版本提交 |
 
 ## 7. 附录：仓内文档索引
 
