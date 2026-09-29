@@ -52,8 +52,8 @@ element {
   anchor_point = top-centered
   x = 0
   y = 8
-  width = 500
-  height = 86
+  width = 380
+  height = 65
   stay_on_screen = true
   element_loading_requirement_container_identifier = e2003eb1-a3c8-4b9c-8b23-e8b5e281aca9-1779077396354
   [loading_requirement_container_meta:e2003eb1-a3c8-4b9c-8b23-e8b5e281aca9-1779077396354] = [groups:][instances:]
@@ -121,7 +121,7 @@ vanilla_button {
   template_share_with = buttons
   nine_slice_slider_handle = false
   element_type = vanilla_button
-  instance_identifier = mc_titlescreen_singleplayer_button
+  instance_identifier = minecraft_splash_widget
   appearance_delay = no_delay
   disappearance_delay = no_delay
   fade_in_v2 = no_fading
@@ -130,11 +130,11 @@ vanilla_button {
   auto_sizing_base_screen_width = 3441
   auto_sizing_base_screen_height = 1419
   sticky_anchor = false
-  anchor_point = vanilla
+  anchor_point = top-centered
   x = 0
-  y = 0
-  width = 200
-  height = 20
+  y = 76
+  width = 220
+  height = 38
   stay_on_screen = true
   element_loading_requirement_container_identifier = 34d532d6-1704-40c7-b7b8-867eb5da5992
   [loading_requirement_container_meta:34d532d6-1704-40c7-b7b8-867eb5da5992] = [groups:][instances:]
