@@ -220,7 +220,7 @@ Linux/macOS：
 ## 本仓库的 CI 发版
 
 `.github/workflows/release.yml` **直接采用上游那套**（2026-09-24 起，目的就是少分叉、方便以后合并），
-只在三处保留 fork 差异；上游 `docs/DevGuide.md` 的「CI 自动发版」一节描述的就是这套流程。
+只在四处保留 fork 差异（第 ④ 处在校验脚本里，不在 workflow 文件里）；上游 `docs/DevGuide.md` 的「CI 自动发版」一节描述的就是这套流程。
 
 - 触发：
   - 推 `v*` tag → 构建 + 建 Release（**固定测试版 / 预发布**，建完即公开，没有人工确认步骤）
@@ -236,6 +236,13 @@ Linux/macOS：
   一致，不一致直接失败，需本地重生成后提交）→ 生成 `artifacts/release-info.json` 与
   `config/createdelight_release_info.json` → 三条导出 → `validate-release-artifacts.py` 校验包内容 → 上传产物
 - 产物：`[Client-Full]<name>-<ver>.zip`、`[Server]-…`、`[Server-Installer]-…`、`release-info.json`
-- 与上游的三处差异：① **不发 CurseForge**（去掉 `export-curseforge` 与 `--curseforge` 校验开关）；
+  （**注意**：上传到 Release 后 GitHub 会把文件名里的 `[]` 换成 `.`，页面上显示为 `Client-Full.<name>-<ver>.zip`；
+  这只是展示名，zip 内部结构与 workflow 里的判据不受影响）
+- 与上游的四处差异：① **不发 CurseForge**（去掉 `export-curseforge` 与 `--curseforge` 校验开关）；
   ② 不跑 `bkmpw update create-delight-core`（该命令走 CurseForge 查询、需要 key；Core 版本随描述符提交）；
-  ③ **Release 永远按「测试版 / 预发布」发布**（标题 `<tag> 测试版`、固定 `--prerelease`，即使版本号不带 `-testN`）
+  ③ **Release 永远按「测试版 / 预发布」发布**（标题 `<tag> 测试版`、固定 `--prerelease`，即使版本号不带 `-testN`）；
+  ④ **`validate-release-artifacts.py` 按 bkmpw 实际行为修正**（在脚本里，不在 workflow 里）：
+  bkmpw 0.1.1 的 `export-client` / `export-server` 是**已展开**的全量包、**不含 `.pw.toml` 描述符**
+  （描述符只出现在 `export-server-installer`），所以 `full` 分支只校验「没有多余 / 没有越侧描述符」；
+  另放行随仓分发的自制材质包 `resourcepacks/no-vanilla-sun.zip`，路径统一用 `as_posix()`。
+  合并上游时注意这四处别被覆盖回去（详见 `MIGRATION_LOG.md` P-174）。
