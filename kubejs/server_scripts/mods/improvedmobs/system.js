@@ -10,12 +10,34 @@ Difficulty.getPlayerRawValue = function (player) {
 };
 
 Difficulty.setPlayerRawValue = function (player, number) {
-  // Client.tell(number)
   // 注意：KubeJS 2101 只有 startup 域能写 global（server/client 绑到 unmodifiableMap），
-  // 这里原来写的 global.difficultyCache 会抛 UnsupportedOperationException。
-  // 1.20.1 里它是给客户端 HUD（client_scripts/render/render_difficulty_gui.js）读的，
-  // 该 HUD 还没迁到 CDR1211；等迁过来时按本包惯例用 player.sendData() 做本地镜像，不要写 global。
+  // 所以难度值只落在 persistentData 里；客户端 HUD 要的那份镜像走 sendData（见 syncToClient）。
   player.persistentData.putDouble('cdr_difficulty_level', number);
+  Difficulty.syncToClient(player, number);
+};
+
+/**
+ * 把当前难度镜像给客户端（`client_scripts/difficulty_hud.js` 读这个包画 HUD）。
+ * 纯显示用途：任何异常都吞掉，绝不能影响难度写入本身。
+ * @param {Internal.ServerPlayer} player
+ * @param {number} [level] 不传则按 persistentData 里的现值发
+ */
+Difficulty.syncToClient = function (player, level) {
+  try {
+    if (player == null) return;
+    let value = level == null ? Difficulty.getPlayerRawValue(player) : level;
+    let payload = new (Java.loadClass('net.minecraft.nbt.CompoundTag'))();
+    payload.putDouble('level', value);
+    // KubeJS 2101 在 Java 侧只声明了 kjs$sendData（DataSenderKJS），脚本层用哪个名字没有实测过，
+    // 两个都试；第一个名字不存在会抛 TypeError，被下面的 catch 接住再走第二个。
+    try {
+      player.sendData('cdr_difficulty', payload);
+    } catch (inner) {
+      player.kjs$sendData('cdr_difficulty', payload);
+    }
+  } catch (error) {
+    console.error(`[CDPR] 难度 HUD 同步失败：${error}`);
+  }
 };
 
 Difficulty.getPlayerTier = function (player) {
@@ -58,8 +80,11 @@ Difficulty.getPlayerCurrentProcessValue = function (player, process) {
 
 // 原来这里有一个 PlayerEvents.loggedIn 回调，只为把难度写进 global.difficultyCache（server 域不能写 global，
 // 每次玩家登录都会抛 UnsupportedOperationException）。玩家难度值本来就存在 persistentData 里，
-// 需要时用 Difficulty.getPlayerRawValue(player) 读即可，因此该回调整体删除；
-// 若之后要恢复客户端 HUD，用 player.sendData() 同步，不要写 global。
+// 需要时用 Difficulty.getPlayerRawValue(player) 读即可。
+// 现在它只负责「登录时把难度补发给客户端」，给 HUD 用（不发就只是 HUD 空白，不影响难度逻辑）。
+PlayerEvents.loggedIn((e) => {
+  Difficulty.syncToClient(e.player);
+});
 
 Difficulty.tierThreshold = [0, 100, 200, 300, 450, 600];
 
