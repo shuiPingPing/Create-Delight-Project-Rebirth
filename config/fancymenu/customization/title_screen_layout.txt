@@ -137,8 +137,8 @@ vanilla_button {
   auto_sizing_base_gui_height = 343
   sticky_anchor = true
   anchor_point = top-centered
-  x = 150
-  y = 88
+  x = 60
+  y = 0
   width = 220
   height = 38
   stay_on_screen = true
