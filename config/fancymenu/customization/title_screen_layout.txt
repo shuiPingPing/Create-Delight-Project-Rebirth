@@ -51,7 +51,7 @@ element {
   auto_sizing_base_gui_scale = 4.0
   auto_sizing_base_gui_width = 640
   auto_sizing_base_gui_height = 343
-  sticky_anchor = false
+  sticky_anchor = true
   anchor_point = top-centered
   x = 0
   y = 8
@@ -135,7 +135,7 @@ vanilla_button {
   auto_sizing_base_gui_scale = 4.0
   auto_sizing_base_gui_width = 640
   auto_sizing_base_gui_height = 343
-  sticky_anchor = false
+  sticky_anchor = true
   anchor_point = top-centered
   x = 0
   y = 88
