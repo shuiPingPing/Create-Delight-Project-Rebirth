@@ -1195,6 +1195,9 @@ function listChangedMetadataFiles(ref) {
   return [...new Set(lines.filter((file) => file.endsWith('.pw.toml')))].sort();
 }
 
+const CHECK_HASHES_HEAD_TIMEOUT_MS = 20000;
+const CHECK_HASHES_DOWNLOAD_TIMEOUT_MS = 180000;
+
 async function probeRemote(urls) {
   const attempts = [];
   for (const url of urls) {
@@ -1203,6 +1206,7 @@ async function probeRemote(urls) {
         method: 'HEAD',
         headers: { 'user-agent': CHECK_HASHES_USER_AGENT },
         redirect: 'follow',
+        signal: AbortSignal.timeout(CHECK_HASHES_HEAD_TIMEOUT_MS),
       });
       const contentLength = response.headers.get('content-length');
       const total = contentLength ? Number(contentLength) : null;
@@ -1211,7 +1215,7 @@ async function probeRemote(urls) {
         return { ok: true, url, total, attempts };
       }
     } catch (error) {
-      attempts.push(`${url} -> ${error.message}`);
+      attempts.push(`${url} -> ${error.name === 'TimeoutError' ? `超时 ${CHECK_HASHES_HEAD_TIMEOUT_MS} ms` : error.message}`);
     }
   }
   return { ok: false, url: null, total: null, attempts };
@@ -1221,6 +1225,7 @@ async function downloadAndHash(url, hashFormat) {
   const response = await fetch(url, {
     headers: { 'user-agent': CHECK_HASHES_USER_AGENT },
     redirect: 'follow',
+    signal: AbortSignal.timeout(CHECK_HASHES_DOWNLOAD_TIMEOUT_MS),
   });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   const buffer = Buffer.from(await response.arrayBuffer());
