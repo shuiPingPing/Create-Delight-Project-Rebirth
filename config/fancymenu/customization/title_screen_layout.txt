@@ -155,7 +155,8 @@ element {
   advanced_vertical_tilt_degrees = 0.0
   horizontal_tilt_degrees = 0.0
   advanced_horizontal_tilt_degrees = 0.0
-  source_mode = vanilla
+  source = [source:local]/config/fancymenu/assets/splashes.txt
+  source_mode = text_file
   shadow = true
   refresh = false
   bouncing = true
