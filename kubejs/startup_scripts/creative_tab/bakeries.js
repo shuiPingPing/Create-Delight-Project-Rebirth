@@ -62,5 +62,6 @@ StartupEvents.modifyCreativeTab('bakeries:1_bakeries_sfp_tab', (e) => {
   ]);
 });
 StartupEvents.modifyCreativeTab('bakeries:2_bakeries_compat_tab', (e) => {
-  e.remove([Item.of('bakeries:orange_american', '{Damage:0}')]);
+  // 源包按 Damage:0 的 NBT 形式删除；1.21.1 里它是方块、没有 Damage 组件 → 按 id 删除
+  e.remove(['bakeries:orange_american']);
 });
