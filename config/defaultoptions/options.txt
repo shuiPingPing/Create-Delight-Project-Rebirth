@@ -1,1 +1,3 @@
 lang:zh_cn
+renderDistance:10
+simulationDistance:8
