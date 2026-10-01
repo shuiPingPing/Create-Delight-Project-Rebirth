@@ -1,0 +1,50 @@
+{
+  "_readme": "Aeronautics Preflight Checklist 的界面中文替换表（供 scripts/patch-apc-zh-cn.ps1 使用）。该模组没有语言文件，文案硬编码在 class 常量池里，只能按原文整条替换。\\u0001 是模组自己的数值占位符，必须原样保留。",
+  "classes": {
+    "com/ladderstar/apc/ChecklistDiagnostics.class": [
+      { "from": "Mod Info", "to": "模组信息" },
+      { "from": "No ship data available. Ensure diagram is working.", "to": "没有飞船数据，请确认图纸（Diagram）工作正常。" },
+      { "from": "Mass: 0.00 kpg. No blocks registered.", "to": "质量：0.00 kpg，未登记任何方块。" },
+      { "from": "Insufficient Lift! Max potential lift (simulated at max heat/thrust: ", "to": "升力不足！最大潜在升力（满热/满推力模拟：" },
+      { "from": " pN) cannot overcome gravity (", "to": " pN）无法克服重力（" },
+      { "from": " pN) for mass of ", "to": " pN），质量为 " },
+      { "from": " kpg.", "to": " kpg。" },
+      { "from": "Weight Limit Near! Max potential lift margin is very narrow (", "to": "接近重量上限！最大潜在升力余量很小（" },
+      { "from": "%). Max lift: ", "to": "%）。最大升力：" },
+      { "from": " pN, Gravity: ", "to": " pN，重力：" },
+      { "from": " pN.", "to": " pN。" },
+      { "from": "Sufficient Lift! Max potential lift capacity (simulated at max heat/thrust: ", "to": "升力充足！最大潜在升力（满热/满推力模拟：" },
+      { "from": " pN) overcomes gravity (", "to": " pN）足以克服重力（" },
+      { "from": "balloon lift is disabled because no burners (hot air creation blocks) were detected", "to": "气球升力已禁用：未检测到燃烧器（热空气产生方块）" },
+      { "from": "wing/sail lift is disabled because all thrust sources are obstructed", "to": "机翼/帆升力已禁用：所有推力源都被阻挡" },
+      { "from": "wing/sail lift is disabled because no thrust sources (engines/propellers) were detected", "to": "机翼/帆升力已禁用：未检测到推力源（引擎/螺旋桨）" },
+      { "from": " Note: ", "to": " 注意：" },
+      { "from": "; ", "to": "；" },
+      { "from": " Suggestion: Add more balloons (with burners), sails/wings (with engines), or levitite blocks.", "to": " 建议：增加热气球（带燃烧器）、帆/机翼（带引擎）或浮石方块。" },
+      { "from": "Mass & Lift Check", "to": "质量与升力检查" },
+      { "from": "Flight Balance: Center of Lift aligned with Center of Mass.", "to": "飞行平衡：升力中心与重心对齐。" },
+      { "from": "Imbalance: No lift sources to calculate Center of Lift.", "to": "不平衡：没有升力源，无法计算升力中心。" },
+      { "from": "Balance Check", "to": "平衡检查" },
+      { "from": "Propulsion: Good forward thrust configuration.", "to": "推进：前向推力配置良好。" },
+      { "from": "Uneven Thrust! All engines/propellers are obstructed.", "to": "推力不均！所有引擎/螺旋桨都被阻挡。" },
+      { "from": "No Engines! No active engines or propellers detected.", "to": "没有引擎！未检测到可工作的引擎或螺旋桨。" },
+      { "from": "Uneven Thrust! Engines cause both pitch and yaw rotation (simulated at max spin).", "to": "推力不均！引擎同时造成俯仰与偏航旋转（满转速模拟）。" },
+      { "from": "Asymmetric Thrust! Engine placement will pull the ship sideways (simulated at max spin).", "to": "推力不对称！引擎布置会把飞船拉向侧面（满转速模拟）。" },
+      { "from": "Pitching Thrust! Vertical engine offset will cause ship to flip (simulated at max spin).", "to": "俯仰推力！引擎的垂直位置偏移会导致飞船翻转（满转速模拟）。" },
+      { "from": "Thrust Check", "to": "推力检查" },
+      { "from": "right", "to": "右" },
+      { "from": "left", "to": "左" },
+      { "from": "tailward", "to": "尾向" },
+      { "from": "noseward", "to": "首向" },
+      { "from": ", ", "to": "、" },
+      { "from": "Imbalance! Center of Lift offset by: \u0001.", "to": "不平衡！升力中心偏移：\u0001。" },
+      { "from": "Propulsion: Good forward thrust configuration (\u0001 engine(s) simulated at max spin).", "to": "推进：前向推力配置良好（\u0001 台引擎满转速模拟）。" }
+    ],
+    "com/ladderstar/apc/client/ChecklistPanel.class": [
+      { "from": "✈ Preflight Checklist", "to": "✈ 起飞前检查清单" }
+    ],
+    "com/ladderstar/apc/mixin/DiagramScreenMixin.class": [
+      { "from": "Preflight Checklist", "to": "起飞前检查清单" }
+    ]
+  }
+}

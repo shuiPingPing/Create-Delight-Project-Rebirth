@@ -107,6 +107,8 @@ kubejs/config/web_server.json
 
 # Northstar 本地补丁备份（11MB 原版 jar，不入库/不发布）
 mods/.northstar-original/
+# Aeronautics Preflight Checklist 本地汉化补丁备份（原版 jar，不入库/不发布）
+mods/.apc-original/
 # Euphoria Patcher / Iris 运行时生成物：补丁后的光影文件夹与选项覆盖 txt（每个用户本地自动生成）
 shaderpacks/*/
 shaderpacks/*.txt
