@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T07:31:31Z",
+  "generatedAt": "2026-10-01T13:07:01Z",
   "generatedBy": "devtool generate-integrity-manifest",
   "expectedModIds": {
     "common": [
@@ -440,6 +440,7 @@
       "acceleratedrendering",
       "aci",
       "ae2jeiintegration",
+      "aeronautics_preflight_checklist",
       "ali",
       "betteradvancements",
       "broknowmyemifolder",
@@ -557,6 +558,14 @@
       "filename": "ae2jeiintegration-1.2.1.jar",
       "modIds": [
         "ae2jeiintegration"
+      ]
+    },
+    {
+      "side": "client",
+      "metadata": "mods/client/aeronautics-preflight-checklist.pw.toml",
+      "filename": "aeronautics_preflight_checklist-1.0.1.jar",
+      "modIds": [
+        "aeronautics_preflight_checklist"
       ]
     },
     {

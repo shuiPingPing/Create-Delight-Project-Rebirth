@@ -1,0 +1,8 @@
+name = "Aeronautics Preflight Checklist"
+filename = "aeronautics_preflight_checklist-1.0.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/l2LYH0FN/versions/wtdlxJmx/aeronautics_preflight_checklist-1.0.1.jar"
+hash-format = "sha256"
+hash = "9a2f005c94b57f3bafe6c2be3b843594f89ccdf59a5b4496e3c130699639df6f"
